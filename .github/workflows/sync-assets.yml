@@ -1,0 +1,82 @@
+name: Sync NCFA Assets
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/sync-assets.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download campaign assets from Google Drive
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p img/player img/dm
+          download() {
+            local id="$1"
+            local out="$2"
+            curl -L --fail --retry 3 --retry-delay 2 \
+              "https://drive.usercontent.google.com/download?id=${id}&export=download&confirm=t" \
+              -o "$out"
+          }
+
+          download "11afH5k23h5f9XQm5E49yB3z5D6ySXXCF" "img/cover.webp"
+
+          download "1Lm4MKU_vKY83QJir8SkjwLVsSq6wp89j" "img/player/blackstone_temple.webp"
+          download "1WjJapTLzKoWXjfD_GLq1Rd76EuJHC6ph" "img/player/cardon_weavehouse.webp"
+          download "1IR6AoW_-3WEJ5QCGy-HxZnscO9gospHe" "img/player/emmer_hold.webp"
+          download "1D-Klyv-v0n8cuUiOsyuxQ3IvW0W4FvCK" "img/player/kellans_well.webp"
+          download "11c3bWMPROL8INqVF3zpzuKemSbN_OnXt" "img/player/kerren_settlement.webp"
+          download "1rxbAdNzBiPKCcjNT-xVdIDdwlsyZLmQZ" "img/player/koven_house.webp"
+          download "1pKR6kkA7vDL6c42s3qL3sl220UhP9y61" "img/player/maren_isle.webp"
+          download "1iKnUDe73cW9sYP9wubnFBbk2KulCqw1q" "img/player/marren_library.webp"
+          download "1gw7rqqgXI8Hk_tV2a2wvI9zvEYbcXjR5" "img/player/paden_square.webp"
+          download "1SzRyzmi9jVsPjPmj3p8c06iEGNa6UIFH" "img/player/rellan_enclave.webp"
+          download "1D5wTZWT4NJUynx1e07NtxfKlwC9NfM5O" "img/player/savin_keep.webp"
+          download "1pU6O-LlPQk4AyQ7U0U0NfPwshPADtT6C" "img/player/slums.webp"
+          download "14SjXo-BUdQLTjDW89asQtFarQraNFYRl" "img/player/storen_gate.webp"
+          download "1aKYblJzKYJfl_oInK2JHGFYQ3UjXdTz-" "img/player/valen_cemetery.webp"
+          download "1lV9ZAP_j2ouQf_iyp1EIGvuaeToHBU7f" "img/player/varen_keep.webp"
+          download "1RUWJ7yJ2YBb_sCPthomni5FRC_QSlqyz" "img/player/waylen_camp.webp"
+
+          download "1eTYS8neHKzsr76CZMngLijOkTNqSwGyd" "img/dm/blackstone_temple.webp"
+          download "1kssrWUolejZrVwbdcNTQVaXkJeMpEACx" "img/dm/cardon_weavehouse.webp"
+          download "1LWPFtyEaTux9IhEDK9qNliPdfrDV3nRV" "img/dm/emmer_hold.webp"
+          download "18rXGUTmcTsFzlxhGAIsUMM7dVgjpJ2gj" "img/dm/kellans_well.webp"
+          download "1zhkTdjGcK1mcAgxrg_VuZcvN7esTiNq4" "img/dm/kerren_settlement.webp"
+          download "1SbBMtH6VwOtNqRPQYHwV95-RUGcIXd_B" "img/dm/koven_house.webp"
+          download "1qQ6tJlkjcK2wj_Gcq_poqJJvX5rL1G1K" "img/dm/maren_isle.webp"
+          download "1jWZE7Qe1FlXhWuHlOEG29aT7D5Nbxnen" "img/dm/marren_library.webp"
+          download "1QLGE-O-40Qq5vyACuialMRp2SLFRPOBk" "img/dm/paden_square.webp"
+          download "1CEXDZqURfQY0FCyrGMMBkqSeMx5gcFua" "img/dm/rellan_enclave.webp"
+          download "1lSAgtHdu4AXQDoxf_4-ijKr752joxxTL" "img/dm/savin_keep.webp"
+          download "1TTB58_ofKa5Bdg2T_y2fL3CncrmvdLti" "img/dm/slums.webp"
+          download "1s5MTuCghR6o6rxSr9bX6_s5JMwb3e2ns" "img/dm/storen_gate.webp"
+          download "1YW7UaZuw69lcaBEEgmk6-aC5Mn39-Gis" "img/dm/valen_cemetery.webp"
+          download "1cl9OMgIxN4glg7NEDX23h-aFi_ul9VoP" "img/dm/varen_keep.webp"
+          download "1iybsnmU30CJft02Gsk1RcORbVVRpklDz" "img/dm/waylen_camp.webp"
+
+          download "128NwZwCH1AjUuF-10UHqcHKta7IgHNht" "No_Cause_for_Alarm_5etools_GITHUB_v1.5.json"
+
+      - name: Commit synchronized assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add img No_Cause_for_Alarm_5etools_GITHUB_v1.5.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "Add NCFA maps, cover, and 5etools JSON"
+          git push
