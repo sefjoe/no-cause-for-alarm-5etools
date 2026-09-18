@@ -65,6 +65,9 @@ jobs:
           download "1cl9OMgIxN4glg7NEDX23h-aFi_ul9VoP" "img/dm/varen_keep.webp"
           download "1iybsnmU30CJft02Gsk1RcORbVVRpklDz" "img/dm/waylen_camp.webp"
 
+          download "1J4BI1R5uhRu6OQqpkNWHPN1G7PG1nO6h" "img/dm/storm_rescue.png"
+          download "1KK3vlBKHl2hT3XFQ-rSxuCFeKGcgYWoY" "img/dm/ledger_house.png"
+
           download "128NwZwCH1AjUuF-10UHqcHKta7IgHNht" "No_Cause_for_Alarm_5etools_GITHUB_v1.5.json"
           download "1D9xXteXvilytYEEDBh-HUzzSxTXqOI9X" "No_Cause_for_Alarm_5etools_CURRENT.json"
 
@@ -120,17 +123,10 @@ jobs:
                   images.append(map_image(slug, title, player=True))
               return {"type": "gallery", "images": images}
 
-          def is_old_map_link(value):
-              if not isinstance(value, str):
-                  return False
-              return "raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/" in value
-
           def clean_old_map_links(value):
               if isinstance(value, list):
                   out = []
                   for item in value:
-                      if is_old_map_link(item):
-                          continue
                       cleaned = clean_old_map_links(item)
                       if cleaned is not None:
                           out.append(cleaned)
@@ -144,6 +140,8 @@ jobs:
                       if "/img/dm/" in url or "/img/player/" in url:
                           return None
                   return {k: clean_old_map_links(v) for k, v in value.items()}
+              if isinstance(value, str) and "raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/" in value:
+                  return None
               return value
 
           with open(path, "r", encoding="utf-8") as f:
@@ -158,31 +156,17 @@ jobs:
                   chapter = by_name.get(chapter_name)
                   if not chapter:
                       continue
-
                   entries = chapter.setdefault("entries", [])
-                  maps_section = next(
-                      (
-                          entry for entry in entries
-                          if isinstance(entry, dict)
-                          and entry.get("name") == "Maps"
-                          and isinstance(entry.get("entries"), list)
-                      ),
-                      None,
-                  )
-
+                  maps_section = next((entry for entry in entries if isinstance(entry, dict) and entry.get("name") == "Maps" and isinstance(entry.get("entries"), list)), None)
                   if maps_section is None:
                       maps_section = {"type": "entries", "name": "Maps", "entries": []}
                       entries.insert(0, maps_section)
-
-                  maps_section["entries"] = [make_gallery(maps)]
+                  keep = [entry for entry in maps_section.get("entries", []) if not (isinstance(entry, dict) and entry.get("type") == "gallery")]
+                  maps_section["entries"] = [make_gallery(maps)] + keep
 
               packs[0]["data"] = clean_old_map_links(packs[0]["data"])
 
-          meta = data.setdefault("_meta", {})
-          sources = meta.get("sources", [])
-          if sources and sources[0].get("version") == "2.3":
-              sources[0]["version"] = "2.4"
-          meta["dateLastModified"] = int(time.time())
+          data.setdefault("_meta", {})["dateLastModified"] = int(time.time())
 
           with open(path, "w", encoding="utf-8") as f:
               json.dump(data, f, ensure_ascii=False, indent="\t")
@@ -203,4 +187,4 @@ jobs:
           git commit -m "Sync current NCFA 5etools JSON"
           git push
 
-# sync-marker: v2.4-native-maps
+# sync-marker: v2.5-storm-ledger-keys
