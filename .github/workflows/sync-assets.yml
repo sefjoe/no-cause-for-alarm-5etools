@@ -140,8 +140,6 @@ jobs:
                       if "/img/dm/" in url or "/img/player/" in url:
                           return None
                   return {k: clean_old_map_links(v) for k, v in value.items()}
-              if isinstance(value, str) and "raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/" in value:
-                  return None
               return value
 
           with open(path, "r", encoding="utf-8") as f:
@@ -187,4 +185,4 @@ jobs:
           git commit -m "Sync current NCFA 5etools JSON"
           git push
 
-# sync-marker: v2.5-storm-ledger-keys
+# sync-marker: v2.5-storm-ledger-keys-coverfix
