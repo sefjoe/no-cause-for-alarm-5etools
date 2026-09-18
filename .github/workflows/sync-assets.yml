@@ -185,4 +185,4 @@ jobs:
           git commit -m "Sync current NCFA 5etools JSON"
           git push
 
-# sync-marker: v2.5-storm-ledger-keys-coverfix
+# sync-marker: v2.6-economy-rebalance
