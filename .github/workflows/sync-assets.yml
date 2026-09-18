@@ -171,6 +171,400 @@ jobs:
               f.write("\n")
           PY
 
+      - name: Apply four-PC rewards and loot update
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, time
+
+          path = "No_Cause_for_Alarm_5etools_CURRENT.json"
+
+          rewards = {
+              "Chapter 1: The Storm": [
+                  "{@b Spendable wealth.} 25–50 gp in gratitude, supplies, or waived lodging.",
+                  "{@b Consumables.} 1 minor healing consumable.",
+                  "{@b Permanent magic.} None automatically.",
+                  "{@b Story reward.} Free lodging at Ledger House during the immediate aftermath and a stronger connection to Brakkus Ledgerhelm."
+              ],
+              "Chapter 2: Reclaimed Bellweather": [
+                  "{@b Spendable wealth.} No automatic chapter payout.",
+                  "{@b Consumables.} Purchased normally through available markets.",
+                  "{@b Permanent magic.} None automatically.",
+                  "{@b Story reward.} Downtime, shopping, favors, faction access, and the benefits of a growing Bellweather."
+              ],
+              "Chapter 3: The Slums": [
+                  "{@b Spendable wealth.} 150–250 gp in Council pay plus recoverable salvage.",
+                  "{@b Consumables.} 2 common consumables suited to the expedition.",
+                  "{@b Permanent magic.} 1 uncommon permanent item hidden in a reclaimed residence or workshop.",
+                  "{@b Story reward.} A safer route through the district and improved standing with neighborhood residents and workers."
+              ],
+              "Chapter 4: Blackstone Temple": [
+                  "{@b Spendable wealth.} 350–500 gp in contract pay and recoverable valuables.",
+                  "{@b Consumables.} 2 Potions of Healing and 1 spell scroll of 1st–3rd level.",
+                  "{@b Permanent magic.} 1 uncommon permanent item tied to the temple or recovered relics.",
+                  "{@b Story reward.} Temple influence, stewardship credit, or a clerical favor."
+              ],
+              "Chapter 5: Delving into Kellan's Well": [
+                  "{@b Spendable wealth.} 300–450 gp in salvage, gems, and civic pay.",
+                  "{@b Consumables.} 2 general consumables plus 1 exploration-focused consumable.",
+                  "{@b Permanent magic.} 1 uncommon permanent item recovered from the wellworks.",
+                  "{@b Story reward.} Improved water access or infrastructure and goodwill from workers who benefit from the reclamation."
+              ],
+              "Chapter 6: Koven House": [
+                  "{@b Spendable wealth.} About 1,500 gp in portable criminal hoard. Bulky identifiable stolen goods are intended for restitution rather than liquidation.",
+                  "{@b Consumables.} 2 consumables and 2 spell scrolls of 3rd level or lower.",
+                  "{@b Permanent magic.} 1 uncommon permanent item; add a second uncommon item only if the party missed an earlier permanent reward and is behind the campaign curve.",
+                  "{@b Story reward.} Evidence, witnesses, restitution, and improved standing with merchants or workers harmed by the operation."
+              ],
+              "Chapter 7: Reconquest of Savin Keep": [
+                  "{@b Spendable wealth.} 600–900 gp in military salvage and Council bounty.",
+                  "{@b Consumables.} 2 useful consumables.",
+                  "{@b Permanent magic.} 1 uncommon permanent item. A thoroughly searched concealed armory can hold a second uncommon item only if the party is behind the campaign reward curve.",
+                  "{@b Story reward.} A Council garrison, expanded shipping security, and access to a strategic base."
+              ],
+              "Chapter 8: Cardon Weavehouse": [
+                  "{@b Spendable wealth.} 500–750 gp in immediately portable valuables; the larger fortune is tied to ownership and property claims.",
+                  "{@b Consumables.} 1–2 useful consumables.",
+                  "{@b Permanent magic.} At most 1 uncommon permanent item unless the party is substantially behind the campaign curve.",
+                  "{@b Story reward.} Legal leverage over Perrin Cardon and the possibility of negotiated public-use concessions."
+              ],
+              "Chapter 9: Marren Library": [
+                  "{@b Spendable wealth.} 300–500 gp in recoverable valuables, rare books, and research grants.",
+                  "{@b Consumables.} 2 spell scrolls and 1 utility consumable.",
+                  "{@b Permanent magic.} 1 rare utility or knowledge-focused item; use a strong uncommon item instead if the party is already ahead on rare gear.",
+                  "{@b Story reward.} Research access and discoveries concerning Tyren, Bellweather, or the Radiant Well."
+              ],
+              "Chapter 10: The Mansions": [
+                  "{@b Spendable wealth.} 1,000–1,500 gp total in portable coin, art, jewelry, and salvage.",
+                  "{@b Consumables.} 2 useful consumables.",
+                  "{@b Permanent magic.} 1 rare permanent item. Add an uncommon item only if the party missed earlier major rewards.",
+                  "{@b Story reward.} Property claims, allies, and additional political pressure on Cardon interests."
+              ],
+              "Chapter 11: Paden Square": [
+                  "{@b Spendable wealth.} About 1,000 gp in seized payroll, trade goods, and bounty or reward money.",
+                  "{@b Consumables.} 2–3 useful consumables.",
+                  "{@b Permanent magic.} 1 rare permanent item or equivalent party-use item.",
+                  "{@b Story reward.} Disruption of the hostile intelligence network and improved access toward Storen Gate."
+              ],
+              "Chapter 12: Storen Gate": [
+                  "{@b Spendable wealth.} 1,250–1,750 gp in Council military reward and captured command valuables.",
+                  "{@b Consumables.} 3 useful consumables.",
+                  "{@b Permanent magic.} 1 rare permanent item from the command post or armory.",
+                  "{@b Story reward.} Gate access, garrison support, and reopening of a major trade route."
+              ],
+              "Chapter 13: Valen Cemetery": [
+                  "{@b Spendable wealth.} 750–1,250 gp in lawful recoverable valuables, temple reward, and unclaimed treasure. Identifiable grave goods remain subject to the ownership rules in Appendix B.",
+                  "{@b Consumables.} 2 healing or restorative consumables and 1 spell scroll.",
+                  "{@b Permanent magic.} 1 rare permanent item tied to burial, protection, radiant power, or the undead.",
+                  "{@b Story reward.} A sanctified cemetery and lasting goodwill from clergy and affected families."
+              ],
+              "Chapter 14: Maren Isle": [
+                  "{@b Spendable wealth.} About 500 gp in cash and valuables plus about 500 gp of useful alchemical or research salvage.",
+                  "{@b Consumables.} 2–3 useful consumables.",
+                  "{@b Permanent magic.} 1 rare item, or a very rare item if the party is on curve and the item is an appropriate major chapter reward.",
+                  "{@b Story reward.} A cleaner river route and the possibility of a Reedscale alliance."
+              ],
+              "Chapter 15: The Lands Beyond Bellweather": [
+                  "{@b Spendable wealth.} 500–1,500 gp total across major resolved sites rather than a separate large hoard at every stop.",
+                  "{@b Consumables.} About 1 useful consumable per major resolved site.",
+                  "{@b Permanent magic.} 1 very rare permanent item total across the regional arc, plus up to 1–2 uncommon or rare crafted rewards from allied communities when earned.",
+                  "{@b Story reward.} Safe routes, allies, intelligence, and military or logistical support for Bellweather."
+              ],
+              "Chapter 16: The Zennar Outpost": [
+                  "{@b Spendable wealth.} No conventional hoard; up to about 1,000 gp-equivalent in diplomatic restitution or recovered value if the outcome supports it.",
+                  "{@b Consumables.} 1–2 emergency consumables if earned through exploration, negotiation, or recovery.",
+                  "{@b Permanent magic.} No automatic permanent item. The evidence recovered here is the primary treasure.",
+                  "{@b Story reward.} Evidence against Cardon interests, political leverage, and the possibility of an outpost alliance."
+              ],
+              "Chapter 17: Varen Keep and the Radiant Well": [
+                  "{@b Spendable wealth.} 2,000–3,000 gp in recoverable treasure, rewards, heirlooms, and final settlement.",
+                  "{@b Consumables.} 3 high-tier consumables appropriate to the finale.",
+                  "{@b Permanent magic.} 1 very rare signature item. A legendary story item may also appear only when it is central to the finale rather than as routine treasure.",
+                  "{@b Story reward.} Bellweather's future and the ultimate control, destruction, or stewardship of the Radiant Well."
+              ],
+          }
+
+          def version_tuple(v):
+              try:
+                  return tuple(int(x) for x in str(v).split('.'))
+              except Exception:
+                  return (0,)
+
+          def find_named(value, name):
+              if isinstance(value, dict):
+                  if value.get("name") == name:
+                      return value
+                  for child in value.values():
+                      found = find_named(child, name)
+                      if found is not None:
+                          return found
+              elif isinstance(value, list):
+                  for child in value:
+                      found = find_named(child, name)
+                      if found is not None:
+                          return found
+              return None
+
+          def reward_block(lines):
+              return {
+                  "type": "entries",
+                  "name": "Rewards",
+                  "entries": [
+                      "These rewards are party totals for the campaign's four-character baseline. Named story relics remain in place; where an older generic treasure quantity conflicts with this section, use this section.",
+                      {"type": "list", "items": lines},
+                  ],
+              }
+
+          appendix = {
+              "type": "section",
+              "name": "Appendix B: Rewards and Loot",
+              "entries": [
+                  {
+                      "type": "entries",
+                      "name": "Reward Philosophy",
+                      "entries": [
+                          "No Cause for Alarm uses a four-character reward curve. Treasure should feel generous without turning Bellweather into a magic-item vending machine. Use four reward lanes: spendable wealth, consumables, permanent magic, and story rewards.",
+                          "Permanent magic is curated. Tie important items to named locations, recovered heirlooms, factions, civic assets, or consequences whenever possible. Consumables and story rewards can be generous because they broaden choices without permanently inflating every combat number.",
+                          "{@b Superseding rule.} Where this appendix or a chapter's Rewards section conflicts with an older generic treasure quantity, use the newer reward guidance. Preserve named story relics that matter to the chapter, then reduce other permanent treasure if needed to stay near the campaign curve."
+                      ],
+                  },
+                  {
+                      "type": "entries",
+                      "name": "Permanent Magic Pacing",
+                      "entries": [
+                          {
+                              "type": "table",
+                              "colLabels": ["Character Level", "Expected Party State"],
+                              "colStyles": ["col-3", "col-9"],
+                              "rows": [
+                                  ["3", "Few or no permanent magic items."],
+                                  ["5", "About 4 meaningful uncommon permanent items across the four-character party."],
+                                  ["8", "Roughly 6–8 permanent items total; rare items begin appearing."],
+                                  ["11", "Each character normally has multiple useful magic items; rare items are routine major rewards."],
+                                  ["13", "Very rare items can appear as major chapter rewards."],
+                                  ["16", "Most characters should have a signature item; legendary items remain story-specific rather than automatic."]
+                              ],
+                          },
+                          "{@b Attunement guardrail.} Before adding another permanent item, check the likely recipient. If that character already has three desirable attunement items, prefer a non-attunement item, consumable, story reward, gold or valuables, or an upgrade that replaces an existing item.",
+                          "{@b Level-5 check.} After Kellan's Well, count meaningful permanent items owned by the party. With 0–1, place 2 uncommon rewards across the next two major treasure sites. With 2, add 1 uncommon reward at Koven House. With 3, add 1 uncommon at Koven House or Savin Keep. With 4 or more, no catch-up is needed. Do not award unusable filler merely to hit a number."
+                      ],
+                  },
+                  {
+                      "type": "entries",
+                      "name": "Levels 3–4: Minor Cache (d12)",
+                      "entries": [{
+                          "type": "table",
+                          "colLabels": ["d12", "Find"],
+                          "colStyles": ["col-2 text-center", "col-10"],
+                          "rows": [
+                              ["1", "25 gp in mixed coin."],
+                              ["2", "40 gp in trade bars or salvage."],
+                              ["3", "A gem or piece of jewelry worth 50 gp."],
+                              ["4", "1 Potion of Healing."],
+                              ["5", "2 Potions of Healing."],
+                              ["6", "A 1st-level spell scroll."],
+                              ["7", "A 2nd-level spell scroll."],
+                              ["8", "Antitoxin and healer's supplies worth about 25 gp."],
+                              ["9", "Useful mundane adventuring gear plus 20 gp."],
+                              ["10", "An art object worth 75 gp."],
+                              ["11", "A common magic item appropriate to the location."],
+                              ["12", "A clue to a nearby uncommon permanent item rather than the item sitting openly in the cache."]
+                          ],
+                      }],
+                  },
+                  {
+                      "type": "entries",
+                      "name": "Levels 5–8: Reclamation Cache (d12)",
+                      "entries": [{
+                          "type": "table",
+                          "colLabels": ["d12", "Find"],
+                          "colStyles": ["col-2 text-center", "col-10"],
+                          "rows": [
+                              ["1", "75 gp in coin."],
+                              ["2", "100 gp in gems."],
+                              ["3", "An art object or antique worth 150 gp."],
+                              ["4", "2 Potions of Healing or 1 Potion of Greater Healing."],
+                              ["5", "A spell scroll of 2nd–3rd level."],
+                              ["6", "A spell scroll of 3rd–4th level."],
+                              ["7", "150 gp in alchemical, crafting, or trade materials."],
+                              ["8", "A useful ammunition or weapon consumable suited to a current character."],
+                              ["9", "2 useful uncommon consumables."],
+                              ["10", "A map, deed, codebook, or piece of evidence worth a faction favor."],
+                              ["11", "1 uncommon permanent item."],
+                              ["12", "A named uncommon permanent item with an ownership claim, faction interest, or historical complication."]
+                          ],
+                      }],
+                  },
+                  {
+                      "type": "entries",
+                      "name": "Levels 9–12: Strategic Cache (d12)",
+                      "entries": [{
+                          "type": "table",
+                          "colLabels": ["d12", "Find"],
+                          "colStyles": ["col-2 text-center", "col-10"],
+                          "rows": [
+                              ["1", "200 gp in coin."],
+                              ["2", "300 gp in gems or art."],
+                              ["3", "400 gp in compact trade goods."],
+                              ["4", "2 Potions of Greater Healing."],
+                              ["5", "A high-value utility consumable."],
+                              ["6", "A spell scroll of 4th–5th level."],
+                              ["7", "A spell scroll of 5th–6th level."],
+                              ["8", "300 gp of rare materials."],
+                              ["9", "An uncommon permanent item that does not require attunement."],
+                              ["10", "A rare utility item."],
+                              ["11", "A rare combat or defensive item."],
+                              ["12", "A named rare item with Bellweather, faction, temple, military, or family history."]
+                          ],
+                      }],
+                  },
+                  {
+                      "type": "entries",
+                      "name": "Levels 13–16: Major Cache (d12)",
+                      "entries": [{
+                          "type": "table",
+                          "colLabels": ["d12", "Find"],
+                          "colStyles": ["col-2 text-center", "col-10"],
+                          "rows": [
+                              ["1", "500 gp in coin."],
+                              ["2", "750 gp in gems or art."],
+                              ["3", "1,000 gp in compact valuables."],
+                              ["4", "2 high-tier healing or restorative consumables."],
+                              ["5", "A spell scroll of 6th–7th level."],
+                              ["6", "A spell scroll of 7th–8th level."],
+                              ["7", "750 gp in rare crafting or research materials."],
+                              ["8", "A rare permanent item, preferably one that does not require attunement."],
+                              ["9", "A rare permanent item chosen for the character currently behind the rest of the party in meaningful rewards."],
+                              ["10", "A very rare utility or defensive item."],
+                              ["11", "A very rare signature item."],
+                              ["12", "A story relic: very rare, or legendary only when its narrative importance justifies that rarity."]
+                          ],
+                      }],
+                  },
+                  {
+                      "type": "entries",
+                      "name": "Permanent Item Selection",
+                      "entries": [
+                          "When a chapter calls for an uncommon, rare, or very rare item, do not roll blindly from the entire published list. Identify the character who has received the least meaningful treasure recently, check attunement congestion, choose a small set of published items of the correct rarity that fit the location and character, and favor the option that creates a new capability rather than only increasing the character's best number.",
+                          "Across the four characters, spread rewards among offense, defense, mobility, exploration, spellcasting, healing or support, and social or information utility. Review permanent AC boosts, save DC boosts, extra actions or turns, low-cost flight, summoning items, items that create permanent creatures, technology not already established in the campaign, and unusually strong stacking combinations before placing them."
+                      ],
+                  },
+                  {
+                      "type": "entries",
+                      "name": "Salvage and Ownership",
+                      "entries": [
+                          "Bellweather is a reclamation campaign, so not everything found in a ruin is automatically ownerless.",
+                          {"type": "list", "items": [
+                              "{@b Clearly abandoned salvage.} Scrap metal, ruined trade stock, monster hoards, and unclaimed coin can normally be kept or sold by the party.",
+                              "{@b Identifiable private property.} Marked jewelry, ledgers, family heirlooms, and stolen trade goods can be returned for reputation, favors, a finder's reward, or negotiated compensation.",
+                              "{@b Civic or religious assets.} Temple relics, guard armory stock, public records, and infrastructure components are normally claimed by the Council, temple, or other steward; the party should receive pay, access, favors, or another meaningful reward instead."
+                          ]},
+                          "Do not use ownership rules to erase treasure. When the party voluntarily returns valuable property, replace a meaningful portion of the lost cash value with reputation, favors, negotiated pay, access, or another concrete benefit."
+                      ],
+                  },
+                  {
+                      "type": "entries",
+                      "name": "Story Rewards",
+                      "entries": [
+                          "When a chapter should feel rewarding without adding another permanent item, use benefits such as temporary free lodging and meals, a Council permit favor, merchant priority or discounts on scarce mundane gear, temple healing or restoration, reclamation-crew support, a safe house, expedition transport, a reliable guide, research access, a difficult faction introduction, or use of a workshop, office, storage area, garden, or dock."
+                      ],
+                  },
+              ],
+          }
+
+          with open(path, "r", encoding="utf-8") as f:
+              data = json.load(f)
+
+          now = int(time.time())
+          meta = data.setdefault("_meta", {})
+          for src in meta.get("sources", []):
+              if src.get("json") == "NCFA":
+                  if version_tuple(src.get("version", "0")) < version_tuple("2.7"):
+                      src["version"] = "2.7"
+                  src["dateLastModified"] = now
+          meta["dateLastModified"] = now
+
+          adventure = next((a for a in data.get("adventure", []) if a.get("id") == "NCFA-RuinsOfBellweather" and a.get("source") == "NCFA"), None)
+          if adventure is None:
+              raise RuntimeError("NCFA adventure metadata not found")
+
+          contents = adventure.setdefault("contents", [])
+          for item in contents:
+              if item.get("name") in rewards:
+                  headers = item.setdefault("headers", [])
+                  if "Rewards" not in headers:
+                      headers.append("Rewards")
+          if not any(item.get("name") == "Appendix B: Rewards and Loot" for item in contents):
+              insert_at = next((i for i, item in enumerate(contents) if item.get("name", "").startswith("Appendix C:")), len(contents))
+              contents.insert(insert_at, {
+                  "name": "Appendix B: Rewards and Loot",
+                  "headers": [
+                      "Reward Philosophy",
+                      "Permanent Magic Pacing",
+                      "Levels 3–4: Minor Cache (d12)",
+                      "Levels 5–8: Reclamation Cache (d12)",
+                      "Levels 9–12: Strategic Cache (d12)",
+                      "Levels 13–16: Major Cache (d12)",
+                      "Permanent Item Selection",
+                      "Salvage and Ownership",
+                      "Story Rewards"
+                  ]
+              })
+
+          pack = next((p for p in data.get("adventureData", []) if p.get("id") == "NCFA-RuinsOfBellweather" and p.get("source") == "NCFA"), None)
+          if pack is None:
+              raise RuntimeError("NCFA adventure data not found")
+
+          sections = pack.setdefault("data", [])
+          by_name = {s.get("name"): s for s in sections if isinstance(s, dict)}
+
+          for chapter_name, lines in rewards.items():
+              chapter = by_name.get(chapter_name)
+              if chapter is None:
+                  raise RuntimeError(f"Missing chapter: {chapter_name}")
+              entries = chapter.setdefault("entries", [])
+              entries[:] = [e for e in entries if not (isinstance(e, dict) and e.get("name") == "Rewards")]
+              entries.append(reward_block(lines))
+
+          sections[:] = [s for s in sections if not (isinstance(s, dict) and s.get("name") == "Appendix B: Rewards and Loot")]
+          insert_at = next((i for i, s in enumerate(sections) if isinstance(s, dict) and str(s.get("name", "")).startswith("Appendix C:")), len(sections))
+          sections.insert(insert_at, appendix)
+
+          campaign_guide = by_name.get("Campaign Guide")
+          if campaign_guide is None:
+              campaign_guide = find_named(sections, "Campaign Guide")
+          treasure = find_named(campaign_guide, "Treasure") if campaign_guide else None
+          if treasure is None:
+              raise RuntimeError("Campaign Guide Treasure section not found")
+          treasure["entries"] = [
+              "Treasure favors memorable rewards over large piles of interchangeable magic items. Permanent magic should usually be tied to a recovered heirloom, named location, faction reward, or story consequence. Coin, art objects, consumables, salvage, and story rewards remain useful throughout the adventure.",
+              "The campaign is balanced for four characters. By about 5th level, the party should have roughly four meaningful uncommon permanent items across the group; rare items begin appearing in the middle tiers, very rare items become major rewards in the high tiers, and legendary items remain story-specific.",
+              "Use each chapter's Rewards section for its intended reward budget and Appendix B: Rewards and Loot for cache tables, catch-up guidance, attunement guardrails, and salvage ownership. Named story relics remain in place even when generic treasure quantities are superseded."
+          ]
+
+          serialized = json.dumps(data, ensure_ascii=False, indent="\t") + "\n"
+          with open(path, "w", encoding="utf-8") as f:
+              f.write(serialized)
+
+          with open(path, "r", encoding="utf-8") as f:
+              check = json.load(f)
+
+          src = next(s for s in check["_meta"]["sources"] if s.get("json") == "NCFA")
+          if version_tuple(src.get("version", "0")) < version_tuple("2.7"):
+              raise RuntimeError("Version did not reach 2.7")
+          text = json.dumps(check, ensure_ascii=False)
+          if "adventure for four characters" not in text:
+              raise RuntimeError("Four-character campaign baseline missing")
+          if "Appendix B: Rewards and Loot" not in text:
+              raise RuntimeError("Rewards appendix missing")
+          for chapter_name in rewards:
+              chapter = find_named(check.get("adventureData", []), chapter_name)
+              if chapter is None or find_named(chapter, "Rewards") is None:
+                  raise RuntimeError(f"Rewards validation failed: {chapter_name}")
+          print("Validated NCFA four-PC rewards update")
+          PY
+
       - name: Commit synchronized assets
         shell: bash
         run: |
@@ -185,4 +579,4 @@ jobs:
           git commit -m "Sync current NCFA 5etools JSON"
           git push
 
-# sync-marker: v2.6-economy-rebalance
+# sync-marker: v2.7-four-pc-rewards
