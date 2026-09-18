@@ -6,7 +6,7 @@
 				"json": "NCFA",
 				"abbreviation": "NCFA",
 				"full": "No Cause for Alarm: Ruins of Bellweather",
-				"version": "2.4",
+				"version": "2.5",
 				"authors": [
 					"No Cause for Alarm Campaign"
 				],
@@ -15,7 +15,7 @@
 		],
 		"edition": "one",
 		"dateAdded": 1789528955,
-		"dateLastModified": 1789705736
+		"dateLastModified": 1789709810
 	},
 	"adventure": [
 		{
@@ -41,6 +41,7 @@
 				{
 					"name": "Chapter 1: The Storm",
 					"headers": [
+						"Maps",
 						"Chapter Overview",
 						"Running the Chapter",
 						"Adventure"
@@ -259,7 +260,7 @@
 							"type": "image",
 							"href": {
 								"type": "external",
-								"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/cover.webp"
+								"url": null
 							},
 							"title": "Cover"
 						},
@@ -269,7 +270,7 @@
 							"type": "entries",
 							"name": "Running the Adventure",
 							"entries": [
-								"The campaign follows a repeating rhythm: the characters return to Bellweather, learn what has changed, choose among available problems, venture into the ruins or surrounding lands, and return to a city altered by their decisions.",
+								"After an opening storm-relief scene, the campaign follows a repeating rhythm: the characters return to Bellweather, learn what has changed, choose among available problems, venture into the ruins or surrounding lands, and return to a city altered by their decisions.",
 								"The Council is an important institution, but it is never the only source of work. Residents, merchants, labor crews, temples, and allied factions can all provide leads. When the characters reject one route, present another rather than forcing them back toward a single patron.",
 								{
 									"type": "entries",
@@ -325,19 +326,130 @@
 						"{@b Recommended level:} 3",
 						{
 							"type": "entries",
+							"name": "Maps",
+							"entries": [
+								{
+									"type": "gallery",
+									"images": [
+										{
+											"type": "image",
+											"href": {
+												"type": "external",
+												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/storm_rescue.png"
+											},
+											"imageType": "map",
+											"title": "Storm Rescue — DM Map",
+											"grid": {
+												"type": "none"
+											},
+											"mapRegions": [
+												{
+													"area": "ncfa-storm_rescue",
+													"points": [
+														[
+															0,
+															0
+														],
+														[
+															1,
+															0
+														],
+														[
+															1,
+															1
+														],
+														[
+															0,
+															1
+														]
+													]
+												}
+											]
+										},
+										{
+											"type": "image",
+											"href": {
+												"type": "external",
+												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/ledger_house.png"
+											},
+											"imageType": "map",
+											"title": "Ledger House",
+											"grid": {
+												"type": "none"
+											},
+											"mapRegions": [
+												{
+													"area": "ncfa-ledger_house",
+													"points": [
+														[
+															0,
+															0
+														],
+														[
+															1,
+															0
+														],
+														[
+															1,
+															1
+														],
+														[
+															0,
+															1
+														]
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Storm Rescue Map Key",
+									"entries": [
+										"1. North Cottage — storm-damaged roadside home; use for sheltering civilians or a brief search for someone who went back inside.",
+										"2. Animal Pen — panicked livestock, broken rails, and muddy footing; useful for Animal Handling or quick rescue work.",
+										"3. Fallen Tree Blockage — blocks the safest path along the road; clearing or stabilizing it opens movement between problems.",
+										"4. Overturned Wagon — the principal rescue site; a traveler can be pinned beneath the wagon while a draft animal panics nearby.",
+										"5. Stone Bridge — the safest fixed crossing over the runoff when it remains usable.",
+										"6. Flooded Crossing — fast runoff and unstable footing; use for the stranded-worker rescue.",
+										"7. Ruined Barn — damaged shelter, loose debris, and a possible temporary refuge once made safe.",
+										"8. South Road to Bellweather — route toward the reclaimed gate and the arrival path for workers coming to help.",
+										"9. West Track and Ditch — muddy side route and overflow channel; useful as a safer-but-slower approach.",
+										"10. East Yard and Fence Break — scattered debris and an open route into the roadside properties."
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Ledger House Map Key",
+									"entries": [
+										"{@b Ground floor.} Front steps and entry open into the large common room. The hearth and seating area sit along the west wall; the long bar runs along the east side. The kitchen and pantry occupy the north side, with Brakkus's small office beside the stair. A rear door leads to the stable yard.",
+										"{@b Stable yard.} The fenced rear yard contains stalls, water, feed, and room for wagons. During the storm it is crowded with wet animals, handcarts, and workers moving supplies.",
+										"{@b Upper floor.} Guest rooms open from a central hall. One room can be cleared for temporary bedding when the house is sheltering storm refugees. The larger corner room is normally reserved for long-stay guests or people who need privacy.",
+										"Ledger House is a safe social location, not a dungeon. The map exists to give the recurring hub physical continuity, to stage crowded refuge scenes, and to make later visits feel like returning to a real place."
+									]
+								}
+							]
+						},
+						{
+							"type": "entries",
 							"name": "Chapter Overview",
 							"entries": [
-								"{@b Session purpose.} Bring four strangers together through a rescue, establish Ledger House, and let the players choose their first route into the Slums."
+								"{@b Session purpose.} Begin in the middle of the storm-relief effort, show that the four characters have already been helping people, and give them one final urgent rescue that proves how well they work together.",
+								"Before play begins, each character has already spent part of the storm helping residents, travelers, laborers, or reclamation crews near Bellweather. They do not need to know one another well, but they have seen one another carrying people, clearing debris, guiding frightened animals, or moving supplies.",
+								"The first played scene is not the beginning of the storm. It is the point when several problems become urgent at once and the characters are the capable people already on hand.",
+								"{@b Leads onward.} When the immediate danger is under control, locals direct displaced people and exhausted helpers toward Ledger House. The next morning, several independent reasons to enter the Slums become available."
 							]
 						},
 						{
 							"type": "entries",
 							"name": "Running the Chapter",
 							"entries": [
-								"{@b Primary objectives.} Rescue trapped residents; stabilize a collapsing route; recover supplies only if lives are secure.",
-								"{@b Player agency.} Ledger House becomes the shared refuge. Brakkus notices the group and points out that the Council pays capable people to reclaim the ruins.",
-								"{@b Fail forward.} Failed checks cost time, gear, or create injuries; they do not make the rescue impossible.",
-								"{@b Rest and pressure.} Safe long rests are available back at Ledger House. Inside the active adventure site, resting gives opposing factions time to reposition unless the characters secure a defensible refuge."
+								"{@b Primary objectives.} Keep people alive, stabilize the road, and solve as many simultaneous emergencies as possible.",
+								"{@b Player agency.} Do not prescribe which character handles which problem. A sensible spell, tool, class feature, or plan can solve an obstacle without a check when appropriate.",
+								"{@b Fail forward.} Failed checks cost time, hit points, gear, or position; they do not make the rescue impossible or kill civilians because of one roll.",
+								"{@b Rest and pressure.} This is a short opening emergency rather than a full adventuring day. Once the party reaches Ledger House, they can take a safe long rest.",
+								"{@b Running time.} Keep the storm, arrival, and Ledger House scenes to roughly 30–45 minutes so Session 1 can continue into the Slums."
 							]
 						},
 						{
@@ -346,48 +458,54 @@
 							"entries": [
 								{
 									"type": "entries",
-									"name": "Scene 1: The Storm Rescue",
+									"name": "Scene 1: Already in the Storm",
 									"entries": [
+										"Ask each player for one sentence describing something their character has already done to help during the storm. Examples include carrying an injured worker, holding a line across floodwater, calming an animal, moving supplies, clearing rubble, or guiding a family toward shelter. Do not require a check; these actions have already happened.",
+										"Then place the characters on the Storm Rescue map. They are close enough to recognize one another as fellow helpers even if they have not exchanged names.",
 										{
 											"type": "inset",
-											"name": "The Storm Breaks",
+											"name": "The Storm Rescue",
 											"entries": [
-												"The road into Bellweather has become a ribbon of mud beneath a black, churning sky. Rain lashes sideways hard enough to sting. Ahead, the half-rebuilt walls of the city appear and vanish behind sheets of water, their lanterns little more than blurred yellow smears in the storm.",
-												"A crack of thunder rolls over the road. A draft horse screams. Fifty feet ahead, a wagon slews sideways as one wheel drops into a washout, throwing the driver into the mud and pinning another traveler beneath the tilted bed. At the same moment, brown runoff bursts across the roadside ditch, cutting off two laborers trying to reach higher ground. From the ruined shell of a nearby stone building comes the sharp report of timber splitting. A family sheltering beneath its remaining awning looks up as the roof begins to sag.",
-												"For a few seconds, everyone on the road freezes. Then all three disasters begin to get worse at once."
+												"Rain lashes the road hard enough to blur the lanterns of Bellweather behind you. You have already spent what feels like hours hauling people out of flooded lanes, dragging broken timbers aside, and pointing frightened travelers toward higher ground.",
+												"Then the road gives you three new problems at once. A wagon rolls onto its side in the mud. Runoff tears across the low ground beside the stone bridge. Somewhere beyond the fallen tree, someone is shouting for help."
 											]
 										},
-										"The characters are close enough to reach any of the three emergencies. They need not know one another before the storm; the situation gives them an immediate reason to act together. Do not roll initiative. Ask each player what their character does, resolve the most urgent actions, then move quickly around the table as conditions change.",
+										"Do not roll initiative. Move quickly around the table and ask each player what their character does."
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Scene 2: The Rescue",
+									"entries": [
 										{
 											"type": "entries",
 											"name": "The Three Emergencies",
 											"entries": [
-												"The storm creates three simultaneous problems within roughly 100 feet of one another. Characters can split up or concentrate on one problem at a time. Clever use of spells, equipment, class features, or the environment can solve an obstacle without a check when appropriate.",
 												{
 													"type": "entries",
 													"name": "1. The Overturned Wagon",
 													"entries": [
-														"A two-horse freight wagon has tipped into a washout. The driver is conscious but dazed in the mud. A second traveler is trapped beneath the wagon bed while one terrified horse kicks against tangled traces.",
-														"A character can calm or cut free the horse, brace the wagon, lever the bed upward, dig mud away from the trapped traveler, or attempt another reasonable solution. Typical checks include DC 12 Strength (Athletics), DC 12 Wisdom (Animal Handling), or DC 13 Dexterity using appropriate tools or rope.",
-														"If no one addresses the horse before the scene advances, it lashes out in panic. One nearby creature must succeed on a DC 12 Dexterity saving throw or take 1d6 bludgeoning damage and be knocked prone."
+														"Use map area 4. A two-horse freight wagon has tipped into a washout. The driver is conscious but dazed in the mud. A second traveler is trapped beneath the wagon bed while one terrified horse kicks against tangled traces.",
+														"Characters can calm or cut free the horse, brace the wagon, lever the bed upward, dig mud away from the trapped traveler, or attempt another reasonable solution. Typical checks include DC 12 Strength (Athletics), DC 12 Wisdom (Animal Handling), or DC 13 Dexterity using appropriate tools or rope.",
+														"If no one addresses the horse before the scene advances, it lashes out in panic. One nearby creature must succeed on a DC 12 Dexterity saving throw or take 1d6 bludgeoning damage and fall Prone."
 													]
 												},
 												{
 													"type": "entries",
-													"name": "2. The Flooded Ditch",
+													"name": "2. The Flooded Crossing",
 													"entries": [
-														"Two reclamation laborers are stranded on the far side of a drainage ditch that has become a fast, waist-deep torrent. The old plank crossing tears loose moments after the characters arrive.",
-														"Characters might throw a rope, anchor a line, wade across, improvise a bridge, use magic, or reach the laborers from higher ground. Typical checks include DC 12 Strength (Athletics) to cross with a secured line, DC 12 Dexterity to throw or secure a rope under pressure, or DC 13 Wisdom (Survival) to identify a safer crossing point.",
-														"A character swept into the runoff is carried 20 feet and takes 1d6 bludgeoning damage from debris before catching on rubble or being pulled free. No civilian is simply washed away because of a single failed roll."
+														"Use map area 6. Two reclamation laborers are stranded beyond fast, waist-deep runoff. The safest route has become unstable.",
+														"Characters might throw a rope, anchor a line, wade across, improvise a crossing, use magic, or reach the laborers from higher ground. Typical checks include DC 12 Strength (Athletics), DC 12 Dexterity to throw or secure a rope under pressure, or DC 13 Wisdom (Survival) to identify safer footing.",
+														"A character swept into the runoff is carried 20 feet and takes 1d6 bludgeoning damage from debris before catching on rubble or being pulled free."
 													]
 												},
 												{
 													"type": "entries",
-													"name": "3. The Failing Shelter",
+													"name": "3. The Blocked Road and Failing Shelter",
 													"entries": [
-														"A family of three has taken cover beneath the surviving awning of an old roadside structure. Water is pouring through the upper masonry, and each gust shifts the cracked support posts. The structure will partially collapse unless the family is moved or the roof is stabilized.",
-														"Characters can evacuate the family, shore up the supports, redirect runoff, clear a safer route through the rubble, or use magic to protect them. Typical checks include DC 12 Strength (Athletics), DC 12 Intelligence using mason's or carpenter's tools, or DC 13 Wisdom (Perception) to identify which section will fall first.",
-														"On a complication, falling debris deals 1d6 bludgeoning damage to a character who remains under the awning, or destroys a piece of unattended mundane gear."
+														"Use map areas 3 and 7. A fallen tree blocks the cleanest route while a damaged barn or roadside structure shifts under wind and runoff. Civilians sheltering nearby need either a safe path out or enough temporary support to move without being struck by debris.",
+														"Characters can clear the tree, stabilize the structure, redirect runoff, move people through another route, or use magic to make the area safe. Typical checks include DC 12 Strength (Athletics), DC 12 Intelligence using carpenter's or mason's tools, or DC 13 Wisdom (Perception) to identify what is most likely to fail first.",
+														"On a complication, falling debris deals 1d6 bludgeoning damage to a character in the danger area or destroys a piece of unattended mundane gear."
 													]
 												}
 											]
@@ -396,19 +514,18 @@
 											"type": "entries",
 											"name": "Resolving the Rescue",
 											"entries": [
-												"Track the rescue as a group challenge. The party needs 6 successes before suffering 3 complications. A single action can earn a success if it materially improves the situation; a particularly effective spell or plan can earn a success automatically.",
-												"A failed check does not erase progress. Instead, introduce a complication: a character takes 1d6 damage, a rope or tool is lost, the flood shifts position, the wagon settles deeper, falling debris creates a new obstacle, or precious time is lost. After the third complication, the rescue still succeeds, but the group reaches Bellweather battered and with an additional cost chosen from the complication list.",
-												"The purpose of the scene is not to test whether innocent people live or die on a handful of opening rolls. It is to show the characters solving a fast-moving emergency together while establishing the storm as a real threat."
+												"Track the scene as a group challenge requiring 6 successes before 3 complications. A meaningful action can earn a success; a particularly effective spell or plan can earn one automatically.",
+												"A failed check never erases progress. Introduce a complication instead: 1d6 damage, a lost rope or tool, worsening mud, a shifted obstacle, damaged gear, or lost time.",
+												"After the third complication, the rescue still succeeds, but the characters reach Bellweather battered and with an additional cost appropriate to what happened. The purpose is to establish cooperation under pressure, not to decide whether innocent people live or die on a handful of opening rolls."
 											]
 										}
 									]
 								},
 								{
 									"type": "entries",
-									"name": "Scene 2: Entering Bellweather",
+									"name": "Scene 3: Entering Bellweather",
 									"entries": [
-										"Once the immediate dangers are under control, Bellweather guards and local workers arrive from the gate with lanterns, ropes, and handcarts. They take charge of the injured and direct everyone displaced by the storm toward Ledger House, one of the few buildings in the district large enough to shelter a crowd.",
-										"The rescued travelers and laborers remember the characters' help. Unless the party behaved recklessly or cruelly, word reaches Ledger House before they do that four strangers worked together to keep people alive on the road.",
+										"Once the immediate dangers are under control, Bellweather guards and local workers arrive from the gate with lanterns, ropes, and handcarts. They take over the injured and direct displaced people and exhausted helpers toward Ledger House.",
 										{
 											"type": "inset",
 											"name": "Approaching Bellweather",
@@ -416,39 +533,15 @@
 												"Beyond the gate, Bellweather is all wet stone, canvas tarps, shouted instructions, and lantern light reflected in standing water. Reclamation crews are already clearing drains and bracing damaged walls. Someone points down a crowded street toward a broad, warmly lit building with people packed beneath its eaves.",
 												"‘Ledger House,’ the worker says. ‘If you've got nowhere dry to be, that's where you go.’"
 											]
-										},
-										{
-											"type": "entries",
-											"name": "What Happens",
-											"entries": [
-												"Sera Venn, a rescued laborer, mentions a survey crew missing in the Slums.",
-												"Jorn Milar, a merchant whose wagon was saved, offers 75 gp to recover a strongbox lost near the eastern ruins.",
-												"A city worker says the Council will pay for anyone able to reopen a route through the Slums."
-											]
-										},
-										{
-											"type": "entries",
-											"name": "Clues and Discoveries",
-											"entries": [
-												"These are parallel hooks. The party needs only one; a Council visit is never mandatory."
-											]
-										},
-										{
-											"type": "entries",
-											"name": "Consequences",
-											"entries": [
-												"If the characters ignore all three, storm damage later exposes a breach toward the Slums and trapped workers call for help."
-											]
 										}
 									]
 								},
 								{
 									"type": "entries",
-									"name": "Scene 3: Ledger House",
+									"name": "Scene 4: Ledger House",
 									"entries": [
-										"After the rescue, locals funnel displaced people toward {@b Ledger House}, an established inn and boarding house in Reclaimed Bellweather. Its proprietor, {@creature Brakkus Ledgerhelm|NCFA}, is an older half-orc and retired {@b level 16 Oath of Devotion paladin of Torm}. He is broad-shouldered, scarred, practical, dry, observant, and generous without being sentimental. The calm way he moves through a crowded emergency suggests long experience with danger, but he does not advertise what he once did for a living.",
+										"Ledger House is an established inn and boarding house in Reclaimed Bellweather. Its proprietor, {@creature Brakkus Ledgerhelm|NCFA}, is an older half-orc and retired level 16 Oath of Devotion paladin of Torm. He is broad-shouldered, scarred, practical, dry, observant, and generous without being sentimental. The calm way he moves through a crowded emergency suggests long experience with danger, but he does not advertise what he once did for a living.",
 										"For Brakkus's combat statistics, see {@creature Brakkus Ledgerhelm|NCFA}. He intervenes only when Ledger House, its staff, or its guests face serious danger.",
-										"{@creature Brakkus Ledgerhelm|NCFA|Brakkus} feeds people, finds dry blankets, and quietly watches the adventurers work together. Ledger House is deliberately a safe place for travelers, workers, refugees, and anyone else who needs shelter. Brakkus holds no civic office and assigns no official work. He is a steady local contact and the keeper of a reliable refuge.",
 										{
 											"type": "entries",
 											"name": "What the Characters See",
@@ -457,7 +550,6 @@
 												"Brakkus moves through the room like someone used to emergencies: directing traffic, checking on the injured, remembering who needs food, and making certain nobody is left outside in the storm."
 											]
 										},
-										"When the immediate crisis settles, Brakkus mentions several ways capable people can find work in Bellweather, including the Council's reclamation contracts:",
 										{
 											"type": "inset",
 											"name": "Brakkus Line Prompts",
@@ -470,7 +562,6 @@
 												"If asked about Bellweather’s rebuilding: “Everybody likes rebuilding. Arguments start when something worth owning gets rebuilt.”"
 											]
 										},
-										"The characters can rest at Ledger House before choosing what to do next. The Council's first suitable assignment is reclamation work in the {@b Slums}, but the Slums can also be reached through a private survey crew, a missing-worker request, a merchant escort job, or simple exploration. The Council is the official route, not a mandatory one.",
 										{
 											"type": "entries",
 											"name": "No Cause for Alarm Beat",
@@ -482,32 +573,26 @@
 														"{@b PUBLIC NOTICE:} Storm damage remains localized. Reclamation crews are assessing affected structures. Trade and Council business will continue as scheduled. {@b There is no cause for alarm.}"
 													]
 												},
-												"The notice is not sinister. It is exactly the sort of reassurance a fragile frontier settlement would issue to prevent panic and protect trade. That is why the phrase works. Brakkus reads it, glances at whatever part of Ledger House is still dripping, and says only, {@b \"Good to know.\"}",
-												"Allow the phrase to pass without emphasis; its significance should emerge through repetition and circumstance."
-											]
-										},
-										{
-											"type": "entries",
-											"name": "Running Time",
-											"entries": [
-												"Keep the storm, introductions, and Ledger House to roughly 30–45 minutes. The rest of the session should carry the characters into their first Slums objective."
+												"The notice is ordinary civic reassurance, not a secret signal. Brakkus reads it, glances at whatever part of Ledger House is still dripping, and says only, {@b “Good to know.”}",
+												"Allow the phrase to pass without emphasis. Its significance should emerge through repetition and circumstance."
 											]
 										}
 									]
 								},
 								{
 									"type": "entries",
-									"name": "Scene 4: Choosing a Lead",
+									"name": "Scene 5: Choosing a Lead",
 									"entries": [
-										"The party can follow whichever problem interests them most. Sera Venn points them toward the missing survey crew, Jorn Milar pays for recovery of his strongbox, and the Council posts paid reclamation work. None of these routes is mandatory.",
-										"Once the characters choose a reason to enter the Slums, let them rest if they want and begin Chapter 3 when the roads are passable."
+										"By morning, several unrelated people in and around Ledger House have reasons to care about the Slums. A resident may need property checked, a private reclamation or survey crew may need protection, a merchant may need access to an old storefront or warehouse, and the Council has paid work marking a safe route through the district.",
+										"Brakkus does not assign a quest. He points out where people looking for help tend to gather and lets the characters choose which problem interests them.",
+										"If the characters avoid formal work entirely, visible storm damage has opened a practical route toward the Slums and they can investigate on their own."
 									]
 								},
 								{
 									"type": "entries",
 									"name": "Transition to Chapter 3",
 									"entries": [
-										"After the storm eases enough for travel, the chosen hook leads the party into the Slums. Chapter 2 can be used before or after the expedition to introduce Bellweather in greater detail."
+										"Once the characters choose why they are going, begin Chapter 3 at the edge of the Slums. Chapter 2 can be used before or after the first expedition to introduce more of Reclaimed Bellweather."
 									]
 								}
 							]
@@ -977,6 +1062,14 @@
 											]
 										}
 									]
+								},
+								{
+									"type": "entries",
+									"name": "DM Map Key",
+									"entries": [
+										"Use the map labels as position references. This conversion runs the site by the named scenes and locations in the chapter rather than assigning new meaning to every legacy/generated room number. Do not treat an unlabeled room number as a hidden encounter.",
+										"Encounter-relevant locations are identified in the chapter text. When a scene names a gate, courtyard, command post, market, cellar, laboratory, crypt, tower, or other site, place that scene in the matching obvious feature on the map."
+									]
 								}
 							]
 						},
@@ -1325,6 +1418,14 @@
 												}
 											]
 										}
+									]
+								},
+								{
+									"type": "entries",
+									"name": "DM Map Key",
+									"entries": [
+										"Use the map labels as position references. This conversion runs the site by the named scenes and locations in the chapter rather than assigning new meaning to every legacy/generated room number. Do not treat an unlabeled room number as a hidden encounter.",
+										"Encounter-relevant locations are identified in the chapter text. When a scene names a gate, courtyard, command post, market, cellar, laboratory, crypt, tower, or other site, place that scene in the matching obvious feature on the map."
 									]
 								}
 							]
@@ -1712,6 +1813,18 @@
 											]
 										}
 									]
+								},
+								{
+									"type": "entries",
+									"name": "DM Map Key",
+									"entries": [
+										"The numbered labels below are the locations explicitly keyed by this conversion. Any other number visible on the map is a navigation reference unless the chapter text assigns it an encounter.",
+										"1. Well Chamber",
+										"2. Bow Gallery",
+										"3. Junction",
+										"4. Barracks",
+										"5. Command Room"
+									]
 								}
 							]
 						},
@@ -2095,6 +2208,14 @@
 											]
 										}
 									]
+								},
+								{
+									"type": "entries",
+									"name": "DM Map Key",
+									"entries": [
+										"Use the map labels as position references. This conversion runs the site by the named scenes and locations in the chapter rather than assigning new meaning to every legacy/generated room number. Do not treat an unlabeled room number as a hidden encounter.",
+										"Encounter-relevant locations are identified in the chapter text. When a scene names a gate, courtyard, command post, market, cellar, laboratory, crypt, tower, or other site, place that scene in the matching obvious feature on the map."
+									]
 								}
 							]
 						},
@@ -2462,6 +2583,24 @@
 												}
 											]
 										}
+									]
+								},
+								{
+									"type": "entries",
+									"name": "DM Map Key",
+									"entries": [
+										"The numbered labels below are the locations explicitly keyed by this conversion. Any other number visible on the map is a navigation reference unless the chapter text assigns it an encounter.",
+										"1. Outside the Gate",
+										"2. Gate and Courtyard",
+										"3. Stable",
+										"4. Granary",
+										"5. Smithy",
+										"6. Barracks",
+										"7. Kitchen",
+										"8. Entrance Hall — Counterattack",
+										"9. Armory",
+										"10. Officer's Quarters",
+										"11. Old Chapel"
 									]
 								}
 							]
@@ -2889,6 +3028,20 @@
 											]
 										}
 									]
+								},
+								{
+									"type": "entries",
+									"name": "DM Map Key",
+									"entries": [
+										"The numbered labels below are the locations explicitly keyed by this conversion. Any other number visible on the map is a navigation reference unless the chapter text assigns it an encounter.",
+										"1. Outer Gates and Courtyard",
+										"2. Collapsed Wing",
+										"3. Watchpost",
+										"6. Main Hall",
+										"10. Garden",
+										"11. Cardon Bedroom and Cache",
+										"12. Shrine and Correspondence"
+									]
 								}
 							]
 						},
@@ -3280,6 +3433,19 @@
 												}
 											]
 										}
+									]
+								},
+								{
+									"type": "entries",
+									"name": "DM Map Key",
+									"entries": [
+										"The numbered labels below are the locations explicitly keyed by this conversion. Any other number visible on the map is a navigation reference unless the chapter text assigns it an encounter.",
+										"1. Garden Court",
+										"2. Stacks and Subject Collections",
+										"3. Master Librarian's Chamber",
+										"7. Scribes' Hall — Evan Rell",
+										"12. Damaged Stacks",
+										"13. Storeroom"
 									]
 								}
 							]
@@ -3983,6 +4149,14 @@
 											]
 										}
 									]
+								},
+								{
+									"type": "entries",
+									"name": "DM Map Key",
+									"entries": [
+										"Use the map labels as position references. This conversion runs the site by the named scenes and locations in the chapter rather than assigning new meaning to every legacy/generated room number. Do not treat an unlabeled room number as a hidden encounter.",
+										"Encounter-relevant locations are identified in the chapter text. When a scene names a gate, courtyard, command post, market, cellar, laboratory, crypt, tower, or other site, place that scene in the matching obvious feature on the map."
+									]
 								}
 							]
 						},
@@ -4309,6 +4483,14 @@
 												}
 											]
 										}
+									]
+								},
+								{
+									"type": "entries",
+									"name": "DM Map Key",
+									"entries": [
+										"Use the map labels as position references. This conversion runs the site by the named scenes and locations in the chapter rather than assigning new meaning to every legacy/generated room number. Do not treat an unlabeled room number as a hidden encounter.",
+										"Encounter-relevant locations are identified in the chapter text. When a scene names a gate, courtyard, command post, market, cellar, laboratory, crypt, tower, or other site, place that scene in the matching obvious feature on the map."
 									]
 								}
 							]
@@ -4648,6 +4830,14 @@
 												}
 											]
 										}
+									]
+								},
+								{
+									"type": "entries",
+									"name": "DM Map Key",
+									"entries": [
+										"Use the map labels as position references. This conversion runs the site by the named scenes and locations in the chapter rather than assigning new meaning to every legacy/generated room number. Do not treat an unlabeled room number as a hidden encounter.",
+										"Encounter-relevant locations are identified in the chapter text. When a scene names a gate, courtyard, command post, market, cellar, laboratory, crypt, tower, or other site, place that scene in the matching obvious feature on the map."
 									]
 								}
 							]
@@ -5056,6 +5246,14 @@
 												}
 											]
 										}
+									]
+								},
+								{
+									"type": "entries",
+									"name": "DM Map Key",
+									"entries": [
+										"Use the map labels as position references. This conversion runs the site by the named scenes and locations in the chapter rather than assigning new meaning to every legacy/generated room number. Do not treat an unlabeled room number as a hidden encounter.",
+										"Encounter-relevant locations are identified in the chapter text. When a scene names a gate, courtyard, command post, market, cellar, laboratory, crypt, tower, or other site, place that scene in the matching obvious feature on the map."
 									]
 								}
 							]
@@ -6622,6 +6820,14 @@
 												}
 											]
 										}
+									]
+								},
+								{
+									"type": "entries",
+									"name": "DM Map Key",
+									"entries": [
+										"Use the map labels as position references. This conversion runs the site by the named scenes and locations in the chapter rather than assigning new meaning to every legacy/generated room number. Do not treat an unlabeled room number as a hidden encounter.",
+										"Encounter-relevant locations are identified in the chapter text. When a scene names a gate, courtyard, command post, market, cellar, laboratory, crypt, tower, or other site, place that scene in the matching obvious feature on the map."
 									]
 								}
 							]
