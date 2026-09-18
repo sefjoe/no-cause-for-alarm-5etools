@@ -68,6 +68,17 @@ jobs:
           download "128NwZwCH1AjUuF-10UHqcHKta7IgHNht" "No_Cause_for_Alarm_5etools_GITHUB_v1.5.json"
           download "1D9xXteXvilytYEEDBh-HUzzSxTXqOI9X" "No_Cause_for_Alarm_5etools_CURRENT.json"
 
+          python - <<'PY'
+          import json, time
+          path = "No_Cause_for_Alarm_5etools_CURRENT.json"
+          with open(path, "r", encoding="utf-8") as f:
+              data = json.load(f)
+          data.setdefault("_meta", {})["dateLastModified"] = int(time.time())
+          with open(path, "w", encoding="utf-8") as f:
+              json.dump(data, f, ensure_ascii=False, indent="\t")
+              f.write("\n")
+          PY
+
       - name: Commit synchronized assets
         shell: bash
         run: |
@@ -82,4 +93,4 @@ jobs:
           git commit -m "Sync current NCFA 5etools JSON"
           git push
 
-# sync-marker: v2.3
+# sync-marker: v2.3-timestamp
