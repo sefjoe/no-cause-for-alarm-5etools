@@ -105,9 +105,6 @@ jobs:
                   "imageType": "mapPlayer" if player else "map",
                   "title": f"{title} — {'Player Map' if player else 'DM Map'}",
                   "grid": {"type": "none"},
-                  # 5etools' Dynamic Map Viewer currently indexes maps by the
-                  # presence of mapRegions. This tiny inert region enables the
-                  # viewer without obscuring or pretending to key the map.
                   "mapRegions": [
                       {
                           "area": f"ncfa-{slug}",
@@ -139,6 +136,8 @@ jobs:
                           out.append(cleaned)
                   return out
               if isinstance(value, dict):
+                  if value.get("type") == "image" and value.get("imageType") in {"map", "mapPlayer"}:
+                      return value
                   href = value.get("href")
                   if isinstance(href, dict):
                       url = href.get("url", "")
@@ -177,8 +176,6 @@ jobs:
 
                   maps_section["entries"] = [make_gallery(maps)]
 
-              # Remove legacy raw-image hyperlinks elsewhere so the adventure
-              # presents the native 5etools maps rather than opening a web tab.
               packs[0]["data"] = clean_old_map_links(packs[0]["data"])
 
           meta = data.setdefault("_meta", {})
