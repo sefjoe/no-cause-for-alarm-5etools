@@ -70,10 +70,123 @@ jobs:
 
           python - <<'PY'
           import json, time
+
           path = "No_Cause_for_Alarm_5etools_CURRENT.json"
+          base = "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img"
+
+          chapter_maps = {
+              "Chapter 3: The Slums": [("slums", "The Slums")],
+              "Chapter 4: Blackstone Temple": [("blackstone_temple", "Blackstone Temple")],
+              "Chapter 5: Delving into Kellan's Well": [("kellans_well", "Kellan's Well")],
+              "Chapter 6: Koven House": [("koven_house", "Koven House")],
+              "Chapter 7: Reconquest of Savin Keep": [("savin_keep", "Savin Keep")],
+              "Chapter 8: Cardon Weavehouse": [("cardon_weavehouse", "Cardon Weavehouse")],
+              "Chapter 9: Marren Library": [("marren_library", "Marren Library")],
+              "Chapter 11: Paden Square": [("paden_square", "Paden Square")],
+              "Chapter 12: Storen Gate": [("storen_gate", "Storen Gate")],
+              "Chapter 13: Valen Cemetery": [("valen_cemetery", "Valen Cemetery")],
+              "Chapter 14: Maren Isle": [("maren_isle", "Maren Isle")],
+              "Chapter 15: The Lands Beyond Bellweather": [
+                  ("kerren_settlement", "Kerren Settlement"),
+                  ("waylen_camp", "Waylen Camp"),
+                  ("rellan_enclave", "Rellan Enclave"),
+                  ("emmer_hold", "Emmer Hold"),
+              ],
+              "Chapter 17: Varen Keep and the Radiant Well": [("varen_keep", "Varen Keep")],
+          }
+
+          def map_image(slug, title, player=False):
+              return {
+                  "type": "image",
+                  "href": {
+                      "type": "external",
+                      "url": f"{base}/{'player' if player else 'dm'}/{slug}.webp",
+                  },
+                  "imageType": "mapPlayer" if player else "map",
+                  "title": f"{title} — {'Player Map' if player else 'DM Map'}",
+                  "grid": {"type": "none"},
+                  # 5etools' Dynamic Map Viewer currently indexes maps by the
+                  # presence of mapRegions. This tiny inert region enables the
+                  # viewer without obscuring or pretending to key the map.
+                  "mapRegions": [
+                      {
+                          "area": f"ncfa-{slug}",
+                          "points": [[0, 0], [1, 0], [1, 1], [0, 1]],
+                      }
+                  ],
+              }
+
+          def make_gallery(maps):
+              images = []
+              for slug, title in maps:
+                  images.append(map_image(slug, title, player=False))
+                  images.append(map_image(slug, title, player=True))
+              return {"type": "gallery", "images": images}
+
+          def is_old_map_link(value):
+              if not isinstance(value, str):
+                  return False
+              return "raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/" in value
+
+          def clean_old_map_links(value):
+              if isinstance(value, list):
+                  out = []
+                  for item in value:
+                      if is_old_map_link(item):
+                          continue
+                      cleaned = clean_old_map_links(item)
+                      if cleaned is not None:
+                          out.append(cleaned)
+                  return out
+              if isinstance(value, dict):
+                  href = value.get("href")
+                  if isinstance(href, dict):
+                      url = href.get("url", "")
+                      if "/img/dm/" in url or "/img/player/" in url:
+                          return None
+                  return {k: clean_old_map_links(v) for k, v in value.items()}
+              return value
+
           with open(path, "r", encoding="utf-8") as f:
               data = json.load(f)
-          data.setdefault("_meta", {})["dateLastModified"] = int(time.time())
+
+          packs = data.get("adventureData", [])
+          if packs:
+              chapters = packs[0].get("data", [])
+              by_name = {chapter.get("name"): chapter for chapter in chapters if isinstance(chapter, dict)}
+
+              for chapter_name, maps in chapter_maps.items():
+                  chapter = by_name.get(chapter_name)
+                  if not chapter:
+                      continue
+
+                  entries = chapter.setdefault("entries", [])
+                  maps_section = next(
+                      (
+                          entry for entry in entries
+                          if isinstance(entry, dict)
+                          and entry.get("name") == "Maps"
+                          and isinstance(entry.get("entries"), list)
+                      ),
+                      None,
+                  )
+
+                  if maps_section is None:
+                      maps_section = {"type": "entries", "name": "Maps", "entries": []}
+                      entries.insert(0, maps_section)
+
+                  maps_section["entries"] = [make_gallery(maps)]
+
+              # Remove legacy raw-image hyperlinks elsewhere so the adventure
+              # presents the native 5etools maps rather than opening a web tab.
+              packs[0]["data"] = clean_old_map_links(packs[0]["data"])
+
+          meta = data.setdefault("_meta", {})
+          sources = meta.get("sources", [])
+          if sources and sources[0].get("version") == "2.3":
+              sources[0]["version"] = "2.4"
+          meta["dateLastModified"] = int(time.time())
+
           with open(path, "w", encoding="utf-8") as f:
               json.dump(data, f, ensure_ascii=False, indent="\t")
               f.write("\n")
@@ -93,4 +206,4 @@ jobs:
           git commit -m "Sync current NCFA 5etools JSON"
           git push
 
-# sync-marker: v2.3-timestamp
+# sync-marker: v2.4-native-maps
