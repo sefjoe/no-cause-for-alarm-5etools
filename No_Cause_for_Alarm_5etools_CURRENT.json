@@ -15,7 +15,7 @@
 		],
 		"edition": "one",
 		"dateAdded": 1789528955,
-		"dateLastModified": 1789705588
+		"dateLastModified": 1789705736
 	},
 	"adventure": [
 		{
@@ -905,7 +905,78 @@
 							"entries": [
 								{
 									"type": "gallery",
-									"images": []
+									"images": [
+										{
+											"type": "image",
+											"href": {
+												"type": "external",
+												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/slums.webp"
+											},
+											"imageType": "map",
+											"title": "The Slums — DM Map",
+											"grid": {
+												"type": "none"
+											},
+											"mapRegions": [
+												{
+													"area": "ncfa-slums",
+													"points": [
+														[
+															0,
+															0
+														],
+														[
+															1,
+															0
+														],
+														[
+															1,
+															1
+														],
+														[
+															0,
+															1
+														]
+													]
+												}
+											]
+										},
+										{
+											"type": "image",
+											"href": {
+												"type": "external",
+												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/slums.webp"
+											},
+											"imageType": "mapPlayer",
+											"title": "The Slums — Player Map",
+											"grid": {
+												"type": "none"
+											},
+											"mapRegions": [
+												{
+													"area": "ncfa-slums",
+													"points": [
+														[
+															0,
+															0
+														],
+														[
+															1,
+															0
+														],
+														[
+															1,
+															1
+														],
+														[
+															0,
+															1
+														]
+													]
+												}
+											]
+										}
+									]
 								}
 							]
 						},
@@ -1183,7 +1254,78 @@
 							"entries": [
 								{
 									"type": "gallery",
-									"images": []
+									"images": [
+										{
+											"type": "image",
+											"href": {
+												"type": "external",
+												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/blackstone_temple.webp"
+											},
+											"imageType": "map",
+											"title": "Blackstone Temple — DM Map",
+											"grid": {
+												"type": "none"
+											},
+											"mapRegions": [
+												{
+													"area": "ncfa-blackstone_temple",
+													"points": [
+														[
+															0,
+															0
+														],
+														[
+															1,
+															0
+														],
+														[
+															1,
+															1
+														],
+														[
+															0,
+															1
+														]
+													]
+												}
+											]
+										},
+										{
+											"type": "image",
+											"href": {
+												"type": "external",
+												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/blackstone_temple.webp"
+											},
+											"imageType": "mapPlayer",
+											"title": "Blackstone Temple — Player Map",
+											"grid": {
+												"type": "none"
+											},
+											"mapRegions": [
+												{
+													"area": "ncfa-blackstone_temple",
+													"points": [
+														[
+															0,
+															0
+														],
+														[
+															1,
+															0
+														],
+														[
+															1,
+															1
+														],
+														[
+															0,
+															1
+														]
+													]
+												}
+											]
+										}
+									]
 								}
 							]
 						},
@@ -1498,7 +1640,78 @@
 							"entries": [
 								{
 									"type": "gallery",
-									"images": []
+									"images": [
+										{
+											"type": "image",
+											"href": {
+												"type": "external",
+												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/kellans_well.webp"
+											},
+											"imageType": "map",
+											"title": "Kellan's Well — DM Map",
+											"grid": {
+												"type": "none"
+											},
+											"mapRegions": [
+												{
+													"area": "ncfa-kellans_well",
+													"points": [
+														[
+															0,
+															0
+														],
+														[
+															1,
+															0
+														],
+														[
+															1,
+															1
+														],
+														[
+															0,
+															1
+														]
+													]
+												}
+											]
+										},
+										{
+											"type": "image",
+											"href": {
+												"type": "external",
+												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/kellans_well.webp"
+											},
+											"imageType": "mapPlayer",
+											"title": "Kellan's Well — Player Map",
+											"grid": {
+												"type": "none"
+											},
+											"mapRegions": [
+												{
+													"area": "ncfa-kellans_well",
+													"points": [
+														[
+															0,
+															0
+														],
+														[
+															1,
+															0
+														],
+														[
+															1,
+															1
+														],
+														[
+															0,
+															1
+														]
+													]
+												}
+											]
+										}
+									]
 								}
 							]
 						},
@@ -1810,7 +2023,78 @@
 							"entries": [
 								{
 									"type": "gallery",
-									"images": []
+									"images": [
+										{
+											"type": "image",
+											"href": {
+												"type": "external",
+												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/koven_house.webp"
+											},
+											"imageType": "map",
+											"title": "Koven House — DM Map",
+											"grid": {
+												"type": "none"
+											},
+											"mapRegions": [
+												{
+													"area": "ncfa-koven_house",
+													"points": [
+														[
+															0,
+															0
+														],
+														[
+															1,
+															0
+														],
+														[
+															1,
+															1
+														],
+														[
+															0,
+															1
+														]
+													]
+												}
+											]
+										},
+										{
+											"type": "image",
+											"href": {
+												"type": "external",
+												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/koven_house.webp"
+											},
+											"imageType": "mapPlayer",
+											"title": "Koven House — Player Map",
+											"grid": {
+												"type": "none"
+											},
+											"mapRegions": [
+												{
+													"area": "ncfa-koven_house",
+													"points": [
+														[
+															0,
+															0
+														],
+														[
+															1,
+															0
+														],
+														[
+															1,
+															1
+														],
+														[
+															0,
+															1
+														]
+													]
+												}
+											]
+										}
+									]
 								}
 							]
 						},
@@ -2107,7 +2391,78 @@
 							"entries": [
 								{
 									"type": "gallery",
-									"images": []
+									"images": [
+										{
+											"type": "image",
+											"href": {
+												"type": "external",
+												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/savin_keep.webp"
+											},
+											"imageType": "map",
+											"title": "Savin Keep — DM Map",
+											"grid": {
+												"type": "none"
+											},
+											"mapRegions": [
+												{
+													"area": "ncfa-savin_keep",
+													"points": [
+														[
+															0,
+															0
+														],
+														[
+															1,
+															0
+														],
+														[
+															1,
+															1
+														],
+														[
+															0,
+															1
+														]
+													]
+												}
+											]
+										},
+										{
+											"type": "image",
+											"href": {
+												"type": "external",
+												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/savin_keep.webp"
+											},
+											"imageType": "mapPlayer",
+											"title": "Savin Keep — Player Map",
+											"grid": {
+												"type": "none"
+											},
+											"mapRegions": [
+												{
+													"area": "ncfa-savin_keep",
+													"points": [
+														[
+															0,
+															0
+														],
+														[
+															1,
+															0
+														],
+														[
+															1,
+															1
+														],
+														[
+															0,
+															1
+														]
+													]
+												}
+											]
+										}
+									]
 								}
 							]
 						},
@@ -2462,7 +2817,78 @@
 							"entries": [
 								{
 									"type": "gallery",
-									"images": []
+									"images": [
+										{
+											"type": "image",
+											"href": {
+												"type": "external",
+												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse.webp"
+											},
+											"imageType": "map",
+											"title": "Cardon Weavehouse — DM Map",
+											"grid": {
+												"type": "none"
+											},
+											"mapRegions": [
+												{
+													"area": "ncfa-cardon_weavehouse",
+													"points": [
+														[
+															0,
+															0
+														],
+														[
+															1,
+															0
+														],
+														[
+															1,
+															1
+														],
+														[
+															0,
+															1
+														]
+													]
+												}
+											]
+										},
+										{
+											"type": "image",
+											"href": {
+												"type": "external",
+												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/cardon_weavehouse.webp"
+											},
+											"imageType": "mapPlayer",
+											"title": "Cardon Weavehouse — Player Map",
+											"grid": {
+												"type": "none"
+											},
+											"mapRegions": [
+												{
+													"area": "ncfa-cardon_weavehouse",
+													"points": [
+														[
+															0,
+															0
+														],
+														[
+															1,
+															0
+														],
+														[
+															1,
+															1
+														],
+														[
+															0,
+															1
+														]
+													]
+												}
+											]
+										}
+									]
 								}
 							]
 						},
@@ -2783,7 +3209,78 @@
 							"entries": [
 								{
 									"type": "gallery",
-									"images": []
+									"images": [
+										{
+											"type": "image",
+											"href": {
+												"type": "external",
+												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/marren_library.webp"
+											},
+											"imageType": "map",
+											"title": "Marren Library — DM Map",
+											"grid": {
+												"type": "none"
+											},
+											"mapRegions": [
+												{
+													"area": "ncfa-marren_library",
+													"points": [
+														[
+															0,
+															0
+														],
+														[
+															1,
+															0
+														],
+														[
+															1,
+															1
+														],
+														[
+															0,
+															1
+														]
+													]
+												}
+											]
+										},
+										{
+											"type": "image",
+											"href": {
+												"type": "external",
+												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/marren_library.webp"
+											},
+											"imageType": "mapPlayer",
+											"title": "Marren Library — Player Map",
+											"grid": {
+												"type": "none"
+											},
+											"mapRegions": [
+												{
+													"area": "ncfa-marren_library",
+													"points": [
+														[
+															0,
+															0
+														],
+														[
+															1,
+															0
+														],
+														[
+															1,
+															1
+														],
+														[
+															0,
+															1
+														]
+													]
+												}
+											]
+										}
+									]
 								}
 							]
 						},
@@ -3414,7 +3911,78 @@
 							"entries": [
 								{
 									"type": "gallery",
-									"images": []
+									"images": [
+										{
+											"type": "image",
+											"href": {
+												"type": "external",
+												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/paden_square.webp"
+											},
+											"imageType": "map",
+											"title": "Paden Square — DM Map",
+											"grid": {
+												"type": "none"
+											},
+											"mapRegions": [
+												{
+													"area": "ncfa-paden_square",
+													"points": [
+														[
+															0,
+															0
+														],
+														[
+															1,
+															0
+														],
+														[
+															1,
+															1
+														],
+														[
+															0,
+															1
+														]
+													]
+												}
+											]
+										},
+										{
+											"type": "image",
+											"href": {
+												"type": "external",
+												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/paden_square.webp"
+											},
+											"imageType": "mapPlayer",
+											"title": "Paden Square — Player Map",
+											"grid": {
+												"type": "none"
+											},
+											"mapRegions": [
+												{
+													"area": "ncfa-paden_square",
+													"points": [
+														[
+															0,
+															0
+														],
+														[
+															1,
+															0
+														],
+														[
+															1,
+															1
+														],
+														[
+															0,
+															1
+														]
+													]
+												}
+											]
+										}
+									]
 								}
 							]
 						},
@@ -3670,7 +4238,78 @@
 							"entries": [
 								{
 									"type": "gallery",
-									"images": []
+									"images": [
+										{
+											"type": "image",
+											"href": {
+												"type": "external",
+												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/storen_gate.webp"
+											},
+											"imageType": "map",
+											"title": "Storen Gate — DM Map",
+											"grid": {
+												"type": "none"
+											},
+											"mapRegions": [
+												{
+													"area": "ncfa-storen_gate",
+													"points": [
+														[
+															0,
+															0
+														],
+														[
+															1,
+															0
+														],
+														[
+															1,
+															1
+														],
+														[
+															0,
+															1
+														]
+													]
+												}
+											]
+										},
+										{
+											"type": "image",
+											"href": {
+												"type": "external",
+												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/storen_gate.webp"
+											},
+											"imageType": "mapPlayer",
+											"title": "Storen Gate — Player Map",
+											"grid": {
+												"type": "none"
+											},
+											"mapRegions": [
+												{
+													"area": "ncfa-storen_gate",
+													"points": [
+														[
+															0,
+															0
+														],
+														[
+															1,
+															0
+														],
+														[
+															1,
+															1
+														],
+														[
+															0,
+															1
+														]
+													]
+												}
+											]
+										}
+									]
 								}
 							]
 						},
@@ -3938,7 +4577,78 @@
 							"entries": [
 								{
 									"type": "gallery",
-									"images": []
+									"images": [
+										{
+											"type": "image",
+											"href": {
+												"type": "external",
+												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/valen_cemetery.webp"
+											},
+											"imageType": "map",
+											"title": "Valen Cemetery — DM Map",
+											"grid": {
+												"type": "none"
+											},
+											"mapRegions": [
+												{
+													"area": "ncfa-valen_cemetery",
+													"points": [
+														[
+															0,
+															0
+														],
+														[
+															1,
+															0
+														],
+														[
+															1,
+															1
+														],
+														[
+															0,
+															1
+														]
+													]
+												}
+											]
+										},
+										{
+											"type": "image",
+											"href": {
+												"type": "external",
+												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/valen_cemetery.webp"
+											},
+											"imageType": "mapPlayer",
+											"title": "Valen Cemetery — Player Map",
+											"grid": {
+												"type": "none"
+											},
+											"mapRegions": [
+												{
+													"area": "ncfa-valen_cemetery",
+													"points": [
+														[
+															0,
+															0
+														],
+														[
+															1,
+															0
+														],
+														[
+															1,
+															1
+														],
+														[
+															0,
+															1
+														]
+													]
+												}
+											]
+										}
+									]
 								}
 							]
 						},
@@ -4275,7 +4985,78 @@
 							"entries": [
 								{
 									"type": "gallery",
-									"images": []
+									"images": [
+										{
+											"type": "image",
+											"href": {
+												"type": "external",
+												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/maren_isle.webp"
+											},
+											"imageType": "map",
+											"title": "Maren Isle — DM Map",
+											"grid": {
+												"type": "none"
+											},
+											"mapRegions": [
+												{
+													"area": "ncfa-maren_isle",
+													"points": [
+														[
+															0,
+															0
+														],
+														[
+															1,
+															0
+														],
+														[
+															1,
+															1
+														],
+														[
+															0,
+															1
+														]
+													]
+												}
+											]
+										},
+										{
+											"type": "image",
+											"href": {
+												"type": "external",
+												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/maren_isle.webp"
+											},
+											"imageType": "mapPlayer",
+											"title": "Maren Isle — Player Map",
+											"grid": {
+												"type": "none"
+											},
+											"mapRegions": [
+												{
+													"area": "ncfa-maren_isle",
+													"points": [
+														[
+															0,
+															0
+														],
+														[
+															1,
+															0
+														],
+														[
+															1,
+															1
+														],
+														[
+															0,
+															1
+														]
+													]
+												}
+											]
+										}
+									]
 								}
 							]
 						},
@@ -4581,7 +5362,288 @@
 							"entries": [
 								{
 									"type": "gallery",
-									"images": []
+									"images": [
+										{
+											"type": "image",
+											"href": {
+												"type": "external",
+												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/kerren_settlement.webp"
+											},
+											"imageType": "map",
+											"title": "Kerren Settlement — DM Map",
+											"grid": {
+												"type": "none"
+											},
+											"mapRegions": [
+												{
+													"area": "ncfa-kerren_settlement",
+													"points": [
+														[
+															0,
+															0
+														],
+														[
+															1,
+															0
+														],
+														[
+															1,
+															1
+														],
+														[
+															0,
+															1
+														]
+													]
+												}
+											]
+										},
+										{
+											"type": "image",
+											"href": {
+												"type": "external",
+												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/kerren_settlement.webp"
+											},
+											"imageType": "mapPlayer",
+											"title": "Kerren Settlement — Player Map",
+											"grid": {
+												"type": "none"
+											},
+											"mapRegions": [
+												{
+													"area": "ncfa-kerren_settlement",
+													"points": [
+														[
+															0,
+															0
+														],
+														[
+															1,
+															0
+														],
+														[
+															1,
+															1
+														],
+														[
+															0,
+															1
+														]
+													]
+												}
+											]
+										},
+										{
+											"type": "image",
+											"href": {
+												"type": "external",
+												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/waylen_camp.webp"
+											},
+											"imageType": "map",
+											"title": "Waylen Camp — DM Map",
+											"grid": {
+												"type": "none"
+											},
+											"mapRegions": [
+												{
+													"area": "ncfa-waylen_camp",
+													"points": [
+														[
+															0,
+															0
+														],
+														[
+															1,
+															0
+														],
+														[
+															1,
+															1
+														],
+														[
+															0,
+															1
+														]
+													]
+												}
+											]
+										},
+										{
+											"type": "image",
+											"href": {
+												"type": "external",
+												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/waylen_camp.webp"
+											},
+											"imageType": "mapPlayer",
+											"title": "Waylen Camp — Player Map",
+											"grid": {
+												"type": "none"
+											},
+											"mapRegions": [
+												{
+													"area": "ncfa-waylen_camp",
+													"points": [
+														[
+															0,
+															0
+														],
+														[
+															1,
+															0
+														],
+														[
+															1,
+															1
+														],
+														[
+															0,
+															1
+														]
+													]
+												}
+											]
+										},
+										{
+											"type": "image",
+											"href": {
+												"type": "external",
+												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/rellan_enclave.webp"
+											},
+											"imageType": "map",
+											"title": "Rellan Enclave — DM Map",
+											"grid": {
+												"type": "none"
+											},
+											"mapRegions": [
+												{
+													"area": "ncfa-rellan_enclave",
+													"points": [
+														[
+															0,
+															0
+														],
+														[
+															1,
+															0
+														],
+														[
+															1,
+															1
+														],
+														[
+															0,
+															1
+														]
+													]
+												}
+											]
+										},
+										{
+											"type": "image",
+											"href": {
+												"type": "external",
+												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/rellan_enclave.webp"
+											},
+											"imageType": "mapPlayer",
+											"title": "Rellan Enclave — Player Map",
+											"grid": {
+												"type": "none"
+											},
+											"mapRegions": [
+												{
+													"area": "ncfa-rellan_enclave",
+													"points": [
+														[
+															0,
+															0
+														],
+														[
+															1,
+															0
+														],
+														[
+															1,
+															1
+														],
+														[
+															0,
+															1
+														]
+													]
+												}
+											]
+										},
+										{
+											"type": "image",
+											"href": {
+												"type": "external",
+												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/emmer_hold.webp"
+											},
+											"imageType": "map",
+											"title": "Emmer Hold — DM Map",
+											"grid": {
+												"type": "none"
+											},
+											"mapRegions": [
+												{
+													"area": "ncfa-emmer_hold",
+													"points": [
+														[
+															0,
+															0
+														],
+														[
+															1,
+															0
+														],
+														[
+															1,
+															1
+														],
+														[
+															0,
+															1
+														]
+													]
+												}
+											]
+										},
+										{
+											"type": "image",
+											"href": {
+												"type": "external",
+												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/emmer_hold.webp"
+											},
+											"imageType": "mapPlayer",
+											"title": "Emmer Hold — Player Map",
+											"grid": {
+												"type": "none"
+											},
+											"mapRegions": [
+												{
+													"area": "ncfa-emmer_hold",
+													"points": [
+														[
+															0,
+															0
+														],
+														[
+															1,
+															0
+														],
+														[
+															1,
+															1
+														],
+														[
+															0,
+															1
+														]
+													]
+												}
+											]
+										}
+									]
 								}
 							]
 						},
@@ -5489,7 +6551,78 @@
 							"entries": [
 								{
 									"type": "gallery",
-									"images": []
+									"images": [
+										{
+											"type": "image",
+											"href": {
+												"type": "external",
+												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/varen_keep.webp"
+											},
+											"imageType": "map",
+											"title": "Varen Keep — DM Map",
+											"grid": {
+												"type": "none"
+											},
+											"mapRegions": [
+												{
+													"area": "ncfa-varen_keep",
+													"points": [
+														[
+															0,
+															0
+														],
+														[
+															1,
+															0
+														],
+														[
+															1,
+															1
+														],
+														[
+															0,
+															1
+														]
+													]
+												}
+											]
+										},
+										{
+											"type": "image",
+											"href": {
+												"type": "external",
+												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/varen_keep.webp"
+											},
+											"imageType": "mapPlayer",
+											"title": "Varen Keep — Player Map",
+											"grid": {
+												"type": "none"
+											},
+											"mapRegions": [
+												{
+													"area": "ncfa-varen_keep",
+													"points": [
+														[
+															0,
+															0
+														],
+														[
+															1,
+															0
+														],
+														[
+															1,
+															1
+														],
+														[
+															0,
+															1
+														]
+													]
+												}
+											]
+										}
+									]
 								}
 							]
 						},
