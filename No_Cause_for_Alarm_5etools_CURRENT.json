@@ -6,7 +6,7 @@
 				"json": "NCFA",
 				"abbreviation": "NCFA",
 				"full": "No Cause for Alarm: Ruins of Bellweather",
-				"version": "2.3",
+				"version": "2.4",
 				"authors": [
 					"No Cause for Alarm Campaign"
 				],
@@ -15,7 +15,7 @@
 		],
 		"edition": "one",
 		"dateAdded": 1789528955,
-		"dateLastModified": 1789702170
+		"dateLastModified": 1789705588
 	},
 	"adventure": [
 		{
@@ -903,8 +903,10 @@
 							"type": "entries",
 							"name": "Maps",
 							"entries": [
-								"{@link Player Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/slums.webp}",
-								"{@link DM Keyed Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/slums.webp}"
+								{
+									"type": "gallery",
+									"images": []
+								}
 							]
 						},
 						{
@@ -1179,8 +1181,10 @@
 							"type": "entries",
 							"name": "Maps",
 							"entries": [
-								"{@link Player Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/blackstone_temple.webp}",
-								"{@link DM Keyed Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/blackstone_temple.webp}"
+								{
+									"type": "gallery",
+									"images": []
+								}
 							]
 						},
 						{
@@ -1492,8 +1496,10 @@
 							"type": "entries",
 							"name": "Maps",
 							"entries": [
-								"{@link Player Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/kellans_well.webp}",
-								"{@link DM Keyed Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/kellans_well.webp}"
+								{
+									"type": "gallery",
+									"images": []
+								}
 							]
 						},
 						{
@@ -1802,8 +1808,10 @@
 							"type": "entries",
 							"name": "Maps",
 							"entries": [
-								"{@link Player Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/koven_house.webp}",
-								"{@link DM Keyed Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/koven_house.webp}"
+								{
+									"type": "gallery",
+									"images": []
+								}
 							]
 						},
 						{
@@ -2097,8 +2105,10 @@
 							"type": "entries",
 							"name": "Maps",
 							"entries": [
-								"{@link Player Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/savin_keep.webp}",
-								"{@link DM Keyed Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/savin_keep.webp}"
+								{
+									"type": "gallery",
+									"images": []
+								}
 							]
 						},
 						{
@@ -2450,8 +2460,10 @@
 							"type": "entries",
 							"name": "Maps",
 							"entries": [
-								"{@link Player Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/cardon_weavehouse.webp}",
-								"{@link DM Keyed Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse.webp}"
+								{
+									"type": "gallery",
+									"images": []
+								}
 							]
 						},
 						{
@@ -2769,8 +2781,10 @@
 							"type": "entries",
 							"name": "Maps",
 							"entries": [
-								"{@link Player Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/marren_library.webp}",
-								"{@link DM Keyed Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/marren_library.webp}"
+								{
+									"type": "gallery",
+									"images": []
+								}
 							]
 						},
 						{
@@ -3398,8 +3412,10 @@
 							"type": "entries",
 							"name": "Maps",
 							"entries": [
-								"{@link Player Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/paden_square.webp}",
-								"{@link DM Keyed Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/paden_square.webp}"
+								{
+									"type": "gallery",
+									"images": []
+								}
 							]
 						},
 						{
@@ -3425,15 +3441,7 @@
 									"name": "No Cause for Alarm Beat",
 									"entries": [
 										"After the party brings back evidence that supposedly separate hostile groups are coordinating, an official Council statement describes the activity as {@b \"localized resistance\"} and says there is {@b \"no cause for alarm within Reclaimed Bellweather.\"} The statement may be technically true—the walls are still holding—but it minimizes what the characters have actually learned.",
-										"If the party brings the notice to Ledger House, Brakkus can read the final sentence and reply, {@b \"Well. That settles it, then.\"} He immediately starts checking the shutters and cellar stores.",
-										{
-											"type": "image",
-											"href": {
-												"type": "external",
-												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/paden_square.webp"
-											},
-											"title": "Paden Square"
-										}
+										"If the party brings the notice to Ledger House, Brakkus can read the final sentence and reply, {@b \"Well. That settles it, then.\"} He immediately starts checking the shutters and cellar stores."
 									]
 								},
 								{
@@ -3660,8 +3668,10 @@
 							"type": "entries",
 							"name": "Maps",
 							"entries": [
-								"{@link Player Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/storen_gate.webp}",
-								"{@link DM Keyed Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/storen_gate.webp}"
+								{
+									"type": "gallery",
+									"images": []
+								}
 							]
 						},
 						{
@@ -3926,8 +3936,10 @@
 							"type": "entries",
 							"name": "Maps",
 							"entries": [
-								"{@link Player Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/valen_cemetery.webp}",
-								"{@link DM Keyed Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/valen_cemetery.webp}"
+								{
+									"type": "gallery",
+									"images": []
+								}
 							]
 						},
 						{
@@ -4261,8 +4273,10 @@
 							"type": "entries",
 							"name": "Maps",
 							"entries": [
-								"{@link Player Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/maren_isle.webp}",
-								"{@link DM Keyed Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/maren_isle.webp}"
+								{
+									"type": "gallery",
+									"images": []
+								}
 							]
 						},
 						{
@@ -4563,6 +4577,16 @@
 					"entries": [
 						{
 							"type": "entries",
+							"name": "Maps",
+							"entries": [
+								{
+									"type": "gallery",
+									"images": []
+								}
+							]
+						},
+						{
+							"type": "entries",
 							"name": "Chapter Overview",
 							"entries": [
 								"{@b Session purpose.} Build regional leverage through alliances and selective military action rather than treating every settlement as a dungeon.",
@@ -4620,18 +4644,7 @@
 												{
 													"type": "entries",
 													"name": "Maps",
-													"entries": [
-														"{@link Player Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/kerren_settlement.webp}",
-														"{@link DM Keyed Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/kerren_settlement.webp}"
-													]
-												},
-												{
-													"type": "image",
-													"href": {
-														"type": "external",
-														"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/kerren_settlement.webp"
-													},
-													"title": "Kerren Settlement"
+													"entries": []
 												},
 												"Kerren is a thri-kreen settlement built among low earthen mounds and connected underground chambers. It is {@b not a treasure dungeon}. The residents are wary because armed outsiders have repeatedly entered their territory looking for relics and valuables.",
 												"{@b Why the party comes here.} Kerren sits along a route used by Tyren's couriers. The party may seek intelligence, safe passage, or help identifying troop movements.",
@@ -4648,18 +4661,7 @@
 												{
 													"type": "entries",
 													"name": "Maps",
-													"entries": [
-														"{@link Player Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/waylen_camp.webp}",
-														"{@link DM Keyed Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/waylen_camp.webp}"
-													]
-												},
-												{
-													"type": "image",
-													"href": {
-														"type": "external",
-														"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/waylen_camp.webp"
-													},
-													"title": "Waylen Camp"
+													"entries": []
 												},
 												"Waylen Camp belongs to a mobile mixed-species community of herders, guides, hunters, and traders. They have no interest in conquering Bellweather and are suspicious of anyone who assumes neutrality means weakness.",
 												"{@b Why the party comes here.} The camp has seen troop columns and can identify which factions are moving under Tyren's orders. It also controls access to a reliable route through the grasslands.",
@@ -4676,18 +4678,7 @@
 												{
 													"type": "entries",
 													"name": "Maps",
-													"entries": [
-														"{@link Player Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/rellan_enclave.webp}",
-														"{@link DM Keyed Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/rellan_enclave.webp}"
-													]
-												},
-												{
-													"type": "image",
-													"href": {
-														"type": "external",
-														"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/rellan_enclave.webp"
-													},
-													"title": "Rellan Enclave"
+													"entries": []
 												},
 												"Rellan is a lizardfolk enclave built around a ruined keep and flooded tunnels. The enclave is a community, not an automatically hostile monster lair. If the party rescued lizardfolk prisoners on Maren Isle, they are recognized as allies before weapons are drawn.",
 												"{@b Why the party comes here.} Rellan's elders know regional history that Bellweather's records have lost, including stories connected to the Radiant Well and the poisoned waterways.",
@@ -4718,18 +4709,7 @@
 												{
 													"type": "entries",
 													"name": "Maps",
-													"entries": [
-														"{@link Player Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/emmer_hold.webp}",
-														"{@link DM Keyed Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/emmer_hold.webp}"
-													]
-												},
-												{
-													"type": "image",
-													"href": {
-														"type": "external",
-														"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/emmer_hold.webp"
-													},
-													"title": "Emmer Hold"
+													"entries": []
 												},
 												"Emmer Hold is a fortified kobold-majority settlement built into old mining works and drainage tunnels. It is {@b not a dungeon full of creatures who exist to be cleared}. Most residents are miners, craftspeople, families, traders, and laborers. A militant faction inside the hold has accepted arms and promises from Tyren's agents in exchange for harassing Bellweather's roads.",
 												{
@@ -5507,8 +5487,10 @@
 							"type": "entries",
 							"name": "Maps",
 							"entries": [
-								"{@link Player Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/varen_keep.webp}",
-								"{@link DM Keyed Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/varen_keep.webp}"
+								{
+									"type": "gallery",
+									"images": []
+								}
 							]
 						},
 						{
@@ -6612,24 +6594,7 @@
 						"These keyed maps are for the Dungeon Master. Player-facing maps are embedded in the relevant adventure sections.",
 						{
 							"type": "list",
-							"items": [
-								"{@link Blackstone Temple — DM Key|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/blackstone_temple.webp}",
-								"{@link Cardon Weavehouse — DM Key|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse.webp}",
-								"{@link Emmer Hold — DM Key|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/emmer_hold.webp}",
-								"{@link Kellan's Well — DM Key|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/kellans_well.webp}",
-								"{@link Kerren Settlement — DM Key|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/kerren_settlement.webp}",
-								"{@link Koven House — DM Key|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/koven_house.webp}",
-								"{@link Maren Isle — DM Key|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/maren_isle.webp}",
-								"{@link Marren Library — DM Key|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/marren_library.webp}",
-								"{@link Paden Square — DM Key|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/paden_square.webp}",
-								"{@link Rellan Enclave — DM Key|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/rellan_enclave.webp}",
-								"{@link Savin Keep — DM Key|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/savin_keep.webp}",
-								"{@link The Slums — DM Key|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/slums.webp}",
-								"{@link Storen Gate — DM Key|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/storen_gate.webp}",
-								"{@link Valen Cemetery — DM Key|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/valen_cemetery.webp}",
-								"{@link Varen Keep — DM Key|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/varen_keep.webp}",
-								"{@link Waylen Camp — DM Key|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/waylen_camp.webp}"
-							]
+							"items": []
 						}
 					]
 				}
