@@ -81,3 +81,5 @@ jobs:
           fi
           git commit -m "Sync current NCFA 5etools JSON"
           git push
+
+# sync-marker: v2.3
