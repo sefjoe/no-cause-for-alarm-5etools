@@ -66,6 +66,7 @@ jobs:
           download "1iybsnmU30CJft02Gsk1RcORbVVRpklDz" "img/dm/waylen_camp.webp"
 
           download "128NwZwCH1AjUuF-10UHqcHKta7IgHNht" "No_Cause_for_Alarm_5etools_GITHUB_v1.5.json"
+          download "1D9xXteXvilytYEEDBh-HUzzSxTXqOI9X" "No_Cause_for_Alarm_5etools_CURRENT.json"
 
       - name: Commit synchronized assets
         shell: bash
@@ -73,10 +74,10 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add img No_Cause_for_Alarm_5etools_GITHUB_v1.5.json
+          git add img No_Cause_for_Alarm_5etools_GITHUB_v1.5.json No_Cause_for_Alarm_5etools_CURRENT.json
           if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0
           fi
-          git commit -m "Add NCFA maps, cover, and 5etools JSON"
+          git commit -m "Sync current NCFA 5etools JSON"
           git push
