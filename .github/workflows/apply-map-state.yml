@@ -1,0 +1,141 @@
+name: Apply NCFA Reclamation Map State
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/apply-map-state.yml'
+  workflow_run:
+    workflows: ["Sync NCFA Assets"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply-map-state:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Apply Bellweather reclamation frontier canon
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, time
+
+          path = "No_Cause_for_Alarm_5etools_CURRENT.json"
+
+          with open(path, "r", encoding="utf-8") as f:
+              data = json.load(f)
+
+          frontier = {
+              "type": "entries",
+              "name": "Reclamation Frontier",
+              "entries": [
+                  "Bellweather is not an open city surrounded by uncontrolled ruins. Its inhabited core is protected by a shifting reclamation frontier made from repaired remnants of the old city walls, masonry barricades, deliberately collapsed streets, timber works, watch posts, and guarded gates. Beyond that line, the ruins are not assumed safe.",
+                  "Any district, stronghold, route, or site that the campaign describes as needing to be cleared, secured, reclaimed, reopened, or reconquered begins outside Bellweather's dependable security unless a chapter explicitly says otherwise. Residents may know of it, salvage from its edges, or travel near it, but routine civilian movement and patrols do not extend through it.",
+                  {
+                      "type": "list",
+                      "items": [
+                          "{@b Secured.} Inside Bellweather's dependable protection. Streets are patrolled, ordinary residents can travel with reasonable confidence, and repaired defenses or controlled approaches separate the area from unreclaimed ruins.",
+                          "{@b Contested.} On the active frontier. Scouts, workers, salvagers, monsters, criminals, or hostile forces may all be present. Bellweather can reach the area, but does not control it reliably.",
+                          "{@b Unreclaimed.} Beyond the city's dependable reach. No routine patrol or civilian safety is assumed, and hostile creatures or factions can occupy the area without immediately threatening the inhabited core because controlled approaches, barriers, distance, or terrain keep them outside the secured line."
+                      ]
+                  },
+                  "When the characters complete the objective that secures a district, the city's visible frontier changes. Barricades move, gates reopen, walls are patched, patrols advance, workers enter, traffic resumes, and the reclaimed area becomes part of everyday Bellweather. A geographically isolated objective instead becomes a fortified reclaimed outpost connected to Bellweather by a secured route; the map should not force the defensive perimeter into an implausible shape merely to include it.",
+                  "Cleared does not mean sterile. Individual hazards, crimes, hidden creatures, political disputes, or damaged buildings can remain in a secured district. The distinction is whether Bellweather can maintain ordinary control there without treating every trip as an expedition.",
+                  "Player-facing city maps should be updated after meaningful reclamation milestones. Show the current secured boundary, controlled gates or checkpoints, newly opened routes, reclaimed districts, and the broad status of known frontier areas. Do not reveal undiscovered threats, secret occupants, or DM-only information merely because the map changes."
+              ]
+          }
+
+          control = {
+              "type": "entries",
+              "name": "Reclamation Map State",
+              "entries": [
+                  "At the end of every chapter that materially changes control of Bellweather or its approaches, update the campaign map before the party next sees the city.",
+                  {
+                      "type": "list",
+                      "items": [
+                          "Mark each known area as Secured, Contested, or Unreclaimed.",
+                          "Move the secured frontier only where Bellweather can realistically defend the new ground.",
+                          "Add or remove barricades, gates, watch posts, blocked streets, repaired wall sections, and opened routes to show the change physically.",
+                          "For isolated reclaimed sites, mark a fortified outpost and the secured route connecting it to Bellweather rather than enclosing it within the main perimeter.",
+                          "Show visible civic consequences of reclamation: workers, reopened buildings, trade traffic, patrol presence, reconstruction, and new access to neighboring districts.",
+                          "Keep undiscovered enemies, secret passages, hidden objectives, and other DM-only information off the player map."
+                      ]
+                  },
+                  "The map is a campaign-state tool, not static art. A newly printed or displayed version after major victories is part of the reward: the players should be able to see Bellweather becoming larger, safer, and more connected because of their actions."
+              ]
+          }
+
+          packs = data.get("adventureData", [])
+          if packs:
+              sections = packs[0].get("data", [])
+              by_name = {s.get("name"): s for s in sections if isinstance(s, dict)}
+
+              guide = by_name.get("Campaign Guide")
+              if guide:
+                  running = next((e for e in guide.get("entries", []) if isinstance(e, dict) and e.get("name") == "Running the Adventure"), None)
+                  if running:
+                      running_entries = running.setdefault("entries", [])
+                      running_entries[:] = [e for e in running_entries if not (isinstance(e, dict) and e.get("name") == "Reclamation Frontier")]
+                      insert_at = len(running_entries)
+                      for i, e in enumerate(running_entries):
+                          if isinstance(e, dict) and e.get("name") == "Treasure":
+                              insert_at = i
+                              break
+                      running_entries.insert(insert_at, frontier)
+
+              sheet = by_name.get("Appendix 0: Campaign Control Sheet")
+              if sheet:
+                  entries = sheet.setdefault("entries", [])
+                  entries[:] = [e for e in entries if not (isinstance(e, dict) and e.get("name") == "Reclamation Map State")]
+                  entries.append(control)
+
+          adventure = data.get("adventure", [])
+          if adventure:
+              contents = adventure[0].get("contents", [])
+              for entry in contents:
+                  if entry.get("name") == "Campaign Guide":
+                      headers = entry.setdefault("headers", [])
+                      if "Reclamation Frontier" not in headers:
+                          headers.insert(1 if "Running the Adventure" in headers else 0, "Reclamation Frontier")
+                  if entry.get("name") == "Appendix 0: Campaign Control Sheet":
+                      headers = entry.setdefault("headers", [])
+                      if "Reclamation Map State" not in headers:
+                          headers.append("Reclamation Map State")
+
+          meta = data.setdefault("_meta", {})
+          now = int(time.time())
+          meta["dateLastModified"] = now
+          for src in meta.get("sources", []):
+              if src.get("json") == "NCFA":
+                  src["version"] = "2.8"
+                  src["dateLastModified"] = now
+
+          with open(path, "w", encoding="utf-8") as f:
+              json.dump(data, f, ensure_ascii=False, indent="\t")
+              f.write("\n")
+          PY
+
+          python -m json.tool No_Cause_for_Alarm_5etools_CURRENT.json >/dev/null
+
+      - name: Commit map-state canon
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- No_Cause_for_Alarm_5etools_CURRENT.json; then
+            echo "No map-state changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add No_Cause_for_Alarm_5etools_CURRENT.json
+          git commit -m "Apply Bellweather reclamation frontier canon"
+          git push origin HEAD:main
