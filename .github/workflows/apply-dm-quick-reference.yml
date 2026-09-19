@@ -1,0 +1,167 @@
+name: Apply NCFA DM Quick Reference Appendix
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/apply-dm-quick-reference.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply-dm-quick-reference:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Add DM quick reference appendix
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, time
+
+          path = "No_Cause_for_Alarm_5etools_CURRENT.json"
+          appendix_name = "Appendix G: DM Quick Reference"
+
+          with open(path, "r", encoding="utf-8") as f:
+              data = json.load(f)
+
+          appendix = {
+              "type": "section",
+              "name": appendix_name,
+              "entries": [
+                  {
+                      "type": "entries",
+                      "name": "Generic DCs",
+                      "entries": [
+                          "Use these values when the adventure does not specify a DC. Choose the ability and skill from the character's approach. If success is automatic or impossible, do not call for a roll.",
+                          {
+                              "type": "table",
+                              "caption": "Generic Difficulty Classes",
+                              "colLabels": ["Difficulty", "DC"],
+                              "colStyles": ["col-8", "col-4 text-center"],
+                              "rows": [
+                                  ["Very Easy", "5"],
+                                  ["Easy", "10"],
+                                  ["Medium", "15"],
+                                  ["Hard", "20"],
+                                  ["Very Hard", "25"],
+                                  ["Nearly Impossible", "30"]
+                              ]
+                          }
+                      ]
+                  },
+                  {
+                      "type": "entries",
+                      "name": "Object and Material ACs",
+                      "entries": [
+                          "For an unattended object, choose AC primarily by what it is made from. AC only answers whether an attack connects effectively; use the object's size, hit points, damage threshold, resistances, and immunities separately when those matter.",
+                          {
+                              "type": "table",
+                              "caption": "Object Armor Class by Material",
+                              "colLabels": ["Material or Substance", "AC"],
+                              "colStyles": ["col-8", "col-4 text-center"],
+                              "rows": [
+                                  ["Cloth, Paper, or Rope", "11"],
+                                  ["Crystal, Glass, or Ice", "13"],
+                                  ["Wood or Bone", "15"],
+                                  ["Stone", "17"],
+                                  ["Iron or Steel", "19"],
+                                  ["Mithral", "21"],
+                                  ["Adamantine", "23"]
+                              ]
+                          }
+                      ]
+                  },
+                  {
+                      "type": "entries",
+                      "name": "15 NPC Names",
+                      "entries": [
+                          "Use these for incidental NPCs when a name is needed immediately. Assign ancestry, occupation, and personality to fit the scene.",
+                          {
+                              "type": "table",
+                              "caption": "Ready-to-Use NPC Names",
+                              "colLabels": ["#", "Name"],
+                              "colStyles": ["col-2 text-center", "col-10"],
+                              "rows": [
+                                  ["1", "Mara Vell"],
+                                  ["2", "Tobin Hark"],
+                                  ["3", "Elira Dane"],
+                                  ["4", "Corren Vale"],
+                                  ["5", "Nessa Brin"],
+                                  ["6", "Darric Holt"],
+                                  ["7", "Sella Marr"],
+                                  ["8", "Oren Pike"],
+                                  ["9", "Vessa Calder"],
+                                  ["10", "Renn Tal"],
+                                  ["11", "Mira Fen"],
+                                  ["12", "Joren Quill"],
+                                  ["13", "Tamsin Ward"],
+                                  ["14", "Garran Kest"],
+                                  ["15", "Lysa Moor"]
+                              ]
+                          }
+                      ]
+                  }
+              ]
+          }
+
+          packs = data.get("adventureData", [])
+          if packs:
+              sections = packs[0].setdefault("data", [])
+              sections[:] = [s for s in sections if not (isinstance(s, dict) and s.get("name") == appendix_name)]
+              insert_at = len(sections)
+              for i, section in enumerate(sections):
+                  if isinstance(section, dict) and section.get("name") == "DM Map Index":
+                      insert_at = i
+                      break
+              sections.insert(insert_at, appendix)
+
+          adventures = data.get("adventure", [])
+          if adventures:
+              contents = adventures[0].setdefault("contents", [])
+              contents[:] = [c for c in contents if not (isinstance(c, dict) and c.get("name") == appendix_name)]
+              toc_entry = {
+                  "name": appendix_name,
+                  "headers": ["Generic DCs", "Object and Material ACs", "15 NPC Names"]
+              }
+              insert_at = len(contents)
+              for i, item in enumerate(contents):
+                  if isinstance(item, dict) and item.get("name") == "DM Map Index":
+                      insert_at = i
+                      break
+              contents.insert(insert_at, toc_entry)
+
+          now = int(time.time())
+          meta = data.setdefault("_meta", {})
+          meta["dateLastModified"] = now
+          for src in meta.get("sources", []):
+              if src.get("json") == "NCFA":
+                  src["version"] = "3.1"
+                  src["dateLastModified"] = now
+
+          with open(path, "w", encoding="utf-8") as f:
+              json.dump(data, f, ensure_ascii=False, indent="\t")
+              f.write("\n")
+          PY
+
+          python -m json.tool No_Cause_for_Alarm_5etools_CURRENT.json >/dev/null
+
+      - name: Commit DM quick reference appendix
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- No_Cause_for_Alarm_5etools_CURRENT.json; then
+            echo "No DM quick-reference changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add No_Cause_for_Alarm_5etools_CURRENT.json
+          git commit -m "Add DM quick reference appendix"
+          git push origin HEAD:main
