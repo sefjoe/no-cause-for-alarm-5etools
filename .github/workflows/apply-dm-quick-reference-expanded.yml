@@ -1,0 +1,281 @@
+name: Expand NCFA DM Quick Reference
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/apply-dm-quick-reference-expanded.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  expand-dm-quick-reference:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Expand generic DM quick reference
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, time
+
+          path = "No_Cause_for_Alarm_5etools_CURRENT.json"
+          appendix_name = "Appendix G: DM Quick Reference"
+
+          with open(path, "r", encoding="utf-8") as f:
+              data = json.load(f)
+
+          new_sections = [
+              {
+                  "type": "entries",
+                  "name": "Light and Vision",
+                  "entries": [
+                      {
+                          "type": "table",
+                          "caption": "Light and Obscurement",
+                          "colLabels": ["Situation", "Effect"],
+                          "colStyles": ["col-4", "col-8"],
+                          "rows": [
+                              ["Bright Light", "Normal vision."],
+                              ["Dim Light", "Lightly Obscured; Disadvantage on Wisdom (Perception) checks that rely on sight."],
+                              ["Darkness", "Heavily Obscured; a creature effectively has the Blinded condition when trying to see into it."],
+                              ["Darkvision", "Within its range, treat Dim Light as Bright Light and Darkness as Dim Light; colors in Darkness appear only as shades of gray."],
+                              ["Blindsight", "Within its range, perceive without normal sight, including through Darkness and against Invisible creatures, unless blocked by Total Cover."],
+                              ["Truesight", "Within its range, see through normal and magical Darkness, see Invisible creatures, and automatically pierce visual illusions as specified by the sense."]
+                          ]
+                      }
+                  ]
+              },
+              {
+                  "type": "entries",
+                  "name": "Common Conditions",
+                  "entries": [
+                      {
+                          "type": "table",
+                          "caption": "Common Condition Summary",
+                          "colLabels": ["Condition", "Quick Effect"],
+                          "colStyles": ["col-3", "col-9"],
+                          "rows": [
+                              ["Blinded", "Can't see; automatically fails sight-dependent checks; attacks against the creature have Advantage, and its attacks have Disadvantage."],
+                              ["Charmed", "Can't attack the charmer or target it with harmful effects; the charmer has Advantage on social checks involving the creature."],
+                              ["Deafened", "Can't hear and automatically fails checks that require hearing."],
+                              ["Frightened", "Disadvantage on ability checks and attacks while the source is in line of sight; can't willingly move closer to the source."],
+                              ["Grappled", "Speed 0; Disadvantage on attacks against targets other than the grappler; the grappler can move the creature with extra movement cost in most cases."],
+                              ["Incapacitated", "Can't take actions, Bonus Actions, or Reactions; Concentration ends; can't speak; Initiative is rolled with Disadvantage if already Incapacitated."],
+                              ["Invisible", "Normally can't be targeted by effects requiring sight; Advantage on own attacks and Disadvantage on attacks against it unless the attacker can see it; Advantage on Initiative."],
+                              ["Paralyzed", "Incapacitated; Speed 0; automatically fails Strength and Dexterity saves; attacks against it have Advantage; qualifying close-range hits can become critical hits."],
+                              ["Petrified", "Incapacitated; Speed 0; attacks against it have Advantage; automatically fails Strength and Dexterity saves; Resistance to all damage and immunity to Poisoned."],
+                              ["Poisoned", "Disadvantage on attack rolls and ability checks."],
+                              ["Prone", "Crawl or spend half Speed to stand; own attacks have Disadvantage; attacks from within 5 feet have Advantage, otherwise attacks have Disadvantage."],
+                              ["Restrained", "Speed 0; attacks against the creature have Advantage; its attacks have Disadvantage; Disadvantage on Dexterity saves."],
+                              ["Stunned", "Incapacitated; Speed 0; automatically fails Strength and Dexterity saves; attacks against it have Advantage."],
+                              ["Unconscious", "Incapacitated and Prone; drops held items; Speed 0; attacks against it have Advantage; automatically fails Strength and Dexterity saves; qualifying close-range hits can become critical hits."]
+                          ]
+                      }
+                  ]
+              },
+              {
+                  "type": "entries",
+                  "name": "Falling",
+                  "entries": [
+                      "A creature takes 1d6 Bludgeoning damage for every 10 feet fallen, to a maximum of 20d6, and lands Prone unless an effect says otherwise.",
+                      {
+                          "type": "table",
+                          "caption": "Common Fall Damage",
+                          "colLabels": ["Distance", "Damage"],
+                          "colStyles": ["col-6", "col-6 text-center"],
+                          "rows": [["10 ft.", "1d6"], ["20 ft.", "2d6"], ["30 ft.", "3d6"], ["50 ft.", "5d6"], ["100 ft.", "10d6"], ["150 ft.", "15d6"], ["200+ ft.", "20d6 max"]]
+                      }
+                  ]
+              },
+              {
+                  "type": "entries",
+                  "name": "Jumping",
+                  "entries": [
+                      {
+                          "type": "table",
+                          "caption": "Jumping Quick Reference",
+                          "colLabels": ["Jump", "Running Start (10 ft.)", "Standing"],
+                          "colStyles": ["col-3", "col-5", "col-4"],
+                          "rows": [
+                              ["Long Jump", "Up to Strength score in feet", "Half that distance"],
+                              ["High Jump", "3 + Strength modifier feet (minimum 0)", "Half that distance"]
+                          ]
+                      },
+                      "Each foot jumped costs 1 foot of movement. Landing in Difficult Terrain after a Long Jump requires a DC 10 Dexterity (Acrobatics) check or the jumper becomes Prone. At the DM's option, clearing a low obstacle during a Long Jump can require a DC 10 Strength (Athletics) check. A creature can reach upward an additional distance equal to half its height during a High Jump."
+                  ]
+              },
+              {
+                  "type": "entries",
+                  "name": "Object Damage Notes",
+                  "entries": [
+                      {
+                          "type": "list",
+                          "items": [
+                              "{@b Use common sense.} An attack that cannot reasonably damage an object deals no meaningful damage regardless of the attack roll.",
+                              "{@b Damage Threshold.} If an object has a damage threshold, damage from a single attack or effect below that threshold deals 0 damage; meeting or exceeding the threshold allows the full damage through.",
+                              "{@b Damage Types.} Objects are generally immune to Poison and Psychic damage. Assign additional resistances, vulnerabilities, or immunities when the material makes them obvious.",
+                              "{@b Huge and Gargantuan Objects.} Divide very large structures into Large or smaller sections and track damage to the relevant section rather than treating an entire building as one object.",
+                              "{@b Automatic Breakage.} If an object is extremely fragile and the method is appropriate, allow it to be broken without rolling."
+                          ]
+                      }
+                  ]
+              },
+              {
+                  "type": "entries",
+                  "name": "Improvised Damage",
+                  "entries": [
+                      "Use this when the environment causes damage and no specific rule gives a value. Choose the damage amount that best matches the severity of the event rather than the source's physical size alone.",
+                      {
+                          "type": "table",
+                          "caption": "Improvised Damage Examples",
+                          "colLabels": ["Damage", "Example Severity"],
+                          "colStyles": ["col-3 text-center", "col-9"],
+                          "rows": [
+                              ["1d10", "Minor but meaningful hazard, such as hot coals or a heavy object falling onto someone."],
+                              ["2d10", "Serious hazard, such as a lightning strike or falling into a firepit."],
+                              ["4d10", "Severe hazard, such as collapsing rubble or falling into a vat of acid."],
+                              ["10d10", "Extreme hazard, such as crushing machinery or moving through lava."],
+                              ["18d10", "Catastrophic hazard, such as being submerged in lava or struck by a massive crashing structure."],
+                              ["24d10", "Near-apocalyptic force appropriate to exceptionally destructive supernatural or colossal events."]
+                          ]
+                      },
+                      {
+                          "type": "table",
+                          "caption": "Damage Severity by Character Level",
+                          "colLabels": ["Level", "Setback", "Dangerous", "Deadly"],
+                          "colStyles": ["col-3", "col-3 text-center", "col-3 text-center", "col-3 text-center"],
+                          "rows": [
+                              ["1–4", "1d10", "2d10", "4d10"],
+                              ["5–10", "2d10", "4d10", "10d10"],
+                              ["11–16", "4d10", "10d10", "18d10"],
+                              ["17–20", "10d10", "18d10", "24d10"]
+                          ]
+                      }
+                  ]
+              },
+              {
+                  "type": "entries",
+                  "name": "Common Improvised DC Examples",
+                  "entries": [
+                      "These are generic examples, not fixed DCs. Adjust for tools, leverage, time pressure, conditions, and the character's approach.",
+                      {
+                          "type": "table",
+                          "caption": "Improvised DC Examples",
+                          "colLabels": ["DC", "Difficulty", "Example"],
+                          "colStyles": ["col-2 text-center", "col-3", "col-7"],
+                          "rows": [
+                              ["5", "Very Easy", "Climb a knotted rope with good footing; notice something obvious while actively searching."],
+                              ["10", "Easy", "Force a weak interior door; climb a rough wall with ample handholds; calm a mildly agitated animal."],
+                              ["15", "Medium", "Pick an ordinary lock; climb a wet or awkward surface; spot a reasonably concealed compartment; recall specialized lore."],
+                              ["20", "Hard", "Force a reinforced door; detect a carefully hidden feature; perform a difficult physical maneuver under pressure."],
+                              ["25", "Very Hard", "Defeat exceptional mundane security; accomplish a feat demanding rare expertise or strength."],
+                              ["30", "Nearly Impossible", "Accomplish a legendary but still physically possible feat without magical assistance."]
+                          ]
+                      }
+                  ]
+              },
+              {
+                  "type": "entries",
+                  "name": "Exhaustion",
+                  "entries": [
+                      "Exhaustion is cumulative from level 1 through 6. A creature dies when it reaches Exhaustion level 6. Finishing a Long Rest normally removes 1 Exhaustion level.",
+                      {
+                          "type": "table",
+                          "caption": "Exhaustion Effects",
+                          "colLabels": ["Level", "D20 Tests", "Speed Reduction"],
+                          "colStyles": ["col-3 text-center", "col-5 text-center", "col-4 text-center"],
+                          "rows": [
+                              ["1", "−2", "−5 ft."],
+                              ["2", "−4", "−10 ft."],
+                              ["3", "−6", "−15 ft."],
+                              ["4", "−8", "−20 ft."],
+                              ["5", "−10", "−25 ft."],
+                              ["6", "Death", "—"]
+                          ]
+                      }
+                  ]
+              },
+              {
+                  "type": "entries",
+                  "name": "Environmental Hazards",
+                  "entries": [
+                      {
+                          "type": "table",
+                          "caption": "Common Environmental Hazards",
+                          "colLabels": ["Hazard", "Quick Rule"],
+                          "colStyles": ["col-4", "col-8"],
+                          "rows": [
+                              ["Burning", "A burning creature or object takes 1d4 Fire damage at the start of each turn until the fire is extinguished, doused, submerged, or suffocated."],
+                              ["Extreme Cold", "At 0°F or below, make a DC 10 Constitution save each hour or gain 1 Exhaustion level. Cold Resistance or Immunity automatically succeeds."],
+                              ["Extreme Heat", "At 100°F or above without drinkable water, make an hourly Constitution save: DC 5 for the first hour, +1 per additional hour. Medium/Heavy armor gives Disadvantage; Fire Resistance or Immunity automatically succeeds."],
+                              ["Frigid Water", "After a number of minutes equal to Constitution score, make a DC 10 Constitution save each additional minute or gain 1 Exhaustion level. Cold Resistance/Immunity or natural adaptation automatically succeeds."],
+                              ["Deep Water", "After each hour swimming deeper than 100 feet, a creature without a Swim Speed makes a DC 10 Constitution save or gains 1 Exhaustion level."],
+                              ["Slippery Ice", "Difficult Terrain; entering it for the first time on a turn or starting there requires a DC 10 Dexterity save or the creature becomes Prone."],
+                              ["Strong Wind", "Disadvantage on ranged weapon attacks; extinguishes open flames and disperses fog; flying creatures generally must land by the end of their turn or fall."],
+                              ["Heavy Rain/Snow", "Area is Lightly Obscured and sight-based Wisdom (Perception) checks have Disadvantage; heavy rain also extinguishes open flames."],
+                              ["Acid", "Use the Improvised Damage table when no specific acid effect applies; a severe immersion or vat-level exposure is typically represented by the higher damage entries."],
+                              ["Lava", "Use the Improvised Damage table: moving through lava is an extreme hazard; full submersion is catastrophic."]
+                          ]
+                      }
+                  ]
+              }
+          ]
+
+          packs = data.get("adventureData", [])
+          if not packs:
+              raise SystemExit("No adventureData found")
+          sections = packs[0].get("data", [])
+          appendix = next((s for s in sections if isinstance(s, dict) and s.get("name") == appendix_name), None)
+          if appendix is None:
+              raise SystemExit("DM Quick Reference appendix not found")
+
+          entries = appendix.setdefault("entries", [])
+          replace_names = {s["name"] for s in new_sections}
+          entries[:] = [e for e in entries if not (isinstance(e, dict) and e.get("name") in replace_names)]
+
+          # Keep existing core reference sections first; add selected generic references before NPC names.
+          npc_index = next((i for i, e in enumerate(entries) if isinstance(e, dict) and e.get("name") == "15 NPC Names"), len(entries))
+          for offset, section in enumerate(new_sections):
+              entries.insert(npc_index + offset, section)
+
+          adventures = data.get("adventure", [])
+          if adventures:
+              toc = next((c for c in adventures[0].get("contents", []) if isinstance(c, dict) and c.get("name") == appendix_name), None)
+              if toc is not None:
+                  toc["headers"] = [e.get("name") for e in entries if isinstance(e, dict) and e.get("name")]
+
+          now = int(time.time())
+          meta = data.setdefault("_meta", {})
+          meta["dateLastModified"] = now
+          for src in meta.get("sources", []):
+              if src.get("json") == "NCFA":
+                  src["version"] = "3.3"
+                  src["dateLastModified"] = now
+
+          with open(path, "w", encoding="utf-8") as f:
+              json.dump(data, f, ensure_ascii=False, indent="\t")
+              f.write("\n")
+          PY
+
+          python -m json.tool No_Cause_for_Alarm_5etools_CURRENT.json >/dev/null
+
+      - name: Commit expanded DM quick reference
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- No_Cause_for_Alarm_5etools_CURRENT.json; then
+            echo "No DM quick-reference changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add No_Cause_for_Alarm_5etools_CURRENT.json
+          git commit -m "Expand DM quick reference appendix"
+          git push origin HEAD:main
