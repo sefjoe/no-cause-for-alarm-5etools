@@ -6,16 +6,16 @@
 				"json": "NCFA",
 				"abbreviation": "NCFA",
 				"full": "No Cause for Alarm: Ruins of Bellweather",
-				"version": "2.8",
+				"version": "2.9",
 				"authors": [
 					"No Cause for Alarm Campaign"
 				],
-				"dateLastModified": 1789761773
+				"dateLastModified": 1789779990
 			}
 		],
 		"edition": "one",
 		"dateAdded": 1789528955,
-		"dateLastModified": 1789761773
+		"dateLastModified": 1789779990
 	},
 	"adventure": [
 		{
@@ -63,6 +63,7 @@
 						"Maps",
 						"Chapter Overview",
 						"Running the Chapter",
+						"Slums Tactical Map Key",
 						"Adventure",
 						"Rewards"
 					]
@@ -1080,29 +1081,140 @@
 												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/slums.webp"
 											},
 											"imageType": "map",
-											"title": "The Slums — DM Map",
+											"title": "The Slums — DM Tactical Map",
+											"width": 1363,
+											"height": 1154,
+											"id": "3f0",
 											"grid": {
-												"type": "none"
+												"type": "square",
+												"size": 52,
+												"offsetX": 0,
+												"offsetY": 0
 											},
 											"mapRegions": [
 												{
-													"area": "ncfa-slums",
+													"area": "3a1",
 													"points": [
 														[
-															0,
-															0
+															45,
+															330
 														],
 														[
-															1,
-															0
+															245,
+															330
 														],
 														[
-															1,
-															1
+															245,
+															565
 														],
 														[
-															0,
-															1
+															45,
+															565
+														]
+													]
+												},
+												{
+													"area": "3b2",
+													"points": [
+														[
+															175,
+															120
+														],
+														[
+															385,
+															120
+														],
+														[
+															385,
+															365
+														],
+														[
+															175,
+															365
+														]
+													]
+												},
+												{
+													"area": "3c3",
+													"points": [
+														[
+															585,
+															110
+														],
+														[
+															900,
+															110
+														],
+														[
+															900,
+															470
+														],
+														[
+															585,
+															470
+														]
+													]
+												},
+												{
+													"area": "3d4",
+													"points": [
+														[
+															900,
+															145
+														],
+														[
+															1185,
+															145
+														],
+														[
+															1185,
+															475
+														],
+														[
+															900,
+															475
+														]
+													]
+												},
+												{
+													"area": "3e4",
+													"points": [
+														[
+															600,
+															520
+														],
+														[
+															1015,
+															520
+														],
+														[
+															1015,
+															1000
+														],
+														[
+															600,
+															1000
+														]
+													]
+												},
+												{
+													"area": "3e5",
+													"points": [
+														[
+															1000,
+															540
+														],
+														[
+															1325,
+															540
+														],
+														[
+															1325,
+															940
+														],
+														[
+															1000,
+															940
 														]
 													]
 												}
@@ -1115,38 +1227,21 @@
 												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/slums.webp"
 											},
 											"imageType": "mapPlayer",
-											"title": "The Slums — Player Map",
-											"grid": {
-												"type": "none"
+											"title": "The Slums — Player Tactical Map",
+											"width": 1363,
+											"height": 1154,
+											"mapParent": {
+												"id": "3f0"
 											},
-											"mapRegions": [
-												{
-													"area": "ncfa-slums",
-													"points": [
-														[
-															0,
-															0
-														],
-														[
-															1,
-															0
-														],
-														[
-															1,
-															1
-														],
-														[
-															0,
-															1
-														]
-													]
-												}
-											]
+											"grid": {
+												"type": "square",
+												"size": 52,
+												"offsetX": 0,
+												"offsetY": 0
+											}
 										}
 									]
-								},
-								"{@link Player Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/slums.webp}",
-								"{@link DM Keyed Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/slums.webp}"
+								}
 							]
 						},
 						{
@@ -1186,7 +1281,61 @@
 										"Afterward, a worker can ask a practical question such as, {@b “Do they already know who gets these buildings?”} Do not turn it into a speech; let the question sit beside the visible fact that reclamation creates both safety and valuable property."
 									]
 								},
-								"{@b Keyed-area encounters.} When a scene and a keyed location describe the same encounter, use the roster and objective in the scene. Creatures listed only in the keyed reference apply when the characters explore that location outside the scene sequence."
+								"{@b Keyed-area encounters.} When a scene and a keyed location describe the same encounter, use the roster and objective in the scene. Creatures listed only in the keyed reference apply when the characters explore that location outside the scene sequence.",
+								{
+									"type": "entries",
+									"name": "Slums Tactical Map Key",
+									"entries": [
+										{
+											"type": "entries",
+											"name": "A1 — Boundary Crossing / Scavenger Position",
+											"id": "3a1",
+											"entries": [
+												"The controlled crossing from secured Bellweather into the Slums. Four bandits watch the ruined storefront here and attempt to collect a street toll; negotiation, intimidation, retreat, or combat are all valid outcomes."
+											]
+										},
+										{
+											"type": "entries",
+											"name": "B2 — Residents / Mera Kest Area",
+											"id": "3b2",
+											"entries": [
+												"Partially occupied homes nearest the frontier. Mera Kest and nearby residents can provide local information, including the survey crew's route toward the old dye works and reports of movement near the collapsed warehouse."
+											]
+										},
+										{
+											"type": "entries",
+											"name": "C3 — Collapsed Warehouse",
+											"id": "3c3",
+											"entries": [
+												"The warehouse used for Scene 2. Webbing, rubble, and the giant spiders make this the main tactical obstacle on the shortest route through the neighborhood."
+											]
+										},
+										{
+											"type": "entries",
+											"name": "D4 — Predator / Hazard Zone",
+											"id": "3d4",
+											"entries": [
+												"Unstable rubble and broken structures between the warehouse and dye works. Use this area for the grick's approach, environmental pressure, or a bypass route; it does not require an additional combat if the existing scene roster is already sufficient."
+											]
+										},
+										{
+											"type": "entries",
+											"name": "E4 — Old Dye Works",
+											"id": "3e4",
+											"entries": [
+												"The industrial ruin that anchors Scene 3. Its vats, broken work areas, and adjoining rubble form the final approach to the missing survey crew."
+											]
+										},
+										{
+											"type": "entries",
+											"name": "E5 — Missing Survey Crew Site",
+											"id": "3e5",
+											"entries": [
+												"Lessa Dorn and Kav Orin are barricaded here. Rescuing them establishes the practical corridor Bellweather can secure after the chapter."
+											]
+										}
+									]
+								}
 							]
 						},
 						{
@@ -1204,6 +1353,7 @@
 									"type": "entries",
 									"name": "Scene 1: Entering the District",
 									"entries": [
+										"{@b Map areas:} {@area A1 — Boundary Crossing|3a1|x} and {@area B2 — Residents / Mera Kest Area|3b2|x}. Begin at A1; B2 holds the nearby residents and local information that points deeper into the district.",
 										"The Slums are inhabited ruins, not an empty dungeon. The first challenge is determining who is dangerous and who is merely trying to live there.",
 										{
 											"type": "entries",
@@ -1248,6 +1398,7 @@
 									"type": "entries",
 									"name": "Scene 2: Collapsed Warehouse",
 									"entries": [
+										"{@b Map areas:} {@area C3 — Collapsed Warehouse|3c3|x} and {@area D4 — Predator / Hazard Zone|3d4|x}. Run the giant-spider encounter at C3. D4 is the adjoining rubble and hazard zone on the route toward the dye works and can carry environmental pressure without adding another mandatory fight.",
 										"The shortest route to the survey crew passes through a warehouse occupied by giant spiders.",
 										{
 											"type": "entries",
@@ -1283,6 +1434,7 @@
 									"type": "entries",
 									"name": "Scene 3: The Dye Works",
 									"entries": [
+										"{@b Map areas:} {@area D4 — Predator / Hazard Zone|3d4|x}, {@area E4 — Old Dye Works|3e4|x}, and {@area E5 — Missing Survey Crew Site|3e5|x}. The grick prowls the adjoining rubble at D4; the party approaches through E4 and finds Lessa Dorn and Kav Orin barricaded at E5.",
 										"Two surveyors are barricaded inside while a grick prowls the adjoining rubble.",
 										{
 											"type": "entries",
@@ -1326,6 +1478,7 @@
 									"type": "entries",
 									"name": "Scene 4: Harl and the Lost Strongbox",
 									"entries": [
+										"{@b Map placement:} Place Harl and the strongbox in the rubble between {@area D4|3d4|x} and {@area E4|3e4|x}; no additional map key is required.",
 										"Harl lies pinned beneath a fallen beam near Jorn Milar’s storm-lost strongbox.",
 										{
 											"type": "entries",
