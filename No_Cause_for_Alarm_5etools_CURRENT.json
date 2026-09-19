@@ -6,16 +6,16 @@
 				"json": "NCFA",
 				"abbreviation": "NCFA",
 				"full": "No Cause for Alarm: Ruins of Bellweather",
-				"version": "2.11",
+				"version": "2.12",
 				"authors": [
 					"No Cause for Alarm Campaign"
 				],
-				"dateLastModified": 1789784116
+				"dateLastModified": 1789785696
 			}
 		],
 		"edition": "one",
 		"dateAdded": 1789528955,
-		"dateLastModified": 1789784116
+		"dateLastModified": 1789785696
 	},
 	"adventure": [
 		{
@@ -471,18 +471,12 @@
 											"type": "image",
 											"href": {
 												"type": "external",
-												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/storm_rescue.webp"
+												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/storm_rescue.png"
 											},
 											"imageType": "map",
 											"title": "The Storm — Rescue Scene",
-											"width": 593,
-											"height": 700,
-											"grid": {
-												"type": "square",
-												"size": 44,
-												"offsetX": 0,
-												"offsetY": 0
-											}
+											"width": 1154,
+											"height": 1363
 										}
 									]
 								}
@@ -716,7 +710,9 @@
 												"url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/ledger_house.png"
 											},
 											"imageType": "map",
-											"title": "Ledger House"
+											"title": "Ledger House",
+											"width": 1448,
+											"height": 1086
 										}
 									]
 								}
