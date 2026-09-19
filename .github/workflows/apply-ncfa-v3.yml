@@ -1,0 +1,572 @@
+name: Apply NCFA Version 3
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/apply-ncfa-v3.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  migrate-v3:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Apply Version 3 continuity migration
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import copy
+          import json
+          import re
+          import time
+          from pathlib import Path
+
+          CURRENT = Path("No_Cause_for_Alarm_5etools_CURRENT.json")
+          VERSIONED = Path("No_Cause_for_Alarm_5etools_v3.0.json")
+          CHANGELOG = Path("VERSION_3_CHANGELOG.md")
+          README = Path("README.md")
+
+          with CURRENT.open("r", encoding="utf-8") as f:
+              data = json.load(f)
+
+          packs = data.get("adventureData", [])
+          if not packs:
+              raise SystemExit("No adventureData found")
+          sections = packs[0].get("data", [])
+
+          def get_section(name):
+              return next(
+                  (s for s in sections if isinstance(s, dict) and s.get("type") == "section" and s.get("name") == name),
+                  None,
+              )
+
+          def find_named(root, name):
+              if isinstance(root, dict):
+                  if root.get("name") == name:
+                      return root
+                  for v in root.values():
+                      found = find_named(v, name)
+                      if found is not None:
+                          return found
+              elif isinstance(root, list):
+                  for v in root:
+                      found = find_named(v, name)
+                      if found is not None:
+                          return found
+              return None
+
+          def find_table(root, required_label):
+              if isinstance(root, dict):
+                  if root.get("type") == "table" and required_label in root.get("colLabels", []):
+                      return root
+                  for v in root.values():
+                      found = find_table(v, required_label)
+                      if found is not None:
+                          return found
+              elif isinstance(root, list):
+                  for v in root:
+                      found = find_table(v, required_label)
+                      if found is not None:
+                          return found
+              return None
+
+          def upsert_named(parent, item):
+              if parent is None:
+                  return False
+              entries = parent.setdefault("entries", [])
+              if not isinstance(entries, list):
+                  return False
+              name = item.get("name")
+              entries[:] = [
+                  e for e in entries
+                  if not (isinstance(e, dict) and e.get("name") == name)
+              ]
+              entries.append(item)
+              return True
+
+          def transform_strings(root, fn):
+              if isinstance(root, dict):
+                  for k, v in list(root.items()):
+                      root[k] = transform_strings(v, fn)
+                  return root
+              if isinstance(root, list):
+                  return [transform_strings(v, fn) for v in root]
+              if isinstance(root, str):
+                  return fn(root)
+              return root
+
+          def collect_strings(root):
+              out = []
+              if isinstance(root, dict):
+                  for v in root.values():
+                      out.extend(collect_strings(v))
+              elif isinstance(root, list):
+                  for v in root:
+                      out.extend(collect_strings(v))
+              elif isinstance(root, str):
+                  out.append(root)
+              return out
+
+          def prune_obsolete(root):
+              banned = ("Tomas", "Milton", "Milo Dorman")
+              if isinstance(root, dict):
+                  if any(b in str(root.get("name", "")) for b in banned):
+                      return None
+                  out = {}
+                  for k, v in root.items():
+                      nv = prune_obsolete(v)
+                      if nv is not None:
+                          out[k] = nv
+                  return out
+              if isinstance(root, list):
+                  out = []
+                  for v in root:
+                      nv = prune_obsolete(v)
+                      if nv is not None:
+                          out.append(nv)
+                  return out
+              if isinstance(root, str):
+                  if any(b in root for b in banned):
+                      return None
+                  return root
+              return root
+
+          # ------------------------------------------------------------------
+          # Global canon/terminology cleanup
+          # ------------------------------------------------------------------
+          def global_terms(s):
+              s = s.replace("Sera Pell", "Sera Venn")
+              s = s.replace("Jorn Kel", "Jorn Milar")
+              s = s.replace("Tal Venn", "Tal Rusk")
+              s = s.replace("Regional Standing", "Independent Factions reputation")
+              s = s.replace("Pool of Radiance", "Radiant Well")
+              s = s.replace("Pool/Radiant Well", "Radiant Well")
+              s = re.sub(r"\bPool\b", "Radiant Well", s)
+              return s
+
+          data = transform_strings(data, global_terms)
+          data = prune_obsolete(data)
+          packs = data.get("adventureData", [])
+          sections = packs[0].get("data", [])
+
+          # ------------------------------------------------------------------
+          # Campaign Guide: Boss terminology and character threads
+          # ------------------------------------------------------------------
+          guide = get_section("Campaign Guide")
+          story = find_named(guide, "Story Overview")
+          upsert_named(story, {
+              "type": "entries",
+              "name": "The Boss, Tyren, and Soren",
+              "entries": [
+                  "{@b The Boss} is the title soldiers, traders, and frightened residents use for the apparently singular ruler coordinating Old Bellweather's hostile factions. Early in the campaign, almost nobody understands that the title hides two beings: {@b Tyren}, a possessing intelligence, and {@b Soren}, the bronze-dragon host he eventually controls.",
+                  "Before the possession reveal, rumors and uninformed NPCs may simply say {@b the Boss}. After Marren Library establishes possession, DM-facing text should treat Tyren as the true intelligence behind that title. Uninformed NPCs can continue using the old name. Soren's identity as the current host is not confirmed until the late campaign."
+              ]
+          })
+
+          threads = find_named(guide, "Character Threads")
+          upsert_named(threads, {
+              "type": "entries",
+              "name": "Jarrock — Rena Dask Labor Thread",
+              "entries": [
+                  "Keep Jarrock's class-and-power theme as a small recurring subplot rather than a second main plot. {@b Rena Dask}, a dwarf stonemason and informal crew representative, appears in two or three scenes as Bellweather expands.",
+                  "First beat: Rena is one of the workers risking injury to survey and reopen property in the Slums. She asks who benefits when workers make a district valuable enough for someone else to claim.",
+                  "Second beat: around the Cardon Weavehouse, Rena pushes for compensation, safety guarantees, or a public share of recovered value for the crews doing the reclamation. She is practical, not doctrinaire, and accepts compromise when it materially helps workers.",
+                  "Third beat: during the Mansion property precedents, Rena challenges Jarrock to distinguish between opposing abusive power and simply distrusting whoever currently holds power. She can also be wrong: she may defend a worker shortcut, overestimate what Bellweather can afford, or underestimate a legitimate ownership claim. The point is to make Jarrock decide what he believes, not to hand him the correct answer."
+              ]
+          })
+
+          # ------------------------------------------------------------------
+          # Chapter 3: introduce Rena without changing locked map geometry
+          # ------------------------------------------------------------------
+          ch3 = get_section("Chapter 3: The Slums")
+          survey = find_named(ch3, "The Survey Crew Rescue")
+          upsert_named(survey, {
+              "type": "entries",
+              "name": "Optional Jarrock Thread: Rena Dask",
+              "entries": [
+                  "Rena Dask, a dwarf stonemason and informal crew representative, can be part of the survey/reclamation workforce without changing the encounter roster or map. She helps stabilize the injured and immediately returns to practical work.",
+                  "If Jarrock engages her, Rena asks a simple question rather than making a speech: {@b \"When we make one of these buildings safe enough to own again, who gets paid for making it worth owning?\"} Let the answer remain unresolved for now."
+              ]
+          })
+
+          # ------------------------------------------------------------------
+          # Chapter 13: Valen Cemetery is an independent threat
+          # ------------------------------------------------------------------
+          ch13 = get_section("Chapter 13: Valen Cemetery")
+          def patch_ch13(s):
+              low = s.lower()
+              if "contaminated water" in low and "hessa" in low and "maren isle" in low:
+                  return "After the cemetery crisis is resolved, reports of worsening contamination in the Storen River become independently urgent. Following the poisoned water leads toward Maren Isle; Hessa's records are not required and do not connect her to Yaren."
+              if "hessa" in low and "orders" in low and "maren isle" in low:
+                  return "Hessa's records concern her own undead experiments, grave robbing, and efforts to exploit Bellweather's instability. They do not connect her to Tyren or Yaren. Any references to bodies, souls, or suitable vessels belong to her own necromantic work rather than a shared conspiracy."
+              if "hessa" in low and "records" in low and "maren isle" in low:
+                  return "If Hessa escapes, her abandoned records still expose enough of her cemetery operation to resolve this chapter. The Maren Isle lead arrives separately through the poisoned-river crisis."
+              if "viable host" in low and "hessa" in low:
+                  return "Hessa's notes discuss undead vessels and stolen remains only in the context of her own necromantic research; they contain no privileged knowledge of Tyren's current host."
+              return s
+          if ch13:
+              transform_strings(ch13, patch_ch13)
+              running = find_named(ch13, "Running the Chapter")
+              upsert_named(running, {
+                  "type": "entries",
+                  "name": "Independent Threat: Hessa Vale",
+                  "entries": [
+                      "Hessa Vale is not a servant of Tyren and does not work for Yaren. She is exploiting Bellweather's instability for her own necromantic ambitions. Valen Cemetery deliberately demonstrates that the campaign world contains dangerous actors who are not pieces of the central conspiracy.",
+                      "Resolving Hessa should not produce a secret order, sample shipment, or research trail that points to Maren Isle. The next chapter begins because the poisoned Storen River becomes impossible to ignore."
+                  ]
+              })
+
+          # ------------------------------------------------------------------
+          # Chapter 14: Yaren is independent and does not know Soren's identity
+          # ------------------------------------------------------------------
+          ch14 = get_section("Chapter 14: Maren Isle")
+          def patch_ch14(s):
+              low = s.lower()
+              if "cemetery catalog" in low:
+                  return "Crates bear marks from river settlements, apothecaries, and alchemical suppliers, showing that Yaren collected specimens and materials through his own network rather than through Hessa's cemetery operation."
+              if "notes comparing living hosts" in low and "dragon physiology" in low:
+                  return "One chamber contains notes comparing how living and undead tissues react to Radiant-Well-like energy. The notes discuss host compatibility in abstract terms but identify no current host and no dragon."
+              if "dying for tyren" in low:
+                  return re.sub(r"dying for Tyren", "dying for his research", s, flags=re.I)
+              if "yaren" in low and "present host" in low and "bronze dragon" in low:
+                  return "Yaren's notes independently show that Radiant-Well-like energy can carry, admit, or displace consciousness. He theorizes that a sufficiently powerful intelligence might transfer between hosts, but he does not know Tyren's current host or the identity of that host."
+              if "best data on tyren" in low and "experiments" in low:
+                  return "The upper controls govern discharge into the river and contain the best data on Yaren's experiments with Radiant-Well-like energy and consciousness transfer."
+              if "tyren is consolidating power beyond bellweather" in low:
+                  return "With the river restored, evidence from earlier chapters and testimony from rescued regional prisoners make clear that Bellweather needs allies and safe routes before the final confrontation. Reedscale survivors can provide one supporting regional connection, but Yaren's research does not reveal Tyren's political network."
+              return s
+          if ch14:
+              transform_strings(ch14, patch_ch14)
+              yr = find_named(ch14, "Yaren's Research and Tyren")
+              if yr is not None:
+                  yr["name"] = "Yaren's Independent Research"
+              running = find_named(ch14, "Running the Chapter")
+              upsert_named(running, {
+                  "type": "entries",
+                  "name": "Independent Threat: Yaren",
+                  "entries": [
+                      "Yaren is an independent arcane opportunist, not Tyren's lieutenant and not Hessa's partner. He is attempting to reproduce Radiant Well phenomena for his own purposes.",
+                      "His research can teach the party useful mechanics about consciousness, host compatibility, and interrupting transference, but it never identifies Soren as Tyren's host. That identity is reserved for the late-campaign reveal."
+                  ]
+              })
+              resolution = find_named(ch14, "Resolution")
+              if resolution:
+                  # Replace the old 'potential regional ally' promise with a bounded supporting benefit.
+                  transform_strings(resolution, lambda s: (
+                      "Stopping the pumps and securing the research cleans the river over the following days. Bellweather's trade, sanitation, and access to the eastern ruins improve dramatically. If the Reedscale prisoners are rescued, their community becomes a minor regional ally in Chapter 15: they can provide guides, river intelligence, safe passage, and oral lore about the Radiant Well. Reedscale support does not count as one of the three strong alliances required to finish the regional arc, but it can satisfy the safe-route requirement if the party uses their river knowledge."
+                      if "reedscale prisoners" in s.lower() and "potential regional ally" in s.lower()
+                      else s
+                  ))
+
+          # ------------------------------------------------------------------
+          # Chapter 15: Doman is the deceptive mage; Haren Vell commands Iron Banner
+          #              Reedscale is supporting, not a full location.
+          # ------------------------------------------------------------------
+          ch15 = get_section("Chapter 15: The Lands Beyond Bellweather")
+          def patch_ch15(s):
+              low = s.lower()
+              if "doman" in low and "fort" in low and "commander" in low:
+                  s = s.replace("Doman", "Haren Vell")
+                  s = s.replace("the fort’s commander", "the Iron Banner commander")
+                  s = s.replace("the fort's commander", "the Iron Banner commander")
+                  return s
+              if "doman possesses an artifact used to receive tyren" in low:
+                  return "Haren Vell's command vault contains a Tyren-linked signal device used to receive orders. Destroying, seizing, or exposing it proves the command relationship. This signal device is separate from the sealed planar vessel sought by Doman."
+              return s
+          if ch15:
+              transform_strings(ch15, patch_ch15)
+              running = find_named(ch15, "Running the Chapter")
+              upsert_named(running, {
+                  "type": "entries",
+                  "name": "Doman and Commander Haren Vell",
+                  "entries": [
+                      "{@b Doman} is the deceptive mage inspired by the source adventure's manipulative spellcaster. He wants the sealed planar vessel in Iron Banner Fort and tries to persuade the party to retrieve it for him. He is not the fort commander and is not loyal to Tyren.",
+                      "{@b Commander Haren Vell} commands Iron Banner Fort. Haren's relationship with Tyren is political and logistical: Tyren offers supplies, authority, and protection in exchange for obedience. Keep Doman's personal artifact scheme separate from Haren's command structure."
+                  ]
+              })
+              upsert_named(running, {
+                  "type": "entries",
+                  "name": "Reedscale Support",
+                  "entries": [
+                      "If the party rescued the Reedscale prisoners on Maren Isle, their community automatically becomes a minor ally. Reedscale guides can secure a river route, identify dangerous Radiant Well residue, and pass along oral history about old regional disturbances.",
+                      "Reedscale support does {@b not} count as one of the three strong alliances required to finish this chapter. It can, however, satisfy the separate safe-route requirement if the party accepts and preserves the river route they offer."
+                  ]
+              })
+
+          # ------------------------------------------------------------------
+          # Perrin's visible rise: wealth -> network -> committee -> First Councilor
+          # ------------------------------------------------------------------
+          perrin_beats = [
+              (
+                  "Chapter 8: Cardon Weavehouse",
+                  "Perrin's Rise: Restored Wealth",
+                  [
+                      "The Weavehouse is the turning point in Perrin's material power. He recovers enough wealth, documentation, and credit to hire protection, sponsor repairs, make loans, and reward political allies. Even if the party limits his property claim, he emerges from the chapter richer and more visible than before.",
+                      "Do not present this as a secret coup. Residents should notice Cardon-funded work crews, guards, charitable gestures, and merchants suddenly taking his calls."
+                  ],
+              ),
+              (
+                  "Chapter 9: Marren Library",
+                  "Perrin's Rise: Administrative Network",
+                  [
+                      "Perrin uses wealth and archive access to cultivate clerks, recordkeepers, merchants, and junior officials. If the party gives him records, the network grows faster; if they resist, he builds it through copies, public filings, favors, and patronage.",
+                      "He still does not control the Council, but he increasingly understands which forms, seals, schedules, and staff actually make Bellweather's government function."
+                  ],
+              ),
+              (
+                  "Chapter 10: The Mansions",
+                  "Perrin's Rise: Committee Authority",
+                  [
+                      "After the Mansion precedents are set, Perrin is elevated to chair Bellweather's {@b Reclamation and Emergency Works Committee} or its local equivalent. The office gives him legitimate access to contracts, requisitions, seals, property hearings, and administrative staff.",
+                      "The appointment is public and defensible: Perrin has money, experience, and a record of supporting reclamation. This is the institutional bridge that makes his later abuse of procedure plausible."
+                  ],
+              ),
+              (
+                  "Chapter 12: Storen Gate",
+                  "Perrin's Rise: Emergency Authority",
+                  [
+                      "Opening Storen Gate turns reclamation into a larger security and trade problem. Perrin's committee authority expands into emergency contracting, public notices, and coordination with merchants and guards. He is now the Council's dominant administrative voice even when other councilors disagree with him.",
+                      "Wern still controls military judgment and Bishop Brann still carries moral/public influence; Perrin's power comes from procedure, money, records, and the ability to make government move."
+                  ],
+              ),
+              (
+                  "Chapter 15: The Lands Beyond Bellweather",
+                  "Perrin's Rise: First Councilor",
+                  [
+                      "During the regional crisis, Perrin converts his wealth, committee authority, merchant support, and administrative network into formal leadership. Unless the party has already produced extraordinary evidence sufficient to remove him from office, he becomes Bellweather's {@b First Councilor}, the formal head of the Council, before the Zennar mission.",
+                      "The appointment may be contested if the party has opposed him, but it is procedurally valid. This position gives him the real seals, staff access, emergency channels, and public platform he later abuses."
+                  ],
+              ),
+              (
+                  "Chapter 16: The Zennar Outpost",
+                  "Perrin's Institutional Position",
+                  [
+                      "Perrin enters this chapter as First Councilor, not as an ordinary council member who suddenly has impossible access. The Zennar orders use genuine seals and real administrative channels; the fraud is in the authorization, routing, and purpose.",
+                      "His clerk-and-merchant network helps him move money, prepare public statements, and create a paper trail that looks legitimate long enough to endanger the party. The betrayal is an abuse of institutions he spent the campaign learning to control."
+                  ],
+              ),
+          ]
+          for chapter_name, beat_name, beat_entries in perrin_beats:
+              chapter = get_section(chapter_name)
+              running = find_named(chapter, "Running the Chapter") if chapter else None
+              upsert_named(running, {"type": "entries", "name": beat_name, "entries": beat_entries})
+
+          ch16 = get_section("Chapter 16: The Zennar Outpost")
+          if ch16:
+              def patch_ch16(s):
+                  if "Perrin gives the party an apparently legitimate high-priority mission to Zennar Outpost" in s:
+                      return s.replace(
+                          "Perrin gives the party an apparently legitimate high-priority mission to Zennar Outpost",
+                          "Now serving as Bellweather's First Councilor, Perrin gives the party an apparently legitimate high-priority mission to Zennar Outpost",
+                      )
+                  if "This mission should occur after Cardon has enough influence" in s:
+                      return "This mission occurs after Perrin has become First Councilor and has enough formal authority, administrative allies, and public credibility to send the party away, arrange their deaths, and prepare a legal narrative before they return."
+                  return s
+              transform_strings(ch16, patch_ch16)
+
+          # Jarrock second/third beats in actual chapters.
+          ch8 = get_section("Chapter 8: Cardon Weavehouse")
+          settlement = find_named(ch8, "Scene 5: The Settlement") if ch8 else None
+          upsert_named(settlement, {
+              "type": "entries",
+              "name": "Optional Jarrock Thread: Rena Dask",
+              "entries": [
+                  "Rena Dask attends or sends a statement on behalf of reclamation crews. She does not claim the Cardon family has no rights; she argues that workers who took the physical risks of reopening the property should receive enforceable safety standards, compensation, or a defined public benefit rather than only wages and thanks.",
+                  "If Jarrock supports her automatically, have Rena acknowledge a legitimate Cardon claim the evidence actually supports. If he dismisses her automatically, have her point to a concrete injury, unpaid cost, or public subsidy. Keep the question difficult rather than making either side a caricature."
+              ]
+          })
+
+          ch10 = get_section("Chapter 10: The Mansions")
+          running10 = find_named(ch10, "Running the Chapter") if ch10 else None
+          upsert_named(running10, {
+              "type": "entries",
+              "name": "Optional Jarrock Thread: Rena's Challenge",
+              "entries": [
+                  "Use Rena Dask once during the Mansion property cases if Jarrock has engaged with her earlier. She asks him to explain the principle behind his decisions: inherited title, current occupation, labor invested, public need, or some combination.",
+                  "Rena should challenge inconsistency, not demand a predetermined political answer. After this scene, let the subplot recede unless Jarrock actively keeps the relationship alive."
+              ]
+          })
+
+          # ------------------------------------------------------------------
+          # Campaign Control Sheet: Perrin escalation and progress table
+          # ------------------------------------------------------------------
+          control = get_section("Appendix 0: Campaign Control Sheet")
+          progress = find_named(control, "Progress Track") if control else None
+          table = find_table(progress, "Perrin development") if progress else None
+          if table:
+              perrin_rows = {
+                  "Storm / Slums": "minor councilor, useful but peripheral",
+                  "Blackstone + Kellan": "publicly supports order and reclamation",
+                  "Koven House": "gains credibility by backing the crackdown",
+                  "Savin Keep": "benefits from improved trade and visibility",
+                  "Weavehouse": "recovers wealth, hires protection, and begins visible patronage",
+                  "Library + Mansions": "builds a clerk/merchant network and becomes chair of Reclamation and Emergency Works",
+                  "Paden Square": "dominant Council voice; increasingly shapes notices and procedure",
+                  "Storen Gate": "gains emergency contracting and broader administrative authority",
+                  "Valen Cemetery": "can exploit public fear but is not its cause; positions himself for formal leadership",
+                  "Maren Isle": "benefits from river reopening; coalition support grows",
+                  "Regional Arc": "becomes First Councilor/head of Council unless already lawfully removed",
+                  "Zennar Outpost": "betrays the party and weaponizes the institutions he now formally leads",
+              }
+              for row in table.get("rows", []):
+                  if isinstance(row, list) and len(row) >= 3 and row[0] in perrin_rows:
+                      row[2] = perrin_rows[row[0]]
+
+          escalation = find_named(control, "Perrin Cardon Escalation") if control else None
+          if escalation is not None:
+              escalation["entries"] = [
+                  {
+                      "type": "list",
+                      "style": "list-decimal",
+                      "items": [
+                          "{@b Minor councilor (levels 3–5).} Useful, polished, and peripheral. He supports practical reclamation and earns credibility by being right about some things.",
+                          "{@b Restored heir (levels 6–8).} The Weavehouse restores substantial Cardon wealth. Perrin hires protection, sponsors visible civic work, and starts a patronage network.",
+                          "{@b Administrative patron (levels 8–9).} Marren Library and property disputes teach Perrin how Bellweather's records, clerks, forms, and merchant relationships actually work.",
+                          "{@b Committee chair (levels 9–12).} Perrin chairs Reclamation and Emergency Works, gaining legitimate access to contracts, requisitions, seals, hearings, and staff.",
+                          "{@b Dominant councilor / First Councilor (levels 13–15).} Emergency authority and regional politics let Perrin become the formal head of the Council unless the party has already lawfully removed him with extraordinary evidence.",
+                          "{@b Betrayer (levels 15–16).} Perrin uses genuine institutional machinery to create the Zennar trap, move money through intermediaries, and define the public story before the party returns."
+                      ]
+                  },
+                  "Do not make Perrin openly villainous ahead of the evidence. His rise should be visible, procedurally plausible, and partly earned through legitimate successes. His eventual betrayal is human political ambition and abuse of authority, not service to Tyren."
+              ]
+
+          # ------------------------------------------------------------------
+          # Chapter 17: define the previously dangling Tyren Alert Track
+          # ------------------------------------------------------------------
+          ch17 = get_section("Chapter 17: Varen Keep and the Radiant Well")
+          if ch17:
+              def patch_ch17(s):
+                  if "Failure advances Tyren's alert level" in s:
+                      return s.replace(
+                          "Failure advances Tyren's alert level",
+                          "Failure advances the Tyren Alert Track by 1",
+                      )
+                  return s
+              transform_strings(ch17, patch_ch17)
+              running17 = find_named(ch17, "Running the Chapter")
+              upsert_named(running17, {
+                  "type": "entries",
+                  "name": "Tyren Alert Track",
+                  "entries": [
+                      "Start the assault at {@b Alert 0}. Failed infiltration/set-piece objectives, obvious alarms, or deliberately noisy choices can increase Alert by 1, to a maximum of 3. A successful deception or sabotage can prevent an increase when fiction supports it, but Alert normally does not decrease once Tyren knows the party is inside.",
+                      {
+                          "type": "list",
+                          "items": [
+                              "{@b Alert 0 — Unaware.} No extra complication. The party controls the tempo of the approach.",
+                              "{@b Alert 1 — Suspicious.} Patrols tighten or one route closes. Add surveillance, a locked approach, or a repositioned patrol, not another mandatory full combat.",
+                              "{@b Alert 2 — Mobilized.} One outer complication or reinforcement wave remains unless a regional ally or completed sabotage specifically cancels it.",
+                              "{@b Alert 3 — Full Alert.} Tyren begins the Soren phase prepared. One surviving control node starts active, or Soren begins with one defensive advantage that ends when the party disables the related control focus. Do not add an extra boss encounter."
+                          ]
+                      },
+                      "Alert changes pressure; it never removes routes to the climax, invalidates earlier alliances, or turns Varen Keep into a room-by-room attrition dungeon."
+                  ]
+              })
+
+          # Minor Reedscale payoff in the finale without treating them as a major alliance.
+          if ch17:
+              approach = find_named(ch17, "Scene 1: Approach to Varen Keep")
+              upsert_named(approach, {
+                  "type": "entries",
+                  "name": "Reedscale Support",
+                  "entries": [
+                      "If the Reedscale prisoners were rescued and their river route remains friendly, their guides can remove one environmental/navigation complication on the approach or identify a safe method for handling Radiant Well residue. This is a minor-support benefit and is separate from the chapter's major-alliance benefits."
+                  ]
+              })
+
+          # ------------------------------------------------------------------
+          # Appendix C: lock the Version 3 continuity decisions in one place.
+          # ------------------------------------------------------------------
+          continuity = get_section("Appendix C: Campaign Continuity")
+          upsert_named(continuity, {
+              "type": "entries",
+              "name": "Version 3 Continuity Locks",
+              "entries": [
+                  "{@b Opening canon.} Sera Venn, Jorn Milar, and the 75-gp-per-character Council reclamation contract are the current early hooks. Tomas, Milton, and the missing-notebook seed are not part of the campaign.",
+                  "{@b Doman.} Doman is the deceptive mage seeking the sealed planar vessel. Commander Haren Vell leads Iron Banner Fort. They are separate NPCs.",
+                  "{@b Independent threats.} Hessa Vale and Yaren are independent actors. Neither serves Tyren, and Hessa does not work for Yaren. Valen Cemetery does not secretly point to Maren Isle; the poisoned river creates that lead independently.",
+                  "{@b The Boss.} The title refers to the apparent singular ruler presented by Tyren acting through a host. After the possession reveal, DM-facing text should call the intelligence Tyren; uninformed NPCs may continue saying the Boss. Soren is confirmed as the current host only in the late campaign.",
+                  "{@b Reedscale.} Rescued Reedscale become a minor ally and can secure the safe river route, but they do not count as one of the three strong alliances required in Chapter 15.",
+                  "{@b Perrin.} Perrin's political rise is visible and institutional: restored wealth, patronage, administrative network, committee authority, then First Councilor before Zennar. He remains independent of Tyren.",
+                  "{@b Jarrock.} Rena Dask provides a small 2–3-scene labor subplot that challenges Jarrock's assumptions about class and power without dictating the correct conclusion.",
+                  "{@b Terminology.} Radiant Well is the only current term; obsolete uses of Pool are removed. Regional relationships use the four established reputation tracks, with regional communities primarily falling under Independent Factions."
+              ]
+          })
+
+          # ------------------------------------------------------------------
+          # Metadata, output, and validation
+          # ------------------------------------------------------------------
+          now = int(time.time())
+          meta = data.setdefault("_meta", {})
+          meta["dateLastModified"] = now
+          for src in meta.get("sources", []):
+              if src.get("json") == "NCFA":
+                  src["version"] = "3.0"
+                  src["dateLastModified"] = now
+
+          # Re-run global term cleanup after inserted text, then ensure no obsolete named threads survived.
+          data = transform_strings(data, global_terms)
+          data = prune_obsolete(data)
+
+          all_text = "\n".join(collect_strings(data))
+          failures = []
+          for stale in ("Regional Standing", "Tal Venn", "Tomas", "Milton", "Milo Dorman"):
+              if stale in all_text:
+                  failures.append(f"stale term remains: {stale}")
+          if re.search(r"\bPool\b", all_text):
+              failures.append("obsolete standalone 'Pool' terminology remains")
+          if failures:
+              raise SystemExit("Version 3 validation failed: " + "; ".join(failures))
+
+          # Structural checks for key Version 3 locks.
+          required_named = [
+              ("Campaign Guide", "The Boss, Tyren, and Soren"),
+              ("Campaign Guide", "Jarrock — Rena Dask Labor Thread"),
+              ("Chapter 13: Valen Cemetery", "Independent Threat: Hessa Vale"),
+              ("Chapter 14: Maren Isle", "Independent Threat: Yaren"),
+              ("Chapter 15: The Lands Beyond Bellweather", "Doman and Commander Haren Vell"),
+              ("Chapter 15: The Lands Beyond Bellweather", "Reedscale Support"),
+              ("Chapter 17: Varen Keep and the Radiant Well", "Tyren Alert Track"),
+              ("Appendix C: Campaign Continuity", "Version 3 Continuity Locks"),
+          ]
+          for sec_name, entry_name in required_named:
+              sec = get_section(sec_name)
+              if sec is None or find_named(sec, entry_name) is None:
+                  raise SystemExit(f"Missing required v3 entry: {sec_name} / {entry_name}")
+
+          def dump(path):
+              with path.open("w", encoding="utf-8") as f:
+                  json.dump(data, f, ensure_ascii=False, indent="\t")
+                  f.write("\n")
+
+          dump(CURRENT)
+          dump(VERSIONED)
+
+          CHANGELOG.write_text("""# No Cause for Alarm — Version 3.0\n\nVersion 3 is the campaign-wide continuity cleanup of **No Cause for Alarm: Ruins of Bellweather**. The playable campaign remains a four-character, level 3–16 5etools adventure. Locked map geometry, current rewards, published-stat-block policy, and the existing chapter order are preserved.\n\n## Version 3 changes\n- Restores **Doman** as the deceptive mage seeking the sealed planar vessel and locks **Commander Haren Vell** as the separate Iron Banner commander.\n- Removes the abandoned **Tomas / Milton / missing notebook** thread.\n- Locks **Sera Venn / Jorn Milar / 75 gp per character** as the opening Slums hooks.\n- Uses **Independent Factions** instead of an undefined Regional Standing subsystem.\n- Makes rescued **Reedscale** a minor supporting ally that can secure the safe river route without counting as one of Chapter 15's three strong alliances.\n- Separates **Hessa Vale**, **Yaren**, and **Tyren**: Valen Cemetery and Maren Isle are independent threats, and Yaren no longer knows that Soren is Tyren's host.\n- Defines **the Boss** as the apparent singular ruler presented by Tyren acting through a host; post-reveal DM text treats Tyren as the true intelligence.\n- Adds a defined **Tyren Alert Track (0–3)** for Varen Keep.\n- Removes obsolete **Milo Dorman** continuity.\n- Renames **Tal Venn** to **Tal Rusk** to avoid falsely implying a relationship with Sera Venn.\n- Standardizes **Radiant Well** terminology and removes obsolete uses of Pool.\n- Makes **Perrin Cardon's political rise visible and institutional**, culminating in his becoming First Councilor before the Zennar betrayal.\n- Adds **Rena Dask**, a small recurring labor subplot for Jarrock across 2–3 scenes.\n- Preserves Chapter 15's advancement rule: **three strong alliances plus a safe route**.\n- Preserves Aaron Dunamus's personal threads as optional, play-by-ear material separate from Tyren.\n\n## Canonical files\n- `No_Cause_for_Alarm_5etools_CURRENT.json` — live update target used by 5etools.\n- `No_Cause_for_Alarm_5etools_v3.0.json` — frozen Version 3 snapshot.\n""", encoding="utf-8")
+
+          README.write_text("""# No Cause for Alarm — 5etools Assets\n\nCurrent campaign: **No Cause for Alarm: Ruins of Bellweather — Version 3.0**.\n\n- Live 5etools update file: `No_Cause_for_Alarm_5etools_CURRENT.json`\n- Frozen Version 3 snapshot: `No_Cause_for_Alarm_5etools_v3.0.json`\n- Version 3 change log: `VERSION_3_CHANGELOG.md`\n- Party baseline: **4 characters, levels 3–16**\n\nPublic image assets under `img/` remain the canonical map/art source used by the homebrew JSON.\n""", encoding="utf-8")
+          PY
+
+          python -m json.tool No_Cause_for_Alarm_5etools_CURRENT.json >/dev/null
+          cmp -s No_Cause_for_Alarm_5etools_CURRENT.json No_Cause_for_Alarm_5etools_v3.0.json
+
+      - name: Commit Version 3
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- No_Cause_for_Alarm_5etools_CURRENT.json No_Cause_for_Alarm_5etools_v3.0.json VERSION_3_CHANGELOG.md README.md; then
+            echo "No Version 3 changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add No_Cause_for_Alarm_5etools_CURRENT.json No_Cause_for_Alarm_5etools_v3.0.json VERSION_3_CHANGELOG.md README.md
+          git commit -m "Release No Cause for Alarm v3.0 continuity update"
+          git push origin HEAD:main
