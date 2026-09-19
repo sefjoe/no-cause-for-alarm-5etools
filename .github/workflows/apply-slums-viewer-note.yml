@@ -1,0 +1,90 @@
+name: Apply NCFA Slums Viewer Note
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/apply-slums-viewer-note.yml'
+  workflow_run:
+    workflows: ["Apply NCFA Slums Integration"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply-viewer-note:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Add 5etools Dynamic Map Viewer instructions
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, time
+
+          path = "No_Cause_for_Alarm_5etools_CURRENT.json"
+          with open(path, "r", encoding="utf-8") as f:
+              data = json.load(f)
+
+          packs = data.get("adventureData", [])
+          if not packs:
+              raise SystemExit("No adventureData found")
+
+          sections = packs[0].get("data", [])
+          chapter = next((s for s in sections if isinstance(s, dict) and s.get("name") == "Chapter 3: The Slums"), None)
+          if chapter is None:
+              raise SystemExit("Chapter 3 not found")
+
+          maps = next((e for e in chapter.get("entries", []) if isinstance(e, dict) and e.get("name") == "Maps"), None)
+          if maps is None:
+              raise SystemExit("Chapter 3 Maps section not found")
+
+          note = {
+              "type": "inset",
+              "name": "Open in the 5etools Dynamic Map Viewer",
+              "entries": [
+                  "Clicking the map image itself opens the source image. To use 5etools' zoomable interactive map viewer instead, open the {@link DM Screen|dmscreen.html}.",
+                  "In the DM Screen, add a panel and choose {@b Adventure/Book Map Dynamic Viewer}. Select {@b No Cause for Alarm: Ruins of Bellweather}, then {@b Chapter 3: The Slums}, then {@b The Slums — DM Tactical Map}. The viewer provides zoom and pan controls and uses the keyed map regions A1, B2, C3, D4, E4, and E5.",
+                  "Use the matching Player Tactical Map when you want the same geometry without DM-only keyed labels."
+              ]
+          }
+
+          mentries = maps.setdefault("entries", [])
+          mentries[:] = [e for e in mentries if not (isinstance(e, dict) and e.get("name") == note["name"])]
+          mentries.append(note)
+
+          now = int(time.time())
+          meta = data.setdefault("_meta", {})
+          meta["dateLastModified"] = now
+          for src in meta.get("sources", []):
+              if src.get("json") == "NCFA":
+                  src["version"] = "2.10"
+                  src["dateLastModified"] = now
+
+          with open(path, "w", encoding="utf-8") as f:
+              json.dump(data, f, ensure_ascii=False, indent="\t")
+              f.write("\n")
+          PY
+
+          python -m json.tool No_Cause_for_Alarm_5etools_CURRENT.json >/dev/null
+
+      - name: Commit viewer note
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- No_Cause_for_Alarm_5etools_CURRENT.json; then
+            echo "No viewer-note changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add No_Cause_for_Alarm_5etools_CURRENT.json
+          git commit -m "Add Slums dynamic map viewer instructions"
+          git push origin HEAD:main
