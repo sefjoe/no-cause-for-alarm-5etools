@@ -46,12 +46,12 @@ jobs:
                       url = href.get('url', '')
                       if url.endswith('/img/dm/storm_rescue.png') or title == 'The Storm — Rescue Scene':
                           href['url'] = storm_url
-                          obj['width'] = 900
-                          obj['height'] = 1063
+                          obj['width'] = 300
+                          obj['height'] = 354
                       elif url.endswith('/img/dm/ledger_house.png') or title == 'Ledger House':
                           href['url'] = ledger_url
-                          obj['width'] = 900
-                          obj['height'] = 675
+                          obj['width'] = 300
+                          obj['height'] = 225
                   for v in obj.values():
                       walk(v)
               elif isinstance(obj, list):
