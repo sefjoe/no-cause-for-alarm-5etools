@@ -6,16 +6,16 @@
 				"json": "NCFA",
 				"abbreviation": "NCFA",
 				"full": "No Cause for Alarm: Ruins of Bellweather",
-				"version": "3.0",
+				"version": "3.1",
 				"authors": [
 					"No Cause for Alarm Campaign"
 				],
-				"dateLastModified": 1789835749
+				"dateLastModified": 1789840177
 			}
 		],
 		"edition": "one",
 		"dateAdded": 1789528955,
-		"dateLastModified": 1789835749
+		"dateLastModified": 1789840177
 	},
 	"adventure": [
 		{
@@ -273,6 +273,14 @@
 						"Rest Clock",
 						"Rewards",
 						"Return to Ledger House"
+					]
+				},
+				{
+					"name": "Appendix G: DM Quick Reference",
+					"headers": [
+						"Generic DCs",
+						"Object and Material ACs",
+						"15 NPC Names"
 					]
 				},
 				{
@@ -8907,6 +8915,187 @@
 						}
 					],
 					"id": "024"
+				},
+				{
+					"type": "section",
+					"name": "Appendix G: DM Quick Reference",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Generic DCs",
+							"entries": [
+								"Use these values when the adventure does not specify a DC. Choose the ability and skill from the character's approach. If success is automatic or impossible, do not call for a roll.",
+								{
+									"type": "table",
+									"caption": "Generic Difficulty Classes",
+									"colLabels": [
+										"Difficulty",
+										"DC"
+									],
+									"colStyles": [
+										"col-8",
+										"col-4 text-center"
+									],
+									"rows": [
+										[
+											"Very Easy",
+											"5"
+										],
+										[
+											"Easy",
+											"10"
+										],
+										[
+											"Medium",
+											"15"
+										],
+										[
+											"Hard",
+											"20"
+										],
+										[
+											"Very Hard",
+											"25"
+										],
+										[
+											"Nearly Impossible",
+											"30"
+										]
+									]
+								}
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Object and Material ACs",
+							"entries": [
+								"For an unattended object, choose AC primarily by what it is made from. AC only answers whether an attack connects effectively; use the object's size, hit points, damage threshold, resistances, and immunities separately when those matter.",
+								{
+									"type": "table",
+									"caption": "Object Armor Class by Material",
+									"colLabels": [
+										"Material or Substance",
+										"AC"
+									],
+									"colStyles": [
+										"col-8",
+										"col-4 text-center"
+									],
+									"rows": [
+										[
+											"Cloth, Paper, or Rope",
+											"11"
+										],
+										[
+											"Crystal, Glass, or Ice",
+											"13"
+										],
+										[
+											"Wood or Bone",
+											"15"
+										],
+										[
+											"Stone",
+											"17"
+										],
+										[
+											"Iron or Steel",
+											"19"
+										],
+										[
+											"Mithral",
+											"21"
+										],
+										[
+											"Adamantine",
+											"23"
+										]
+									]
+								}
+							]
+						},
+						{
+							"type": "entries",
+							"name": "15 NPC Names",
+							"entries": [
+								"Use these for incidental NPCs when a name is needed immediately. Assign ancestry, occupation, and personality to fit the scene.",
+								{
+									"type": "table",
+									"caption": "Ready-to-Use NPC Names",
+									"colLabels": [
+										"#",
+										"Name"
+									],
+									"colStyles": [
+										"col-2 text-center",
+										"col-10"
+									],
+									"rows": [
+										[
+											"1",
+											"Mara Vell"
+										],
+										[
+											"2",
+											"Tobin Hark"
+										],
+										[
+											"3",
+											"Elira Dane"
+										],
+										[
+											"4",
+											"Corren Vale"
+										],
+										[
+											"5",
+											"Nessa Brin"
+										],
+										[
+											"6",
+											"Darric Holt"
+										],
+										[
+											"7",
+											"Sella Marr"
+										],
+										[
+											"8",
+											"Oren Pike"
+										],
+										[
+											"9",
+											"Vessa Calder"
+										],
+										[
+											"10",
+											"Renn Tal"
+										],
+										[
+											"11",
+											"Mira Fen"
+										],
+										[
+											"12",
+											"Joren Quill"
+										],
+										[
+											"13",
+											"Tamsin Ward"
+										],
+										[
+											"14",
+											"Garran Kest"
+										],
+										[
+											"15",
+											"Lysa Moor"
+										]
+									]
+								}
+							]
+						}
+					]
 				},
 				{
 					"type": "section",
