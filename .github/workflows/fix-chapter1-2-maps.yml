@@ -1,0 +1,100 @@
+name: Fix Chapter 1-2 Maps
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/fix-chapter1-2-maps.yml'
+  workflow_run:
+    workflows:
+      - 'Sync NCFA Assets'
+      - 'Apply NCFA Reclamation Map State'
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix-maps:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Point Chapters 1 and 2 at valid WebP map assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, time
+
+          path = 'No_Cause_for_Alarm_5etools_CURRENT.json'
+          storm_url = 'https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/storm_rescue.webp'
+          ledger_url = 'https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/ledger_house.webp'
+
+          with open(path, 'r', encoding='utf-8') as f:
+              data = json.load(f)
+
+          def walk(obj):
+              if isinstance(obj, dict):
+                  title = obj.get('title')
+                  href = obj.get('href')
+                  if isinstance(href, dict) and href.get('type') == 'external':
+                      url = href.get('url', '')
+                      if url.endswith('/img/dm/storm_rescue.png') or title == 'The Storm — Rescue Scene':
+                          href['url'] = storm_url
+                          obj['width'] = 900
+                          obj['height'] = 1063
+                      elif url.endswith('/img/dm/ledger_house.png') or title == 'Ledger House':
+                          href['url'] = ledger_url
+                          obj['width'] = 900
+                          obj['height'] = 675
+                  for v in obj.values():
+                      walk(v)
+              elif isinstance(obj, list):
+                  for v in obj:
+                      walk(v)
+
+          walk(data)
+
+          meta = data.setdefault('_meta', {})
+          for src in meta.get('sources', []):
+              if src.get('json') == 'NCFA':
+                  src['version'] = '2.13'
+          meta['dateLastModified'] = int(time.time())
+
+          with open(path, 'w', encoding='utf-8') as f:
+              json.dump(data, f, ensure_ascii=False, indent='\t')
+              f.write('\n')
+          PY
+
+      - name: Validate map assets and JSON
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m json.tool No_Cause_for_Alarm_5etools_CURRENT.json >/dev/null
+          test -s img/dm/storm_rescue.webp
+          test -s img/dm/ledger_house.webp
+          python - <<'PY'
+          from pathlib import Path
+          for p in ['img/dm/storm_rescue.webp', 'img/dm/ledger_house.webp']:
+              b = Path(p).read_bytes()
+              if not b.startswith(b'RIFF') or b[8:12] != b'WEBP':
+                  raise SystemExit(f'{p} is not a valid WebP file')
+          PY
+
+      - name: Commit corrected references
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet; then
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add No_Cause_for_Alarm_5etools_CURRENT.json
+          git commit -m 'Fix Storm and Ledger House map assets'
+          git push
