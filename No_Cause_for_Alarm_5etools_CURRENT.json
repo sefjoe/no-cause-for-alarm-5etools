@@ -10,12 +10,12 @@
 				"authors": [
 					"No Cause for Alarm Campaign"
 				],
-				"dateLastModified": 1789835655
+				"dateLastModified": 1789835749
 			}
 		],
 		"edition": "one",
 		"dateAdded": 1789528955,
-		"dateLastModified": 1789835655
+		"dateLastModified": 1789835749
 	},
 	"adventure": [
 		{
@@ -460,7 +460,7 @@
 							"entries": [
 								"Fifty years ago, Bellweather fell to an alliance of monstrous armies whose cooperation seemed impossible. A new settlement has since established a protected foothold and begun reclaiming the old city. The Council hires adventurers because it lacks the manpower to clear every block itself.",
 								"As the characters reclaim Bellweather, they hear of a feared {@b Boss} holding otherwise fractious forces together. At the same time, Perrin Cardon—a minor Council member descended from one of Old Bellweather's wealthy merchant houses—quietly uses the recovery to restore his family fortune and increase his political influence.",
-								"The two stories tighten around the {@b Radiant Well}, a source of power sought by Cardon and already exploited by Tyren, the possessing intelligence behind the Boss. The characters eventually face both a political betrayal inside Bellweather and the supernatural power controlling its enemies.",
+								"The two stories tighten around the {@b Radiant Well}, a source of power sought by Cardon and already exploited by Tyren, the possessing intelligence who turns a controlled host into the apparent “Boss.” The characters eventually face both a political betrayal inside Bellweather and the supernatural power controlling its enemies.",
 								{
 									"type": "entries",
 									"name": "The Boss, Tyren, and Soren",
@@ -8697,7 +8697,7 @@
 								"{@b Reedscale.} Rescued Reedscale become a minor ally and can secure the safe river route, but they do not count as one of the three strong alliances required in Chapter 15.",
 								"{@b Perrin.} Perrin's political rise is visible and institutional: restored wealth, patronage, administrative network, committee authority, then First Councilor before Zennar. He remains independent of Tyren.",
 								"{@b Jarrock.} Rena Dask provides a small 2–3-scene labor subplot that challenges Jarrock's assumptions about class and power without dictating the correct conclusion.",
-								"{@b Terminology.} Radiant Well is the only current term; obsolete uses of Radiant Well are removed. Regional relationships use the four established reputation tracks, with regional communities primarily falling under Independent Factions."
+								"{@b Terminology.} Radiant Well is the only current term; obsolete legacy terminology is removed. Regional relationships use the four established reputation tracks, with regional communities primarily falling under Independent Factions."
 							]
 						}
 					],
