@@ -1,0 +1,112 @@
+name: Apply NCFA Early Chapter Maps
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/apply-early-maps.yml'
+  workflow_run:
+    workflows:
+      - "Sync NCFA Assets"
+      - "Apply NCFA Reclamation Map State"
+      - "Apply NCFA Slums Integration"
+      - "Apply NCFA Slums Viewer Note"
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply-early-maps:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Patch Chapter 1 and Chapter 2 maps
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, time
+
+          path = "No_Cause_for_Alarm_5etools_CURRENT.json"
+          with open(path, "r", encoding="utf-8") as f:
+              data = json.load(f)
+
+          base = "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm"
+
+          storm_map = {
+              "type": "image",
+              "href": {"type": "external", "url": f"{base}/storm_rescue.webp"},
+              "imageType": "map",
+              "title": "The Storm — Rescue Scene",
+              "width": 593,
+              "height": 700,
+              "grid": {"type": "square", "size": 44, "offsetX": 0, "offsetY": 0},
+          }
+
+          ledger_map = {
+              "type": "image",
+              "href": {"type": "external", "url": f"{base}/ledger_house.png"},
+              "imageType": "map",
+              "title": "Ledger House",
+          }
+
+          packs = data.get("adventureData", [])
+          if not packs:
+              raise SystemExit("No adventureData found")
+          chapters = packs[0].get("data", [])
+          by_name = {c.get("name"): c for c in chapters if isinstance(c, dict)}
+
+          def set_map(chapter_name, map_obj):
+              chapter = by_name.get(chapter_name)
+              if not chapter:
+                  raise SystemExit(f"Missing chapter: {chapter_name}")
+              entries = chapter.setdefault("entries", [])
+              maps = next((e for e in entries if isinstance(e, dict) and e.get("name") == "Maps"), None)
+              if maps is None:
+                  maps = {"type": "entries", "name": "Maps", "entries": []}
+                  entries.insert(0, maps)
+              maps["entries"] = [{"type": "gallery", "images": [map_obj]}]
+
+          set_map("Chapter 1: The Storm", storm_map)
+          set_map("Chapter 2: Reclaimed Bellweather", ledger_map)
+
+          for toc in data.get("adventure", [{}])[0].get("contents", []):
+              if toc.get("name") in {"Chapter 1: The Storm", "Chapter 2: Reclaimed Bellweather"}:
+                  headers = toc.setdefault("headers", [])
+                  headers[:] = [h for h in headers if h != "Maps"]
+                  headers.insert(0, "Maps")
+
+          now = int(time.time())
+          meta = data.setdefault("_meta", {})
+          meta["dateLastModified"] = now
+          for src in meta.get("sources", []):
+              if src.get("json") == "NCFA":
+                  src["version"] = "2.11"
+                  src["dateLastModified"] = now
+
+          with open(path, "w", encoding="utf-8") as f:
+              json.dump(data, f, ensure_ascii=False, indent="\t")
+              f.write("\n")
+          PY
+
+          python -m json.tool No_Cause_for_Alarm_5etools_CURRENT.json >/dev/null
+
+      - name: Commit early chapter maps
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- No_Cause_for_Alarm_5etools_CURRENT.json; then
+            echo "No early-map changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add No_Cause_for_Alarm_5etools_CURRENT.json
+          git commit -m "Restore Storm and Ledger House maps"
+          git push origin HEAD:main
