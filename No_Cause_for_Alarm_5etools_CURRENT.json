@@ -6,7 +6,7 @@
 				"json": "NCFA",
 				"abbreviation": "NCFA",
 				"full": "No Cause for Alarm: Ruins of Bellweather",
-				"version": "2.14",
+				"version": "2.15",
 				"authors": [
 					"No Cause for Alarm Campaign"
 				],
@@ -15,7 +15,7 @@
 		],
 		"edition": "one",
 		"dateAdded": 1789528955,
-		"dateLastModified": 1789791078
+		"dateLastModified": 1789831917
 	},
 	"adventure": [
 		{
@@ -711,8 +711,8 @@
 											},
 											"imageType": "map",
 											"title": "Ledger House",
-											"width": 1443,
-											"height": 1090
+											"width": 1536,
+											"height": 1024
 										}
 									]
 								}
