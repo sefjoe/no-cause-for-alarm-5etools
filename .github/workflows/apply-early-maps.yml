@@ -143,3 +143,5 @@ jobs:
           git add -A No_Cause_for_Alarm_5etools_CURRENT.json img/dm/storm_rescue.png img/dm/storm_rescue.webp img/dm/ledger_house.png
           git commit -m "Repair Storm and Ledger House map assets"
           git push origin HEAD:main
+
+# Retriggered 2026-09-18 after validating source images.
