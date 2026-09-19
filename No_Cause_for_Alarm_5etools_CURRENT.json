@@ -6,16 +6,16 @@
 				"json": "NCFA",
 				"abbreviation": "NCFA",
 				"full": "No Cause for Alarm: Ruins of Bellweather",
-				"version": "3.3",
+				"version": "3.4",
 				"authors": [
 					"No Cause for Alarm Campaign"
 				],
-				"dateLastModified": 1789840599
+				"dateLastModified": 1789841760
 			}
 		],
 		"edition": "one",
 		"dateAdded": 1789528955,
-		"dateLastModified": 1789840599
+		"dateLastModified": 1789841760
 	},
 	"adventure": [
 		{
@@ -1356,7 +1356,7 @@
 									"type": "inset",
 									"name": "Session 1 Objective",
 									"entries": [
-										"After the storm and Ledger House, Brakkus points out several ways capable people can find work. Council reclamation is the official route, but a private survey crew, residents, merchants, or simple exploration can all pull the party toward the Slums. Run {@b 2–3 meaningful encounters}, not a block-by-block extermination. {@b Suggested Session 1 encounters:} a mixed scavenger crew searching an abandoned shop, one ruin predator in a collapsed residence, then a rescue involving a trapped Bellweather survey crew. The endangered worker is a one-scene NPC, not a future campaign hinge. Negotiation, retreat, and cooperation are valid outcomes whenever the opposition is not committed to violence."
+										"After the storm and Ledger House, Brakkus points out several ways capable people can find work. Council reclamation is the official route, but a private survey crew, residents, merchants, or simple exploration can all pull the party toward the Slums. Run {@b 2–3 meaningful encounters}, not a block-by-block extermination. {@b Suggested Session 1 encounters:} a mixed scavenger crew searching an abandoned shop, with one scavenger carrying a bundle of brass fittings and door hardware, one ruin predator in a collapsed residence, then a rescue involving a trapped Bellweather survey crew. The endangered worker is a one-scene NPC, not a future campaign hinge. Negotiation, retreat, and cooperation are valid outcomes whenever the opposition is not committed to violence."
 									]
 								},
 								"{@i Map of the Slums.}",
@@ -8053,7 +8053,7 @@
 										],
 										[
 											"11",
-											"1d4 {@creature Bandit|XMM|Bandits} stripping copper and timber; desperate rather than evil"
+											"1d4 {@creature Bandit|XMM|Bandits} stripping brass fittings, door hardware, and timber from abandoned buildings; desperate rather than evil"
 										],
 										[
 											"12",
