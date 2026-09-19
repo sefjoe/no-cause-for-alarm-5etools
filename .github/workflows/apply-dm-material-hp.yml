@@ -1,0 +1,114 @@
+name: Apply NCFA Material HP Quick Reference
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/apply-dm-material-hp.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply-material-hp:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Add HP guidance to material table
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, time
+
+          path = "No_Cause_for_Alarm_5etools_CURRENT.json"
+          appendix_name = "Appendix G: DM Quick Reference"
+
+          with open(path, "r", encoding="utf-8") as f:
+              data = json.load(f)
+
+          packs = data.get("adventureData", [])
+          if not packs:
+              raise SystemExit("No adventureData found")
+
+          sections = packs[0].get("data", [])
+          appendix = next((s for s in sections if isinstance(s, dict) and s.get("name") == appendix_name), None)
+          if not appendix:
+              raise SystemExit(f"{appendix_name} not found")
+
+          material = next((e for e in appendix.get("entries", []) if isinstance(e, dict) and e.get("name") == "Object and Material ACs"), None)
+          if not material:
+              raise SystemExit("Object and Material ACs section not found")
+
+          material["name"] = "Object and Material ACs and HP"
+          material["entries"] = [
+              "Use AC to determine whether an attack damages an unattended object. HP represents how much punishment the object can take before it breaks. In the core object rules, material primarily determines AC while size and whether the construction is fragile or resilient determine HP; the values below combine those rules into a fast DM reference.",
+              "The HP columns assume a typical fragile build for cloth/paper/rope and crystal/glass/ice, and a typical resilient build for wood/bone, stone, metal, mithral, and adamantine. Use a lower HP category for thin, rotten, cracked, or poorly made objects and a higher one for unusually thick or reinforced construction. For walls, gates, vehicles, and other very large structures, treat the attacked portion as a separate object and consider a damage threshold when appropriate.",
+              {
+                  "type": "table",
+                  "caption": "Object AC and Typical HP by Material",
+                  "colLabels": ["Material or Substance", "AC", "Small HP", "Medium HP", "Large HP"],
+                  "colStyles": ["col-4", "col-2 text-center", "col-2 text-center", "col-2 text-center", "col-2 text-center"],
+                  "rows": [
+                      ["Cloth, Paper, or Rope", "11", "3", "4", "5"],
+                      ["Crystal, Glass, or Ice", "13", "3", "4", "5"],
+                      ["Wood or Bone", "15", "10", "18", "27"],
+                      ["Stone", "17", "10", "18", "27"],
+                      ["Iron or Steel", "19", "10", "18", "27"],
+                      ["Mithral", "21", "10", "18", "27"],
+                      ["Adamantine", "23", "10", "18", "27"]
+                  ]
+              },
+              {
+                  "type": "table",
+                  "caption": "Object HP by Size and Construction",
+                  "colLabels": ["Size", "Fragile", "Resilient"],
+                  "colStyles": ["col-4", "col-4 text-center", "col-4 text-center"],
+                  "rows": [
+                      ["Tiny", "2 (1d4)", "5 (2d4)"],
+                      ["Small", "3 (1d6)", "10 (3d6)"],
+                      ["Medium", "4 (1d8)", "18 (4d8)"],
+                      ["Large", "5 (1d10)", "27 (5d10)"]
+                  ]
+              }
+          ]
+
+          adventures = data.get("adventure", [])
+          if adventures:
+              for item in adventures[0].get("contents", []):
+                  if isinstance(item, dict) and item.get("name") == appendix_name:
+                      headers = item.setdefault("headers", [])
+                      headers[:] = ["Object and Material ACs and HP" if h == "Object and Material ACs" else h for h in headers]
+
+          now = int(time.time())
+          meta = data.setdefault("_meta", {})
+          meta["dateLastModified"] = now
+          for src in meta.get("sources", []):
+              if src.get("json") == "NCFA":
+                  src["version"] = "3.2"
+                  src["dateLastModified"] = now
+
+          with open(path, "w", encoding="utf-8") as f:
+              json.dump(data, f, ensure_ascii=False, indent="\t")
+              f.write("\n")
+          PY
+
+          python -m json.tool No_Cause_for_Alarm_5etools_CURRENT.json >/dev/null
+
+      - name: Commit material HP reference
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- No_Cause_for_Alarm_5etools_CURRENT.json; then
+            echo "No material HP changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add No_Cause_for_Alarm_5etools_CURRENT.json
+          git commit -m "Add object HP to DM quick reference"
+          git push origin HEAD:main
