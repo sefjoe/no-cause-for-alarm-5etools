@@ -6,16 +6,16 @@
 				"json": "NCFA",
 				"abbreviation": "NCFA",
 				"full": "No Cause for Alarm: Ruins of Bellweather",
-				"version": "3.1",
+				"version": "3.2",
 				"authors": [
 					"No Cause for Alarm Campaign"
 				],
-				"dateLastModified": 1789840177
+				"dateLastModified": 1789840322
 			}
 		],
 		"edition": "one",
 		"dateAdded": 1789528955,
-		"dateLastModified": 1789840177
+		"dateLastModified": 1789840322
 	},
 	"adventure": [
 		{
@@ -279,7 +279,7 @@
 					"name": "Appendix G: DM Quick Reference",
 					"headers": [
 						"Generic DCs",
-						"Object and Material ACs",
+						"Object and Material ACs and HP",
 						"15 NPC Names"
 					]
 				},
@@ -8967,48 +8967,112 @@
 						},
 						{
 							"type": "entries",
-							"name": "Object and Material ACs",
+							"name": "Object and Material ACs and HP",
 							"entries": [
-								"For an unattended object, choose AC primarily by what it is made from. AC only answers whether an attack connects effectively; use the object's size, hit points, damage threshold, resistances, and immunities separately when those matter.",
+								"Use AC to determine whether an attack damages an unattended object. HP represents how much punishment the object can take before it breaks. In the core object rules, material primarily determines AC while size and whether the construction is fragile or resilient determine HP; the values below combine those rules into a fast DM reference.",
+								"The HP columns assume a typical fragile build for cloth/paper/rope and crystal/glass/ice, and a typical resilient build for wood/bone, stone, metal, mithral, and adamantine. Use a lower HP category for thin, rotten, cracked, or poorly made objects and a higher one for unusually thick or reinforced construction. For walls, gates, vehicles, and other very large structures, treat the attacked portion as a separate object and consider a damage threshold when appropriate.",
 								{
 									"type": "table",
-									"caption": "Object Armor Class by Material",
+									"caption": "Object AC and Typical HP by Material",
 									"colLabels": [
 										"Material or Substance",
-										"AC"
+										"AC",
+										"Small HP",
+										"Medium HP",
+										"Large HP"
 									],
 									"colStyles": [
-										"col-8",
-										"col-4 text-center"
+										"col-4",
+										"col-2 text-center",
+										"col-2 text-center",
+										"col-2 text-center",
+										"col-2 text-center"
 									],
 									"rows": [
 										[
 											"Cloth, Paper, or Rope",
-											"11"
+											"11",
+											"3",
+											"4",
+											"5"
 										],
 										[
 											"Crystal, Glass, or Ice",
-											"13"
+											"13",
+											"3",
+											"4",
+											"5"
 										],
 										[
 											"Wood or Bone",
-											"15"
+											"15",
+											"10",
+											"18",
+											"27"
 										],
 										[
 											"Stone",
-											"17"
+											"17",
+											"10",
+											"18",
+											"27"
 										],
 										[
 											"Iron or Steel",
-											"19"
+											"19",
+											"10",
+											"18",
+											"27"
 										],
 										[
 											"Mithral",
-											"21"
+											"21",
+											"10",
+											"18",
+											"27"
 										],
 										[
 											"Adamantine",
-											"23"
+											"23",
+											"10",
+											"18",
+											"27"
+										]
+									]
+								},
+								{
+									"type": "table",
+									"caption": "Object HP by Size and Construction",
+									"colLabels": [
+										"Size",
+										"Fragile",
+										"Resilient"
+									],
+									"colStyles": [
+										"col-4",
+										"col-4 text-center",
+										"col-4 text-center"
+									],
+									"rows": [
+										[
+											"Tiny",
+											"2 (1d4)",
+											"5 (2d4)"
+										],
+										[
+											"Small",
+											"3 (1d6)",
+											"10 (3d6)"
+										],
+										[
+											"Medium",
+											"4 (1d8)",
+											"18 (4d8)"
+										],
+										[
+											"Large",
+											"5 (1d10)",
+											"27 (5d10)"
 										]
 									]
 								}
