@@ -52,8 +52,10 @@ jobs:
             mv "$tmp" "$out"
           }
 
-          download_png "1J4BI1R5uhRu6OQqpkNWHPN1G7PG1nO6h" "img/dm/storm_rescue.png"
-          download_png "1KK3vlBKHl2hT3XFQ-rSxuCFeKGcgYWoY" "img/dm/ledger_house.png"
+          # These copies live in the same Drive folder as the working Slums DM assets,
+          # so the GitHub runner can fetch them without returning a Google HTML page.
+          download_png "1HcxFsBmTHLrJMqFYxkdt7hpJ-1BjxmW4" "img/dm/storm_rescue.png"
+          download_png "1HfuSWBA0Irllafbbh0PXJY-_Js_XzzOv" "img/dm/ledger_house.png"
 
           # Remove the previously corrupted tiny WebP so it cannot be referenced again.
           rm -f img/dm/storm_rescue.webp
@@ -143,5 +145,3 @@ jobs:
           git add -A No_Cause_for_Alarm_5etools_CURRENT.json img/dm/storm_rescue.png img/dm/storm_rescue.webp img/dm/ledger_house.png
           git commit -m "Repair Storm and Ledger House map assets"
           git push origin HEAD:main
-
-# Retriggered 2026-09-18 after validating source images.
