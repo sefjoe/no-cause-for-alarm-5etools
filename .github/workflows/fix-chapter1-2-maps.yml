@@ -69,8 +69,8 @@ jobs:
                           obj['height'] = 1363
                       elif url.endswith('/img/dm/ledger_house.png') or 'ledger_house' in url or title == 'Ledger House':
                           href['url'] = ledger_url
-                          obj['width'] = 1443
-                          obj['height'] = 1090
+                          obj['width'] = 1536
+                          obj['height'] = 1024
                   for v in obj.values():
                       walk(v)
               elif isinstance(obj, list):
@@ -82,7 +82,7 @@ jobs:
           meta = data.setdefault('_meta', {})
           for src in meta.get('sources', []):
               if src.get('json') == 'NCFA':
-                  src['version'] = '2.14'
+                  src['version'] = '2.15'
           meta['dateLastModified'] = int(time.time())
 
           with open(path, 'w', encoding='utf-8') as f:
