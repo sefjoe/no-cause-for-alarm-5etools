@@ -26,6 +26,38 @@ jobs:
         with:
           ref: main
 
+      - name: Restore and validate early chapter map assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p img/dm
+
+          download_png() {
+            local id="$1"
+            local out="$2"
+            local tmp="${out}.download"
+            curl -L --fail --retry 3 --retry-delay 2 \
+              "https://drive.usercontent.google.com/download?id=${id}&export=download&confirm=t" \
+              -o "$tmp"
+            python - "$tmp" <<'PY'
+          import os, sys
+          p = sys.argv[1]
+          with open(p, "rb") as f:
+              sig = f.read(8)
+          if sig != b"\x89PNG\r\n\x1a\n":
+              raise SystemExit(f"Refusing non-PNG download: {p}")
+          if os.path.getsize(p) < 100000:
+              raise SystemExit(f"Refusing suspiciously small map: {p}")
+          PY
+            mv "$tmp" "$out"
+          }
+
+          download_png "1J4BI1R5uhRu6OQqpkNWHPN1G7PG1nO6h" "img/dm/storm_rescue.png"
+          download_png "1KK3vlBKHl2hT3XFQ-rSxuCFeKGcgYWoY" "img/dm/ledger_house.png"
+
+          # Remove the previously corrupted tiny WebP so it cannot be referenced again.
+          rm -f img/dm/storm_rescue.webp
+
       - name: Patch Chapter 1 and Chapter 2 maps
         shell: bash
         run: |
@@ -41,12 +73,11 @@ jobs:
 
           storm_map = {
               "type": "image",
-              "href": {"type": "external", "url": f"{base}/storm_rescue.webp"},
+              "href": {"type": "external", "url": f"{base}/storm_rescue.png"},
               "imageType": "map",
               "title": "The Storm — Rescue Scene",
-              "width": 593,
-              "height": 700,
-              "grid": {"type": "square", "size": 44, "offsetX": 0, "offsetY": 0},
+              "width": 1154,
+              "height": 1363,
           }
 
           ledger_map = {
@@ -54,6 +85,8 @@ jobs:
               "href": {"type": "external", "url": f"{base}/ledger_house.png"},
               "imageType": "map",
               "title": "Ledger House",
+              "width": 1448,
+              "height": 1086,
           }
 
           packs = data.get("adventureData", [])
@@ -87,7 +120,7 @@ jobs:
           meta["dateLastModified"] = now
           for src in meta.get("sources", []):
               if src.get("json") == "NCFA":
-                  src["version"] = "2.11"
+                  src["version"] = "2.12"
                   src["dateLastModified"] = now
 
           with open(path, "w", encoding="utf-8") as f:
@@ -101,12 +134,12 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          if git diff --quiet -- No_Cause_for_Alarm_5etools_CURRENT.json; then
+          if git diff --quiet -- No_Cause_for_Alarm_5etools_CURRENT.json img/dm/storm_rescue.png img/dm/storm_rescue.webp img/dm/ledger_house.png; then
             echo "No early-map changes to commit."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add No_Cause_for_Alarm_5etools_CURRENT.json
-          git commit -m "Restore Storm and Ledger House maps"
+          git add -A No_Cause_for_Alarm_5etools_CURRENT.json img/dm/storm_rescue.png img/dm/storm_rescue.webp img/dm/ledger_house.png
+          git commit -m "Repair Storm and Ledger House map assets"
           git push origin HEAD:main
