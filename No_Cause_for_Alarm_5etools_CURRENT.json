@@ -6,16 +6,16 @@
 				"json": "NCFA",
 				"abbreviation": "NCFA",
 				"full": "No Cause for Alarm: Ruins of Bellweather",
-				"version": "3.4",
+				"version": "3.5",
 				"authors": [
 					"No Cause for Alarm Campaign"
 				],
-				"dateLastModified": 1789841760
+				"dateLastModified": 1789842600
 			}
 		],
 		"edition": "one",
 		"dateAdded": 1789528955,
-		"dateLastModified": 1789841760
+		"dateLastModified": 1789842600
 	},
 	"adventure": [
 		{
@@ -1356,7 +1356,7 @@
 									"type": "inset",
 									"name": "Session 1 Objective",
 									"entries": [
-										"After the storm and Ledger House, Brakkus points out several ways capable people can find work. Council reclamation is the official route, but a private survey crew, residents, merchants, or simple exploration can all pull the party toward the Slums. Run {@b 2–3 meaningful encounters}, not a block-by-block extermination. {@b Suggested Session 1 encounters:} a mixed scavenger crew searching an abandoned shop, with one scavenger carrying a bundle of brass fittings and door hardware, one ruin predator in a collapsed residence, then a rescue involving a trapped Bellweather survey crew. The endangered worker is a one-scene NPC, not a future campaign hinge. Negotiation, retreat, and cooperation are valid outcomes whenever the opposition is not committed to violence."
+										"After the storm and Ledger House, Brakkus points out several ways capable people can find work. Council reclamation is the official route, but a private survey crew, residents, merchants, or simple exploration can all pull the party toward the Slums. Run {@b 2–3 meaningful encounters}, not a block-by-block extermination. {@b Suggested Session 1 sequence:} first, a mixed scavenger crew searching an abandoned shop, with one scavenger carrying a bundle of brass fittings and door hardware. Treat this primarily as a social and choice encounter; negotiation, intimidation, observation, retreat, or combat are all valid, and the scavengers should not attack simply because the party approaches. Second, route the party through a collapsed residence where a hungry {@creature Grick|XMM} provides the reliable combat beat for the session. This combat should occur before Session 1 ends even if the scavengers are resolved peacefully. If time remains, reveal the trail toward the missing survey crew and end on that clue. Save the giant-spider warehouse encounter and the survey-crew rescue for Session 2. Negotiation, retreat, and cooperation remain valid outcomes whenever the opposition is intelligent and not committed to violence."
 									]
 								},
 								"{@i Map of the Slums.}",
@@ -1402,10 +1402,10 @@
 										},
 										{
 											"type": "entries",
-											"name": "C3 — Collapsed Warehouse",
+											"name": "C3 — Collapsed Residence",
 											"id": "3c3",
 											"entries": [
-												"The warehouse used for Scene 2. Webbing, rubble, and the giant spiders make this the main tactical obstacle on the shortest route through the neighborhood."
+												"The collapsed residence used for the Session 1 combat beat. Broken masonry, unstable flooring, and a hungry grick make this the first unavoidable predatory threat on the route deeper into the neighborhood."
 											]
 										},
 										{
@@ -1458,7 +1458,7 @@
 											"name": "What Happens",
 											"entries": [
 												"Use the Player Map for navigation and the DM Keyed Map for encounter locations.",
-												"Four {@creature Bandit|XMM|Bandits} watch from a ruined storefront and demand a “street toll.” They prefer intimidation and retreat to a fight.",
+												"Four scavengers pick through a ruined storefront and the rubble around it; use {@creature Bandit|XMM|Bandit} stat blocks if combat breaks out. One carries a club, one carries a bundle of brass fittings and door hardware, and two keep salvaged items partly hidden behind their backs. They are wary and defensive but do not attack first. They prefer talking, bluffing, bargaining, or backing away to a fight.",
 												"Nearby residents watch how the characters respond."
 											]
 										},
@@ -1473,7 +1473,7 @@
 											"type": "entries",
 											"name": "Encounter",
 											"entries": [
-												"4 {@creature Bandit|XMM|Bandits}. They flee when two fall or Mera is reduced below half hit points."
+												"4 scavengers (use {@creature Bandit|XMM|Bandit} stat blocks). They fight only if threatened, attacked, cornered, or convinced the party intends to rob or arrest them. If combat begins, they flee or surrender when two are incapacitated or when an escape route opens."
 											]
 										},
 										{
@@ -1494,22 +1494,22 @@
 								},
 								{
 									"type": "entries",
-									"name": "Scene 2: Collapsed Warehouse",
+									"name": "Scene 2: Collapsed Residence",
 									"entries": [
-										"{@b Map areas:} {@area C3 — Collapsed Warehouse|3c3|x} and {@area D4 — Predator / Hazard Zone|3d4|x}. Run the giant-spider encounter at C3. D4 is the adjoining rubble and hazard zone on the route toward the dye works and can carry environmental pressure without adding another mandatory fight.",
-										"The shortest route to the survey crew passes through a warehouse occupied by giant spiders.",
+										"{@b Map areas:} {@area C3 — Collapsed Residence|3c3|x} and {@area D4 — Predator / Hazard Zone|3d4|x}. Run the grick encounter at C3 as Session 1’s reliable combat beat. D4 is adjoining rubble on the route toward the dye works and foreshadows the deeper danger without adding another mandatory fight.",
+										"The route deeper into the district passes through a collapsed residence where a hungry grick has learned to ambush anything moving through the rubble.",
 										{
 											"type": "entries",
 											"name": "What Happens",
 											"entries": [
-												"Webbing makes the floor difficult terrain. A character who studies the rafters spots movement without a roll; otherwise use DC 13 Wisdom (Perception)."
+												"Broken masonry and fallen furniture create patches of difficult terrain. A character who studies the rubble spots signs of a lurking predator without a roll; otherwise use DC 13 Wisdom (Perception) to notice the grick before it attacks."
 											]
 										},
 										{
 											"type": "entries",
 											"name": "Encounter",
 											"entries": [
-												"2 {@creature Giant Spider|XMM|Giant Spiders}; use 1 if the party is still badly depleted from the storm."
+												"1 {@creature Grick|XMM}. It is hungry, territorial, and not interested in negotiation. If the party is badly depleted from the storm, it begins in a poor position rather than gaining surprise."
 											]
 										},
 										{
@@ -1532,14 +1532,14 @@
 									"type": "entries",
 									"name": "Scene 3: The Dye Works",
 									"entries": [
-										"{@b Map areas:} {@area D4 — Predator / Hazard Zone|3d4|x}, {@area E4 — Old Dye Works|3e4|x}, and {@area E5 — Missing Survey Crew Site|3e5|x}. The grick prowls the adjoining rubble at D4; the party approaches through E4 and finds Lessa Dorn and Kav Orin barricaded at E5.",
-										"Two surveyors are barricaded inside while a grick prowls the adjoining rubble.",
+										"{@b Map areas:} {@area D4 — Predator / Hazard Zone|3d4|x}, {@area E4 — Old Dye Works|3e4|x}, and {@area E5 — Missing Survey Crew Site|3e5|x}. Beginning in Session 2, webbing and movement around D4 lead toward the dye works, where Lessa Dorn and Kav Orin are barricaded at E5.",
+										"Two surveyors are barricaded inside while giant spiders hunt through the adjoining rubble and damaged structures.",
 										{
 											"type": "entries",
 											"name": "What Happens",
 											"entries": [
 												"The survivors, Lessa Dorn and Kav Orin, are exhausted and nearly out of water. Their third member, Harl, left to seek help.",
-												"The {@creature Grick|XMM} hides near the rear exit and attacks when prey passes within reach."
+												"The {@creature Giant Spider|XMM|Giant Spiders} use webbing and ruined walls to cut off the safest approach to the trapped surveyors."
 											]
 										},
 										{
@@ -1553,7 +1553,7 @@
 											"type": "entries",
 											"name": "Encounter",
 											"entries": [
-												"1 {@creature Grick|XMM}. It retreats into rubble below one-third hit points if an escape path exists."
+												"2 {@creature Giant Spider|XMM|Giant Spiders}; use 1 if the party enters Session 2 badly depleted or has not had a safe rest."
 											]
 										},
 										{
