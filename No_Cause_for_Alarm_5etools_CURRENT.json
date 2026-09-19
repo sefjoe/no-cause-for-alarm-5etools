@@ -15,7 +15,7 @@
 		],
 		"edition": "one",
 		"dateAdded": 1789528955,
-		"dateLastModified": 1789786338
+		"dateLastModified": 1789786443
 	},
 	"adventure": [
 		{
@@ -475,8 +475,8 @@
 											},
 											"imageType": "map",
 											"title": "The Storm — Rescue Scene",
-											"width": 300,
-											"height": 354
+											"width": 1154,
+											"height": 1363
 										}
 									]
 								}
@@ -711,8 +711,8 @@
 											},
 											"imageType": "map",
 											"title": "Ledger House",
-											"width": 300,
-											"height": 225
+											"width": 1448,
+											"height": 1086
 										}
 									]
 								}
