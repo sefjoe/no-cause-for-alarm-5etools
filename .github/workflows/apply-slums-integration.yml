@@ -1,0 +1,205 @@
+name: Apply NCFA Slums Integration
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/apply-slums-integration.yml'
+  workflow_run:
+    workflows: ["Sync NCFA Assets", "Apply NCFA Reclamation Map State"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply-slums:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Restore approved Slums tactical maps
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p img/dm img/player
+          curl -L --fail --retry 3 --retry-delay 2 \
+            "https://drive.usercontent.google.com/download?id=1TTB58_ofKa5Bdg2T_y2fL3CncrmvdLti&export=download&confirm=t" \
+            -o img/dm/slums.webp
+          curl -L --fail --retry 3 --retry-delay 2 \
+            "https://drive.usercontent.google.com/download?id=1pU6O-LlPQk4AyQ7U0U0NfPwshPADtT6C&export=download&confirm=t" \
+            -o img/player/slums.webp
+
+      - name: Patch Chapter 3 and 5etools map metadata
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, time
+
+          path = "No_Cause_for_Alarm_5etools_CURRENT.json"
+          with open(path, "r", encoding="utf-8") as f:
+              data = json.load(f)
+
+          base = "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img"
+          dm_url = f"{base}/dm/slums.webp"
+          player_url = f"{base}/player/slums.webp"
+
+          area_defs = [
+              ("3a1", "A1 — Boundary Crossing / Scavenger Position", [
+                  "The controlled crossing from secured Bellweather into the Slums. Four bandits watch the ruined storefront here and attempt to collect a street toll; negotiation, intimidation, retreat, or combat are all valid outcomes."
+              ]),
+              ("3b2", "B2 — Residents / Mera Kest Area", [
+                  "Partially occupied homes nearest the frontier. Mera Kest and nearby residents can provide local information, including the survey crew's route toward the old dye works and reports of movement near the collapsed warehouse."
+              ]),
+              ("3c3", "C3 — Collapsed Warehouse", [
+                  "The warehouse used for Scene 2. Webbing, rubble, and the giant spiders make this the main tactical obstacle on the shortest route through the neighborhood."
+              ]),
+              ("3d4", "D4 — Predator / Hazard Zone", [
+                  "Unstable rubble and broken structures between the warehouse and dye works. Use this area for the grick's approach, environmental pressure, or a bypass route; it does not require an additional combat if the existing scene roster is already sufficient."
+              ]),
+              ("3e4", "E4 — Old Dye Works", [
+                  "The industrial ruin that anchors Scene 3. Its vats, broken work areas, and adjoining rubble form the final approach to the missing survey crew."
+              ]),
+              ("3e5", "E5 — Missing Survey Crew Site", [
+                  "Lessa Dorn and Kav Orin are barricaded here. Rescuing them establishes the practical corridor Bellweather can secure after the chapter."
+              ]),
+          ]
+
+          map_key = {
+              "type": "entries",
+              "name": "Slums Tactical Map Key",
+              "entries": [
+                  {"type": "entries", "name": name, "id": area_id, "entries": entries}
+                  for area_id, name, entries in area_defs
+              ],
+          }
+
+          dm_map = {
+              "type": "image",
+              "href": {"type": "external", "url": dm_url},
+              "imageType": "map",
+              "title": "The Slums — DM Tactical Map",
+              "width": 1363,
+              "height": 1154,
+              "id": "3f0",
+              "grid": {"type": "square", "size": 52, "offsetX": 0, "offsetY": 0},
+              "mapRegions": [
+                  {"area": "3a1", "points": [[45, 330], [245, 330], [245, 565], [45, 565]]},
+                  {"area": "3b2", "points": [[175, 120], [385, 120], [385, 365], [175, 365]]},
+                  {"area": "3c3", "points": [[585, 110], [900, 110], [900, 470], [585, 470]]},
+                  {"area": "3d4", "points": [[900, 145], [1185, 145], [1185, 475], [900, 475]]},
+                  {"area": "3e4", "points": [[600, 520], [1015, 520], [1015, 1000], [600, 1000]]},
+                  {"area": "3e5", "points": [[1000, 540], [1325, 540], [1325, 940], [1000, 940]]},
+              ],
+          }
+          player_map = {
+              "type": "image",
+              "href": {"type": "external", "url": player_url},
+              "imageType": "mapPlayer",
+              "title": "The Slums — Player Tactical Map",
+              "width": 1363,
+              "height": 1154,
+              "mapParent": {"id": "3f0"},
+              "grid": {"type": "square", "size": 52, "offsetX": 0, "offsetY": 0},
+          }
+
+          packs = data.get("adventureData", [])
+          if not packs:
+              raise SystemExit("No adventureData found")
+          sections = packs[0].get("data", [])
+          chapter = next((s for s in sections if isinstance(s, dict) and s.get("name") == "Chapter 3: The Slums"), None)
+          if chapter is None:
+              raise SystemExit("Chapter 3 not found")
+
+          entries = chapter.setdefault("entries", [])
+          maps = next((e for e in entries if isinstance(e, dict) and e.get("name") == "Maps"), None)
+          if maps is None:
+              maps = {"type": "entries", "name": "Maps", "entries": []}
+              entries.insert(1, maps)
+          maps["entries"] = [{"type": "gallery", "images": [dm_map, player_map]}]
+
+          running = next((e for e in entries if isinstance(e, dict) and e.get("name") == "Running the Chapter"), None)
+          if running:
+              rentries = running.setdefault("entries", [])
+              rentries[:] = [e for e in rentries if not (isinstance(e, dict) and e.get("name") == "Slums Tactical Map Key")]
+              rentries.append(map_key)
+
+          adventure = next((e for e in entries if isinstance(e, dict) and e.get("name") == "Adventure"), None)
+          if adventure:
+              scenes = adventure.setdefault("entries", [])
+
+              def find_scene(prefix):
+                  return next((e for e in scenes if isinstance(e, dict) and str(e.get("name", "")).startswith(prefix)), None)
+
+              def prepend_once(scene, marker, text):
+                  if not scene:
+                      return
+                  sentries = scene.setdefault("entries", [])
+                  sentries[:] = [e for e in sentries if not (isinstance(e, str) and marker in e)]
+                  sentries.insert(0, text)
+
+              prepend_once(
+                  find_scene("Scene 1: Entering the District"),
+                  "Map areas:",
+                  "{@b Map areas:} {@area A1 — Boundary Crossing|3a1|x} and {@area B2 — Residents / Mera Kest Area|3b2|x}. Begin at A1; B2 holds the nearby residents and local information that points deeper into the district.",
+              )
+              prepend_once(
+                  find_scene("Scene 2: Collapsed Warehouse"),
+                  "Map areas:",
+                  "{@b Map areas:} {@area C3 — Collapsed Warehouse|3c3|x} and {@area D4 — Predator / Hazard Zone|3d4|x}. Run the giant-spider encounter at C3. D4 is the adjoining rubble and hazard zone on the route toward the dye works and can carry environmental pressure without adding another mandatory fight.",
+              )
+              prepend_once(
+                  find_scene("Scene 3: The Dye Works"),
+                  "Map areas:",
+                  "{@b Map areas:} {@area D4 — Predator / Hazard Zone|3d4|x}, {@area E4 — Old Dye Works|3e4|x}, and {@area E5 — Missing Survey Crew Site|3e5|x}. The grick prowls the adjoining rubble at D4; the party approaches through E4 and finds Lessa Dorn and Kav Orin barricaded at E5.",
+              )
+              prepend_once(
+                  find_scene("Scene 4: Harl and the Lost Strongbox"),
+                  "Map placement:",
+                  "{@b Map placement:} Place Harl and the strongbox in the rubble between {@area D4|3d4|x} and {@area E4|3e4|x}; no additional map key is required.",
+              )
+
+          # Keep the chapter table of contents aware of the new keyed reference.
+          for toc in data.get("adventure", [{}])[0].get("contents", []):
+              if toc.get("name") == "Chapter 3: The Slums":
+                  headers = toc.setdefault("headers", [])
+                  if "Slums Tactical Map Key" not in headers:
+                      try:
+                          idx = headers.index("Running the Chapter") + 1
+                      except ValueError:
+                          idx = len(headers)
+                      headers.insert(idx, "Slums Tactical Map Key")
+
+          now = int(time.time())
+          meta = data.setdefault("_meta", {})
+          meta["dateLastModified"] = now
+          for src in meta.get("sources", []):
+              if src.get("json") == "NCFA":
+                  src["version"] = "2.9"
+                  src["dateLastModified"] = now
+
+          with open(path, "w", encoding="utf-8") as f:
+              json.dump(data, f, ensure_ascii=False, indent="\t")
+              f.write("\n")
+          PY
+
+          python -m json.tool No_Cause_for_Alarm_5etools_CURRENT.json >/dev/null
+
+      - name: Commit Slums integration
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- No_Cause_for_Alarm_5etools_CURRENT.json img/dm/slums.webp img/player/slums.webp; then
+            echo "No Slums integration changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add No_Cause_for_Alarm_5etools_CURRENT.json img/dm/slums.webp img/player/slums.webp
+          git commit -m "Integrate approved Slums tactical maps"
+          git push origin HEAD:main
