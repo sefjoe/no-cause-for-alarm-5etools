@@ -6,16 +6,16 @@
 				"json": "NCFA",
 				"abbreviation": "NCFA",
 				"full": "No Cause for Alarm: Ruins of Bellweather",
-				"version": "2.9",
+				"version": "2.10",
 				"authors": [
 					"No Cause for Alarm Campaign"
 				],
-				"dateLastModified": 1789779990
+				"dateLastModified": 1789780485
 			}
 		],
 		"edition": "one",
 		"dateAdded": 1789528955,
-		"dateLastModified": 1789779990
+		"dateLastModified": 1789780485
 	},
 	"adventure": [
 		{
@@ -1240,6 +1240,15 @@
 												"offsetY": 0
 											}
 										}
+									]
+								},
+								{
+									"type": "inset",
+									"name": "Open in the 5etools Dynamic Map Viewer",
+									"entries": [
+										"Clicking the map image itself opens the source image. To use 5etools' zoomable interactive map viewer instead, open the {@link DM Screen|dmscreen.html}.",
+										"In the DM Screen, add a panel and choose {@b Adventure/Book Map Dynamic Viewer}. Select {@b No Cause for Alarm: Ruins of Bellweather}, then {@b Chapter 3: The Slums}, then {@b The Slums — DM Tactical Map}. The viewer provides zoom and pan controls and uses the keyed map regions A1, B2, C3, D4, E4, and E5.",
+										"Use the matching Player Tactical Map when you want the same geometry without DM-only keyed labels."
 									]
 								}
 							]
