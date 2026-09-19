@@ -1,0 +1,82 @@
+name: Apply NCFA Version 3 Polish
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/apply-ncfa-v3-polish.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  polish-v3:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Polish Version 3 continuity wording
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, time
+          from pathlib import Path
+
+          paths = [
+              Path('No_Cause_for_Alarm_5etools_CURRENT.json'),
+              Path('No_Cause_for_Alarm_5etools_v3.0.json'),
+          ]
+
+          def transform(obj):
+              if isinstance(obj, dict):
+                  return {k: transform(v) for k, v in obj.items()}
+              if isinstance(obj, list):
+                  return [transform(v) for v in obj]
+              if isinstance(obj, str):
+                  obj = obj.replace(
+                      "The two stories tighten around the {@b Radiant Well}, a source of power sought by Cardon and already exploited by Tyren, the possessing intelligence behind the Boss.",
+                      "The two stories tighten around the {@b Radiant Well}, a source of power sought by Cardon and already exploited by Tyren, the possessing intelligence who turns a controlled host into the apparent “Boss.”",
+                  )
+                  obj = obj.replace(
+                      "Radiant Well is the only current term; obsolete uses of Radiant Well are removed.",
+                      "Radiant Well is the only current term; obsolete legacy terminology is removed.",
+                  )
+                  return obj
+              return obj
+
+          now = int(time.time())
+          for path in paths:
+              with path.open('r', encoding='utf-8') as f:
+                  data = json.load(f)
+              data = transform(data)
+              meta = data.setdefault('_meta', {})
+              meta['dateLastModified'] = now
+              for src in meta.get('sources', []):
+                  if src.get('json') == 'NCFA':
+                      src['version'] = '3.0'
+                      src['dateLastModified'] = now
+              with path.open('w', encoding='utf-8') as f:
+                  json.dump(data, f, ensure_ascii=False, indent='\t')
+                  f.write('\n')
+          PY
+
+          python -m json.tool No_Cause_for_Alarm_5etools_CURRENT.json >/dev/null
+          cmp -s No_Cause_for_Alarm_5etools_CURRENT.json No_Cause_for_Alarm_5etools_v3.0.json
+
+      - name: Commit Version 3 polish
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- No_Cause_for_Alarm_5etools_CURRENT.json No_Cause_for_Alarm_5etools_v3.0.json; then
+            echo 'No polish changes to commit.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add No_Cause_for_Alarm_5etools_CURRENT.json No_Cause_for_Alarm_5etools_v3.0.json
+          git commit -m 'Polish No Cause for Alarm v3.0 continuity wording'
+          git push origin HEAD:main
