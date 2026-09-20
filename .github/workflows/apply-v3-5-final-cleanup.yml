@@ -1,0 +1,158 @@
+name: Apply NCFA Version 3.5 Final Cleanup
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/apply-v3-5-final-cleanup.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Apply continuity and terminology cleanup
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          import shutil
+          import time
+          from pathlib import Path
+
+          current = Path("No_Cause_for_Alarm_5etools_CURRENT.json")
+          snapshot = Path("No_Cause_for_Alarm_5etools_v3.5.json")
+
+          with current.open("r", encoding="utf-8") as f:
+              data = json.load(f)
+
+          replacements = {
+              "Tyren is a possessing intelligence; destroying one host never guaranteed victory. This is the payoff to clues from Savin Keep, Marren Library, Valen Cemetery, and Maren Isle.":
+                  "Tyren is a possessing intelligence; destroying one host never guaranteed victory. This is the payoff to clues from Savin Keep, Marren Library, Maren Isle, and the regional coalition.",
+              "{@b Session purpose.} Infiltrate or turn Paden Square, identify Tyren’s agents, and prove the Boss coordinates trade as well as military force.":
+                  "{@b Session purpose.} Infiltrate or turn Paden Square, identify Tyren’s agents, and prove Tyren coordinates trade as well as military force.",
+              "Paden Square was once Bellweather's commercial heart and remains a trading nexus inside occupied territory. The Council learns that a supposedly powerful magic item will be auctioned there and that the Boss may send a representative.":
+                  "Paden Square was once Bellweather's commercial heart and remains a trading nexus inside occupied territory. The Council learns that a supposedly powerful magic item will be auctioned there and that Tyren may send a representative.",
+              "Their goals are to identify who enforces the truce, learn what the “Boss” is purchasing, and seize correspondence if possible.":
+                  "Their goals are to identify who enforces the truce, learn what Tyren's network is purchasing, and seize correspondence if possible.",
+              "This is a high-magic expedition. Favor {@b Elementals}, {@b Invisible Stalkers}, {@b Gargoyles}, {@b Helmed Horrors}, and mage-type NPCs. The island should reveal who or what poisoned the river and provide a major step toward reaching the Boss.":
+                  "This is a high-magic expedition. Favor {@b Elementals}, {@b Invisible Stalkers}, {@b Gargoyles}, {@b Helmed Horrors}, and mage-type NPCs. The island should reveal who or what poisoned the river and provide a major step toward confronting Tyren.",
+              "This changes the campaign’s central question from “Who is the Boss?” to “What is possessing the Boss’s agents or leader?”":
+                  "This changes the campaign’s central question from “Who is the Boss?” to “What intelligence is possessing the figure the factions call the Boss, and how does it move between hosts?”",
+              "specific specific": "specific",
+          }
+          counts = {old: 0 for old in replacements}
+
+          def clean(value):
+              if isinstance(value, str):
+                  out = value
+                  for old, new in replacements.items():
+                      n = out.count(old)
+                      if n:
+                          counts[old] += n
+                          out = out.replace(old, new)
+                  return out
+              if isinstance(value, list):
+                  return [clean(v) for v in value]
+              if isinstance(value, dict):
+                  return {k: clean(v) for k, v in value.items()}
+              return value
+
+          data = clean(data)
+
+          missing = [old for old, count in counts.items() if count != 1]
+          if missing:
+              details = "\n".join(f"{counts[old]}x: {old}" for old in missing)
+              raise SystemExit(f"Expected each approved cleanup target exactly once:\n{details}")
+
+          now = int(time.time())
+          meta = data.setdefault("_meta", {})
+          meta["dateLastModified"] = now
+          for src in meta.get("sources", []):
+              if src.get("json") == "NCFA":
+                  src["version"] = "3.5"
+                  src["dateLastModified"] = now
+
+          with current.open("w", encoding="utf-8") as f:
+              json.dump(data, f, ensure_ascii=False, indent="\t")
+              f.write("\n")
+
+          shutil.copyfile(current, snapshot)
+          PY
+
+          python -m json.tool No_Cause_for_Alarm_5etools_CURRENT.json >/dev/null
+          python -m json.tool No_Cause_for_Alarm_5etools_v3.5.json >/dev/null
+
+      - name: Update repository documentation
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat > README.md <<'EOF'
+          # No Cause for Alarm — 5etools Assets
+
+          Current campaign: **No Cause for Alarm: Ruins of Bellweather — Version 3.5**.
+
+          - Live 5etools update file: `No_Cause_for_Alarm_5etools_CURRENT.json`
+          - Frozen current snapshot: `No_Cause_for_Alarm_5etools_v3.5.json`
+          - Historical Version 3.0 snapshot: `No_Cause_for_Alarm_5etools_v3.0.json`
+          - Version 3 change log: `VERSION_3_CHANGELOG.md`
+          - Party baseline: **4 characters, levels 3–16**
+
+          `No_Cause_for_Alarm_5etools_CURRENT.json` remains the canonical live/update target for 5etools. The versioned snapshots are recovery points and should not replace the live file for normal updates.
+
+          Public image assets under `img/` remain the canonical map/art source used by the homebrew JSON.
+          EOF
+
+          cat > VERSION_3_CHANGELOG.md <<'EOF'
+          # No Cause for Alarm — Version 3.5
+
+          Version 3.5 is the current continuity-and-table-readiness baseline of **No Cause for Alarm: Ruins of Bellweather**. The playable campaign remains a four-character, level 3–16 5etools adventure. Locked map geometry, current rewards, published-stat-block policy, and the existing chapter order are preserved.
+
+          ## Version 3 continuity foundation
+          - Restores **Doman** as the deceptive mage seeking the sealed planar vessel and locks **Commander Haren Vell** as the separate Iron Banner commander.
+          - Removes the abandoned **Tomas / Milton / missing notebook** thread.
+          - Locks **Sera Venn / Jorn Milar / 75 gp per character** as the opening Slums hooks.
+          - Uses **Independent Factions** instead of an undefined Regional Standing subsystem.
+          - Makes rescued **Reedscale** a minor supporting ally that can secure the safe river route without counting as one of Chapter 15's three strong alliances.
+          - Separates **Hessa Vale**, **Yaren**, and **Tyren**: Valen Cemetery and Maren Isle are independent threats, and Yaren does not know that Soren is Tyren's host.
+          - Defines **the Boss** as the apparent singular ruler presented by Tyren acting through a host; post-reveal DM text treats Tyren as the true intelligence.
+          - Adds a defined **Tyren Alert Track (0–3)** for Varen Keep.
+          - Removes obsolete **Milo Dorman** continuity.
+          - Renames **Tal Venn** to **Tal Rusk** to avoid falsely implying a relationship with Sera Venn.
+          - Standardizes **Radiant Well** terminology and removes obsolete uses of Pool.
+          - Makes **Perrin Cardon's political rise visible and institutional**, culminating in his becoming First Councilor before the Zennar betrayal.
+          - Adds **Rena Dask**, a small recurring labor subplot for Jarrock across 2–3 scenes.
+          - Preserves Chapter 15's advancement rule: **three strong alliances plus a safe route**.
+          - Preserves Aaron Dunamus's personal threads as optional, play-by-ear material separate from Tyren.
+
+          ## Version 3.5 finishing pass
+          - Preserves the revised Session 1 social/combat flow, including the current brass-salvage scavenger presentation.
+          - Removes **Valen Cemetery** from the finale's Tyren-possession payoff chain so Hessa remains a genuinely independent threat.
+          - Standardizes post-Marren DM-facing terminology on **Tyren** while preserving **the Boss** in uninformed NPC speech, rumors, and in-world documents.
+          - Clarifies Marren Library's possession reveal: Tyren possesses the figure factions call the Boss and can move between hosts; the text no longer implies broad possession of the Boss's agents.
+          - Corrects the duplicated `specific specific` wording in encounter guidance.
+          - Adds a frozen **Version 3.5** recovery snapshot and updates repository documentation to match the live campaign.
+
+          ## Canonical files
+          - `No_Cause_for_Alarm_5etools_CURRENT.json` — live update target used by 5etools.
+          - `No_Cause_for_Alarm_5etools_v3.5.json` — frozen current Version 3.5 snapshot.
+          - `No_Cause_for_Alarm_5etools_v3.0.json` — historical Version 3.0 snapshot retained for rollback/history.
+          EOF
+
+      - name: Commit final Version 3.5 baseline
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add No_Cause_for_Alarm_5etools_CURRENT.json No_Cause_for_Alarm_5etools_v3.5.json README.md VERSION_3_CHANGELOG.md
+          git rm .github/workflows/apply-v3-5-final-cleanup.yml
+          git commit -m "Finalize NCFA Version 3.5 baseline"
+          git push origin HEAD:main
