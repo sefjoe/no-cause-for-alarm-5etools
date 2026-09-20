@@ -10,12 +10,12 @@
 				"authors": [
 					"No Cause for Alarm Campaign"
 				],
-				"dateLastModified": 1789871130
+				"dateLastModified": 1789872138
 			}
 		],
 		"edition": "one",
 		"dateAdded": 1789528955,
-		"dateLastModified": 1789871130
+		"dateLastModified": 1789872138
 	},
 	"adventure": [
 		{
@@ -1429,7 +1429,7 @@
 											"name": "E5 — Missing Survey Crew Site",
 											"id": "3e5",
 											"entries": [
-												"Lessa Dorn and Kav Orin are barricaded here. Rescuing them establishes the practical corridor Bellweather can secure after the chapter."
+												"Lessa Dorn and Kav Orin are barricaded here. Rescuing them establishes the practical corridor Bellweather can secure after the chapter. Their survey field satchel contains 2 Potions of Healing carried as emergency medical supplies. The satchel can be recovered even if the rescue goes badly or one or more surveyors die."
 											]
 										}
 									]
@@ -1538,7 +1538,7 @@
 											"type": "entries",
 											"name": "What Happens",
 											"entries": [
-												"The survivors, Lessa Dorn and Kav Orin, are exhausted and nearly out of water. Their third member, Harl, left to seek help.",
+												"The survivors, Lessa Dorn and Kav Orin, are exhausted and nearly out of water. Their third member, Harl, left to seek help. Their field satchel contains 2 Potions of Healing carried as emergency medical supplies; the party can recover it regardless of the rescue outcome.",
 												"The {@creature Giant Spider|XMM|Giant Spiders} use webbing and ruined walls to cut off the safest approach to the trapped surveyors."
 											]
 										},
@@ -1655,7 +1655,7 @@
 									"type": "entries",
 									"name": "Rewards",
 									"entries": [
-										"{@b Treasure and rewards.} The posted reclamation contract pays {@b 75 gp per character} on completion (300 gp for a four-character party). During the expedition, place roughly {@b 200–250 gp} of additional party value in recoverable coin, jewelry, trade goods, legitimate salvage, and private recovery bonuses. The strongbox and similar identifiable property are not free salvage: returning them earns the stated private reward. Also award 2 Potions of Healing, and one useful uncommon consumable such as Dust of Disappearance only if the party explores a sealed workshop; otherwise use mundane salvage."
+										"{@b Treasure and rewards.} The posted reclamation contract pays {@b 75 gp per character} on completion (300 gp for a four-character party). During the expedition, place roughly {@b 200–250 gp} of additional party value in recoverable coin, jewelry, trade goods, legitimate salvage, and private recovery bonuses. The strongbox and similar identifiable property are not free salvage: returning them earns the stated private reward. The survey crew's field satchel at E5 contains 2 Potions of Healing as emergency medical supplies, and the satchel remains recoverable even if the rescue goes badly. Award one useful uncommon consumable such as Dust of Disappearance only if the party explores a sealed workshop; otherwise use mundane salvage."
 									]
 								}
 							]
