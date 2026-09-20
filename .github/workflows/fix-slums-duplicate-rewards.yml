@@ -37,10 +37,6 @@ jobs:
           chapter = next((s for s in sections if isinstance(s, dict) and s.get("name") == "Chapter 3: The Slums"), None)
           assert chapter is not None, "Chapter 3 not found"
 
-          entries = chapter.get("entries", [])
-          rewards = [e for e in entries if isinstance(e, dict) and e.get("name") == "Rewards"]
-          assert len(rewards) >= 2, f"Expected duplicate Rewards sections, found {len(rewards)}"
-
           def flat_text(obj):
               if isinstance(obj, str):
                   return obj
@@ -50,23 +46,46 @@ jobs:
                   return " ".join(flat_text(v) for v in obj.values())
               return ""
 
-          generic = []
-          detailed = []
-          for r in rewards:
-              txt = flat_text(r)
-              if "These rewards are party totals for the campaign's four-character baseline" in txt and "150–250 gp in Council pay plus recoverable salvage" in txt:
-                  generic.append(r)
-              if "The posted reclamation contract pays" in txt and "survey crew's field satchel at E5 contains 2 Potions of Healing" in txt:
-                  detailed.append(r)
+          generic_marker = "These rewards are party totals for the campaign's four-character baseline"
+          generic_money = "150–250 gp in Council pay plus recoverable salvage"
+          detailed_marker = "survey crew's field satchel at E5 contains 2 Potions of Healing"
 
-          assert len(generic) == 1, f"Expected exactly one generic duplicate, found {len(generic)}"
-          assert len(detailed) == 1, f"Expected exactly one detailed Rewards section, found {len(detailed)}"
+          removed = 0
 
-          entries.remove(generic[0])
+          def clean(obj):
+              global removed
+              if isinstance(obj, list):
+                  out = []
+                  for item in obj:
+                      if isinstance(item, dict) and item.get("name") == "Rewards":
+                          txt = flat_text(item)
+                          if generic_marker in txt and generic_money in txt:
+                              removed += 1
+                              continue
+                      clean(item)
+                      out.append(item)
+                  obj[:] = out
+              elif isinstance(obj, dict):
+                  for value in obj.values():
+                      clean(value)
 
-          rewards_after = [e for e in entries if isinstance(e, dict) and e.get("name") == "Rewards"]
-          assert len(rewards_after) == 1, f"Expected one Rewards section after cleanup, found {len(rewards_after)}"
-          assert "survey crew's field satchel at E5 contains 2 Potions of Healing" in flat_text(rewards_after[0])
+          clean(chapter)
+          assert removed == 1, f"Expected to remove exactly one generic Slums Rewards section, removed {removed}"
+
+          remaining_reward_texts = []
+          def collect(obj):
+              if isinstance(obj, dict):
+                  if obj.get("name") == "Rewards":
+                      remaining_reward_texts.append(flat_text(obj))
+                  for value in obj.values():
+                      collect(value)
+              elif isinstance(obj, list):
+                  for value in obj:
+                      collect(value)
+
+          collect(chapter)
+          assert len(remaining_reward_texts) == 1, f"Expected one Slums Rewards section after cleanup, found {len(remaining_reward_texts)}"
+          assert detailed_marker in remaining_reward_texts[0], "Detailed Slums Rewards section with potion placement is missing"
 
           now = int(time.time())
           meta = data.setdefault("_meta", {})
