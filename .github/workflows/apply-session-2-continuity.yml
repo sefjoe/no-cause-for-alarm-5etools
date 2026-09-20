@@ -1,0 +1,257 @@
+name: Apply NCFA Session 2 Continuity
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/apply-session-2-continuity.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply-session-2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Apply Session 1 actual-play continuity and Session 2 prep
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, time, copy
+
+          path = "No_Cause_for_Alarm_5etools_CURRENT.json"
+          with open(path, "r", encoding="utf-8") as f:
+              data = json.load(f)
+
+          packs = data.get("adventureData", [])
+          if not packs:
+              raise SystemExit("No adventureData found")
+          sections = packs[0].get("data", [])
+
+          def section(name):
+              found = next((s for s in sections if isinstance(s, dict) and s.get("name") == name), None)
+              if found is None:
+                  raise SystemExit(f"Section not found: {name}")
+              return found
+
+          def named_child(parent, name):
+              found = next((e for e in parent.get("entries", []) if isinstance(e, dict) and e.get("name") == name), None)
+              if found is None:
+                  raise SystemExit(f"Entry not found: {name}")
+              return found
+
+          def walk(obj):
+              if isinstance(obj, dict):
+                  yield obj
+                  for v in obj.values():
+                      yield from walk(v)
+              elif isinstance(obj, list):
+                  for v in obj:
+                      yield from walk(v)
+
+          def remove_named(parent, name):
+              ents = parent.setdefault("entries", [])
+              ents[:] = [e for e in ents if not (isinstance(e, dict) and e.get("name") == name)]
+
+          ch3 = section("Chapter 3: The Slums")
+          ch4 = section("Chapter 4: Blackstone Temple")
+
+          # Session 1 actual-play continuity belongs at the end of Chapter 3.
+          continuity_name = "Actual Play Continuity — Session 1"
+          remove_named(ch3, continuity_name)
+          ch3.setdefault("entries", []).append({
+              "type": "entries",
+              "name": continuity_name,
+              "entries": [
+                  "{@b This entry overrides conflicting planned outcomes above.} The four characters remain 3rd level after the Slums and do not advance until Blackstone Temple is resolved.",
+                  "Jord's missing strongbox drew the party into the Slums. Aaron and Jarrock followed tracks from Jord's wagon; Pepper learned from Tiera Dame, a halfling proprietor of the improvised shop {@b The Tiny Mage}, that theft was common in the Slums; Arumen wandered into the district independently.",
+                  "Arumen recovered Jord's missing horse wandering in the Slums. Arumen has also taken over the Ledger House kitchen whenever present; Brakkus Ledgerhelm accepts this and is openly fond of Arumen.",
+                  "During the scavenger confrontation, Pepper initiated violence. Two scavengers were killed and two escaped. Mara, now established as a {@creature Bandit Captain|XMM}, was intimidated into revealing activity near the grick house and then fled. Keep Mara offstage for Session 2, but preserve her as a recurring Slums NPC.",
+                  "Pepper entered the dye house alone, was dropped by two giant spiders, and survived after a natural 20 death save. The party later killed the grick and both spiders and recovered Jord's strongbox.",
+                  "The party found an unconscious Council surveyor named {@b Kaleb}. Pepper killed Kaleb with a mace, took his marked survey satchel and tools, and the party hastily buried the body inside the dye house. Pepper initially convinced the party that Kaleb had controlled the spiders, but a Slums gate guard recognized the marked satchel and explained that the Council was searching for missing surveyors. The party has also read the Council notice, so they now understand that Kaleb was not an enemy combatant.",
+                  "Kaleb's body is not discovered immediately. It should be found later when civic crews begin rebuilding the Slums, allowing consequences to surface after the party has become more entangled with Bellweather's Council.",
+                  "There were three surveyors in Kaleb's crew. Kaleb is dead; the other two were knowingly abducted by the Blackstone faction and are now held with the temple caretakers near the vestry.",
+                  "Aaron independently said Ledger House felt familiar and searched it. A failed Insight check prevented Aaron from recognizing it as the place seen in recurring dreams. Do not prompt this thread; advance it only if Aaron initiates another investigation or connection.",
+                  "Pepper reached Bellweather while searching for the Library of Alexandria. The actual library is elsewhere. Brakkus has begun casually asking patrons about it and has heard only vague rumors of an old library somewhere deeper in the ruins.",
+                  "Arumen does not know how they arrived in Bellweather; they were simply teleported there. Leave the cause unexplained for now."
+              ]
+          })
+
+          # Replace the old automatic level-up consequence if present anywhere in Chapter 3.
+          old_level = "Advance to level 4 if using milestones. Blackstone Temple becomes the next major problem along the reopened route."
+          new_level = "The characters remain level 3 through Blackstone Temple. If using milestones, advance them to level 4 after Blackstone Temple is resolved. Blackstone Temple becomes the next major problem along the reopened route."
+          for d in walk(ch3):
+              ents = d.get("entries")
+              if isinstance(ents, list):
+                  d["entries"] = [new_level if x == old_level else x for x in ents]
+
+          # Add the actual-play transition without deleting the original petition/caretaker hook.
+          for d in walk(ch3):
+              if d.get("name") == "Transition to Chapter 4":
+                  ents = d.setdefault("entries", [])
+                  line = "In actual play, the transition also centers on the missing survey crew: Blackstone militants knowingly kidnapped the two surviving surveyors. The Council wants them recovered, while Bishop Brann wants the detained temple caretakers rescued and sacred records preserved."
+                  if line not in ents:
+                      ents.append(line)
+
+          # Chapter 4 should be playable at the party's actual level.
+          ch4_entries = ch4.setdefault("entries", [])
+          for i, e in enumerate(ch4_entries):
+              if isinstance(e, str) and e.startswith("{@b Recommended level:}"):
+                  ch4_entries[i] = "{@b Recommended level:} 3–4. This campaign's current party enters at level 3 and advances to level 4 after Blackstone is resolved."
+                  break
+
+          prep_name = "Session 2 Opening — Return to Ledger House"
+          remove_named(ch4, prep_name)
+          prep = {
+              "type": "entries",
+              "name": prep_name,
+              "entries": [
+                  "{@b Target runtime:} about 4 hours. Begin in late afternoon with the party immediately outside Ledger House after returning from the Slums. End after the party has entered Blackstone Temple and reached or clearly discovered the captives near the vestry.",
+                  {
+                      "type": "entries",
+                      "name": "Scene A: Jord's Horse and Strongbox",
+                      "entries": [
+                          "Jord is a traveling merchant preparing to establish a shop in Bellweather and is known to Brakkus. The party still has both his recovered horse and strongbox when the session begins.",
+                          "If the horse and strongbox are returned, Jord pays {@b 50 gp to each character}, honors his promised future merchant discount, and gives the party {@b 2 Potions of Healing} in gratitude for recovering the horse.",
+                          "The strongbox's wax seal is already broken. Jord can tell that someone opened it but cannot determine who. The actual sequence is that Blackstone kidnappers opportunistically stole and opened the box, then abandoned it in the dye house after encountering the spiders while moving through the district with the captured surveyors. Do not accuse the party without additional evidence.",
+                          "If the characters stole anything from the box, Jord can notice missing inventory but still cannot know whether the party or the original thieves took it. Let their explanation and behavior shape his trust and future discount rather than producing automatic proof."
+                      ]
+                  },
+                  {
+                      "type": "entries",
+                      "name": "Scene B: Ledger House Evening",
+                      "entries": [
+                          "Play this scene broadly and let the players enjoy character interaction. Arumen naturally takes over the kitchen; Brakkus treats this as normal and is pleased to have them cooking.",
+                          "Brakkus currently likes Arumen, believes Aaron is an ordinary human after Aaron's earlier explanation, is cautious with Jarrock because Jarrock has challenged his hostility toward 'Day Walkers,' and is broadly indifferent toward Pepper.",
+                          "Brakkus has been asking patrons about Pepper's Library of Alexandria out of curiosity. He has heard rumors of an old library somewhere deeper in Bellweather's ruins, but he has no reliable location and should not imply that the Library of Alexandria itself is in Bellweather.",
+                          "At a natural lull, Brakkus notices the official mark on Pepper's survey satchel and asks casually where it came from. He does not accuse Pepper. A plausible answer can end the conversation for now; an obviously poor or contradictory answer makes him uneasy and may affect what he tells Bishop Brann.",
+                          "Brakkus explains that the notice on his door is current: the Council is looking for a three-person survey crew, including Kaleb by name, and armed occupiers at Blackstone Temple are now suspected of holding people. Jarrock's existing interest in Council work should be enough to make this an invitation rather than a forced hook."
+                      ]
+                  },
+                  {
+                      "type": "entries",
+                      "name": "Scene C: Bishop Brann's Petition",
+                      "entries": [
+                          "After Brakkus has raised the subject, Bishop Brann arrives or is sent for. Preserve the existing Blackstone petition: armed occupiers have detained temple caretakers, Brann wants them alive, and he wants sacred records preserved.",
+                          "Add the Council's immediate objective: rescue the two surviving members of Kaleb's survey crew. The Blackstone faction knowingly took the surveyors rather than merely finding them later.",
+                          "Brann does not know what happened to Kaleb. If Pepper's satchel becomes part of the conversation, Brann recognizes it as Council survey equipment but does not have evidence of murder. Let player choices determine whether suspicion grows.",
+                          "Derren's existing relic-recovery interest remains in canon. He can be mentioned here or held for the next Blackstone session if the opening is already busy."
+                      ]
+                  },
+                  {
+                      "type": "entries",
+                      "name": "Scene D: Night and Morning Departure",
+                      "entries": [
+                          "Allow planning, shopping that is reasonably available, and a long rest. The party leaves for Blackstone the next morning.",
+                          "Do not push Aaron's Ledger House dream connection. If Aaron again investigates the building or says it feels familiar, allow another opportunity to connect Ledger House to the dreams.",
+                          "Do not advance Arumen's unexplained teleportation yet. Mara remains out of sight this session."
+                      ]
+                  },
+                  {
+                      "type": "entries",
+                      "name": "Scene E: Blackstone Reconnaissance",
+                      "entries": [
+                          "Use the chapter's three established approaches: front court, broken side wall, or flooded drainage channel. Nearby residents know the watch changes every two hours and that food is being carried to captives near the vestry.",
+                          "Let reconnaissance determine the first obstacle. Good planning can avoid a fight; failed or noisy approaches should create pressure rather than automatically trigger the chapter's full force.",
+                          "The first clear information goal is simple: confirm that prisoners are alive and identify a route toward the vestry."
+                      ]
+                  },
+                  {
+                      "type": "entries",
+                      "name": "Scene F: Level-3 Blackstone Pressure",
+                      "entries": [
+                          "The party is intentionally still level 3. Do not run every level-4/5 encounter at full strength. Use one meaningful encounter, with a second only if the party is moving quickly and remains healthy.",
+                          "For Tal Rusk's outer-line encounter, begin with {@b Tal Rusk and 2 Guards}. A third Guard can appear only if the alarm is raised or the party is dominating the fight. Tal challenges, bargains, withdraws, or surrenders when appropriate; his people are not suicidal.",
+                          "If the party infiltrates through the side wall or drainage route, replace the frontal battle with a smaller patrol, stealth complication, or social challenge. Success should earn position and information, not merely remove hit points.",
+                          "Keep the chapter's civilian distinction explicit. Nearby dependents, coerced refugees, and ordinary residents are not enemy combatants."
+                      ]
+                  },
+                  {
+                      "type": "entries",
+                      "name": "Session 2 End Beat",
+                      "entries": [
+                          "Aim to finish after the characters have entered the temple and reached, seen, or clearly located the captives near the vestry. The captives include the existing temple caretakers and {@b the two surviving surveyors from Kaleb's three-person crew}.",
+                          "A strong cliffhanger is for one rescued or visible surveyor to recognize the marked satchel Pepper is carrying and say, in substance, 'That's Kaleb's bag. Where is he?' This creates immediate tension without revealing Kaleb's buried body before the later Slums reconstruction consequence.",
+                          "Do not resolve Mason or the full liberation of Blackstone unless the players move dramatically faster than expected. The temple's decisive confrontation is intended to remain for the following session."
+                      ]
+                  }
+              ]
+          }
+          # Put the opening prep immediately after the chapter's Running the Chapter entry when possible.
+          insert_at = 1
+          for i, e in enumerate(ch4_entries):
+              if isinstance(e, dict) and e.get("name") == "Running the Chapter":
+                  insert_at = i + 1
+                  break
+          ch4_entries.insert(insert_at, prep)
+
+          # Update the canonical petition with the surveyor objective.
+          for d in walk(ch4):
+              if d.get("name") == "Scene 1: The Petition":
+                  ents = d.setdefault("entries", [])
+                  addition = "The Council's parallel request is to recover the two surviving surveyors from Kaleb's three-person crew. Blackstone militants knowingly abducted them; Kaleb is separately missing from the Council's perspective."
+                  if addition not in ents:
+                      ents.append(addition)
+
+          # Update the vestry captives while preserving the caretaker and wounded-guard material.
+          for d in walk(ch4):
+              if d.get("name") == "Scene 4: Captives in the Vestry":
+                  ents = d.setdefault("entries", [])
+                  intro = "Several caretakers, one wounded guard, and the two surviving members of Kaleb's survey crew are confined near the vestry."
+                  if ents and isinstance(ents[0], str):
+                      ents[0] = intro
+                  elif intro not in ents:
+                      ents.insert(0, intro)
+                  recognition = "One of the surveyors recognizes Kaleb's marked satchel if Pepper is carrying it and immediately asks what happened to him. The surveyors do not know Kaleb is dead."
+                  if recognition not in ents:
+                      ents.append(recognition)
+
+          # Tune the fixed Tal encounter entry for the current level-3 party.
+          old_tal = "Tal Rusk, 4 {@creature Guard|XMM|Guards}. They retreat inside when half their force is defeated."
+          new_tal = "For the current level-3 party, use Tal Rusk and 2 {@creature Guard|XMM|Guards}; a third Guard joins only if the alarm is raised or the party is clearly dominating. Tal and surviving defenders retreat inside when badly pressed rather than fighting to the death. At level 4 or higher, the DM can restore the original four-Guard pressure."
+          for d in walk(ch4):
+              ents = d.get("entries")
+              if isinstance(ents, list):
+                  d["entries"] = [new_tal if x == old_tal else x for x in ents]
+
+          # Bump source metadata so 5etools update checks see the changed brew.
+          now = int(time.time())
+          meta = data.setdefault("_meta", {})
+          meta["dateLastModified"] = now
+          for src in meta.get("sources", []):
+              if src.get("json") == "NCFA":
+                  src["dateLastModified"] = now
+                  src["version"] = "3.6"
+
+          with open(path, "w", encoding="utf-8") as f:
+              json.dump(data, f, ensure_ascii=False, indent="\t")
+              f.write("\n")
+
+          # Preserve a versioned snapshot alongside CURRENT.
+          with open("No_Cause_for_Alarm_5etools_v3.6.json", "w", encoding="utf-8") as f:
+              json.dump(data, f, ensure_ascii=False, indent="\t")
+              f.write("\n")
+          PY
+
+          python -m json.tool No_Cause_for_Alarm_5etools_CURRENT.json >/dev/null
+          python -m json.tool No_Cause_for_Alarm_5etools_v3.6.json >/dev/null
+
+      - name: Commit Session 2 continuity
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- No_Cause_for_Alarm_5etools_CURRENT.json No_Cause_for_Alarm_5etools_v3.6.json; then
+            echo "No Session 2 continuity changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add No_Cause_for_Alarm_5etools_CURRENT.json No_Cause_for_Alarm_5etools_v3.6.json
+          git commit -m "Update NCFA for Session 2 and Blackstone continuity [skip ci]"
+          git push origin HEAD:main
