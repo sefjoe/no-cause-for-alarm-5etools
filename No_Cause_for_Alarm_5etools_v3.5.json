@@ -10,12 +10,12 @@
 				"authors": [
 					"No Cause for Alarm Campaign"
 				],
-				"dateLastModified": 1789872138
+				"dateLastModified": 1789872546
 			}
 		],
 		"edition": "one",
 		"dateAdded": 1789528955,
-		"dateLastModified": 1789872138
+		"dateLastModified": 1789872546
 	},
 	"adventure": [
 		{
@@ -1656,22 +1656,6 @@
 									"name": "Rewards",
 									"entries": [
 										"{@b Treasure and rewards.} The posted reclamation contract pays {@b 75 gp per character} on completion (300 gp for a four-character party). During the expedition, place roughly {@b 200–250 gp} of additional party value in recoverable coin, jewelry, trade goods, legitimate salvage, and private recovery bonuses. The strongbox and similar identifiable property are not free salvage: returning them earns the stated private reward. The survey crew's field satchel at E5 contains 2 Potions of Healing as emergency medical supplies, and the satchel remains recoverable even if the rescue goes badly. Award one useful uncommon consumable such as Dust of Disappearance only if the party explores a sealed workshop; otherwise use mundane salvage."
-									]
-								}
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Rewards",
-							"entries": [
-								"These rewards are party totals for the campaign's four-character baseline. Named story relics remain in place; where an older generic treasure quantity conflicts with this section, use this section.",
-								{
-									"type": "list",
-									"items": [
-										"{@b Spendable wealth.} 150–250 gp in Council pay plus recoverable salvage.",
-										"{@b Consumables.} 2 common consumables suited to the expedition.",
-										"{@b Permanent magic.} 1 uncommon permanent item hidden in a reclaimed residence or workshop.",
-										"{@b Story reward.} A safer route through the district and improved standing with neighborhood residents and workers."
 									]
 								}
 							]
