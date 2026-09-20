@@ -1,0 +1,97 @@
+name: Fix Slums Duplicate Rewards
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/fix-slums-duplicate-rewards.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Remove duplicate generic Slums rewards section
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, time, shutil
+
+          path = "No_Cause_for_Alarm_5etools_CURRENT.json"
+          snap = "No_Cause_for_Alarm_5etools_v3.5.json"
+
+          with open(path, "r", encoding="utf-8") as f:
+              data = json.load(f)
+
+          packs = data.get("adventureData", [])
+          assert packs, "No adventureData found"
+          sections = packs[0].get("data", [])
+          chapter = next((s for s in sections if isinstance(s, dict) and s.get("name") == "Chapter 3: The Slums"), None)
+          assert chapter is not None, "Chapter 3 not found"
+
+          entries = chapter.get("entries", [])
+          rewards = [e for e in entries if isinstance(e, dict) and e.get("name") == "Rewards"]
+          assert len(rewards) >= 2, f"Expected duplicate Rewards sections, found {len(rewards)}"
+
+          def flat_text(obj):
+              if isinstance(obj, str):
+                  return obj
+              if isinstance(obj, list):
+                  return " ".join(flat_text(x) for x in obj)
+              if isinstance(obj, dict):
+                  return " ".join(flat_text(v) for v in obj.values())
+              return ""
+
+          generic = []
+          detailed = []
+          for r in rewards:
+              txt = flat_text(r)
+              if "These rewards are party totals for the campaign's four-character baseline" in txt and "150–250 gp in Council pay plus recoverable salvage" in txt:
+                  generic.append(r)
+              if "The posted reclamation contract pays" in txt and "survey crew's field satchel at E5 contains 2 Potions of Healing" in txt:
+                  detailed.append(r)
+
+          assert len(generic) == 1, f"Expected exactly one generic duplicate, found {len(generic)}"
+          assert len(detailed) == 1, f"Expected exactly one detailed Rewards section, found {len(detailed)}"
+
+          entries.remove(generic[0])
+
+          rewards_after = [e for e in entries if isinstance(e, dict) and e.get("name") == "Rewards"]
+          assert len(rewards_after) == 1, f"Expected one Rewards section after cleanup, found {len(rewards_after)}"
+          assert "survey crew's field satchel at E5 contains 2 Potions of Healing" in flat_text(rewards_after[0])
+
+          now = int(time.time())
+          meta = data.setdefault("_meta", {})
+          meta["dateLastModified"] = now
+          for src in meta.get("sources", []):
+              if src.get("json") == "NCFA":
+                  src["dateLastModified"] = now
+
+          with open(path, "w", encoding="utf-8") as f:
+              json.dump(data, f, ensure_ascii=False, indent="\t")
+              f.write("\n")
+
+          shutil.copyfile(path, snap)
+          PY
+
+          python -m json.tool No_Cause_for_Alarm_5etools_CURRENT.json >/dev/null
+          cmp No_Cause_for_Alarm_5etools_CURRENT.json No_Cause_for_Alarm_5etools_v3.5.json
+
+      - name: Commit cleanup and remove one-time workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm .github/workflows/fix-slums-duplicate-rewards.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add No_Cause_for_Alarm_5etools_CURRENT.json No_Cause_for_Alarm_5etools_v3.5.json .github/workflows/fix-slums-duplicate-rewards.yml
+          git commit -m "Remove duplicate Slums rewards section"
+          git push origin HEAD:main
