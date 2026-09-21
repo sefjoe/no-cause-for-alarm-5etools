@@ -1,0 +1,149 @@
+name: Apply Blackstone Encounter Presets
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/apply-blackstone-encounter-presets.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Apply Blackstone combat balance and encounter presets
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, time, hashlib, os, copy
+
+          path = 'No_Cause_for_Alarm_5etools_CURRENT.json'
+          with open(path, 'r', encoding='utf-8') as f:
+              data = json.load(f)
+
+          now = int(time.time())
+          version = '3.7'
+
+          meta = data.setdefault('_meta', {})
+          meta['dateLastModified'] = now
+          meta['_dateLastModifiedHash'] = hashlib.sha1(f'{now}-blackstone-encounters'.encode()).hexdigest()[:10]
+          for src in meta.get('sources', []):
+              if src.get('json') == 'NCFA':
+                  src['version'] = version
+                  src['dateLastModified'] = now
+
+          # Ensure named Tal Rusk is available in the Bestiary as a reusable encounter creature.
+          monsters = data.setdefault('monster', [])
+          monsters[:] = [m for m in monsters if not (isinstance(m, dict) and m.get('name') == 'Tal Rusk' and m.get('source') == 'NCFA')]
+          monsters.append({
+              'name': 'Tal Rusk',
+              'source': 'NCFA',
+              '_copy': {'name': 'Warrior Veteran', 'source': 'XMM'}
+          })
+
+          # Find Chapter 4.
+          chapter = None
+          for pack in data.get('adventureData', []):
+              for sec in pack.get('data', []):
+                  if isinstance(sec, dict) and sec.get('name') == 'Chapter 4: Blackstone Temple':
+                      chapter = sec
+                      break
+              if chapter:
+                  break
+          if chapter is None:
+              raise SystemExit('Chapter 4: Blackstone Temple not found')
+
+          entries = chapter.setdefault('entries', [])
+          entries[:] = [e for e in entries if not (isinstance(e, dict) and e.get('name') in {'Session 2 Level-3 Combat Balance', '5etools Encounter Builder Presets'})]
+
+          balance = {
+              'type': 'entries',
+              'name': 'Session 2 Level-3 Combat Balance',
+              'entries': [
+                  '{@b Party baseline.} Balance Blackstone for four level-3 characters: Arumen, Aaron Dunamus, Jarrock, and Pepper. The party remains level 3 until Blackstone is resolved.',
+                  '{@b Front Court.} Use {@creature Tal Rusk|NCFA} and 2 {@creature Guard|XMM|Guards}. A third Guard is optional reinforcement only if the party is clearly overwhelming the encounter. Tal tries to hold the entrance and raise the alarm; he does not need to fight to the death.',
+                  '{@b Broken Side Wall.} Use 2 {@creature Guard|XMM|Guards} and 2 {@creature Cultist|XMM|Cultists}. Good stealth, deception, distraction, or another strong plan can bypass this fight entirely.',
+                  '{@b Flooded Drainage Channel.} No automatic combat. Use environmental complications first. If the party makes enough noise or otherwise alerts the occupants, use 1–2 {@creature Guard|XMM|Guards}.',
+                  '{@b Optional Interior Response.} Only if the party is moving quickly or has raised an alarm, use 2 {@creature Guard|XMM|Guards} and 1 {@creature Scout|XMM}. Do not add another Veteran-class enemy before the captive rescue.',
+                  '{@b Encounter principle.} Avoid replacing a successfully bypassed encounter with an unrelated combat. Clever infiltration should reduce the number of fights.'
+              ]
+          }
+
+          presets = {
+              'type': 'entries',
+              'name': '5etools Encounter Builder Presets',
+              'entries': [
+                  'These encounter files are prebuilt for the Bestiary Encounter Builder. Load the appropriate preset before combat. When initiative begins, open the DM Screen Initiative Tracker and choose {@b Import from Current Bestiary Encounter}; the monsters and quantities from the loaded Bestiary encounter will populate the tracker.',
+                  '{@link Front Court — Tal Rusk + 2 Guards|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/encounters/blackstone-front-court.json}',
+                  '{@link Broken Side Wall — 2 Guards + 2 Cultists|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/encounters/blackstone-side-wall.json}',
+                  '{@link Drainage Alert — 2 Guards|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/encounters/blackstone-drainage-alert.json}',
+                  '{@link Interior Response — 2 Guards + 1 Scout|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/encounters/blackstone-interior-response.json}',
+                  '{@b Front Court reinforcement.} The preset intentionally omits the possible third Guard. Add one manually only if the encounter needs reinforcement.'
+              ]
+          }
+          entries.extend([balance, presets])
+
+          # Legacy/current Bestiary encounter-file wrapper. `l.items`/`l.sources` is recognized by 5etools when loading an encounter file.
+          os.makedirs('encounters', exist_ok=True)
+          def write_encounter(filename, items, sources):
+              obj = {
+                  'l': {
+                      'items': items,
+                      'sources': sources
+                  }
+              }
+              with open(os.path.join('encounters', filename), 'w', encoding='utf-8') as f:
+                  json.dump(obj, f, ensure_ascii=False, indent='\t')
+                  f.write('\n')
+
+          write_encounter('blackstone-front-court.json', [
+              {'h': 'tal rusk_ncfa', 'c': 1},
+              {'h': 'guard_xmm', 'c': 2}
+          ], ['NCFA', 'XMM'])
+          write_encounter('blackstone-side-wall.json', [
+              {'h': 'guard_xmm', 'c': 2},
+              {'h': 'cultist_xmm', 'c': 2}
+          ], ['XMM'])
+          write_encounter('blackstone-drainage-alert.json', [
+              {'h': 'guard_xmm', 'c': 2}
+          ], ['XMM'])
+          write_encounter('blackstone-interior-response.json', [
+              {'h': 'guard_xmm', 'c': 2},
+              {'h': 'scout_xmm', 'c': 1}
+          ], ['XMM'])
+
+          # Write CURRENT and a matching versioned snapshot.
+          with open(path, 'w', encoding='utf-8') as f:
+              json.dump(data, f, ensure_ascii=False, indent='\t')
+              f.write('\n')
+          vpath = f'No_Cause_for_Alarm_5etools_v{version}.json'
+          with open(vpath, 'w', encoding='utf-8') as f:
+              json.dump(data, f, ensure_ascii=False, indent='\t')
+              f.write('\n')
+          PY
+
+          python -m json.tool No_Cause_for_Alarm_5etools_CURRENT.json >/dev/null
+          python -m json.tool No_Cause_for_Alarm_5etools_v3.7.json >/dev/null
+          for f in encounters/blackstone-*.json; do python -m json.tool "$f" >/dev/null; done
+
+      - name: Commit Blackstone encounter presets
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- No_Cause_for_Alarm_5etools_CURRENT.json No_Cause_for_Alarm_5etools_v3.7.json encounters/; then
+            echo 'No encounter changes to commit.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add No_Cause_for_Alarm_5etools_CURRENT.json No_Cause_for_Alarm_5etools_v3.7.json encounters/
+          git commit -m 'Add level-3 Blackstone encounter presets [skip ci]'
+          git push origin HEAD:main
