@@ -1,0 +1,18 @@
+{
+	"l": {
+		"items": [
+			{
+				"h": "tal rusk_ncfa",
+				"c": 1
+			},
+			{
+				"h": "guard_xmm",
+				"c": 2
+			}
+		],
+		"sources": [
+			"NCFA",
+			"XMM"
+		]
+	}
+}

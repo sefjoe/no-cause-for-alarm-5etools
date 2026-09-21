@@ -1,0 +1,17 @@
+{
+	"l": {
+		"items": [
+			{
+				"h": "guard_xmm",
+				"c": 2
+			},
+			{
+				"h": "cultist_xmm",
+				"c": 2
+			}
+		],
+		"sources": [
+			"XMM"
+		]
+	}
+}
