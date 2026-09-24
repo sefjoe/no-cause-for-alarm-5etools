@@ -1,0 +1,220 @@
+name: Materialize named combat NPCs
+
+on:
+  push:
+    paths:
+      - '.github/workflows/materialize-named-combat-npcs.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build full NPC Bestiary entries
+        run: |
+          python - <<'PY'
+          import copy
+          import hashlib
+          import json
+          import time
+          import urllib.request
+          from pathlib import Path
+
+          current_path = Path('No_Cause_for_Alarm_5etools_CURRENT.json')
+          data = json.loads(current_path.read_text(encoding='utf-8'))
+
+          url = 'https://raw.githubusercontent.com/5etools-mirror-3/5etools-src/main/data/bestiary/bestiary-xmm.json'
+          with urllib.request.urlopen(url) as r:
+              xmm = json.load(r)
+
+          source_monsters = xmm.get('monster', [])
+          by_name = {}
+          for monster in source_monsters:
+              by_name.setdefault(monster.get('name'), []).append(monster)
+
+          # Named NPCs which the adventure explicitly places in combat, assigns a
+          # published stat block to, or presents as a combat-capable encounter leader.
+          # Fallback names account for XMM naming changes such as Veteran -> Warrior Veteran.
+          mappings = [
+              ('Mera Kest', ['Bandit']),
+              ('Tal Rusk', ['Warrior Veteran', 'Veteran']),
+              ('Vara Koven', ['Bandit Captain']),
+              ('Dorn', ['Warrior Veteran', 'Veteran']),
+              ('Korrin Vale', ['Warrior Veteran', 'Veteran']),
+              ('Tessa Marr', ['Scout']),
+              ('Balden', ['Warrior Veteran', 'Veteran']),
+              ('Commander Vesk', ['Hobgoblin Captain']),
+              ('Hessa Vale', ['Mage']),
+              ('Yaren', ['Mage']),
+              ('Daren Voss', ['Warrior Veteran', 'Veteran']),
+              ('Doman', ['Mage']),
+              ('War Leader Kesh', ['Gladiator']),
+              ('Commander Darr Vale', ['Knight']),
+              ('Commander Haren Vell', ['Gladiator']),
+              ('Captain Sera Dorn', ['Warrior Veteran', 'Veteran']),
+              ('Varek Holt', ['Assassin']),
+              ('Alen Hyam', ['Mage']),
+              ('Jeren', ['Mage']),
+              ('Soren', ['Adult Bronze Dragon']),
+              ('Tyren, Manifested', ['Efreeti']),
+          ]
+
+          # Existing bespoke NCFA monsters (Brakkus) are preserved. Named entries
+          # listed above are replaced with fully materialized stat blocks so they do
+          # not depend on 5etools' _copy resolution.
+          monsters = data.setdefault('monster', [])
+          existing_index = {(m.get('name'), m.get('source')): i for i, m in enumerate(monsters)}
+
+          strip_keys = {
+              'page', 'otherSources', 'additionalSources', 'reprintedAs',
+              'hasFluff', 'hasFluffImages', 'hasToken', 'tokenUrl', 'soundClip',
+              '_versions', 'altArt', 'familiar', 'dragonCastingColor'
+          }
+
+          audit_rows = []
+          missing = []
+
+          for npc_name, candidates in mappings:
+              base = None
+              base_name = None
+              for candidate in candidates:
+                  matches = by_name.get(candidate, [])
+                  if matches:
+                      base = matches[0]
+                      base_name = candidate
+                      break
+              if base is None:
+                  missing.append((npc_name, candidates))
+                  continue
+
+              npc = copy.deepcopy(base)
+              for key in strip_keys:
+                  npc.pop(key, None)
+              npc.pop('_copy', None)
+              npc['name'] = npc_name
+              npc['source'] = 'NCFA'
+
+              key = (npc_name, 'NCFA')
+              if key in existing_index:
+                  monsters[existing_index[key]] = npc
+                  action = 'replaced'
+              else:
+                  existing_index[key] = len(monsters)
+                  monsters.append(npc)
+                  action = 'added'
+
+              audit_rows.append((npc_name, base_name, action))
+
+          if missing:
+              raise SystemExit('Missing XMM bases: ' + repr(missing))
+
+          # Version bump and freshness metadata.
+          now = int(time.time())
+          meta = data.setdefault('_meta', {})
+          for src in meta.get('sources', []):
+              if src.get('json') == 'NCFA':
+                  src['version'] = '3.8'
+                  src['dateLastModified'] = now
+          meta['dateLastModified'] = now
+          meta['_dateLastModifiedHash'] = hashlib.sha1(
+              ('3.8|' + str(now) + '|' + '|'.join(name for name, _, _ in audit_rows)).encode('utf-8')
+          ).hexdigest()[:10]
+
+          # Promote direct creature links for the most important recurring named combatants.
+          replacements = {
+              'Tal Rusk, a {@creature Veteran|XMM}': '{@creature Tal Rusk|NCFA}',
+              'Vara Koven uses the {@creature Bandit Captain|XMM} stat block. Dorn uses {@creature Veteran|XMM}.':
+                  '{@creature Vara Koven|NCFA} uses the Bandit Captain stat block. {@creature Dorn|NCFA} uses the Warrior Veteran stat block.',
+              'Korrin uses {@creature Veteran|XMM}.': '{@creature Korrin Vale|NCFA} uses the Warrior Veteran stat block.',
+              'Commander Vesk uses the {@creature Hobgoblin Captain|XMM} stat block': '{@creature Commander Vesk|NCFA} uses the Hobgoblin Captain stat block',
+              'Use 1 {@creature Mage|XMM} reskinned as a necromancer': 'Use {@creature Hessa Vale|NCFA}',
+              'Use 1 {@creature Mage|XMM} for Yaren': 'Use {@creature Yaren|NCFA}',
+              '{@b Daren Voss}, a mixed-species mercenary captain using the {@creature Veteran|XMM} stat block': '{@creature Daren Voss|NCFA}, a mixed-species mercenary captain using the Warrior Veteran stat block',
+              '{@b Doman}, a deceptive spellcaster seeking an artifact in the fort, tries to manipulate the party into doing his work. Use a current {@creature Mage|XMM} stat block': '{@creature Doman|NCFA}, a deceptive spellcaster seeking an artifact in the fort, tries to manipulate the party into doing his work. Use his NCFA stat block',
+              '{@b Commander Haren Vell} uses the {@creature Gladiator|XMM} or another appropriate high-tier martial stat block.': '{@creature Commander Haren Vell|NCFA} uses the Gladiator stat block.',
+              '{@b Captain Sera Dorn} uses the {@creature Veteran|XMM} stat block': '{@creature Captain Sera Dorn|NCFA} uses the Warrior Veteran stat block',
+              'If needed, use Darr as a {@creature Knight|XMM}': 'If needed, use {@creature Commander Darr Vale|NCFA}',
+              'Use 1 {@creature Assassin|XMM}, 2 {@creature Veteran|XMM|Veterans}, and 4 {@creature Scout|XMM|Scouts}.': 'Use {@creature Varek Holt|NCFA}, 2 {@creature Warrior Veteran|XMM|Warrior Veterans}, and 4 {@creature Scout|XMM|Scouts}.',
+              '{@b Alen Hyam} is a {@creature Mage|XMM} advisor': '{@creature Alen Hyam|NCFA} is a mage advisor',
+              'Use the official {@creature Adult Bronze Dragon|XMM} as Soren’s base stat block.': 'Use {@creature Soren|NCFA}; its mechanics are the official Adult Bronze Dragon stat block.',
+              'Adult Bronze Dragon plus environmental hazards from the chapter.': '{@creature Soren|NCFA} plus environmental hazards from the chapter.',
+          }
+
+          def replace_strings(obj):
+              if isinstance(obj, str):
+                  out = obj
+                  for old, new in replacements.items():
+                      out = out.replace(old, new)
+                  return out
+              if isinstance(obj, list):
+                  return [replace_strings(x) for x in obj]
+              if isinstance(obj, dict):
+                  return {k: replace_strings(v) for k, v in obj.items()}
+              return obj
+
+          data = replace_strings(data)
+
+          text = json.dumps(data, indent='\t', ensure_ascii=False) + '\n'
+          current_path.write_text(text, encoding='utf-8')
+          Path('No_Cause_for_Alarm_5etools_v3.8.json').write_text(text, encoding='utf-8')
+
+          report = [
+              '# NCFA Named Combat NPC Bestiary Audit — v3.8',
+              '',
+              'Rule: named NPCs expected to roll initiative receive a full standalone NCFA monster entry. Unnamed combatants continue to use published XMM creatures directly.',
+              '',
+              '| NPC | Published mechanical base | Result |',
+              '|---|---|---|',
+          ]
+          for name, base_name, action in audit_rows:
+              report.append(f'| {name} | {base_name} (XMM) | {action} as full NCFA monster |')
+          report += [
+              '',
+              '## Preserved existing bespoke entry',
+              '',
+              '- Brakkus Ledgerhelm — existing custom full stat block retained unchanged.',
+              '',
+              '## Intentionally not materialized',
+              '',
+              '- Noncombat civic/story NPCs such as Bishop Brann, Wern, Council clerks, surveyors, caretakers, merchants, and community leaders.',
+              '- Unnamed encounter combatants and generic officers continue to use their published XMM entries.',
+              '- Perrin Cardon is not assigned a combat stat block because the current adventure presents his resolution as political exposure, bargaining, flight, or investigation rather than a required combat encounter.',
+              '',
+              '## Notes',
+              '',
+              '- Tyren, Manifested uses the Efreeti mechanics only for the optional manifested second phase already described by the finale.',
+              '- Jeren is materialized as a Mage because the finale describes him as a spellcasting advisor who may betray the party but does not provide a different published base.',
+              '- Balden is materialized as a Warrior Veteran because the Paden Square combat roster begins with one Veteran and Balden is the named security enforcer for that scene.',
+          ]
+          Path('docs').mkdir(exist_ok=True)
+          Path('docs/combat-npc-bestiary-audit-v3.8.md').write_text('\n'.join(report) + '\n', encoding='utf-8')
+
+          # Basic validation.
+          json.loads(current_path.read_text(encoding='utf-8'))
+          names = {(m.get('name'), m.get('source')) for m in data.get('monster', [])}
+          required = {(name, 'NCFA') for name, _ in mappings}
+          absent = sorted(required - names)
+          if absent:
+              raise SystemExit('Missing materialized NPC entries after write: ' + repr(absent))
+
+          print('Materialized', len(audit_rows), 'named combat NPCs')
+          for row in audit_rows:
+              print(row)
+          PY
+
+      - name: Commit generated campaign update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add No_Cause_for_Alarm_5etools_CURRENT.json No_Cause_for_Alarm_5etools_v3.8.json docs/combat-npc-bestiary-audit-v3.8.md
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Materialize named combat NPC Bestiary entries"
+            git push
+          fi
