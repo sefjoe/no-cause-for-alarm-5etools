@@ -1,18 +1,45 @@
 {
-	"l": {
-		"items": [
-			{
-				"h": "tal rusk_ncfa",
-				"c": 1
-			},
-			{
-				"h": "guard_xmm",
-				"c": 2
+	"fileType": "encounter",
+	"siteVersion": "2.36.1",
+	"items": [
+		{
+			"h": "tal%20rusk_ncfa",
+			"c": 1
+		},
+		{
+			"h": "guard_xmm",
+			"c": 2
+		}
+	],
+	"sources": [
+		"NCFA",
+		"XMM"
+	],
+	"saveId": "a0f42f4f-9e2e-43f4-a6e5-blackstone01",
+	"activePartyId": "custom",
+	"statePartyComps": {
+		"custom": {
+			"state": {
+				"playersSimple": [
+					{
+						"count": 4,
+						"level": 3
+					}
+				]
 			}
-		],
-		"sources": [
-			"NCFA",
-			"XMM"
-		]
-	}
+		},
+		"customAdvanced": {
+			"state": {
+				"colsExtraAdvanced": [],
+				"playersAdvanced": [
+					{
+						"name": "",
+						"level": 3,
+						"extras": []
+					}
+				]
+			}
+		}
+	},
+	"customShapeGroups": []
 }
