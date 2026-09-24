@@ -1,17 +1,44 @@
 {
-	"l": {
-		"items": [
-			{
-				"h": "guard_xmm",
-				"c": 2
-			},
-			{
-				"h": "scout_xmm",
-				"c": 1
+	"fileType": "encounter",
+	"siteVersion": "2.36.1",
+	"items": [
+		{
+			"h": "guard_xmm",
+			"c": 2
+		},
+		{
+			"h": "scout_xmm",
+			"c": 1
+		}
+	],
+	"sources": [
+		"XMM"
+	],
+	"saveId": "d3d9b574-8f62-4c79-b9e5-blackstone04",
+	"activePartyId": "custom",
+	"statePartyComps": {
+		"custom": {
+			"state": {
+				"playersSimple": [
+					{
+						"count": 4,
+						"level": 3
+					}
+				]
 			}
-		],
-		"sources": [
-			"XMM"
-		]
-	}
+		},
+		"customAdvanced": {
+			"state": {
+				"colsExtraAdvanced": [],
+				"playersAdvanced": [
+					{
+						"name": "",
+						"level": 3,
+						"extras": []
+					}
+				]
+			}
+		}
+	},
+	"customShapeGroups": []
 }
