@@ -1,17 +1,44 @@
 {
-	"l": {
-		"items": [
-			{
-				"h": "guard_xmm",
-				"c": 2
-			},
-			{
-				"h": "cultist_xmm",
-				"c": 2
+	"fileType": "encounter",
+	"siteVersion": "2.36.1",
+	"items": [
+		{
+			"h": "guard_xmm",
+			"c": 2
+		},
+		{
+			"h": "cultist_xmm",
+			"c": 2
+		}
+	],
+	"sources": [
+		"XMM"
+	],
+	"saveId": "b1a7db2a-5c23-4e63-a7f2-blackstone02",
+	"activePartyId": "custom",
+	"statePartyComps": {
+		"custom": {
+			"state": {
+				"playersSimple": [
+					{
+						"count": 4,
+						"level": 3
+					}
+				]
 			}
-		],
-		"sources": [
-			"XMM"
-		]
-	}
+		},
+		"customAdvanced": {
+			"state": {
+				"colsExtraAdvanced": [],
+				"playersAdvanced": [
+					{
+						"name": "",
+						"level": 3,
+						"extras": []
+					}
+				]
+			}
+		}
+	},
+	"customShapeGroups": []
 }
