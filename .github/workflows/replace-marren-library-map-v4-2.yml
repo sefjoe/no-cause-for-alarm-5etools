@@ -1,0 +1,287 @@
+name: Replace Marren Library maps and key
+
+on:
+  push:
+    paths:
+      - '.github/workflows/replace-marren-library-map-v4-2.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-marren-library:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Pillow
+        run: pip install pillow
+      - name: Generate maps and update adventure
+        run: |
+          python - <<'PY'
+          import json, pathlib, re, time, hashlib
+          from PIL import Image, ImageDraw, ImageFont
+
+          ROOT = pathlib.Path('.')
+          json_path = ROOT / 'No_Cause_for_Alarm_5etools_CURRENT.json'
+          data = json.loads(json_path.read_text(encoding='utf-8'))
+
+          # ---------- map generation ----------
+          W, H = 1448, 1086
+          MAP_W = 1010
+          BG = (232, 211, 171)
+          INK = (42, 38, 31)
+          WALL = (48, 50, 48)
+          FLOOR = (219, 199, 161)
+          SHELF = (120, 89, 52)
+          FURN = (138, 101, 60)
+          GRID = (196, 176, 140)
+
+          def font(size, bold=False):
+              paths = [
+                  '/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf' if bold else '/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf',
+                  '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf' if bold else '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
+              ]
+              for p in paths:
+                  if pathlib.Path(p).exists(): return ImageFont.truetype(p, size)
+              return ImageFont.load_default()
+
+          def paper(img):
+              d = ImageDraw.Draw(img)
+              d.rectangle([0,0,W,H], fill=BG)
+              # subtle parchment speckle
+              for y in range(0,H,23):
+                  for x in range((y//23)%2*11, W, 37):
+                      if (x*13+y*7)%9 == 0:
+                          d.ellipse([x,y,x+2,y+2], fill=(210,188,150))
+
+          # approved compact 9-area geometry: x1,y1,x2,y2
+          rooms = {
+              1:(455,745,600,910),   # foyer
+              2:(240,390,760,745),   # reading room
+              3:(75,390,240,650),    # librarian office
+              4:(75,170,300,390),    # study
+              5:(300,170,555,390),   # reference alcove
+              6:(555,170,955,390),   # general stacks
+              7:(760,390,955,590),   # scribe room
+              8:(760,590,955,745),   # restricted stacks
+              9:(75,650,240,745),    # storage
+          }
+
+          def wall_rect(d, box, width=14):
+              x1,y1,x2,y2=box
+              d.rectangle([x1,y1,x2,y2], fill=FLOOR, outline=WALL, width=width)
+
+          def door(d, x, y, orient='h'):
+              if orient=='h':
+                  d.rectangle([x-20,y-7,x+20,y+7], fill=FLOOR)
+                  d.line([x-18,y+6,x+18,y-6], fill=INK, width=3)
+              else:
+                  d.rectangle([x-7,y-20,x+7,y+20], fill=FLOOR)
+                  d.line([x+6,y-18,x-6,y+18], fill=INK, width=3)
+
+          def shelf(d, x1,y1,x2,y2):
+              d.rectangle([x1,y1,x2,y2], fill=SHELF, outline=INK, width=2)
+              if (x2-x1)>(y2-y1):
+                  for x in range(x1+9,x2,12): d.line([x,y1+2,x,y2-2], fill=(75,55,35), width=1)
+              else:
+                  for y in range(y1+9,y2,12): d.line([x1+2,y,x2-2,y], fill=(75,55,35), width=1)
+
+          def table(d,cx,cy,w=85,h=42):
+              d.rectangle([cx-w//2,cy-h//2,cx+w//2,cy+h//2], fill=FURN, outline=INK, width=2)
+              for dx,dy in [(-w//2-10,-10),(-w//2-10,10),(w//2+10,-10),(w//2+10,10)]:
+                  d.rectangle([cx+dx-5,cy+dy-6,cx+dx+5,cy+dy+6], fill=FURN, outline=INK)
+
+          def draw_base(show_numbers):
+              img=Image.new('RGB',(W,H),BG); paper(img); d=ImageDraw.Draw(img)
+              title='Marren Library (DM Key)' if show_numbers else 'Marren Library (Player Map)'
+              d.text((70,40),title,font=font(58,True),fill=INK)
+              d.line([70,120,985,120],fill=INK,width=3)
+
+              # light 5-ft-equivalent visual grid on map area
+              for x in range(75,956,55): d.line([x,170,x,910], fill=GRID, width=1)
+              for y in range(170,911,55): d.line([75,y,955,y], fill=GRID, width=1)
+
+              for box in rooms.values(): wall_rect(d,box)
+
+              # connections/doors
+              for args in [(520,745,'h'),(240,520,'v'),(190,390,'h'),(420,390,'h'),(650,390,'h'),(760,490,'v'),(860,590,'h'),(240,695,'v')]: door(d,*args)
+              # outer entrance stairs
+              d.rectangle([480,910,575,955], fill=FLOOR, outline=WALL, width=8)
+              for y in range(920,955,10): d.line([485,y,570,y],fill=INK,width=2)
+
+              # room 2 reading room
+              shelf(d,330,455,355,650); shelf(d,465,455,490,650); shelf(d,600,455,625,650); shelf(d,700,455,725,650)
+              table(d,405,535,70,130); table(d,565,535,70,130); table(d,675,535,70,130)
+              # room 3 office
+              table(d,155,540,95,45); shelf(d,85,420,105,500); shelf(d,215,430,235,600)
+              # room 4 study
+              table(d,185,285,100,55); shelf(d,90,185,275,205)
+              # room 5 reference
+              table(d,430,285,80,45); shelf(d,315,185,540,205); shelf(d,320,220,340,355)
+              # room 6 general stacks
+              for x in [630,730,830,910]: shelf(d,x,215,x+22,350)
+              # room 7 scribe
+              table(d,860,490,110,55)
+              # room 8 restricted
+              shelf(d,790,620,930,640); shelf(d,790,675,930,695); shelf(d,790,715,930,735)
+              # room 9 storage crates
+              for bx,by in [(100,675),(135,675),(100,710),(135,710),(180,700)]: d.rectangle([bx,by,bx+28,by+28],fill=FURN,outline=INK,width=2)
+
+              # compass and scale
+              d.text((875,930),'N',font=font(26,True),fill=INK); d.line([890,970,890,1020],fill=INK,width=4); d.polygon([(890,950),(878,980),(902,980)],fill=INK)
+              d.line([75,1010,370,1010],fill=INK,width=6)
+              for x,lab in [(75,'0'),(150,'5'),(225,'10'),(370,'20 Feet')]:
+                  d.line([x,998,x,1020],fill=INK,width=3); d.text((x-8,1025),lab,font=font(20),fill=INK)
+
+              if show_numbers:
+                  for n,box in rooms.items():
+                      x1,y1,x2,y2=box; cx=(x1+x2)//2; cy=(y1+y2)//2
+                      r=20; d.ellipse([cx-r,cy-r,cx+r,cy+r],fill=BG,outline=INK,width=3); d.text((cx-8,cy-14),str(n),font=font(25,True),fill=INK)
+                  # right-side legend
+                  lx=1025; d.rectangle([1010,130,1415,1010],outline=INK,width=3)
+                  d.text((1040,155),'Marren Library — Key',font=font(31,True),fill=INK)
+                  key=[
+                    ('1','Entrance & Foyer','Main entrance and reception.'),
+                    ('2','Reading Room','Primary reading area and open shelves.'),
+                    ('3','Librarian’s Office','Private workspace and records.'),
+                    ('4','Study Room','Quiet room for small groups.'),
+                    ('5','Reference Alcove','Rare/frequently consulted texts.'),
+                    ('6','General Stacks','Most of the library collection.'),
+                    ('7','Scribe Room','Copying and transcription area.'),
+                    ('8','Restricted Stacks','Locked limited-access collection.'),
+                    ('9','Storage','Supplies, carts, archived material.'),
+                  ]
+                  yy=215
+                  for n,name,desc in key:
+                      d.text((1040,yy),f'{n}. {name}',font=font(23,True),fill=INK)
+                      d.text((1070,yy+31),desc,font=font(17),fill=INK)
+                      yy+=84
+              return img
+
+          (ROOT/'img/dm').mkdir(parents=True,exist_ok=True)
+          (ROOT/'img/player').mkdir(parents=True,exist_ok=True)
+          draw_base(True).save(ROOT/'img/dm/marren_library.webp','WEBP',quality=88,method=6)
+          draw_base(False).save(ROOT/'img/player/marren_library.webp','WEBP',quality=88,method=6)
+
+          # ---------- JSON chapter update ----------
+          def find_named(obj, name):
+              if isinstance(obj, dict):
+                  if obj.get('name') == name: return obj
+                  for v in obj.values():
+                      r=find_named(v,name)
+                      if r is not None:return r
+              elif isinstance(obj,list):
+                  for v in obj:
+                      r=find_named(v,name)
+                      if r is not None:return r
+              return None
+
+          def find_parent_list(obj, child_name):
+              if isinstance(obj,list):
+                  if any(isinstance(v,dict) and v.get('name')==child_name for v in obj): return obj
+                  for v in obj:
+                      r=find_parent_list(v,child_name)
+                      if r is not None:return r
+              elif isinstance(obj,dict):
+                  for v in obj.values():
+                      r=find_parent_list(v,child_name)
+                      if r is not None:return r
+              return None
+
+          chapter=find_named(data,'Chapter 9: Marren Library')
+          assert chapter is not None, 'Chapter 9 not found'
+
+          maps=find_named(chapter,'Maps')
+          if maps is not None:
+              maps['entries']=[
+                {'type':'image','href':{'type':'external','url':'https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/marren_library.webp'},'imageType':'mapPlayer','title':'Marren Library — Player Map','grid':{'type':'none'}},
+                {'type':'image','href':{'type':'external','url':'https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/marren_library.webp'},'imageType':'map','title':'Marren Library — DM Map','grid':{'type':'none'}},
+                '{@link Player Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/marren_library.webp}',
+                '{@link DM Keyed Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/marren_library.webp}'
+              ]
+
+          parent=find_parent_list(chapter,'Entering the Library')
+          assert parent is not None, 'Entering the Library list not found'
+          new_areas=[
+            {'type':'entries','name':'1. Entrance & Foyer','entries':['The library’s main entrance is damaged but usable. A small reception desk, display cases, and scattered civic notices make the building’s former public function obvious. Characters who pause here can identify the safest routes into the reading room and offices without a check.']},
+            {'type':'entries','name':'2. Reading Room','entries':['This broad central room is the party’s primary research space. Long tables and open shelves create clear lanes of movement and plentiful half-cover. Searching here reveals catalog references pointing toward the Librarian’s Office, Reference Alcove, General Stacks, and Restricted Stacks.']},
+            {'type':'entries','name':'3. Librarian’s Office','entries':['The head librarian’s office contains administrative ledgers, accession lists, property correspondence, and notes connecting several pre-fall researchers to the Radiant Well. A meaningful search automatically identifies which collections contain the campaign’s essential historical clues.']},
+            {'type':'entries','name':'4. Study Room','entries':['A quiet group-study chamber with a large table and wall shelving. Independent scholars, scavengers, or another intelligent faction can be encountered here. Treat this as a social-first scene: cooperation can produce catalog information, while threats or violence risk damage to nearby records.']},
+            {'type':'entries','name':'5. Reference Alcove','entries':['Rare and frequently consulted works are kept here. One {@creature Animated Armor|XMM} and two {@creature Flying Sword|XMM} guardians protect the sealed reference cases. They activate only when someone forces a case or removes protected material without satisfying the library’s old authorization mechanism.']},
+            {'type':'entries','name':'6. General Stacks','entries':['The largest surviving collection fills tightly spaced rows. A {@creature Basilisk|XMM} has nested among damaged shelves; toppled cases and narrow aisles create cover and movement choices. The party can bypass it by using the Reading Room and Reference Alcove routes rather than treating the stacks as a mandatory fight.']},
+            {'type':'entries','name':'7. Scribe Room','entries':['Copying desks, inks, blank folios, and preservation supplies remain usable. Once the party finds important records, this room lets them make controlled copies before deciding who receives originals. Ten minutes of careful work produces a serviceable duplicate of one discovered document set.']},
+            {'type':'entries','name':'8. Restricted Stacks','entries':['The locked restricted collection contains the strongest Radiant Well and possession material. A {@creature Specter|XMM} tied to the old library serves as a social-first guardian and attacks only if the collection is threatened or deliberately destroyed. The essential revelations here are automatic: Tyren can survive by transferring between hosts, and the Radiant Well can admit or alter consciousness. The pre-fall “no cause for alarm” Council circular is also stored here.']},
+            {'type':'entries','name':'9. Storage','entries':['Supply crates, book carts, damaged archival boxes, and wrapped salvage fill this small room. One suspicious container can be a {@creature Mimic|XMM} if an extra encounter is useful; otherwise this area holds preservation materials and the chapter’s utility-item reward rather than another compulsory fight.']},
+          ]
+          # Replace direct old numbered map areas only.
+          cleaned=[]
+          insert_at=None
+          for item in parent:
+              if isinstance(item,dict) and re.match(r'^\d+\.', str(item.get('name',''))):
+                  continue
+              cleaned.append(item)
+              if isinstance(item,dict) and item.get('name')=='Entering the Library': insert_at=len(cleaned)
+          if insert_at is None: insert_at=0
+          parent[:] = cleaned[:insert_at] + new_areas + cleaned[insert_at:]
+
+          # Remove stale Garden Court wording within this chapter only.
+          def patch_strings(obj):
+              if isinstance(obj,dict):
+                  if obj.get('name')=='Scene 2: Garden Court': obj['name']='Scene 2: Reading Room and Stacks'
+                  for k,v in list(obj.items()):
+                      if isinstance(v,str):
+                          v=v.replace('The court is overgrown and watched by creatures that have nested among the statues.', 'The reading room opens into damaged stacks where old guardians and ruin predators can complicate the search.')
+                          v=v.replace('Garden Court','Reading Room')
+                          obj[k]=v
+                      else: patch_strings(v)
+              elif isinstance(obj,list):
+                  for i,v in enumerate(obj):
+                      if isinstance(v,str):
+                          v=v.replace('The court is overgrown and watched by creatures that have nested among the statues.', 'The reading room opens into damaged stacks where old guardians and ruin predators can complicate the search.')
+                          v=v.replace('Garden Court','Reading Room')
+                          obj[i]=v
+                      else: patch_strings(v)
+          patch_strings(chapter)
+
+          # Add the tactical map key header to chapter contents if missing.
+          for adv in data.get('adventure',[]):
+              if adv.get('id')=='NCFA-RuinsOfBellweather':
+                  for c in adv.get('contents',[]):
+                      if c.get('name')=='Chapter 9: Marren Library':
+                          headers=c.setdefault('headers',[])
+                          if 'Marren Library Tactical Map Key' not in headers:
+                              idx=headers.index('Adventure') if 'Adventure' in headers else len(headers)
+                              headers.insert(idx,'Marren Library Tactical Map Key')
+          # Insert a visible map-key summary section before Adventure if absent.
+          ch_entries=chapter.get('entries',[])
+          if not any(isinstance(x,dict) and x.get('name')=='Marren Library Tactical Map Key' for x in ch_entries):
+              adv_idx=next((i for i,x in enumerate(ch_entries) if isinstance(x,dict) and x.get('name')=='Adventure'),len(ch_entries))
+              ch_entries.insert(adv_idx,{'type':'entries','name':'Marren Library Tactical Map Key','entries':['The replacement Marren Library map is intentionally compact and table-buildable. Use the numbered areas below as the authoritative geography for Chapter 9. The Cardon Weavehouse map remains unchanged.']})
+
+          # ---------- metadata/version ----------
+          now=int(time.time())
+          meta=data['_meta']
+          meta['sources'][0]['version']='4.2'
+          meta['sources'][0]['dateLastModified']=now
+          meta['dateLastModified']=now
+          meta.pop('_dateLastModifiedHash',None)
+          stable=json.dumps(data,ensure_ascii=False,separators=(',',':'),sort_keys=True)
+          meta['_dateLastModifiedHash']=hashlib.sha1(stable.encode('utf-8')).hexdigest()[:10]
+          text=json.dumps(data,ensure_ascii=False,indent='\t')+'\n'
+          json.loads(text)
+          json_path.write_text(text,encoding='utf-8')
+          (ROOT/'No_Cause_for_Alarm_5etools_v4.2.json').write_text(text,encoding='utf-8')
+          print('Marren Library replaced with compact nine-area map; JSON validated; version 4.2')
+          PY
+      - name: Commit generated maps and campaign update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add img/dm/marren_library.webp img/player/marren_library.webp No_Cause_for_Alarm_5etools_CURRENT.json No_Cause_for_Alarm_5etools_v4.2.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Replace Marren Library maps and update Chapter 9 key"
+          git push
