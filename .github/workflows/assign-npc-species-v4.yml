@@ -1,0 +1,163 @@
+name: Assign NPC species and concrete arrival descriptions
+
+on:
+  push:
+    paths:
+      - '.github/workflows/assign-npc-species-v4.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch-campaign:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Patch campaign JSON
+        run: |
+          python - <<'PY'
+          import json, time, hashlib, pathlib
+
+          path = pathlib.Path('No_Cause_for_Alarm_5etools_CURRENT.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
+
+          def walk(obj):
+              if isinstance(obj, dict):
+                  for k,v in obj.items():
+                      yield obj,k,v
+                      yield from walk(v)
+              elif isinstance(obj, list):
+                  for i,v in enumerate(obj):
+                      yield obj,i,v
+                      yield from walk(v)
+
+          def replace_all(old, new):
+              n=0
+              for parent,key,val in walk(data):
+                  if isinstance(val,str) and old in val:
+                      parent[key]=val.replace(old,new)
+                      n+=1
+              return n
+
+          # Correct Jord's already-established species.
+          replace_all('A road-worn human merchant in his middle years', 'A road-worn gnome merchant in his middle years')
+
+          # Replace/add concrete first-appearance descriptions where the v3.9 description pass already created anchors.
+          replacements = {
+            '{@b NPC description — Bishop Brann.} An older cleric in well-kept but repeatedly repaired vestments, with tired eyes, careful hands, and the bearing of someone accustomed to being listened to without demanding it. He speaks deliberately and tends to frame problems in terms of who will suffer if the wrong choice is made.':
+            '{@b NPC description — Bishop Brann.} An elderly dwarf, short even by dwarven standards and broad around the middle, with deeply lined brown skin and a long silver beard divided into two neat braids. His well-kept clerical vestments have been repaired repeatedly at the cuffs and hem. He speaks slowly and deliberately, with the calm authority of someone accustomed to being listened to without raising his voice, and tends to frame problems in terms of who will suffer if the wrong choice is made.',
+
+            '{@b NPC description — Tal Rusk.} A hard-used veteran with a square build, cropped hair, battered scale-and-leather gear, and an old scar pulling one side of his mouth slightly tight. He stands where he can see exits and approaches, speaks like a sergeant addressing a troublesome patrol, and looks for a way to keep control before reaching for violence.':
+            '{@b NPC description — Tal Rusk.} A middle-aged dwarf, short and massively square through the shoulders, with cropped iron-gray hair, a braided beard, battered scale-and-leather gear, and an old scar pulling one side of his mouth tight. He stands where he can see exits and approaches, speaks like a sergeant addressing a troublesome patrol, and looks for a way to keep control before reaching for violence.',
+
+            '{@b NPC description — Lessa Dorn and Kav Orin.} Lessa is lean, sun-browned, and visibly angry beneath a layer of dust, with a torn survey coat and a measuring cord still looped at her belt. Kav is younger-looking, hollow-eyed from exhaustion, and keeps glancing toward exits as if expecting another attack. Both carry the practical gear of people who spend more time in ruins than offices.':
+            '{@b NPC description — Lessa Dorn and Kav Orin.} Lessa is a lean half-elf woman in early middle age, sun-browned and visibly angry beneath a layer of dust, with a torn survey coat and a measuring cord still looped at her belt. Kav is a younger halfling man, compact and hollow-eyed from exhaustion, who keeps glancing toward exits as if expecting another attack. Both carry the practical gear of people who spend more time in ruins than offices.',
+
+            '{@b NPC description — Vara Koven and Dorn.} Vara is sharply dressed for a criminal hiding place, with controlled movements, immaculate gloves, and the practiced smile of someone who prefers deals to bloodshed. Dorn is heavier, scarred, plainly armed, and watches the stair rather than the conversation; his expression suggests he would rather settle the matter with steel.':
+            '{@b NPC description — Vara Koven and Dorn.} Vara is a tall tiefling woman in early middle age, slim and sharply dressed for a criminal hiding place, with swept-back horns, controlled movements, immaculate gloves, and the practiced smile of someone who prefers deals to bloodshed. Dorn is a heavyset human man in his forties, scarred, plainly armed, and watches the stair rather than the conversation; his expression suggests he would rather settle the matter with steel.',
+
+            '{@b NPC description — Tessa Marr.} A rangy scavenger with a patched hooded coat, cropped hair, and the restless gaze of someone always measuring distance to the nearest exit. She carries herself like a scout rather than a bruiser and speaks quickly once she realizes a fight is going against her.':
+            '{@b NPC description — Tessa Marr.} A rangy wood elf woman who looks young by elven standards, tall and narrow-built, with cropped auburn hair, a patched hooded coat, and the restless gaze of someone always measuring distance to the nearest exit. She carries herself like a scout rather than a bruiser and speaks quickly once she realizes a fight is going against her.',
+
+            '{@b NPC description — Korrin Vale.} A broad, disciplined man in repaired military gear with no matching insignia left on it, Korrin looks more like a discharged soldier than a street tough. He keeps his weapons maintained, gives short orders, and becomes noticeably less certain when separated from his followers.':
+            '{@b NPC description — Korrin Vale.} A broad, powerfully built dragonborn man in repaired military gear with no matching insignia left on it, Korrin has dark bronze scales, a chipped horn, and the bearing of a discharged soldier rather than a street tough. He keeps his weapons maintained, gives short orders, and becomes noticeably less certain when separated from his followers.',
+
+            '{@b NPC description — Garin and Balden.} Garin is a neatly dressed goblin with ink-stained fingertips, bright rings, and the constant half-smile of a broker who expects every conversation to become a transaction. Balden is a heavyset human enforcer in reinforced street clothes, shaved-headed and watchful, standing just far enough back to let Garin do the talking until trouble begins.':
+            '{@b NPC description — Garin and Balden.} Garin is a small, neatly dressed goblin man of indeterminate middle age with ink-stained fingertips, bright rings, and the constant half-smile of a broker who expects every conversation to become a transaction. Balden is a tall, heavyset human man in his thirties, shaved-headed and watchful in reinforced street clothes, standing just far enough back to let Garin do the talking until trouble begins.',
+
+            '{@b NPC description — Hessa Vale.} A severe, sleepless-looking human mage in dark work robes protected by a stained leather apron, with pale fingers marked by ink, grave soil, and alchemical burns. Her confidence is sharp until Tyren is mentioned; then her attention becomes guarded and calculating.':
+            '{@b NPC description — Hessa Vale.} A severe human woman in her forties, tall and spare, with black hair streaked prematurely white and a sleepless cast to her face. She wears dark work robes under a stained leather apron, and her pale fingers are marked by ink, grave soil, and alchemical burns. Her confidence is sharp until Tyren is mentioned; then her attention becomes guarded and calculating.',
+
+            '{@b NPC description — Yaren.} A thin, meticulously groomed arcane researcher in layered laboratory robes, with protective lenses perched above one eye and fingers stained by reagents. He speaks to strangers as though they are interruptions to an experiment and keeps edging toward notes, controls, or an escape route whenever the conversation turns against him.':
+            '{@b NPC description — Yaren.} A tall, thin high elf man of indeterminate adult age, meticulously groomed, with silver-blond hair, pale gold eyes, layered laboratory robes, and protective lenses perched above one eye. His fingers are stained by reagents. He speaks to strangers as though they are interruptions to an experiment and keeps edging toward notes, controls, or an escape route whenever the conversation turns against him.',
+
+            '{@b NPC description — Daren Voss.} A weathered mercenary captain in practical armor assembled from several campaigns, with a close-trimmed beard, a broken nose, and the calm stance of someone used to commanding dangerous people for pay. He treats every conversation as a negotiation over leverage.':
+            '{@b NPC description — Daren Voss.} A weathered half-orc man in his forties, tall and thick-necked, with gray-green skin, a broken nose, short tusks, and practical armor assembled from several campaigns. He has the calm stance of someone used to commanding dangerous people for pay and treats every conversation as a negotiation over leverage.',
+
+            '{@b NPC description — Doman.} A polished human mage in understated traveling clothes, with clean boots, careful diction, and a pleasant expression that never quite reaches his eyes. He presents himself as reasonable and helpful while continually steering the conversation toward whatever object he wants others to retrieve for him.':
+            '{@b NPC description — Doman.} A polished human man in his thirties, average height and slender, with carefully combed dark hair, clean boots, understated traveling clothes, and a pleasant expression that never quite reaches his eyes. He presents himself as reasonable and helpful while continually steering the conversation toward whatever object he wants others to retrieve for him.',
+
+            '{@b NPC description — War Leader Kesh.} A tall, battle-scarred commander wearing trophies only from defeated enemy officers rather than civilians, with a heavy cloak and a voice trained to carry over a battlefield. Kesh projects certainty in public, but watches lieutenants closely whenever Tyren\'s promises are questioned.':
+            '{@b NPC description — War Leader Kesh.} A tall orc man in early middle age, massively built and battle-scarred, with one broken lower tusk, a heavy cloak, and trophies taken only from defeated enemy officers rather than civilians. His voice is trained to carry over a battlefield. Kesh projects certainty in public, but watches lieutenants closely whenever Tyren\'s promises are questioned.',
+
+            '{@b NPC description — Captain Emmer and Commander Darr Vale.} Emmer is a tired professional officer with dented armor, a practical cloak, and the expression of someone calculating how many people can still be saved. Darr Vale is older, rigid, and immaculately armed; even at rest he stands like a man waiting for a formation to dress ranks.':
+            '{@b NPC description — Captain Emmer and Commander Darr Vale.} Emmer is a tall dragonborn woman in middle age, with copper-colored scales, one weathered horn tip, dented armor, and a practical cloak; she has the tired expression of someone calculating how many people can still be saved. Darr Vale is an older human man, lean and rigid, with close-cropped white hair and immaculately maintained arms; even at rest he stands like a man waiting for a formation to dress ranks.',
+
+            '{@b NPC description — Commander Haren Vell.} A large, disciplined commander in dark, well-maintained plate with the Iron Banner displayed plainly rather than ostentatiously. His hair is iron-gray, his movements economical, and his voice controlled; he gives the impression that chaos itself offends him more than any particular enemy.':
+            '{@b NPC description — Commander Haren Vell.} A broad dwarf man in late middle age, tall for a dwarf, with iron-gray hair, a squared beard, and dark, well-maintained plate bearing the Iron Banner plainly rather than ostentatiously. His movements are economical and his voice controlled; he gives the impression that chaos itself offends him more than any particular enemy.',
+
+            '{@b NPC description — Varek Holt.} A lean professional killer in plain dark field gear, with no visible insignia and weapons positioned for immediate use. He is composed rather than theatrical, speaks only as much as necessary, and keeps shifting so no one comfortably gets behind him.':
+            '{@b NPC description — Varek Holt.} A lean elf man who appears young by human standards, tall and long-limbed, with close-cut dark hair, a narrow scar across one cheek, plain dark field gear, and no visible insignia. His weapons are positioned for immediate use. He is composed rather than theatrical, speaks only as much as necessary, and keeps shifting so no one comfortably gets behind him.',
+
+            '{@b NPC description — Alen Hyam.} A scholarly mage with graying hair, ink-stained cuffs, and the distracted manner of someone who has spent too long trying to reconcile contradictory reports. He is cautious, observant, and more willing to listen than most of Tyren\'s people.':
+            '{@b NPC description — Alen Hyam.} A human man in his late fifties, average height and slightly stooped, with graying hair, round spectacles, ink-stained cuffs, and the distracted manner of someone who has spent too long trying to reconcile contradictory reports. He is cautious, observant, and more willing to listen than most of Tyren\'s people.',
+
+            '{@b NPC description — Jeren.} A narrow-faced spellcaster in expensive robes worn under a practical traveling mantle, with carefully arranged jewelry and a habit of smoothing one sleeve when nervous. He tries to look indispensable even when he is plainly considering betrayal.':
+            '{@b NPC description — Jeren.} A slender tiefling man in his thirties, slightly below average height, with deep red skin, swept black horns, a narrow face, expensive robes under a practical traveling mantle, and carefully arranged jewelry. He has a habit of smoothing one sleeve when nervous and tries to look indispensable even when he is plainly considering betrayal.'
+          }
+          applied=0
+          for old,new in replacements.items():
+              n=replace_all(old,new)
+              applied += n
+
+          # Add explicit species to other recurring/important named NPCs where natural text anchors exist.
+          species_text = [
+            ('Mera Kest speaks for the bandits.', 'Mera Kest, a human woman, speaks for the bandits.'),
+            ('The survivors, Lessa Dorn and Kav Orin, are exhausted', 'The survivors, Lessa Dorn, a half-elf woman, and Kav Orin, a halfling man, are exhausted'),
+            ('Their third member, Harl, left to seek help.', 'Their third member, Harl, a human man, left to seek help.'),
+            ('Council surveyor named {@b Kaleb}', 'Council surveyor named {@b Kaleb}, a human man,'),
+            ('The eldest caretaker, Nela Orr, refuses', 'The eldest caretaker, Nela Orr, a human woman, refuses'),
+            ('Rask, an orc mercenary', 'Rask, an orc mercenary'),
+            ('Mara Pell speaks for the families', 'Mara Pell, a halfling woman, speaks for the families'),
+            ('Sera wants her home back', 'Sera, a human woman, wants her home back'),
+            ('The caretaker, Old Ren, distrusts', 'The caretaker, Old Ren, an elderly dwarf, distrusts'),
+            ('Community leader Nessa Harroway', 'Community leader Nessa Harroway, a half-orc woman,'),
+            ('Kessa Ember}, a practical kobold engineer', 'Kessa Ember}, a practical kobold engineer'),
+            ('Captain Sera Dorn} uses', 'Captain Sera Dorn}, a human woman, uses'),
+            ('Speaker Mara Rellan wants proof', 'Speaker Mara Rellan, a lizardfolk woman, wants proof'),
+            ('Waylen’s leader, Jorn Waylen, is suspicious', 'Waylen’s leader, Jorn Waylen, a human man, is suspicious'),
+            ('Elder Sella Kerren wants stability', 'Elder Sella Kerren, a thri-kreen elder, wants stability'),
+            ('Perrin Cardon—a minor Council member', 'Perrin Cardon—a human minor Council member'),
+            ('Perrin Cardon}, whose family', 'Perrin Cardon}, a human man whose family'),
+          ]
+          for old,new in species_text:
+              replace_all(old,new)
+
+          # Wern is a dwarf anywhere he is introduced by name.
+          replace_all('Wern respects direct plans.', 'Wern, a dwarf, respects direct plans.')
+          replace_all('Wern cares mainly that disputes', 'Wern, a dwarf, cares mainly that disputes')
+
+          # Strengthen campaign-wide presentation rule.
+          replace_all(
+            '{@b NPC presentation.} When a named NPC physically enters a scene for the first time, give the players a brief description of what they immediately notice: species when established, apparent age or build when useful, clothing or gear, one memorable physical feature, and a demeanor or voice cue.',
+            '{@b NPC presentation.} When a named NPC physically enters a scene for the first time, explicitly state species, apparent age, height/build, clothing or gear, at least one memorable physical feature, and a demeanor or voice cue.'
+          )
+
+          # Version bump.
+          now=int(time.time())
+          meta=data['_meta']
+          meta['sources'][0]['version']='4.0'
+          meta['sources'][0]['dateLastModified']=now
+          meta['dateLastModified']=now
+          meta.pop('_dateLastModifiedHash',None)
+          raw=json.dumps(data,ensure_ascii=False,separators=(',',':'),sort_keys=True)
+          meta['_dateLastModifiedHash']=hashlib.sha1(raw.encode('utf-8')).hexdigest()[:10]
+
+          out=json.dumps(data,ensure_ascii=False,indent='\t')+'\n'
+          path.write_text(out,encoding='utf-8')
+          json.loads(out)
+          pathlib.Path('No_Cause_for_Alarm_5etools_v4.0.json').write_text(out,encoding='utf-8')
+          print('Applied concrete species/appearance replacements:', applied)
+          PY
+      - name: Commit generated campaign update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add No_Cause_for_Alarm_5etools_CURRENT.json No_Cause_for_Alarm_5etools_v4.0.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Assign NPC species and strengthen appearance descriptions"
+          git push
