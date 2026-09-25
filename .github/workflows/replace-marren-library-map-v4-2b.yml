@@ -1,0 +1,42 @@
+name: Replace Marren Library maps and key - retry
+
+on:
+  push:
+    paths:
+      - '.github/workflows/replace-marren-library-map-v4-2b.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-marren-library:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Pillow
+        run: pip install pillow
+      - name: Run corrected generator
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('.github/workflows/replace-marren-library-map-v4-2.yml')
+          text=p.read_text(encoding='utf-8')
+          start=text.index("          python - <<'PY'\n") + len("          python - <<'PY'\n")
+          end=text.index("\n          PY", start)
+          script=text[start:end]
+          script='\n'.join(line[10:] if line.startswith('          ') else line for line in script.splitlines())
+          script=script.replace("chapter=find_named(data,'Chapter 9: Marren Library')","chapter=find_named(data.get('adventureData',[]),'Chapter 9: Marren Library')")
+          exec(compile(script,'marren-library-update','exec'))
+          PY
+      - name: Commit generated maps and campaign update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add img/dm/marren_library.webp img/player/marren_library.webp No_Cause_for_Alarm_5etools_CURRENT.json No_Cause_for_Alarm_5etools_v4.2.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Replace Marren Library maps and update Chapter 9 key"
+          git push
