@@ -1,0 +1,143 @@
+name: Fix Session 2 surveyor continuity
+
+on:
+  push:
+    paths:
+      - '.github/workflows/fix-session2-surveyor-continuity-v4-1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch-campaign:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Patch campaign JSON
+        run: |
+          python - <<'PY'
+          import json, time, hashlib, pathlib
+
+          path = pathlib.Path('No_Cause_for_Alarm_5etools_CURRENT.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
+
+          def walk(obj):
+              if isinstance(obj, dict):
+                  for k,v in obj.items():
+                      yield obj,k,v
+                      yield from walk(v)
+              elif isinstance(obj, list):
+                  for i,v in enumerate(obj):
+                      yield obj,i,v
+                      yield from walk(v)
+
+          def replace_contains(needle, new_text):
+              n=0
+              for parent,key,val in walk(data.get('adventureData', [])):
+                  if isinstance(val,str) and needle in val:
+                      parent[key]=new_text
+                      n+=1
+              return n
+
+          def replace_fragment(old,new):
+              n=0
+              for parent,key,val in walk(data.get('adventureData', [])):
+                  if isinstance(val,str) and old in val:
+                      parent[key]=val.replace(old,new)
+                      n+=1
+              return n
+
+          def insert_after(needle, new_text):
+              for parent,key,val in walk(data.get('adventureData', [])):
+                  if isinstance(parent,list) and isinstance(val,str) and needle in val:
+                      if new_text not in parent:
+                          parent.insert(key+1,new_text)
+                      return True
+              return False
+
+          # Council knowledge remains anchored in the Slums posting until the party discovers the survivors.
+          replace_contains(
+              'Brakkus explains that the notice on his door is current',
+              "The paper still pinned to Ledger House's door is the completed Slums contract. The Council still believes its three-person survey crew disappeared while working in the Slums; the party has returned too recently for a thorough Council search to have happened. Brakkus has heard that the crew is still missing, but neither he nor the Council has connected their disappearance to Blackstone."
+          )
+          replace_contains(
+              'Brakkus instead shares fresh word he has heard around Bellweather: the Council is looking for a three-person survey crew',
+              "The paper still pinned to Ledger House's door is the completed Slums contract. The Council still believes its three-person survey crew disappeared while working in the Slums; the party has returned too recently for a thorough Council search to have happened. Brakkus has heard that the crew is still missing, but neither he nor the Council has connected their disappearance to Blackstone."
+          )
+
+          # Brann's request is a separate Blackstone hook.
+          replace_contains(
+              "Add the Council's immediate objective: rescue the two surviving members of Kaleb's survey crew.",
+              "Do not add the missing surveyors to Brann's Blackstone objective. At this point the Council still thinks the survey crew vanished in the Slums. Brann's request is separate: armed occupiers at Blackstone have detained temple caretakers, and he wants the caretakers rescued and the sacred records preserved."
+          )
+          replace_fragment(
+              "The Council's parallel request is to recover the two surviving surveyors from Kaleb's three-person crew. Blackstone militants knowingly abducted them; Kaleb is separately missing from the Council's perspective.",
+              "The Council has no Blackstone objective involving the survey crew yet. From the Council's perspective, all three surveyors are still missing from the Slums. The party's discovery of Lessa Dorn and Kav Orin inside Blackstone is the first evidence linking their disappearance to the faction there."
+          )
+
+          # Preserve the truth of the abduction, but move knowledge of it to the discovery scene.
+          replace_fragment(
+              "There were three surveyors in Kaleb's crew. Kaleb is dead; the other two were knowingly abducted by the Blackstone faction and are now held with the temple caretakers near the vestry.",
+              "There were three surveyors in Kaleb's crew. Kaleb is dead; the other two were knowingly abducted by the Blackstone faction and are now held with the temple caretakers near the vestry. This is DM-only truth until the party discovers them at Blackstone; the Council and Brakkus do not know this beforehand."
+          )
+
+          # Brakkus recognizes the satchel but does not solve the mystery from it.
+          replace_contains(
+              "At a natural lull, Brakkus notices the official mark on Pepper's survey satchel",
+              "At a natural lull, Brakkus notices the official mark on Pepper's survey satchel and asks where it came from. He recognizes it as Council survey equipment because the crew worked openly out of Bellweather before disappearing. If Pepper says she found it abandoned in the Slums and no surveyors were nearby, Brakkus may reasonably theorize that the crew dropped it while fleeing or that someone took them, but he has no basis for naming a culprit or connecting them to Blackstone."
+          )
+          insert_after(
+              "At a natural lull, Brakkus notices the official mark on Pepper's survey satchel",
+              "If another character tells Brakkus that Pepper deliberately killed Kaleb while he was unconscious, Brakkus takes the marked survey satchel from Pepper as evidence. He treats the killing as a serious unresolved matter but does not let it derail the immediate Blackstone rescue: innocent captives are in danger now. Brakkus makes clear that Pepper will answer for Kaleb's death after the urgent rescue is resolved."
+          )
+
+          # Blackstone discovery is the reveal.
+          replace_contains(
+              "Aim to finish after the characters have entered the temple and reached, seen, or clearly located the captives near the vestry.",
+              "Aim to finish after the characters have entered the temple and reached, seen, or clearly located the captives near the vestry. Among the captives are Lessa Dorn and Kav Orin, two members of the survey crew the Council still believes vanished in the Slums. Their presence here is the first evidence available to the party that Blackstone was involved in the disappearance."
+          )
+          replace_contains(
+              "A strong cliffhanger is for one rescued or visible surveyor to recognize the marked satchel Pepper is carrying",
+              "If Pepper still has Kaleb's marked satchel, a strong cliffhanger is for one rescued or visible surveyor to recognize it and ask, in substance, 'That's Kaleb's bag. Where is he?' If Brakkus has already taken the satchel after learning of Kaleb's murder, use the surveyors' presence itself as the reveal and let their questions about Kaleb create the tension instead."
+          )
+          replace_fragment(
+              "One of the surveyors recognizes Kaleb's marked satchel if Pepper is carrying it and immediately asks what happened to him. The surveyors do not know Kaleb is dead.",
+              "If Pepper still carries Kaleb's marked satchel, one of the surveyors recognizes it and immediately asks what happened to him. If Brakkus has already taken the satchel, Lessa and Kav still ask whether the party saw Kaleb in the Slums. The surveyors do not know Kaleb is dead. Their presence at Blackstone is the party's first proof that the missing crew was abducted."
+          )
+
+          # Explicitly prevent premature Slums body discovery.
+          replace_fragment(
+              "Kaleb's body is not discovered immediately. It should be found later when civic crews begin rebuilding the Slums",
+              "Kaleb's body is not discovered immediately. The Council has not yet completed a thorough search of the Slums when Session 2 begins. His hastily buried body should be found later when civic crews begin rebuilding or systematically searching the Slums"
+          )
+
+          # Remove other premature claims where they appear verbatim.
+          replace_fragment('armed occupiers at Blackstone Temple are now suspected of holding people', 'armed occupiers at Blackstone Temple are holding temple caretakers')
+          replace_fragment('armed occupiers at Blackstone Temple are suspected of holding people', 'armed occupiers at Blackstone Temple are holding temple caretakers')
+
+          now=int(time.time())
+          meta=data['_meta']
+          meta['sources'][0]['version']='4.1'
+          meta['sources'][0]['dateLastModified']=now
+          meta['dateLastModified']=now
+          meta.pop('_dateLastModifiedHash',None)
+          raw=json.dumps(data,ensure_ascii=False,separators=(',',':'),sort_keys=True)
+          meta['_dateLastModifiedHash']=hashlib.sha1(raw.encode('utf-8')).hexdigest()[:10]
+
+          text=json.dumps(data,ensure_ascii=False,indent='\t')+'\n'
+          path.write_text(text,encoding='utf-8')
+          json.loads(path.read_text(encoding='utf-8'))
+          pathlib.Path('No_Cause_for_Alarm_5etools_v4.1.json').write_text(text,encoding='utf-8')
+          PY
+      - name: Commit generated campaign update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add No_Cause_for_Alarm_5etools_CURRENT.json No_Cause_for_Alarm_5etools_v4.1.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Fix Session 2 surveyor continuity and Brakkus satchel consequence"
+          git push
