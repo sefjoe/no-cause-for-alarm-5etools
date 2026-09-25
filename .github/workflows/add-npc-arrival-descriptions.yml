@@ -1,0 +1,134 @@
+name: Add NPC arrival descriptions
+
+on:
+  push:
+    paths:
+      - '.github/workflows/add-npc-arrival-descriptions.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch-campaign:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Patch campaign JSON
+        run: |
+          python - <<'PY'
+          import json, time, hashlib, pathlib
+
+          path = pathlib.Path('No_Cause_for_Alarm_5etools_CURRENT.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
+
+          # ---------- helpers ----------
+          def walk_lists(obj):
+              if isinstance(obj, list):
+                  yield obj
+                  for x in obj:
+                      yield from walk_lists(x)
+              elif isinstance(obj, dict):
+                  for v in obj.values():
+                      yield from walk_lists(v)
+
+          def replace_first_text(old_sub, new_text):
+              for lst in walk_lists(data.get('adventureData', [])):
+                  for i, x in enumerate(lst):
+                      if isinstance(x, str) and old_sub in x:
+                          lst[i] = new_text
+                          return True
+              return False
+
+          def insert_after(anchor_sub, description):
+              # Do not duplicate on reruns.
+              blob = json.dumps(data, ensure_ascii=False)
+              if description in blob:
+                  return True
+              for lst in walk_lists(data.get('adventureData', [])):
+                  for i, x in enumerate(lst):
+                      if isinstance(x, str) and anchor_sub in x:
+                          lst.insert(i + 1, description)
+                          return True
+              return False
+
+          # ---------- Session 2 continuity correction ----------
+          old = "Brakkus explains that the notice on his door is current: the Council is looking for a three-person survey crew"
+          new = ("The paper still pinned to Ledger House's door is the Slums contract the party already acted on; "
+                 "it is now a stale reminder of the job they just completed, not a new Blackstone notice. "
+                 "Brakkus instead shares fresh word he has heard around Bellweather: the Council is looking for a three-person survey crew, including Kaleb by name, "
+                 "and armed occupiers at Blackstone Temple are suspected of holding people. Jarrock's existing interest in Council work should be enough to make this an invitation rather than a forced hook.")
+          assert replace_first_text(old, new), 'Could not find Session 2 door-notice continuity text'
+
+          # ---------- DM-facing arrival descriptions ----------
+          # These are intentionally concise: enough to portray the NPC immediately without repeating full biographies.
+          arrivals = [
+              ("Jord's missing strongbox drew the party into the Slums", "{@b NPC description — Jord.} A road-worn human merchant in his middle years, broad through the shoulders and dressed for travel rather than display. His coat is good quality but dusty, his hands are callused from handling cargo, and he speaks with the brisk courtesy of someone used to bargaining without wasting time."),
+              ("Tiera Dame, a halfling proprietor of the improvised shop {@b The Tiny Mage}", "{@b NPC description — Tiera Dame.} A compact halfling woman with quick dark eyes, a practical apron over mismatched traveling clothes, and several small pouches tied at her belt. She talks rapidly, watches customers' hands as much as their faces, and gives the impression that very little happens in the Slums without eventually reaching her ears."),
+              ("At a natural lull, Brakkus notices the official mark", "{@b NPC description — Brakkus Ledgerhelm.} A powerfully built half-orc around forty-eight, with weathered green-gray skin, close-cropped dark hair touched with gray, and the posture of someone who spent decades wearing armor. At Ledger House he dresses simply, keeps his voice low, and rarely needs to raise it to control a room."),
+              ("After Brakkus has raised the subject, Bishop Brann arrives", "{@b NPC description — Bishop Brann.} An older cleric in well-kept but repeatedly repaired vestments, with tired eyes, careful hands, and the bearing of someone accustomed to being listened to without demanding it. He speaks deliberately and tends to frame problems in terms of who will suffer if the wrong choice is made."),
+              ("Derren's existing relic-recovery interest remains in canon", "{@b NPC description — Derren.} A small gnome priest with neatly trimmed hair, soot-darkened traveling hems, and a satchel crowded with notes, wrappings, and bits of devotional cord. He becomes noticeably more animated when discussing old relics or temple history."),
+              ("Tal Rusk, a {@creature Tal Rusk|NCFA}", "{@b NPC description — Tal Rusk.} A hard-used veteran with a square build, cropped hair, battered scale-and-leather gear, and an old scar pulling one side of his mouth slightly tight. He stands where he can see exits and approaches, speaks like a sergeant addressing a troublesome patrol, and looks for a way to keep control before reaching for violence."),
+              ("The survivors, Lessa Dorn and Kav Orin", "{@b NPC description — Lessa Dorn and Kav Orin.} Lessa is lean, sun-browned, and visibly angry beneath a layer of dust, with a torn survey coat and a measuring cord still looped at her belt. Kav is younger-looking, hollow-eyed from exhaustion, and keeps glancing toward exits as if expecting another attack. Both carry the practical gear of people who spend more time in ruins than offices."),
+              ("Vara Koven directs the network from the upper floor", "{@b NPC description — Vara Koven and Dorn.} Vara is sharply dressed for a criminal hiding place, with controlled movements, immaculate gloves, and the practiced smile of someone who prefers deals to bloodshed. Dorn is heavier, scarred, plainly armed, and watches the stair rather than the conversation; his expression suggests he would rather settle the matter with steel."),
+              ("Their leader, Tessa Marr, was promised 200 gp", "{@b NPC description — Tessa Marr.} A rangy scavenger with a patched hooded coat, cropped hair, and the restless gaze of someone always measuring distance to the nearest exit. She carries herself like a scout rather than a bruiser and speaks quickly once she realizes a fight is going against her."),
+              ("Korrin Vale leads the armed group", "{@b NPC description — Korrin Vale.} A broad, disciplined man in repaired military gear with no matching insignia left on it, Korrin looks more like a discharged soldier than a street tough. He keeps his weapons maintained, gives short orders, and becomes noticeably less certain when separated from his followers."),
+              ("Garin, a goblin broker, is talkative and self-protective. Balden", "{@b NPC description — Garin and Balden.} Garin is a neatly dressed goblin with ink-stained fingertips, bright rings, and the constant half-smile of a broker who expects every conversation to become a transaction. Balden is a heavyset human enforcer in reinforced street clothes, shaved-headed and watchful, standing just far enough back to let Garin do the talking until trouble begins."),
+              ("Commander Vesk uses the {@creature Commander Vesk|NCFA}", "{@b NPC description — Commander Vesk.} A hobgoblin officer with carefully maintained armor, a stiff crimson sash, and a face lined more by responsibility than age. Vesk speaks in clipped battlefield terms, keeps subordinates positioned even during conversation, and constantly checks whether retreat routes remain open."),
+              ("Necromancer Hessa Vale is ambitious", "{@b NPC description — Hessa Vale.} A severe, sleepless-looking human mage in dark work robes protected by a stained leather apron, with pale fingers marked by ink, grave soil, and alchemical burns. Her confidence is sharp until Tyren is mentioned; then her attention becomes guarded and calculating."),
+              ("Chief researcher Yaren is brilliant", "{@b NPC description — Yaren.} A thin, meticulously groomed arcane researcher in layered laboratory robes, with protective lenses perched above one eye and fingers stained by reagents. He speaks to strangers as though they are interruptions to an experiment and keeps edging toward notes, controls, or an escape route whenever the conversation turns against him."),
+              ("Daren Voss}, a mixed-species mercenary captain", "{@b NPC description — Daren Voss.} A weathered mercenary captain in practical armor assembled from several campaigns, with a close-trimmed beard, a broken nose, and the calm stance of someone used to commanding dangerous people for pay. He treats every conversation as a negotiation over leverage."),
+              ("Doman}, a deceptive spellcaster seeking an artifact", "{@b NPC description — Doman.} A polished human mage in understated traveling clothes, with clean boots, careful diction, and a pleasant expression that never quite reaches his eyes. He presents himself as reasonable and helpful while continually steering the conversation toward whatever object he wants others to retrieve for him."),
+              ("War leader Kesh serves Tyren", "{@b NPC description — War Leader Kesh.} A tall, battle-scarred commander wearing trophies only from defeated enemy officers rather than civilians, with a heavy cloak and a voice trained to carry over a battlefield. Kesh projects certainty in public, but watches lieutenants closely whenever Tyren's promises are questioned."),
+              ("Captain Emmer wants the hold to survive and can be persuaded. Commander Darr Vale", "{@b NPC description — Captain Emmer and Commander Darr Vale.} Emmer is a tired professional officer with dented armor, a practical cloak, and the expression of someone calculating how many people can still be saved. Darr Vale is older, rigid, and immaculately armed; even at rest he stands like a man waiting for a formation to dress ranks."),
+              ("Haren Vell, the Iron Banner commander", "{@b NPC description — Commander Haren Vell.} A large, disciplined commander in dark, well-maintained plate with the Iron Banner displayed plainly rather than ostentatiously. His hair is iron-gray, his movements economical, and his voice controlled; he gives the impression that chaos itself offends him more than any particular enemy."),
+              ("Strike leader Varek Holt has been promised immunity", "{@b NPC description — Varek Holt.} A lean professional killer in plain dark field gear, with no visible insignia and weapons positioned for immediate use. He is composed rather than theatrical, speaks only as much as necessary, and keeps shifting so no one comfortably gets behind him."),
+              ("Alen Hyam} is a {@creature Alen Hyam|NCFA} advisor", "{@b NPC description — Alen Hyam.} A scholarly mage with graying hair, ink-stained cuffs, and the distracted manner of someone who has spent too long trying to reconcile contradictory reports. He is cautious, observant, and more willing to listen than most of Tyren's people."),
+              ("Jeren} is a rival advisor", "{@b NPC description — Jeren.} A narrow-faced spellcaster in expensive robes worn under a practical traveling mantle, with carefully arranged jewelry and a habit of smoothing one sleeve when nervous. He tries to look indispensable even when he is plainly considering betrayal."),
+              ("Soren confronts the party under Tyren’s control", "{@b NPC description — Soren.} Soren is an immense adult bronze dragon whose normally bright metallic scales have dulled in irregular patches around the head, chest, and joints under Tyren's influence. His movements alternate between the controlled precision of an intelligent dragon and sudden unnatural rigidity, with brief moments when his eyes or voice reveal that the person underneath the possession is still resisting."),
+          ]
+
+          inserted = []
+          missed = []
+          for anchor, desc in arrivals:
+              if insert_after(anchor, desc): inserted.append(desc.split('—',1)[-1].split('.')[0].strip())
+              else: missed.append(anchor)
+
+          # Add a campaign-wide instruction near Running the Adventure so future additions follow the same convention.
+          insert_after(
+              "The campaign follows a repeating rhythm",
+              "{@b NPC presentation.} When a named NPC physically enters a scene for the first time, give the players a brief description of what they immediately notice: species when established, apparent age or build when useful, clothing or gear, one memorable physical feature, and a demeanor or voice cue. Keep it to one or two sentences and do not repeat the full description on later appearances unless the NPC's appearance has materially changed."
+          )
+
+          if missed:
+              print('WARNING: unmatched description anchors:')
+              for m in missed: print(' -', m)
+
+          # ---------- version bump ----------
+          now = int(time.time())
+          meta = data['_meta']
+          meta['sources'][0]['version'] = '3.9'
+          meta['sources'][0]['dateLastModified'] = now
+          meta['dateLastModified'] = now
+          # hash based on stable content before setting the hash field
+          meta.pop('_dateLastModifiedHash', None)
+          raw = json.dumps(data, ensure_ascii=False, separators=(',', ':'), sort_keys=True)
+          meta['_dateLastModifiedHash'] = hashlib.sha1(raw.encode('utf-8')).hexdigest()[:10]
+
+          path.write_text(json.dumps(data, ensure_ascii=False, indent='\t') + '\n', encoding='utf-8')
+          # validation pass
+          json.loads(path.read_text(encoding='utf-8'))
+          pathlib.Path('No_Cause_for_Alarm_5etools_v3.9.json').write_text(path.read_text(encoding='utf-8'), encoding='utf-8')
+          print(f'Inserted/confirmed {len(inserted)} NPC arrival descriptions; missed {len(missed)} anchors')
+          PY
+      - name: Commit generated campaign update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add No_Cause_for_Alarm_5etools_CURRENT.json No_Cause_for_Alarm_5etools_v3.9.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Add NPC arrival descriptions and fix Session 2 flyer continuity"
+          git push
