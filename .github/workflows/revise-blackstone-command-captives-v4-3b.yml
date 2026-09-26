@@ -1,0 +1,146 @@
+name: Revise Blackstone command structure and captives v4.3 retry
+
+on:
+  push:
+    paths:
+      - '.github/workflows/revise-blackstone-command-captives-v4-3b.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  revise-blackstone:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Update campaign JSON
+        run: |
+          python - <<'PY'
+          import json, pathlib, time, hashlib
+
+          path = pathlib.Path('No_Cause_for_Alarm_5etools_CURRENT.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
+
+          def find_named(obj, name):
+              if isinstance(obj, dict):
+                  if obj.get('name') == name:
+                      return obj
+                  for v in obj.values():
+                      r = find_named(v, name)
+                      if r is not None:
+                          return r
+              elif isinstance(obj, list):
+                  for v in obj:
+                      r = find_named(v, name)
+                      if r is not None:
+                          return r
+              return None
+
+          chapter = find_named(data, 'Chapter 4: Blackstone Temple')
+          assert chapter is not None, 'Blackstone chapter not found'
+
+          replacements = {
+              "For Tal Rusk's outer-line encounter, begin with {@b Tal Rusk and 2 Guards}. A third Guard can appear only if the alarm is raised or the party is dominating the fight. Tal challenges, bargains, withdraws, or surrenders when appropriate; his people are not suicidal.": "At the front court, use a {@creature Bandit Captain|XMM} as the Blackstone gate captain with 2 {@creature Guard|XMM|Guards}. The captain controls the outer sentries but is not the overall commander. If defeated or badly pressed, the captain can fall back, surrender, or yield the gate; the guards follow the captain's orders.",
+              "For the current level-3 party, use Tal Rusk and 2 {@creature Guard|XMM|Guards}; a third Guard joins only if the alarm is raised or the party is clearly dominating. Tal and surviving defenders retreat inside when badly pressed rather than fighting to the death. At level 4 or higher, the DM can restore the original four-Guard pressure.": "For the current level-3 party, use 1 {@creature Bandit Captain|XMM} and 2 {@creature Guard|XMM|Guards} at the front court. The captain is the senior gate officer, not Tal Rusk. If the captain yields the gate or orders a withdrawal, the two Guards obey rather than continuing a pointless fight.",
+              "{@b Front Court.} Use {@creature Tal Rusk|NCFA} and 2 {@creature Guard|XMM|Guards}. A third Guard is optional reinforcement only if the party is clearly overwhelming the encounter. Tal tries to hold the entrance and raise the alarm; he does not need to fight to the death.": "{@b Front Court.} Use 1 {@creature Bandit Captain|XMM} and 2 {@creature Guard|XMM|Guards}. This officer commands only the gate force. The encounter can end through combat, retreat, surrender, deception, or a limited agreement that lets the party pass; a deal at the gate does not release the captives or resolve Blackstone.",
+              "{@b Optional Interior Response.} Only if the party is moving quickly or has raised an alarm, use 2 {@creature Guard|XMM|Guards} and 1 {@creature Scout|XMM}. Do not add another Veteran-class enemy before the captive rescue.": "{@b Tal Rusk's Interior Command.} Tal Rusk is deeper inside Blackstone with 4 {@creature Guard|XMM|Guards}. Do not place this force between the party and the captives. Let the characters reach and secure the prisoners first; Tal's force becomes the decisive confrontation as the party attempts to leave or finish taking control of the temple.",
+              "{@link Front Court — Tal Rusk + 2 Guards|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/encounters/blackstone-front-court.json}": "{@link Front Court — Bandit Captain + 2 Guards|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/encounters/blackstone-front-court.json}",
+              "{@link Interior Response — 2 Guards + 1 Scout|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/encounters/blackstone-interior-response.json}": "{@link Interior Command — Tal Rusk + 4 Guards|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/encounters/blackstone-interior-response.json}",
+              "{@b Front Court reinforcement.} The preset intentionally omits the possible third Guard. Add one manually only if the encounter needs reinforcement.": "{@b Front Court command.} The Bandit Captain is the gate officer. If that officer bargains, surrenders, or orders a withdrawal, the two gate Guards follow that decision. Tal Rusk does not appear at the gate.",
+              "{@creature Tal Rusk|NCFA}, believes he is holding the temple until “the Boss” secures the district. He does not know the Boss’s identity.": "{@creature Tal Rusk|NCFA} is the commander of the armed Blackstone force inside the temple, but he is not stationed at the front gate. He believes he is holding the temple until “the Boss” secures the district and does not know the Boss’s identity. Tal has authority over the Guards serving under him, so if he accepts a bargain or orders a withdrawal, those Guards obey.",
+              "The eldest caretaker, Nela Orr, a human woman, refuses to leave until the others are safe.": "There are five temple captives in addition to the two missing Council surveyors. Nela Orr, the eldest caretaker, is an older human woman in soot-stained gray temple robes with cropped silver hair and a firm, controlled voice; she refuses to leave until everyone else is safe. With her are a middle-aged dwarf caretaker with a shaved head and ink-stained fingers; a young halfling caretaker with a bruised face and torn vestments; a broad-shouldered half-orc caretaker with one arm in a sling; and a human temple guard in battered mail with a bandaged thigh, pale from blood loss but still alert."
+          }
+
+          def patch(obj):
+              if isinstance(obj, dict):
+                  for k, v in list(obj.items()):
+                      if isinstance(v, str):
+                          if v in replacements:
+                              obj[k] = replacements[v]
+                          else:
+                              nv = v.replace('Tal Rusk leads this patrol and challenges the party openly.', 'A Blackstone captain leads this patrol and challenges the party openly; Tal Rusk is deeper inside the temple.')
+                              obj[k] = nv
+                      else:
+                          patch(v)
+              elif isinstance(obj, list):
+                  for i, v in enumerate(obj):
+                      if isinstance(v, str):
+                          if v in replacements:
+                              obj[i] = replacements[v]
+                          else:
+                              obj[i] = v.replace('Tal Rusk leads this patrol and challenges the party openly.', 'A Blackstone captain leads this patrol and challenges the party openly; Tal Rusk is deeper inside the temple.')
+                      else:
+                          patch(v)
+          patch(chapter)
+
+          # Put new authoritative DM guidance directly in the chapter.
+          chapter_entries = chapter.setdefault('entries', [])
+          command_name = 'Blackstone Command and Rescue Structure'
+          if not any(isinstance(x, dict) and x.get('name') == command_name for x in chapter_entries):
+              chapter_entries.append({
+                  'type': 'entries',
+                  'name': command_name,
+                  'entries': [
+                      '{@b Gate force.} The front court is held by a Blackstone captain using the {@creature Bandit Captain|XMM} stat block and 2 {@creature Guard|XMM|Guards}. The captain is a senior sentry officer, not the overall commander.',
+                      '{@b Interior command.} Tal Rusk commands the armed force deeper inside Blackstone with 4 {@creature Guard|XMM|Guards}. Do not make this force a mandatory obstacle before the captive area.',
+                      '{@b Rescue first, bargain second.} Let the party locate and physically secure the captives before Tal becomes the final obstacle. Once the prisoners are in the party’s hands, Tal has a practical reason to negotiate rather than fight to the death.',
+                      '{@b Tal’s likely bargain.} Tal can allow the party to leave with the captives and sacred records if the party allows Tal and his surviving people to withdraw alive. He can also negotiate a full evacuation of the temple. If Tal agrees, the Guards under his command obey.',
+                      '{@b If talks fail.} If the party refuses, attacks, or insists on taking Tal prisoner, run Tal Rusk and 4 Guards as the decisive Blackstone combat. Tal still prefers surrender or withdrawal to a suicidal last stand.',
+                      '{@b Noncombatants.} Dependents, coerced refugees, caretakers, and other noncombatants do not continue fighting because Tal or another officer does.'
+                  ]
+              })
+
+          roster_name = 'Blackstone Captive Roster'
+          if not any(isinstance(x, dict) and x.get('name') == roster_name for x in chapter_entries):
+              chapter_entries.append({
+                  'type': 'entries',
+                  'name': roster_name,
+                  'entries': [
+                      '{@b Seven captives total.} Five are temple personnel; the other two are the missing Council surveyors Lessa Dorn and Kav Orin.',
+                      '{@b Nela Orr.} Older human woman; soot-stained gray temple robes; cropped silver hair; firm, controlled voice. She is the spokesperson and refuses to leave until everyone else is safe. She knows the maintenance passage behind the altar and overheard orders to pack the sacred records for removal.',
+                      '{@b Dwarf caretaker.} Middle-aged, shaved head, ink-stained fingers; exhausted but focused on preserving the temple records.',
+                      '{@b Halfling caretaker.} Young, bruised face, torn vestments; frightened but mobile.',
+                      '{@b Half-orc caretaker.} Broad-shouldered, one arm in a sling; protective of the other captives.',
+                      '{@b Temple guard.} Human, battered mail, bandaged thigh, pale from blood loss but alert; can warn the party about guard movement.',
+                      '{@b Lessa Dorn.} Half-elf Council surveyor. She knows Blackstone abducted the survey crew but does not know Kaleb is dead.',
+                      '{@b Kav Orin.} Halfling Council surveyor. He knows Blackstone abducted the survey crew but does not know Kaleb is dead.'
+                  ]
+              })
+
+          # Session boundary guidance.
+          end_name = 'Session 2 to Session 3 Transition'
+          if not any(isinstance(x, dict) and x.get('name') == end_name for x in chapter_entries):
+              chapter_entries.append({
+                  'type': 'entries',
+                  'name': end_name,
+                  'entries': [
+                      'Session 2 should normally end with the seven captives discovered or the rescue underway. Tal Rusk and his four-Guard interior command are intended as the decisive Session 3 confrontation after the party has secured the prisoners.',
+                      'If the party reaches Tal earlier through an unexpected route, Tal can fall back rather than forcing the climactic confrontation before the captives are found.'
+                  ]
+              })
+
+          now = int(time.time())
+          meta = data['_meta']
+          meta['sources'][0]['version'] = '4.3'
+          meta['sources'][0]['dateLastModified'] = now
+          meta['dateLastModified'] = now
+          meta.pop('_dateLastModifiedHash', None)
+          stable = json.dumps(data, ensure_ascii=False, sort_keys=True, separators=(',', ':'))
+          meta['_dateLastModifiedHash'] = hashlib.sha1(stable.encode('utf-8')).hexdigest()[:10]
+          text = json.dumps(data, ensure_ascii=False, indent='\t') + '\n'
+          json.loads(text)
+          path.write_text(text, encoding='utf-8')
+          pathlib.Path('No_Cause_for_Alarm_5etools_v4.3.json').write_text(text, encoding='utf-8')
+          print('NCFA v4.3 updated and validated')
+          PY
+      - name: Commit campaign update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add No_Cause_for_Alarm_5etools_CURRENT.json No_Cause_for_Alarm_5etools_v4.3.json
+          git diff --cached --quiet || git commit -m "Update Blackstone command structure and captives v4.3"
+          git push
