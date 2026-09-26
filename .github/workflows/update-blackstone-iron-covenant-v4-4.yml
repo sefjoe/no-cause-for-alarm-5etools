@@ -1,0 +1,155 @@
+name: Update Blackstone Iron Covenant v4.4
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/update-blackstone-iron-covenant-v4-4.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update-campaign:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Update campaign JSON
+        run: |
+          python - <<'PY'
+          import json, pathlib, time, hashlib
+
+          p = pathlib.Path('No_Cause_for_Alarm_5etools_CURRENT.json')
+          data = json.loads(p.read_text(encoding='utf-8'))
+
+          def walk(obj):
+              if isinstance(obj, dict):
+                  yield obj
+                  for v in obj.values():
+                      yield from walk(v)
+              elif isinstance(obj, list):
+                  for v in obj:
+                      yield from walk(v)
+
+          def find_named(root, name):
+              for o in walk(root):
+                  if o.get('name') == name:
+                      return o
+              return None
+
+          chapter = find_named(data, 'Chapter 4: Blackstone Temple')
+          assert chapter, 'Chapter 4 not found'
+
+          # Replace the v4.3 DM-facing command structure with the new faction identity,
+          # records-box objective, and prisoner-discovery sequence.
+          command = find_named(chapter, 'Blackstone Command and Rescue Structure')
+          assert command, 'Command structure not found'
+          command['name'] = 'Iron Covenant Command and Rescue Structure'
+          command['entries'] = [
+              '{@b Occupying faction.} The armed force occupying Blackstone Temple is the {@b Iron Covenant}. Blackstone is the name of the temple, not the faction. Tal Rusk commands the Covenant force inside the temple and answers to a higher authority he knows only as “the Boss.”',
+              '{@b Gate force.} The front court is held by an Iron Covenant captain using the {@creature Bandit Captain|XMM} stat block and 2 {@creature Guard|XMM|Guards}. The captain is a senior sentry officer, not the overall commander.',
+              '{@b Interior command.} Tal Rusk commands 4 {@creature Guard|XMM|Guards} deeper inside the temple. Do not make Tal’s force a mandatory obstacle before the captive areas.',
+              '{@b Prisoner sequence.} The party should find the five temple personnel first. They then learn that two additional prisoners are being held elsewhere. Those two prisoners are the missing Council surveyors Lessa Dorn and Kav Orin, making their discovery a separate reveal.',
+              '{@b The records box.} Before the final confrontation with Tal, the party finds and takes a locked, iron-bound Iron Covenant records box marked with the Covenant seal. It contains orders, payment ledgers, coded correspondence, supply routes, contact names, and references to the higher authority directing Covenant activity around Bellweather. The characters do not need to understand its full value when they take it.',
+              '{@b Rescue first, bargain second.} Let the party secure the temple personnel, discover and rescue Lessa and Kav, and take possession of the locked records box before Tal becomes the final obstacle.',
+              '{@b Tal’s price.} Tal’s primary objective is recovering the locked Iron Covenant records box. He will agree to abandon Blackstone Temple, order his guards and remaining Covenant personnel to withdraw, and leave the captives and sacred temple records behind if the party returns the locked records box to him. His decision is based on protecting Covenant intelligence and contacts, not fear alone.',
+              '{@b If the party keeps the box.} Tal refuses to voluntarily abandon the temple while the party retains the box. If negotiation fails, run Tal Rusk and 4 Guards as the decisive Blackstone combat. Tal can still surrender if defeated, but the bargain itself is specifically the records box in exchange for evacuation.',
+              '{@b Chain of command.} If Tal accepts the exchange and orders a withdrawal, the Guards under his command obey. Dependents, coerced refugees, and other noncombatants leave with the withdrawing force rather than continuing the fight.'
+          ]
+
+          roster = find_named(chapter, 'Blackstone Captive Roster')
+          assert roster, 'Captive roster not found'
+          roster['name'] = 'Blackstone Prisoner Sequence'
+          roster['entries'] = [
+              '{@b Seven captives total.} Five are temple personnel; the other two are the missing Council surveyors Lessa Dorn and Kav Orin. They are not all found together.',
+              '{@b First discovery — temple personnel.} The party first finds Nela Orr, three other caretakers, and one wounded temple guard. This appears to fulfill Bishop Brann’s immediate rescue request until the prisoners reveal that two other captives were taken deeper into the temple.',
+              '{@b Nela Orr.} Older human woman; soot-stained gray temple robes; cropped silver hair; firm, controlled voice. She is the spokesperson and refuses to leave until everyone else is safe. She knows the maintenance passage behind the altar and overheard orders to pack the sacred records for removal.',
+              '{@b Dwarf caretaker.} Middle-aged, shaved head, ink-stained fingers; exhausted but focused on preserving the temple records.',
+              '{@b Halfling caretaker.} Young, bruised face, torn vestments; frightened but mobile.',
+              '{@b Half-orc caretaker.} Broad-shouldered, one arm in a sling; protective of the other captives.',
+              '{@b Temple guard.} Human, battered mail, bandaged thigh, pale from blood loss but alert; can warn the party about Covenant guard movement and confirm that two additional prisoners were moved elsewhere.',
+              '{@b Second discovery — Council surveyors.} The two additional prisoners are Lessa Dorn and Kav Orin. Their discovery is the first evidence connecting the missing Slums survey crew to the Iron Covenant occupation of Blackstone Temple.',
+              '{@b Lessa Dorn.} Half-elf Council surveyor. She knows the Iron Covenant abducted the survey crew but does not know Kaleb is dead.',
+              '{@b Kav Orin.} Halfling Council surveyor. He knows the Iron Covenant abducted the survey crew but does not know Kaleb is dead.',
+              '{@b Kaleb reveal.} If Pepper still has Kaleb’s marked survey satchel, Lessa or Kav recognizes it and asks where Kaleb is. If Brakkus confiscated the satchel after learning of Kaleb’s death, the surveyors instead ask the party whether they found him.'
+          ]
+
+          trans = find_named(chapter, 'Session 2 to Session 3 Transition')
+          assert trans, 'Transition block not found'
+          trans['entries'] = [
+              'Session 2 should normally progress from the rescue of the five temple personnel to the separate discovery of Lessa Dorn and Kav Orin. The surveyor reveal is the preferred late-session beat or cliffhanger.',
+              'The party should also acquire the locked Iron Covenant records box before the final confrontation with Tal. Tal Rusk and his four-Guard interior command are intended as the decisive confrontation after the prisoners are secure and the party possesses the box.',
+              'If the party reaches Tal earlier through an unexpected route, Tal can fall back rather than forcing the climactic confrontation before the rescue and records-box discovery occur.'
+          ]
+
+          # Correct common faction/location wording inside Chapter 4 only.
+          replacements = {
+              'Blackstone captain': 'Iron Covenant captain',
+              'Blackstone abducted': 'the Iron Covenant abducted',
+              'Blackstone force': 'Iron Covenant force',
+              'Blackstone guards': 'Iron Covenant guards',
+              'Blackstone guard': 'Iron Covenant guard',
+              'Blackstone personnel': 'Iron Covenant personnel',
+              'Blackstone defenders': 'Iron Covenant defenders',
+              'Blackstone occupation': 'Iron Covenant occupation',
+          }
+          def replace_strings(obj):
+              if isinstance(obj, dict):
+                  for k,v in list(obj.items()):
+                      if isinstance(v, str):
+                          for a,b in replacements.items():
+                              v = v.replace(a,b)
+                          obj[k] = v
+                      else:
+                          replace_strings(v)
+              elif isinstance(obj, list):
+                  for i,v in enumerate(obj):
+                      if isinstance(v, str):
+                          for a,b in replacements.items():
+                              v = v.replace(a,b)
+                          obj[i] = v
+                      else:
+                          replace_strings(v)
+          replace_strings(chapter)
+
+          # Add explicit records-box subsection if absent.
+          if not find_named(chapter, 'Locked Iron Covenant Records Box'):
+              chapter.setdefault('entries', []).append({
+                  'type': 'entries',
+                  'name': 'Locked Iron Covenant Records Box',
+                  'entries': [
+                      'Place this iron-bound lockbox along the party’s route after the temple personnel are found but before the final confrontation with Tal. It bears the Iron Covenant seal and is clearly distinct from the temple’s sacred records.',
+                      '{@b Contents.} Orders, payment ledgers, coded correspondence, supply routes, contact names, and references to “the Boss.” The box is valuable primarily as intelligence, not treasure.',
+                      '{@b Tal’s reaction.} Tal immediately recognizes the box and treats its recovery as his highest priority. He offers a complete Iron Covenant withdrawal from Blackstone Temple in exchange for its return.',
+                      '{@b If returned.} Tal orders the Covenant force to evacuate, leaves the rescued prisoners and temple records untouched, and withdraws with his people. The party loses the intelligence in the box unless they previously opened, copied, or otherwise preserved some of it.',
+                      '{@b If retained.} Tal will not willingly abandon the temple while the party holds the box. The dispute can escalate to the Tal Rusk + 4 Guards confrontation.'
+                  ]
+              })
+
+          # Version metadata.
+          now = int(time.time())
+          meta = data['_meta']
+          meta['sources'][0]['version'] = '4.4'
+          meta['sources'][0]['dateLastModified'] = now
+          meta['dateLastModified'] = now
+          meta.pop('_dateLastModifiedHash', None)
+          stable = json.dumps(data, ensure_ascii=False, sort_keys=True, separators=(',', ':'))
+          meta['_dateLastModifiedHash'] = hashlib.sha1(stable.encode('utf-8')).hexdigest()[:10]
+
+          text = json.dumps(data, ensure_ascii=False, indent='\t') + '\n'
+          json.loads(text)
+          p.write_text(text, encoding='utf-8')
+          pathlib.Path('No_Cause_for_Alarm_5etools_v4.4.json').write_text(text, encoding='utf-8')
+          print('Updated NCFA to v4.4: Iron Covenant, staged prisoners, records-box bargain.')
+          PY
+
+      - name: Commit update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add No_Cause_for_Alarm_5etools_CURRENT.json No_Cause_for_Alarm_5etools_v4.4.json
+          git commit -m "Update Blackstone with Iron Covenant and records box v4.4"
+          git push
