@@ -3,15 +3,16 @@
 	"siteVersion": "2.36.1",
 	"items": [
 		{
-			"h": "guard_xmm",
-			"c": 2
+			"h": "tal%20rusk_ncfa",
+			"c": 1
 		},
 		{
-			"h": "scout_xmm",
-			"c": 1
+			"h": "guard_xmm",
+			"c": 4
 		}
 	],
 	"sources": [
+		"NCFA",
 		"XMM"
 	],
 	"saveId": "d3d9b574-8f62-4c79-b9e5-blackstone04",
