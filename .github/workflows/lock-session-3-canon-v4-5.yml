@@ -1,0 +1,335 @@
+name: Lock Session 3 canon v4.5
+
+on:
+  push:
+    paths:
+      - '.github/workflows/lock-session-3-canon-v4-5.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  lock-session-3:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Update NCFA Session 3 canon
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          import pathlib
+          import time
+
+          path = pathlib.Path('No_Cause_for_Alarm_5etools_CURRENT.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
+
+          def section_by_id(root, section_id):
+              for adv in root.get('adventureData', []):
+                  for item in adv.get('data', []):
+                      if isinstance(item, dict) and item.get('type') == 'section' and item.get('id') == section_id:
+                          return item
+              raise AssertionError(f'section {section_id} not found')
+
+          def immediate_named(parent, name):
+              for item in parent.get('entries', []):
+                  if isinstance(item, dict) and item.get('name') == name:
+                      return item
+              return None
+
+          def content_chapter(name):
+              for adv in data.get('adventure', []):
+                  for item in adv.get('contents', []):
+                      if isinstance(item, dict) and item.get('name') == name:
+                          return item
+              raise AssertionError(f'contents chapter not found: {name}')
+
+          # ------------------------------------------------------------------
+          # Chapter 4 contents summary: replace the obsolete pre-Session-3 plan.
+          # ------------------------------------------------------------------
+          top_ch4 = content_chapter('Chapter 4: Blackstone Temple')
+          top_ch4['entries'] = [
+              {
+                  'type': 'entries',
+                  'name': 'Session 3 Canon — Locked Current State',
+                  'entries': [
+                      '{@b Opening state.} Session 3 begins inside Blackstone Temple immediately after Session 2. Both captive-room doors have been smashed open. All seven captives have been physically discovered, but the party has not yet spoken with them.',
+                      '{@b Seven captives.} Nela Orr; three additional temple caretakers; one wounded temple guard; Council surveyors Lessa Dorn and Kav Orin.',
+                      '{@b Nela Orr.} Older human woman in soot-stained gray robes, cropped silver hair, firm controlled voice. Nela briefly escaped captivity, stole Tal Rusk’s coded Iron Covenant ledger, locked and hid it in the safe, and was recaptured. She knows the maintenance passage behind the altar, overheard orders to pack and remove Bishop Brann’s sacred records and relics, and knows Tal is desperate to recover the ledger.',
+                      '{@b Other temple captives.} A middle-aged dwarf caretaker with a shaved head and ink-stained fingers; a young halfling caretaker with a bruised face and torn vestments; a broad-shouldered half-orc caretaker with one arm in a sling; and a human temple guard in battered mail with a bandaged thigh, pale from blood loss but alert.',
+                      '{@b Council surveyors.} Lessa Dorn is a lean, weathered half-elf. Kav Orin is a halfling; no further physical description is locked. Neither knows Kaleb is dead when Session 3 opens.',
+                      '{@b Pepper and the ledger.} Pepper found the coded Iron Covenant ledger in the safe and physically possesses it. The rest of the party knows Pepper has it. The ledger replaces the obsolete records-box plot device; there is no separate Iron Covenant records box.',
+                      '{@b Remaining opposition.} Tal Rusk, a compact scarred dwarf, remains deeper inside with four Guards. The gate captain escaped through the front door at roughly half hit points with one surviving Guard; Aaron killed another gate Guard. The party entered by melting the iron bars over a rear window. No other known witness saw the party’s attack or infiltration.',
+                      '{@b Tal’s leverage.} Tal’s priority is recovering the coded ledger. He can trade a full withdrawal by himself and his four remaining Guards for the ledger while leaving the rescued captives and Bishop Brann’s sacred records and relics intact. If the party keeps the ledger and talks fail, Tal and four Guards are the decisive Blackstone confrontation.'
+                  ]
+              },
+              {
+                  'type': 'entries',
+                  'name': 'Post-Blackstone Council Continuity',
+                  'entries': [
+                      'After Blackstone, Lessa Dorn and Kav Orin report to the Council. A Council envoy requires the party to meet at Ledger House. A character deliberately listening to the envoy’s private exchange with Brakkus can make a DC 20 Perception check to overhear it.',
+                      'The Council participants for the consequence scene are Ulric Evern, Wern Ursen, Bishop Brann, and Perrin Cardon. By this point reclamation crews have searched the Slums and found Kaleb’s body with his head smashed. Brakkus may tell the envoy that Pepper killed Kaleb if Brakkus knows that fact.',
+                      'Do not force a predetermined interrogation result. Let testimony, admissions, physical evidence, and the party’s choices determine what the Council concludes.',
+                      'If the Council establishes that Pepper murdered Kaleb, Pepper’s sentence is mandatory service instead of immediate jail: one unpaid Council job followed by five additional Council jobs that are paid normally. Refusing the sentence or abandoning the required work means jail. The other party members are not sentenced by Pepper’s crime.',
+                      'Kaleb’s wife and ill daughter are a later emotional beat, not part of the sentence. The daughter’s condition can be cured by Greater Restoration. The wife can confront Pepper angrily and still ask the cleric for help; Pepper’s response remains a player choice and is not a contract requirement.'
+                  ]
+              },
+              {
+                  'type': 'entries',
+                  'name': 'Kellan’s Well Lead-In',
+                  'entries': [
+                      'Do not require a records box, the coded ledger, or any Blackstone document to unlock Kellan’s Well. The Council already has an independent reason to act: separate armed groups around the well are using shared patrol routes and signals, and old catacombs/waterworks beneath the site create a strategic route into the ruins.',
+                      'The Council assigns Kellan’s Well immediately after the Blackstone/Council sequence. If Pepper’s murder sentence is imposed, this is the first unpaid job for Pepper; later required Council jobs are paid normally.',
+                      'The party begins Session 3 at level 3. Resolve Blackstone, then advance to level 4. Kellan’s Well is the next level-4 objective; completing it is the next milestone toward level 5.'
+                  ]
+              },
+              {
+                  'type': 'entries',
+                  'name': 'Blackstone Reward Status',
+                  'entries': [
+                      'The exact final Blackstone reward package is not yet locked. The party already has the two unused Potions of Healing awarded by Jord, so do not automatically add two more healing potions here. A Bag of Holding is not part of the locked reward package. Bishop Brann’s sacred records/relics and the Iron Covenant ledger are objectives/evidence, not ordinary treasure.'
+                  ]
+              }
+          ]
+
+          top_ch5 = content_chapter("Chapter 5: Delving into Kellan's Well")
+          top_ch5['entries'] = [
+              {
+                  'type': 'entries',
+                  'name': 'Current Session 3 Lead-In',
+                  'entries': [
+                      'Kellan’s Well follows the Blackstone resolution and Council meeting. The hook is independent of the Iron Covenant ledger: multiple armed groups are already known to share patrol signals and routes around the well, while old catacombs/waterworks beneath the site provide a strategic underground route.',
+                      'If Pepper’s sentence for Kaleb’s murder is imposed, Kellan’s Well is Pepper’s one unpaid Council assignment. The following five mandatory Council jobs are paid normally.'
+                  ]
+              }
+          ]
+
+          # ------------------------------------------------------------------
+          # Deep Chapter 4: rebuild the playable current-state section so stale
+          # Session 2 projections cannot contradict actual play.
+          # ------------------------------------------------------------------
+          ch4 = section_by_id(data, '004')
+          maps = immediate_named(ch4, 'Maps')
+          assert maps is not None, 'Blackstone Maps block missing'
+
+          ch4['entries'] = [
+              '{@b Recommended level:} 3–4. The current party begins Session 3 at level 3. Resolve Blackstone, then advance the party to level 4; Kellan’s Well is the next level-4 objective.',
+              maps,
+              {
+                  'type': 'entries',
+                  'name': 'Chapter Overview',
+                  'entries': [
+                      '{@b Current session purpose.} Speak with the seven rescued captives, learn what Nela knows, resolve Tal Rusk and his four remaining Guards, preserve Bishop Brann’s sacred records and relics, then return to Bellweather for the Council consequence scene.',
+                      'The Iron Covenant is the armed faction occupying Blackstone Temple. Tal Rusk commands the remaining interior force and answers to a higher authority known only as “the Boss.”',
+                      'Pepper already possesses Tal’s coded Iron Covenant ledger. The ledger is leverage in the Tal confrontation, not a required clue for Kellan’s Well.',
+                      '{@b Leads onward.} Kellan’s Well is an independent Council concern because separate armed groups there use the same patrol routes and signals and exploit the old catacombs/waterworks beneath the district.'
+                  ]
+              },
+              {
+                  'type': 'entries',
+                  'name': 'Running the Chapter',
+                  'entries': [
+                      '{@b Start where play actually stopped.} Both captive-room doors are already smashed open and all seven captives have been physically discovered. Do not replay the approach, gate fight, captive search, or safe discovery.',
+                      '{@b First conversation.} Let Nela and the other captives explain the ledger, the altar maintenance passage, and the orders to remove Bishop Brann’s sacred material. Lessa and Kav can identify themselves as the two surviving members of Kaleb’s survey crew and do not yet know Kaleb is dead.',
+                      '{@b Tal next.} Tal Rusk and four Guards are the remaining organized interior force. Tal’s primary goal is the coded ledger Pepper holds. Negotiation is a fully valid resolution.',
+                      '{@b No records box.} Remove every prior records-box bargain or satchel-recognition trigger. The coded ledger in Pepper’s possession is the only current Iron Covenant document at the center of the Blackstone standoff.',
+                      '{@b Civilians remain separate.} Dependents, coerced refugees, temple caretakers, surveyors, and ordinary residents are not enemy combatants.',
+                      '{@b Rest and pressure.} Safe long rests remain available at Ledger House. If the party withdraws from the active temple before resolving Tal, Tal can reposition, evacuate, or prepare defenses based on what he knows.'
+                  ]
+              },
+              {
+                  'type': 'entries',
+                  'name': 'Session 2 Record — Actual Play',
+                  'entries': [
+                      'Jord paid each adventurer 50 gp for the recovered strongbox, gave the party two Potions of Healing for recovering the horse, and promised future merchant discounts.',
+                      'Pepper took a spyglass and compass from the survey satchel and burned the survey note. The party knows Pepper has a spyglass because they saw Pepper try to use it, but they do not necessarily know where that spyglass came from. The party also bought a grappling hook.',
+                      'At Blackstone, the party entered by melting the iron bars over a rear window. Aaron dealt the killing blow to one gate Guard.',
+                      'The gate captain fled through the front door at roughly half hit points with one surviving Guard. They escaped and can report the attack; no other known witness saw the party’s infiltration.',
+                      'Pepper found the coded Iron Covenant ledger in the safe and still physically possesses it. The rest of the party knows Pepper has the ledger.',
+                      'Session 2 ended after both captive-room doors were smashed open. All seven captives were discovered, but the party had not yet spoken with them.'
+                  ]
+              },
+              {
+                  'type': 'entries',
+                  'name': 'Adventure',
+                  'entries': [
+                      {
+                          'type': 'entries',
+                          'name': 'Scene 1: The Seven Captives',
+                          'entries': [
+                              '{@b Nela Orr.} Older human woman; soot-stained gray temple robes; cropped silver hair; firm, controlled voice. Before being recaptured, Nela briefly escaped, stole Tal Rusk’s coded Iron Covenant ledger, locked and hid it in the safe, and returned to captivity under guard.',
+                              '{@b What Nela knows.} She knows the maintenance passage behind the altar, overheard orders to pack and remove Bishop Brann’s sacred records and relics, and knows Tal badly wants the coded ledger returned.',
+                              '{@b Dwarf caretaker.} Middle-aged, shaved head, ink-stained fingers; exhausted but focused on preserving the temple records.',
+                              '{@b Halfling caretaker.} Young, bruised face, torn vestments; frightened but mobile.',
+                              '{@b Half-orc caretaker.} Broad-shouldered, one arm in a sling; protective of the other captives.',
+                              '{@b Temple guard.} Human, battered mail, bandaged thigh, pale from blood loss but alert. The guard can describe interior movement and confirm Tal still has four Guards.',
+                              '{@b Lessa Dorn.} Lean, weathered half-elf Council surveyor. She knows the Iron Covenant abducted the survey crew but does not know Kaleb is dead.',
+                              '{@b Kav Orin.} Halfling Council surveyor. No further physical description is locked. He knows the Iron Covenant abducted the survey crew but does not know Kaleb is dead.',
+                              '{@b Kaleb.} Do not use a satchel-recognition trigger. Lessa and Kav can naturally ask whether the party found Kaleb once introductions establish that the characters came through the Slums.'
+                          ]
+                      },
+                      {
+                          'type': 'entries',
+                          'name': 'Scene 2: Tal Rusk and the Ledger',
+                          'entries': [
+                              '{@b Tal Rusk.} A compact, scarred dwarf in practical heavy armor, controlled rather than theatrical. He commands four Guards deeper inside Blackstone and is the remaining Iron Covenant commander on site.',
+                              '{@b His objective.} Tal’s highest priority is recovering the coded Iron Covenant ledger Pepper holds. He cares more about protecting Covenant intelligence, contacts, and supply information than about dying for the temple.',
+                              '{@b The bargain.} In exchange for the ledger, Tal can order himself and his four remaining Guards to withdraw from Blackstone. The seven captives remain free, and Bishop Brann’s sacred records and relics remain intact. The escaped gate captain and Guard are already gone and are not part of the bargain.',
+                              '{@b If the party keeps the ledger.} Tal will not voluntarily abandon the temple while the ledger remains in the party’s hands. If negotiation fails, run {@creature Tal Rusk|NCFA} and 4 {@creature Guard|XMM|Guards} as the decisive Blackstone combat. Tal can surrender or order a retreat if defeated; his force is not suicidal.',
+                              '{@b If the ledger is returned.} Tal withdraws with his four Guards. The party gives up the coded intelligence unless it was copied or decoded first, but they keep the rescued captives and recover Bishop Brann’s sacred material.'
+                          ]
+                      },
+                      {
+                          'type': 'entries',
+                          'name': 'Scene 3: Return to Ledger House and the Council',
+                          'entries': [
+                              'After Blackstone is resolved, Lessa Dorn and Kav Orin report what happened. A Council envoy requires a meeting at Ledger House. A character deliberately listening to the envoy’s private exchange with Brakkus can make a DC 20 Perception check to overhear it.',
+                              'The Council participants are Ulric Evern, Wern Ursen, Bishop Brann, and Perrin Cardon. Reclamation crews have now searched the Slums and found Kaleb’s body with his head smashed.',
+                              'Brakkus may tell the envoy that Pepper killed Kaleb if he knows that fact. The Council then questions the party, but there is no scripted confession or predetermined evidentiary outcome; play the scene from what the characters say and what the Council can establish.',
+                              '{@b Pepper consequence.} If the Council establishes that Pepper murdered Kaleb, Pepper must complete one unpaid Council job and then five additional Council jobs that are paid normally. Refusal or abandonment of the required service means jail. This sentence applies to Pepper, not automatically to the rest of the party.',
+                              '{@b Later emotional beat.} Kaleb’s wife can later confront Pepper at Ledger House while seeking help for her ill daughter. The daughter’s condition can be cured by Greater Restoration. Helping is Pepper’s choice and is not part of the sentence.'
+                          ]
+                      },
+                      {
+                          'type': 'entries',
+                          'name': 'Transition to Chapter 5',
+                          'entries': [
+                              'The Council immediately directs attention to Kellan’s Well because separate armed groups are using coordinated patrol routes and signals there, and the old catacombs/waterworks provide an important underground route. This hook exists independently of the coded ledger.',
+                              'If Pepper’s sentence is imposed, Kellan’s Well is Pepper’s first unpaid Council job. Other characters can still receive ordinary pay or accept the work for their own reasons.',
+                              'After Blackstone is resolved, advance the current party from level 3 to level 4. Kellan’s Well is run at level 4.'
+                          ]
+                      }
+                  ]
+              },
+              {
+                  'type': 'entries',
+                  'name': 'Rewards',
+                  'entries': [
+                      'The exact final Blackstone reward package is not yet locked.',
+                      '{@b Already owned.} The party already has the two unused Potions of Healing awarded by Jord. Do not automatically award two more healing potions for Blackstone.',
+                      '{@b Not locked.} Do not auto-award a Bag of Holding. No permanent magic item is fixed here until the Blackstone reward package is finalized.',
+                      '{@b Not treasure.} Bishop Brann’s sacred records/relics and the coded Iron Covenant ledger are objectives, evidence, or bargaining leverage, not ordinary loot.'
+                  ]
+              },
+              {
+                  'type': 'entries',
+                  'name': 'Session 3 Current Combat State',
+                  'entries': [
+                      '{@b Party baseline.} Arumen, Aaron Dunamus, Jarrock, and Pepper begin Session 3 at level 3.',
+                      '{@b Already resolved.} Do not replay the front court or approach encounters. Aaron killed one gate Guard; the gate captain escaped at roughly half hit points with one surviving Guard; the rear-window bars were melted for entry.',
+                      '{@b Remaining organized force.} Use {@creature Tal Rusk|NCFA} and 4 {@creature Guard|XMM|Guards}. The captives have already been physically reached and are no longer behind intact prisoner-room doors.',
+                      '{@b Encounter principle.} Returning the coded ledger can resolve Blackstone without another fight. If combat occurs, Tal can surrender or order a withdrawal instead of fighting to the death.'
+                  ]
+              },
+              {
+                  'type': 'entries',
+                  'name': '5etools Encounter Builder Presets',
+                  'entries': [
+                      'The only current Blackstone preset needed for Session 3 is the interior command encounter.',
+                      '{@link Interior Command — Tal Rusk + 4 Guards|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/encounters/blackstone-interior-response.json}',
+                      'The front-court, side-wall, and drainage presets are historical Session 2 material and should not be inserted into Session 3.'
+                  ]
+              }
+          ]
+
+          # ------------------------------------------------------------------
+          # Chapter 5: lock the independent Council hook and continuity.
+          # ------------------------------------------------------------------
+          ch5 = section_by_id(data, '005')
+          ch5_overview = immediate_named(ch5, 'Chapter Overview')
+          assert ch5_overview is not None, 'Kellan overview missing'
+          ch5_overview['entries'] = [
+              '{@b Session purpose.} Control Kellan’s Well, prove that separate crews answer to a higher command, and open a useful underground route.',
+              'The Council already knows separate armed crews around Kellan’s Well are using the same patrol signals and routes. The old catacombs/waterworks beneath the site create a strategic underground connection into the ruins.',
+              '{@b Current lead-in.} The Council sends the party here immediately after the Blackstone resolution and Council meeting. No records box, coded ledger, or other Blackstone document is required to discover or justify the job.',
+              'If Pepper’s sentence for Kaleb’s murder is imposed, this is Pepper’s one unpaid Council assignment; the next five required Council jobs are paid normally.',
+              '{@b Leads onward.} Evidence inside the well can still establish the wider coordination network and point toward Koven House.'
+          ]
+
+          ch5_running = immediate_named(ch5, 'Running the Chapter')
+          if ch5_running is not None:
+              ch5_running['entries'] = [x for x in ch5_running.get('entries', []) if not (isinstance(x, dict) and x.get('name') == 'Current Session 3 Lead-In')]
+              ch5_running['entries'].insert(0, {
+                  'type': 'entries',
+                  'name': 'Current Session 3 Lead-In',
+                  'entries': [
+                      'Begin with the Council assignment following the Blackstone/Kaleb consequence scene. The party should already be level 4 after resolving Blackstone.',
+                      'The reason for the mission is observed coordination around the well and concern about the catacombs/waterworks route, not possession of the Iron Covenant ledger.',
+                      'The ledger can provide additional color or leverage later if the party retained it, but the chapter never stalls if Tal recovered it.'
+                  ]
+              })
+
+          # ------------------------------------------------------------------
+          # Campaign control sheet: one compact source of truth for future prep.
+          # ------------------------------------------------------------------
+          control = None
+          for adv in data.get('adventureData', []):
+              for item in adv.get('data', []):
+                  if isinstance(item, dict) and item.get('name') == 'Appendix 0: Campaign Control Sheet':
+                      control = item
+                      break
+          if control is not None:
+              control['entries'] = [x for x in control.get('entries', []) if not (isinstance(x, dict) and x.get('name') == 'Current Session 3 Canon')]
+              control['entries'].insert(0, {
+                  'type': 'entries',
+                  'name': 'Current Session 3 Canon',
+                  'entries': [
+                      'Session 3 opens inside Blackstone after both captive-room doors were smashed. All seven captives are physically discovered but have not yet been interviewed.',
+                      'Pepper holds Tal Rusk’s coded Iron Covenant ledger and the rest of the party knows it. There is no separate records box.',
+                      'Tal Rusk remains with four Guards. The gate captain and one Guard escaped; Aaron killed another gate Guard; the party entered through a rear window after melting its iron bars.',
+                      'Resolve captives → Tal/ledger → Ledger House/Council/Kaleb → Kellan’s Well. The Kellan hook is independent of the ledger.',
+                      'If Pepper is found responsible for Kaleb’s murder: one unpaid Council job, then five paid mandatory Council jobs, or jail.',
+                      'Party starts Session 3 at level 3; level 4 after Blackstone; Kellan’s Well is the level-4 follow-up.'
+                  ]
+              })
+
+          # Tal appearance/motive in the creature entry.
+          tal = None
+          for mon in data.get('monster', []):
+              if mon.get('name') == 'Tal Rusk' and mon.get('source') == 'NCFA':
+                  tal = mon
+                  break
+          assert tal is not None, 'Tal Rusk monster missing'
+          tal['fluff'] = {
+              'entries': [
+                  'Tal Rusk is a compact, scarred dwarf and the Iron Covenant commander still inside Blackstone Temple. He presents as practical and controlled rather than theatrical.',
+                  'At the start of Session 3 he has four Guards under his direct command. His immediate priority is recovering the coded Iron Covenant ledger Pepper holds; he is willing to trade a full withdrawal for it and does not need to destroy Bishop Brann’s sacred records or harm the rescued captives to achieve that goal.'
+              ]
+          }
+
+          # Metadata and archive snapshot.
+          now = int(time.time())
+          meta = data['_meta']
+          meta['sources'][0]['version'] = '4.5'
+          meta['sources'][0]['dateLastModified'] = now
+          meta['dateLastModified'] = now
+          meta.pop('_dateLastModifiedHash', None)
+          stable = json.dumps(data, ensure_ascii=False, sort_keys=True, separators=(',', ':'))
+          meta['_dateLastModifiedHash'] = hashlib.sha1(stable.encode('utf-8')).hexdigest()[:10]
+
+          text = json.dumps(data, ensure_ascii=False, indent='\t') + '\n'
+          json.loads(text)
+
+          # Guardrails against the obsolete Session 3 hooks returning.
+          lowered = text.lower()
+          assert 'locked iron covenant records box' not in lowered
+          assert 'the records box' not in lowered
+          assert "kaleb's marked satchel" not in lowered
+          assert 'kaleb’s marked satchel' not in lowered
+          assert 'mason' not in json.dumps(ch4, ensure_ascii=False).lower()
+
+          path.write_text(text, encoding='utf-8')
+          pathlib.Path('No_Cause_for_Alarm_5etools_v4.5.json').write_text(text, encoding='utf-8')
+          print('NCFA v4.5: Session 3 canon locked; Blackstone, Council/Kaleb, and Kellan lead-in updated.')
+          PY
+      - name: Commit campaign update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add No_Cause_for_Alarm_5etools_CURRENT.json No_Cause_for_Alarm_5etools_v4.5.json
+          git diff --cached --quiet || git commit -m "Lock Session 3 canon and update current campaign v4.5"
+          git push
