@@ -1,0 +1,138 @@
+name: Lock Session 3 NPC descriptions and motivations v4.6
+
+on:
+  push:
+    paths:
+      - '.github/workflows/lock-session-3-npcs-v4-6.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch-session-3-npcs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Patch Session 3 NPC canon
+        run: |
+          python - <<'PY'
+          import hashlib, json, pathlib, time
+
+          path = pathlib.Path('No_Cause_for_Alarm_5etools_CURRENT.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
+
+          def content_chapter(name):
+              for adv in data.get('adventure', []):
+                  for item in adv.get('contents', []):
+                      if isinstance(item, dict) and item.get('name') == name:
+                          return item
+              raise AssertionError(name)
+
+          def section_by_id(section_id):
+              for adv in data.get('adventureData', []):
+                  for item in adv.get('data', []):
+                      if isinstance(item, dict) and item.get('type') == 'section' and item.get('id') == section_id:
+                          return item
+              raise AssertionError(section_id)
+
+          def immediate_named(parent, name):
+              for item in parent.get('entries', []):
+                  if isinstance(item, dict) and item.get('name') == name:
+                      return item
+              return None
+
+          npc_entry = {
+              'type': 'entries',
+              'name': 'Session 3 NPC Descriptions, Motivations, and Play Cues',
+              'entries': [
+                  '{@b Nela Orr.} Older human woman in soot-stained gray temple robes, cropped silver hair, firm controlled voice. Motivation: get every captive out safely and preserve the temple’s sacred records and relics. She refuses to leave while others remain in danger. Her theft and concealment of Tal’s coded ledger was an act of resistance intended to keep Covenant intelligence out of Tal’s hands.',
+                  '{@b Dwarf caretaker.} Middle-aged dwarf with a shaved head and ink-stained fingers. Exhausted but focused on preserving the temple records. This preservation instinct is the only separate motivation currently locked for this caretaker.',
+                  '{@b Halfling caretaker.} Young halfling with a bruised face and torn vestments. Frightened but mobile. No independent agenda beyond the immediate captive situation is currently locked; do not invent a separate plot role.',
+                  '{@b Half-orc caretaker.} Broad-shouldered half-orc with one arm in a sling. Protective of the other captives despite the injury. No separate secret or independent plot agenda is locked.',
+                  '{@b Wounded temple guard.} Human in battered mail with a bandaged thigh, pale from blood loss but alert. The guard’s useful role is practical: warn the party about Covenant movement and confirm that Tal still has four Guards. No additional personal agenda is locked.',
+                  '{@b Lessa Dorn.} Lean, weathered half-elf Council surveyor. She knows the Iron Covenant abducted the survey crew and does not know Kaleb is dead. Play cue: angry about how poorly the survey crew was protected. Do not add further appearance details or a separate agenda unless later established.',
+                  '{@b Kav Orin.} Halfling Council surveyor; no further physical description is locked. He has the same abduction knowledge as Lessa, does not know Kaleb is dead, and primarily wants out of Blackstone alive. Do not elaborate his appearance beyond halfling unless later established.',
+                  '{@b Tal Rusk.} Compact, heavily built, scarred dwarf; controlled and professional rather than theatrical. Motivation: recover the coded Iron Covenant ledger and keep control of Blackstone without dying for it. He intimidates first, negotiates when that better protects Covenant intelligence, and is not suicidal. A full withdrawal in exchange for the ledger is consistent with his priorities.',
+                  '{@b Brakkus Ledgerhelm.} Powerfully built half-orc around forty-eight with weathered green-gray skin, close-cropped dark hair touched with gray, and the posture of someone who spent decades in armor. Calm, dry, observant, and practical. Motivation: protect the people under his roof and keep Ledger House a place of safety. He is not a quest-giver or DMPC and prefers restraint unless danger warrants lethal force.',
+                  '{@b Ulric Evern.} Human senior councilor and budget hawk. Hard bargaining and suspicious of open-ended expenses. In the Session 3 Council scene, play him as the voice of fiscal accountability and institutional consequences rather than personal vengeance.',
+                  '{@b Wern Ursen.} Dragonborn councilor for defense and infrastructure; former mercenary captain who gives practical tactical advice. In the Session 3 Council scene, his concern is Bellweather’s security and what the party’s actions mean for future operations.',
+                  '{@b Bishop Brann.} Halfling religious representative and civic mediator. Focused on public welfare, burial rights, healing, keeping captives alive, and preserving sacred records. Surrendered enemies are prisoners, not trophies. In the Council scene he should push toward a consequence that protects the community without becoming vindictive.',
+                  '{@b Perrin Cardon.} Human heir to an old merchant family; clever, polished, increasingly ambitious. He supported clearing Blackstone because it blocked a useful route. In the Council scene, his political interest and the practical value of keeping capable adventurers working both matter; do not make him openly villainous at this stage.',
+                  '{@b Council envoy.} No physical description or personal agenda is currently locked beyond carrying the Council’s summons to Ledger House and speaking privately with Brakkus. Treat the envoy as a procedural messenger unless later canon adds more.',
+                  '{@b Kaleb’s wife.} No name or physical description is currently locked. Motivation: she is furious that Pepper killed her husband, but her daughter is sick badly enough that she is still willing to ask Pepper, a cleric, for help. Her request is an emotional choice for Pepper, never a term of the Council sentence.',
+                  '{@b Kaleb’s daughter.} No name, age, or physical description is currently locked. Her illness is curable by Greater Restoration. Do not invent additional characterization until it is established at the table.'
+              ]
+          }
+
+          top_ch4 = content_chapter('Chapter 4: Blackstone Temple')
+          top_ch4['entries'] = [x for x in top_ch4.get('entries', []) if not (isinstance(x, dict) and x.get('name') == npc_entry['name'])]
+          insert_at = 1 if top_ch4.get('entries') else 0
+          top_ch4['entries'].insert(insert_at, npc_entry)
+
+          ch4 = section_by_id('004')
+          ch4['entries'] = [x for x in ch4.get('entries', []) if not (isinstance(x, dict) and x.get('name') == npc_entry['name'])]
+          adventure_idx = next((i for i,x in enumerate(ch4.get('entries', [])) if isinstance(x, dict) and x.get('name') == 'Adventure'), len(ch4.get('entries', [])))
+          ch4['entries'].insert(adventure_idx, json.loads(json.dumps(npc_entry, ensure_ascii=False)))
+
+          # Add concise motive cues directly to the scenes most likely to be run at the table.
+          adventure = immediate_named(ch4, 'Adventure')
+          assert adventure is not None
+          scene1 = immediate_named(adventure, 'Scene 1: The Seven Captives')
+          scene2 = immediate_named(adventure, 'Scene 2: Tal Rusk and the Ledger')
+          scene3 = immediate_named(adventure, 'Scene 3: Return to Ledger House and the Council')
+          assert scene1 and scene2 and scene3
+
+          for e in [
+              '{@b Nela’s motive.} She will not willingly abandon another captive and prioritizes getting everyone safe while keeping the temple’s sacred material from the Covenant.',
+              '{@b Lessa’s play cue.} She is angry that the survey crew was sent into danger with inadequate protection; she still does not know Kaleb is dead.',
+              '{@b Kav’s play cue.} He wants out of Blackstone alive. No further personal agenda or physical description is locked.'
+          ]:
+              if e not in scene1['entries']:
+                  scene1['entries'].append(e)
+
+          tal_cue = '{@b Tal’s play cue.} Controlled, professional, and not suicidal. He intimidates first, but his real priority is recovering the ledger and preserving Covenant intelligence; he negotiates when that serves those goals better than combat.'
+          if tal_cue not in scene2['entries']:
+              scene2['entries'].insert(2, tal_cue)
+
+          council_cues = {
+              'type': 'entries',
+              'name': 'Council NPC Play Cues',
+              'entries': [
+                  '{@b Brakkus.} Protect the people under his roof; stay calm, dry, practical, and restrained. He does not exist to steer the party’s decisions.',
+                  '{@b Ulric Evern.} Budget hawk and hard bargainer; press for accountability and a consequence Bellweather can actually enforce.',
+                  '{@b Wern Ursen.} Defense and infrastructure; frame the issue around security, operational risk, and whether the party can still be useful safely.',
+                  '{@b Bishop Brann.} Public welfare, healing, burial rights, preservation of sacred records, and humane treatment of prisoners.',
+                  '{@b Perrin Cardon.} Polished and ambitious; values useful routes and the political value of keeping effective adventurers working. Do not play him as an exposed villain.',
+                  '{@b Council envoy.} Procedural messenger only. No personal agenda or physical description is locked.'
+              ]
+          }
+          scene3['entries'] = [x for x in scene3['entries'] if not (isinstance(x, dict) and x.get('name') == council_cues['name'])]
+          scene3['entries'].insert(2, council_cues)
+
+          now = int(time.time())
+          meta = data['_meta']
+          meta['sources'][0]['version'] = '4.6'
+          meta['sources'][0]['dateLastModified'] = now
+          meta['dateLastModified'] = now
+          meta.pop('_dateLastModifiedHash', None)
+          stable = json.dumps(data, ensure_ascii=False, sort_keys=True, separators=(',', ':'))
+          meta['_dateLastModifiedHash'] = hashlib.sha1(stable.encode('utf-8')).hexdigest()[:10]
+
+          text = json.dumps(data, ensure_ascii=False, indent='\t') + '\n'
+          json.loads(text)
+          assert 'Session 3 NPC Descriptions, Motivations, and Play Cues' in text
+          path.write_text(text, encoding='utf-8')
+          pathlib.Path('No_Cause_for_Alarm_5etools_v4.6.json').write_text(text, encoding='utf-8')
+          print('NCFA v4.6: Session 3 NPC descriptions, motivations, and play cues locked.')
+          PY
+      - name: Commit campaign update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add No_Cause_for_Alarm_5etools_CURRENT.json No_Cause_for_Alarm_5etools_v4.6.json
+          git diff --cached --quiet || git commit -m "Lock Session 3 NPC descriptions and motivations v4.6"
+          git push
