@@ -1,0 +1,92 @@
+name: Add Session 3 refrain and Marren Library reminder v4.7
+
+on:
+  push:
+    paths:
+      - '.github/workflows/add-session-3-refrain-library-reminder-v4-7.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch-session-3-reminder:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Patch Session 3 callback reminder
+        run: |
+          python - <<'PY'
+          import hashlib, json, pathlib, time
+
+          path = pathlib.Path('No_Cause_for_Alarm_5etools_CURRENT.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
+
+          def content_chapter(name):
+              for adv in data.get('adventure', []):
+                  for item in adv.get('contents', []):
+                      if isinstance(item, dict) and item.get('name') == name:
+                          return item
+              raise AssertionError(name)
+
+          def section_by_id(section_id):
+              for adv in data.get('adventureData', []):
+                  for item in adv.get('data', []):
+                      if isinstance(item, dict) and item.get('type') == 'section' and item.get('id') == section_id:
+                          return item
+              raise AssertionError(section_id)
+
+          reminder = {
+              'type': 'entries',
+              'name': 'Session 3 Reminder — No Cause for Alarm / Marren Library',
+              'entries': [
+                  '{@b Today’s callback.} During Session 3, include one additional in-world use of the exact phrase “there is no cause for alarm.” Keep it as ordinary civic or institutional reassurance; do not explain the campaign title to the players.',
+                  '{@b Marren Library nod.} Include a light reference to Marren Library during the session, but do not reveal the later historical payoff. Chapter 9 already establishes that the Restricted Stacks contain the pre-fall Council “no cause for alarm” circular, and the Historical Refrain identifies it as the adventure’s clearest historical echo of the title.',
+                  '{@b Do not invent new canon.} This is a running reminder only. Do not create a new Marren Library closure, missing-record event, or other library incident unless it occurs in play or is separately approved.'
+              ]
+          }
+
+          # Put the reminder in the top-level Chapter 4 continuity entries.
+          top_ch4 = content_chapter('Chapter 4: Blackstone Temple')
+          top_ch4.setdefault('entries', [])
+          top_ch4['entries'] = [x for x in top_ch4['entries'] if not (isinstance(x, dict) and x.get('name') == reminder['name'])]
+          top_ch4['entries'].append(json.loads(json.dumps(reminder, ensure_ascii=False)))
+
+          # Put the same reminder in the runnable Chapter 4 section, immediately before Adventure.
+          ch4 = section_by_id('004')
+          ch4.setdefault('entries', [])
+          ch4['entries'] = [x for x in ch4['entries'] if not (isinstance(x, dict) and x.get('name') == reminder['name'])]
+          adventure_idx = next((i for i, x in enumerate(ch4['entries']) if isinstance(x, dict) and x.get('name') == 'Adventure'), len(ch4['entries']))
+          ch4['entries'].insert(adventure_idx, json.loads(json.dumps(reminder, ensure_ascii=False)))
+
+          # Metadata/update behavior matching the existing NCFA workflows.
+          now = int(time.time())
+          meta = data['_meta']
+          meta['sources'][0]['version'] = '4.7'
+          meta['sources'][0]['dateLastModified'] = now
+          meta['dateLastModified'] = now
+          meta.pop('_dateLastModifiedHash', None)
+          stable = json.dumps(data, ensure_ascii=False, sort_keys=True, separators=(',', ':'))
+          meta['_dateLastModifiedHash'] = hashlib.sha1(stable.encode('utf-8')).hexdigest()[:10]
+
+          text = json.dumps(data, ensure_ascii=False, indent='\t') + '\n'
+          check = json.loads(text)
+          assert check['_meta']['sources'][0]['version'] == '4.7'
+          assert 'Session 3 Reminder — No Cause for Alarm / Marren Library' in text
+          assert 'Chapter 9: Marren Library' in text
+          assert 'pre-fall Council “no cause for alarm” circular' in text
+
+          path.write_text(text, encoding='utf-8')
+          pathlib.Path('No_Cause_for_Alarm_5etools_v4.7.json').write_text(text, encoding='utf-8')
+          print('NCFA v4.7: added Session 3 refrain / Marren Library reminder.')
+          PY
+      - name: Commit campaign update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add No_Cause_for_Alarm_5etools_CURRENT.json No_Cause_for_Alarm_5etools_v4.7.json
+          git diff --cached --quiet || git commit -m "Add Session 3 refrain and Marren Library reminder v4.7"
+          git push
