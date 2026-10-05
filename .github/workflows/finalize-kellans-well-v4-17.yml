@@ -1,0 +1,181 @@
+name: Finalize Kellan's Well v4.17
+
+on:
+  push:
+    paths:
+      - '.github/workflows/finalize-kellans-well-v4-17.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Finalize Kellan's Well
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, hashlib, time
+          from pathlib import Path
+
+          p = Path('No_Cause_for_Alarm_5etools_CURRENT.json')
+          data = json.loads(p.read_text(encoding='utf-8'))
+          if data['_meta']['sources'][0]['version'] != '4.16':
+              raise SystemExit(f"Expected v4.16, found {data['_meta']['sources'][0]['version']}")
+
+          chapter = None
+          for sec in data['adventureData'][0]['data']:
+              if isinstance(sec, dict) and sec.get('name') == "Chapter 5: Delving into Kellan's Well":
+                  chapter = sec
+                  break
+          if chapter is None:
+              raise SystemExit('Chapter 5 not found')
+
+          # Keep the opening adventure-facing rather than table-state-facing.
+          for i, item in enumerate(chapter.get('entries', [])):
+              if isinstance(item, str) and item.startswith('{@b Recommended level:}'):
+                  chapter['entries'][i] = '{@b Recommended level:} 4–5.'
+
+          def find_named(obj, name):
+              if isinstance(obj, dict):
+                  if obj.get('name') == name:
+                      return obj
+                  for v in obj.values():
+                      r = find_named(v, name)
+                      if r is not None:
+                          return r
+              elif isinstance(obj, list):
+                  for v in obj:
+                      r = find_named(v, name)
+                      if r is not None:
+                          return r
+              return None
+
+          guidance = find_named(chapter, 'Encounter Guidance')
+          if guidance is None:
+              raise SystemExit('Encounter Guidance not found')
+          guidance['entries'] = [
+              "{@b Encounter shape.} Keep Kellan’s Well primarily an investigation and exploration chapter. The coordinated crews and Noren Vale form the tactical spine; rats, centipedes, oozes, and the carrion crawler work best as environmental complications or optional hazards when they reveal information or change positioning.",
+              "{@b Checkpoint.} Use 3 Scouts and 2 Guards. Their goal is to raise the alarm and fall back rather than fight to the death.",
+              "{@b Bow Gallery.} Use 4 Scouts with cover and movement options.",
+              "{@b Noren Vale.} Use a Bandit Captain-style stat block for Noren with AC 15 and 65 hit points, retaining the stat block’s normal attack routine.",
+              "{@b Enforcers.} Noren is supported by 2 Thugs with 32 hit points each.",
+              "{@b Optional reinforcement.} If the characters reach Noren with most resources intact after decisively handling the earlier encounters, add 1 Scout as a rear-line threat. Otherwise, Noren and the two Thugs are the full encounter.",
+              "{@b Smoke Bomb (1/Day).} Noren creates a small area of heavy obscurement until the start of his next turn. On the turn he uses the smoke bomb, he can also Disengage as a bonus action. This is his prepared withdrawal tool.",
+              "{@b Damage caution.} For 4th-level characters, increase durability, positioning, objectives, and action economy before increasing burst damage or save DCs."
+          ]
+
+          cmd_room = find_named(chapter, '5. Command Room')
+          if cmd_room is None:
+              raise SystemExit('5. Command Room not found')
+          cmd_room['entries'] = [
+              "{@b Noren Vale} coordinates the Iron Covenant fighters, mercenaries, and Koven-connected criminals at Kellan’s Well. He is pragmatic and loyal to the larger network because it provides weapons, money, supplies, and protection.",
+              "{@b Encounter.} Noren uses a Bandit Captain-style stat block with AC 15 and 65 HP. He is supported by 2 Thugs with 32 HP each. Add 1 Scout only if the characters arrive with most resources intact.",
+              "{@b Smoke Bomb (1/Day).} Noren creates a small area of heavy obscurement until the start of his next turn and can Disengage as a bonus action on the turn he uses it.",
+              "{@b Prepared escape.} If Noren withdraws, use his smoke bomb, a locking route, or allies screening his retreat rather than ordinary movement through engaged characters."
+          ]
+
+          scene4 = find_named(chapter, 'Scene 4: Command Junction')
+          if scene4 is None:
+              raise SystemExit('Scene 4 not found')
+          scene4['entries'] = [
+              "The local commander attempts to burn the message cache when alarmed.",
+              "{@b Noren Vale.} The local commander is a mid-forties half-elf with a rangy build, short graying hair, one old facial scar, gloves, practical weapons, and a battered coat over piecemeal armor. He looks like someone who has spent years keeping rough people organized.",
+              {
+                  'type': 'entries',
+                  'name': 'What Happens',
+                  'entries': [
+                      "At the end of round 1, Noren ignites the papers unless a character reaches the desk or uses an action to extinguish them."
+                  ]
+              },
+              {
+                  'type': 'entries',
+                  'name': 'Encounter',
+                  'entries': [
+                      "Noren uses a Bandit Captain-style stat block with AC 15 and 65 HP and retains its normal attack routine.",
+                      "He is supported by 2 Thugs with 32 HP each. Add 1 Scout only if the characters arrive with most resources intact.",
+                      "{@b Smoke Bomb (1/Day).} Noren creates a small area of heavy obscurement until the start of his next turn. On the turn he uses it, he can Disengage as a bonus action."
+                  ]
+              },
+              {
+                  'type': 'entries',
+                  'name': 'Clues and Discoveries',
+                  'entries': [
+                      "Surviving pages order rival groups not to fight each other while Bellweather remains the priority. A map marks Koven House as a supply and payment center."
+                  ]
+              },
+              {
+                  'type': 'entries',
+                  'name': 'Consequences',
+                  'entries': [
+                      "If the cache burns, Rask and the supply ledger still point to Koven House; the campaign does not stall."
+                  ]
+              }
+          ]
+
+          stores = find_named(chapter, '6–8. Escape Routes and Stores')
+          if stores is None:
+              raise SystemExit('Escape Routes and Stores not found')
+          stores['entries'] = [
+              "The remaining chambers contain coalition supplies, a hidden exit, and material waiting to be moved deeper into Old Bellweather. Mixed-origin goods show that separate factions are being supplied through one logistics network.",
+              "{@b Finding the hidden exit.} A DC 13 Wisdom (Perception) check notices a faint draft, repeated scuff marks, or irregular stonework. Once the characters know a passage is present, no further roll is required to establish that it exists.",
+              "{@b Opening it.} A DC 12 Intelligence (Investigation) check quickly locates the release mechanism. Failure costs several minutes of searching but does not make the route inaccessible."
+          ]
+
+          # Replace the Chapter 5 reward section with the now-selected rewards.
+          rewards = None
+          for item in chapter.get('entries', []):
+              if isinstance(item, dict) and item.get('name') == 'Rewards':
+                  rewards = item
+                  break
+          if rewards is None:
+              raise SystemExit('Chapter 5 Rewards not found')
+          rewards['entries'] = [
+              "These rewards are party totals.",
+              {
+                  'type': 'list',
+                  'items': [
+                      "{@b Spendable wealth.} 300–450 gp in salvage, gems, and civic pay.",
+                      "{@b Potion of Greater Healing.} One.",
+                      "{@b Potion of Heroism.} One.",
+                      "{@b Potion of Water Breathing.} One; this is the chapter’s exploration-focused consumable.",
+                      "{@b Decanter of Endless Water.} One uncommon permanent item recovered from the wellworks.",
+                      "{@b Story reward.} Improved water access or infrastructure and goodwill from workers who benefit from the reclamation.",
+                      "{@b Pepper’s pay.} Kellan’s Well is unpaid for Pepper because it is the first mission of her five-mission sentence."
+                  ]
+              }
+          ]
+
+          now = int(time.time())
+          data['_meta']['sources'][0]['version'] = '4.17'
+          data['_meta']['sources'][0]['dateLastModified'] = now
+          data['_meta']['dateLastModified'] = now
+          data['_meta'].pop('_dateLastModifiedHash', None)
+          stable = json.dumps(data, ensure_ascii=False, sort_keys=True, separators=(',', ':'))
+          data['_meta']['_dateLastModifiedHash'] = hashlib.sha1(stable.encode('utf-8')).hexdigest()[:10]
+          txt = json.dumps(data, ensure_ascii=False, indent='\t') + '\n'
+          json.loads(txt)
+
+          # Validate that the old conflicting reward target is gone from Chapter 5.
+          ch_txt = json.dumps(chapter, ensure_ascii=False)
+          required = ['65 HP', '2 Thugs', 'Potion of Heroism', 'Decanter of Endless Water', 'DC 13 Wisdom (Perception)', 'DC 12 Intelligence (Investigation)']
+          for needle in required:
+              if needle not in ch_txt:
+                  raise SystemExit(f'Missing expected finalized detail: {needle}')
+          if '1,000–1,100 gp monetary target' in ch_txt:
+              raise SystemExit('Old Kellan reward target still present')
+
+          p.write_text(txt, encoding='utf-8')
+          Path('No_Cause_for_Alarm_5etools_v4.17.json').write_text(txt, encoding='utf-8')
+          print('hash', data['_meta']['_dateLastModifiedHash'])
+          PY
+      - name: Commit result
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add No_Cause_for_Alarm_5etools_CURRENT.json No_Cause_for_Alarm_5etools_v4.17.json
+          git diff --cached --quiet || git commit -m "Finalize Kellan's Well encounter and rewards"
+          git push
