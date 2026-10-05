@@ -1,0 +1,50 @@
+name: Fix NCFA v4.8 metadata hash
+
+on:
+  push:
+    paths:
+      - '.github/workflows/fix-v4-8-hash.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix-hash:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Recompute NCFA metadata hash without changing canon or version
+        run: |
+          python - <<'PY'
+          import hashlib, json, pathlib
+
+          current = pathlib.Path('No_Cause_for_Alarm_5etools_CURRENT.json')
+          data = json.loads(current.read_text(encoding='utf-8'))
+          assert data['_meta']['sources'][0]['version'] == '4.8', data['_meta']['sources'][0]['version']
+          old = data['_meta'].pop('_dateLastModifiedHash', None)
+          stable = json.dumps(data, ensure_ascii=False, sort_keys=True, separators=(',', ':'))
+          new = hashlib.sha1(stable.encode('utf-8')).hexdigest()[:10]
+          data['_meta']['_dateLastModifiedHash'] = new
+          text = json.dumps(data, ensure_ascii=False, indent='\t') + '\n'
+          json.loads(text)
+          current.write_text(text, encoding='utf-8')
+
+          snapshot = pathlib.Path('No_Cause_for_Alarm_5etools_v4.8.json')
+          if snapshot.exists():
+              snapshot.write_text(text, encoding='utf-8')
+
+          print(f'old hash: {old}')
+          print(f'new hash: {new}')
+          PY
+      - name: Commit corrected hash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add No_Cause_for_Alarm_5etools_CURRENT.json
+          if [ -f No_Cause_for_Alarm_5etools_v4.8.json ]; then git add No_Cause_for_Alarm_5etools_v4.8.json; fi
+          git diff --cached --quiet || git commit -m "Fix NCFA v4.8 metadata hash"
+          git push
