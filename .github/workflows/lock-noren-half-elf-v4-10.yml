@@ -1,0 +1,74 @@
+name: Lock Noren as half-elf v4.10
+on:
+  push:
+    paths:
+      - '.github/workflows/lock-noren-half-elf-v4-10.yml'
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update NCFA JSON
+        run: |
+          python - <<'PY'
+          import json, hashlib, time
+          from pathlib import Path
+
+          p = Path('No_Cause_for_Alarm_5etools_CURRENT.json')
+          data = json.loads(p.read_text(encoding='utf-8'))
+
+          changed = 0
+          def walk(x):
+              global changed
+              if isinstance(x, dict):
+                  for k, v in list(x.items()):
+                      x[k] = walk(v)
+                  return x
+              if isinstance(x, list):
+                  return [walk(v) for v in x]
+              if isinstance(x, str):
+                  old = x
+                  x = x.replace(
+                      'Mid-forties, rangy build, short graying hair, one old facial scar, gloves, practical weapons, and a battered coat over piecemeal armor. He looks like someone who has spent years keeping rough people organized. His species is not yet locked.',
+                      'Mid-forties half-elf with a rangy build, short graying hair, one old facial scar, gloves, practical weapons, and a battered coat over piecemeal armor. He looks like someone who has spent years keeping rough people organized.'
+                  )
+                  x = x.replace(
+                      'Noren’s species remains intentionally unspecified until established at the table or separately approved.',
+                      'Noren is a half-elf.'
+                  )
+                  x = x.replace(
+                      "Noren's species remains intentionally unspecified until established at the table or separately approved.",
+                      "Noren is a half-elf."
+                  )
+                  if x != old:
+                      changed += 1
+                  return x
+              return x
+
+          data = walk(data)
+          if changed == 0:
+              raise SystemExit('Expected Noren description text was not found; refusing to write.')
+
+          now = int(time.time())
+          data['_meta']['sources'][0]['version'] = '4.10'
+          data['_meta']['sources'][0]['dateLastModified'] = now
+          data['_meta']['dateLastModified'] = now
+          data['_meta'].pop('_dateLastModifiedHash', None)
+          stable = json.dumps(data, ensure_ascii=False, sort_keys=True, separators=(',', ':'))
+          data['_meta']['_dateLastModifiedHash'] = hashlib.sha1(stable.encode('utf-8')).hexdigest()[:10]
+          text = json.dumps(data, ensure_ascii=False, indent='\t') + '\n'
+          json.loads(text)
+          p.write_text(text, encoding='utf-8')
+          Path('No_Cause_for_Alarm_5etools_v4.10.json').write_text(text, encoding='utf-8')
+          print('updated occurrences', changed)
+          print('hash', data['_meta']['_dateLastModifiedHash'])
+          PY
+      - name: Commit updated JSON
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add No_Cause_for_Alarm_5etools_CURRENT.json No_Cause_for_Alarm_5etools_v4.10.json
+          git commit -m "Lock Noren as half-elf v4.10"
+          git push
