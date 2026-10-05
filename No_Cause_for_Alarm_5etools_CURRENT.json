@@ -10,12 +10,12 @@
 				"authors": [
 					"No Cause for Alarm Campaign"
 				],
-				"dateLastModified": 1791158714
+				"dateLastModified": 1791158804
 			}
 		],
 		"edition": "one",
 		"dateAdded": 1789528955,
-		"dateLastModified": 1791158714,
+		"dateLastModified": 1791158804,
 		"_dateLastModifiedHash": "5ecf371b73"
 	},
 	"adventure": [
@@ -2165,8 +2165,8 @@
 								"{@b Current party.} Four level-4 PCs, fully rested at the start of Session 4.",
 								"{@b Current hook.} The Council job is already accepted; the mission is Pepper’s first unpaid sentence assignment and ordinary Council work for the rest of the party.",
 								"The Council already knows separate armed crews around Kellan’s Well are using the same patrol signals and routes. The old catacombs/waterworks beneath the site create a strategic underground connection into the ruins.",
-								"{@b Current lead-in.} The Council sends the party here immediately after the Blackstone resolution and Council meeting. No records box, coded ledger, or other Blackstone document is required to discover or justify the job.",
-								"If Pepper’s sentence for Kaleb’s murder is imposed, this is Pepper’s one unpaid Council assignment; the next five required Council jobs are paid normally.",
+								"{@b Current lead-in.} The party has already accepted Kellan’s Well. Session 4 begins the next morning at Ledger House after a long rest and level-up; no records box, coded ledger, or other Blackstone document is required to justify the job.",
+								"Pepper’s sentence has been imposed. Kellan’s Well is the first of five mandatory Council missions and is unpaid for Pepper; the remaining four required missions are paid normally.",
 								"{@b Leads onward.} Evidence inside the well can still establish the wider coordination network and point toward Koven House."
 							]
 						},
@@ -2177,11 +2177,11 @@
 								"{@b Table-specific balance.} Use the Session 4 Encounter Calibration above. Blackstone proved this four-player table substantially outperforms the previous low-level encounter baseline.",
 								{
 									"type": "entries",
-									"name": "Current Session 3 Lead-In",
+									"name": "Session 4 Current Lead-In — Locked",
 									"entries": [
-										"Begin with the Council assignment following the Blackstone/Kaleb consequence scene. The party should already be level 4 after resolving Blackstone.",
-										"The reason for the mission is observed coordination around the well and concern about the catacombs/waterworks route, not possession of the Iron Covenant ledger.",
-										"The ledger can provide additional color or leverage later if the party retained it, but the chapter never stalls if Tal recovered it."
+										"Begin the session the next morning at Ledger House with four level-4 PCs after a long rest and level-up.",
+										"The party already accepted the Kellan’s Well assignment. The reason for the mission is observed coordination around the well and concern about the catacombs/waterworks route, not possession of the Iron Covenant ledger.",
+										"The Council holds the ledger, spyglass, and compass. Pepper may leave for Kellan’s Well because it is Council business."
 									]
 								},
 								"{@b Primary objectives.} Control access to the well, recover evidence, prevent escape or reinforcement.",
@@ -2232,7 +2232,8 @@
 											"type": "entries",
 											"name": "5. Command Room",
 											"entries": [
-												"{@b Noren Vale} is a pragmatic local commander represented by a {@creature Veteran|XMM} or {@creature Bandit Captain|XMM}. He is loyal to Tyren because Tyren provides weapons, money, and protection, not because of ancestry or supernatural compulsion. Noren retreats if defeat becomes likely and can become a recurring source of information if captured or convinced to cooperate."
+												"{@b Noren Vale} is a pragmatic local commander. For Session 4, build him to remain relevant for roughly two meaningful rounds against this four-PC level-4 party: about 55–70 HP is a useful target unless the selected stat block is equivalently durable. He is loyal to Tyren because Tyren provides weapons, money, and protection, not because of ancestry or supernatural compulsion.",
+												"{@b Prepared escape.} If Noren decides to withdraw, use an established escape tool or route—such as a bonus-action Disengage equivalent, smoke or other obscurement, a locking passage, or allies screening his retreat. Ordinary movement through engaged PCs is not a credible escape plan for this table."
 											]
 										},
 										{
@@ -7764,14 +7765,14 @@
 					"entries": [
 						{
 							"type": "entries",
-							"name": "Current Session 3 Canon",
+							"name": "Session 4 Live Continuity — Locked",
 							"entries": [
-								"Session 3 opens inside Blackstone after both captive-room doors were smashed. All seven captives are physically discovered but have not yet been interviewed.",
-								"Pepper holds Tal Rusk’s coded Iron Covenant ledger and the rest of the party knows it. There is no separate records box.",
-								"Tal Rusk remains with four Guards. The gate captain and one Guard escaped; Aaron killed another gate Guard; the party entered through a rear window after melting its iron bars.",
-								"Resolve captives → Tal/ledger → Ledger House/Council/Kaleb → Kellan’s Well. The Kellan hook is independent of the ledger.",
-								"If Pepper is found responsible for Kaleb’s murder: one unpaid Council job, then five paid mandatory Council jobs, or jail.",
-								"Party starts Session 3 at level 3; level 4 after Blackstone; Kellan’s Well is the level-4 follow-up."
+								"Session 4 opens the next morning at Ledger House after a completed long rest and level-up. The party is exactly four PCs at level 4.",
+								"All four characters already accepted Kellan’s Well. Do not replay the Council consequence scene or job acceptance.",
+								"Kellan’s Well is Council business, so Pepper may leave Ledger House for the mission. It is the first and unpaid mission of her five-mission sentence; the remaining four required missions are paid normally.",
+								"Pepper remains on house arrest at Ledger House under Brakkus’s supervision. Outside Council business, she may leave only with Brakkus.",
+								"The Council holds Tal Rusk’s coded ledger, the stolen spyglass, and the compass. The Kellan’s Well hook is independent of those objects.",
+								"Arunem is canonically nearsighted (-4 in one eye, -1 in the other); treat this as roleplay by default unless the player chooses mechanical consequences."
 							]
 						},
 						"Use this appendix between sessions. It is the adventure's continuity dashboard.",
