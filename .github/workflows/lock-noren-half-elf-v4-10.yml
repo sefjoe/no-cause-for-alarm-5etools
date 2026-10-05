@@ -31,16 +31,8 @@ jobs:
               if isinstance(x, str):
                   old = x
                   x = x.replace(
-                      'Mid-forties, rangy build, short graying hair, one old facial scar, gloves, practical weapons, and a battered coat over piecemeal armor. He looks like someone who has spent years keeping rough people organized. His species is not yet locked.',
+                      'Mid-forties, rangy build, short graying hair, one old facial scar, gloves, practical weapons, and a battered coat over piecemeal armor. He looks like someone who has spent years keeping rough people organized. His species is not yet locked; do not invent one until established at the table or separately approved.',
                       'Mid-forties half-elf with a rangy build, short graying hair, one old facial scar, gloves, practical weapons, and a battered coat over piecemeal armor. He looks like someone who has spent years keeping rough people organized.'
-                  )
-                  x = x.replace(
-                      'Noren’s species remains intentionally unspecified until established at the table or separately approved.',
-                      'Noren is a half-elf.'
-                  )
-                  x = x.replace(
-                      "Noren's species remains intentionally unspecified until established at the table or separately approved.",
-                      "Noren is a half-elf."
                   )
                   if x != old:
                       changed += 1
