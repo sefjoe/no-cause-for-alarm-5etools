@@ -1,0 +1,72 @@
+name: Remove live continuity v4.15
+
+on:
+  push:
+    paths:
+      - '.github/workflows/remove-live-continuity-v4-15.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  clean:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Remove duplicate campaign-state block
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, hashlib, time
+          from pathlib import Path
+
+          p=Path('No_Cause_for_Alarm_5etools_CURRENT.json')
+          data=json.loads(p.read_text(encoding='utf-8'))
+          if data['_meta']['sources'][0]['version']!='4.14':
+              raise SystemExit('Expected v4.14')
+
+          removed=0
+          def rec(x):
+              global removed
+              if isinstance(x,list):
+                  out=[]
+                  for y in x:
+                      if isinstance(y,dict) and y.get('name')=='Live Continuity':
+                          removed+=1
+                          continue
+                      out.append(rec(y))
+                  return out
+              if isinstance(x,dict):
+                  return {k:rec(v) for k,v in x.items()}
+              return x
+
+          data=rec(data)
+          if removed < 1:
+              raise SystemExit('No Live Continuity block found')
+
+          now=int(time.time())
+          data['_meta']['sources'][0]['version']='4.15'
+          data['_meta']['sources'][0]['dateLastModified']=now
+          data['_meta']['dateLastModified']=now
+          data['_meta'].pop('_dateLastModifiedHash',None)
+          stable=json.dumps(data,ensure_ascii=False,sort_keys=True,separators=(',',':'))
+          data['_meta']['_dateLastModifiedHash']=hashlib.sha1(stable.encode()).hexdigest()[:10]
+          txt=json.dumps(data,ensure_ascii=False,indent='\t')+'\n'
+          json.loads(txt)
+          if 'The party is exactly four PCs at level 4.' in txt:
+              raise SystemExit('Exact four-PC status line still remains')
+          if '"name": "Live Continuity"' in txt:
+              raise SystemExit('Live Continuity section still remains')
+          p.write_text(txt,encoding='utf-8')
+          Path('No_Cause_for_Alarm_5etools_v4.15.json').write_text(txt,encoding='utf-8')
+          print('removed', removed)
+          print('hash', data['_meta']['_dateLastModifiedHash'])
+          PY
+      - name: Commit result
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add No_Cause_for_Alarm_5etools_CURRENT.json No_Cause_for_Alarm_5etools_v4.15.json
+          git diff --cached --quiet || git commit -m 'Remove duplicate live continuity block'
+          git push
