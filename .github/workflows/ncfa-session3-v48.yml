@@ -1,4 +1,4 @@
-name: NCFA Session 3 Canon Migration
+name: NCFA Session 4 Continuity Cleanup
 
 on:
   push:
@@ -9,13 +9,13 @@ permissions:
   contents: write
 
 jobs:
-  migrate:
+  cleanup:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Lock Session 3 canon and prep Session 4
+      - name: Remove stale Session 3 live-state text
         shell: bash
         run: |
           python <<'PY'
@@ -24,302 +24,89 @@ jobs:
 
           path = Path('No_Cause_for_Alarm_5etools_CURRENT.json')
           data = json.loads(path.read_text(encoding='utf-8'))
-
-          # Version/timestamp.
           now = int(time.time())
           data['_meta']['sources'][0]['version'] = '4.8'
           data['_meta']['sources'][0]['dateLastModified'] = now
           data['_meta']['dateLastModified'] = now
 
-          def named(entries, name):
-              if not isinstance(entries, list):
-                  return None
-              for x in entries:
-                  if isinstance(x, dict) and x.get('name') == name:
-                      return x
-              return None
-
-          def upsert(entries, obj, names=(), pos=0):
-              targets = set(names) | {obj.get('name')}
-              for i, x in enumerate(entries):
-                  if isinstance(x, dict) and x.get('name') in targets:
-                      entries[i] = obj
-                      return obj
-              entries.insert(min(pos, len(entries)), obj)
-              return obj
-
-          def remove_named(entries, names):
-              if not isinstance(entries, list):
-                  return
-              names = set(names)
-              entries[:] = [x for x in entries if not (isinstance(x, dict) and x.get('name') in names)]
-
-          def replace_strings(obj, replacements):
-              if isinstance(obj, dict):
-                  for k, v in list(obj.items()):
-                      obj[k] = replace_strings(v, replacements)
-                  return obj
-              if isinstance(obj, list):
-                  return [replace_strings(v, replacements) for v in obj]
-              if isinstance(obj, str):
-                  for old, new in replacements:
-                      obj = obj.replace(old, new)
-                  return obj
-              return obj
-
-          # Correct every surviving six-job phrasing to the actual five-mission sentence.
-          replacements = [
-              ('one unpaid Council job followed by five additional Council jobs that are paid normally',
-               'five mandatory Council missions total: the first is unpaid and the next four are paid normally'),
-              ('one unpaid Council job and then five additional Council jobs that are paid normally',
-               'five mandatory Council missions total: the first is unpaid and the next four are paid normally'),
-              ('one unpaid Council assignment. The following five mandatory Council jobs are paid normally',
-               'the first of Pepper’s five mandatory Council missions and is unpaid. The remaining four missions are paid normally'),
-              ('one unpaid Council assignment. The following five mandatory Council jobs are paid normally.',
-               'the first of Pepper’s five mandatory Council missions and is unpaid. The remaining four missions are paid normally.'),
-              ('one unpaid Council job. Other characters can still receive ordinary pay or accept the work for their own reasons.',
-               'the first of Pepper’s five mandatory Council missions and is unpaid. The remaining four missions are paid normally. Other characters can still receive ordinary pay or accept the work for their own reasons.'),
+          session4_entries = [
+              'Session 4 opens the next morning at Ledger House after a completed long rest and level-up. The party is exactly four PCs at level 4.',
+              'All four characters already accepted Kellan’s Well. Do not replay the Council consequence scene or job acceptance.',
+              'Kellan’s Well is Council business, so Pepper may leave Ledger House for the mission. It is the first and unpaid mission of her five-mission sentence; the remaining four required missions are paid normally.',
+              'Pepper remains on house arrest at Ledger House under Brakkus’s supervision. Outside Council business, she may leave only with Brakkus.',
+              'The Council holds Tal Rusk’s coded ledger, the stolen spyglass, and the compass. The Kellan’s Well hook is independent of those objects.',
+              'Arunem is canonically nearsighted (-4 in one eye, -1 in the other); treat this as roleplay by default unless the player chooses mechanical consequences.'
           ]
-          data = replace_strings(data, replacements)
 
-          # Update actual-play milestone rows wherever the campaign-control table appears.
-          def patch_milestones(obj):
-              if isinstance(obj, list):
-                  for row in obj:
-                      if isinstance(row, list) and len(row) >= 2:
-                          if row[0] == 'Slums substantially secured' and str(row[1]) == '4':
-                              row[0] = 'Blackstone Temple resolved'
-                          elif row[0] == "Blackstone Temple and Kellan's Well resolved" and str(row[1]) == '5':
-                              row[0] = "Kellan's Well resolved"
-                      patch_milestones(row)
-              elif isinstance(obj, dict):
-                  for v in obj.values():
-                      patch_milestones(v)
-          patch_milestones(data)
-
-          # ----- Adventure contents/index overlays -----
-          adv_contents = data['adventure'][0]['contents']
-          c4_index = next(x for x in adv_contents if x.get('name') == 'Chapter 4: Blackstone Temple')
-          c5_index = next(x for x in adv_contents if x.get('name') == "Chapter 5: Delving into Kellan's Well")
-
-          session3_actual = {
-              'type': 'entries',
-              'name': 'Session 3 Actual Play — Locked Canon',
-              'entries': [
-                  '{@b Session length and endpoint.} Session 3 ran about 2.5 hours and ended as the party walked in the door of Ledger House. The later whereabouts of the seven freed captives were not established at the table and remain intentionally unresolved.',
-                  '{@b Captives and Nela.} The party freed all seven Blackstone captives. Nela Orr told them that she had hidden Tal Rusk’s coded Iron Covenant ledger.',
-                  '{@b Jarrock’s accusation.} Jarrock told Council surveyors Lessa Dorn and Kav Orin that Pepper killed Kaleb. Pepper bluffed well enough to leave the accusation questionable, but the surveyors reported Jarrock’s statement to the Council.',
-                  '{@b Tal Rusk.} Tal was identified by name. The party did not allow him to escape and killed Tal and the remaining guards. Tal was searched afterward. He carried the reliquary, 50 gp, and his weapons. Pepper kept Tal’s weapons and gave the 50 gp to the party.',
-                  '{@b Evidence custody.} The Council took custody of Tal’s coded ledger, Pepper’s stolen spyglass, and the compass.',
-                  '{@b Pepper’s civic consequence.} Pepper was caught in a shop trying to buy tools to alter the spyglass. Combined with the existing circumstantial evidence, this resulted in a mandatory five-mission Council sentence: Kellan’s Well is the first mission and is unpaid for Pepper; the remaining four required missions are paid normally. Refusing or abandoning the sentence means jail.',
-                  '{@b House arrest.} Pepper is under house arrest at Ledger House, with Brakkus responsible for supervising her. Pepper may leave when accompanied by Brakkus or while conducting Council business.',
-                  '{@b Reliquary and rewards.} The party physically returned the reliquary to Bishop Brann. He paid 300 gp total to the party, which they split. He also gave Arunem Oil of Slipperiness. Arunem found a Scroll of Lesser Restoration in Blackstone Temple.',
-                  '{@b Next job.} All four characters agreed to undertake Kellan’s Well.',
-                  '{@b Level.} The four-character party completed Blackstone at level 3. Session 4 begins the next morning after a long rest and level-up, with all four PCs at level 4.'
-              ]
+          # Global corrections for surviving pre-play sentence language.
+          replacements = {
+              'If Pepper’s sentence for Kaleb’s murder is imposed, this is Pepper’s one unpaid Council assignment; the next five required Council jobs are paid normally.':
+                  'Pepper’s sentence has been imposed. Kellan’s Well is the first of five mandatory Council missions and is unpaid for Pepper; the remaining four required missions are paid normally.',
+              'If Pepper is found responsible for Kaleb’s murder: one unpaid Council job, then five paid mandatory Council jobs, or jail.':
+                  'Pepper was sentenced to five mandatory Council missions: the first unpaid, the next four paid normally; refusal or abandonment means jail.',
+              'The ledger can provide additional color or leverage later if the party retained it, but the chapter never stalls if Tal recovered it.':
+                  'The Council now holds the coded ledger. It can provide institutional context later, but Kellan’s Well does not depend on party possession of it.',
+              '{@b Current lead-in.} The Council sends the party here immediately after the Blackstone resolution and Council meeting. No records box, coded ledger, or other Blackstone document is required to discover or justify the job.':
+                  '{@b Current lead-in.} The party has already accepted Kellan’s Well. Session 4 begins the next morning at Ledger House after a long rest and level-up; no records box, coded ledger, or other Blackstone document is required to justify the job.'
           }
-          upsert(c4_index.setdefault('entries', []), session3_actual,
-                 names=('Session 3 Canon — Locked Current State',), pos=0)
 
-          upsert(c4_index['entries'], {
-              'type': 'entries', 'name': 'Session 3 Civic Outcome — Locked', 'entries': [
-                  'Lessa Dorn and Kav Orin reported Jarrock’s accusation that Pepper killed Kaleb. Pepper’s bluff created uncertainty rather than clearing her.',
-                  'Pepper’s later attempt to buy tools to alter the stolen spyglass added circumstantial evidence. The Council imposed five mandatory missions total: the first unpaid, the next four paid normally; refusal or abandonment means jail.',
-                  'Pepper is on house arrest at Ledger House. Brakkus supervises her, and she may leave with Brakkus or on Council business.',
-                  'The Council confiscated the coded ledger, spyglass, and compass. Kaleb’s wife and ill daughter remain a later emotional beat, not a sentence term.'
-              ]
-          }, names=('Post-Blackstone Council Continuity',), pos=2)
-
-          upsert(c4_index['entries'], {
-              'type': 'entries', 'name': 'Session 4 Lead-In — Locked', 'entries': [
-                  'Session 4 begins the next morning at Ledger House after a long rest and level-up. The party consists of four level-4 PCs.',
-                  'Kellan’s Well has already been accepted by everyone. Do not replay job acceptance. For Pepper it is Council business and the first, unpaid mission of her five-mission sentence.',
-                  'The Council already possesses the coded ledger, spyglass, and compass; none is required to unlock Kellan’s Well.',
-                  'Arunem is canonically nearsighted: approximately -4 in one eye and -1 in the other. Treat this as characterization by default, not an automatic combat or Perception penalty.'
-              ]
-          }, names=('Kellan’s Well Lead-In',), pos=3)
-
-          upsert(c4_index['entries'], {
-              'type': 'entries', 'name': 'Blackstone Actual Rewards — Locked', 'entries': [
-                  'Tal carried 50 gp, his weapons, and the reliquary. Pepper kept Tal’s weapons; the 50 gp went to the party.',
-                  'The party returned the reliquary to Bishop Brann. Bishop Brann paid 300 gp total to the party, split among the four characters.',
-                  'Bishop Brann gave Arunem Oil of Slipperiness. Arunem found a Scroll of Lesser Restoration in the temple.',
-                  'The coded ledger, spyglass, and compass are now in Council custody and are evidence, not party treasure.'
-              ]
-          }, names=('Blackstone Reward Status',), pos=4)
-          remove_named(c4_index['entries'], {'Session 3 Reminder — No Cause for Alarm / Marren Library'})
-
-          upsert(c5_index.setdefault('entries', []), {
-              'type': 'entries', 'name': 'Session 4 Live State — Locked', 'entries': [
-                  'Session 4 opens the next morning at Ledger House after a completed long rest and level-up. The party is exactly four PCs, all level 4.',
-                  'The party has already accepted Kellan’s Well. Pepper may leave Ledger House for this mission because it is Council business; otherwise her house-arrest restrictions remain in force.',
-                  'Kellan’s Well is the first of Pepper’s five mandatory missions and is unpaid for Pepper. The remaining four required Council missions are paid normally.',
-                  'The Council already has the coded Iron Covenant ledger, spyglass, and compass. Kellan’s Well remains independently justified by coordinated patrol signals and strategic underground routes.'
-              ]
-          }, names=('Current Session 3 Lead-In',), pos=0)
-
-          # ----- Full adventure data -----
-          sections = data['adventureData'][0]['data']
-          c4 = next(x for x in sections if x.get('name') == 'Chapter 4: Blackstone Temple')
-          c5 = next(x for x in sections if x.get('name') == "Chapter 5: Delving into Kellan's Well")
-
-          # Keep published recommendation honest while recording actual play.
-          for i, x in enumerate(c4['entries']):
-              if isinstance(x, str) and x.startswith('{@b Recommended level:}'):
-                  c4['entries'][i] = '{@b Recommended level:} 4. Actual-play note: this four-character party completed Blackstone at level 3 and advances to level 4 before Kellan’s Well.'
-                  break
-
-          # Remove no-longer-active Session 3 reminders/combat-start state.
-          remove_named(c4['entries'], {
-              'Session 3 Reminder — No Cause for Alarm / Marren Library',
-              'Session 3 Current Combat State'
-          })
-
-          # Add locked actual play near the front of the chapter.
-          upsert(c4['entries'], session3_actual, names=('Actual Play Continuity — Session 3',), pos=2)
-          upsert(c4['entries'], {
-              'type': 'entries', 'name': 'Session 3 Combat Outcome and Calibration', 'entries': [
-                  'Tal Rusk and the remaining guards were killed after the party prevented Tal from escaping.',
-                  'The guards were originally prepared at 20 HP; immediately before the encounter the DM raised them to 25 HP because 20 looked too low. Four level-3 PCs still defeated the opposition decisively.',
-                  'Blackstone was written around a level-4 baseline, so this result is strong evidence that the decisive encounter was under-tuned for this table rather than merely one level too easy.',
-                  'Published-session lesson: do not solve this by inflating every creature into an HP sack. Important opponents need adequate durability, useful action economy, positioning, and a real escape method if survival matters. Ordinary movement through engaged PCs is not a credible retreat plan because opportunity attacks can erase a fleeing enemy.'
-              ]
-          }, pos=3)
-
-          overview = named(c4['entries'], 'Chapter Overview')
-          if overview:
-              overview['entries'] = [
-                  '{@b Actual-play status.} Blackstone Temple is resolved. The four level-3 PCs freed the seven captives, killed Tal Rusk and his remaining guards, recovered the reliquary, and returned it to Bishop Brann.',
-                  'The Council now holds Tal’s coded ledger, the spyglass, and the compass. Pepper’s Kaleb investigation has produced a five-mission sentence and Ledger House arrest under Brakkus’s supervision.',
-                  '{@b Leads onward.} Everyone accepted Kellan’s Well. Session 4 begins the next morning after a long rest and level-up with four level-4 PCs.'
-              ]
-
-          running = named(c4['entries'], 'Running the Chapter')
-          if running and isinstance(running.get('entries'), list):
-              marker = '{@b Actual-play override.} This chapter is complete at the table. Use the locked Session 3 outcome above whenever it conflicts with the pre-play scene guidance retained below for reference.'
-              if marker not in running['entries']:
-                  running['entries'].insert(0, marker)
-
-          rewards = named(c4['entries'], 'Rewards')
-          if rewards:
-              rewards['entries'] = [
-                  '{@b Actual reward.} Tal had 50 gp, his weapons, and the reliquary. Pepper kept Tal’s weapons; the party received the 50 gp.',
-                  '{@b Bishop Brann.} The party returned the reliquary to him. He paid 300 gp total to the party, which they split, and gave Arunem Oil of Slipperiness.',
-                  '{@b Temple find.} Arunem found a Scroll of Lesser Restoration.',
-                  '{@b Council custody.} The coded ledger, spyglass, and compass are now Council evidence rather than party inventory.'
-              ]
-
-          adventure = named(c4['entries'], 'Adventure')
-          if adventure and isinstance(adventure.get('entries'), list):
-              outcome = {
-                  'type': 'entries', 'name': 'Actual Play Outcome — Session 3', 'entries': session3_actual['entries']
-              }
-              upsert(adventure['entries'], outcome, pos=0)
-              transition = named(adventure['entries'], 'Transition to Chapter 5')
-              if transition:
-                  transition['entries'] = [
-                      'All four characters have already agreed to Kellan’s Well. The Council’s reason to act is independent of the ledger: separate armed groups use coordinated signals and routes there, and the catacombs/waterworks are strategically important.',
-                      'Kellan’s Well is the first of Pepper’s five mandatory Council missions and is unpaid for Pepper. Her remaining four required missions are paid normally. Refusal or abandonment means jail.',
-                      'Session 3 ended as the party entered Ledger House. Session 4 begins the next morning after a long rest and level-up, with four level-4 PCs.'
-                  ]
-
-          # Chapter 5 live state and table-specific encounter calibration.
-          for i, x in enumerate(c5['entries']):
-              if isinstance(x, str) and x.startswith('{@b Recommended level:}'):
-                  c5['entries'][i] = '{@b Recommended level:} 4–5. Current actual-play party: four level-4 PCs.'
-                  break
-
-          session4 = {
-              'type': 'entries', 'name': 'Session 4 Live State — Locked', 'entries': [
-                  'Session 4 opens the next morning at Ledger House after a long rest and level-up. The party is exactly four PCs at level 4.',
-                  'Everyone already agreed to undertake Kellan’s Well. Do not spend table time renegotiating or re-accepting the assignment.',
-                  'For Pepper, Kellan’s Well is Council business and therefore permits her to leave Ledger House despite house arrest. It is the first, unpaid mission of her five-mission sentence. The next four required Council missions are paid normally.',
-                  'Brakkus remains responsible for supervising Pepper’s house arrest. Outside Council business, Pepper may leave only with Brakkus.',
-                  'The Council holds the coded ledger, spyglass, and compass. These objects are not required to access or justify Kellan’s Well.',
-                  'Arunem’s nearsightedness (-4 in one eye, -1 in the other) is a roleplay trait unless the player explicitly chooses mechanical consequences.'
-              ]
-          }
-          upsert(c5['entries'], session4, names=('Current Session 3 Lead-In',), pos=2)
-
-          calibration = {
-              'type': 'entries', 'name': 'Session 4 Encounter Calibration — Four Level-4 PCs', 'entries': [
-                  '{@b Benchmark from Blackstone.} Four level-3 PCs decisively defeated a Blackstone fight written around level 4, even after the DM increased the guards from 20 to 25 HP. Calibrate Kellan’s Well from that observed table performance, not generic CR assumptions alone.',
-                  '{@b Encounter shape.} Keep Kellan’s Well primarily an investigation/exploration chapter. Do not make every room hard. The armed coordinated crews and Noren Vale are the main tactical spine; rats, centipedes, oozes, and the carrion crawler are environmental complications or optional hazards when they reveal information or change positioning.',
-                  '{@b Checkpoint.} Use roughly four to five opponents. Most front-line enemies should be durable enough to survive incidental damage (about 25–35 HP is a useful table-specific target), with at least one ranged or mobile threat. Their goal is to raise the alarm and fall back, not fight to the death.',
-                  '{@b Noren encounter.} Noren should survive long enough to function as a commander. For this table, target roughly 55–70 HP unless the chosen published stat block provides equivalent staying power. Support him with about two competent enforcers in the 30–40 HP range and, if needed, one ranged/mobile combatant rather than simply adding a large mob.',
-                  '{@b Escape.} If Noren is meant to have a chance to survive, give him a prepared escape route or real escape tool: a bonus-action Disengage equivalent, smoke/obscurement, a locking route, a screened withdrawal, or another fictionally established method. Do not rely on “he runs away” through engaged PCs.',
-                  '{@b Damage caution.} Increase durability, positioning, objectives, and action economy before increasing enemy burst damage or save DCs. These are still level-4 characters and should not be punished with level-6 damage just because their offense is efficient.'
-              ]
-          }
-          upsert(c5['entries'], calibration, pos=3)
-
-          c5_overview = named(c5['entries'], 'Chapter Overview')
-          if c5_overview and isinstance(c5_overview.get('entries'), list):
-              c5_overview['entries'] = [
-                  '{@b Session purpose.} Control Kellan’s Well, recover evidence that separate armed crews answer to a higher command, and open a useful underground route.',
-                  '{@b Current party.} Four level-4 PCs, fully rested at the start of Session 4.',
-                  '{@b Current hook.} The Council job is already accepted; the mission is Pepper’s first unpaid sentence assignment and ordinary Council work for the rest of the party.'
-              ] + [x for x in c5_overview['entries'] if not (isinstance(x, str) and x.startswith('{@b Session purpose.}'))]
-
-          c5_running = named(c5['entries'], 'Running the Chapter')
-          if c5_running and isinstance(c5_running.get('entries'), list):
-              note = '{@b Table-specific balance.} Use the Session 4 Encounter Calibration above. Blackstone proved this four-player table substantially outperforms the previous low-level encounter baseline.'
-              if note not in c5_running['entries']:
-                  c5_running['entries'].insert(0, note)
-
-          # Patch Noren-specific entries wherever they occur inside Chapter 5.
-          def patch_noren(obj):
+          def walk(obj):
               if isinstance(obj, dict):
-                  name = obj.get('name', '')
-                  if isinstance(name, str) and 'Noren' in name and isinstance(obj.get('entries'), list):
-                      line = '{@b Session 4 calibration.} Do not use ordinary retreat movement as Noren’s only survival plan. Give him a prepared escape route/tool and enough durability/support to remain relevant for roughly two meaningful rounds against this four-PC level-4 party.'
-                      if line not in obj['entries']:
-                          obj['entries'].append(line)
-                  for v in obj.values():
-                      patch_noren(v)
-              elif isinstance(obj, list):
-                  for v in obj:
-                      patch_noren(v)
-          patch_noren(c5)
+                  entries = obj.get('entries')
 
-          # Clarify the creature-package contradiction if that inset exists in Chapter 5.
-          def patch_table_ready(obj):
-              if isinstance(obj, dict):
-                  if obj.get('name') == 'Table-Ready Encounter Package' and isinstance(obj.get('entries'), list):
+                  # Any remaining pre-play Session 3 live checkpoint becomes the locked Session 4 checkpoint.
+                  if isinstance(entries, list) and any(isinstance(x, str) and 'Session 3 opens inside Blackstone' in x for x in entries):
+                      obj['name'] = 'Session 4 Live Continuity — Locked'
+                      obj['entries'] = list(session4_entries)
+                      entries = obj['entries']
+
+                  # Nested Kellan lead-in from the pre-play build.
+                  if obj.get('name') == 'Current Session 3 Lead-In':
+                      obj['name'] = 'Session 4 Current Lead-In — Locked'
                       obj['entries'] = [
-                          'Treat Kellan’s Well as an investigation/exploration chapter built around the coordinated armed crews and Noren Vale. Giant Rats, Giant Centipedes, Gray Ooze, and the Carrion Crawler are optional environmental threats, not a competing primary encounter spine. Use them only when they reveal information, alter positioning, or make the catacombs feel dangerous.'
+                          'Begin the session the next morning at Ledger House with four level-4 PCs after a long rest and level-up.',
+                          'The party already accepted the Kellan’s Well assignment. The reason for the mission is observed coordination around the well and concern about the catacombs/waterworks route, not possession of the Iron Covenant ledger.',
+                          'The Council holds the ledger, spyglass, and compass. Pepper may leave for Kellan’s Well because it is Council business.'
                       ]
-                  for v in obj.values():
-                      patch_table_ready(v)
-              elif isinstance(obj, list):
-                  for v in obj:
-                      patch_table_ready(v)
-          patch_table_ready(c5)
+                      entries = obj['entries']
 
-          # Add a compact version note if a Build/Version history entry exists.
-          def add_version_note(obj):
-              if isinstance(obj, dict):
-                  n = obj.get('name', '')
-                  if isinstance(n, str) and n.lower() in {'build notes', 'version history', 'build history'} and isinstance(obj.get('entries'), list):
-                      note = '{@b v4.8 — Session 3 locked / Session 4 prepared.} Records the actual Blackstone outcome, Pepper’s five-mission sentence and house arrest, exact rewards and evidence custody, four-PC level-4 Session 4 start, Arunem’s nearsightedness, and Kellan’s Well encounter recalibration based on actual table performance.'
-                      if note not in obj['entries']:
-                          obj['entries'].insert(0, note)
-                  for v in obj.values():
-                      add_version_note(v)
-              elif isinstance(obj, list):
-                  for v in obj:
-                      add_version_note(v)
-          add_version_note(data)
+                  # Patch the actual Noren command room, whose object name does not contain Noren.
+                  if obj.get('name') == '5. Command Room' and isinstance(entries, list) and any(isinstance(x, str) and 'Noren Vale' in x for x in entries):
+                      base = []
+                      for x in entries:
+                          if isinstance(x, str) and 'Noren Vale' in x:
+                              base.append('{@b Noren Vale} is a pragmatic local commander. For Session 4, build him to remain relevant for roughly two meaningful rounds against this four-PC level-4 party: about 55–70 HP is a useful target unless the selected stat block is equivalently durable. He is loyal to Tyren because Tyren provides weapons, money, and protection, not because of ancestry or supernatural compulsion.')
+                          else:
+                              base.append(x)
+                      note = '{@b Prepared escape.} If Noren decides to withdraw, use an established escape tool or route—such as a bonus-action Disengage equivalent, smoke or other obscurement, a locking passage, or allies screening his retreat. Ordinary movement through engaged PCs is not a credible escape plan for this table.'
+                      if note not in base:
+                          base.append(note)
+                      obj['entries'] = base
 
-          # Re-run sentence replacements after inserted/retained data, then write stable tab-indented JSON.
-          data = replace_strings(data, replacements)
+                  for k, v in list(obj.items()):
+                      if isinstance(v, str):
+                          for old, new in replacements.items():
+                              v = v.replace(old, new)
+                          obj[k] = v
+                      else:
+                          walk(v)
+              elif isinstance(obj, list):
+                  for i, v in enumerate(obj):
+                      if isinstance(v, str):
+                          for old, new in replacements.items():
+                              v = v.replace(old, new)
+                          obj[i] = v
+                      else:
+                          walk(v)
+
+          walk(data)
+
           path.write_text(json.dumps(data, ensure_ascii=False, indent='\t') + '\n', encoding='utf-8')
           PY
 
           python -m json.tool No_Cause_for_Alarm_5etools_CURRENT.json >/dev/null
-
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add No_Cause_for_Alarm_5etools_CURRENT.json
-          git commit -m "Lock Session 3 canon and prep Session 4 v4.8"
+          git commit -m "Remove stale Session 3 state from v4.8"
           git push
