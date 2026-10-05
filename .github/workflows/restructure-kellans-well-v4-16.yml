@@ -1,0 +1,245 @@
+name: Restructure Kellan's Well v4.16
+
+on:
+  push:
+    paths:
+      - '.github/workflows/restructure-kellans-well-v4-16.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Restructure Kellan's Well
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, hashlib, time
+          from pathlib import Path
+
+          p = Path('No_Cause_for_Alarm_5etools_CURRENT.json')
+          data = json.loads(p.read_text(encoding='utf-8'))
+          if data['_meta']['sources'][0]['version'] != '4.15':
+              raise SystemExit(f"Expected v4.15, found {data['_meta']['sources'][0]['version']}")
+
+          chapter = None
+          for adv in data.get('adventureData', []):
+              for section in adv.get('data', []):
+                  if section.get('id') == '005' or section.get('name') == "Chapter 5: Delving into Kellan's Well":
+                      chapter = section
+                      break
+              if chapter:
+                  break
+          if not chapter:
+              raise SystemExit("Chapter 5 not found")
+
+          def first_named(entries, name):
+              for e in entries:
+                  if isinstance(e, dict) and e.get('name') == name:
+                      return e
+              return None
+
+          def walk_named(obj, name):
+              found=[]
+              if isinstance(obj, dict):
+                  if obj.get('name') == name:
+                      found.append(obj)
+                  for v in obj.values():
+                      found.extend(walk_named(v, name))
+              elif isinstance(obj, list):
+                  for v in obj:
+                      found.extend(walk_named(v, name))
+              return found
+
+          # Remove the redundant top-level Chapter Opening. Running the Chapter will contain the one lead-in.
+          chapter['entries'] = [e for e in chapter.get('entries', []) if not (isinstance(e, dict) and e.get('name') == 'Chapter Opening')]
+
+          # Normalize chapter-level recommended-level wording.
+          for i,e in enumerate(chapter.get('entries', [])):
+              if isinstance(e, str) and e.startswith('{@b Recommended level:}'):
+                  chapter['entries'][i] = '{@b Recommended level:} 4–5.'
+
+          overview = first_named(chapter.get('entries', []), 'Chapter Overview')
+          if not overview:
+              raise SystemExit('Chapter Overview not found')
+          overview['entries'] = [
+              '{@b Chapter purpose.} Secure Kellan’s Well, discover why rival groups are cooperating, and expose the supply network supporting that cooperation.',
+              '{@b Recommended level.} 4–5.',
+              '{@b Hook.} The Council has observed armed crews that should be rivals using the same patrol routes and signals around Kellan’s Well. The characters have already accepted the assignment before this chapter begins.',
+              '{@b Lead-in.} Begin the morning after Blackstone Temple, after the characters have rested at Ledger House. The job does not depend on the Iron Covenant ledger or any other recovered Blackstone object.',
+              '{@b Leads onward.} Evidence inside the well identifies Koven House as a supply and payment center for the coalition, making it the next logical target.'
+          ]
+
+          coalition = {
+              'type':'entries',
+              'name':'What Is Really Happening',
+              'entries':[
+                  'Kellan’s Well is not occupied by a single faction. It is a local command post where three normally separate groups are being made to cooperate against Bellweather.',
+                  '{@b Tyren’s strategy.} Tyren is building a coalition rather than conquering every hostile group directly. Bellweather’s reclamation has become a common threat, so Tyren uses money, weapons, supplies, safe markets, protection, and shared intelligence to persuade rival groups to stop wasting strength on one another and treat Bellweather as the priority.',
+                  {
+                      'type':'list',
+                      'items':[
+                          '{@b Iron Covenant.} The disciplined ideological faction already encountered at Blackstone Temple. Its members bring organization, commitment, and experience holding strategic sites.',
+                          '{@b Mercenary warband.} Independent fighters who cooperate for pay, protection, and reliable supplies rather than ideology. Rask belongs to this group. His imprisonment for refusing to attack civilians shows that the coalition is demanding more than ordinary paid guard work.',
+                          '{@b Koven-connected criminal and scavenger crew.} Smugglers, thieves, salvagers, and street muscle tied economically to Koven House. They provide local knowledge, movement of goods, and the practical criminal network that keeps the coalition supplied.'
+                      ]
+                  },
+                  '{@b Command structure.} Noren Vale coordinates the three groups at Kellan’s Well. Masked couriers carry orders between local commanders and the larger network. Koven House functions as a supply and payment center. Above that structure is the figure the factions know as the Boss; DM-side, Tyren is the intelligence building the coalition.',
+                  '{@b Why the well matters.} The old waterworks and catacombs beneath Kellan’s Well create a useful underground route through the ruins. Holding the site lets the coalition move people, messages, and supplies while watching Bellweather’s advance.',
+                  '{@b What the Council knows.} The Council does not begin the chapter knowing the identity of the three groups or Tyren’s structure. It knows only that armed crews that should be separate are using the same patrol routes and signals.',
+                  '{@b What the characters can prove.} Mixed equipment, shared chalk schedules, cross-faction ration chits and pay tokens, Rask’s testimony, Noren’s command structure, and the message cache all reveal that the cooperation is deliberate. The strongest surviving documents order rival groups not to fight one another while Bellweather remains the priority and identify Koven House as a supply and payment center.'
+              ]
+          }
+          # Insert after Chapter Overview if not already present.
+          if not first_named(chapter.get('entries', []), 'What Is Really Happening'):
+              idx = chapter['entries'].index(overview) + 1
+              chapter['entries'].insert(idx, coalition)
+          else:
+              first_named(chapter.get('entries', []), 'What Is Really Happening')['entries'] = coalition['entries']
+
+          running = first_named(chapter.get('entries', []), 'Running the Chapter')
+          if not running:
+              raise SystemExit('Running the Chapter not found')
+          # Remove duplicate lead-in blocks and replace with one concise section.
+          running['entries'] = [e for e in running.get('entries', []) if not (isinstance(e, dict) and e.get('name') in ('Starting the Chapter','Chapter Opening'))]
+          running['entries'].insert(0, {
+              'type':'entries',
+              'name':'Starting the Chapter',
+              'entries':[
+                  'The chapter begins at Ledger House on the morning after Blackstone Temple. The Kellan’s Well assignment is already accepted; begin with preparations and the departure for the well.',
+                  'Kellan’s Well is Council business, so Pepper may leave Ledger House for the mission despite house arrest. It counts as the first, unpaid mission of her five-mission Council sentence.'
+              ]
+          })
+
+          # Clean table-state phrasing anywhere inside Chapter 5.
+          def clean_strings(x):
+              if isinstance(x, list):
+                  return [clean_strings(v) for v in x]
+              if isinstance(x, dict):
+                  return {k:clean_strings(v) for k,v in x.items()}
+              if not isinstance(x, str):
+                  return x
+              x=x.replace('Current adventure party: four level-4 PCs.','')
+              x=x.replace('with four level-4 PCs after a long rest and level-up','after a long rest')
+              x=x.replace('against this four-PC level-4 party','against a 4th-level party')
+              x=x.replace('this four-PC level-4 party','a 4th-level party')
+              x=x.replace('this four-player table','a typical party')
+              x=x.replace('for this table','for a 4th-level party')
+              return ' '.join(x.split())
+          chapter = clean_strings(chapter)
+          # Reattach cleaned chapter object in case clean_strings returned a replacement.
+          for adv in data.get('adventureData', []):
+              for i,section in enumerate(adv.get('data', [])):
+                  if section.get('id') == '005' or section.get('name') == "Chapter 5: Delving into Kellan's Well":
+                      adv['data'][i] = chapter
+
+          # Find Adventure section after cleaning.
+          adventure = first_named(chapter.get('entries', []), 'Adventure')
+          if not adventure:
+              raise SystemExit('Adventure section not found')
+
+          # Scene 1 briefing already happened before this chapter. Remove it and renumber the live scenes.
+          old_scenes = adventure.get('entries', [])
+          new_scenes=[]
+          rename = {
+              'Scene 2: Well Chamber':'Scene 1: Well Chamber',
+              'Scene 3: Bow Gallery':'Scene 2: Bow Gallery',
+              'Scene 4: Barracks and Prisoner':'Scene 3: Barracks and Prisoner',
+              'Scene 5: Command Junction':'Scene 4: Command Junction',
+              'Scene 6: Return and Reaction':'Scene 5: Return and Reaction'
+          }
+          for e in old_scenes:
+              if isinstance(e,dict) and e.get('name') == 'Scene 1: Briefing and Objectives':
+                  continue
+              if isinstance(e,dict) and e.get('name') in rename:
+                  e['name'] = rename[e['name']]
+              new_scenes.append(e)
+          adventure['entries']=new_scenes
+
+          # Keyed-area faction clarity.
+          for area in walk_named(chapter, '1. Well Chamber'):
+              area['entries']=[
+                  'The shaft opens into a stone checkpoint chamber staffed by a deliberately mixed patrol drawn from the Iron Covenant, the mercenary warband, and the Koven-connected criminal/scavenger crew. Their armor, weapons, and old insignia do not match, but their signals and fallback procedures do. Use the scene encounter roster for the actual fight; the patrol attempts to raise the alarm and fall back rather than fight to the death.'
+              ]
+
+          for area in walk_named(chapter, '4. Barracks'):
+              area['entries']=[
+                  'Off-duty fighters from all three groups rest here. Their personal effects include Iron Covenant markings, mercenary gear, Koven-linked ration chits, shared pay tokens, and correspondence that crosses faction lines. Captured or persuaded occupants know that Noren Vale coordinates the local coalition on behalf of someone higher up.'
+              ]
+
+          for area in walk_named(chapter, '5. Command Room'):
+              area['entries']=[
+                  '{@b Noren Vale} coordinates the Iron Covenant fighters, mercenaries, and Koven-connected criminals at Kellan’s Well. He is pragmatic and loyal to the larger network because it provides weapons, money, supplies, and protection.',
+                  '{@b Prepared escape.} If Noren decides to withdraw, use an established escape tool or route—such as a bonus-action Disengage equivalent, smoke or other obscurement, a locking passage, or allies screening his retreat. Do not rely on ordinary movement through engaged characters.'
+              ]
+
+          # Point-of-use faction details in scenes.
+          for scene in walk_named(chapter, 'Scene 1: Well Chamber'):
+              entries=scene.setdefault('entries',[])
+              marker='{@b The coalition patrol.} This checkpoint mixes members of the Iron Covenant, the mercenary warband, and the Koven-connected criminal/scavenger crew in the same patrol. Their mismatched origins should be obvious before their shared discipline is.'
+              if marker not in entries:
+                  entries.insert(1 if entries else 0, marker)
+
+          for scene in walk_named(chapter, 'Scene 3: Barracks and Prisoner'):
+              entries=scene.setdefault('entries',[])
+              for i,e in enumerate(entries):
+                  if isinstance(e,str) and e.startswith('{@b Rask.}'):
+                      entries[i] = '{@b Rask.} The prisoner is a large orc mercenary from the warband working at Kellan’s Well. He has a broken nose, one chipped tusk, old scars, very short or shaved hair, rough travel clothes, and wrists rubbed raw by restraints. He looks dangerous but exhausted rather than monstrous.'
+              for sub in entries:
+                  if isinstance(sub,dict) and sub.get('name')=='What Happens':
+                      sub['entries']=['Rask was jailed after refusing an order to attack civilians. Freeing him provides an independent witness who can explain that the mercenaries, Iron Covenant, and Koven-linked crews are all receiving coordinated orders.']
+
+          for scene in walk_named(chapter, 'Scene 4: Command Junction'):
+              entries=scene.setdefault('entries',[])
+              for sub in entries:
+                  if isinstance(sub,dict) and sub.get('name')=='Clues and Discoveries':
+                      sub['entries']=[
+                          'Surviving pages order the Iron Covenant, the mercenary warband, and the Koven-connected crews to avoid fighting one another while Bellweather remains the priority. A map marks Koven House as a supply and payment center.'
+                      ]
+
+          for scene in walk_named(chapter, 'Scene 5: Return and Reaction'):
+              if scene.get('entries'):
+                  scene['entries'][0] = 'The evidence proves that Bellweather is not facing unrelated gangs. The Iron Covenant, mercenaries, and Koven-connected criminals are being supplied, paid, and directed as parts of the same coalition.'
+
+          # Validation of the specific structural problems being fixed.
+          ch_text=json.dumps(chapter,ensure_ascii=False)
+          required=[
+              'What Is Really Happening','Iron Covenant','Mercenary warband',
+              'Koven-connected criminal and scavenger crew','Tyren’s strategy',
+              'Scene 1: Well Chamber','Scene 3: Barracks and Prisoner',
+              'Scene 4: Command Junction','Scene 5: Return and Reaction'
+          ]
+          missing=[s for s in required if s not in ch_text]
+          if missing:
+              raise SystemExit('Missing expected material: '+', '.join(missing))
+          forbidden=['Scene 1: Briefing and Objectives','"name": "Chapter Opening"','Current adventure party: four level-4 PCs']
+          present=[s for s in forbidden if s in ch_text]
+          if present:
+              raise SystemExit('Obsolete material remains: '+', '.join(present))
+          if ch_text.count('"name": "Starting the Chapter"') != 1:
+              raise SystemExit('Expected exactly one Starting the Chapter section')
+
+          now=int(time.time())
+          data['_meta']['sources'][0]['version']='4.16'
+          data['_meta']['sources'][0]['dateLastModified']=now
+          data['_meta']['dateLastModified']=now
+          data['_meta'].pop('_dateLastModifiedHash',None)
+          stable=json.dumps(data,ensure_ascii=False,sort_keys=True,separators=(',',':'))
+          data['_meta']['_dateLastModifiedHash']=hashlib.sha1(stable.encode('utf-8')).hexdigest()[:10]
+          txt=json.dumps(data,ensure_ascii=False,indent='\t')+'\n'
+          json.loads(txt)
+          p.write_text(txt,encoding='utf-8')
+          Path('No_Cause_for_Alarm_5etools_v4.16.json').write_text(txt,encoding='utf-8')
+          print('hash', data['_meta']['_dateLastModifiedHash'])
+          PY
+      - name: Commit result
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add No_Cause_for_Alarm_5etools_CURRENT.json No_Cause_for_Alarm_5etools_v4.16.json
+          git diff --cached --quiet || git commit -m "Restructure Kellan's Well coalition story"
+          git push
