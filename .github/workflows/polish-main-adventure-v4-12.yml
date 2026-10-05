@@ -1,0 +1,241 @@
+name: Finish NCFA adventure format v4.12
+
+on:
+  push:
+    paths:
+      - '.github/workflows/polish-main-adventure-v4-12.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  polish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Normalize adventure prose and remove editorial state language
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, hashlib, time
+          from pathlib import Path
+
+          path = Path('No_Cause_for_Alarm_5etools_CURRENT.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
+          if data['_meta']['sources'][0]['version'] != '4.11':
+              raise SystemExit(f"Expected v4.11, found {data['_meta']['sources'][0]['version']}")
+
+          # adventure.contents should remain table-of-contents metadata, not a campaign log.
+          for adv in data.get('adventure', []):
+              for item in adv.get('contents', []):
+                  item.pop('entries', None)
+
+          remove_names = {
+              'Blackstone Temple Aftermath',
+              'Session 2 Record — Adventure Outcome',
+              'Adventure Outcome Outcome — Blackstone Temple',
+              'Adventure Outcome — Blackstone Temple',
+              'Blackstone Temple Combat Outcome and Calibration',
+              'Council Judgment',
+              "Beginning Kellan's Well",
+              'Beginning Kellan’s Well',
+              'Blackstone Temple Rewards',
+          }
+
+          blackstone_npcs = [
+              '{@b Nela Orr.} Older human woman in soot-stained gray temple robes with cropped silver hair and a firm, controlled voice. She wants every captive out safely and the temple’s sacred records and relics preserved. Before being recaptured, she briefly escaped, stole Tal Rusk’s coded Iron Covenant ledger, and hid it in the safe.',
+              '{@b Dwarf caretaker.} Middle-aged dwarf with a shaved head and ink-stained fingers. Exhausted but focused on preserving the temple records.',
+              '{@b Halfling caretaker.} Young halfling with a bruised face and torn vestments. Frightened but mobile.',
+              '{@b Half-orc caretaker.} Broad-shouldered half-orc with one arm in a sling. Protective of the other captives despite the injury.',
+              '{@b Wounded temple guard.} Human in battered mail with a bandaged thigh, pale from blood loss but alert. The guard can describe Covenant movement inside the temple and confirm Tal’s remaining force.',
+              '{@b Lessa Dorn.} Lean, weathered half-elf Council surveyor. Angry about how poorly the survey crew was protected.',
+              '{@b Kav Orin.} Halfling Council surveyor. He shares Lessa’s knowledge of the abduction and primarily wants to get out of Blackstone alive.',
+              '{@b Tal Rusk.} Compact, heavily built, scarred dwarf; controlled and professional rather than theatrical. He wants the coded ledger recovered and Blackstone kept under control, but he is not suicidal. He intimidates first and negotiates when that better protects Covenant intelligence.',
+              '{@b Brakkus Ledgerhelm.} Powerfully built half-orc around forty-eight with weathered green-gray skin, close-cropped dark hair touched with gray, and the posture of someone who spent decades in armor. Calm, dry, observant, and practical. He protects the people under his roof and prefers restraint unless danger warrants lethal force.',
+              '{@b Ulric Evern.} Well-dressed human in his late fifties or early sixties, with silvering dark hair, a neatly trimmed beard, a tailored dark coat, expensive but conservative clothing, a signet ring, and immaculate boots. Precise rather than flashy; he is the Council’s budget hawk.',
+              '{@b Wern Ursen.} Tall, lean elf with practical dark hair, a weathered face, and old scars around the jaw and temple. He wears functional, well-maintained plate armor bearing the Bellweather city crest. A former mercenary captain, he approaches problems as matters of defense and infrastructure.',
+              '{@b Bishop Brann.} Older dwarf cleric, broad and heavyset, with a thick gray-white beard kept neatly braided, layered clerical robes over practical mail, and a holy symbol worn openly. Warm eyes and large scarred hands give him the look of someone who has spent years healing people and burying the dead. He focuses on public welfare, healing, burial rights, and protecting civilians.',
+              '{@b Perrin Cardon.} Human in his thirties or early forties, always very well dressed: perfectly fitted clothing, expensive fabrics, polished boots, carefully styled hair, and a subtle family pin or gold chain. Charming rather than foppish, clever, polished, and increasingly ambitious.',
+              '{@b Council envoy.} A procedural messenger for the Council who carries official summons and speaks privately with Brakkus when required.',
+              '{@b Kaleb’s wife.} Furious that Pepper killed her husband, but willing to ask Pepper for help because her daughter is seriously ill. Her request is an emotional choice for Pepper, not a term of the Council sentence.',
+              '{@b Kaleb’s daughter.} Her illness can be cured by Greater Restoration.'
+          ]
+
+          kellan_guidance = [
+              '{@b Encounter shape.} Keep Kellan’s Well primarily an investigation and exploration chapter. The coordinated crews and Noren Vale form the tactical spine; rats, centipedes, oozes, and the carrion crawler work best as environmental complications or optional hazards when they reveal information or change positioning.',
+              '{@b Checkpoint.} Use roughly four to five opponents. Front-line enemies should generally be durable enough to survive incidental damage, about 25–35 hit points, with at least one ranged or mobile threat. Their goal is to raise the alarm and fall back, not fight to the death.',
+              '{@b Noren encounter.} Noren should survive long enough to function as a commander. Use roughly 55–70 hit points unless the chosen stat block already provides comparable staying power. Support him with about two competent enforcers in the 30–40 hit point range and, if needed, one ranged or mobile combatant rather than a large mob.',
+              '{@b Escape.} If Noren withdraws, give him a prepared route or real escape tool such as a bonus-action Disengage equivalent, smoke or obscurement, a locking route, or a screened withdrawal. Do not rely on simply running through engaged characters.',
+              '{@b Damage caution.} Increase durability, positioning, objectives, and action economy before increasing burst damage or save DCs. The characters are still 4th level.'
+          ]
+
+          kellan_npcs = [
+              '{@b Ulric Evern.} Well-dressed human in his late fifties or early sixties, with silvering dark hair, a neatly trimmed beard, a tailored dark coat, expensive but conservative clothing, a signet ring, and immaculate boots. Precise rather than flashy.',
+              '{@b Wern Ursen.} Tall, lean elf with practical dark hair, a weathered face, and old scars around the jaw and temple. He wears functional, well-maintained plate armor bearing the Bellweather city crest and looks like a career soldier rather than a courtly elf.',
+              '{@b Bishop Brann.} Older dwarf cleric, broad and heavyset, with a thick gray-white beard kept neatly braided, layered clerical robes over practical mail, and a holy symbol worn openly. Warm eyes and large scarred hands make him look like someone who has spent years healing people, burying the dead, and doing the work rather than merely preaching.',
+              '{@b Perrin Cardon.} Human in his thirties or early forties, always very well dressed: perfectly fitted clothing, expensive fabrics, polished boots, carefully styled hair, and a subtle family pin or gold chain. He looks like someone who deliberately chose what everyone in the room would notice about him. Charming rather than foppish.',
+              '{@b Noren Vale.} Mid-forties half-elf with a rangy build, short graying hair, one old facial scar, gloves, practical weapons, and a battered coat over piecemeal armor. He looks like someone who has spent years keeping rough people organized.',
+              '{@b Rask.} Large orc mercenary with a broken nose, one chipped tusk, old scars, very short or shaved hair, rough travel clothes, and wrists rubbed raw by restraints. He looks dangerous but exhausted rather than monstrous.',
+              '{@b Kellan’s Well crews.} Their mixed origins are visible in mismatched armor, different weapons, and partly removed or covered insignia. Their shared patrol discipline, signals, schedules, and fallback behavior show that someone has organized them. They do not share a common uniform or badge.'
+          ]
+
+          def prune_and_polish(obj):
+              if isinstance(obj, list):
+                  out = []
+                  for item in obj:
+                      if isinstance(item, dict) and item.get('name') in remove_names:
+                          continue
+                      item = prune_and_polish(item)
+                      if item != '':
+                          out.append(item)
+                  return out
+
+              if isinstance(obj, dict):
+                  name = obj.get('name')
+
+                  if name == 'Blackstone Temple NPCs':
+                      obj['entries'] = list(blackstone_npcs)
+
+                  if name in ('this chapter Encounter Calibration — Four Level-4 PCs', 'Kellan’s Well Encounter Calibration — Four Level-4 PCs', "Kellan's Well Encounter Calibration — Four Level-4 PCs"):
+                      obj['name'] = 'Encounter Guidance'
+                      obj['entries'] = list(kellan_guidance)
+
+                  if name in ('this chapter Current Lead-In — Locked', 'Kellan’s Well Current Lead-In — Locked', "Kellan's Well Current Lead-In — Locked"):
+                      obj['name'] = 'Starting the Chapter'
+
+                  if name == 'Session 1 Objective':
+                      obj['name'] = 'Opening Route Through the Slums'
+
+                  if name == 'Appendix F: Session Prep Template':
+                      obj['name'] = 'Appendix F: Adventure Prep Template'
+
+                  if name == 'Session Goal':
+                      obj['name'] = 'Adventure Goal'
+
+                  for k, v in list(obj.items()):
+                      obj[k] = prune_and_polish(v)
+                  return obj
+
+              if not isinstance(obj, str):
+                  return obj
+
+              s = obj
+
+              # Remove editorial override/history lines from completed-play revisions.
+              if 'This chapter is complete at the table.' in s:
+                  return ''
+              if '{@b Start where play actually stopped.}' in s:
+                  return ''
+              if '{@b Table-specific balance.}' in s:
+                  return ''
+
+              # Normal adventure wording.
+              s = s.replace('{@b Session purpose.}', '{@b Chapter purpose.}')
+              s = s.replace('{@b Current party.}', '{@b Starting level.}')
+              s = s.replace('{@b Current hook.}', '{@b Hook.}')
+              s = s.replace('{@b Current lead-in.}', '{@b Lead-in.}')
+              s = s.replace('{@b No records box.} Remove every prior records-box bargain or satchel-recognition trigger. The coded ledger in Pepper’s possession is the only current Iron Covenant document at the center of the Blackstone standoff.',
+                            '{@b Coded ledger.} The coded ledger is the key Iron Covenant document at the center of the Blackstone standoff.')
+              s = s.replace('Treat the envoy as a procedural messenger unless later canon adds more.',
+                            '{@b Council envoy.} The envoy serves as a procedural messenger for the Council.')
+              s = s.replace('Do not make him openly villainous at this stage.', 'Play him as polished and ambitious rather than openly threatening.')
+
+              # Session-numbered pacing -> chapter/scene pacing.
+              s = s.replace('{@b Suggested Session 1 sequence:}', '{@b Suggested opening sequence:}')
+              s = s.replace('Session 1’s reliable combat beat', 'the opening reliable combat beat')
+              s = s.replace("Session 1's reliable combat beat", 'the opening reliable combat beat')
+              s = s.replace('before Session 1 ends', 'before the party reaches the survey crew')
+              s = s.replace('for Session 2', 'for later in the chapter')
+              s = s.replace('during Session 1 after the storm and Ledger House scenes', 'after the storm and Ledger House scenes')
+              s = s.replace('the Session 1 combat beat', 'the opening combat beat')
+              s = s.replace('Beginning in Session 2,', 'Beyond this point,')
+              s = s.replace('enters Session 2 badly depleted', 'enters this encounter badly depleted')
+              s = s.replace('Session 2 material', 'alternate approach material')
+              s = s.replace('Begin the session the next morning at Ledger House', 'Begin the chapter the next morning at Ledger House')
+              s = s.replace('Use this one-page structure when turning a chapter into a session.', 'Use this one-page structure when preparing a chapter for play.')
+              s = s.replace('what can materially change tonight', 'what can materially change during play')
+              s = s.replace('Every return should take 5–15 minutes at the table unless players linger.', 'Keep routine returns to Ledger House brief unless the players choose to linger.')
+
+              # Reward appendix editorial language.
+              s = s.replace('{@b Superseding rule.} Where this appendix or a chapter\'s Rewards section conflicts with an older generic treasure quantity, use the newer reward guidance. Preserve named story relics that matter to the chapter, then reduce other permanent treasure if needed to stay near the campaign curve.',
+                            '{@b Reward consistency.} Preserve named story relics that matter to a chapter. If a treasure parcel would push permanent rewards well beyond the campaign curve, reduce interchangeable treasure before removing story-relevant items.')
+
+              # Kellan NPC block appears in more than one place; normalize whenever found as a section.
+              return s
+
+          data = prune_and_polish(data)
+
+          # Normalize every Key NPCs section that contains Noren or Rask.
+          def normalize_key_npcs(obj):
+              if isinstance(obj, dict):
+                  if obj.get('name') == 'Key NPCs' and isinstance(obj.get('entries'), list):
+                      joined = ' '.join(x for x in obj['entries'] if isinstance(x, str))
+                      if 'Noren Vale' in joined or 'Rask' in joined:
+                          obj['entries'] = list(kellan_npcs)
+                  for v in obj.values():
+                      normalize_key_npcs(v)
+              elif isinstance(obj, list):
+                  for v in obj:
+                      normalize_key_npcs(v)
+          normalize_key_npcs(data)
+
+          # Clean remaining obviously editorial phrases without touching legitimate locked doors/chests.
+          def final_text_cleanup(obj):
+              if isinstance(obj, dict):
+                  for k, v in list(obj.items()):
+                      obj[k] = final_text_cleanup(v)
+                  return obj
+              if isinstance(obj, list):
+                  vals = [final_text_cleanup(v) for v in obj]
+                  return [v for v in vals if v != '']
+              if not isinstance(obj, str):
+                  return obj
+
+              s = obj
+              s = s.replace('Adventure Outcome Outcome — Blackstone Temple', 'Blackstone Temple')
+              s = s.replace('this chapter Encounter Calibration', 'Encounter Guidance')
+              s = s.replace('Encounter Calibration', 'Encounter Guidance')
+              s = s.replace('encounter calibration', 'encounter guidance')
+              s = s.replace('Calibrate Kellan’s Well from that observed table performance, not generic CR assumptions alone.', '')
+              s = s.replace('a useful table-specific target', 'a useful target')
+              s = s.replace('For this table, target', 'Target')
+              s = s.replace('historical Session 2 material', 'alternate approach material')
+              return ' '.join(s.split()) if '\n' not in s else s
+
+          data = final_text_cleanup(data)
+
+          # Metadata/version/hash.
+          now = int(time.time())
+          data['_meta']['sources'][0]['version'] = '4.12'
+          data['_meta']['sources'][0]['dateLastModified'] = now
+          data['_meta']['dateLastModified'] = now
+          data['_meta'].pop('_dateLastModifiedHash', None)
+          stable = json.dumps(data, ensure_ascii=False, sort_keys=True, separators=(',', ':'))
+          data['_meta']['_dateLastModifiedHash'] = hashlib.sha1(stable.encode('utf-8')).hexdigest()[:10]
+
+          text = json.dumps(data, ensure_ascii=False, indent='\t') + '\n'
+          json.loads(text)
+          path.write_text(text, encoding='utf-8')
+          Path('No_Cause_for_Alarm_5etools_v4.12.json').write_text(text, encoding='utf-8')
+
+          # Fail on the process-language the user specifically asked to remove.
+          bad = [
+              '— Locked', 'Locked Canon', 'Combat Outcome and Calibration',
+              'this chapter Encounter Calibration', 'table-specific balance',
+              'complete at the table', 'pre-play scene guidance', 'Published-session lesson'
+          ]
+          found = [x for x in bad if x.lower() in text.lower()]
+          if found:
+              raise SystemExit('Editorial markers remain: ' + ', '.join(found))
+
+          print('v4.12 hash:', data['_meta']['_dateLastModifiedHash'])
+          PY
+      - name: Commit polished adventure
+        shell: bash
+        run: |
+          git config user.name "sefjoe"
+          git config user.email "109435369+sefjoe@users.noreply.github.com"
+          git rm .github/workflows/polish-main-adventure-v4-12.yml
+          git add No_Cause_for_Alarm_5etools_CURRENT.json No_Cause_for_Alarm_5etools_v4.12.json
+          git commit -m "Finish NCFA regular adventure cleanup v4.12"
+          git push
