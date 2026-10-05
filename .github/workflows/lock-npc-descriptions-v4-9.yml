@@ -1,0 +1,113 @@
+name: Lock NPC physical descriptions v4.9
+
+on:
+  push:
+    paths:
+      - '.github/workflows/lock-npc-descriptions-v4-9.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Update NCFA canon
+        run: |
+          python - <<'PY'
+          import json, hashlib, time, pathlib, sys
+
+          path = pathlib.Path('No_Cause_for_Alarm_5etools_CURRENT.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
+          current = data['_meta']['sources'][0]['version']
+          if current != '4.8':
+              raise SystemExit(f'Expected v4.8, found {current}')
+
+          replacements = {
+              '{@b Ulric Evern.} Human senior councilor and budget hawk. Hard bargaining and suspicious of open-ended expenses. In the Session 3 Council scene, play him as the voice of fiscal accountability and institutional consequences rather than personal vengeance.':
+              '{@b Ulric Evern.} Well-dressed human in his late fifties or early sixties, with silvering dark hair, a neatly trimmed beard, a tailored dark coat, expensive but conservative clothing, a signet ring, and immaculate boots. Precise rather than flashy. He is the senior councilor and budget hawk: hard bargaining, suspicious of open-ended expenses, and the voice of fiscal accountability rather than personal vengeance.',
+
+              '{@b Wern Ursen.} Dragonborn councilor for defense and infrastructure; former mercenary captain who gives practical tactical advice. In the Session 3 Council scene, his concern is Bellweather’s security and what the party’s actions mean for future operations.':
+              '{@b Wern Ursen.} Tall, lean elf with dark hair kept practical, a weathered face, and old scars around the jaw and temple. He wears functional, well-maintained plate armor bearing the Bellweather city crest prominently on the breastplate or shoulder. He looks like a career soldier rather than a courtly elf. Wern is the councilor for defense and infrastructure and a former mercenary captain who gives practical tactical advice; his concern is Bellweather’s security and the operational consequences of the party’s actions.',
+
+              '{@b Bishop Brann.} Halfling religious representative and civic mediator. Focused on public welfare, burial rights, healing, keeping captives alive, and preserving sacred records. Surrendered enemies are prisoners, not trophies. In the Council scene he should push toward a consequence that protects the community without becoming vindictive.':
+              '{@b Bishop Brann.} Older dwarf cleric, broad and heavyset, with a thick gray-white beard kept neatly braided, layered clerical robes over practical mail, and a holy symbol worn openly. Warm eyes and large scarred hands make him look like someone who has spent years healing people, burying the dead, and doing the work rather than merely preaching. He is the Council’s religious representative and civic mediator, focused on public welfare, burial rights, healing, keeping captives alive, and preserving sacred records. Surrendered enemies are prisoners, not trophies.',
+
+              '{@b Perrin Cardon.} Human heir to an old merchant family; clever, polished, increasingly ambitious. He supported clearing Blackstone because it blocked a useful route. In the Council scene, his political interest and the practical value of keeping capable adventurers working both matter; do not make him openly villainous at this stage.':
+              '{@b Perrin Cardon.} Human heir to an old merchant family, in his thirties or early forties, always very well dressed: perfectly fitted clothing, expensive fabrics, polished boots, carefully styled hair, and a subtle family pin or gold chain. He looks like someone who deliberately chose what everyone in the room would notice about him. Charming rather than foppish, clever, polished, and increasingly ambitious. He supported clearing Blackstone because it blocked a useful route; his political interest and the practical value of keeping capable adventurers working both matter. Do not make him openly villainous at this stage.'
+          }
+
+          def walk(obj):
+              if isinstance(obj, dict):
+                  return {k: walk(v) for k, v in obj.items()}
+              if isinstance(obj, list):
+                  return [walk(v) for v in obj]
+              if isinstance(obj, str):
+                  return replacements.get(obj, obj)
+              return obj
+
+          data = walk(data)
+
+          canon_entries = [
+              '{@b Ulric Evern.} Well-dressed human in his late fifties or early sixties, with silvering dark hair, a neatly trimmed beard, a tailored dark coat, expensive but conservative clothing, a signet ring, and immaculate boots. Precise rather than flashy.',
+              '{@b Wern Ursen.} Tall, lean elf with dark hair kept practical, a weathered face, and old scars around the jaw and temple. He wears functional, well-maintained plate armor bearing the Bellweather city crest prominently on the breastplate or shoulder. He looks like a career soldier rather than a courtly elf.',
+              '{@b Bishop Brann.} Older dwarf cleric, broad and heavyset, with a thick gray-white beard kept neatly braided, layered clerical robes over practical mail, and a holy symbol worn openly. Warm eyes and large scarred hands make him look like someone who has spent years healing people, burying the dead, and doing the work rather than merely preaching.',
+              '{@b Perrin Cardon.} Human in his thirties or early forties, always very well dressed: perfectly fitted clothing, expensive fabrics, polished boots, carefully styled hair, and a subtle family pin or gold chain. He looks like someone who deliberately chose what everyone in the room would notice about him. Charming rather than foppish.',
+              '{@b Noren Vale.} Mid-forties, rangy build, short graying hair, one old facial scar, gloves, practical weapons, and a battered coat over piecemeal armor. He looks like someone who has spent years keeping rough people organized. His species is not yet locked; do not invent one until established at the table or separately approved.',
+              '{@b Rask.} Large orc mercenary with a broken nose, one chipped tusk, old scars, very short or shaved hair, rough travel clothes, and wrists rubbed raw by restraints. He should look dangerous but exhausted rather than monstrous.',
+              '{@b Kellan’s Well crews.} Make the mixed-faction nature visible: mismatched armor, different weapons, and insignia from different groups partly removed or covered, while their patrol discipline and shared procedures make it obvious that someone has organized them. Do not add a new common badge or uniform unless it is established in play.'
+          ]
+
+          def upsert(entries_list, name, payload, index=0):
+              for i, e in enumerate(entries_list):
+                  if isinstance(e, dict) and e.get('type') == 'entries' and e.get('name') == name:
+                      entries_list[i] = {'type':'entries','name':name,'entries':payload}
+                      return
+              entries_list.insert(index, {'type':'entries','name':name,'entries':payload})
+
+          # Central campaign-guide canon section.
+          for sec in data.get('adventureData', [{}])[0].get('data', []):
+              if isinstance(sec, dict) and sec.get('name') == 'Campaign Guide':
+                  upsert(sec.setdefault('entries', []), 'NPC Physical Descriptions — Locked Canon', canon_entries, 1)
+
+          # Session 4 convenience copy in full Chapter 5 data.
+          for sec in data.get('adventureData', [{}])[0].get('data', []):
+              if isinstance(sec, dict) and sec.get('name') == "Chapter 5: Delving into Kellan's Well":
+                  upsert(sec.setdefault('entries', []), 'Session 4 NPC Physical Descriptions — Locked', canon_entries, 2)
+
+          # Session 4 convenience copy in adventure contents metadata block.
+          for ch in data.get('adventure', [{}])[0].get('contents', []):
+              if isinstance(ch, dict) and ch.get('name') == "Chapter 5: Delving into Kellan's Well":
+                  upsert(ch.setdefault('entries', []), 'Session 4 NPC Physical Descriptions — Locked', canon_entries, 1)
+
+          now = int(time.time())
+          data['_meta']['sources'][0]['version'] = '4.9'
+          data['_meta']['sources'][0]['dateLastModified'] = now
+          data['_meta']['dateLastModified'] = now
+          data['_meta'].pop('_dateLastModifiedHash', None)
+          stable = json.dumps(data, ensure_ascii=False, sort_keys=True, separators=(',', ':'))
+          data['_meta']['_dateLastModifiedHash'] = hashlib.sha1(stable.encode('utf-8')).hexdigest()[:10]
+
+          text = json.dumps(data, ensure_ascii=False, indent='\t') + '\n'
+          json.loads(text)
+          path.write_text(text, encoding='utf-8')
+          snap = pathlib.Path('No_Cause_for_Alarm_5etools_v4.9.json')
+          if snap.exists():
+              raise SystemExit('v4.9 snapshot already exists')
+          snap.write_text(text, encoding='utf-8')
+          print('hash', data['_meta']['_dateLastModifiedHash'])
+          PY
+      - name: Commit files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add No_Cause_for_Alarm_5etools_CURRENT.json No_Cause_for_Alarm_5etools_v4.9.json
+          git commit -m "Lock NPC descriptions and advance NCFA to v4.9"
+          git push
