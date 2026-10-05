@@ -6,16 +6,16 @@
 				"json": "NCFA",
 				"abbreviation": "NCFA",
 				"full": "No Cause for Alarm: Ruins of Bellweather",
-				"version": "4.7",
+				"version": "4.8",
 				"authors": [
 					"No Cause for Alarm Campaign"
 				],
-				"dateLastModified": 1791137946
+				"dateLastModified": 1791158714
 			}
 		],
 		"edition": "one",
 		"dateAdded": 1789528955,
-		"dateLastModified": 1791137946,
+		"dateLastModified": 1791158714,
 		"_dateLastModifiedHash": "5ecf371b73"
 	},
 	"adventure": [
@@ -83,16 +83,18 @@
 					"entries": [
 						{
 							"type": "entries",
-							"name": "Session 3 Canon — Locked Current State",
+							"name": "Session 3 Actual Play — Locked Canon",
 							"entries": [
-								"{@b Opening state.} Session 3 begins inside Blackstone Temple immediately after Session 2. Both captive-room doors have been smashed open. All seven captives have been physically discovered, but the party has not yet spoken with them.",
-								"{@b Seven captives.} Nela Orr; three additional temple caretakers; one wounded temple guard; Council surveyors Lessa Dorn and Kav Orin.",
-								"{@b Nela Orr.} Older human woman in soot-stained gray robes, cropped silver hair, firm controlled voice. Nela briefly escaped captivity, stole Tal Rusk’s coded Iron Covenant ledger, locked and hid it in the safe, and was recaptured. She knows the maintenance passage behind the altar, overheard orders to pack and remove Bishop Brann’s sacred records and relics, and knows Tal is desperate to recover the ledger.",
-								"{@b Other temple captives.} A middle-aged dwarf caretaker with a shaved head and ink-stained fingers; a young halfling caretaker with a bruised face and torn vestments; a broad-shouldered half-orc caretaker with one arm in a sling; and a human temple guard in battered mail with a bandaged thigh, pale from blood loss but alert.",
-								"{@b Council surveyors.} Lessa Dorn is a lean, weathered half-elf. Kav Orin is a halfling; no further physical description is locked. Neither knows Kaleb is dead when Session 3 opens.",
-								"{@b Pepper and the ledger.} Pepper found the coded Iron Covenant ledger in the safe and physically possesses it. The rest of the party knows Pepper has it. The ledger replaces the obsolete records-box plot device; there is no separate Iron Covenant records box.",
-								"{@b Remaining opposition.} Tal Rusk, a compact scarred dwarf, remains deeper inside with four Guards. The gate captain escaped through the front door at roughly half hit points with one surviving Guard; Aaron killed another gate Guard. The party entered by melting the iron bars over a rear window. No other known witness saw the party’s attack or infiltration.",
-								"{@b Tal’s leverage.} Tal’s priority is recovering the coded ledger. He can trade a full withdrawal by himself and his four remaining Guards for the ledger while leaving the rescued captives and Bishop Brann’s sacred records and relics intact. If the party keeps the ledger and talks fail, Tal and four Guards are the decisive Blackstone confrontation."
+								"{@b Session length and endpoint.} Session 3 ran about 2.5 hours and ended as the party walked in the door of Ledger House. The later whereabouts of the seven freed captives were not established at the table and remain intentionally unresolved.",
+								"{@b Captives and Nela.} The party freed all seven Blackstone captives. Nela Orr told them that she had hidden Tal Rusk’s coded Iron Covenant ledger.",
+								"{@b Jarrock’s accusation.} Jarrock told Council surveyors Lessa Dorn and Kav Orin that Pepper killed Kaleb. Pepper bluffed well enough to leave the accusation questionable, but the surveyors reported Jarrock’s statement to the Council.",
+								"{@b Tal Rusk.} Tal was identified by name. The party did not allow him to escape and killed Tal and the remaining guards. Tal was searched afterward. He carried the reliquary, 50 gp, and his weapons. Pepper kept Tal’s weapons and gave the 50 gp to the party.",
+								"{@b Evidence custody.} The Council took custody of Tal’s coded ledger, Pepper’s stolen spyglass, and the compass.",
+								"{@b Pepper’s civic consequence.} Pepper was caught in a shop trying to buy tools to alter the spyglass. Combined with the existing circumstantial evidence, this resulted in a mandatory five-mission Council sentence: Kellan’s Well is the first mission and is unpaid for Pepper; the remaining four required missions are paid normally. Refusing or abandoning the sentence means jail.",
+								"{@b House arrest.} Pepper is under house arrest at Ledger House, with Brakkus responsible for supervising her. Pepper may leave when accompanied by Brakkus or while conducting Council business.",
+								"{@b Reliquary and rewards.} The party physically returned the reliquary to Bishop Brann. He paid 300 gp total to the party, which they split. He also gave Arunem Oil of Slipperiness. Arunem found a Scroll of Lesser Restoration in Blackstone Temple.",
+								"{@b Next job.} All four characters agreed to undertake Kellan’s Well.",
+								"{@b Level.} The four-character party completed Blackstone at level 3. Session 4 begins the next morning after a long rest and level-up, with all four PCs at level 4."
 							]
 						},
 						{
@@ -119,38 +121,32 @@
 						},
 						{
 							"type": "entries",
-							"name": "Post-Blackstone Council Continuity",
+							"name": "Session 3 Civic Outcome — Locked",
 							"entries": [
-								"After Blackstone, Lessa Dorn and Kav Orin report to the Council. A Council envoy requires the party to meet at Ledger House. A character deliberately listening to the envoy’s private exchange with Brakkus can make a DC 20 Perception check to overhear it.",
-								"The Council participants for the consequence scene are Ulric Evern, Wern Ursen, Bishop Brann, and Perrin Cardon. By this point reclamation crews have searched the Slums and found Kaleb’s body with his head smashed. Brakkus may tell the envoy that Pepper killed Kaleb if Brakkus knows that fact.",
-								"Do not force a predetermined interrogation result. Let testimony, admissions, physical evidence, and the party’s choices determine what the Council concludes.",
-								"If the Council establishes that Pepper murdered Kaleb, Pepper’s sentence is mandatory service instead of immediate jail: one unpaid Council job followed by five additional Council jobs that are paid normally. Refusing the sentence or abandoning the required work means jail. The other party members are not sentenced by Pepper’s crime.",
-								"Kaleb’s wife and ill daughter are a later emotional beat, not part of the sentence. The daughter’s condition can be cured by Greater Restoration. The wife can confront Pepper angrily and still ask the cleric for help; Pepper’s response remains a player choice and is not a contract requirement."
+								"Lessa Dorn and Kav Orin reported Jarrock’s accusation that Pepper killed Kaleb. Pepper’s bluff created uncertainty rather than clearing her.",
+								"Pepper’s later attempt to buy tools to alter the stolen spyglass added circumstantial evidence. The Council imposed five mandatory missions total: the first unpaid, the next four paid normally; refusal or abandonment means jail.",
+								"Pepper is on house arrest at Ledger House. Brakkus supervises her, and she may leave with Brakkus or on Council business.",
+								"The Council confiscated the coded ledger, spyglass, and compass. Kaleb’s wife and ill daughter remain a later emotional beat, not a sentence term."
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Kellan’s Well Lead-In",
+							"name": "Session 4 Lead-In — Locked",
 							"entries": [
-								"Do not require a records box, the coded ledger, or any Blackstone document to unlock Kellan’s Well. The Council already has an independent reason to act: separate armed groups around the well are using shared patrol routes and signals, and old catacombs/waterworks beneath the site create a strategic route into the ruins.",
-								"The Council assigns Kellan’s Well immediately after the Blackstone/Council sequence. If Pepper’s murder sentence is imposed, this is the first unpaid job for Pepper; later required Council jobs are paid normally.",
-								"The party begins Session 3 at level 3. Resolve Blackstone, then advance to level 4. Kellan’s Well is the next level-4 objective; completing it is the next milestone toward level 5."
+								"Session 4 begins the next morning at Ledger House after a long rest and level-up. The party consists of four level-4 PCs.",
+								"Kellan’s Well has already been accepted by everyone. Do not replay job acceptance. For Pepper it is Council business and the first, unpaid mission of her five-mission sentence.",
+								"The Council already possesses the coded ledger, spyglass, and compass; none is required to unlock Kellan’s Well.",
+								"Arunem is canonically nearsighted: approximately -4 in one eye and -1 in the other. Treat this as characterization by default, not an automatic combat or Perception penalty."
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Blackstone Reward Status",
+							"name": "Blackstone Actual Rewards — Locked",
 							"entries": [
-								"The exact final Blackstone reward package is not yet locked. The party already has the two unused Potions of Healing awarded by Jord, so do not automatically add two more healing potions here. A Bag of Holding is not part of the locked reward package. Bishop Brann’s sacred records/relics and the Iron Covenant ledger are objectives/evidence, not ordinary treasure."
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Session 3 Reminder — No Cause for Alarm / Marren Library",
-							"entries": [
-								"{@b Today’s callback.} During Session 3, include one additional in-world use of the exact phrase “there is no cause for alarm.” Keep it as ordinary civic or institutional reassurance; do not explain the campaign title to the players.",
-								"{@b Marren Library nod.} Include a light reference to Marren Library during the session, but do not reveal the later historical payoff. Chapter 9 already establishes that the Restricted Stacks contain the pre-fall Council “no cause for alarm” circular, and the Historical Refrain identifies it as the adventure’s clearest historical echo of the title.",
-								"{@b Do not invent new canon.} This is a running reminder only. Do not create a new Marren Library closure, missing-record event, or other library incident unless it occurs in play or is separately approved."
+								"Tal carried 50 gp, his weapons, and the reliquary. Pepper kept Tal’s weapons; the 50 gp went to the party.",
+								"The party returned the reliquary to Bishop Brann. Bishop Brann paid 300 gp total to the party, split among the four characters.",
+								"Bishop Brann gave Arunem Oil of Slipperiness. Arunem found a Scroll of Lesser Restoration in the temple.",
+								"The coded ledger, spyglass, and compass are now in Council custody and are evidence, not party treasure."
 							]
 						}
 					]
@@ -167,10 +163,12 @@
 					"entries": [
 						{
 							"type": "entries",
-							"name": "Current Session 3 Lead-In",
+							"name": "Session 4 Live State — Locked",
 							"entries": [
-								"Kellan’s Well follows the Blackstone resolution and Council meeting. The hook is independent of the Iron Covenant ledger: multiple armed groups are already known to share patrol signals and routes around the well, while old catacombs/waterworks beneath the site provide a strategic underground route.",
-								"If Pepper’s sentence for Kaleb’s murder is imposed, Kellan’s Well is Pepper’s one unpaid Council assignment. The following five mandatory Council jobs are paid normally."
+								"Session 4 opens the next morning at Ledger House after a completed long rest and level-up. The party is exactly four PCs, all level 4.",
+								"The party has already accepted Kellan’s Well. Pepper may leave Ledger House for this mission because it is Council business; otherwise her house-arrest restrictions remain in force.",
+								"Kellan’s Well is the first of Pepper’s five mandatory missions and is unpaid for Pepper. The remaining four required Council missions are paid normally.",
+								"The Council already has the coded Iron Covenant ledger, spyglass, and compass. Kellan’s Well remains independently justified by coordinated patrol signals and strategic underground routes."
 							]
 						}
 					]
@@ -1775,7 +1773,7 @@
 					"name": "Chapter 4: Blackstone Temple",
 					"id": "004",
 					"entries": [
-						"{@b Recommended level:} 3–4. The current party begins Session 3 at level 3. Resolve Blackstone, then advance the party to level 4; Kellan’s Well is the next level-4 objective.",
+						"{@b Recommended level:} 4. Actual-play note: this four-character party completed Blackstone at level 3 and advances to level 4 before Kellan’s Well.",
 						{
 							"type": "entries",
 							"name": "Maps",
@@ -1861,18 +1859,44 @@
 						},
 						{
 							"type": "entries",
+							"name": "Session 3 Actual Play — Locked Canon",
+							"entries": [
+								"{@b Session length and endpoint.} Session 3 ran about 2.5 hours and ended as the party walked in the door of Ledger House. The later whereabouts of the seven freed captives were not established at the table and remain intentionally unresolved.",
+								"{@b Captives and Nela.} The party freed all seven Blackstone captives. Nela Orr told them that she had hidden Tal Rusk’s coded Iron Covenant ledger.",
+								"{@b Jarrock’s accusation.} Jarrock told Council surveyors Lessa Dorn and Kav Orin that Pepper killed Kaleb. Pepper bluffed well enough to leave the accusation questionable, but the surveyors reported Jarrock’s statement to the Council.",
+								"{@b Tal Rusk.} Tal was identified by name. The party did not allow him to escape and killed Tal and the remaining guards. Tal was searched afterward. He carried the reliquary, 50 gp, and his weapons. Pepper kept Tal’s weapons and gave the 50 gp to the party.",
+								"{@b Evidence custody.} The Council took custody of Tal’s coded ledger, Pepper’s stolen spyglass, and the compass.",
+								"{@b Pepper’s civic consequence.} Pepper was caught in a shop trying to buy tools to alter the spyglass. Combined with the existing circumstantial evidence, this resulted in a mandatory five-mission Council sentence: Kellan’s Well is the first mission and is unpaid for Pepper; the remaining four required missions are paid normally. Refusing or abandoning the sentence means jail.",
+								"{@b House arrest.} Pepper is under house arrest at Ledger House, with Brakkus responsible for supervising her. Pepper may leave when accompanied by Brakkus or while conducting Council business.",
+								"{@b Reliquary and rewards.} The party physically returned the reliquary to Bishop Brann. He paid 300 gp total to the party, which they split. He also gave Arunem Oil of Slipperiness. Arunem found a Scroll of Lesser Restoration in Blackstone Temple.",
+								"{@b Next job.} All four characters agreed to undertake Kellan’s Well.",
+								"{@b Level.} The four-character party completed Blackstone at level 3. Session 4 begins the next morning after a long rest and level-up, with all four PCs at level 4."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Session 3 Combat Outcome and Calibration",
+							"entries": [
+								"Tal Rusk and the remaining guards were killed after the party prevented Tal from escaping.",
+								"The guards were originally prepared at 20 HP; immediately before the encounter the DM raised them to 25 HP because 20 looked too low. Four level-3 PCs still defeated the opposition decisively.",
+								"Blackstone was written around a level-4 baseline, so this result is strong evidence that the decisive encounter was under-tuned for this table rather than merely one level too easy.",
+								"Published-session lesson: do not solve this by inflating every creature into an HP sack. Important opponents need adequate durability, useful action economy, positioning, and a real escape method if survival matters. Ordinary movement through engaged PCs is not a credible retreat plan because opportunity attacks can erase a fleeing enemy."
+							]
+						},
+						{
+							"type": "entries",
 							"name": "Chapter Overview",
 							"entries": [
-								"{@b Current session purpose.} Speak with the seven rescued captives, learn what Nela knows, resolve Tal Rusk and his four remaining Guards, preserve Bishop Brann’s sacred records and relics, then return to Bellweather for the Council consequence scene.",
-								"The Iron Covenant is the armed faction occupying Blackstone Temple. Tal Rusk commands the remaining interior force and answers to a higher authority known only as “the Boss.”",
-								"Pepper already possesses Tal’s coded Iron Covenant ledger. The ledger is leverage in the Tal confrontation, not a required clue for Kellan’s Well.",
-								"{@b Leads onward.} Kellan’s Well is an independent Council concern because separate armed groups there use the same patrol routes and signals and exploit the old catacombs/waterworks beneath the district."
+								"{@b Actual-play status.} Blackstone Temple is resolved. The four level-3 PCs freed the seven captives, killed Tal Rusk and his remaining guards, recovered the reliquary, and returned it to Bishop Brann.",
+								"The Council now holds Tal’s coded ledger, the spyglass, and the compass. Pepper’s Kaleb investigation has produced a five-mission sentence and Ledger House arrest under Brakkus’s supervision.",
+								"{@b Leads onward.} Everyone accepted Kellan’s Well. Session 4 begins the next morning after a long rest and level-up with four level-4 PCs."
 							]
 						},
 						{
 							"type": "entries",
 							"name": "Running the Chapter",
 							"entries": [
+								"{@b Actual-play override.} This chapter is complete at the table. Use the locked Session 3 outcome above whenever it conflicts with the pre-play scene guidance retained below for reference.",
 								"{@b Start where play actually stopped.} Both captive-room doors are already smashed open and all seven captives have been physically discovered. Do not replay the approach, gate fight, captive search, or safe discovery.",
 								"{@b First conversation.} Let Nela and the other captives explain the ledger, the altar maintenance passage, and the orders to remove Bishop Brann’s sacred material. Lessa and Kav can identify themselves as the two surviving members of Kaleb’s survey crew and do not yet know Kaleb is dead.",
 								"{@b Tal next.} Tal Rusk and four Guards are the remaining organized interior force. Tal’s primary goal is the coded ledger Pepper holds. Negotiation is a fully valid resolution.",
@@ -1917,17 +1941,24 @@
 						},
 						{
 							"type": "entries",
-							"name": "Session 3 Reminder — No Cause for Alarm / Marren Library",
-							"entries": [
-								"{@b Today’s callback.} During Session 3, include one additional in-world use of the exact phrase “there is no cause for alarm.” Keep it as ordinary civic or institutional reassurance; do not explain the campaign title to the players.",
-								"{@b Marren Library nod.} Include a light reference to Marren Library during the session, but do not reveal the later historical payoff. Chapter 9 already establishes that the Restricted Stacks contain the pre-fall Council “no cause for alarm” circular, and the Historical Refrain identifies it as the adventure’s clearest historical echo of the title.",
-								"{@b Do not invent new canon.} This is a running reminder only. Do not create a new Marren Library closure, missing-record event, or other library incident unless it occurs in play or is separately approved."
-							]
-						},
-						{
-							"type": "entries",
 							"name": "Adventure",
 							"entries": [
+								{
+									"type": "entries",
+									"name": "Actual Play Outcome — Session 3",
+									"entries": [
+										"{@b Session length and endpoint.} Session 3 ran about 2.5 hours and ended as the party walked in the door of Ledger House. The later whereabouts of the seven freed captives were not established at the table and remain intentionally unresolved.",
+										"{@b Captives and Nela.} The party freed all seven Blackstone captives. Nela Orr told them that she had hidden Tal Rusk’s coded Iron Covenant ledger.",
+										"{@b Jarrock’s accusation.} Jarrock told Council surveyors Lessa Dorn and Kav Orin that Pepper killed Kaleb. Pepper bluffed well enough to leave the accusation questionable, but the surveyors reported Jarrock’s statement to the Council.",
+										"{@b Tal Rusk.} Tal was identified by name. The party did not allow him to escape and killed Tal and the remaining guards. Tal was searched afterward. He carried the reliquary, 50 gp, and his weapons. Pepper kept Tal’s weapons and gave the 50 gp to the party.",
+										"{@b Evidence custody.} The Council took custody of Tal’s coded ledger, Pepper’s stolen spyglass, and the compass.",
+										"{@b Pepper’s civic consequence.} Pepper was caught in a shop trying to buy tools to alter the spyglass. Combined with the existing circumstantial evidence, this resulted in a mandatory five-mission Council sentence: Kellan’s Well is the first mission and is unpaid for Pepper; the remaining four required missions are paid normally. Refusing or abandoning the sentence means jail.",
+										"{@b House arrest.} Pepper is under house arrest at Ledger House, with Brakkus responsible for supervising her. Pepper may leave when accompanied by Brakkus or while conducting Council business.",
+										"{@b Reliquary and rewards.} The party physically returned the reliquary to Bishop Brann. He paid 300 gp total to the party, which they split. He also gave Arunem Oil of Slipperiness. Arunem found a Scroll of Lesser Restoration in Blackstone Temple.",
+										"{@b Next job.} All four characters agreed to undertake Kellan’s Well.",
+										"{@b Level.} The four-character party completed Blackstone at level 3. Session 4 begins the next morning after a long rest and level-up, with all four PCs at level 4."
+									]
+								},
 								{
 									"type": "entries",
 									"name": "Scene 1: The Seven Captives",
@@ -1977,7 +2008,7 @@
 											]
 										},
 										"Brakkus may tell the envoy that Pepper killed Kaleb if he knows that fact. The Council then questions the party, but there is no scripted confession or predetermined evidentiary outcome; play the scene from what the characters say and what the Council can establish.",
-										"{@b Pepper consequence.} If the Council establishes that Pepper murdered Kaleb, Pepper must complete one unpaid Council job and then five additional Council jobs that are paid normally. Refusal or abandonment of the required service means jail. This sentence applies to Pepper, not automatically to the rest of the party.",
+										"{@b Pepper consequence.} If the Council establishes that Pepper murdered Kaleb, Pepper must complete five mandatory Council missions total: the first is unpaid and the next four are paid normally. Refusal or abandonment of the required service means jail. This sentence applies to Pepper, not automatically to the rest of the party.",
 										"{@b Later emotional beat.} Kaleb’s wife can later confront Pepper at Ledger House while seeking help for her ill daughter. The daughter’s condition can be cured by Greater Restoration. Helping is Pepper’s choice and is not part of the sentence."
 									]
 								},
@@ -1985,9 +2016,9 @@
 									"type": "entries",
 									"name": "Transition to Chapter 5",
 									"entries": [
-										"The Council immediately directs attention to Kellan’s Well because separate armed groups are using coordinated patrol routes and signals there, and the old catacombs/waterworks provide an important underground route. This hook exists independently of the coded ledger.",
-										"If Pepper’s sentence is imposed, Kellan’s Well is Pepper’s first unpaid Council job. Other characters can still receive ordinary pay or accept the work for their own reasons.",
-										"After Blackstone is resolved, advance the current party from level 3 to level 4. Kellan’s Well is run at level 4."
+										"All four characters have already agreed to Kellan’s Well. The Council’s reason to act is independent of the ledger: separate armed groups use coordinated signals and routes there, and the catacombs/waterworks are strategically important.",
+										"Kellan’s Well is the first of Pepper’s five mandatory Council missions and is unpaid for Pepper. Her remaining four required missions are paid normally. Refusal or abandonment means jail.",
+										"Session 3 ended as the party entered Ledger House. Session 4 begins the next morning after a long rest and level-up, with four level-4 PCs."
 									]
 								}
 							]
@@ -1996,20 +2027,10 @@
 							"type": "entries",
 							"name": "Rewards",
 							"entries": [
-								"The exact final Blackstone reward package is not yet locked.",
-								"{@b Already owned.} The party already has the two unused Potions of Healing awarded by Jord. Do not automatically award two more healing potions for Blackstone.",
-								"{@b Not locked.} Do not auto-award a Bag of Holding. No permanent magic item is fixed here until the Blackstone reward package is finalized.",
-								"{@b Not treasure.} Bishop Brann’s sacred records/relics and the coded Iron Covenant ledger are objectives, evidence, or bargaining leverage, not ordinary loot."
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Session 3 Current Combat State",
-							"entries": [
-								"{@b Party baseline.} Arumen, Aaron Dunamus, Jarrock, and Pepper begin Session 3 at level 3.",
-								"{@b Already resolved.} Do not replay the front court or approach encounters. Aaron killed one gate Guard; the gate captain escaped at roughly half hit points with one surviving Guard; the rear-window bars were melted for entry.",
-								"{@b Remaining organized force.} Use {@creature Tal Rusk|NCFA} and 4 {@creature Guard|XMM|Guards}. The captives have already been physically reached and are no longer behind intact prisoner-room doors.",
-								"{@b Encounter principle.} Returning the coded ledger can resolve Blackstone without another fight. If combat occurs, Tal can surrender or order a withdrawal instead of fighting to the death."
+								"{@b Actual reward.} Tal had 50 gp, his weapons, and the reliquary. Pepper kept Tal’s weapons; the party received the 50 gp.",
+								"{@b Bishop Brann.} The party returned the reliquary to him. He paid 300 gp total to the party, which they split, and gave Arunem Oil of Slipperiness.",
+								"{@b Temple find.} Arunem found a Scroll of Lesser Restoration.",
+								"{@b Council custody.} The coded ledger, spyglass, and compass are now Council evidence rather than party inventory."
 							]
 						},
 						{
@@ -2028,7 +2049,7 @@
 					"name": "Chapter 5: Delving into Kellan's Well",
 					"id": "005",
 					"entries": [
-						"{@b Recommended level:} 4–5",
+						"{@b Recommended level:} 4–5. Current actual-play party: four level-4 PCs.",
 						{
 							"type": "entries",
 							"name": "Maps",
@@ -2114,9 +2135,35 @@
 						},
 						{
 							"type": "entries",
+							"name": "Session 4 Live State — Locked",
+							"entries": [
+								"Session 4 opens the next morning at Ledger House after a long rest and level-up. The party is exactly four PCs at level 4.",
+								"Everyone already agreed to undertake Kellan’s Well. Do not spend table time renegotiating or re-accepting the assignment.",
+								"For Pepper, Kellan’s Well is Council business and therefore permits her to leave Ledger House despite house arrest. It is the first, unpaid mission of her five-mission sentence. The next four required Council missions are paid normally.",
+								"Brakkus remains responsible for supervising Pepper’s house arrest. Outside Council business, Pepper may leave only with Brakkus.",
+								"The Council holds the coded ledger, spyglass, and compass. These objects are not required to access or justify Kellan’s Well.",
+								"Arunem’s nearsightedness (-4 in one eye, -1 in the other) is a roleplay trait unless the player explicitly chooses mechanical consequences."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Session 4 Encounter Calibration — Four Level-4 PCs",
+							"entries": [
+								"{@b Benchmark from Blackstone.} Four level-3 PCs decisively defeated a Blackstone fight written around level 4, even after the DM increased the guards from 20 to 25 HP. Calibrate Kellan’s Well from that observed table performance, not generic CR assumptions alone.",
+								"{@b Encounter shape.} Keep Kellan’s Well primarily an investigation/exploration chapter. Do not make every room hard. The armed coordinated crews and Noren Vale are the main tactical spine; rats, centipedes, oozes, and the carrion crawler are environmental complications or optional hazards when they reveal information or change positioning.",
+								"{@b Checkpoint.} Use roughly four to five opponents. Most front-line enemies should be durable enough to survive incidental damage (about 25–35 HP is a useful table-specific target), with at least one ranged or mobile threat. Their goal is to raise the alarm and fall back, not fight to the death.",
+								"{@b Noren encounter.} Noren should survive long enough to function as a commander. For this table, target roughly 55–70 HP unless the chosen published stat block provides equivalent staying power. Support him with about two competent enforcers in the 30–40 HP range and, if needed, one ranged/mobile combatant rather than simply adding a large mob.",
+								"{@b Escape.} If Noren is meant to have a chance to survive, give him a prepared escape route or real escape tool: a bonus-action Disengage equivalent, smoke/obscurement, a locking route, a screened withdrawal, or another fictionally established method. Do not rely on “he runs away” through engaged PCs.",
+								"{@b Damage caution.} Increase durability, positioning, objectives, and action economy before increasing enemy burst damage or save DCs. These are still level-4 characters and should not be punished with level-6 damage just because their offense is efficient."
+							]
+						},
+						{
+							"type": "entries",
 							"name": "Chapter Overview",
 							"entries": [
-								"{@b Session purpose.} Control Kellan’s Well, prove that separate crews answer to a higher command, and open a useful underground route.",
+								"{@b Session purpose.} Control Kellan’s Well, recover evidence that separate armed crews answer to a higher command, and open a useful underground route.",
+								"{@b Current party.} Four level-4 PCs, fully rested at the start of Session 4.",
+								"{@b Current hook.} The Council job is already accepted; the mission is Pepper’s first unpaid sentence assignment and ordinary Council work for the rest of the party.",
 								"The Council already knows separate armed crews around Kellan’s Well are using the same patrol signals and routes. The old catacombs/waterworks beneath the site create a strategic underground connection into the ruins.",
 								"{@b Current lead-in.} The Council sends the party here immediately after the Blackstone resolution and Council meeting. No records box, coded ledger, or other Blackstone document is required to discover or justify the job.",
 								"If Pepper’s sentence for Kaleb’s murder is imposed, this is Pepper’s one unpaid Council assignment; the next five required Council jobs are paid normally.",
@@ -2127,6 +2174,7 @@
 							"type": "entries",
 							"name": "Running the Chapter",
 							"entries": [
+								"{@b Table-specific balance.} Use the Session 4 Encounter Calibration above. Blackstone proved this four-player table substantially outperforms the previous low-level encounter baseline.",
 								{
 									"type": "entries",
 									"name": "Current Session 3 Lead-In",
