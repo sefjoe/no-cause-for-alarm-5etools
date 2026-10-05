@@ -1,0 +1,178 @@
+name: NCFA adventure flow v4.14
+
+on:
+  push:
+    paths:
+      - '.github/workflows/ncfa-adventure-flow-v4-14.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  polish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Move NPC descriptions to appearances and normalize chapter opening
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, hashlib, time
+          from pathlib import Path
+
+          path = Path('No_Cause_for_Alarm_5etools_CURRENT.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
+          version = data['_meta']['sources'][0]['version']
+          if version != '4.13':
+              raise SystemExit(f'Expected v4.13, found {version}')
+
+          council_items = [
+              '{@b Ulric Evern}, a well-dressed human in his late fifties or early sixties with silvering dark hair, a neatly trimmed beard, a tailored dark coat, a signet ring, and immaculate boots. He is the senior councilor and budget hawk: a hard bargainer suspicious of open-ended expenses.',
+              '{@b Wern Ursen}, a tall, lean elf with practical dark hair, a weathered face, and old scars around the jaw and temple. He wears functional, well-maintained plate armor bearing the Bellweather city crest. A former mercenary captain, he oversees defense and infrastructure.',
+              '{@b Bishop Brann}, an older dwarf cleric, broad and heavyset, with a thick gray-white beard kept neatly braided, layered clerical robes over practical mail, a holy symbol worn openly, warm eyes, and large scarred hands. He focuses on public welfare, burial rights, healing, and humane treatment of prisoners.',
+              '{@b Perrin Cardon}, a human in his thirties or early forties who is always very well dressed: perfectly fitted clothing, expensive fabrics, polished boots, carefully styled hair, and a subtle family pin or gold chain. Charming rather than foppish, he is an ambitious heir to an old merchant family.'
+          ]
+
+          crew_desc = '{@b The mixed crews.} Their different origins are visible immediately: mismatched armor, different weapons, and insignia from several groups partly removed or covered. Their shared patrol discipline, signals, schedules, and fallback behavior make it equally clear that someone has organized them.'
+          rask_desc = '{@b Rask.} The prisoner is a large orc mercenary with a broken nose, one chipped tusk, old scars, very short or shaved hair, rough travel clothes, and wrists rubbed raw by restraints. He looks dangerous but exhausted rather than monstrous.'
+          noren_desc = '{@b Noren Vale.} The local commander is a mid-forties half-elf with a rangy build, short graying hair, one old facial scar, gloves, practical weapons, and a battered coat over piecemeal armor. He looks like someone who has spent years keeping rough people organized.'
+
+          def walk(obj, section_name=None):
+              if isinstance(obj, list):
+                  out = []
+                  for item in obj:
+                      v = walk(item, section_name)
+                      if v is not None:
+                          out.append(v)
+                  return out
+
+              if not isinstance(obj, dict):
+                  if isinstance(obj, str):
+                      # Correct stale Council species anywhere they still appear.
+                      obj = obj.replace('{@b Wern Ursen}, dragonborn,', '{@b Wern Ursen}, elf,')
+                      obj = obj.replace('{@b Bishop Brann}, halfling,', '{@b Bishop Brann}, dwarf cleric,')
+                  return obj
+
+              current_section = section_name
+              if obj.get('type') == 'section':
+                  current_section = obj.get('name', section_name)
+
+              name = obj.get('name')
+
+              # Remove reference walls that duplicate information better placed at point of use.
+              if name == 'Key NPCs' and current_section in ('Campaign Guide', "Chapter 5: Delving into Kellan's Well"):
+                  return None
+              if name == 'Blackstone Temple NPCs' and current_section == 'Chapter 4: Blackstone Temple':
+                  return None
+              if name == 'Live Continuity' and current_section == "Chapter 5: Delving into Kellan's Well":
+                  return None
+
+              # Chapter 5 should read like an adventure chapter rather than a table-status record.
+              if current_section == "Chapter 5: Delving into Kellan's Well" and name == 'Chapter Overview':
+                  entries = obj.get('entries', [])
+                  new_entries = []
+                  for e in entries:
+                      if isinstance(e, str):
+                          if e.startswith('{@b Starting level.}'):
+                              e = '{@b Recommended level.} 4.'
+                          elif e.startswith('{@b Hook.}'):
+                              e = '{@b Hook.} The Council assigns the characters to secure Kellan’s Well and determine why separate armed crews are sharing patrol signals and routes. For Pepper, this is the first unpaid mission of her five-mission Council sentence.'
+                          elif e.startswith('{@b Lead-in.}'):
+                              e = '{@b Lead-in.} Begin the chapter the morning after the Blackstone Temple expedition, after a long rest at Ledger House. No Blackstone document or recovered object is required to justify the assignment.'
+                          elif e.startswith('Pepper’s sentence has been imposed.'):
+                              # Already covered in the hook; remove the duplicated table-state sentence.
+                              continue
+                      new_entries.append(e)
+                  obj['entries'] = new_entries
+
+              if current_section == "Chapter 5: Delving into Kellan's Well" and name == 'Chapter Opening':
+                  entries = []
+                  for e in obj.get('entries', []):
+                      if not isinstance(e, str):
+                          entries.append(e)
+                          continue
+                      if 'The party is exactly four PCs at level 4.' in e:
+                          e = 'Begin the chapter the next morning at Ledger House after a long rest. The characters should be 4th level before they set out for Kellan’s Well.'
+                      elif e.startswith('Everyone already agreed to undertake Kellan’s Well.'):
+                          e = 'The Kellan’s Well assignment is already in motion; begin with preparations at Ledger House and the departure for the well.'
+                      elif e.startswith('Arunem’s nearsightedness'):
+                          # Character-sheet detail is not useful in the adventure opening.
+                          continue
+                      entries.append(e)
+                  obj['entries'] = entries
+
+              # Put Council appearances and descriptions where the Council is actually encountered.
+              if name == 'The Council Chamber':
+                  entries = obj.get('entries', [])
+                  for e in entries:
+                      if isinstance(e, dict) and e.get('type') == 'list':
+                          items = e.get('items', [])
+                          if any(isinstance(x, str) and 'Ulric Evern' in x for x in items):
+                              e['items'] = list(council_items)
+
+              # Put local NPC/group descriptions at their scene appearances.
+              if current_section == "Chapter 5: Delving into Kellan's Well" and name == 'Scene 2: Well Chamber':
+                  entries = obj.get('entries', [])
+                  if crew_desc not in entries:
+                      insert_at = 1 if entries and isinstance(entries[0], str) else 0
+                      entries.insert(insert_at, crew_desc)
+                  obj['entries'] = entries
+
+              if current_section == "Chapter 5: Delving into Kellan's Well" and name == 'Scene 4: Barracks and Prisoner':
+                  entries = obj.get('entries', [])
+                  if rask_desc not in entries:
+                      insert_at = 1 if entries and isinstance(entries[0], str) else 0
+                      entries.insert(insert_at, rask_desc)
+                  obj['entries'] = entries
+
+              if current_section == "Chapter 5: Delving into Kellan's Well" and name == 'Scene 5: Command Junction':
+                  entries = obj.get('entries', [])
+                  if noren_desc not in entries:
+                      insert_at = 1 if entries and isinstance(entries[0], str) else 0
+                      entries.insert(insert_at, noren_desc)
+                  obj['entries'] = entries
+
+              for k, v in list(obj.items()):
+                  if k == 'entries' and isinstance(v, list):
+                      obj[k] = walk(v, current_section)
+                  elif k not in ('name', 'type'):
+                      obj[k] = walk(v, current_section)
+              return obj
+
+          data = walk(data)
+
+          now = int(time.time())
+          data['_meta']['sources'][0]['version'] = '4.14'
+          data['_meta']['sources'][0]['dateLastModified'] = now
+          data['_meta']['dateLastModified'] = now
+          data['_meta'].pop('_dateLastModifiedHash', None)
+          stable = json.dumps(data, ensure_ascii=False, sort_keys=True, separators=(',', ':'))
+          data['_meta']['_dateLastModifiedHash'] = hashlib.sha1(stable.encode('utf-8')).hexdigest()[:10]
+
+          text = json.dumps(data, ensure_ascii=False, indent='\t') + '\n'
+          json.loads(text)
+
+          checks = {
+              'exact four-PC status line': 'The party is exactly four PCs at level 4.' not in text,
+              'stale Wern dragonborn entry': '{@b Wern Ursen}, dragonborn,' not in text,
+              'stale Brann halfling entry': '{@b Bishop Brann}, halfling,' not in text,
+              'Rask scene description': rask_desc in text,
+              'Noren scene description': noren_desc in text,
+              'crew scene description': crew_desc in text,
+          }
+          failed = [k for k, ok in checks.items() if not ok]
+          if failed:
+              raise SystemExit('Validation failed: ' + ', '.join(failed))
+
+          path.write_text(text, encoding='utf-8')
+          Path('No_Cause_for_Alarm_5etools_v4.14.json').write_text(text, encoding='utf-8')
+          print('v4.14 hash:', data['_meta']['_dateLastModifiedHash'])
+          PY
+      - name: Commit result
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add No_Cause_for_Alarm_5etools_CURRENT.json No_Cause_for_Alarm_5etools_v4.14.json
+          git diff --cached --quiet || git commit -m 'Restructure NPC descriptions at scene appearances'
+          git push
