@@ -6,17 +6,17 @@
 				"json": "NCFASOC",
 				"abbreviation": "NCFA-SOC",
 				"full": "No Cause for Alarm: The Spirit of the City",
-				"version": "2.3",
+				"version": "2.4",
 				"authors": [
 					"No Cause for Alarm Campaign"
 				],
-				"dateLastModified": 1791274200
+				"dateLastModified": 1791275100
 			}
 		],
 		"edition": "one",
 		"dateAdded": 1791271800,
-		"dateLastModified": 1791274200,
-		"_dateLastModifiedHash": "1d0fbd75cd"
+		"dateLastModified": 1791275100,
+		"_dateLastModifiedHash": "f8a3e96d5a"
 	},
 	"adventure": [
 		{
@@ -542,7 +542,7 @@
 							"type": "entries",
 							"name": "Core Recurring Cast",
 							"entries": [
-								"Keep the recurring cast small. Temporary encounter NPCs may exist, but do not promote them into campaign principals unless actual play makes them important.",
+								"The recurring cast is intentionally small. Temporary encounter NPCs remain local unless actual play makes them important.",
 								{
 									"type": "table",
 									"colLabels": [
@@ -592,7 +592,7 @@
 									"type": "entries",
 									"name": "Portraying the Core Cast",
 									"entries": [
-										"These profiles are meant to be enough to pick an NPC up after several weeks away from the campaign and immediately know how to play them. Do not read them aloud. Use the physical details, cadence, habits, and pressure responses as table cues.",
+										"These profiles are table cues for quickly resuming an NPC after time away. Use the physical details, cadence, habits, and pressure responses during portrayal rather than reading the profiles aloud.",
 										{
 											"type": "entries",
 											"name": "Brakkus Ledgerhelm",
@@ -601,7 +601,7 @@
 												"{@b Voice and cadence.} Low, dry, and economical. Brakkus rarely uses three sentences when one will do. He lets silences sit instead of filling them. His humor lands as a flat observation rather than a joke he expects people to laugh at.",
 												"{@b Mannerisms.} He wipes the same section of bar while listening, checks a room with his eyes before responding to trouble, and often answers a foolish question only after deciding whether the asker genuinely wants an answer. When he is worried, he gets quieter rather than louder.",
 												"{@b What he wants.} Ledger House stays safe. People who need shelter get it. The party grows capable enough that they do not need him to solve their problems. He cares much more about whether ordinary people are getting hurt than whether a Council policy is elegant.",
-												"{@b What he knows.} Brakkus knows people, rumors, practical consequences, old adventuring habits, and what fear looks like. He does not know Perrin's hidden bargain or Tyren's plan until evidence reaches him. Do not turn him into an exposition machine.",
+												"{@b What he knows.} Brakkus knows people, rumors, practical consequences, old adventuring habits, and what fear looks like. He does not know Perrin's hidden bargain or Tyren's plan until evidence reaches him. His information stays grounded in what he could plausibly know.",
 												"{@b Under pressure.} Brakkus becomes frighteningly calm. He puts himself between danger and civilians, gives short instructions, and acts without theatrics. If the party makes a bad decision, he will tell them so, but he does not confiscate their agency.",
 												"{@b Relationship with the party.} He has moved past treating them as random customers. He notices when they are hurt, tired, lying, avoiding a subject, or pretending something did not bother them. He is protective without becoming paternalistic.",
 												"{@b Tyren interaction.} Tyren cannot take control of Brakkus. Brakkus may still be lied to, outmaneuvered, frightened for other people, or politically boxed in. His immunity is not omniscience."
@@ -615,7 +615,7 @@
 												"{@b Voice and cadence.} Warm, articulate, and conversational. Perrin prefers \"we\" and \"Bellweather\" to \"I.\" He is good at making a person feel as though their concern was already part of his thinking. Early in the campaign, this is mostly genuine.",
 												"{@b Mannerisms.} He remembers names, turns his full attention toward whoever is speaking, and lowers his voice when he wants a conversation to feel private. When control is slipping, he straightens a cuff, smooths a sleeve, or becomes a little too precise about wording. Late in the campaign, he begins finishing other people's thoughts for them.",
 												"{@b What he wants.} Perrin truly wants Bellweather prosperous, admired, safe, and important again. He also wants the Cardon name restored. Beneath both is the desire he initially cannot admit: he wants to be the person whose decisions become reality.",
-												"{@b What he knows.} Early Perrin knows only that the Spirit of the City gives him unnatural influence. After Kellan's Well and Koven House he knows the Spirit is acting independently through the network. Savin and Marren force him to confront increasingly ugly explanations. Do not let him know the full dragon truth before the campaign reveals it.",
+												"{@b What he knows.} Early Perrin knows only that the Spirit of the City gives him unnatural influence. After Kellan's Well and Koven House he knows the Spirit is acting independently through the network. Savin and Marren force him to confront increasingly ugly explanations. He does not know the full dragon truth before the campaign reveals it.",
 												"{@b Under pressure.} Perrin argues rather than threatens. He reframes criticism as impatience, impracticality, or failure to understand the stakes. The more corrupted he becomes, the less willing he is to accept that another person's refusal might be legitimate.",
 												"{@b Relationship with the party.} Perrin should like them when they are useful, but that cannot be the whole relationship. He can admire competence, remember favors, resent humiliation, and sincerely believe they are helping build the city he loves. Their opinion of him should matter to him until very late.",
 												"{@b Portrayal progression.} Early Perrin persuades. Mid-campaign Perrin steers. Late Perrin decides. The change should happen in sentence structure before it happens in costume or villain speeches."
@@ -632,7 +632,7 @@
 												"{@b What he wants.} Tyren believes individual will is the source of conflict, waste, fear, delay, and suffering. His answer is not conquest for tribute. It is permanent coordination under himself.",
 												"{@b How he sees Perrin.} Perrin is not a friend. He is not merely a pawn either. Tyren values him as the first willing conduit who proved that consent can open paths the Cage cannot close. Tyren rewards Perrin because rewarded ambition keeps opening doors.",
 												"{@b Under pressure.} Tyren becomes more direct, not more emotional. He treats resistance as a technical problem. His most unsettling moments should sound like diagnosis: \"You are tired because you continue to choose separately.\"",
-												"{@b Do not play him as omniscient.} He knows what reaches his network. Anchored minds, protected conversations, distance, broken nodes, and deliberate countermeasures can deny him information."
+												"{@b Limits of his knowledge.} He knows what reaches his network. Anchored minds, protected conversations, distance, broken nodes, and deliberate countermeasures can deny him information."
 											]
 										},
 										{
@@ -656,7 +656,7 @@
 												"{@b Voice and cadence.} Short declarative sentences. He asks concrete questions: how many, how long, which road, who is holding the gate, what happens if this fails. He has little patience for vague optimism.",
 												"{@b Mannerisms.} Wern automatically notices exits, sight lines, bottlenecks, and how many armed people are in a room. He folds maps along existing creases and dislikes paperwork that hides the decision being made.",
 												"{@b What he wants.} Bellweather survives. Roads stay open. Civilians are not slaughtered because leaders were afraid to look severe. He has seen hesitation kill people and therefore tends to overvalue decisive action.",
-												"{@b Under pressure.} Wern's instinct is to tighten control: checkpoints, patrols, curfews, hard perimeters, clear chains of command. Sometimes he is right. Sometimes he goes too far. Do not secretly make him Tyren's willing agent to simplify the politics.",
+												"{@b Under pressure.} Wern's instinct is to tighten control: checkpoints, patrols, curfews, hard perimeters, clear chains of command. Sometimes he is right. Sometimes he goes too far. He is not a hidden Tyren loyalist.",
 												"{@b Relationship with the party.} He respects competence, preparation, and people who can explain a plan in operational terms. He may disagree sharply with them and still trust them in a fight."
 											]
 										},
@@ -731,14 +731,14 @@
 												"{@b Voice and cadence.} Direct. She has thought about what she needs to say and refuses to decorate it. When angry, she gets more specific rather than louder.",
 												"{@b Mannerisms.} Mara keeps one hand near Elise whenever they are in the same room. She rarely looks away from Pepper first.",
 												"{@b What she wants.} Her daughter helped. She does not come to Ledger House to forgive Pepper, understand Pepper, or make Pepper feel guilty. Those things may happen around the scene, but they are not Mara's objective.",
-												"{@b Relationship with Pepper.} Mara believes Pepper murdered Caleb. Asking Pepper for help costs her something. Do not make that request sentimental or easy. If Pepper helps, Mara's gratitude and her grief can coexist."
+												"{@b Relationship with Pepper.} Mara believes Pepper murdered Caleb. Asking Pepper for help costs her something. The request is angry, difficult, and unsentimental. If Pepper helps, Mara's gratitude and her grief can coexist."
 											]
 										},
 										{
 											"type": "entries",
 											"name": "Elise",
 											"entries": [
-												"{@b Appearance and presence.} Elise is a young human girl who looks more exhausted than visibly injured. The illness has left her pale, short-tempered from poor sleep, and intermittently confused. She is still a child with interests, preferences, and impatience; do not play her as a spooky oracle.",
+												"{@b Appearance and presence.} Elise is a young human girl who looks more exhausted than visibly injured. The illness has left her pale, short-tempered from poor sleep, and intermittently confused. She is still a child with interests, preferences, and impatience; she is a sick child, not a spooky oracle.",
 												"{@b Voice and cadence.} Most of the time she speaks normally. The disturbing moments are brief: answering a question no one asked, repeating a phrase from elsewhere in the city, or beginning an action and then stopping because she does not know why she started.",
 												"{@b Mannerisms.} She rubs at her temples when the network is loud, loses her place in conversations, and becomes embarrassed when adults stare after an episode.",
 												"{@b What she wants.} To feel normal, sleep, and have the adults stop talking around her. She should remain a person rather than evidence.",
@@ -1303,7 +1303,7 @@
 												"For a few seconds, everyone on the road freezes. Then all three disasters begin to get worse at once."
 											]
 										},
-										"The characters are close enough to reach any of the three emergencies. They need not know one another before the storm; the situation gives them an immediate reason to act together. Do not roll initiative. Ask each player what their character does, resolve the most urgent actions, then move quickly around the table as conditions change.",
+										"The characters are close enough to reach any of the three emergencies. They need not know one another before the storm; the situation gives them an immediate reason to act together. Run the rescue free-form rather than in initiative. Ask each player what their character does, resolve the most urgent actions, then move quickly around the table as conditions change.",
 										{
 											"type": "entries",
 											"name": "The Three Emergencies",
@@ -2119,7 +2119,7 @@
 									"entries": [
 										"Use one early encounter to establish the personal cost of reclamation. A small mixed-species Bellweather survey crew has been sent beyond the safest cleared line to mark property boundaries and structural hazards. A collapse or territorial creature has trapped one worker while another is injured.",
 										"The workers are ordinary people. They do not become recurring plot devices unless the players take an interest in them. Their presence simply establishes that the Council's maps, deeds, and recovery plans depend on people doing dangerous work before a district is safe.",
-										"Afterward, a worker can ask a practical question such as, {@b “Do they already know who gets these buildings?”} Do not turn it into a speech; let the question sit beside the visible fact that reclamation creates both safety and valuable property.",
+										"Afterward, a worker can ask a practical question such as, {@b “Do they already know who gets these buildings?”} Keep it to a single practical question; let the question sit beside the visible fact that reclamation creates both safety and valuable property.",
 										{
 											"type": "entries",
 											"name": "Optional Jarrock Thread: Rena Dask",
@@ -2556,7 +2556,7 @@
 										"{@b Temple guard.} Human, battered mail, bandaged thigh, pale from blood loss but alert. The guard can describe interior movement and confirm Tal still has four Guards.",
 										"{@b Lessa Dorn.} Lean, weathered half-elf Council surveyor. She knows the Iron Covenant abducted the survey crew but does not know Kaleb is dead.",
 										"{@b Kav Orin.} Halfling Council surveyor. He knows the Iron Covenant abducted the survey crew but does not know Kaleb is dead.",
-										"{@b Kaleb.} Do not use a satchel-recognition trigger. Lessa and Kav can naturally ask whether the party found Kaleb once introductions establish that the characters came through the Slums.",
+										"{@b Kaleb.} There is no satchel-recognition trigger. Lessa and Kav can naturally ask whether the party found Kaleb once introductions establish that the characters came through the Slums.",
 										"{@b Nela’s motive.} She will not willingly abandon another captive and prioritizes getting everyone safe while keeping the temple’s sacred material from the Covenant.",
 										"{@b Lessa’s play cue.} She is angry that the survey crew was sent into danger with inadequate protection; she still does not know Kaleb is dead.",
 										"{@b Kav’s play cue.} He wants out of Blackstone alive."
@@ -2588,7 +2588,7 @@
 												"{@b Ulric Evern.} Budget hawk and hard bargainer; press for accountability and a consequence Bellweather can actually enforce.",
 												"{@b Wern Ursen.} Defense and infrastructure; frame the issue around security, operational risk, and whether the party can still be useful safely.",
 												"{@b Bishop Brann.} Public welfare, healing, burial rights, preservation of sacred records, and humane treatment of prisoners.",
-												"{@b Perrin Cardon.} Polished and ambitious; values useful routes and the political value of keeping effective adventurers working. Do not play him as an exposed villain.",
+												"{@b Perrin Cardon.} Polished and ambitious; values useful routes and the political value of keeping effective adventurers working. At this stage he presents as a competent civic figure, not an exposed villain.",
 												"{@b Council envoy.} Procedural messenger only."
 											]
 										},
@@ -4328,7 +4328,7 @@
 							"name": "3. Master Librarian’s Chamber",
 							"entries": [
 								"A damaged ward protects a locked desk.",
-								"Use a DC 15 Intelligence (Arcana) check or {@i Dispel Magic} to suppress the ward. Failure triggers a short fear effect or environmental pulse; do not make the clue itself dependent on the roll.",
+								"Use a DC 15 Intelligence (Arcana) check or {@i Dispel Magic} to suppress the ward. Failure triggers a short fear effect or environmental pulse; the clue itself is still recovered.",
 								"Inside are several damaged records that finally make the supernatural problem explicit.",
 								{
 									"type": "entries",
@@ -6495,7 +6495,7 @@
 												"fight the controlled command group while protecting civilians."
 											]
 										},
-										"Do not run the hold as an extermination dungeon."
+										"Run the hold as a living settlement with a militant faction rather than as an extermination dungeon."
 									]
 								},
 								{
@@ -7453,7 +7453,7 @@
 												"a civic defense mechanism creates cover/hazard for Tyren."
 											]
 										},
-										"Do not stack all three.",
+										"Only one of the three effects is active at a time.",
 										"If the Civic Relay was disabled, Tyren fights without controlled Bellweather support."
 									]
 								},
@@ -7782,7 +7782,7 @@
 							"entries": [
 								"Use {@i {@spell dominate person}} as the rules model.",
 								"This is for late-campaign ordinary NPCs only.",
-								"Do not use Dominate Person-style control on the PCs or Jord."
+								"Dominate Person-style control never applies to the PCs or Jord."
 							]
 						},
 						{
@@ -8743,7 +8743,7 @@
 								]
 							]
 						},
-						"The Mansion District and Zennar Outpost do not have dedicated source plates in the current NCFA asset index. Run them from their text geography, existing Bellweather geography, and modular encounter areas using the existing text geography and modular encounter areas."
+						"The Mansion District and Zennar Outpost have no dedicated source plates in the current NCFA asset index. Use their text geography, existing Bellweather geography, and modular encounter areas."
 					]
 				},
 				{
