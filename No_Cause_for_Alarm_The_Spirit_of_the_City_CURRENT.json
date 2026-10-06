@@ -6,16 +6,16 @@
 				"json": "NCFASOC",
 				"abbreviation": "NCFA-SOC",
 				"full": "No Cause for Alarm: The Spirit of the City",
-				"version": "2.6",
+				"version": "2.7",
 				"authors": [
 					"No Cause for Alarm Campaign"
 				],
-				"dateLastModified": 1791276000
+				"dateLastModified": 1791292200
 			}
 		],
 		"edition": "one",
 		"dateAdded": 1791271800,
-		"dateLastModified": 1791276000,
+		"dateLastModified": 1791292200,
 		"_dateLastModifiedHash": "f478bcdfc6"
 	},
 	"adventure": [
@@ -292,7 +292,7 @@
 						"Waylen Camp",
 						"Rellan Enclave",
 						"Emmer Hold",
-						"Mid-Chapter Milestone: Level 14",
+						"Regional Milestones",
 						"Confronting Perrin",
 						"Completing the Regional Arc"
 					]
@@ -323,6 +323,7 @@
 					"headers": [
 						"Maps",
 						"Modern Running Sheet",
+						"Return to Controlled Bellweather",
 						"Table-Ready Finale",
 						"The Situation",
 						"Why the Dragon Fight Is Guaranteed",
@@ -1000,50 +1001,54 @@
 										],
 										[
 											"Kellan’s Well",
-											"5"
+											"Remain 4"
 										],
 										[
 											"Koven House",
+											"5"
+										],
+										[
+											"Savin Keep + Cardon Weavehouse",
 											"6"
 										],
 										[
-											"Savin Keep",
+											"Marren Library + Mansion material",
 											"7"
 										],
 										[
-											"Cardon Weavehouse / Cardon restoration phase",
+											"Paden Square + Storen Gate",
 											"8"
 										],
 										[
-											"Marren Library and associated city investigation",
+											"Valen/Maren phase",
 											"9"
 										],
 										[
-											"Paden Square",
+											"First major regional successes",
 											"10"
 										],
 										[
-											"Storen Gate",
+											"Regional network materially disrupted",
 											"11"
 										],
 										[
-											"Valen Cemetery",
+											"Perrin confrontation turning point",
 											"12"
 										],
 										[
-											"Maren Isle",
+											"Perrin/Tyren escalation",
 											"13"
 										],
 										[
-											"Regional network: first major regional success",
+											"Regional/endgame preparation complete",
 											"14"
 										],
 										[
-											"Regional network broken / alliances secured",
+											"Zennar betrayal survived",
 											"15"
 										],
 										[
-											"Zennar betrayal resolved",
+											"Controlled Bellweather confronted / Varen route opened",
 											"16"
 										],
 										[
@@ -1163,50 +1168,54 @@
 														],
 														[
 															"Kellan's Well resolved",
-															"5"
+															"Remain 4"
 														],
 														[
 															"Koven House / Iron Covenant operation broken",
+															"5"
+														],
+														[
+															"Savin Keep + Cardon Weavehouse arc resolved",
 															"6"
 														],
 														[
-															"Savin Keep historical truth recovered",
+															"Marren Library + Mansion material resolved",
 															"7"
 														],
 														[
-															"Cardon Weavehouse resolved",
+															"Paden Square + Storen Gate escalation resolved",
 															"8"
 														],
 														[
-															"Marren Library + Mansion arc resolved",
+															"Valen/Maren phase resolved; dragon truth recovered",
 															"9"
 														],
 														[
-															"Paden Square mass-control crisis resolved",
+															"First major regional successes",
 															"10"
 														],
 														[
-															"Storen Gate resolved",
+															"Regional network materially disrupted",
 															"11"
 														],
 														[
-															"Valen Cemetery resolved",
+															"Perrin confrontation reaches a major turning point",
 															"12"
 														],
 														[
-															"Maren Isle / dragon truth recovered",
+															"Perrin/Tyren conflict escalates beyond Bellweather politics",
 															"13"
 														],
 														[
-															"Two meaningful regional successes",
+															"Regional/endgame preparation completed",
 															"14"
 														],
 														[
-															"Regional arc + Perrin confrontation resolved",
+															"Zennar betrayal survived",
 															"15"
 														],
 														[
-															"Zennar betrayal survived and Bellweather return resolved",
+															"Controlled Bellweather confronted and Varen route opened",
 															"16"
 														],
 														[
@@ -2717,7 +2726,7 @@
 								"{@link DM Keyed Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/kellans_well.webp}"
 							]
 						},
-						"{@b Recommended level:} 4 {@b Expected milestone:} 5 {@b Likely table time:} 1–2 sessions",
+						"{@b Recommended level:} 4 {@b Milestone:} Remain level 4 {@b Likely table time:} about 3–4 hours",
 						{
 							"type": "entries",
 							"name": "Modern Running Sheet",
@@ -2743,11 +2752,11 @@
 										],
 										[
 											"{@b Fail forward}",
-											"The coordination clue cannot be lost. Failure changes preparedness, injuries, or escaped personnel."
+											"The Koven House lead cannot be lost. Failure changes preparedness and corroborating evidence, not whether the campaign continues."
 										],
 										[
 											"{@b Pepper consequence}",
-											"Mission 1 of 5. Pepper receives no pay; the other PCs receive the normal Council reward. Pepper is legally permitted to leave Ledger House because this is Council business."
+											"Mission 1 of 5. Pepper receives no Council pay. Jarrock, Aaron, and Arunem each receive 75 gp."
 										],
 										[
 											"{@b Story revelation}",
@@ -2765,46 +2774,48 @@
 								{
 									"type": "quote",
 									"entries": [
-										"{@b Encounter purpose:} Investigation first, combat second. The party should leave knowing that separate groups are using one command system and that the Iron Covenant is involved.  {@b Whole-site opposition:} 5–8 low-tier humanoid combatants distributed through the site, one local {@creature Veteran|XMM}-style warden, and environmental threats from the existing waterworks.  {@b Surface:} 3 {@b Scouts} + 2 {@b Guards}, split between groups that visibly do not belong together.  {@b Underground pressure:} 2 {@b Scouts} or equivalent ranged defenders using cover; one environmental creature such as a {@creature Gray Ooze|XMM} or {@creature Carrion Crawler|XMM} only if pacing needs a nonhumanoid threat.  {@b Command room:} Warden using {@creature Veteran|XMM} or {@creature Bandit Captain|XMM} plus 2 {@b Guards} and 2 {@b Scouts}. Defenders surrender, flee, or bargain when the warden falls or half the force is down.  The encounter roster is distributed across scenes rather than placed into one initiative."
+										"{@b Finite roster:} 1 {@creature Veteran|XMM} Warden, 5 {@creature Scout|XMM|Scouts}, 4 {@creature Guard|XMM|Guards}, and 2 {@creature Thug|XMM|Thugs}. No room creates extra enemies.",
+										"{@b Surface:} 3 Scouts + 2 Guards.",
+										"{@b Barracks:} 2 Thugs, primarily social.",
+										"{@b Command room:} Veteran Warden + 2 Scouts + 2 Guards.",
+										"{@b Bow Gallery:} only surface Scouts who retreat use it; no fresh archers appear there.",
+										"{@b Optional pressure:} 1 Gray Ooze or Carrion Crawler may replace skipped surface pressure; it is not an extra expected encounter."
 									]
 								},
 								{
 									"type": "entries",
 									"name": "Rewards and Treasure",
 									"entries": [
-										"Use {@b 250–400 gp} in mixed valuables, two useful consumables, and command/supply records. The evidence is more important than the cash."
+										"Stores: {@b 300 gp}, 1 {@item Potion of Healing|XDMG}, 1 {@item Potion of Climbing|XDMG}, mundane supplies, and command/supply records.",
+										"Council pay: Jarrock, Aaron, and Arunem each receive {@b 75 gp}; Pepper receives no Council pay."
 									]
 								},
 								{
 									"type": "entries",
-									"name": "Stat Block Setup",
+									"name": "Encounter Builder Presets",
 									"entries": [
 										{
 											"type": "table",
 											"colLabels": [
-												"Role",
-												"5etools lookup / setup"
+												"Scene",
+												"Creatures"
 											],
 											"rows": [
 												[
-													"Surface lookout",
-													"{@creature Scout|XMM}"
+													"Surface",
+													"3 Scouts + 2 Guards"
 												],
 												[
-													"Low-tier muscle",
-													"{@creature Guard|XMM}"
+													"Barracks if combat starts",
+													"2 Thugs"
 												],
 												[
-													"Local warden",
-													"{@creature Veteran|XMM} or {@creature Bandit Captain|XMM}"
+													"Command room",
+													"1 Veteran + 2 Scouts + 2 Guards"
 												],
 												[
-													"Waterworks hazard",
-													"{@creature Gray Ooze|XMM}, {@creature Carrion Crawler|XMM}, or {@b Swarm of Rats}"
-												],
-												[
-													"Iron Covenant courier",
-													"{@creature Spy|XMM} if a mobile courier is needed"
+													"Optional replacement pressure",
+													"1 Gray Ooze or 1 Carrion Crawler"
 												]
 											]
 										}
@@ -2844,11 +2855,11 @@
 							"type": "entries",
 							"name": "1. Surface Approach",
 							"entries": [
-								"The well house and nearby ruins are being watched by two small crews that dress differently and carry different local gang markers. Their behavior is the important clue: they use the same watch changes, the same hand signal for “strangers,” and the same fallback route.",
-								"Characters who spend ten minutes observing automatically notice the shared system.",
-								"A successful Wisdom (Perception), Wisdom (Insight), or Intelligence (Investigation) check can reveal more quickly that one crew waits for the other to acknowledge every movement before acting.",
-								"If the party approaches openly, one runner attempts to reach the underground junction on round 2 of any fight.",
-								"{@b Encounter.} Use 3 {@b Scouts} and 2 {@b Guards}, split between the two crews. They retreat if badly outmatched."
+								"Two different crews watch the well house but use the same watch changes, hand signals, and fallback route.",
+								"Ten minutes of deliberate observation reveals the shared system automatically.",
+								"After one minute, a {@dc 13} Perception, Insight, or Investigation check reveals it immediately and shows that one crew waits for the other to acknowledge each movement.",
+								"If combat begins, the rear-most Scout becomes the runner and Dashes toward the junction on its {@b first turn}.",
+								"{@b Encounter.} 3 Scouts + 2 Guards."
 							]
 						},
 						{
@@ -2865,8 +2876,10 @@
 							"type": "entries",
 							"name": "3. Bow Gallery",
 							"entries": [
-								"A side chamber overlooks the approach. Archers use cover and withdraw toward the junction after one or two volleys.",
-								"Use the existing maintenance-pit terrain from the current adventure rather than an arbitrary trap. Loose stone and a visible cracked edge telegraph the danger."
+								"Only Scouts who escaped the surface fight occupy the gallery. If none escaped, it is empty except for signs of retreat.",
+								"Retreating Scouts use cover for one or two volleys, then flee by the side route instead of joining the command-room defenders.",
+								"{@b Maintenance pit.} Examining the floor reveals the cracked edge automatically. Moving quickly allows a {@dc 13} Perception check. Stepping on the failing edge requires a {@dc 13} Dexterity save; failure causes a 10-foot fall, 1d6 bludgeoning damage, and Prone.",
+								"{@b Water lever.} Creatures in the channel make a {@dc 14} Strength save or fall Prone and are pushed 15 feet. The party can use the lever."
 							]
 						},
 						{
@@ -2884,33 +2897,25 @@
 										"the command notation matches shorthand found in the coded Iron Covenant ledger held by the Council."
 									]
 								},
-								"A successful Investigation check adds that “HOUSE” is probably a permanent headquarters rather than a person."
+								"A {@dc 13} Investigation check adds that HOUSE is almost certainly a fixed headquarters or property rather than a person."
 							]
 						},
 						{
 							"type": "entries",
 							"name": "5. Barracks",
 							"entries": [
-								"Off-duty fighters include members of different crews. They are not fanatics.",
-								"Questioned separately, they tell similar stories:",
-								{
-									"type": "list",
-									"items": [
-										"they were offered better pay if they followed the shared schedule;",
-										"disputes between gangs suddenly became “bad for business” and stopped;",
-										"orders arrive through Covenant couriers;",
-										"nobody they know has met the person ultimately paying for the coordination."
-									]
-								},
-								"One frightened fighter says something stranger: a companion recently woke in the middle of the night, walked to the junction, changed the schedule, and returned to bed with no memory of doing it.",
-								"Treat this as unsettling color, not proof of possession."
+								"Exactly two Thugs are off duty here, each from a different crew. They are not fanatics.",
+								"If treated as defeated employees, they provide the basic operational facts without requiring a check; social checks only change extra detail.",
+								"They know the shared schedule pays better, gang disputes suddenly stopped, orders arrive through Covenant couriers, and nobody they know has met the ultimate payer.",
+								"One reports that a companion recently woke, changed the Junction schedule, returned to bed, and remembered none of it.",
+								"If attacked, they fight defensively and surrender once the result is obvious. If bypassed, the memory-loss clue appears in the Warden's log."
 							]
 						},
 						{
 							"type": "entries",
 							"name": "6. Command Room",
 							"entries": [
-								"The Warden is a local operator rather than a recurring mastermind. Use an {@b Iron Covenant Warden} represented by a {@creature Veteran|XMM} or {@creature Bandit Captain|XMM}.",
+								"Use a {@creature Veteran|XMM} as the default Iron Covenant Warden for this party.",
 								{
 									"type": "entries",
 									"name": "Portraying the Warden",
@@ -2929,7 +2934,10 @@
 											]
 										},
 										"The Warden tries to escape with a satchel if defeat becomes likely.",
-										"{@b Encounter.} Warden plus 2 {@b Guards} and 2 {@b Scouts}, adjusted for the party’s condition."
+										"{@b Starting positions.} Warden by the command table and satchel; 2 Guards on the choke point; 2 Scouts in cover.",
+										"{@b Tactical jobs.} Guards occupy the frontline, Scouts pressure exposed targets, Warden protects the table, and one Scout moves or destroys the satchel if defeat becomes likely.",
+										"{@b Alerted state.} If the surface runner escaped, the Warden has the satchel ready and the Scouts begin in cover.",
+										"{@b Encounter.} Veteran Warden + 2 Guards + 2 Scouts."
 									]
 								}
 							]
@@ -2938,7 +2946,7 @@
 							"type": "entries",
 							"name": "7. Stores and Escape Route",
 							"entries": [
-								"The stores contain {@b 250–400 gp} in mixed criminal proceeds, two useful consumables, and mundane supplies.",
+								"The stores contain {@b 300 gp}, 1 {@item Potion of Healing|XDMG}, 1 {@item Potion of Climbing|XDMG}, and mundane supplies.",
 								"The important treasure is documentary:",
 								{
 									"type": "list",
@@ -2956,16 +2964,38 @@
 							"type": "entries",
 							"name": "Tactical Response",
 							"entries": [
-								"If the alarm is raised, defenders try to hold the junction long enough to burn routing notes and move the command satchel. They do not create infinite reinforcements.",
-								"The party can win the chapter by any of the following:",
+								"If alerted, defenders prepare positions, protect the satchel, and preserve an escape route. Reinforcements are limited to the finite roster.",
 								{
-									"type": "list",
-									"items": [
-										"seize the command documents;",
-										"capture the Warden;",
-										"turn one of the crews;",
-										"follow a fleeing courier far enough to identify Koven House;",
-										"preserve enough physical evidence for the Council to decode the ledger connection."
+									"type": "table",
+									"colLabels": [
+										"If this happens",
+										"What survives"
+									],
+									"rows": [
+										[
+											"Runner escapes",
+											"Lower defenders are alerted; essential clues remain."
+										],
+										[
+											"Satchel escapes or is destroyed",
+											"Junction schedule, Covenant shorthand, payment token, and other documents still establish Koven House."
+										],
+										[
+											"Warden escapes or dies",
+											"Records and lower-ranking testimony are sufficient."
+										],
+										[
+											"Barracks is bypassed",
+											"Memory-loss clue moves to the Warden's log."
+										],
+										[
+											"Every witness is unavailable",
+											"Physical records plus Council comparison with the Blackstone ledger still identify Koven House."
+										],
+										[
+											"Most documents burn",
+											"A payment token and coded routing fragment survive in Stores."
+										]
 									]
 								}
 							]
@@ -2999,7 +3029,7 @@
 							"name": "Pepper: Mission 1 Complete",
 							"entries": [
 								"If Pepper returns as ordered and does not abandon the mission, mark {@b Mission 1 of 5 complete}.",
-								"Pepper receives no Council payment for this mission. The other three PCs receive the established Council pay.",
+								"Pepper receives no Council payment. Jarrock, Aaron, and Arunem each receive {@b 75 gp}.",
 								"Lessa or Kav can be present when completion is recorded. Keep the interaction short. Their continuing presence lets Pepper’s legal consequence remain part of the world without making every session about her crime."
 							]
 						},
@@ -3021,7 +3051,8 @@
 							"type": "entries",
 							"name": "Milestone",
 							"entries": [
-								"Advance the party to {@b level 5} when the Kellan’s Well evidence is secured and the Koven House lead is established."
+								"Kellan's Well does {@b not} grant a level. The party remains {@b level 4}.",
+								"Breaking the Iron Covenant operation at Koven House advances the party to {@b level 5}."
 							]
 						}
 					]
@@ -3114,7 +3145,7 @@
 								"{@link DM Keyed Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/koven_house.webp}"
 							]
 						},
-						"{@b Recommended level:} 5 {@b Expected milestone:} 6 {@b Likely table time:} 1–2 sessions",
+						"{@b Recommended level:} 4 {@b Expected milestone:} 5 {@b Likely table time:} 1–2 sessions",
 						{
 							"type": "entries",
 							"name": "Modern Running Sheet",
@@ -3442,7 +3473,7 @@
 							"type": "entries",
 							"name": "Milestone",
 							"entries": [
-								"Advance the party to {@b level 6} after Koven House is broken and the party understands that the coordination extends beyond one location."
+								"Advance the party to {@b level 5} after Koven House is broken."
 							]
 						}
 					]
@@ -3535,7 +3566,7 @@
 								"{@link DM Keyed Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/savin_keep.webp}"
 							]
 						},
-						"{@b Recommended level:} 6 {@b Expected milestone:} 7 {@b Likely table time:} 1–2 sessions",
+						"{@b Recommended level:} 5 {@b Milestone:} None by itself {@b Likely table time:} 1–2 sessions",
 						{
 							"type": "entries",
 							"name": "Modern Running Sheet",
@@ -3801,7 +3832,7 @@
 							"type": "entries",
 							"name": "Milestone",
 							"entries": [
-								"Advance to {@b level 7} when the Savin records are secured and the party knows that the present coordination resembles a historical event associated with the name Tyren."
+								"Remain {@b level 5}; Savin Keep combines with Cardon Weavehouse for the next milestone."
 							]
 						}
 					]
@@ -3894,7 +3925,7 @@
 								"{@link DM Keyed Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse.webp}"
 							]
 						},
-						"{@b Recommended level:} 7 {@b Expected milestone:} 8 {@b Likely table time:} 1–2 sessions",
+						"{@b Recommended level:} 5 {@b Expected milestone:} 6 {@b Likely table time:} 1–2 sessions",
 						{
 							"type": "entries",
 							"name": "Modern Running Sheet",
@@ -4127,7 +4158,7 @@
 							"type": "entries",
 							"name": "Milestone",
 							"entries": [
-								"Advance the party to {@b level 8} after the Weavehouse crisis is resolved and Perrin’s restored wealth becomes a visible part of Bellweather politics."
+								"Advance to {@b level 6} after the Savin Keep + Cardon Weavehouse arc is resolved."
 							]
 						}
 					]
@@ -4169,7 +4200,7 @@
 								"{@link DM Keyed Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/marren_library.webp}"
 							]
 						},
-						"{@b Recommended level:} 8 {@b Expected milestone:} 9 {@b Likely table time:} 1–2 sessions",
+						"{@b Recommended level:} 6 {@b Expected milestone:} 7 after the Marren/Mansion phase {@b Likely table time:} 1–2 sessions",
 						{
 							"type": "entries",
 							"name": "Modern Running Sheet",
@@ -4460,7 +4491,7 @@
 							"type": "entries",
 							"name": "Milestone",
 							"entries": [
-								"Advance the party to {@b level 9} after the core Tyren records are preserved and the party understands that the coordination problem involves supernatural control of living minds."
+								"Advance to {@b level 7} once Marren Library and the associated Mansion/Cardon consequences are meaningfully resolved."
 							]
 						}
 					]
@@ -4533,7 +4564,7 @@
 					"name": "Chapter 10: The Mansion District",
 					"id": "012",
 					"entries": [
-						"{@b Recommended level:} 9 {@b Milestone:} None required {@b Likely table time:} 1–3 optional adventures",
+						"{@b Recommended level:} 6–7 {@b Milestone:} Shared with Marren Library; none for clearing houses {@b Likely table time:} optional / merged material",
 						{
 							"type": "entries",
 							"name": "Purpose",
@@ -4702,7 +4733,7 @@
 								"{@link DM Keyed Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/paden_square.webp}"
 							]
 						},
-						"{@b Recommended level:} 9 {@b Expected milestone:} 10 {@b Likely table time:} 1–2 sessions",
+						"{@b Recommended level:} 7 {@b Milestone:} None by itself {@b Likely table time:} 1–2 sessions",
 						{
 							"type": "entries",
 							"name": "Modern Running Sheet",
@@ -4964,7 +4995,7 @@
 							"type": "entries",
 							"name": "Milestone",
 							"entries": [
-								"Advance the party to {@b level 10} when Paden Square is stabilized and the party has experienced Tyren’s pressure directly."
+								"Remain {@b level 7}; Paden Square and Storen Gate form the next milestone."
 							]
 						}
 					]
@@ -5057,7 +5088,7 @@
 								"{@link DM Keyed Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/storen_gate.webp}"
 							]
 						},
-						"{@b Recommended level:} 10 {@b Expected milestone:} 11 {@b Likely table time:} 1–2 sessions",
+						"{@b Recommended level:} 7 {@b Expected milestone:} 8 {@b Likely table time:} 1–2 sessions",
 						{
 							"type": "entries",
 							"name": "Modern Running Sheet",
@@ -5287,7 +5318,7 @@
 							"type": "entries",
 							"name": "Milestone",
 							"entries": [
-								"Advance the party to {@b level 11} after Storen Gate is secured and the crisis is resolved."
+								"Advance to {@b level 8} after the Paden Square + Storen Gate escalation is resolved."
 							]
 						}
 					]
@@ -5380,7 +5411,7 @@
 								"{@link DM Keyed Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/valen_cemetery.webp}"
 							]
 						},
-						"{@b Recommended level:} 11 {@b Expected milestone:} 12 {@b Likely table time:} 1–2 sessions",
+						"{@b Recommended level:} 8 {@b Milestone:} None by itself {@b Likely table time:} 1–2 sessions (optional)",
 						{
 							"type": "entries",
 							"name": "Modern Running Sheet",
@@ -5579,7 +5610,7 @@
 							"type": "entries",
 							"name": "Milestone",
 							"entries": [
-								"Advance the party to {@b level 12} when the cemetery crisis is permanently resolved."
+								"Remain {@b level 8}; Valen Cemetery is an independent crisis and can be played before Maren Isle or held for later."
 							]
 						}
 					]
@@ -5672,7 +5703,7 @@
 								"{@link DM Keyed Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/maren_isle.webp}"
 							]
 						},
-						"{@b Recommended level:} 12 {@b Expected milestone:} 13 {@b Likely table time:} 1–2 sessions",
+						"{@b Recommended level:} 8 {@b Expected milestone:} 9 {@b Likely table time:} 1–2 sessions",
 						{
 							"type": "entries",
 							"name": "Modern Running Sheet",
@@ -5934,7 +5965,7 @@
 							"type": "entries",
 							"name": "Milestone",
 							"entries": [
-								"Advance the party to {@b level 13} when the contamination is stopped and the Varen containment research is recovered."
+								"Advance to {@b level 9} after Maren Isle and the dragon truth are resolved."
 							]
 						}
 					]
@@ -6235,7 +6266,7 @@
 								}
 							]
 						},
-						"{@b Recommended level:} 13–15 {@b Expected milestones:} 14 and 15 {@b Likely table time:} 3–6 sessions depending on player choices",
+						"{@b Recommended level:} 9–14 {@b Expected milestones:} 10–14 across the arc {@b Likely table time:} choice-driven; revised structure pending",
 						{
 							"type": "entries",
 							"name": "Modern Running Sheet",
@@ -6516,17 +6547,37 @@
 						},
 						{
 							"type": "entries",
-							"name": "Mid-Chapter Milestone: Level 14",
+							"name": "Regional Milestones",
 							"entries": [
-								"Advance the party to {@b level 14} after two meaningful regional successes establish both of the following:",
 								{
-									"type": "list",
-									"items": [
-										"Tyren’s control is spreading beyond Bellweather;",
-										"the spread originates through routes, money, or influence tied back to Bellweather."
+									"type": "table",
+									"colLabels": [
+										"Milestone",
+										"New Level"
+									],
+									"rows": [
+										[
+											"First major regional successes",
+											"10"
+										],
+										[
+											"Materially disrupt a regional control route and secure a meaningful ally/route",
+											"11"
+										],
+										[
+											"Perrin confrontation reaches a major turning point",
+											"12"
+										],
+										[
+											"Perrin/Tyren conflict escalates beyond ordinary Bellweather politics",
+											"13"
+										],
+										[
+											"Regional/endgame preparation is complete",
+											"14"
+										]
 									]
-								},
-								"At this point the party should have enough information to seriously question Perrin."
+								}
 							]
 						},
 						{
@@ -6617,7 +6668,7 @@
 									"type": "entries",
 									"name": "Milestone",
 									"entries": [
-										"Advance the party to {@b level 15} when they have materially broken Tyren’s regional expansion and gained enough allies, routes, or information to act against the central network.",
+										"The party should leave the regional arc at {@b level 14}. The next level comes from surviving the Zennar betrayal.",
 										{
 											"type": "entries",
 											"name": "DM Truth: Perrin Decides the Party Is a Threat",
@@ -6646,7 +6697,7 @@
 					"name": "Chapter 16: Zennar Outpost",
 					"id": "018",
 					"entries": [
-						"{@b Recommended level:} 15 {@b Expected milestone:} 16 {@b Likely table time:} 1–2 sessions",
+						"{@b Recommended level:} 14 {@b Expected milestone:} 15 {@b Likely table time:} 1–2 sessions",
 						{
 							"type": "entries",
 							"name": "Modern Running Sheet",
@@ -6946,7 +6997,8 @@
 							"type": "entries",
 							"name": "Milestone",
 							"entries": [
-								"Advance the party to {@b level 16} when the Zennar betrayal is survived, credible evidence is preserved, and the party is ready to move against the Radiant Well."
+								"Advance to {@b level 15} when the Zennar betrayal is survived and credible evidence of Perrin's order is preserved.",
+								"Level 16 comes after confronting controlled Bellweather and opening the route to Varen Keep."
 							]
 						}
 					]
@@ -7039,7 +7091,7 @@
 								"{@link DM Keyed Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/varen_keep.webp}"
 							]
 						},
-						"{@b Recommended level:} 16 {@b Campaign finale} {@b Likely table time:} 2–3 sessions",
+						"{@b Recommended level:} 15–16 {@b Campaign finale} {@b Likely table time:} 3–5 sessions including the controlled-Bellweather return",
 						{
 							"type": "entries",
 							"name": "Modern Running Sheet",
@@ -7074,6 +7126,15 @@
 									]
 								},
 								"{@i Use the existing Varen Keep map. Run it as set pieces rather than a room-by-room clear.}"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Return to Controlled Bellweather",
+							"entries": [
+								"The party returns from Zennar at {@b level 15}. Bellweather is safer and more efficient, but visibly less voluntary.",
+								"Run this as a city-scale problem rather than a street-by-street clear. The party can expose Perrin's order, rally allies, sever relays, protect anchored people, or create another credible route to Varen Keep.",
+								"{@b Milestone to 16.} Advance to {@b level 16} once the party has materially broken or bypassed Bellweather's control network and opened a viable route to Varen Keep."
 							]
 						},
 						{
