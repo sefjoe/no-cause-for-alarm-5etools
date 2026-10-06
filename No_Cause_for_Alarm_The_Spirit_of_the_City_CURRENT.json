@@ -6,17 +6,17 @@
 				"json": "NCFASOC",
 				"abbreviation": "NCFA-SOC",
 				"full": "No Cause for Alarm: The Spirit of the City",
-				"version": "2.4",
+				"version": "2.5",
 				"authors": [
 					"No Cause for Alarm Campaign"
 				],
-				"dateLastModified": 1791275100
+				"dateLastModified": 1791275400
 			}
 		],
 		"edition": "one",
 		"dateAdded": 1791271800,
-		"dateLastModified": 1791275100,
-		"_dateLastModifiedHash": "f8a3e96d5a"
+		"dateLastModified": 1791275400,
+		"_dateLastModifiedHash": "514a5d9c79"
 	},
 	"adventure": [
 		{
@@ -2817,7 +2817,7 @@
 							"name": "Session 4 Opening",
 							"entries": [
 								"Begin the next morning at Ledger House after the completed long rest and level-up.",
-								"Do {@b not} replay the Council acceptance scene.",
+								"The Council acceptance scene has already happened; begin with the party preparing to leave Ledger House.",
 								"Pepper’s house arrest remains in force. Brakkus does not need to escort her to Kellan’s Well because the expedition itself is authorized Council business. He makes clear that returning somewhere other than Ledger House afterward without Council permission would violate the terms.",
 								"Lessa Dorn and Kav Orin may be present outside or near Ledger House with a survey packet for the expedition. Their presence is intentionally awkward. They know what Jarrock told them about Caleb and they reported it. Neither needs to lecture Pepper. Their job is to hand over current route markings and leave the moral tension sitting at the table.",
 								"Lessa is professional and cool. Kav is uncomfortable but practical."
@@ -7401,7 +7401,7 @@
 							"name": "Stage 4 — Tyren, Ancient Emerald Dragon",
 							"entries": [
 								"Use the official {@creature Ancient Emerald Dragon|FTD} stat block from {@i Fizban’s Treasury of Dragons} as Tyren’s base statistics.",
-								"Do {@b not} weaken the core dragon stat block merely because the party is level 16. This is the final fight of a level-3-to-16 campaign and should demand major resources.",
+								"Use Tyren’s core ancient emerald dragon stat block at full strength. This is the final fight of a level-3-to-16 campaign and should demand major resources.",
 								"Balance the encounter through the objectives the party completed, not by quietly reducing Tyren’s identity.",
 								{
 									"type": "entries",
