@@ -230,6 +230,7 @@
 						"3. First Anchored-Mind Saves",
 						"4. The Unturned Pattern Reappears",
 						"5. Combat and Objectives",
+						"Resting, Withdrawal, and Fail-Forward",
 						"6. The Evidence",
 						"Perrin’s Reaction",
 						"Wern’s Response",
@@ -249,6 +250,7 @@
 						"3. Perrin’s Choice",
 						"4. The Party’s View",
 						"5. Gate Fight",
+						"Time, Rest, and Failure",
 						"6. Aftermath",
 						"Council Fracture",
 						"Milestone"
@@ -267,6 +269,7 @@
 						"3. The Control Pulse",
 						"4. Brann’s Anchor",
 						"5. Necromantic Focus",
+						"Resting and World Movement",
 						"Consequences",
 						"Milestone"
 					]
@@ -281,9 +284,11 @@
 						"1. Following the River",
 						"2. Island Defenses",
 						"3. The Pollution System",
+						"The Arcanist’s Starting State",
 						"4. Psychic Research Room",
 						"5. The Missing Varen Volume",
 						"6. Why Tyren Has Not Simply Escaped",
+						"Resting, Alarm, and Site Aftermath",
 						"The Arcanist’s Fate",
 						"Consequences",
 						"Milestone"
@@ -4897,46 +4902,35 @@
 								{
 									"type": "quote",
 									"entries": [
-										"Paden Square is the first large public demonstration of Tyren controlling many people at once. The encounter should feel chaotic and uncanny rather than like a standard army fight.  {@b Controlled core:} 1 {@creature Veteran|XMM} or {@creature Bandit Captain|XMM}, 4 {@b Thugs/Guards}, and 2 {@b Scouts/Spies}.  {@b Crowd pressure:} treat civilians as moving hazards, rescue objectives, blocked routes, and frightened witnesses—not as hit-point bags.  {@b PC/Jord control:} at chosen dramatic moments, call for a Wisdom saving throw. Failure produces only one {@spell command}-style compelled action. Control immediately ends after that action."
+										"{@b Finite active hostile roster:} 1 {@creature Veteran|XMM} field leader, 2 additional Veterans, and 4 Scouts.",
+										"{@b Civilian map pieces:} use 4 civilian clusters, not individual NPC hit-point pools. Each cluster represents several shoppers/workers trapped by the synchronized movement.",
+										"{@b Starting positions:} field leader + 1 Veteran at the central wagon; 1 Veteran at the east exit; 2 Scouts on rooftops; 1 Scout with the wagon; 1 Scout is the courier at the center of the square.",
+										"{@b Tyren pressure:} PC/Jord Wisdom save DC is {@dc 14}. Failure uses only the established one-turn Command ceiling."
 									]
 								},
 								{
 									"type": "entries",
 									"name": "Rewards and Treasure",
 									"entries": [
-										"The reward is primarily evidence, reputation, and access. Use 500–1,000 gp in recovered payments/contraband plus 1–2 consumables if the group needs a material reward."
+										"Recovered criminal payments and contraband total {@b 750 gp}.",
+										"The field leader also carries 1 {@item Potion of Heroism|XDMG}; the courier satchel contains 1 {@item Potion of Greater Healing|XDMG}.",
+										"The larger rewards are public credibility, evidence, and changed Council relationships."
 									]
 								},
 								{
 									"type": "entries",
-									"name": "Stat Block Setup",
+									"name": "Encounter Builder Presets",
 									"entries": [
 										{
 											"type": "table",
 											"colLabels": [
-												"Role",
-												"5etools lookup / setup"
+												"Scene",
+												"Creatures"
 											],
 											"rows": [
 												[
-													"Controlled organizer",
-													"{@creature Veteran|XMM} or {@creature Bandit Captain|XMM}"
-												],
-												[
-													"Controlled muscle",
-													"{@creature Thug|XMM} / {@creature Guard|XMM}"
-												],
-												[
-													"Rooftop observer",
-													"{@creature Scout|XMM}"
-												],
-												[
-													"Courier / infiltrator",
-													"{@creature Spy|XMM}"
-												],
-												[
-													"PCs and Jord",
-													"Use Appendix: Anchored Mind overlay only"
+													"Paden Square active force",
+													"1 Veteran leader + 2 Veterans + 4 Scouts"
 												]
 											]
 										}
@@ -4989,7 +4983,7 @@
 							"name": "3. First Anchored-Mind Saves",
 							"entries": [
 								"This is the recommended first use of unexplained Tyren saves on the PCs.",
-								"Ask each PC for a {@b Wisdom saving throw} at a moment when the pressure reaches the whole square.",
+								"Ask each PC for a {@dc 14} Wisdom saving throw when the pressure reaches the whole square.",
 								"Describe only the Wisdom save unless the characters have already established that language through play.",
 								"On a failure, use one brief Command-like imperative appropriate to the scene:",
 								{
@@ -5021,27 +5015,43 @@
 							"type": "entries",
 							"name": "5. Combat and Objectives",
 							"entries": [
-								"Use a mixed force appropriate to level 9–10 rather than a mob of dozens.",
-								"Suggested active combatants:",
+								"Use exactly 1 Veteran field leader, 2 Veterans, and 4 Scouts. The controlled civilians are terrain/objective pieces, not enemies.",
+								"{@b Courier.} One Scout begins at the center carrying the most useful written evidence. On its first turn it Dashes toward the south exit. If it escapes, the same basic Covenant instructions can still be recovered from the field leader, but the party loses the clearest delivery trail.",
+								"{@b Wagon blockade.} At initiative count 20 on rounds 1 and 2, the controlled wagon advances toward the west exit unless a character reaches the driver/harness and uses an action to stop it. Once the exit is blocked, moving the wagon quickly requires a {@dc 14} Strength (Athletics) check or an obviously effective spell/tool solution.",
+								"{@b Civilian clusters.} Four civilian clusters begin in exposed areas. At initiative count 20, one unprotected cluster moves 15 feet toward the nearest marked danger/blockade under Tyren's pressure. A character adjacent to a cluster can use an action to guide it to safety automatically; a spell or strong plan can protect multiple clusters if it logically would.",
+								"{@b Enemy jobs.} The field leader protects the central documents; one Veteran helps the wagon blockade; one Veteran holds an exit; rooftop Scouts pressure characters who leave cover.",
+								"The fight ends as an organized operation when the field leader falls/surrenders, the courier is stopped or escapes, and at least two exits are open. Surviving criminals then flee, surrender, or wake from the synchronized state."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Resting, Withdrawal, and Fail-Forward",
+							"entries": [
+								"The market crisis does not pause for a Short Rest. The party can withdraw for an hour, but the event resolves while they are gone.",
+								"If they leave before stabilizing the square, the courier escapes, the west exit is blocked, and two civilian clusters suffer injuries before guards/merchants regain control. The party can still investigate the aftermath and recover ordinary Covenant instructions.",
 								{
-									"type": "list",
-									"items": [
-										"1 {@creature Bandit Captain|XMM} or {@creature Veteran|XMM} field leader;",
-										"2 {@b Veterans};",
-										"4 {@b Scouts/Spies};",
-										"controlled civilians as {@b terrain complications}, not enemy hit-point bags."
-									]
-								},
-								"Objectives may include:",
-								{
-									"type": "list",
-									"items": [
-										"open an exit;",
-										"prevent a wagon blockade;",
-										"stop a controlled courier;",
-										"protect trapped civilians;",
-										"capture a leader alive;",
-										"reach a command document before it burns."
+									"type": "table",
+									"colLabels": [
+										"If this happens",
+										"What remains true"
+									],
+									"rows": [
+										[
+											"Courier escapes",
+											"Field-leader documents and witness accounts still prove organized Covenant disorder."
+										],
+										[
+											"Field leader dies",
+											"Surviving criminals and written instructions establish the same facts."
+										],
+										[
+											"All written evidence is lost",
+											"Multiple surviving criminals independently describe the same impossible synchronization."
+										],
+										[
+											"Party prioritizes civilians over pursuit",
+											"Public trust rises; the investigation continues through witnesses rather than the courier."
+										]
 									]
 								}
 							]
@@ -5060,7 +5070,8 @@
 										"{@b “It felt like I’d already decided before I knew there was a choice.”}"
 									]
 								},
-								"That sentence should matter later."
+								"That sentence should matter later.",
+								"After the crisis, the square closes for the rest of the day. By the next morning it reopens with damaged stalls, temporary guard posts, and merchants loudly arguing about what happened rather than accepting one official explanation."
 							]
 						},
 						{
@@ -5252,42 +5263,39 @@
 								{
 									"type": "quote",
 									"entries": [
-										"Storen Gate should force Perrin to choose direct control because persuasion is too slow. The security crisis must be real enough that his choice can initially look effective.  {@b Gate command:} 1 {@creature Knight|XMM} or {@creature Veteran|XMM}, 2 {@b Veterans}, and 4 {@b Guards}, distributed across the gate complex rather than fought at once.  {@b Optional attacking pressure:} use 4–6 level-appropriate attackers from a named hostile force if the scene needs a true two-sided crisis.  The party can win through control of the gate mechanism, negotiation, sabotage, rescue, or defeating the command element."
+										"{@b Gate garrison present:} 1 Knight officer and 6 Guards. They are allies/neutral personnel unless the party turns the crisis into a fight with them.",
+										"{@b Finite hostile infiltration force:} 1 {@creature Gladiator|XMM}, 2 Veterans, and 4 Scouts.",
+										"{@b Starting hostile positions:} Gladiator + 1 Veteran + 2 Scouts hidden among the relief wagons; 1 Veteran + 2 Scouts outside the gate waiting for the mechanism to open.",
+										"{@b Tyren pressure:} any anchored PC caught in the psychic pulse makes a {@dc 14} Wisdom save and is subject only to the one-turn Command ceiling."
 									]
 								},
 								{
 									"type": "entries",
 									"name": "Rewards and Treasure",
 									"entries": [
-										"Use the Council's civic reward plus one practical permanent or consumable item appropriate to level 10–11. The main reward is authority, evidence, and changed Council relationships."
+										"Council pay is {@b 150 gp per character}.",
+										"The city also issues the party 1 {@item Immovable Rod|XDMG} from the gate engineering stores and 2 {@item Potion of Greater Healing|XDMG|Potions of Greater Healing}.",
+										"The main long-term reward is authority and trust earned through how the party resolves the gate crisis."
 									]
 								},
 								{
 									"type": "entries",
-									"name": "Stat Block Setup",
+									"name": "Encounter Builder Presets",
 									"entries": [
 										{
 											"type": "table",
 											"colLabels": [
-												"Role",
-												"5etools lookup / setup"
+												"Scene",
+												"Creatures"
 											],
 											"rows": [
 												[
-													"Gate commander",
-													"{@creature Knight|XMM} or {@creature Veteran|XMM}"
+													"Hostile infiltration force",
+													"1 Gladiator + 2 Veterans + 4 Scouts"
 												],
 												[
-													"Veteran squad",
-													"{@creature Veteran|XMM}"
-												],
-												[
-													"Rank-and-file",
-													"{@creature Guard|XMM}"
-												],
-												[
-													"Signal / wall lookout",
-													"{@creature Scout|XMM}"
+													"Gate garrison, only if somehow fought",
+													"1 Knight + 6 Guards"
 												]
 											]
 										}
@@ -5315,7 +5323,8 @@
 								"Both appear to carry legitimate Council authorization.",
 								"Ulric’s office insists only one was issued.",
 								"Wern’s officers accuse civilian clerks of interference.",
-								"The confusion echoes Savin’s historical records without duplicating them exactly."
+								"The confusion echoes Savin’s historical records without duplicating them exactly.",
+								"Both documents are physically authentic. Ten minutes comparing logs reveals that the relief order was entered during a clerk's unexplained memory gap. A {@dc 14} Investigation check finds that discrepancy immediately. Failure costs time; it does not make one document magically look fake."
 							]
 						},
 						{
@@ -5367,34 +5376,50 @@
 										"no visible conversation with Perrin."
 									]
 								},
-								"An Insight check can establish that the change was unnatural, but it should not identify the source.",
-								"If an anchored PC is caught in the same psychic pulse, call for one Wisdom save and use the same one-turn Command ceiling."
+								"A {@dc 14} Insight check confirms that the officer's abrupt change is unnatural, but it does not identify Perrin or Tyren as the source.",
+								"If an anchored PC is caught in the same psychic pulse, call for a {@dc 14} Wisdom save and use the established one-turn Command ceiling."
 							]
 						},
 						{
 							"type": "entries",
 							"name": "5. Gate Fight",
 							"entries": [
-								"Run the final gate fight around objectives rather than a long attrition battle.",
-								"Use a level-appropriate command group such as:",
+								"{@b Portcullis.} Raising or lowering it normally takes two character actions at the winch. A character can force the mechanism through in one action with a {@dc 15} Strength (Athletics) check. Appropriate magic or sabotage can change this.",
+								"{@b Signal.} A character adjacent to the signal mechanism can disable it with an action and a {@dc 14} check using thieves' tools or appropriate artisan's tools. Destroying the exposed signal rope/lever also works automatically if the character can reach it.",
+								"{@b Hostile force.} Use exactly 1 Gladiator, 2 Veterans, and 4 Scouts. The hidden wagon group moves when the gate begins opening; the outside group rushes the mechanism once there is a gap.",
+								"{@b Garrison.} The Knight officer and 6 Guards protect workers/civilians and follow whichever legitimate command chain the party establishes. Do not add them to the hostile roster unless the party actually turns them against itself.",
+								"{@b Victory conditions.} The party wins by any combination that prevents the infiltrators from taking the mechanism, keeps the gate functional, and prevents a hostile signal from bringing in further opportunists. Killing every infiltrator is not required."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Time, Rest, and Failure",
+							"entries": [
+								"The active gate crisis does not wait through a Short Rest. If the party withdraws for an hour before resolving it, the infiltrators make their attempt without them.",
+								"If the party leaves before identifying the mixed convoy, the infiltrators seize part of the mechanism and several guards/workers are injured before Wern's reinforcements retake it. The party can still arrive for the aftermath and uncover the contradictory-order/control evidence.",
 								{
-									"type": "list",
-									"items": [
-										"1 {@creature Knight|XMM} or {@creature Gladiator|XMM};",
-										"2 {@b Veterans};",
-										"4 {@b Scouts/Guards};",
-										"one specialist such as a {@creature Mage|XMM} only if the party is well rested and optimized."
-									]
-								},
-								"Objectives:",
-								{
-									"type": "list",
-									"items": [
-										"control the portcullis;",
-										"stop a signal;",
-										"prevent infiltration;",
-										"protect trapped workers;",
-										"hold long enough for reinforcement."
+									"type": "table",
+									"colLabels": [
+										"If this happens",
+										"Result"
+									],
+									"rows": [
+										[
+											"Infiltrators seize the winch briefly",
+											"The gate is damaged and trade closes for several days; the campaign continues."
+										],
+										[
+											"Hostile leader escapes",
+											"Captured scouts/records still identify the planned infiltration."
+										],
+										[
+											"Officer under Tyren is killed",
+											"Other witnesses saw the unnatural reversal; Perrin's choice still happened."
+										],
+										[
+											"Party exposes the order problem early",
+											"The final fight becomes easier because the garrison remains coordinated."
+										]
 									]
 								}
 							]
@@ -5420,7 +5445,8 @@
 										"He has now crossed from covering up Tyren’s behavior to {@b choosing direct control as a tool}.",
 										"The next time will be easier."
 									]
-								}
+								},
+								"After the crisis, the gate remains under Bellweather control. Repairs, extra inspection points, and political arguments about emergency authority become visible immediately."
 							]
 						},
 						{
@@ -5575,50 +5601,44 @@
 								{
 									"type": "quote",
 									"entries": [
-										"Valen Cemetery is deliberately {@b not} a Tyren plot. It is a genuine undead crisis that gives Bishop Brann room to matter and demonstrates his immunity without shrinking the world.  Choose 2–3 set pieces using {@creature Ghoul|XMM}, {@creature Wight|XMM}, {@creature Specter|XMM}, {@creature Wraith|XMM}, {@creature Zombie|XMM}, or another level-appropriate undead mix.  {@b Recommended climax:} 1 {@creature Wraith|XMM} + 2 {@b Wights} with terrain/objectives, or a comparable tier-appropriate controller plus lesser undead. Use fewer creatures if civilians are also active on the map.  Brann assists with civilians, warding, or ritual objectives rather than functioning as a DMPC damage engine."
+										"{@b Finite undead roster:} 1 {@creature Wraith|XMM}, 2 Wights, 4 Ghouls, and 2 Specters.",
+										"{@b Memorial Walk:} 2 Ghouls + 1 Specter and 3 civilian clusters.",
+										"{@b Broken Mausoleum:} 2 Ghouls + 1 Specter.",
+										"{@b Necromantic Focus:} 1 Wraith + 2 Wights.",
+										"{@b Tyren probe:} if used, PC Wisdom save DC is {@dc 14}; Brann is immune."
 									]
 								},
 								{
 									"type": "entries",
 									"name": "Rewards and Treasure",
 									"entries": [
-										"Keep grave goods restrained. Award one meaningful religious or memorial item, 2 consumables, and civic/temple favor rather than a large tomb hoard."
+										"The temple/cemetery fund pays {@b 400 gp total}.",
+										"Brann also provides 1 {@item Potion of Heroism|XDMG} and 2 {@item Potion of Greater Healing|XDMG|Potions of Greater Healing} from emergency stores.",
+										"The larger reward is temple/civic favor and the public evidence of Brann's immunity."
 									]
 								},
 								{
 									"type": "entries",
-									"name": "Stat Block Setup",
+									"name": "Encounter Builder Presets",
 									"entries": [
 										{
 											"type": "table",
 											"colLabels": [
-												"Role",
-												"5etools lookup / setup"
+												"Scene",
+												"Creatures"
 											],
 											"rows": [
 												[
-													"Fast undead pressure",
-													"{@creature Ghoul|XMM}"
+													"Memorial Walk",
+													"2 Ghouls + 1 Specter"
 												],
 												[
-													"Intelligent dead",
-													"{@creature Wight|XMM}"
+													"Broken Mausoleum",
+													"2 Ghouls + 1 Specter"
 												],
 												[
-													"Haunting",
-													"{@creature Specter|XMM}"
-												],
-												[
-													"Chapter controller",
-													"{@creature Wraith|XMM}"
-												],
-												[
-													"Mass background dead",
-													"{@creature Zombie|XMM}"
-												],
-												[
-													"Bishop Brann",
-													"{@creature Priest|XMM} + Anchored Immunity overlay"
+													"Necromantic Focus",
+													"1 Wraith + 2 Wights"
 												]
 											]
 										}
@@ -5660,9 +5680,10 @@
 							"type": "entries",
 							"name": "1. Memorial Walk",
 							"entries": [
-								"Begin among ordinary mourners, workers, and families. The cemetery should feel like a place people still need, not an abandoned dungeon.",
-								"An undead attack interrupts a burial or reinterment.",
-								"Use {@b Ghouls}, {@b Wights}, {@b Specters}, or another level-appropriate undead mix. Keep civilians as rescue objectives rather than combatants."
+								"Begin with an ordinary burial or reinterment involving 3 civilian clusters: mourners near the grave, workers by the path, and a family near the memorial wall.",
+								"The first outbreak is 2 Ghouls + 1 Specter. The undead are trying to reach living people, not hold an arena.",
+								"At initiative count 20, one unprotected civilian cluster is forced to move or scatter toward danger. A character adjacent to a cluster can use an action to guide it behind cover/safety automatically; a sensible spell or plan can protect more than one.",
+								"Brann focuses on keeping civilians alive and opening a safe route. He does not take over the party's combat."
 							]
 						},
 						{
@@ -5671,7 +5692,8 @@
 							"entries": [
 								"The disturbance traces to old underground burial chambers.",
 								"Clues point toward a cracked ritual focus and grave robbers who disturbed material they did not understand.",
-								"The robbers may still be alive and terrified. They are criminals, not Tyren agents."
+								"The robbers may still be alive and terrified. They are criminals, not Tyren agents.",
+								"{@b Encounter.} 2 Ghouls + 1 Specter are drawn to the cracked ritual material. Terrified grave robbers, if encountered, surrender immediately and can explain what they disturbed."
 							]
 						},
 						{
@@ -5680,7 +5702,7 @@
 							"entries": [
 								"During the investigation, Tyren takes advantage of the party being together and attempts a brief psychic pressure from afar.",
 								"This is not the cause of the undead. It is Tyren probing the people who survived Paden.",
-								"Call for a Wisdom save from the PCs only if the moment will add tension rather than interrupt a delicate roleplay scene.",
+								"If the moment adds tension, call for a {@dc 14} Wisdom save from each PC. On a failure, use the established one-turn Command ceiling.",
 								"On a failure, use the established one-turn Command ceiling.",
 								"Brann is unaffected.",
 								"If a character watches Brann during the pulse, there is no blankness, hesitation, or struggle. He notices the pressure but it does not move him."
@@ -5703,18 +5725,20 @@
 							"type": "entries",
 							"name": "5. Necromantic Focus",
 							"entries": [
-								"The final chamber contains the independent source of the undead crisis.",
-								"Use one major undead controller and environmental hazards rather than waves of low-level undead.",
-								"Possible encounter:",
-								{
-									"type": "list",
-									"items": [
-										"1 {@creature Wight|XMM} or stronger tier-appropriate undead controller;",
-										"2–4 {@b Specters/Ghouls};",
-										"one ritual hazard that can be disabled with Religion, Arcana, radiant damage, or physical destruction."
-									]
-								},
-								"The party can win by defeating the controller, destroying the focus, completing the proper rite, or combining those approaches."
+								"The final chamber contains 3 cracked funerary anchors feeding the undead focus.",
+								"{@b Disabling an anchor.} A character adjacent to an anchor can use an action and succeed on a {@dc 15} Religion or Arcana check, deal at least 15 radiant damage to it, or physically destroy it (AC 15, 15 HP, immune to poison and psychic). An obviously appropriate rite/tool solution can work without a roll.",
+								"{@b Focus pulse.} At initiative count 20, if at least one anchor remains, one marked 10-foot area erupts with necrotic energy. Creatures there make a {@dc 15} Constitution save, taking 2d6 necrotic damage on a failure or half on a success. Each disabled anchor removes one possible pulse zone; with all three disabled, the focus stops pulsing.",
+								"{@b Encounter.} 1 Wraith + 2 Wights. The party can defeat them normally or weaken the battlefield by disabling anchors while fighting.",
+								"Destroying or properly ending all three anchors permanently stops the independent undead outbreak."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Resting and World Movement",
+							"entries": [
+								"Brann can consecrate the Memorial Walk as a safe staging area after the first attack. The party can take a Short Rest there.",
+								"During that hour, any undead not yet encountered move closer to the Necromantic Focus rather than waiting in their original rooms. This can concentrate the remaining danger but does not create new undead.",
+								"If the party leaves the cemetery entirely before ending the focus, Brann keeps civilians away and closes the grounds; the undead problem continues but does not reset."
 							]
 						},
 						{
@@ -5723,7 +5747,8 @@
 							"entries": [
 								"Bellweather holds public funerals and reburials after the crisis.",
 								"Brann’s standing rises because he helped ordinary people through a genuine civic emergency without demanding more authority for himself.",
-								"That contrast matters when Perrin later argues that power should concentrate in the hands of whoever can use it effectively."
+								"That contrast matters when Perrin later argues that power should concentrate in the hands of whoever can use it effectively.",
+								"After the focus is ended, the cemetery closes briefly for reburial/repairs and then returns to normal civic use. It does not become another Tyren-linked garrison or recurring dungeon."
 							]
 						},
 						{
@@ -5867,50 +5892,48 @@
 								{
 									"type": "quote",
 									"entries": [
-										"Maren Isle is a high-magic expedition with two jobs: end the independent contamination problem and recover the research that proves Tyren is an imprisoned ancient emerald dragon.  Use 2–3 encounters from {@creature Water Weird|XMM}, {@creature Giant Crocodile|XMM}, {@b Elemental}, {@creature Invisible Stalker|XMM}, {@creature Helmed Horror|XMM}, {@creature Gargoyle|XMM}, and one spellcaster such as {@creature Mage|XMM}.  {@b Recommended laboratory climax:} 1 {@creature Mage|XMM} + 2 {@b Helmed Horrors} or 1 {@creature Mage|XMM} + 1 {@creature Invisible Stalker|XMM}, adjusted for current resources."
+										"{@b Finite hostile/guardian roster:} 2 {@creature Water Weird|XMM|Water Weirds}, 2 Gargoyles, 2 {@creature Helmed Horror|XMM|Helmed Horrors}, and the arcanist using a {@creature Mage|XMM} stat block only if combat occurs.",
+										"{@b River approach:} 2 Water Weirds if the party crosses the contaminated intake channel; air/alternate approaches can bypass them.",
+										"{@b Landing defenses:} 2 Gargoyles.",
+										"{@b Pollution system:} 2 Helmed Horrors.",
+										"{@b Laboratory:} arcanist alone unless surviving guardians reach the room; the arcanist prefers bargaining/repair to dying for the experiment."
 									]
 								},
 								{
 									"type": "entries",
 									"name": "Rewards and Treasure",
 									"entries": [
-										"The major rewards are the Varen research, the {@item Ring of Mind Shielding}, 2 useful consumables, and one rare utility item if the party's treasure curve needs it."
+										"The fixed major reward is 1 {@item Ring of Mind Shielding|XDMG}.",
+										"The laboratory also contains 2 {@item Potion of Greater Healing|XDMG|Potions of Greater Healing} and {@b 600 gp} in saleable arcane reagents/components after contaminated materials are excluded.",
+										"The Varen containment volume is story evidence, not saleable treasure."
 									]
 								},
 								{
 									"type": "entries",
-									"name": "Stat Block Setup",
+									"name": "Encounter Builder Presets",
 									"entries": [
 										{
 											"type": "table",
 											"colLabels": [
-												"Role",
-												"5etools lookup / setup"
+												"Scene",
+												"Creatures"
 											],
 											"rows": [
 												[
-													"Water guardian",
-													"{@creature Water Weird|XMM}"
+													"Contaminated intake, if crossed",
+													"2 Water Weirds"
 												],
 												[
-													"Large aquatic threat",
-													"{@creature Giant Crocodile|XMM}"
+													"Landing defenses",
+													"2 Gargoyles"
 												],
 												[
-													"Magical guardian",
-													"{@creature Helmed Horror|XMM} / {@creature Gargoyle|XMM}"
+													"Pollution system",
+													"2 Helmed Horrors"
 												],
 												[
-													"Invisible hunter",
-													"{@creature Invisible Stalker|XMM}"
-												],
-												[
-													"Research arcanist",
-													"{@creature Mage|XMM}"
-												],
-												[
-													"Elemental system defense",
-													"appropriate {@b Elemental}"
+													"Arcanist, only if negotiation fails",
+													"1 Mage"
 												]
 											]
 										}
@@ -5959,37 +5982,33 @@
 							"type": "entries",
 							"name": "2. Island Defenses",
 							"entries": [
-								"The island uses magical guardians and engineered defenses rather than an army.",
-								"Appropriate opponents include:",
-								{
-									"type": "list",
-									"items": [
-										"{@b Gargoyles};",
-										"{@b Helmed Horrors};",
-										"{@creature Invisible Stalker|XMM};",
-										"elementals;",
-										"a {@creature Mage|XMM} or other official spellcaster stat block for the arcanist if combat occurs."
-									]
-								},
-								"The party can negotiate if they reach the arcanist before destroying the laboratory."
+								"The island has a finite defensive system rather than a monster menu.",
+								"{@b Landing:} 2 Gargoyles animate when an unauthorized creature reaches the primary landing/pyramid approach.",
+								"{@b Pollution room:} 2 Helmed Horrors defend the pumping controls and follow the arcanist's last standing order.",
+								"If the landing alarm sounds, the arcanist secures the Varen volume and orders the Helmed Horrors to guard the pollution controls. No extra guardians appear.",
+								"The party can negotiate once it reaches the arcanist; destroying the laboratory is never required."
 							]
 						},
 						{
 							"type": "entries",
 							"name": "3. The Pollution System",
 							"entries": [
-								"The contamination comes from a damaged or overdriven magical pumping system.",
-								"Run this as an objective problem:",
-								{
-									"type": "list",
-									"items": [
-										"shut down three feed valves;",
-										"redirect a magical conduit;",
-										"stabilize a cracked reservoir;",
-										"prevent defenders from reactivating the system."
-									]
-								},
-								"Success cleans the river over the following days."
+								"The contamination comes from three linked failures. All three must be shut down or stabilized.",
+								"{@b Feed Valve A — jammed wheel.} A character can spend an action and succeed on a {@dc 15} Strength (Athletics) check to force it closed. Appropriate leverage/tools used with time close it automatically.",
+								"{@b Feed Valve B — arcane conduit.} A character can spend an action and succeed on a {@dc 15} Arcana check, cast {@spell Dispel Magic}, or physically break the exposed conduit (AC 16, 20 HP, immune to poison and psychic).",
+								"{@b Reservoir C — cracked support.} A character can stabilize it with an action and a {@dc 15} Investigation check using appropriate tools/materials, or spend two actions bracing it manually with available workshop equipment. An obviously effective spell can solve it directly.",
+								"{@b System pulse.} At initiative count 20 while any two or more failures remain active, one marked line/zone vents contaminated force. Creatures there make a {@dc 15} Dexterity save, taking 2d6 acid or poison damage (choose whichever matches the map description) on a failure or half on a success.",
+								"{@b Encounter.} 2 Helmed Horrors defend the controls. The party can shut down systems while fighting.",
+								"Once all three failures are resolved, no further pollution enters the river; existing contamination clears over the following days."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "The Arcanist’s Starting State",
+							"entries": [
+								"The arcanist wants to save the experiment, preserve the research, and avoid being dragged back to Bellweather in chains. The arcanist does not want civilians poisoned and initially minimizes how severe the contamination is.",
+								"The arcanist knows the pumping system, the stolen Varen text, the Ring of Mind Shielding research, and that something contacted the laboratory telepathically. The arcanist does not know Perrin's bargain or Tyren's political network.",
+								"If the party demonstrates the contamination clearly or shuts down part of the system without destroying the research, the arcanist will bargain and help finish the shutdown. If attacked first, use the Mage stat block and have the arcanist surrender or flee once the guardians are gone and defeat is obvious."
 							]
 						},
 						{
@@ -6061,6 +6080,15 @@
 								"He can possess or dominate people temporarily.",
 								"He cannot permanently transfer himself into a new host while the Cage holds.",
 								"Perrin’s bargain did not release Tyren. It created a legal-sized crack in a prison designed to stop force."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Resting, Alarm, and Site Aftermath",
+							"entries": [
+								"A Short Rest before the pollution system is shut down gives the arcanist an hour to secure portable research, move the Varen volume into a locked laboratory cabinet, and fully alert the Helmed Horrors. The contamination also continues for that hour.",
+								"A Short Rest after the pollution system is shut down is safe if the arcanist has surrendered, agreed to cooperate, fled, or been defeated.",
+								"Afterward, Bellweather's healers/surveyors monitor the river and the island laboratory is either placed under supervision, abandoned, or left to a cooperating arcanist according to the party's outcome. The crisis does not require the party to occupy the island."
 							]
 						},
 						{
