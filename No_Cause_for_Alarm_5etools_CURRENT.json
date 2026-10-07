@@ -6,17 +6,17 @@
 				"json": "NCFA",
 				"abbreviation": "NCFA",
 				"full": "No Cause for Alarm: Ruins of Bellweather",
-				"version": "4.20",
+				"version": "4.21",
 				"authors": [
 					"No Cause for Alarm Campaign"
 				],
-				"dateLastModified": 1791346500
+				"dateLastModified": 1791346800
 			}
 		],
 		"edition": "one",
 		"dateAdded": 1789528955,
-		"dateLastModified": 1791346500,
-		"_dateLastModifiedHash": "6ac5c74420"
+		"dateLastModified": 1791346800,
+		"_dateLastModifiedHash": "6ac5c87021"
 	},
 	"adventure": [
 		{
@@ -1886,7 +1886,7 @@
 					"name": "Chapter 5: Delving into Kellan's Well",
 					"id": "005",
 					"entries": [
-						"{@b Recommended level:} 4–5.",
+						"{@b Recommended level:} 4.",
 						{
 							"type": "entries",
 							"name": "Maps",
@@ -1989,7 +1989,7 @@
 							"name": "Chapter Overview",
 							"entries": [
 								"{@b Chapter purpose.} Secure Kellan’s Well, discover why rival groups are cooperating, and expose the supply network supporting that cooperation.",
-								"{@b Recommended level.} 4–5.",
+								"{@b Recommended level.} 4.",
 								"{@b Hook.} The Council has observed armed crews that should be rivals using the same patrol routes and signals around Kellan’s Well. The characters have already accepted the assignment before this chapter begins.",
 								"{@b Lead-in.} Begin the morning after Blackstone Temple, after the characters have rested at Ledger House. The job does not depend on the Iron Covenant ledger or any other recovered Blackstone object.",
 								"{@b Leads onward.} Evidence inside the well identifies Koven House as a supply and payment center for the coalition, making it the next logical target."
