@@ -10,13 +10,13 @@
 				"authors": [
 					"No Cause for Alarm Campaign"
 				],
-				"dateLastModified": 1791342000
+				"dateLastModified": 1791340800
 			}
 		],
 		"edition": "one",
 		"dateAdded": 1791271800,
-		"dateLastModified": 1791342000,
-		"_dateLastModifiedHash": "d43a31594b"
+		"dateLastModified": 1791340800,
+		"_dateLastModifiedHash": "f9e09c81da"
 	},
 	"adventure": [
 		{
@@ -46,7 +46,8 @@
 						"“No Cause for Alarm” Motif",
 						"Campaign Progression",
 						"One-Hour Post-Session Prep Standard",
-						"Running Bellweather Between Adventures"
+						"Running Bellweather Between Adventures",
+						"One-Hour Next-Session Standard"
 					]
 				},
 				{
@@ -130,6 +131,7 @@
 						"4. Prison and Blackmail Rooms",
 						"5. Ledger Room",
 						"6. Covenant Factor",
+						"Alarm, Rest, and Withdrawal",
 						"7. Command Cache",
 						"Treasure",
 						"Resting, Alarm, and Time",
@@ -153,6 +155,7 @@
 						"4. Old Chapel",
 						"5. Command Stone",
 						"6. Record-Burning Strike Team",
+						"Resting and Time Pressure",
 						"No Cause for Alarm Historical Beat",
 						"Resting and Time",
 						"Consequences",
@@ -173,6 +176,7 @@
 						"3. Worker Quarters",
 						"4. Family Archive",
 						"5. Hidden Cardon Reserve",
+						"Resting and Site Response",
 						"The Ownership Decision",
 						"Resting, Alert, and Aftermath",
 						"Bellweather Changes",
@@ -195,9 +199,11 @@
 						"5. Property Archives",
 						"6. The Missing Volume",
 						"Resting, Time, and Archive Aftermath",
+						"Resting and Time Pressure",
 						"Perrin’s Reaction",
 						"Custody Decision",
 						"Pepper: Mission 5 Complete",
+						"Library Aftermath",
 						"Milestone"
 					]
 				},
@@ -1303,6 +1309,25 @@
 									]
 								},
 								"Brakkus is not a quest dispenser and should not know hidden villain plans. He notices people, patterns, and changes in the city."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "One-Hour Next-Session Standard",
+							"entries": [
+								"Every mandatory adventure after Kellan’s Well should already be complete enough that post-session preparation for the next session takes no more than about one hour.",
+								"That hour is for adapting to actual play, not designing the adventure from scratch.",
+								{
+									"type": "list",
+									"items": [
+										"0–10 minutes: record actual-play canon—who survived, escaped, surrendered, what clues were found, what resources were spent, and which NPC attitudes changed.",
+										"10–20 minutes: advance the world—factions move, consequences appear, construction/politics/crime continue, and unresolved enemies react.",
+										"20–45 minutes: adapt the next session—move existing enemies, update NPC knowledge, adjust likely approaches, confirm DCs, fail-forward, rest/alarm behavior, and exact rewards.",
+										"45–55 minutes: rebalance only what actual play changed, using the current party rather than generic CR assumptions.",
+										"55–60 minutes: update and validate the CURRENT JSON and perform a quick 10–15 second lookup audit."
+									]
+								},
+								"If a mandatory adventure still requires basic decisions such as how many enemies are present, what a called-for check DC is, what a trap does, or what the reward is, that adventure is not yet sufficiently prepared."
 							]
 						}
 					]
@@ -3248,11 +3273,11 @@
 										],
 										[
 											"{@b Fail forward}",
-											"Essential ledgers survive in at least one cache. Failed stealth changes enemy positioning rather than deleting the story."
+											"The Koven House lead has already paid off; the question here is how much evidence and how many witnesses survive. At least one ledger cache, the prisoner testimony, and the command cache provide redundant proof."
 										],
 										[
 											"{@b Pepper consequence}",
-											"Mission 2 of 5. Paid normally if completed."
+											"Mission 2 of 5. All four PCs are paid 75 gp each on completion."
 										],
 										[
 											"{@b Story revelation}",
@@ -3270,22 +3295,22 @@
 								{
 									"type": "quote",
 									"entries": [
-										"{@b Finite whole-site roster:} 1 {@creature Bandit Captain|XMM} Covenant Factor, 4 Spies, 4 Thugs, and 2 Scouts. Room descriptions never create additional defenders.",
-										"{@b Outer yard:} 2 Scouts.",
-										"{@b Service-corridor team:} 1 Spy + 2 Thugs.",
-										"{@b Prison/blackmail team:} 1 Spy + 2 Thugs.",
-										"{@b Ledger room:} 1 Spy.",
-										"{@b Command room:} Covenant Factor + 1 Spy.",
-										"{@b Morale:} defenders withdraw through secret routes, bargain, or surrender once the Factor falls or the ledgers are clearly lost."
+										"{@b Finite whole-site roster:} 1 {@creature Bandit Captain|XMM} Covenant Factor, 4 Spies, 4 Thugs, and 2 Scouts. No room creates extra defenders.",
+										"{@b Outer Yard:} 1 Scout + 1 Thug.",
+										"{@b Auxiliary Buildings:} 1 Spy + 1 Scout.",
+										"{@b Service Corridors:} 1 Spy + 1 Thug.",
+										"{@b Command Room:} Covenant Factor + 2 Spies + 2 Thugs.",
+										"{@b Morale:} ordinary defenders flee or surrender when their route out is cut off, the Factor falls, or the ledgers are already lost."
 									]
 								},
 								{
 									"type": "entries",
 									"name": "Rewards and Treasure",
 									"entries": [
-										"Portable criminal wealth totals {@b 1,500 gp}: 900 gp is identifiable stolen property and 600 gp is untraceable Covenant reserve.",
-										"The command cache also contains one {@item Shield +1|XDMG}, 2 {@item Potion of Greater Healing|XDMG|Potions of Greater Healing}, and 1 {@item Dust of Disappearance|XDMG}.",
-										"Council mission pay is {@b 100 gp per character}. Pepper is paid normally because this is Mission 2."
+										"Council pay: {@b 75 gp per PC}, including Pepper.",
+										"Recovered portable criminal wealth totals about {@b 1,500 gp}, but most of it is identifiable stolen property. Returning it creates witnesses and goodwill rather than becoming automatic party loot.",
+										"The Council releases one unclaimed {@item Shield +1|XDMG} from the seized armory to the party after the evidence is logged.",
+										"Consumables: 1 {@item Potion of Greater Healing|XDMG} and 1 {@item Potion of Invisibility|XDMG}."
 									]
 								},
 								{
@@ -3300,24 +3325,20 @@
 											],
 											"rows": [
 												[
-													"Outer yard",
-													"2 Scouts"
+													"Outer Yard",
+													"1 Scout + 1 Thug"
 												],
 												[
-													"Service corridors",
-													"1 Spy + 2 Thugs"
+													"Auxiliary Buildings",
+													"1 Spy + 1 Scout"
 												],
 												[
-													"Prison/blackmail rooms",
-													"1 Spy + 2 Thugs"
+													"Service Corridors",
+													"1 Spy + 1 Thug"
 												],
 												[
-													"Ledger room",
-													"1 Spy"
-												],
-												[
-													"Command room",
-													"1 Bandit Captain + 1 Spy"
+													"Command Room",
+													"1 Bandit Captain + 2 Spies + 2 Thugs"
 												]
 											]
 										}
@@ -3351,10 +3372,9 @@
 							"type": "entries",
 							"name": "Table-Ready Opposition",
 							"entries": [
-								"Use the finite roster above. Defenders begin in their assigned areas and do not teleport into a single initiative when an alarm sounds.",
-								"A Scout who detects the party tries to warn the service-corridor team. The service team then bars one route and sends the Spy toward the Ledger Room. The prison team protects prisoners/blackmail material rather than abandoning the room to reinforce.",
-								"If the command room is alerted, the Factor locks the best ledger copy in the command cache and prepares the service-tunnel escape.",
-								"If the party enters quietly, each group can be isolated. If the party makes noise, later groups begin ready but remain in their assigned jobs."
+								"Use the finite roster above. Defenders know the house, use doors and concealed routes, and prioritize records and escape over dying in place.",
+								"Defenders from a bypassed area stay where they are until an alarm or clear reason makes them move. They do not teleport into later encounters.",
+								"On an alarm, the two nearest non-command defenders move toward the disturbance while the remaining outer defenders secure exits. The command-room force stays with the Factor and the evidence unless the party forces a different response."
 							]
 						},
 						{
@@ -3411,7 +3431,9 @@
 							"entries": [
 								"The mansion exterior looks better maintained than surrounding ruins. Someone has money, workers, and reasons to preserve it.",
 								"Characters watching for an hour see couriers arrive separately and leave by different routes. The couriers wear no common uniform.",
-								"One detail is shared: every courier touches a black iron-nail cross fixed beneath the gate lintel before being admitted."
+								"One detail is shared: every courier touches a black iron-nail cross fixed beneath the gate lintel before being admitted.",
+								"{@b Deployment.} 1 Scout watches the gate/roofline while 1 Thug controls access. If bypassed quietly, they remain outside.",
+								"{@b Observation.} Ten minutes of watching reveals courier timing automatically. A {@dc 13} Insight, Investigation, or Perception check after one minute reveals that couriers use separate routes but the same admission ritual."
 							]
 						},
 						{
@@ -3419,7 +3441,8 @@
 							"name": "2. Auxiliary Buildings",
 							"entries": [
 								"Use these for surveillance, a hidden service entrance, or a neutral creature/squatter that has learned to avoid the Covenant.",
-								"If using the existing quickling encounter seed, keep the quickling {@b unnamed and nonrecurring}. Respectful characters can learn that people inside sometimes walk through the house at night “like they’re dreaming.”"
+								"If using the existing quickling encounter seed, keep the quickling {@b unnamed and nonrecurring}. Respectful characters can learn that people inside sometimes walk through the house at night “like they’re dreaming.”",
+								"{@b Deployment.} 1 Spy and 1 Scout use the auxiliary structures as a listening post and fallback point. They avoid a stand-up fight if they can warn the house or escape."
 							]
 						},
 						{
@@ -3428,7 +3451,9 @@
 							"entries": [
 								"The Iron Covenant uses concealed corridors to move between rooms, attack from advantage, and retreat.",
 								"A character who captures a map, spends ten minutes searching a known section, or follows a withdrawing defender can discover a route without needing a single pass/fail roll.",
-								"The first important cache contains duplicates of Kellan’s shift schedules and the same color coding."
+								"The first important cache contains duplicates of Kellan’s shift schedules and the same color coding.",
+								"{@b Deployment.} 1 Spy and 1 Thug patrol the service routes. If surprised or cut off, they retreat toward the nearest exit rather than the command room.",
+								"A character who searches a known wall or follows a withdrawing defender finds the concealed route automatically. A {@dc 14} Investigation check finds one quickly when the party only knows that a concealed route exists."
 							]
 						},
 						{
@@ -3438,7 +3463,9 @@
 								"The Covenant keeps debtors, informants, and blackmail targets here. Most prisoners know only ordinary criminal information.",
 								"One prisoner reports something useful: the Covenant Factor recently punished a lieutenant for issuing an order the Factor swore he never gave. Three witnesses heard the Factor’s voice give the instruction.",
 								"The Factor blamed impersonation.",
-								"This is the first evidence that the impossible coordination may involve more than couriers and paperwork."
+								"This is the first evidence that the impossible coordination may involve more than couriers and paperwork.",
+								"There are {@b four prisoners}: two debtors, one blackmail target, and one former Covenant courier. None are combatants.",
+								"If freed and given a reasonable chance to leave safely, the former courier provides the unauthorized-order testimony without a check. Social checks only affect willingness to testify publicly later."
 							]
 						},
 						{
@@ -3458,13 +3485,16 @@
 									]
 								},
 								"That unknown code appears only on instructions that produced no obvious profit: moving people to particular buildings, changing patrol routes, gathering crowds, or keeping specific streets busy at specific times.",
-								"These are Tyren’s experiments."
+								"These are Tyren’s experiments.",
+								"{@b Evidence redundancy.} If this room is burned or stripped, a duplicate payment ledger remains in the Command Cache and the former courier can still establish the unauthorized-order problem."
 							]
 						},
 						{
 							"type": "entries",
 							"name": "6. Covenant Factor",
 							"entries": [
+								"The command-room force is exactly the Covenant Factor, 2 Spies, and 2 Thugs.",
+								"The Factor begins beside the main ledger case. One Spy is responsible for moving the command cache; the other covers the escape route. The Thugs hold the doorway or nearest choke point.",
 								"The Factor uses a {@creature Bandit Captain|XMM} stat block and has 2 {@b Spies} nearby if the party reaches the command room before breaking the house response.",
 								{
 									"type": "entries",
@@ -3492,6 +3522,17 @@
 						},
 						{
 							"type": "entries",
+							"name": "Alarm, Rest, and Withdrawal",
+							"entries": [
+								"The party can take a Short Rest inside Koven House, but the organization continues moving during the hour.",
+								"If the house is not yet alerted, missed rotations and absent lookouts eventually expose the intrusion. By the end of the rest, the Factor has the command room prepared and portable evidence packed.",
+								"If the house is already alerted, the Factor moves the duplicate ledger into the Command Cache, orders obvious incriminating papers burned, and sends any bypassed outer defenders to secure exits rather than pile into one room.",
+								"A Short Rest therefore restores the party but increases defender preparation and reduces the amount of easy evidence.",
+								"If the party withdraws entirely, the Covenant begins evacuating the headquarters. Returning later is still possible, but the Factor may be gone and the party will rely more heavily on the fixed ledgers, prisoners, and property records."
+							]
+						},
+						{
+							"type": "entries",
 							"name": "7. Command Cache",
 							"entries": [
 								"A hidden command cache contains the best evidence and one disturbing object: a page where several different hands have copied the same sentence in nearly identical wording.",
@@ -3502,16 +3543,17 @@
 									]
 								},
 								"None of the writers remember being told to write it.",
-								"Present this as contradictory testimony and impossible command behavior; the player-facing description does not identify it as mind control."
+								"Present this as contradictory testimony and impossible command behavior; the player-facing description does not identify it as mind control.",
+								"The cache is fire-resistant and deliberately separate from the Ledger Room. Even if the main ledgers are destroyed, it preserves one payment ledger, the unknown authorization code, and enough routing information to prove centralized Covenant coordination."
 							]
 						},
 						{
 							"type": "entries",
 							"name": "Treasure",
 							"entries": [
-								"Portable criminal wealth totals {@b 1,500 gp}: 900 gp is identifiable stolen property and 600 gp is untraceable Covenant reserve.",
-								"The command cache contains 1 {@item Shield +1|XDMG}, 2 {@item Potion of Greater Healing|XDMG|Potions of Greater Healing}, and 1 {@item Dust of Disappearance|XDMG}.",
-								"Returning the 900 gp in identifiable property improves the party's standing with victims and merchants; the 600 gp reserve is legitimate recovered criminal proceeds unless the Council claims it under local law."
+								"The house contains about {@b 1,500 gp} in portable criminal wealth, most of it identifiable as stolen property.",
+								"Council pay is {@b 75 gp per PC}.",
+								"The party receives one {@item Shield +1|XDMG}, 1 {@item Potion of Greater Healing|XDMG}, and 1 {@item Potion of Invisibility|XDMG} after the seizure is documented."
 							]
 						},
 						{
@@ -3564,6 +3606,8 @@
 							"type": "entries",
 							"name": "Resolution",
 							"entries": [
+								"Koven House is operationally broken when the Factor can no longer coordinate the site and the party secures at least one surviving evidence source.",
+								"Within hours, Wern seals the main entrances and posts a small Council detail while clerks inventory property and victims identify stolen goods. Surviving Covenant members disperse rather than immediately forming a replacement headquarters.",
 								"Koven House is broken when the Factor is captured, killed, driven out, or loses the ability to coordinate the Covenant cell and the party secures the ledgers.",
 								"The Iron Covenant survives as an organization unless the party takes extraordinary steps. What breaks here is its central Bellweather headquarters and the political usefulness of this particular network.",
 								{
@@ -3584,7 +3628,8 @@
 							"name": "Pepper: Mission 2 Complete",
 							"entries": [
 								"If Pepper completes the authorized mission and returns to Ledger House, mark {@b Mission 2 of 5 complete}. She is paid normally from this point forward.",
-								"Lessa and Kav may verify the recovered property routes or assist the Council in documenting the house. They do not become investigators of Caleb’s death; that matter is already known and adjudicated."
+								"Lessa and Kav may verify the recovered property routes or assist the Council in documenting the house. They do not become investigators of Caleb’s death; that matter is already known and adjudicated.",
+								"Mission pay is {@b 75 gp for each of the four PCs}."
 							]
 						},
 						{
@@ -3710,11 +3755,11 @@
 										],
 										[
 											"{@b Fail forward}",
-											"Historical clues have redundant sources. Missing one clue changes context, not whether the party can continue."
+											"The historical truth exists in the diary, chapel witness, command-stone report, and civic circular. Losing one source reduces context; it cannot erase the Tyren/Unturned discovery."
 										],
 										[
 											"{@b Pepper consequence}",
-											"Mission 3 of 5. Paid normally."
+											"Mission 3 of 5. All four PCs receive 75 gp each."
 										],
 										[
 											"{@b Story revelation}",
@@ -3732,21 +3777,22 @@
 								{
 									"type": "quote",
 									"entries": [
-										"{@b Finite old-defense roster:} 1 {@creature Wight|XMM}, 4 Skeletons, 4 Zombies, 2 Specters, and 1 {@creature Gray Ooze|XMM}. Passwords, the defender oath, or respectful interaction can bypass some of these encounters.",
-										"{@b Shore and gate:} 2 Skeletons + 2 Zombies.",
-										"{@b Courtyard:} 2 Skeletons + 2 Zombies.",
-										"{@b Old chapel:} 2 Specters; they can be calmed or questioned rather than automatically fought.",
-										"{@b Command stone:} 1 Wight.",
-										"{@b Archive hazard:} 1 Gray Ooze.",
-										"{@b Record-burning strike team:} 1 {@creature Veteran|XMM}, 2 Bugbears, and 4 Guards."
+										"{@b Finite old-defender roster:} 4 Skeletons, 4 Zombies, 2 Specters, and 1 Wight.",
+										"{@b Shore and Gate:} 2 Skeletons + 2 Zombies.",
+										"{@b Courtyard:} 2 Zombies + 1 Specter.",
+										"{@b Barracks Archive:} 2 Skeletons.",
+										"{@b Old Chapel:} 1 Specter, which can become a witness instead of a combatant.",
+										"{@b Command Stone:} 1 Wight, the last command element.",
+										"{@b Record-burning strike team:} 1 Veteran, 2 Bugbears, 2 Guards, and 2 Scouts. This team is separate from the old defenders and does not gain extra members."
 									]
 								},
 								{
 									"type": "entries",
 									"name": "Rewards and Treasure",
 									"entries": [
-										"The keep yields {@b 500 gp} in recoverable ceremonial/salvage value, 1 {@item Potion of Heroism|XDMG}, and 1 {@item Longsword +1|XDMG}.",
-										"Council mission pay is {@b 100 gp per character}; Pepper receives normal pay for Mission 3."
+										"Council pay: {@b 75 gp per PC}.",
+										"Recovered salvage and ceremonial equipment worth {@b 500 gp}.",
+										"Magic rewards: 1 {@item Potion of Heroism|XDMG} and 1 {@item Shield +1|XDMG}."
 									]
 								},
 								{
@@ -3761,28 +3807,28 @@
 											],
 											"rows": [
 												[
-													"Shore/gate",
+													"Shore and Gate",
 													"2 Skeletons + 2 Zombies"
 												],
 												[
 													"Courtyard",
-													"2 Skeletons + 2 Zombies"
+													"2 Zombies + 1 Specter"
 												],
 												[
-													"Chapel if diplomacy fails",
-													"2 Specters"
+													"Barracks Archive",
+													"2 Skeletons"
 												],
 												[
-													"Command stone",
+													"Old Chapel",
+													"1 Specter, usually social if approached respectfully"
+												],
+												[
+													"Command Stone",
 													"1 Wight"
 												],
 												[
-													"Archive hazard",
-													"1 Gray Ooze"
-												],
-												[
 													"Record-burning strike team",
-													"1 Veteran + 2 Bugbears + 4 Guards"
+													"1 Veteran + 2 Bugbears + 2 Guards + 2 Scouts"
 												]
 											]
 										}
@@ -3806,7 +3852,10 @@
 							"name": "The Old Defender Oath",
 							"entries": [
 								"Preserve the existing challenge-and-response/password structure. The fragments {@b Lux}, {@b Shestnik}, and {@b Samosud} remain useful old garrison terms.",
-								"Characters can find enough fragments through records, plaques, and the approach to bypass some undead guardians. The passwords are advantages, not gates that can stall the adventure."
+								"Characters can find enough fragments through records, plaques, and the approach to bypass some undead guardians. The passwords are advantages, not gates that can stall the adventure.",
+								"Treat the three surviving fragments—{@b Lux}, {@b Shestnik}, and {@b Samosud}—as cumulative proof of authority rather than pass/fail passwords.",
+								"With one authentic fragment, old defenders hesitate and allow a brief parley before attacking. With two fragments, the party can bypass one old-defender group without combat. With all three, the Wight recognizes the party as acting under Bellweather authority and allows access to the Command Stone unless the party attacks first.",
+								"A character studying an oath plaque or surviving garrison document can recover a missing fragment with ten minutes of careful examination. A {@dc 13} History, Religion, or Investigation check finds it in one minute instead."
 							]
 						},
 						{
@@ -3816,7 +3865,8 @@
 								"Old remains near the landing include a corroded medallion and part of a watch schedule.",
 								"Recent tracks show that another small team arrived within the last two days. Their objective is not occupation; they are looking for records.",
 								"The undead defenders respond to the old password or to clear evidence that the visitors are acting under Bellweather authority.",
-								"Use {@b Skeletons}, {@b Zombies}, {@b Specters}, and one {@creature Wight|XMM} across the chapter rather than a mass battle."
+								"Use {@b Skeletons}, {@b Zombies}, {@b Specters}, and one {@creature Wight|XMM} across the chapter rather than a mass battle.",
+								"{@b Deployment.} 2 Skeletons and 2 Zombies hold the landing. They do not pursue far from the gate unless the command structure remains hostile."
 							]
 						},
 						{
@@ -3831,7 +3881,8 @@
 										"{@b “Hold until the Unturned reach the lower chamber.”}"
 									]
 								},
-								"This is the first use of the historical term. The term appears here without explanation."
+								"This is the first use of the historical term. The term appears here without explanation.",
+								"{@b Deployment.} 2 Zombies and 1 Specter patrol the courtyard. They react to the oath procedure before initiative begins."
 							]
 						},
 						{
@@ -3858,7 +3909,8 @@
 										"{@b “Three in the east barracks still hear the pressure and remain themselves. Chaplain calls them Unturned.”}"
 									]
 								},
-								"The diary never says dragon."
+								"The diary never says dragon.",
+								"{@b Deployment.} 2 Skeletons guard the archive entrance. The diary is recovered automatically once the room is secured or the defenders recognize authority."
 							]
 						},
 						{
@@ -3879,7 +3931,8 @@
 										"the survivors refused to record the full ritual in one place."
 									]
 								},
-								"The spirit points toward {@b Marren Library} as the repository that received copies of pre-fall magical research."
+								"The spirit points toward {@b Marren Library} as the repository that received copies of pre-fall magical research.",
+								"{@b Deployment.} 1 Specter manifests here. Respectful invocation of the old oath, Bellweather authority, or burial rites turns the scene into conversation; otherwise the Specter defends the chapel until bloodied, then tries to communicate."
 							]
 						},
 						{
@@ -3895,7 +3948,8 @@
 										"{@b TYREN — CONTROL EVENT. Civilian spread accelerating. Standard command compromised. Use Unturned personnel for all communication regarding Varen.}"
 									]
 								},
-								"No creature type is listed."
+								"No creature type is listed.",
+								"{@b Deployment.} 1 Wight acts as the last command element. If the party has all three oath fragments, it stands down and witnesses the release of the defenders."
 							]
 						},
 						{
@@ -3906,7 +3960,22 @@
 								"Use exactly 1 Veteran, 2 Bugbears, and 4 Guards. The Veteran and Bugbears hold the approach. Two Guards carry oil and torches toward the archive. Two Guards cover the withdrawal route.",
 								"{@b Burning records.} There are three vulnerable record bundles in the archive. A burner adjacent to a bundle can ignite it with an action. A burning bundle is lost at the end of the next round unless a character uses an action with water, a blanket, suitable magic, or another obviously effective method. An improvised uncertain method uses a {@dc 13} appropriate check.",
 								"The essential Tyren/Unturned story has redundancy: the sealed report beneath the Command Stone survives even if all three vulnerable bundles burn. Saving more bundles preserves context, names, and corroboration.",
-								"The strike team withdraws if the Veteran falls, both Bugbears fall, or the archive objective is clearly lost. They are paid professionals, not fanatics."
+								"The strike team withdraws if the Veteran falls, both Bugbears fall, or the archive objective is clearly lost. They are paid professionals, not fanatics.",
+								"{@b Trigger.} The strike team reaches the keep when the party secures the Command Stone or spends about twenty minutes inside the archive complex, whichever happens first.",
+								"{@b Starting roles.} The Veteran and 2 Bugbears screen the party. The 2 Scouts take covered firing positions. The 2 Guards carry oil and tinder to the archive.",
+								"{@b Burning records.} The archive has three document zones. A Guard adjacent to an unburned zone can use an action to ignite it. At the end of each round, an unattended burning zone spreads to one adjacent unburned zone. Water, blankets, suitable magic, or another clearly effective method extinguishes a zone automatically; improvised methods require a {@dc 13} appropriate check.",
+								"The strike team withdraws if the Veteran falls, both oil carriers are stopped, or four of the seven members are out of the fight.",
+								"Even if all three ordinary archive zones burn, the sealed report beneath the Command Stone survives, preserving the essential Tyren/Unturned lead."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Resting and Time Pressure",
+							"entries": [
+								"A Short Rest is possible, but the keep and the incoming strike team continue moving.",
+								"Before the strike team arrives, an hour of rest lets it reach the island and begin setting up at the archive route.",
+								"After the strike team is known to be present, an hour gives it enough time to ignite unprotected archive zones and withdraw with whatever portable records it can carry.",
+								"Once the strike team is defeated or driven off and the old defenders are released, the keep becomes safe enough for a normal Short Rest."
 							]
 						},
 						{
@@ -3936,6 +4005,8 @@
 							"type": "entries",
 							"name": "Consequences",
 							"entries": [
+								"If the Command Stone is released or destroyed, the bound defenders cease their old duty. Bellweather can later secure the keep without asking the party to garrison it.",
+								"Wern sends a small records-and-security detail after the expedition. If the old defenders remain active, the island is marked restricted until their duty can be resolved.",
 								"Returning with the records changes the investigation.",
 								"Ulric accepts that the coordination is not merely a modern criminal innovation.",
 								"Wern begins treating the problem as an internal-security threat and advocates stronger emergency powers, more checkpoints, and tighter command discipline. His response is severe enough to be genuinely debatable.",
@@ -3960,7 +4031,8 @@
 							"name": "Pepper: Mission 3 Complete",
 							"entries": [
 								"Completing the mission marks {@b Mission 3 of 5}.",
-								"Lessa or Kav can be present when the recovered maps and records are logged. Their attitude should reflect what Pepper has actually done during the mandatory missions rather than reset to hostility every time."
+								"Lessa or Kav can be present when the recovered maps and records are logged. Their attitude should reflect what Pepper has actually done during the mandatory missions rather than reset to hostility every time.",
+								"Mission pay is {@b 75 gp per PC}."
 							]
 						},
 						{
@@ -4086,11 +4158,11 @@
 										],
 										[
 											"{@b Fail forward}",
-											"The family and civic records are recoverable through multiple rooms and witnesses."
+											"Family deeds, civic ledgers, worker testimony, and machinery records overlap. Losing one source changes the ownership hearing, not whether the Weavehouse story can continue."
 										],
 										[
 											"{@b Pepper consequence}",
-											"Mission 4 of 5. Paid normally."
+											"Mission 4 of 5. All four PCs receive 75 gp each."
 										],
 										[
 											"{@b Story revelation}",
@@ -4108,20 +4180,20 @@
 								{
 									"type": "quote",
 									"entries": [
-										"{@b Finite armed roster:} 1 {@creature Gladiator|XMM}-style leader, 3 Veterans, 2 Scouts, and 2 Guards.",
-										"{@b Outer patrol:} 1 Veteran + 2 Scouts.",
-										"{@b Loom Hall:} Gladiator leader + 2 Veterans + 2 Guards.",
-										"{@b Worker quarters:} 8 noncombatant workers/squatters. They are not an encounter.",
-										"{@b Morale:} the armed group accepts safe withdrawal, surrender, or negotiation once the leader falls or its exit is threatened."
+										"{@b Site population:} 10 noncombatant workers/squatters and 5 armed holdouts.",
+										"{@b Armed roster:} 1 Gladiator leader, 2 Veterans, and 2 Scouts.",
+										"{@b Approach:} 1 Veteran + 1 Scout.",
+										"{@b Loom Hall:} Gladiator + 1 Veteran + 1 Scout.",
+										"{@b Morale:} the armed holdouts are protecting a payday, not a cause. They surrender or flee when the Gladiator falls or their exits remain open."
 									]
 								},
 								{
 									"type": "entries",
 									"name": "Rewards and Treasure",
 									"entries": [
-										"Council expedition pay is {@b 100 gp per character}; Pepper receives normal pay for Mission 4.",
-										"The party also recovers 2 {@item Potion of Greater Healing|XDMG|Potions of Greater Healing} and 1 {@item Boots of Striding and Springing|XDMG} from an abandoned foreman's locker.",
-										"The Cardon reserve is exactly {@b 2,400 gp equivalent} in coin, trade bars, gems, and negotiable records. It is story property subject to the ownership decision, not automatic party loot."
+										"Council pay: {@b 75 gp per PC}.",
+										"Party salvage: 1 {@item Immovable Rod|XDMG}, 1 {@item Potion of Greater Healing|XDMG}, and 1 {@item Potion of Growth|XDMG}.",
+										"The sealed Cardon reserve is exactly {@b 2,500 gp equivalent} in coin, trade bars, gems, and negotiable records. It is disputed property, not automatic party loot."
 									]
 								},
 								{
@@ -4136,12 +4208,12 @@
 											],
 											"rows": [
 												[
-													"Outer patrol",
-													"1 Veteran + 2 Scouts"
+													"Approach",
+													"1 Veteran + 1 Scout"
 												],
 												[
 													"Loom Hall",
-													"1 Gladiator + 2 Veterans + 2 Guards"
+													"1 Gladiator + 1 Veteran + 1 Scout"
 												]
 											]
 										}
@@ -4183,7 +4255,10 @@
 							"entries": [
 								"The Weavehouse is occupied by a mixed group of squatters, hired guards, and opportunists using portions of the structure.",
 								"Separate people by behavior rather than species.",
-								"Some occupants will leave if offered safe passage. Some workers claim they have maintained machinery for years and deserve a share. A small armed faction intends to sell the contents and resists negotiation."
+								"Some occupants will leave if offered safe passage. Some workers claim they have maintained machinery for years and deserve a share. A small armed faction intends to sell the contents and resists negotiation.",
+								"There are 10 noncombatant occupants in the site and 5 armed holdouts total.",
+								"{@b Deployment.} 1 Veteran and 1 Scout watch the main approach. They challenge intruders and retreat toward the Loom Hall if pressed; they do not fight to the death.",
+								"If the party offers safe passage before combat, half the noncombatants leave immediately and the remainder stay only to protect personal property or employment claims."
 							]
 						},
 						{
@@ -4195,7 +4270,12 @@
 								"{@b Suspended weights.} A character adjacent to a release can drop a weight as an action. A creature in the marked area makes a {@dc 14} Dexterity save, taking 3d6 bludgeoning damage on a failure or half on a success; the area becomes Difficult Terrain.",
 								"{@b Jammed gear train.} A creature shoved into the machinery makes a {@dc 14} Dexterity save or becomes Restrained. It or an adjacent creature can use an action to free it automatically once the mechanism is stopped; forcing it free while running requires a {@dc 14} Strength check.",
 								"{@b Dye spill.} Breaking or tipping the stored dyes creates a 15-foot slick. It is Difficult Terrain; a creature that Dashes through it makes a {@dc 13} Dexterity save or falls Prone.",
-								"{@b Encounter.} Gladiator leader + 2 Veterans + 2 Guards. They use catwalks and machinery but do not fight to the death."
+								"{@b Encounter.} Gladiator leader + 2 Veterans + 2 Guards. They use catwalks and machinery but do not fight to the death.",
+								"{@b Encounter.} Gladiator leader + 1 Veteran + 1 Scout.",
+								"{@b Broken catwalk.} A cracked section is obvious to anyone examining the floor. Crossing it quickly requires a {@dc 13} Acrobatics check; failure causes a 15-foot fall for 1d6 bludgeoning damage and Prone.",
+								"{@b Suspended weights.} A character adjacent to a release line can use an action to drop a weight into a 10-foot-square area. Creatures there make a {@dc 13} Dexterity save, taking 2d6 bludgeoning damage and falling Prone on a failure, half damage and no Prone on a success.",
+								"{@b Jammed gear train.} A creature entering the marked machinery lane must succeed on a {@dc 13} Dexterity save or become Restrained by belts/gears. An adjacent creature can free it with an action and a {@dc 13} Strength check, suitable tools, or by stopping the mechanism.",
+								"{@b Stored dyes.} Spilling a vat creates a 10-foot-square area of Difficult Terrain. If ignited, creatures entering or ending a turn there take 1d6 fire damage until the fire is suppressed."
 							]
 						},
 						{
@@ -4206,7 +4286,8 @@
 								"They know Cardon agents have already visited and offered employment if Perrin regains legal control.",
 								"Most of those offers are real.",
 								"This is one of the first visible examples of Perrin using influence for something that produces a genuinely positive result. People who were suspicious of him become enthusiastic after short private conversations.",
-								"PC saves do not occur here. The effect is on NPCs and should still look like charisma, hope, or politics."
+								"PC saves do not occur here. The effect is on NPCs and should still look like charisma, hope, or politics.",
+								"Eight of the ten noncombatants normally sleep or store belongings here; two work around the Loom Hall. If combat starts nearby, they try to leave through the safest visible exit."
 							]
 						},
 						{
@@ -4217,7 +4298,8 @@
 								"It also contains emergency ledgers showing that the Weavehouse supplied food, cloth, and shelter during the first days of the old crisis.",
 								"Perrin can point to this history as evidence that the Cardons did not merely enrich themselves; they helped hold the city together.",
 								"A separate civic ledger references transfers to Marren Library during the last week before the fall.",
-								"That is the next major historical lead."
+								"That is the next major historical lead.",
+								"The Cardon deeds and the civic transfer ledger are both recovered automatically once the archive is secured. A {@dc 14} Investigation check finds, in about one minute, the cross-reference showing the transfer to Marren Library; without the check, ten minutes of careful sorting reveals it."
 							]
 						},
 						{
@@ -4228,7 +4310,17 @@
 								"The reserve contains exactly {@b 2,400 gp equivalent} in coin, trade bars, gems, and negotiable records. It is subject to the ownership decision and is not automatic party loot.",
 								"Legally, most of it belongs to Perrin under the recognized deed unless the party or Council successfully challenges that claim.",
 								"Recovering it materially changes Perrin’s circumstances.",
-								"This is the point where the Cardon fortune stops being a nostalgic ambition and becomes real economic power."
+								"This is the point where the Cardon fortune stops being a nostalgic ambition and becomes real economic power.",
+								"An {@item Immovable Rod|XDMG} used as part of an old machinery-security system is released to the party as salvage after the site is documented."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Resting and Site Response",
+							"entries": [
+								"Before the armed holdouts are resolved, a Short Rest gives them an hour to barricade the Loom Hall, move portable valuables toward an exit, and warn any remaining lookout.",
+								"They do not gain new combatants. The same finite roster simply improves its position.",
+								"After the armed holdouts surrender or flee, the Weavehouse is safe enough for a Short Rest while workers, Council representatives, and Cardon agents begin documenting claims."
 							]
 						},
 						{
@@ -4264,6 +4356,8 @@
 							"type": "entries",
 							"name": "Bellweather Changes",
 							"entries": [
+								"Immediately after the expedition, the Council posts a property notice and keeps the machinery from being stripped while the ownership question is resolved.",
+								"The party is not expected to guard the Weavehouse. Workers and hired security take over once a legal operating arrangement exists.",
 								"Within weeks, if Perrin receives enough of the property, the Weavehouse reopens in some form.",
 								"Jobs appear.",
 								"Merchants invest.",
@@ -4286,7 +4380,8 @@
 							"type": "entries",
 							"name": "Pepper: Mission 4 Complete",
 							"entries": [
-								"Mark {@b Mission 4 of 5 complete} when the authorized objective is resolved and Pepper returns as required."
+								"Mark {@b Mission 4 of 5 complete} when the authorized objective is resolved and Pepper returns as required.",
+								"Mission pay is {@b 75 gp per PC}."
 							]
 						},
 						{
@@ -4361,11 +4456,11 @@
 										],
 										[
 											"{@b Fail forward}",
-											"Core Tyren and Radiant Cage clues survive in more than one source."
+											"The Tyren journal, Unturned file, property archive, and catalog record are physically separated. Fire, theft, or a failed ward check can cost secondary material but cannot erase the core possession/Radiant Cage revelation."
 										],
 										[
 											"{@b Pepper consequence}",
-											"Mission 5 of 5. Paid normally. Successful completion ends the mandatory mission sentence and house arrest."
+											"Mission 5 of 5. All four PCs receive 75 gp each. Completing the mission ends Pepper’s mandatory service and house arrest."
 										],
 										[
 											"{@b Story revelation}",
@@ -4383,19 +4478,19 @@
 								{
 									"type": "quote",
 									"entries": [
-										"{@b Finite hostile roster:} 1 Veteran scavenger foreman, 2 Spies, 2 Thugs, 2 Animated Armors, and 2 Flying Swords. The 2 Gargoyles in the Garden Court animate only if the central monument is disturbed.",
-										"{@b Damaged Stacks:} Veteran + 2 Spies + 2 Thugs.",
-										"{@b Warded research corridor:} 2 Animated Armors + 2 Flying Swords.",
-										"{@b Garden Court:} 2 Gargoyles only if triggered."
+										"{@b Finite hostile roster:} 2 Gargoyles at the Garden Court if disturbed, 1 Spy + 3 Thugs removing selected books in the Damaged Stacks, and 2 Animated Armors guarding the research wing.",
+										"{@b Library staff:} 3 living staff members are trapped or endangered in the Damaged Stacks.",
+										"{@b No random encounter stack:} the listed threats are the whole expected hostile population for the chapter unless actual play creates a new problem."
 									]
 								},
 								{
 									"type": "entries",
 									"name": "Rewards and Treasure",
 									"entries": [
-										"Council mission pay is {@b 100 gp per character}; this is Pepper's fifth and final required mission.",
-										"Recovered magical material includes spell scrolls of {@spell Protection from Evil and Good}, {@spell Lesser Restoration}, and {@spell Dispel Magic}, plus 1 {@item Lantern of Revealing|XDMG}.",
-										"Saleable duplicate manuscripts are worth {@b 500 gp}; unique Tyren/Radiant Cage records are more valuable as evidence than as merchandise."
+										"Council pay: {@b 75 gp per PC}.",
+										"Utility item: 1 {@item Eyes of Minute Seeing|XDMG}.",
+										"Spell scrolls: {@spell Lesser Restoration}, {@spell Locate Object}, and {@spell Protection from Evil and Good}.",
+										"Secondary manuscripts are worth up to {@b 500 gp}; each archive zone lost to fire reduces that sale value by 125 gp."
 									]
 								},
 								{
@@ -4410,16 +4505,16 @@
 											],
 											"rows": [
 												[
-													"Garden Court if monument is disturbed",
+													"Garden Court, only if monument disturbed",
 													"2 Gargoyles"
 												],
 												[
 													"Damaged Stacks",
-													"1 Veteran + 2 Spies + 2 Thugs"
+													"1 Spy + 3 Thugs"
 												],
 												[
-													"Warded research corridor",
-													"2 Animated Armors + 2 Flying Swords"
+													"Research-wing guardians",
+													"2 Animated Armors"
 												]
 											]
 										}
@@ -4452,7 +4547,7 @@
 							"name": "1. Garden Court",
 							"entries": [
 								"The overgrown court contains signs of recent passage.",
-								"Use 2 {@b Gargoyles} or another existing guardian encounter only if the party disturbs the central monument. The more important clue is a dropped satchel containing copied shelf numbers from the magical-research wing.",
+								"Exactly 2 Gargoyles animate only if the central monument is disturbed. Otherwise the court is an investigation scene.",
 								"Someone arrived first looking for the same material."
 							]
 						},
@@ -4465,7 +4560,13 @@
 								"{@b Fire clock.} Three archive sections are at risk. At initiative count 20, one uncontrolled burning section spreads to the next unburned section. A character adjacent to a burning section can extinguish it with an action using water, blankets, appropriate magic, or another obviously effective method. An uncertain improvised method uses a {@dc 13} appropriate check.",
 								"If all three sections are allowed to burn, contextual records are lost, but the essential Tyren file in the warded chamber survives. Each saved section preserves additional names, dates, and corroborating evidence.",
 								"A trapped junior archivist is behind the second threatened section. Reaching and escorting the archivist to safety takes one character's movement and action unless a spell or equally effective solution changes that.",
-								"The scavengers were paid through an anonymous Covenant-style drop and know only the shelf numbers and subjects they were told to retrieve."
+								"The scavengers were paid through an anonymous Covenant-style drop and know only the shelf numbers and subjects they were told to retrieve.",
+								"{@b Hostiles.} 1 Spy directs 3 Thugs who are removing selected volumes. Their priority is books and escape, not killing the party.",
+								"{@b Staff.} Three library staff are endangered: one pinned by a fallen shelf, one cut off by smoke, and one trapped behind the thieves near the research stair.",
+								"{@b Fire track.} Divide the damaged stacks into four archive zones. One zone is burning when the party arrives. At the end of each round, if no progress was made against the fire that round, it spreads into one adjacent unburned zone.",
+								"Three successful fire-control actions contain the fire. Water, a suitable spell, closing a fire door, or another clearly effective method counts automatically. An improvised method requires a {@dc 13} appropriate check.",
+								"Freeing the pinned staff member requires an action and either a {@dc 13} Athletics check or a clearly sufficient tool/spell. Reaching the smoke-cut-off staff member safely requires protection from the smoke, a quick route, or a {@dc 13} Survival/Investigation check to identify the safest path.",
+								"The essential Tyren journal and Unturned file are in protected rooms and cannot be destroyed by this stacks fire. Each of the four secondary zones lost reduces recoverable manuscript value by 125 gp."
 							]
 						},
 						{
@@ -4474,7 +4575,7 @@
 							"entries": [
 								"A damaged ward protects a locked desk. A {@dc 15} Intelligence (Arcana) check or {@spell Dispel Magic} suppresses it. On a failed Arcana check, the character makes a {@dc 14} Wisdom save; on a failure the character is Frightened until the end of its next turn. The desk and clue remain recoverable.",
 								"{@b Warded corridor defenders.} 2 Animated Armors and 2 Flying Swords animate when the party passes the suppressed ward toward the sealed research stacks. They stop fighting if the ward is lawfully deactivated with the librarian's recovered key phrase or if the constructs are defeated.",
-								"Use a DC 15 Intelligence (Arcana) check or {@i Dispel Magic} to suppress the ward. Failure triggers a short fear effect or environmental pulse; the clue itself is still recovered.",
+								"The ward can be suppressed with a {@dc 15} Arcana check, a {@dc 15} check using thieves’ tools after its mechanism is studied, or {@spell Dispel Magic}. On a failed check, the character makes a {@dc 14} Wisdom save or is Frightened until the end of their next turn; the desk remains accessible for another attempt.",
 								"Inside are several damaged records that finally make the supernatural problem explicit.",
 								{
 									"type": "entries",
@@ -4501,7 +4602,8 @@
 											]
 										}
 									]
-								}
+								},
+								"The 2 Animated Armors activate only if the ward is violently broken or the research wing is entered after the thieves raise an alarm. They do not appear as extra reinforcements elsewhere."
 							]
 						},
 						{
@@ -4518,7 +4620,8 @@
 									]
 								},
 								"This is the historical foundation for the anchored-mind rule.",
-								"The file never identifies which PCs qualify or why."
+								"The file never identifies which PCs qualify or why.",
+								"No check is required to identify the repeated resistance pattern once the file is read. A {@dc 14} Insight, History, or Religion check adds that the accounts describe stable identity/conviction rather than one shared spell, bloodline, or institution."
 							]
 						},
 						{
@@ -4529,7 +4632,8 @@
 								"They confirm that the Cardons were among Bellweather’s founders and that their wealth was heavily damaged during the original fall.",
 								"They also show that emergency powers transferred property, contracts, and civic obligations in ways that were never fully resolved.",
 								"Perrin is especially attentive to these records.",
-								"The party may give him originals, copies, or require public duplication first."
+								"The party may give him originals, copies, or require public duplication first.",
+								"The Cardon material is indexed. Ten minutes of review finds the major deeds automatically; a {@dc 14} Investigation check finds the unresolved emergency-transfer language in one minute."
 							]
 						},
 						{
@@ -4556,6 +4660,15 @@
 								"The party can take a Short Rest only after deciding what happens to the active fire and scavenger team. If they wait an hour while either remains unresolved, the thieves escape with their selected books and the unprotected archive sections are lost.",
 								"Once the fire is contained and the hostile team is gone, a Short Rest is safe inside the library.",
 								"After the mission, scholars and Council clerks secure the surviving archive, make duplicate copies of dangerous records, and begin stabilizing the building. The missing Varen volume remains missing by design and points onward rather than representing a failed search."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Resting and Time Pressure",
+							"entries": [
+								"A Short Rest while the stacks fire is unresolved allows the fire to consume every unprotected secondary archive zone and lets surviving thieves leave with whatever selected books they still carry.",
+								"A Short Rest after the fire is contained is possible, but surviving thieves or outside claimants continue moving; the party may return to find custody representatives already present.",
+								"No rest can erase the protected Tyren journal, Unturned file, or missing-volume catalog entry."
 							]
 						},
 						{
@@ -4609,7 +4722,18 @@
 								"Her mandatory mission obligation and Ledger House arrest end. She is no longer required to continue adventuring for the Council.",
 								"Lessa Dorn and Kav Orin can be present when the final field documentation is accepted. Their role pays off here: they were among the people who reported the original accusation, and they have now also seen Pepper complete the work imposed on her.",
 								"Reconciliation is not assumed. Their attitude depends on what Pepper actually did during the five missions.",
-								"Pepper’s later encounter with Caleb’s family is {@b not part of the sentence} and is not another punishment."
+								"Pepper’s later encounter with Caleb’s family is {@b not part of the sentence} and is not another punishment.",
+								"Mission pay is {@b 75 gp per PC}.",
+								"Once the final paperwork is accepted, Pepper is no longer under house arrest and has no compulsory Council jobs remaining."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Library Aftermath",
+							"entries": [
+								"After the expedition, scholars and Council clerks establish a guarded records room rather than leaving the party to protect the building.",
+								"If the party preserved most of the stacks, the library resumes limited public work quickly. If much of the secondary archive burned, reconstruction and copying take longer, but the core Tyren evidence still reaches the investigation.",
+								"The custody decision determines where originals and copies go; it does not require the party to remain on site."
 							]
 						},
 						{
