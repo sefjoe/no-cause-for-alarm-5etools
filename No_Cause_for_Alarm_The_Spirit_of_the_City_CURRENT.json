@@ -342,6 +342,7 @@
 						"Maps",
 						"Modern Running Sheet",
 						"Return to Controlled Bellweather",
+						"Breaking Controlled Bellweather",
 						"Table-Ready Finale",
 						"The Situation",
 						"Why the Dragon Fight Is Guaranteed",
@@ -7295,9 +7296,55 @@
 							"type": "entries",
 							"name": "Return to Controlled Bellweather",
 							"entries": [
-								"The party returns from Zennar at {@b level 15}. Bellweather is safer and more efficient, but visibly less voluntary.",
-								"Run this as a city-scale problem rather than a street-by-street clear. The party can expose Perrin's order, rally allies, sever relays, protect anchored people, or create another credible route to Varen Keep.",
-								"{@b Milestone to 16.} Advance to {@b level 16} once the party has materially broken or bypassed Bellweather's control network and opened a viable route to Varen Keep."
+								"The party returns from Zennar at {@b level 15}. Bellweather is safer, cleaner, busier, and more efficient—and visibly less voluntary.",
+								"Crime is sharply reduced. Work crews move on schedule. Public projects advance. Residents repeat the same reassuring phrases and sometimes obey minor instructions before realizing they were given.",
+								"Brakkus and Bishop Brann remain fully themselves. Jord and the PCs can feel Tyren's pressure but remain subject only to the established one-action Command ceiling.",
+								"This is not a street-by-street reclamation chapter. The party needs to accomplish {@b any two} of the four approaches below, or an equivalent player-created plan, to materially break or bypass the city network and open a credible route to Varen Keep."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Breaking Controlled Bellweather",
+							"entries": [
+								{
+									"type": "entries",
+									"name": "Approach A — Public Proof",
+									"entries": [
+										"Use the Zennar order plus Council/archive records to make Perrin's betrayal publicly undeniable.",
+										"Ulric can authenticate civic records if reached. If Tyren is actively controlling him, severing him from the immediate relay with {@spell Greater Restoration}, a {@item Ring of Mind Shielding|XDMG}, or destruction of the nearby signal crystal lets him testify normally.",
+										"If controlled security intervenes, use 1 Knight + 2 Veterans + 1 Mage. Their job is to seize records and remove witnesses, not attack crowds.",
+										"Two credible documentary sources plus one living institutional witness are enough; no Persuasion roll is required once the proof is public."
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Approach B — Break Guard Synchronization",
+									"entries": [
+										"Wern can identify the guard signal relay coordinating patrol changes.",
+										"Use 1 Mage + 2 Veterans + 4 Guards at the relay.",
+										"The relay has three exposed signal crystals (AC 16, 15 HP each, immune to poison and psychic). A character can instead disable a crystal with an action and a {@dc 16} Arcana or appropriate-tools check.",
+										"When all three are disabled, controlled guard units stop moving as one body; individual guards must decide what to do."
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Approach C — Hold the Refuge",
+									"entries": [
+										"Perrin's administration attempts to place Ledger House and Brann's refuge network under emergency control.",
+										"Use 1 Knight + 2 Veterans + 4 Guards. Brakkus and Brann protect civilians and refuse unlawful transfer; they do not replace the PCs in combat.",
+										"The party succeeds by keeping the refuge open, exposing the order, forcing the arrest detail to stand down, or removing its relay contact. Nonlethal resolution is fully valid."
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Approach D — Quiet Route",
+									"entries": [
+										"Use Savin or Marren maps, regional guides, old service tunnels, or a player-created infiltration plan to bypass the civic network entirely.",
+										"Run 3 successes before 2 complications. The default DC for an uncertain Stealth, Survival, Investigation, thieves' tools, or similar action is {@dc 16}. An established route provided by an ally counts as one automatic success.",
+										"A complication costs time, closes one route, or causes a small patrol to investigate; it does not erase prior successes."
+									]
+								},
+								"{@b Milestone to 16.} Advance the party to {@b level 16} once any two approaches, or equivalent player-created achievements, have broken or bypassed the city control network and opened a viable route to Varen Keep."
 							]
 						},
 						{
@@ -7307,54 +7354,62 @@
 								{
 									"type": "quote",
 									"entries": [
-										"The final payoff is a {@b guaranteed dragon fight}. Earlier success changes Tyren's advantages; it does not remove the dragon from the campaign.  {@b Stage 1 — Reach the lower keep:} 2–3 set pieces using {@creature Veteran|XMM}, {@creature Knight|XMM}, {@creature Mage|XMM}, {@creature Helmed Horror|XMM}, or controlled defenders appropriate to the allies and nodes still active.  {@b Stage 2 — Break the nodes:} objective encounters, not room-by-room clearing.  {@b Stage 3 — Perrin at the Well:} social/ritual confrontation with Perrin's state determined by earlier choices.  {@b Stage 4 — Tyren released:} use the official {@creature Ancient Emerald Dragon|FTD} stat block as the chassis, plus the Tyren overlay in the Custom Game Statistics appendix.  Tyren is the sole dragon in the central finale. Soren is not part of this version's central finale."
+										"{@b Finite Varen roster before Tyren:} 2 Knights, 6 Veterans, 8 Guards, 3 Mages, and 4 Helmed Horrors, plus Perrin. No room creates additional defenders.",
+										"{@b Outer watchpost:} 1 Knight + 2 Veterans + 2 Guards.",
+										"{@b Thorn/service route:} 1 Helmed Horror.",
+										"{@b Lower barracks:} 1 Mage + 2 Veterans + 2 Guards.",
+										"{@b Chorus Chamber:} 1 Mage + 2 Veterans + 1 Helmed Horror.",
+										"{@b Civic Relay:} 1 Knight + 4 Guards.",
+										"{@b Well Reversal:} 1 Mage + 2 Helmed Horrors.",
+										"{@b Final fight:} Tyren uses the full official {@creature Ancient Emerald Dragon|FTD} stat block plus only the complications from nodes the party failed to disable."
 									]
 								},
 								{
 									"type": "entries",
 									"name": "Rewards and Treasure",
 									"entries": [
-										"By level 16, strong items are appropriate. Across Varen Keep, award at most {@b one major permanent item per character} if the party's existing gear supports it. The Radiant Well is a story object, not portable treasure."
+										"Do not require a pre-fight treasure payout for balance. The party enters the finale with equipment earned during the campaign.",
+										"After Tyren, the Radiant Well, surviving Cardon property, seized criminal or civic assets, and Bellweather's settlement are story rewards. Any major permanent-item division can be handled as epilogue treasure instead of something the DM must prepare before the dragon fight."
 									]
 								},
 								{
 									"type": "entries",
-									"name": "Stat Block Setup",
+									"name": "Encounter Builder Presets",
 									"entries": [
 										{
 											"type": "table",
 											"colLabels": [
-												"Role",
-												"5etools lookup / setup"
+												"Scene",
+												"Creatures"
 											],
 											"rows": [
 												[
-													"Tyren",
-													"{@creature Ancient Emerald Dragon|FTD} + Tyren overlay"
+													"Outer watchpost",
+													"1 Knight + 2 Veterans + 2 Guards"
 												],
 												[
-													"Elite controlled defender",
-													"{@creature Knight|XMM} / {@creature Veteran|XMM}"
+													"Thorn/service route",
+													"1 Helmed Horror"
 												],
 												[
-													"Arcane controller",
-													"{@creature Mage|XMM}"
+													"Lower barracks",
+													"1 Mage + 2 Veterans + 2 Guards"
 												],
 												[
-													"Construct guardian",
-													"{@creature Helmed Horror|XMM}"
+													"Chorus Chamber",
+													"1 Mage + 2 Veterans + 1 Helmed Horror"
 												],
 												[
-													"Perrin",
-													"{@creature Noble|XMM} baseline + Perrin Influence overlay"
+													"Civic Relay",
+													"1 Knight + 4 Guards"
 												],
 												[
-													"PCs / Jord",
-													"Anchored Mind overlay"
+													"Well Reversal",
+													"1 Mage + 2 Helmed Horrors"
 												],
 												[
-													"Brakkus / Brann",
-													"Anchored Immunity overlay"
+													"Finale",
+													"Ancient Emerald Dragon (Tyren)"
 												]
 											]
 										}
@@ -7398,47 +7453,11 @@
 									"type": "entries",
 									"name": "Stage 1 — Reach the Lower Keep",
 									"entries": [
-										"Use 2–3 set pieces, not thirty rooms.",
-										"Existing map elements can include:",
-										{
-											"type": "list",
-											"items": [
-												"outer watchposts;",
-												"the thorn maze;",
-												"barracks and controlled defenders;",
-												"unstable teleporters;",
-												"officer quarters;",
-												"service tunnels discovered through earlier maps or allies."
-											]
-										},
-										{
-											"type": "entries",
-											"name": "Defenders",
-											"entries": [
-												"Most defenders are not fanatics. Some are controlled guards, workers, criminals, or mercenaries.",
-												"Use {@b Veterans}, {@b Knights}, {@b Guards}, {@b Mages}, and other appropriate official stat blocks in small groups.",
-												"Characters who use mind wards, {@i Dispel Magic}, {@i Greater Restoration} after severing a connection, or nonlethal tactics can free or bypass some defenders.",
-												"The objectives allow the party to bypass, free, or contain controlled Bellweather citizens instead of requiring lethal force."
-											]
-										},
-										{
-											"type": "entries",
-											"name": "Ally Benefits",
-											"entries": [
-												"For each major ally or regional success earned before the finale, remove one complication:",
-												{
-													"type": "list",
-													"items": [
-														"no exterior reinforcement wave;",
-														"one watchpost already neutralized;",
-														"a service route is open;",
-														"controlled civilians have been evacuated;",
-														"one defensive ward is already disabled."
-													]
-												},
-												"Allied NPCs remain outside the main dragon initiative unless the players explicitly engineer their direct participation."
-											]
-										}
+										"Use the existing Varen map as three set pieces rather than a room-by-room clear.",
+										"{@b Outer watchpost.} 1 Knight + 2 Veterans + 2 Guards protect an alarm crystal. A character adjacent to it can disable it with an action and a {@dc 16} Arcana or tools check or destroy it (AC 16, 20 HP). If disabled before the end of round 2, the lower barracks does not begin alerted.",
+										"{@b Thorn/service route.} 1 Helmed Horror patrols the constricted approach. A service route opened by allies can bypass this set piece entirely.",
+										"{@b Lower barracks.} 1 Mage + 2 Veterans + 2 Guards hold the descent. They are controlled or professional defenders and can be freed, bypassed, or forced to surrender.",
+										"Each major ally benefit earned before the finale may remove one entire set-piece complication. Removed defenders do not reappear elsewhere."
 									]
 								},
 								{
@@ -7451,97 +7470,59 @@
 											"type": "entries",
 											"name": "Node A: The Chorus Chamber",
 											"entries": [
-												"This chamber maintains Tyren’s active connection to controlled minds outside the Keep.",
-												"It contains resonant emerald material similar to the device at Emmer Hold.",
-												"{@b Objective:} destroy, disrupt, or ward the resonance array.",
-												"Possible methods:",
-												{
-													"type": "list",
-													"items": [
-														"physical destruction;",
-														"Arcana or Religion challenge while under attack;",
-														"using the Rellan ritual component;",
-														"overloading the array with psychic/radiant energy;",
-														"a creative equivalent."
-													]
-												},
-												"{@b Benefit if disabled:}",
-												{
-													"type": "list",
-													"items": [
-														"controlled reinforcements outside the Keep lose coordination;",
-														"Tyren cannot use the campaign-specific {@b Seize the Anchored} effect during the dragon fight;",
-														"when Tyren dies, he has no prepared network into which his consciousness can easily escape."
-													]
-												},
-												"This is the most important node for a clean victory."
+												"This chamber maintains Tyren's active connection to controlled minds outside the Keep.",
+												"{@b Defenders:} 1 Mage + 2 Veterans + 1 Helmed Horror.",
+												"{@b Objective:} earn 3 successes before 2 complications while at least one character can interact with the resonance array.",
+												"The default DC for an uncertain Arcana, Religion, tools, or physical-control action is {@dc 16}. Using the Rellan ritual charm counts as one automatic success. A directly relevant spell or meaningful resource can count as a success without a roll when it clearly solves one part of the problem.",
+												"{@b Complication on a failed node action:} the acting character takes 3d6 psychic damage and makes a {@dc 16} Wisdom save; on a failure Tyren imposes one one-turn Command-style imperative.",
+												"{@b Benefit if disabled:} controlled reinforcements outside Varen lose coordination; Tyren cannot use Seize the Anchored; and his mind has no prepared network to flee into when the dragon body dies."
 											]
 										},
 										{
 											"type": "entries",
 											"name": "Node B: The Civic Relay",
 											"entries": [
-												"Perrin has built an administrative-magical network around the Well: orders, signal crystals, schedules, city maps, and lists of officials and institutions.",
-												"This is the machinery of Bellweather being treated like one body.",
-												"{@b Objective:} sever Perrin’s ability to direct the network.",
-												"Possible methods:",
-												{
-													"type": "list",
-													"items": [
-														"destroy the central relay;",
-														"replace the command sequence with a shutdown order;",
-														"use Ulric’s official seals to invalidate linked civic instructions;",
-														"use Wern’s military codes to break guard synchronization;",
-														"persuade Perrin to deactivate it."
-													]
-												},
-												"{@b Benefit if disabled:}",
-												{
-													"type": "list",
-													"items": [
-														"no controlled guard/minion support during the final fight;",
-														"Bellweather begins waking up before Tyren is dead;",
-														"Perrin loses the immediate proof that “control works.”"
-													]
-												}
+												"This is Perrin's administrative-magical control network: signal crystals, schedules, city maps, seals, and linked orders.",
+												"{@b Defenders:} 1 Knight + 4 Guards.",
+												"{@b Objective:} earn 3 successes before 2 complications.",
+												"Default uncertain actions use {@dc 16}. Valid approaches include destroying the central relay, replacing the command sequence with shutdown orders, using Ulric's seals, using Wern's military codes, or persuading Perrin to deactivate it.",
+												"{@b Complication on a failed node action:} one door or route locks and costs an action plus {@dc 16} Athletics, tools, or Arcana to reopen, or one Guard immediately moves up to its Speed to protect the relay.",
+												"{@b Benefit if disabled:} no controlled guard or minion support during the final fight; Bellweather begins waking before Tyren dies; Perrin loses the immediate visible proof that control works."
 											]
 										},
 										{
 											"type": "entries",
 											"name": "Node C: The Well Reversal",
 											"entries": [
-												"This mechanism is physically reversing the Radiant Well’s original inward pull.",
-												"{@b Objective:} stop the outward flow.",
-												"Possible methods:",
-												{
-													"type": "list",
-													"items": [
-														"stabilize and reverse arcane regulators;",
-														"break the control lattice;",
-														"complete part of the old Unturned rite;",
-														"force the system into shutdown."
-													]
-												},
-												"{@b Benefit if disabled:}",
-												{
-													"type": "list",
-													"items": [
-														"Tyren cannot project his will citywide during the final confrontation;",
-														"the global-scale plan ends;",
-														"the process of shutting it down begins the unavoidable physical collapse of the Radiant Cage."
-													]
-												}
+												"This mechanism is physically reversing the Radiant Well's original inward pull.",
+												"{@b Defenders:} 1 Mage + 2 Helmed Horrors.",
+												"{@b Objective:} earn 3 successes before 2 complications.",
+												"Default uncertain actions use {@dc 16}. Valid approaches include stabilizing regulators, breaking the lattice, completing part of the old Unturned rite, or forcing a shutdown.",
+												"{@b Complication on a failed node action:} a marked 15-foot zone erupts. Creatures there make a {@dc 16} Dexterity save, taking 3d6 force damage and being pushed 10 feet on a failure, or half damage with no push on a success.",
+												"{@b Benefit if disabled:} Tyren cannot project citywide during the final confrontation; the global-scale plan ends; shutting the system down starts the unavoidable physical failure of the Radiant Cage."
 											]
 										},
 										{
 											"type": "entries",
 											"name": "Running the Nodes",
 											"entries": [
-												"Each node should be an objective encounter with defenders and environmental pressure rather than a single Arcana roll.",
-												"A good default is {@b 3 successes before 2 complications} using different plausible actions while a small elite force interferes.",
-												"Each node accepts multiple approaches; no single skill is required."
+												"Each node is an objective encounter with its listed defenders. Track 3 successes before 2 complications; no single skill is required.",
+												"A failed check does not erase prior successes. It causes the listed complication and play continues.",
+												"If the party physically destroys an obvious node component and the method is clearly sufficient, treat that as a success rather than asking for a redundant skill roll.",
+												"The party can withdraw from a node and return later, but defenders at untouched nodes remain in place and Perrin continues the Well reversal."
 											]
 										}
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Resting Inside Varen Keep",
+									"entries": [
+										"A Short Rest is possible in a secured area, but the reversal continues during that hour.",
+										"After the first Short Rest taken inside Varen before all three nodes are disabled, every untouched node begins fully alerted and its defenders take prepared positions.",
+										"After a second Short Rest before all three nodes are disabled, choose one untouched node; it begins with one complication already marked because Perrin and Tyren advanced the process during the delay.",
+										"Once all three nodes are disabled, a Short Rest before Tyren's release is not available: stopping the Well Reversal immediately triggers the Cage's physical failure and the final sequence.",
+										"No new defenders appear because the party rested; consequences come from preparation and the advancing mechanism."
 									]
 								}
 							]
@@ -7552,7 +7533,7 @@
 							"entries": [
 								"Perrin is present in the lower complex when the final node is threatened.",
 								"This is not a mandatory boss fight against Perrin.",
-								"His behavior depends on the state recorded during the level-14 confrontation and what the party has done since.",
+								"His behavior depends on the state recorded during the regional Perrin confrontation at level 12 and what the party has done since.",
 								{
 									"type": "entries",
 									"name": "Cracked Perrin",
