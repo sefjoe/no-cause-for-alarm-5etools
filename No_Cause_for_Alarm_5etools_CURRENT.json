@@ -6,17 +6,17 @@
 				"json": "NCFA",
 				"abbreviation": "NCFA",
 				"full": "No Cause for Alarm: Ruins of Bellweather",
-				"version": "4.23",
+				"version": "4.24",
 				"authors": [
 					"No Cause for Alarm Campaign"
 				],
-				"dateLastModified": 1791350400
+				"dateLastModified": 1791351300
 			}
 		],
 		"edition": "one",
 		"dateAdded": 1789528955,
-		"dateLastModified": 1791350400,
-		"_dateLastModifiedHash": "6ac5d64023"
+		"dateLastModified": 1791351300,
+		"_dateLastModifiedHash": "6ac5d9c424"
 	},
 	"adventure": [
 		{
@@ -6514,7 +6514,7 @@
 								"{@b Primary objectives.} Secure routes, negotiate alliances, neutralize genuinely hostile warbands, protect communities.",
 								"{@b Player agency.} Every settlement/stronghold should offer at least one noncombat path unless its leadership has already chosen immediate violence.",
 								"{@b Fail forward.} Diplomatic setbacks change terms and alliances; they do not force extermination.",
-								"{@b Rest and pressure.} Safe long rests are available back at Ledger House. Inside the active adventure site, resting gives opposing factions time to reposition unless the characters secure a defensible refuge.",
+								"{@b Rest and pressure.} Long Rests are safe in Bellweather and in communities that have accepted the party. On unsecured roads or inside an unresolved hostile site, resting gives other actors time to move couriers, fortify, evacuate, or change plans.",
 								{
 									"type": "inset",
 									"name": "Current Faction Rule",
@@ -6534,13 +6534,35 @@
 									"type": "entries",
 									"name": "Regional Milestone Track",
 									"entries": [
-										"{@b Start at level 9.} This chapter is a regional campaign arc, not one oversized session and not six mandatory dungeons.",
-										"{@b Reach level 10} after the party establishes two meaningful peaceful regional connections and a dependable route out of Bellweather; Kerren + Waylen is the default combination, but equivalent player-created alliances count.",
-										"{@b Reach level 11} after the party resolves a major internal political problem such as the Rellan manipulation and gains a third reliable regional relationship.",
-										"{@b Reach level 12} after the Ash Road raiding threat is neutralized, turned, or rendered unable to threaten the route.",
-										"{@b Reach level 13} after the party secures a major military or logistical ally such as Emmer Hold.",
-										"{@b Reach level 14} after the Iron Banner question is resolved and the party has at least three strong alliances plus one safe strategic route toward the endgame.",
-										"{@b Substitution rule.} The players do not need to visit every named community. A comparably difficult regional success can fill a milestone if their choices create a different route."
+										"{@b Start at level 9.} Treat this as five regional achievements, not six mandatory named adventures.",
+										"{@b Reach level 10} after the party secures a dependable route and at least one meaningful peaceful regional relationship. Kerren + Waylen is the default compact route, but another equivalent success works.",
+										"{@b Reach level 11} after a second major regional success that changes the political map—exposing the Rellan manipulation is the default example.",
+										"{@b Reach level 12} after a major hostile threat to regional travel is neutralized, turned, or rendered unable to operate; the Ash Road Warband is the default example.",
+										"{@b Reach level 13} after the party secures a serious military or logistical partner, or produces an equivalent strategic advantage; Emmer Hold is the default example.",
+										"{@b Reach level 14} when the party has three strong allies, one dependable route, and has resolved the final strategic obstacle that could materially reinforce Tyren; Iron Banner Fort is the default example.",
+										"{@b Substitution rule.} A player-created solution or different regional site can fill any milestone if it produces the same strategic result. Do not make the party visit a named location merely because it appears in this chapter."
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Regional Arc Compression",
+									"entries": [
+										"{@b Default arc shape.} Kerren and Waylen are light sites and can fit in the same session if the party pursues both. Rellan is usually a social/investigation session or half-session. Ash Road, Emmer Hold, and Iron Banner are the three sites most likely to deserve a full session each.",
+										"{@b One full combat per site.} Unless the players deliberately create a second fight, each regional site should contain at most one stand-up combat. Travel hazards, rescues, negotiations, and infiltration provide the rest of the pressure.",
+										"{@b Success removes future work.} Once a community is firmly allied, do not keep generating errands to maintain the alliance. Bring that ally back through consequences, information, and the Varen payoff.",
+										"{@b Prep target.} For the next chosen regional site, prep only the opening situation, three NPC goals, the finite opposition if any, one consequence for delay/rest, the reward state, and the milestone result. Everything else in the regional reference is optional support."
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Expected Regional Arc Shape",
+									"entries": [
+										"Level 9 → 10: one session, often combining two light relationships or one substantial equivalent success.",
+										"Level 10 → 11: about one session centered on a political/internal problem.",
+										"Level 11 → 12: about one session centered on a hostile strategic threat.",
+										"Level 12 → 13: about one session securing military/logistical support.",
+										"Level 13 → 14: about one session resolving the last major reinforcement/strategic obstacle.",
+										"This is a default pacing model, not a schedule the players must follow."
 									]
 								},
 								{
@@ -6683,53 +6705,28 @@
 														"{@link DM Keyed Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/emmer_hold.webp}"
 													]
 												},
-												"Emmer Hold is a fortified kobold-majority settlement built into old mining works and drainage tunnels. It is {@b not a dungeon full of creatures who exist to be cleared}. Most residents are miners, craftspeople, families, traders, and laborers. A militant faction inside the hold has accepted arms and promises from Tyren's agents in exchange for harassing Bellweather's roads.",
+												"Emmer Hold is a fortified mixed-species settlement built around old defensive works. Its residents want the hold to survive the regional crisis; the internal conflict is over whether survival requires accepting Tyren's protection.",
 												{
 													"type": "entries",
 													"name": "Why the Party Comes Here",
 													"entries": [
-														"Choose whichever hook follows from play:",
-														{
-															"type": "list",
-															"items": [
-																"caravans report disciplined ambushes using Emmer-made traps;",
-																"the Council wants safe passage through the nearby road;",
-																"a Bellweather merchant claims the entire mine under an old deed, creating a dispute before the party ever arrives;",
-																"Emmer dissidents quietly ask for help removing the Tyren-aligned commander."
-															]
-														}
+														"Emmer Hold can provide soldiers, supplies, and a secure staging point. Reports indicate that its command structure is splitting over secret orders from Tyren."
 													]
 												},
 												{
 													"type": "entries",
 													"name": "The Situation",
 													"entries": [
-														"{@b Kessa Ember}, a practical kobold engineer, speaks for residents who want neutrality and trade. {@creature Daren Voss|NCFA}, a mixed-species mercenary captain using the Warrior Veteran stat block, commands the Tyren-aligned fighters. The militant force consists of {@b Kobold Warriors, Guards, Scouts,} and a small number of specialists; do not deploy mass waves.",
-														"The party can resolve Emmer Hold by negotiation, exposing Daren's arrangement with Tyren, defeating his command cell, sabotaging the weapons cache, or convincing residents that Bellweather will recognize their right to remain. A direct assault is possible but immediately damages Independent Factions reputation and turns civilians into evacuees rather than combatants."
-													]
-												},
-												{
-													"type": "entries",
-													"name": "Key Zones",
-													"entries": [
-														{
-															"type": "list",
-															"style": "list-decimal",
-															"items": [
-																"{@b Outer Works.} Traps, warning bells, and observation points. The challenge is getting close without convincing the whole settlement it is under invasion.",
-																"{@b Commons.} Civilian heart of the hold. Violence here has severe political consequences.",
-																"{@b Forge Gallery.} Evidence that outside agents supplied military-grade material.",
-																"{@b Command Chamber.} Daren and 2–4 elite allies. Use terrain, cover, and a surrender threshold rather than a fight to the death.",
-																"{@b Old Treasury.} Most wealth is communal reserve, payroll, and trade stock. The party's actual reward is a curated cache: coin, consumables, and at most one level-appropriate permanent item."
-															]
-														}
+														"{@b Captain Emmer} represents the faction that wants the hold independent and alive. {@creature Commander Darr Vale|NCFA} believes Bellweather will fail and has accepted Tyren's protection.",
+														"Darr controls the armory with 4 {@creature Guard|XMM|Guards}. Emmer's loyalists hold the inner yard. Civilians and ordinary soldiers do not become an extra combat pool.",
+														"The party can resolve the crisis by exposing Darr's orders, winning over an officer, controlling the armory, negotiating terms, or defeating Darr's command cell."
 													]
 												},
 												{
 													"type": "entries",
 													"name": "Bellweather Consequence",
 													"entries": [
-														"A negotiated settlement can open a new trade route and add kobold engineers to Bellweather reconstruction projects. A conquest secures the road faster but creates refugees, resentment, and a visible test of what “reclamation” means when another community already lives there."
+														"A clean resolution gives Bellweather a military/logistical ally and removes one Varen approach complication. Destroying the hold solves the immediate threat but forfeits that support."
 													]
 												}
 											]
@@ -6758,7 +6755,9 @@
 													"type": "entries",
 													"name": "Faction Structure",
 													"entries": [
-														"{@creature Commander Haren Vell|NCFA} uses the Gladiator stat block. He is loyal to Tyren because Tyren guarantees supplies and regional authority. {@creature Captain Sera Dorn|NCFA} uses the Warrior Veteran stat block and is willing to negotiate if the party can prove Tyren is treating the Iron Banner as disposable. The fort also contains guards, scouts, smiths, healers, families, prisoners, and noncombatant workers."
+														"{@creature Commander Haren Vell|NCFA} commands the Iron Banner and values order above ideology. Tyren's offer of supplies and regional authority has kept him aligned.",
+														"{@creature Captain Sera Dorn|NCFA} is willing to negotiate if the party can prove Tyren treats the Iron Banner as disposable.",
+														"The fort also contains guards, scouts, smiths, healers, families, prisoners, and noncombatant workers. Those people do not become a single mass-combat roster."
 													]
 												},
 												{
@@ -6860,7 +6859,8 @@
 												"{@b At the table.} The extortion crew is exactly 1 {@creature Veteran|XMM} and 4 {@creature Thug|XMM|Thugs}. Witnesses identify the taxation scheme automatically once the party listens; DC 14 Investigation reveals the command marks immediately.",
 												"{@b Social resolution.} A fair shared-water agreement requires no roll if both local sides accept the terms. DC 14 Persuasion can move a reluctant but non-hostile side when a concrete concession is offered.",
 												"{@b Morale.} The extortionists flee or surrender when the Veteran is below half hit points or 2 Thugs are defeated. No reinforcements arrive.",
-												"{@b Reward state.} Fair resolution earns scouts, food, and a safe local rest point; simply driving the outsiders away earns gratitude but less political trust."
+												"{@b Reward state.} Fair resolution earns scouts, food, and a safe local rest point; simply driving the outsiders away earns gratitude but less political trust.",
+												"{@b Expected shape.} 15–25 minutes of first contact/investigation, then either negotiation or one 30–45 minute extortionist fight. This is a light site."
 											]
 										}
 									]
@@ -6912,7 +6912,8 @@
 											"entries": [
 												"{@b At the table.} The only hostile creature is 1 {@creature Bulette|XMM}. It retreats once below half hit points unless trapped.",
 												"{@b Rescue clock.} Free the trapped hunters with 3 successes before 2 failures using DC 14 Athletics, Survival, Medicine, suitable tools, or clear magic. A failure causes falling debris or 2d6 bludgeoning damage to a rescuer; it does not kill a hunter off-screen.",
-												"{@b Reward state.} Returning the hunters earns guides and the hidden Ash Road route. Killing the Bulette is optional."
+												"{@b Reward state.} Returning the hunters earns guides and the hidden Ash Road route. Killing the Bulette is optional.",
+												"{@b Expected shape.} 20–30 minutes tracking/rescue setup and 30–45 minutes for the Bulette/rescue clock. This is a light site and can pair with Kerren."
 											]
 										}
 									]
@@ -6964,7 +6965,8 @@
 												"{@b At the table.} The Tyren-paid agent uses 1 {@creature Assassin|XMM} stat block and has no combat reinforcements. The agent's goal is escape with the payment ledger.",
 												"{@b Evidence.} Three sources exist: payment records, a bribed agitator, and a hidden message cache. Any two are enough to convince Speaker Mara; one successful DC 14 Investigation or Insight check reveals one source early.",
 												"{@b Public meeting.} If exposed in front of witnesses, the agent runs. If cornered, the agent fights only long enough to create an escape route.",
-												"{@b Reward state.} Proving the manipulation earns Rellan's political support and messenger network."
+												"{@b Reward state.} Proving the manipulation earns Rellan's political support and messenger network.",
+												"{@b Expected shape.} 45–75 minutes of investigation and public-meeting play; the Assassin encounter is an escape complication, not the mandatory centerpiece."
 											]
 										}
 									]
@@ -7019,7 +7021,8 @@
 												"{@b Objectives.} Breaking any two of these ends the warband's ability to raid: defeat/turn Kesh, release or win over the doubting lieutenants, disable mounts and signal gear, or seize the command orders.",
 												"{@b Alarm.} If warned, the same seven combatants consolidate around Kesh and the mounts. No second wave appears.",
 												"{@b Morale.} Scouts withdraw when Kesh falls or both Veterans surrender. Kesh bargains if isolated and confronted with proof Tyren intends to replace him.",
-												"{@b Rest.} A Short Rest before the command breaks lets the warband move the mounts and send one courier toward Emmer Hold; it does not create new soldiers."
+												"{@b Rest.} A Short Rest before the command breaks lets the warband move the mounts and send one courier toward Emmer Hold; it does not create new soldiers.",
+												"{@b Expected shape.} 20–30 minutes reconnaissance/turning lieutenants, 45–70 minutes for the command confrontation if needed, and 15–20 minutes resolving captives and the route."
 											]
 										}
 									]
@@ -7073,7 +7076,8 @@
 												"{@b At the table.} If force is required, the hostile command element is {@creature Commander Darr Vale|NCFA} plus 4 {@creature Guard|XMM|Guards}. Captain Emmer's loyalists remain a political force and do not become another initiative block unless the party attacks them.",
 												"{@b Leverage.} Darr's secret orders, testimony from one officer, and control of the armory are three leverage points. Any two are enough to collapse his position without a fight.",
 												"{@b Morale.} Guards stand down when Darr is defeated, arrested, or publicly abandoned by Emmer.",
-												"{@b Reward state.} A clean resolution earns soldiers or supplies for the finale; destroying the hold wins the immediate conflict but costs that future support."
+												"{@b Reward state.} A clean resolution earns soldiers or supplies for the finale; destroying the hold wins the immediate conflict but costs that future support.",
+												"{@b Expected shape.} 30–45 minutes gathering leverage inside the standoff, then either a negotiated collapse or one 45–60 minute armory/command fight."
 											]
 										}
 									]
@@ -7103,7 +7107,7 @@
 											"type": "entries",
 											"name": "Encounter",
 											"entries": [
-												"If open combat occurs, use small squads of {@creature Knight|XMM|Knights} and {@creature Veteran|XMM|Veterans}; do not run the entire fort on one initiative."
+												"If open combat becomes unavoidable, use one command confrontation: {@creature Commander Haren Vell|NCFA}, 2 {@creature Veteran|XMM|Veterans}, and 4 {@creature Guard|XMM|Guards}. Do not put the entire fort on initiative."
 											]
 										},
 										{
@@ -7124,10 +7128,11 @@
 											"type": "entries",
 											"name": "Table-Ready Resolution",
 											"entries": [
-												"{@b At the table.} The fort is not a mass-combat dungeon. If negotiations fail completely, use one command confrontation: Haren Vell represented by a {@creature Knight|XMM}, 2 {@creature Veteran|XMM|Veterans}, and 4 {@creature Guard|XMM|Guards}. Other soldiers react to the outcome rather than joining the same initiative.",
+												"{@b At the table.} The fort is not a mass-combat dungeon. If negotiations fail completely, use exactly {@creature Commander Haren Vell|NCFA}, 2 {@creature Veteran|XMM|Veterans}, and 4 {@creature Guard|XMM|Guards}. Other soldiers react to Haren's decision and the evidence rather than joining the same initiative.",
 												"{@b Decision points.} The party can prove Tyren's command relationship, destroy or seize the signal device, expose the sealed planar vessel's purpose, or negotiate neutrality. Two strong evidence points are enough for Haren to consider neutrality; three plus a viable security plan can win alliance.",
 												"{@b Morale.} If Haren orders a stand-down, the fort obeys. If Haren falls during a clearly political confrontation, the Veterans call for terms rather than feed the whole garrison into combat.",
-												"{@b Reward state.} Alliance removes an outer Varen complication; neutrality prevents Iron Banner reinforcements; hostility adds one defined endgame complication."
+												"{@b Reward state.} Alliance removes an outer Varen complication; neutrality prevents Iron Banner reinforcements; hostility adds one defined endgame complication.",
+												"{@b Expected shape.} 30–45 minutes gathering/presenting evidence, one major negotiation, and at most one 50–70 minute command confrontation if talks fail."
 											]
 										}
 									]
@@ -7189,7 +7194,7 @@
 								"{@b Primary objectives.} Identify the hidden order, escape or turn the outpost, preserve proof.",
 								"{@b Player agency.} Expose the message early, negotiate with the outpost, fake compliance, escape, or fight.",
 								"{@b Fail forward.} The betrayal cannot hinge on one Investigation roll; the evidence surfaces through orders, testimony, or intercepted communication.",
-								"{@b Rest and pressure.} Safe long rests are available back at Ledger House. Inside the active adventure site, resting gives opposing factions time to reposition unless the characters secure a defensible refuge.",
+								"{@b Rest and pressure.} The party can Long Rest safely before entering Zennar or after escaping its reach. Inside the outpost, use the Suspicion-based rest rules below; the outpost does not freeze while the party sleeps.",
 								{
 									"type": "inset",
 									"name": "Table-Ready Purpose",
@@ -7216,7 +7221,7 @@
 									"type": "entries",
 									"name": "Encounter Guidance",
 									"entries": [
-										"Treat this as political danger as much as combat. Use {@creature Veteran|XMM}, {@creature Knight|XMM}, {@creature Mage|XMM}, {@creature Spy|XMM}, {@creature Assassin|XMM}, and other current humanoid stat blocks according to role. Preserve the diplomatic trap and evidence that exposes Cardon."
+										"Use the exact assassination and gate-reserve rosters in the Table-Ready Session Package. This chapter is dangerous because the party is inside a disciplined outpost under false legal authority, not because the garrison contains a hidden army of high-CR enemies."
 									]
 								},
 								{
@@ -7231,7 +7236,45 @@
 										"{@b Escape.} If the party does not fight its way out, use 3 successes before 2 failures, usually DC 15, with Stealth, Deception, Athletics, Acrobatics, forged orders, or useful magic. On failure, the main-gate reserve intercepts them; it does not summon an endless garrison.",
 										"{@b Morale.} The assassination team withdraws or surrenders if Varek falls and half the team is down. The gate reserve protects the outpost rather than pursuing indefinitely beyond its defensible perimeter.",
 										"{@b Fail-forward.} Losing the packet does not erase Perrin's betrayal. A surviving attacker, duplicated order, or regional witness preserves a route to the same political truth at higher cost.",
-										"{@b Pacing valve.} If time is short, let opening the packet expose the trap immediately and move to the escape. If time remains, play the suspicion stages and let the players discover the betrayal from behavior before the attack."
+										"{@b Pacing valve.} If time is short, let opening the packet expose the trap immediately and move to the escape. If time remains, play the suspicion stages and let the players discover the betrayal from behavior before the attack.",
+										{
+											"type": "entries",
+											"name": "Assassination Deployment",
+											"entries": [
+												"{@b Varek's objective.} {@creature Varek Holt|NCFA} tries to kill or incapacitate the character carrying the packet/evidence, then escape if the operation is exposed. He does not stand in melee trading hits with four level-14 characters.",
+												"{@b Veterans.} The 2 {@creature Warrior Veteran|XMM|Warrior Veterans} block doors, separate the party, and protect Varek's retreat.",
+												"{@b Scouts.} Two Scouts cover exits from range. Two Scouts move to seize the packet, destroy a duplicate order, or cut off the easiest escape route. They flee once Varek orders withdrawal.",
+												"{@b Loud failure.} Once the operation becomes obviously public, the assassins have failed politically. Varek withdraws if possible; he does not summon the main garrison into a death match."
+											]
+										},
+										{
+											"type": "entries",
+											"name": "Outpost Loyalty Split",
+											"entries": [
+												"Only the command cell and assassination team know the full purpose of Perrin's order. Most soldiers believe the party is being lawfully detained or that an external attack is underway.",
+												"Showing the sealed packet plus the contradictory command copy to a neutral officer creates immediate hesitation without a roll. One additional proof source is enough to make that officer refuse an execution order and provide a service route or time to leave.",
+												"This does not automatically turn the whole outpost into allies; it converts the escape from fight-the-garrison into get-out-before-the-command-cell-regains-control."
+											]
+										},
+										{
+											"type": "entries",
+											"name": "Evidence Priority",
+											"entries": [
+												"The party only needs two proof sources for the Bellweather phase. Once they have two, additional evidence improves public certainty but should not require another dangerous detour through Zennar.",
+												"If the party has the packet and a cooperative witness, let them leave. Do not make them clear the commandant's office merely because another document exists there."
+											]
+										},
+										{
+											"type": "entries",
+											"name": "Expected Session Shape",
+											"entries": [
+												"Perrin's mission and travel/approach: about 20–30 minutes.",
+												"Zennar social play and rising Suspicion: about 35–50 minutes.",
+												"Trap discovery and assassination attempt or early reversal: about 45–70 minutes.",
+												"Escape/turning an officer: about 30–45 minutes.",
+												"Return reveal can close the session in 10–15 minutes or open Chapter 17."
+											]
+										}
 									]
 								},
 								"{@b Keyed-area encounters.} When a scene and a keyed location describe the same encounter, use the roster and objective in the scene. Creatures listed only in the keyed reference apply when the characters explore that location outside the scene sequence.",
@@ -7673,7 +7716,7 @@
 								"{@b Primary objectives.} Reach Tyren, break control systems/allies, survive the host confrontation, decide the Well’s fate.",
 								"{@b Player agency.} Assault, infiltration, exploit internal factions, use recovered lore, or create a political/military coalition.",
 								"{@b Fail forward.} Knowledge needed to challenge Tyren has been seeded across Savin Keep, Marren Library, Maren Isle, and Cardon’s records.",
-								"{@b Rest and pressure.} Safe long rests are available back at Ledger House. Inside the active adventure site, resting gives opposing factions time to reposition unless the characters secure a defensible refuge.",
+								"{@b Rest and pressure.} During Controlled Bellweather, safe rests depend on allied locations rather than assuming Ledger House is available. After Perrin's formal control breaks, allow one Long Rest before the Varen assault. Once the assault begins, no Long Rest is available and the single Short-Rest rule below applies.",
 								{
 									"type": "inset",
 									"entries": [
@@ -7684,7 +7727,7 @@
 									"type": "entries",
 									"name": "Encounter Guidance",
 									"entries": [
-										"Use the {@creature Adult Bronze Dragon|XMM} as Soren's base stat block. Tyren is represented narratively as the possessing intelligence and mechanically with a limited fiery-aura/possession overlay described in this chapter. For a second phase, use a {@creature Efreeti|XMM} stat block reskinned as Tyren temporarily manifesting in flame if the group needs a level-16 climax. Avoid the Ancient Bronze Dragon stat block for a four-character level-16 party unless the group is unusually optimized."
+										"Use {@creature Soren|NCFA} for the possessed dragon phase. If the transference challenge reaches three complications before four successes, use {@creature Tyren, Manifested|NCFA} as the fail-forward second phase. Do not substitute a generic Efreeti or Ancient Bronze Dragon."
 									]
 								},
 								{
@@ -7695,6 +7738,29 @@
 										"{@b Break the political hold.} Secure any 2 of 3 footholds: place authenticated evidence into an independent public record, split the guard/administrative chain so Perrin cannot lawfully order the party's arrest, and win a public institution or major civic witness willing to stand behind the accusation.",
 										"{@b Perrin's responsibility.} Perrin chose this path. Tyren may exploit fear and opportunity, but Perrin's institutional betrayal is not excused as possession.",
 										"{@b Advance to level 16} when Perrin's formal ability to control Bellweather is broken and the coalition has a viable route to Varen Keep. Allow one Long Rest in a genuinely secured allied location before the Varen assault. The keep itself is the level-16 finale."
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Controlled Bellweather: Table-Ready",
+									"entries": [
+										"{@b Run it as three possible scenes, play any two.} (1) put Zennar evidence into an independent public record, (2) split the guard/administrative chain, (3) secure a civic institution or major witness.",
+										"{@b Independent record.} A clerk, Marren archive custodian, temple record, or merchant registry can authenticate the evidence. If the party preserved two Zennar proof sources, authentication succeeds without a persuasion check; the challenge is reaching a recorder safely.",
+										"{@b Split the chain.} Present contradictory lawful orders to a guard commander or senior administrator. With authenticated evidence, a reasonable official refuses Perrin's arrest order without a check. Without it, DC 16 Persuasion or another concrete leverage point can create hesitation.",
+										"{@b Public backing.} Brakkus, Bishop Brann, a merchant bloc, workers' representatives, or a regional ally can stand publicly behind the accusation if the party's prior relationship supports it. Do not require a single named NPC.",
+										"{@b Enforcement.} Use the one listed arrest squad only if the party acts openly before securing two footholds. Once two footholds are secured, ordinary officials stop treating Perrin's orders as unquestionably lawful.",
+										"{@b End state.} Perrin's fall is political first. He can submit, flee, bargain, or choose a final act of violence based on prior play, but no mandatory Perrin boss fight is required."
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Controlled Bellweather: Expected Shape",
+									"entries": [
+										"Return and discover Perrin's narrative: about 15–20 minutes.",
+										"First foothold: about 25–40 minutes.",
+										"Second foothold and possible arrest-squad confrontation: about 30–50 minutes.",
+										"Perrin's collapse, route to Varen, level-up, and Long Rest: about 20–30 minutes.",
+										"This phase is intended to fit in one session or the first half of a longer endgame session."
 									]
 								},
 								"{@b Keyed-area encounters.} When a scene and a keyed location describe the same encounter, use the roster and objective in the scene. Creatures listed only in the keyed reference apply when the characters explore that location outside the scene sequence.",
@@ -7727,7 +7793,40 @@
 										"{@b Transference challenge.} Keep the existing 4-success-before-3-complications structure, default DC 17. Each character can contribute once per round with Arcana, Religion, Constitution, protective magic, recovered lore, or another concrete method. On a complication, use one brief one-turn compulsion, one Well surge, or environmental damage.",
 										"{@b Three complications.} If the party reaches 3 complications before 4 successes, Tyren manifests outside a host using {@creature Tyren, Manifested|NCFA}. This is a fail-forward second phase, not a replacement for the dragon encounter. Defeating or containing the manifestation gives the party one final uncontested action to seal, alter, or redirect the Well.",
 										"{@b Alliance payoff.} Each major regional ally removes one outer complication before the Soren fight: a patrol, blocked route, artillery position, or reinforcement threat. Apply the benefit visibly so the players can see that Chapter 15 mattered.",
-										"{@b Pacing valve.} Run 3–5 set pieces before Soren, not a room-by-room clear. If time is short, two node scenes plus Soren and transference are sufficient. If time remains, add one keyed-area complication or false-command-room scene."
+										"{@b Pacing valve.} Default to two control-node set pieces before Soren. The party chooses which two. A third node is optional if they want the additional benefit and have time/resources. Do not run unrelated keyed-area combats merely because the rooms exist on the map.",
+										{
+											"type": "entries",
+											"name": "Control-Node Set Pieces",
+											"entries": [
+												"{@b Signal Chamber.} Opposition: 1 {@creature Mage|XMM}, 2 {@creature Veteran|XMM|Veterans}, and 4 {@creature Guard|XMM|Guards}. Objective: disable the signal console or seize its codes. A character adjacent to the console can spend an action and succeed on DC 16 Arcana, Investigation, or thieves' tools; two total successes disable it. Destroying the console with a clearly sufficient spell or attack also works. If left active, 2 Veterans and 4 Guards reinforce Soren at the end of round 2.",
+												"{@b Ritual Chamber.} Opposition: 1 {@creature Mage|XMM}, 2 {@creature Cult Fanatic|XMM|Cult Fanatics}, and 2 {@creature Guard|XMM|Guards}. Objective: break the possession ward. Two total DC 16 Arcana or Religion successes, suitable dispelling magic, or destroying the focus disables it. While active, Soren has +2 AC and separation checks cannot begin.",
+												"{@b Reserve-Host Chamber.} Opposition: 2 {@creature Veteran|XMM|Veterans} and 4 {@creature Guard|XMM|Guards}. Objective: free three prepared captives. Opening the cells takes an action with the key, DC 15 thieves' tools, or a clearly adequate spell/force effect. If uncleared, those three captives remain valid transference targets.",
+												"These rosters are finite. If a regional ally or successful set piece explicitly removes a reinforcement threat, remove the corresponding creatures rather than moving them somewhere else."
+											]
+										},
+										{
+											"type": "entries",
+											"name": "Soren Playtest Calibration",
+											"entries": [
+												"The party's high damage output is expected to reduce Soren quickly if they focus attacks. Do not inflate his hit points to prevent that.",
+												"The real choice is whether they spend actions on separation or simply drop the dragon. If they reduce Soren to 0 before three separation successes, Soren survives unconscious but Tyren immediately starts transference with one automatic complication.",
+												"If the ritual node is disabled, separation checks can begin immediately on the first round of the Soren encounter; do not make them wait for an arbitrary narrative trigger.",
+												"Soren uses flight, Repulsion Breath, legendary movement, and the room's geometry to separate characters rather than hovering in melee. Tyren wants control and a new host more than Soren's death."
+											]
+										},
+										{
+											"type": "entries",
+											"name": "Finale Expected Shape",
+											"entries": [
+												"Varen approach and ally payoff: about 20–30 minutes.",
+												"Control node 1: about 35–50 minutes.",
+												"Control node 2: about 35–50 minutes.",
+												"Soren and separation: about 60–90 minutes.",
+												"Transference / manifested Tyren if triggered: about 30–60 minutes.",
+												"Radiant Well decision and epilogue: about 30 minutes.",
+												"This can naturally span two sessions; do not compress Soren or the Well decision merely to force the whole finale into one night."
+											]
+										}
 									]
 								}
 							]
@@ -7758,10 +7857,10 @@
 												"{@b 2. Watchpost.} A {@creature Veteran|XMM} officer and 2 {@creature Guard|XMM|Guards} monitor the outer compound. The alarm can be disabled, forged, or redirected. Capturing the watchpost gives advantage on the party's next infiltration check.",
 												"{@b 5. Officer's Quarters.} Contains a fragment of the Radiant Well map, {@b 1,500 gp} in payroll and gems, and one useful consumable. The fragment confirms details learned in Marren Library.",
 												"{@b 8. Guard Barracks.} Use 2–4 {@b Ogres} or an equivalent tier-appropriate mixed guard detail. A rigged sand bucket is a visible nuisance trap: DC 13 Dexterity save or 1d4 bludgeoning damage and {@b Blinded until the end of the creature's next turn}.",
-												"{@b 10. Warband Barracks.} Eight off-duty members of Tyren’s mixed garrison rest here. If alerted, they use bunks as cover and attempt to hold the corridor until reinforcements arrive. Their effects include {@b 500 gp} in pooled pay and trade bars, a duty roster, and the day’s watch password.",
+												"{@b 10. Warband Barracks.} Eight off-duty members of Tyren’s mixed garrison rest here. This room is optional support geography, not a required encounter. If the party enters while the barracks is occupied, the soldiers barricade the corridor and withdraw toward the Signal Chamber when half their number is down; they do not summon an additional wave beyond the finite node rosters.",
 												"{@b 11. Alen's Quarters.} {@creature Alen Hyam|NCFA} is a mage advisor who has intentionally been fed false information by Tyren. He prefers conversation, surrender, or escape to combat. His notes contain one false conclusion and two useful observations about the Well. Use the current Mage stat block exactly as printed.",
-												"{@b 12. Main Gate.} The party can use the password, sabotage the mechanism, climb elsewhere, or force the gate. A frontal breach attracts a manageable reinforcement wave rather than an army.",
-												"{@b 20. Servants' Hall and Kitchen.} Coerced workers of mixed species know the day's password and the rhythm of the guard rotations. Freeing them removes one reinforcement from Phase 1 and improves Neighborhoods & Workers reputation.",
+												"{@b 12. Main Gate.} The party can use the password, sabotage the mechanism, climb elsewhere, or force the gate. A frontal breach raises Alert by 1 and moves existing outer defenders into position; it does not create a separate reinforcement wave.",
+												"{@b 20. Servants' Hall and Kitchen.} Coerced workers of mixed species know the day's password and guard rotations. Freeing them grants a safe route to one chosen control node or prevents one Alert increase caused by movement through the keep, and improves Neighborhoods & Workers reputation.",
 												"{@b 22. Records Room.} Ten minutes of focused review reveals the pattern of Tyren's growing political and military influence. A successful DC 15 Intelligence (Investigation) check reveals it immediately and also uncovers a report documenting Cardon's dealings. This evidence matters if Cardon's political fate remains unresolved.",
 												"{@b 23. Medusa Chamber.} A captive {@creature Medusa|XMM} has been used as a living security measure. She is furious at Tyren, not automatically at the party. Characters who offer freedom can turn her into a temporary ally or source of information. If combat begins, use the current Medusa stat block exactly as printed.",
 												"{@b 27. Smithy.} An armorer ({@creature Veteran|XMM}) and three {@creature Bugbear Warrior|XMM|Bugbears} maintain mundane equipment. They initially assume the party belongs to Tyren’s forces if the characters act confidently. The room contains quality mundane gear and trade stock worth about {@b 1,000 gp}, plus tools useful for sabotaging a control node.",
@@ -7776,20 +7875,20 @@
 											"type": "entries",
 											"name": "Set-Piece Sequence",
 											"entries": [
-												"Choose three to five of the following before Phase 2:",
+												"Before Soren, default to two major set pieces chosen by the players from the control nodes or the optional strategic actions below. A third node/set piece is available if they deliberately pursue it.",
 												{
 													"type": "list",
 													"style": "list-decimal",
 													"items": [
-														"{@b Silent Entry:} bypass the gate and disable the watchpost.",
-														"{@b Free the Workers:} secure passwords and remove reinforcements.",
-														"{@b Turn an Advisor:} convince Alen, Jeren, or the medusa to help.",
-														"{@b Destroy a Control Node:} sabotage a Well-linked device in the maze or tower.",
-														"{@b Expose the Decoy:} defeat or flip the false Tyren group.",
-														"{@b Secure the Records:} recover Cardon/Tyren evidence and Well lore."
+														"{@b Signal Chamber:} stop reinforcement coordination.",
+														"{@b Ritual Chamber:} weaken the possession ward and unlock separation.",
+														"{@b Reserve-Host Chamber:} free prepared vessels and reduce transference targets.",
+														"{@b Turn an Advisor:} convince Alen, Jeren, or the captive medusa to provide access or remove an outer complication.",
+														"{@b Secure the Records:} recover Cardon/Tyren evidence or access codes if those remain useful.",
+														"{@b Silent Entry / Free Workers:} treat these as approach advantages, not extra mandatory combats."
 													]
 												},
-												"Each success removes one complication or grants one concrete advantage in the finale. Failure advances the Tyren Alert Track by 1 but never blocks access to the climax."
+												"Each success removes a concrete complication. Failure advances Alert by 1 or costs position/resources; it never forces an additional unrelated combat."
 											]
 										},
 										{
@@ -7910,34 +8009,20 @@
 									"type": "entries",
 									"name": "Scene 2: Breaking the Command Network",
 									"entries": [
-										"Before confronting Soren, the party can disable three control nodes in the keep.",
+										"Three control nodes matter to the finale, but the party does not have to clear all three.",
 										{
 											"type": "entries",
 											"name": "What Happens",
 											"entries": [
-												"The signal chamber coordinates troops. The ritual chamber reinforces possession. The reserve host chamber contains captives selected as possible vessels.",
-												"Each node disabled grants one finale benefit: no reinforcement wave, Soren loses one defensive advantage, or Tyren has fewer transference targets."
-											]
-										},
-										{
-											"type": "entries",
-											"name": "Encounter",
-											"entries": [
-												"Use encounters already listed in the chapter’s keyed areas, favoring {@creature Veteran|XMM|Veterans}, {@creature Mage|XMM|Mages}, and small elite groups rather than mass combat."
-											]
-										},
-										{
-											"type": "entries",
-											"name": "Clues and Discoveries",
-											"entries": [
-												"Captives confirm that Soren is a bronze dragon being controlled, not a willing tyrant."
+												"The Signal Chamber coordinates reinforcements. The Ritual Chamber reinforces possession. The Reserve-Host Chamber contains captives selected as possible vessels.",
+												"Use the exact Control-Node Set Pieces in the Table-Ready Finale Package. The party chooses which two to prioritize by default; they can attempt the third if they want the additional benefit."
 											]
 										},
 										{
 											"type": "entries",
 											"name": "Consequences",
 											"entries": [
-												"Skipping nodes is allowed but makes the final phases harder."
+												"Every disabled node removes its listed finale complication. An active node does exactly what its description says and does not secretly add more enemies or penalties."
 											]
 										}
 									]
@@ -12807,27 +12892,18 @@
 		},
 		{
 			"name": "Tyren, Manifested",
-			"group": [
-				"Genies"
-			],
 			"source": "NCFA",
 			"srd52": true,
 			"basicRules2024": true,
-			"referenceSources": [
-				"FRAiF",
-				"RHW"
-			],
 			"size": [
 				"L"
 			],
 			"type": {
-				"type": "elemental",
-				"tags": [
-					"genie"
-				]
+				"type": "elemental"
 			},
 			"alignment": [
-				"N"
+				"N",
+				"E"
 			],
 			"ac": [
 				17
@@ -12862,7 +12938,8 @@
 				"fire"
 			],
 			"languages": [
-				"Primordial (Ignan)"
+				"Common",
+				"Primordial"
 			],
 			"cr": "11",
 			"spellcasting": [
@@ -12870,7 +12947,7 @@
 					"name": "Spellcasting",
 					"type": "spellcasting",
 					"headerEntries": [
-						"The efreeti casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save {@dc 16}):"
+						"Tyren casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save {@dc 16}):"
 					],
 					"will": [
 						"{@spell Detect Magic|XPHB}",
@@ -12878,10 +12955,8 @@
 					],
 					"daily": {
 						"1e": [
-							"{@spell Gaseous Form|XPHB}",
 							"{@spell Invisibility|XPHB}",
 							"{@spell Major Image|XPHB}",
-							"{@spell Plane Shift|XPHB}",
 							"{@spell Tongues|XPHB}",
 							"{@spell Wall of Fire|XPHB} (level 7 version)"
 						]
@@ -12892,21 +12967,15 @@
 			],
 			"trait": [
 				{
-					"name": "Elemental Restoration",
-					"entries": [
-						"If the efreeti dies outside the Elemental Plane of Fire, its body dissolves into ash, and it gains a new body in {@dice 1d4} days, reviving with all its {@variantrule Hit Points|XPHB} somewhere on the Plane of Fire."
-					]
-				},
-				{
 					"name": "Magic Resistance",
 					"entries": [
-						"The efreeti has {@variantrule Advantage|XPHB} on saving throws against spells and other magical effects."
+						"Tyren has {@variantrule Advantage|XPHB} on saving throws against spells and other magical effects."
 					]
 				},
 				{
-					"name": "Wishes",
+					"name": "Unstable Manifestation",
 					"entries": [
-						"The efreeti has a 30 percent chance of knowing the {@spell Wish|XPHB} spell. If the efreeti knows it, the efreeti can cast it only on behalf of a non-genie creature who communicates a wish in a way the efreeti can understand. If the efreeti casts the spell for the creature, the efreeti suffers none of the spell's stress. Once the efreeti has cast it three times, the efreeti can't do so again for 365 days."
+						"Tyren can manifest in this form only while connected to the Radiant Well. If reduced to 0 Hit Points, the manifestation collapses back into the conduit instead of dying normally. The characters then receive one uncontested action to seal, redirect, or otherwise contain the conduit using the methods established in the adventure."
 					]
 				}
 			],
@@ -12914,11 +12983,11 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"The efreeti makes three attacks, using Heated Blade or Hurl Flame in any combination."
+						"Tyren makes three attacks, using Incandescent Strike or Hurl Flame in any combination."
 					]
 				},
 				{
-					"name": "Heated Blade",
+					"name": "Incandescent Strike",
 					"entries": [
 						"{@atkr m} {@hit 10}, reach 5 ft. {@h}13 ({@damage 2d6 + 6}) Slashing damage plus 13 ({@damage 2d12}) Fire damage."
 					]
@@ -12930,13 +12999,6 @@
 					]
 				}
 			],
-			"environment": [
-				"desert",
-				"planar, fire"
-			],
-			"treasure": [
-				"armaments"
-			],
 			"traitTags": [
 				"Magic Resistance"
 			],
@@ -12945,10 +13007,6 @@
 			],
 			"actionTags": [
 				"Multiattack"
-			],
-			"languageTags": [
-				"IG",
-				"P"
 			],
 			"damageTags": [
 				"F",
