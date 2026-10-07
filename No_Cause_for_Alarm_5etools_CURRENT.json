@@ -6,17 +6,17 @@
 				"json": "NCFA",
 				"abbreviation": "NCFA",
 				"full": "No Cause for Alarm: Ruins of Bellweather",
-				"version": "4.22",
+				"version": "4.23",
 				"authors": [
 					"No Cause for Alarm Campaign"
 				],
-				"dateLastModified": 1791347700
+				"dateLastModified": 1791350400
 			}
 		],
 		"edition": "one",
 		"dateAdded": 1789528955,
-		"dateLastModified": 1791347700,
-		"_dateLastModifiedHash": "6ac5cbd422"
+		"dateLastModified": 1791350400,
+		"_dateLastModifiedHash": "6ac5d64023"
 	},
 	"adventure": [
 		{
@@ -4548,7 +4548,7 @@
 									"type": "entries",
 									"name": "Encounter Guidance",
 									"entries": [
-										"Present the plaza as a functioning hostile market rather than a room-by-room extermination. Social infiltration, bargaining, disguise, and violence should all work."
+										"Paden Square is primarily an infiltration, observation, and escape problem. Use the finite security roster exactly as written; difficulty comes from Suspicion, the courier's movement, civilians, and competing objectives rather than extra guards or inflated hit points."
 									]
 								},
 								{
@@ -4564,7 +4564,38 @@
 										"{@b Securing the correspondence.} DC 15 Sleight of Hand steals it unnoticed; DC 15 Deception or Persuasion can create a handoff or private meeting when fiction supports it; defeating or cornering the courier also works. Failure raises Suspicion rather than erasing the clue.",
 										"{@b Short rest.} Paden Square is not a safe place to spend an hour once the auction is underway. If the party leaves to Short Rest, the auction resolves and the courier departs, but the broker or a tail can still point them toward an escape route or Storen Gate contact.",
 										"{@b Escape procedure.} If needed, require 3 successes before 2 failures using Athletics, Acrobatics, Stealth, Deception, or a clearly useful spell, normally DC 14. On success the party exits cleanly. On failure, surviving security catches them at the last exit for one final confrontation or forces them to abandon one nonessential piece of evidence.",
-										"{@b Pacing valve.} If time is short, Garin identifies the courier after one good conversation and move directly to lot 3. If time remains, play all three lots and let Suspicion build naturally."
+										"{@b Pacing valve.} If time is short, Garin identifies the courier after one good conversation and move directly to lot 3. If time remains, play all three lots and let Suspicion build naturally.",
+										{
+											"type": "entries",
+											"name": "Courier Clock",
+											"entries": [
+												"The courier begins near the auction floor with the correspondence. Once Suspicion reaches 2 or combat begins, start a 3-round escape clock.",
+												"{@b Round 1.} The courier moves toward a prepared side exit while one Scout shadows or screens the route.",
+												"{@b Round 2.} The courier reaches the exit unless physically blocked, deceived into stopping, restrained, or forced onto another route.",
+												"{@b Round 3.} The courier disappears into the hostile district. The party can still recover the essential intelligence through Garin, auction records, or a captured security member, but loses the cleanest direct evidence.",
+												"A clever spell, blocked route, forged instruction, or social play can stop the courier without a check when it plainly works. Do not turn the clock into mandatory Athletics rolls."
+											]
+										},
+										{
+											"type": "entries",
+											"name": "Security Deployment",
+											"entries": [
+												"If violence begins, 1 {@creature Veteran|XMM} and 2 {@creature Thug|XMM|Thugs} hold the auction floor and protect civilian evacuation routes. The other 2 Thugs move to block the nearest party exit. The 2 {@creature Scout|XMM|Scouts} use elevated cover and track the courier's route.",
+												"Security is trying to end the disturbance and protect the market, not fight to the death. The Veteran calls for withdrawal or terms if reduced below half hit points and at least 3 other security members are down.",
+												"If the party drops the first defenders quickly, surviving security disengages toward exits and cover instead of feeding themselves into the party one at a time."
+											]
+										},
+										{
+											"type": "entries",
+											"name": "Expected Session Shape",
+											"entries": [
+												"Mission, cover, and entering the square: about 20–30 minutes.",
+												"Market contacts and Suspicion-building play: about 35–50 minutes.",
+												"Three-lot auction: about 30–45 minutes.",
+												"Courier confrontation, negotiation, or security fight: about 40–60 minutes.",
+												"Escape and Bellweather debrief: about 20–30 minutes."
+											]
+										}
 									]
 								},
 								"{@b Keyed-area encounters.} When a scene and a keyed location describe the same encounter, use the roster and objective in the scene. Creatures listed only in the keyed reference apply when the characters explore that location outside the scene sequence."
@@ -4752,7 +4783,7 @@
 											"type": "entries",
 											"name": "Consequences",
 											"entries": [
-												"Advance to level 10 if using milestones."
+												"Do not level here. The party remains level 7; securing Storen Gate completes the Paden + Storen arc and advances the party to level 8."
 											]
 										}
 									]
@@ -4919,7 +4950,48 @@
 										"{@b Useful DCs.} Forge or bluff a routine inspection DC 14 Deception; jam the bell DC 13 Sleight of Hand or appropriate tools; remove the gate bar DC 15 Athletics; stop fire at the mechanism DC 14 Survival, Arcana, or an appropriate spell; identify the commander's escape route DC 14 Investigation.",
 										"{@b Short rest.} Before the gate is open, a Short Rest gives defenders time to consolidate, burn secondary orders, and place the reserve at the gate. After Bellweather troops enter and the command post is secure, a Short Rest is safe.",
 										"{@b Fail-forward.} If the alarm sounds or the commander escapes, the gate can still be taken. The cost is an extra reserve fight, lost secondary intelligence, or the commander becoming a later complication—not mission failure.",
-										"{@b Pacing valve.} If time is short, Bellweather scouts provide a route directly to either the alarm tower or gate mechanism. If time remains, run the full four-objective assault."
+										"{@b Pacing valve.} If time is short, Bellweather scouts provide a route directly to either the alarm tower or gate mechanism. If time remains, run the full four-objective assault.",
+										{
+											"type": "entries",
+											"name": "Two-Phase Assault",
+											"entries": [
+												"{@b Phase 1 — Wall and Gate.} Treat the wall and gate mechanism as one connected tactical problem, not two mandatory combats. If fighting begins on the wall, surviving wall defenders fall back toward the gate mechanism. Roll a new initiative only if there is a real break in the action.",
+												"{@b Phase 2 — Command and Hold.} Once the gate is opening, the command element either makes its move or attempts to withdraw with the orders. The hold sequence happens inside this same phase using surviving listed defenders.",
+												"This keeps the assault to at most two full combats while preserving the feeling of taking a fortified gate."
+											]
+										},
+										{
+											"type": "entries",
+											"name": "Objective Payoffs",
+											"entries": [
+												"{@b Silence the alarm.} The 1 Veteran + 4 Guard reserve never deploys.",
+												"{@b Open the gate.} Bellweather troops arrive at the start of the next round and remove ordinary rank-and-file fighting from the encounter.",
+												"{@b Secure the command post.} The orders survive, the commander cannot organize the round-4 push, and remaining Hobgoblins lose coordinated retreat.",
+												"{@b Hold the mechanism.} If the alarm is silent and command is already secured, Bellweather establishes control after 2 hold rounds instead of 4. If either remains unresolved, use the full 4-round hold sequence.",
+												"Player success should shorten and simplify the battle. Do not make them complete four rounds merely because the chapter says 'hold' if they have already solved the reasons the gate is threatened."
+											]
+										},
+										{
+											"type": "entries",
+											"name": "Defender Movement",
+											"entries": [
+												"Wall survivors retreat toward the gate mechanism when half their group is defeated or the alarm has been rung.",
+												"The gate Veteran prioritizes keeping a character away from the locking bar; Guards shove, grapple, block lanes, or use Help when that is more useful than dealing a few points of damage.",
+												"The Hobgoblin Captain tries to preserve the orders until the gate opens. Once Bellweather troops are entering, the Captain either burns the secondary papers and retreats or commits to one final push if an exit remains.",
+												"The reserve, if activated, arrives once at the end of round 2. There is no second reserve."
+											]
+										},
+										{
+											"type": "entries",
+											"name": "Expected Session Shape",
+											"entries": [
+												"Planning and choosing an approach: about 20–30 minutes.",
+												"Wall/gate infiltration or Phase 1 combat: about 45–70 minutes.",
+												"Opening the mechanism and Bellweather entry: about 15–25 minutes.",
+												"Command confrontation plus hold sequence: about 60–75 minutes.",
+												"Orders, surrender, and aftermath: about 15–20 minutes."
+											]
+										}
 									]
 								},
 								"{@b Keyed-area encounters.} When a scene and a keyed location describe the same encounter, use the roster and objective in the scene. Creatures listed only in the keyed reference apply when the characters explore that location outside the scene sequence.",
@@ -5000,7 +5072,7 @@
 											"type": "entries",
 											"name": "Consequences",
 											"entries": [
-												"Each objective completed before open combat reduces enemy reinforcements."
+												"Each objective completed before open combat creates its specific payoff in the Table-Ready Session Package; only silencing the alarm removes the reserve."
 											]
 										}
 									]
@@ -5014,7 +5086,7 @@
 											"type": "entries",
 											"name": "What Happens",
 											"entries": [
-												"If the bell rings, add one additional group of defenders to the gate encounter after 2 rounds.",
+												"If the bell rings, the single listed reserve of 1 {@creature Veteran|XMM} and 4 {@creature Guard|XMM|Guards} reaches the gate mechanism at the end of round 2.",
 												"Cutting the bell rope, jamming the clapper, or silently removing the sentries prevents the reinforcement."
 											]
 										},
@@ -5120,7 +5192,7 @@
 											"type": "entries",
 											"name": "What Happens",
 											"entries": [
-												"Run 4 rounds of pressure rather than a mass battle. Each round presents one threat: archers, a breach, a retreating squad, or fire near the mechanism. Let the party choose where to intervene."
+												"Run 2 hold rounds if the alarm is silent and the command post is already secured; otherwise run up to 4. Present one threat each round using surviving listed defenders: missile fire, sabotage near the mechanism, an attempt to rebar the gate, or the command element's final push. Do not create new squads for the hold sequence."
 											]
 										},
 										{
@@ -5284,7 +5356,7 @@
 									"type": "entries",
 									"name": "Encounter Guidance",
 									"entries": [
-										"Build the escalation from {@b Skeleton/Zombie} to {@b Ghoul/Ghast}, {@creature Wight|XMM}, {@creature Wraith|XMM}, {@creature Specter|XMM}, and finally the vampire or vampire-spellcaster equivalent appropriate to the party's level. Undead should arrive in distinct scenes rather than one giant attrition swarm."
+										"Use the exact finite roster in the Table-Ready Session Package. Valen Cemetery is not a vampire dungeon and does not escalate through a hidden ladder of Ghouls, Wraiths, Specters, and a second controller. The chapter's pressure comes from two necromantic focuses, endangered civilians, and Hessa's ability to reposition."
 									]
 								},
 								{
@@ -5299,7 +5371,49 @@
 										"{@b Hessa's state.} Hessa bargains once reduced below half hit points, once both focuses are disabled, or once her Wight falls and she has no clear escape. She offers her own research and names no Tyren connection because she has none.",
 										"{@b Short rest.} A restored chapel can support a Short Rest. During that hour Hessa withdraws to the crypt, seals one obvious approach, and prepares her existing defenders. She does not create unlimited new undead or kill named civilians off-screen.",
 										"{@b Useful DCs.} Track removed bodies DC 13 Investigation or Survival; identify a control sigil DC 14 Arcana or Religion; disable a focus DC 15; force a sealed crypt door DC 15 Athletics; calm trapped civilians under active danger DC 13 Persuasion.",
-										"{@b Pacing valve.} If time is short, the civilians point directly to the tower and one focus has already failed. If time remains, use the ignored-threat complication from the chapter before the crypt."
+										"{@b Pacing valve.} If time is short, the civilians point directly to the tower and one focus has already failed. If time remains, use the ignored-threat complication from the chapter before the crypt.",
+										{
+											"type": "entries",
+											"name": "Enemy Placement",
+											"entries": [
+												"{@b Poor Graves.} 6 {@creature Zombie|XMM|Zombies} are being used as labor around the first control focus. They do not pursue beyond the grave field if the party bypasses them.",
+												"{@b Marble Tower.} 2 {@creature Wight|XMM|Wights} guard captives and the tower approach.",
+												"{@b Generating Crypt.} 4 {@creature Skeleton|XMM|Skeletons} guard the second control focus. If bypassed, surviving Skeletons fall back to Hessa's inner mausoleum.",
+												"{@b Inner Mausoleum.} {@creature Hessa Vale|NCFA}, 1 {@creature Wight|XMM}, plus any surviving Skeletons from the Generating Crypt. These are the only starting creatures in the finale."
+											]
+										},
+										{
+											"type": "entries",
+											"name": "Hessa Tactics",
+											"entries": [
+												"Hessa does not stand still for the party's focus fire. She begins behind cover if warned, uses Misty Step to maintain distance, and uses her Wight or surviving Skeletons to block direct pursuit.",
+												"She wants to escape with her research. If both focuses are disabled, her Wight falls, or she drops below half hit points with no safe route, she offers terms rather than waiting to be killed.",
+												"Use her printed offensive spells when the situation supports them, but she does not deliberately destroy her own research, captives, or escape route just to maximize damage."
+											]
+										},
+										{
+											"type": "entries",
+											"name": "Cemetery Threat Complications",
+											"entries": [
+												"The ignored-threat track never adds monsters to the finite roster.",
+												"{@b Low.} No extra complication.",
+												"{@b Rising.} Open graves and churned mud make one approach Difficult Terrain.",
+												"{@b Serious.} Hessa has moved the captives into the Marble Tower, making the Wight scene a rescue problem as well as a fight.",
+												"{@b Severe.} Hessa knows the party is coming; the inner-mausoleum door is sealed and she begins the finale behind cover with an escape route already open."
+											]
+										},
+										{
+											"type": "entries",
+											"name": "Expected Session Shape",
+											"entries": [
+												"Missing-person investigation and arrival: about 20–30 minutes.",
+												"Poor Graves and first focus: about 35–50 minutes.",
+												"Marble Tower/captive rescue: about 40–55 minutes.",
+												"Generating Crypt and second focus: about 25–40 minutes.",
+												"Hessa finale: about 50–70 minutes.",
+												"Funeral/reclamation aftermath: about 15 minutes."
+											]
+										}
 									]
 								},
 								"{@b Keyed-area encounters.} When a scene and a keyed location describe the same encounter, use the roster and objective in the scene. Creatures listed only in the keyed reference apply when the characters explore that location outside the scene sequence.",
@@ -5350,14 +5464,16 @@
 											"type": "entries",
 											"name": "Zone A — The Poor Graves",
 											"entries": [
-												"The outer graves contain newly animated {@creature Skeleton|XMM|Skeletons} and signs that bodies have been removed from older plots. A large crypt houses the first control focus: a bound {@creature Specter|XMM} or {@creature Wraith|XMM} maintaining the animation. Breaking its funerary sigil, laying the spirit to rest, or defeating it stops new skeletons from rising."
+												"Six {@creature Zombie|XMM|Zombies} work among disturbed graves while a necromantic sigil in a low crypt serves as the first control focus. The Zombies are labor and perimeter guards, not an endless rising swarm.",
+												"The focus can be destroyed or disabled using the chapter's two-success control-focus procedure. No additional Specter or Wraith guards it."
 											]
 										},
 										{
 											"type": "entries",
 											"name": "Zone B — The Marble Tower",
 											"entries": [
-												"A ruined white tower contains {@creature Zombie|XMM|Zombies} and one stronger guardian such as a {@creature Wight|XMM}. The encounter objective is to reach the upper chamber and destroy a necromantic vessel before the dead overwhelm the stair. The vessel can be smashed, consecrated, or disabled with appropriate magic."
+												"Two {@creature Wight|XMM|Wights} use the ruined white tower as a holding point and lookout. If the Cemetery Threat is Serious or Severe, the five trapped civilians are held here; otherwise they are sheltering at the chapel.",
+												"The encounter objective is to free or reach the captives and prevent the Wights from using the narrow stair to isolate characters."
 											]
 										},
 										{
@@ -5379,7 +5495,8 @@
 											"type": "entries",
 											"name": "Zone E — The Broken Chapel",
 											"entries": [
-												"The chapel has been desecrated and converted into a staging point. Use a mixed encounter of {@creature Wight|XMM|Wights}, {@creature Specter|XMM|Specters}, and lesser undead appropriate to the party. Restoring the altar weakens the inner controller by removing one environmental effect from the finale."
+												"The chapel is damaged but can be reclaimed as the party's safe point. If the civilians are not at the Marble Tower, three cemetery workers and two mourners shelter in the vestry.",
+												"Restoring the altar requires ten minutes of work, suitable divine magic, or a DC 14 Religion check. Once restored, the chapel can support the chapter's Short Rest and the party has advantage on the first check made to disable the second control focus. There is no additional undead encounter here."
 											]
 										},
 										{
@@ -5393,7 +5510,8 @@
 											"type": "entries",
 											"name": "Zone G — The Generating Crypt",
 											"entries": [
-												"A second necromantic focus continually reanimates nearby corpses. Characters can destroy the focus, reverse its runes, or use divine magic to consecrate it. Success prevents reinforcements during the finale."
+												"Four {@creature Skeleton|XMM|Skeletons} guard the second necromantic focus. Characters can destroy the focus, reverse its runes, or use divine magic to consecrate it.",
+												"If the party bypasses these Skeletons, survivors fall back to Hessa's inner mausoleum. Disabling the focus prevents the chapter's limited finale reinforcements."
 											]
 										},
 										{
@@ -5584,7 +5702,7 @@
 											"type": "entries",
 											"name": "Consequences",
 											"entries": [
-												"Advance to level 12 if using milestones. Maren Isle becomes the next urgent lead because the Storen River is beginning to sicken people."
+												"Do not level here. The party remains level 8. Maren Isle becomes the next urgent problem because the Storen River is beginning to sicken people; resolving Maren completes the level-8 arc and advances the party to level 9."
 											]
 										}
 									]
@@ -5741,7 +5859,7 @@
 									"type": "entries",
 									"name": "Encounter Guidance",
 									"entries": [
-										"Use spellcaster stat blocks such as {@creature Mage|XMM}, {@creature Archmage|XMM} (only when level-appropriate), {@creature Cult Fanatic|XMM}, and magical guardians such as {@creature Gargoyle|XMM}, {@creature Helmed Horror|XMM}, {@creature Invisible Stalker|XMM}, or elementals. Keep the pyramid/island exploration structure."
+										"Use the exact finite defenders in the Table-Ready Session Package. The default session should contain no more than two full stand-up combats. Safe landing, prisoner information, greetings, teleporters, and bypass routes can remove or compress the dock/lower-maze encounters without reducing the importance of the laboratory and control-room objectives."
 									]
 								},
 								{
@@ -5751,13 +5869,52 @@
 										"{@b Milestone.} The party enters Maren Isle at level 8. Resolving the independent Bellweather problem + Maren Isle arc advances the party to level 9.",
 										"{@b Expedition sequence.} Run five beats: establish the river problem; choose a landing; cross the lower maze and free prisoners; confront Yaren's laboratory team; shut down the three pressure nodes. The party can reorder or bypass interior routes, but the control-room shutdown is the only required final objective.",
 										"{@b Finite defenders.} Dock: 2 {@creature Animated Armor|XMM} and 2 {@creature Water Weird|XMM|Water Weirds}. Lower maze: 2 {@creature Gargoyle|XMM|Gargoyles} and 1 {@creature Helmed Horror|XMM} guarding the prisoner/control route. Laboratory: {@creature Yaren|NCFA}, 2 {@creature Veteran|XMM|Veterans}, and 1 {@creature Invisible Stalker|XMM}. No additional defenders appear.",
-										"{@b Alert 0–2.} Start at 0. Obvious combat at the dock or a failed attempt to manipulate the teleporter network raises Alert by 1. At Alert 1, the lower-maze defenders take prepared positions. At Alert 2, Yaren moves his notes to the control room and begins with defensive magic active. Alert changes preparation, not creature count.",
+										"{@b Alert 0–2.} Start at 0. Obvious combat at the dock or a failed attempt to manipulate the teleporter network raises Alert by 1. At Alert 1, the lower-maze defenders take prepared positions and the Invisible Stalker begins moving toward the laboratory. At Alert 2, Yaren moves his notes to the control room and the Invisible Stalker begins the laboratory confrontation already present. Alert changes preparation and arrival timing, not creature count.",
 										"{@b Prisoners.} Six captives from different regional communities are alive in the lower level. Freeing them provides testimony, identifies a safe control-room approach, and seeds later regional contacts. They do not become combat followers unless a specific player plan makes that sensible.",
 										"{@b Yaren's state.} Yaren wants his notes and his life. He bargains or surrenders if reduced below half hit points, if both Veterans fall, or if the party reaches the controls with his escape cut off. At Alert 2 he attempts to flee with the notes rather than fight to the death.",
 										"{@b Pressure-node challenge.} The control room has 3 visible nodes. Disable all 3. Each node takes one successful DC 15 Arcana, Investigation, thieves' tools, smith's tools, or clearly appropriate action. A failure deals 2d6 force damage to the acting character and raises pressure. After the second total failure, an escalating whine gives everyone one full round to move before a 4d6 force pulse hits the chamber; the challenge continues afterward rather than ending in an arbitrary explosion.",
 										"{@b Short rest.} Once the prisoner level is secured, it can support a Short Rest. During the hour, Alert rises by 1 to a maximum of 2 and Yaren repositions according to that state. No new creatures arrive.",
 										"{@b Useful DCs.} Poisoned water DC 15 Constitution save as written; locate a safer landing DC 13 Survival or Investigation; manipulate a teleporter safely DC 15 Arcana; disable a pressure node DC 15; understand Yaren's transference notes DC 14 Arcana.",
-										"{@b Pacing valve.} If time is short, the freed prisoners supply the safe route and bypass one maze defender group. If time remains, use the full lower-maze route and teleporter complication."
+										"{@b Pacing valve.} If time is short, the freed prisoners supply the safe route and bypass one maze defender group. If time remains, use the full lower-maze route and teleporter complication.",
+										{
+											"type": "entries",
+											"name": "Defender Placement and Arrival",
+											"entries": [
+												"{@b Dock.} 2 {@creature Animated Armor|XMM} and 2 {@creature Water Weird|XMM|Water Weirds}. A safe landing found during investigation can bypass this fight entirely.",
+												"{@b Lower Maze.} 2 {@creature Gargoyle|XMM|Gargoyles} watch the main intersection and 1 {@creature Helmed Horror|XMM} guards the prisoner/control route. Prisoner information or the teleporter network can bypass one of these positions.",
+												"{@b Laboratory.} {@creature Yaren|NCFA} and 2 {@creature Veteran|XMM|Veterans} begin here. The {@creature Invisible Stalker|XMM} is the island's mobile hunter.",
+												"{@b Invisible Stalker timing.} At Alert 0, it reaches an active laboratory fight at the end of round 3. At Alert 1, it arrives at the end of round 2. At Alert 2, it begins in the laboratory. If the party already defeated, trapped, or diverted it elsewhere, it does not appear again."
+											]
+										},
+										{
+											"type": "entries",
+											"name": "Yaren Tactics",
+											"entries": [
+												"Yaren's objective is to escape with his notes, not to kill every intruder. He uses positioning, Fly, Invisibility, Misty Step, and his bodyguards to keep an exit available.",
+												"He uses Cone of Cold or a high-level Fireball when cornered or when doing so clearly creates an escape, not as an automatic opening move that also destroys his laboratory, specimens, or route out.",
+												"If both Veterans fall, Yaren drops below half hit points, or the party reaches the controls while his escape is cut off, he bargains or surrenders as already specified."
+											]
+										},
+										{
+											"type": "entries",
+											"name": "Combat Compression",
+											"entries": [
+												"If the dock becomes a full combat, make the lower maze primarily navigation/rescue unless the players deliberately attack its defenders.",
+												"If the dock is bypassed, the lower maze can provide the first full combat.",
+												"The laboratory is the default major combat. Do not force all three encounter groups into separate initiative just because they are printed on the map."
+											]
+										},
+										{
+											"type": "entries",
+											"name": "Expected Session Shape",
+											"entries": [
+												"River investigation and landing choice: about 20–30 minutes.",
+												"Dock or lower-maze combat/navigation: about 45–65 minutes.",
+												"Prisoners and laboratory exploration: about 30–40 minutes.",
+												"Yaren confrontation: about 50–70 minutes.",
+												"Pressure-node shutdown and resolution: about 25–40 minutes."
+											]
+										}
 									]
 								},
 								"{@b Keyed-area encounters.} When a scene and a keyed location describe the same encounter, use the roster and objective in the scene. Creatures listed only in the keyed reference apply when the characters explore that location outside the scene sequence.",
@@ -5824,7 +5981,7 @@
 											"entries": [
 												"{@b Guard Post.} One heavily altered captive has been conditioned to attack anyone who passes without a spoken greeting. Scratched words near the threshold and repeated “hello” marks on the wall reveal the trigger. The party can speak the greeting, calm the captive, disable the door, or fight if necessary.",
 												"{@b Fountain Chamber.} Pumps force black contaminant into the river. The machinery has three visible pressure nodes. Characters can shut the system down safely with three successful actions using Arcana, Investigation, thieves' tools, smith's tools, or brute force. On a failed attempt, pressure rises and creates an environmental complication; it never explodes without warning. Once two nodes are disabled, an obvious escalating whine gives everyone one round to retreat before any major rupture.",
-												"{@b Yaren's Apartment.} Yaren is a {@creature Mage|XMM} or another arcane NPC appropriate to the party's tier. He wants specimens and research, not martyrdom. He bargains if cornered, uses control magic before lethal magic, and attempts to escape through the teleport pad or exterior route when defeat becomes likely.",
+												"{@b Yaren's Apartment.} {@creature Yaren|NCFA} uses the campaign's Yaren stat block. He wants specimens and research, not martyrdom. He bargains if cornered, uses control magic before lethal magic, and attempts to escape through the teleport pad or exterior route when defeat becomes likely.",
 												"{@b Pumping Room.} Three Reedscale prisoners are shackled to the pumping apparatus. They recoil from anyone wearing Yaren's insignia but stop resisting the moment characters begin freeing them. They know Yaren's routines, the teleport sequence, the location of other captives, and the hidden exit."
 											]
 										},
@@ -5990,8 +6147,8 @@
 											"type": "entries",
 											"name": "What Happens",
 											"entries": [
-												"The party must shut down the discharge without causing an arcane rupture. Require three successful DC 15 Arcana, Investigation, or tool checks before two failures; appropriate spells can substitute.",
-												"On a failure, each creature in the room takes 2d6 force damage. The system still can be shut down."
+												"The party must disable all three pressure nodes. Each node requires one successful DC 15 Arcana, Investigation, thieves' tools, smith's tools, or clearly appropriate action; appropriate spells can solve a node automatically when they directly address the mechanism.",
+												"Each failed attempt deals 2d6 force damage only to the acting character. After the second total failure, the chamber gives one full round of warning before a 4d6 force pulse affects creatures that remain inside. Failure never resets completed nodes."
 											]
 										},
 										{
