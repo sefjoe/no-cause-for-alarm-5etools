@@ -6,17 +6,17 @@
 				"json": "NCFA",
 				"abbreviation": "NCFA",
 				"full": "No Cause for Alarm: Ruins of Bellweather",
-				"version": "4.19",
+				"version": "4.20",
 				"authors": [
 					"No Cause for Alarm Campaign"
 				],
-				"dateLastModified": 1791346200
+				"dateLastModified": 1791346500
 			}
 		],
 		"edition": "one",
 		"dateAdded": 1789528955,
-		"dateLastModified": 1791346200,
-		"_dateLastModifiedHash": "6ac5c61819"
+		"dateLastModified": 1791346500,
+		"_dateLastModifiedHash": "6ac5c74420"
 	},
 	"adventure": [
 		{
@@ -6279,12 +6279,36 @@
 										"These communities are not enemy biomes organized by species. Each location is a political or social group with its own leadership, interests, and internal disagreements. Some remain primarily one species because they are kinship communities; others are mixed. The party can negotiate, ally, trade, intimidate, infiltrate, or fight depending on what the faction is actually doing."
 									]
 								},
-								"{@b Recommended level:} 13–15",
+								"{@b Recommended level:} 9–14",
 								{
 									"type": "inset",
 									"name": "Table-Ready Use",
 									"entries": [
 										"These wilderness sites are optional alliances, threats, and resources—not a mandatory checklist. Choose the sites that matter to the party's strategy. Currentize each community with current stat blocks and give intelligent factions goals beyond \"fight the party.\""
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Regional Milestone Track",
+									"entries": [
+										"{@b Start at level 9.} This chapter is a regional campaign arc, not one oversized session and not six mandatory dungeons.",
+										"{@b Reach level 10} after the party establishes two meaningful peaceful regional connections and a dependable route out of Bellweather; Kerren + Waylen is the default combination, but equivalent player-created alliances count.",
+										"{@b Reach level 11} after the party resolves a major internal political problem such as the Rellan manipulation and gains a third reliable regional relationship.",
+										"{@b Reach level 12} after the Ash Road raiding threat is neutralized, turned, or rendered unable to threaten the route.",
+										"{@b Reach level 13} after the party secures a major military or logistical ally such as Emmer Hold.",
+										"{@b Reach level 14} after the Iron Banner question is resolved and the party has at least three strong alliances plus one safe strategic route toward the endgame.",
+										"{@b Substitution rule.} The players do not need to visit every named community. A comparably difficult regional success can fill a milestone if their choices create a different route."
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Table-Ready Regional Rules",
+									"entries": [
+										"{@b Rest.} Long Rests are safe inside a community that has accepted the party or at a secured allied camp. On an unsecured road, a Long Rest gives hostile groups time to move couriers, fortify a camp, or change a route; use one concrete consequence rather than a random attrition encounter.",
+										"{@b Travel pacing.} Treat travel between major sites as one decision plus at most one meaningful obstacle. Do not consume a session with routine wilderness checks unless the players choose a route whose danger matters.",
+										"{@b Alliance threshold.} Three strong alliances plus a safe route are enough to proceed toward Zennar. Additional alliances remove complications from Chapter 17 rather than becoming prerequisites.",
+										"{@b Evidence.} Regional groups know pieces of Tyren's logistics, not secret universal lore. Each community contributes only what its people could reasonably know.",
+										"{@b Opposition.} Every hostile roster in this chapter is finite. Morale and surrender matter; defeating leadership can end a fight without killing everyone."
 									]
 								},
 								"These wilderness episodes are grouped together here so the adventure can use them as a regional arc rather than interrupting the city chapters at random. Not every group encountered outside Bellweather is an enemy. The party should be able to create alliances, negotiate passage, or exploit rivalries. Use the source lairs and maps while applying current encounter math.",
@@ -6585,6 +6609,16 @@
 											"entries": [
 												"Resolve the water dispute fairly and Kerren provides scouts and food."
 											]
+										},
+										{
+											"type": "entries",
+											"name": "Table-Ready Resolution",
+											"entries": [
+												"{@b At the table.} The extortion crew is exactly 1 {@creature Veteran|XMM} and 4 {@creature Thug|XMM|Thugs}. Witnesses identify the taxation scheme automatically once the party listens; DC 14 Investigation reveals the command marks immediately.",
+												"{@b Social resolution.} A fair shared-water agreement requires no roll if both local sides accept the terms. DC 14 Persuasion can move a reluctant but non-hostile side when a concrete concession is offered.",
+												"{@b Morale.} The extortionists flee or surrender when the Veteran is below half hit points or 2 Thugs are defeated. No reinforcements arrive.",
+												"{@b Reward state.} Fair resolution earns scouts, food, and a safe local rest point; simply driving the outsiders away earns gratitude but less political trust."
+											]
 										}
 									]
 								},
@@ -6628,6 +6662,15 @@
 											"entries": [
 												"Waylen provides guides and a hidden route if helped."
 											]
+										},
+										{
+											"type": "entries",
+											"name": "Table-Ready Resolution",
+											"entries": [
+												"{@b At the table.} The only hostile creature is 1 {@creature Bulette|XMM}. It retreats once below half hit points unless trapped.",
+												"{@b Rescue clock.} Free the trapped hunters with 3 successes before 2 failures using DC 14 Athletics, Survival, Medicine, suitable tools, or clear magic. A failure causes falling debris or 2d6 bludgeoning damage to a rescuer; it does not kill a hunter off-screen.",
+												"{@b Reward state.} Returning the hunters earns guides and the hidden Ash Road route. Killing the Bulette is optional."
+											]
 										}
 									]
 								},
@@ -6669,6 +6712,16 @@
 											"name": "Consequences",
 											"entries": [
 												"Exposing manipulation earns Rellan’s political support and messengers."
+											]
+										},
+										{
+											"type": "entries",
+											"name": "Table-Ready Resolution",
+											"entries": [
+												"{@b At the table.} The Tyren-paid agent uses 1 {@creature Assassin|XMM} stat block and has no combat reinforcements. The agent's goal is escape with the payment ledger.",
+												"{@b Evidence.} Three sources exist: payment records, a bribed agitator, and a hidden message cache. Any two are enough to convince Speaker Mara; one successful DC 14 Investigation or Insight check reveals one source early.",
+												"{@b Public meeting.} If exposed in front of witnesses, the agent runs. If cornered, the agent fights only long enough to create an escape route.",
+												"{@b Reward state.} Proving the manipulation earns Rellan's political support and messenger network."
 											]
 										}
 									]
@@ -6714,6 +6767,17 @@
 											"entries": [
 												"Breaking the leadership opens the Ash Road and weakens Tyren’s regional reach."
 											]
+										},
+										{
+											"type": "entries",
+											"name": "Table-Ready Resolution",
+											"entries": [
+												"{@b At the table.} The command group is exactly 1 {@creature Gladiator|XMM}, 2 {@creature Veteran|XMM|Veterans}, and 4 {@creature Scout|XMM|Scouts}. Other camp followers, dependents, and doubting soldiers are not an extra encounter pool.",
+												"{@b Objectives.} Breaking any two of these ends the warband's ability to raid: defeat/turn Kesh, release or win over the doubting lieutenants, disable mounts and signal gear, or seize the command orders.",
+												"{@b Alarm.} If warned, the same seven combatants consolidate around Kesh and the mounts. No second wave appears.",
+												"{@b Morale.} Scouts withdraw when Kesh falls or both Veterans surrender. Kesh bargains if isolated and confronted with proof Tyren intends to replace him.",
+												"{@b Rest.} A Short Rest before the command breaks lets the warband move the mounts and send one courier toward Emmer Hold; it does not create new soldiers."
+											]
 										}
 									]
 								},
@@ -6757,6 +6821,16 @@
 											"name": "Consequences",
 											"entries": [
 												"Resolving the split gives the party soldiers or supplies for the finale."
+											]
+										},
+										{
+											"type": "entries",
+											"name": "Table-Ready Resolution",
+											"entries": [
+												"{@b At the table.} If force is required, the hostile command element is {@creature Commander Darr Vale|NCFA} plus 4 {@creature Guard|XMM|Guards}. Captain Emmer's loyalists remain a political force and do not become another initiative block unless the party attacks them.",
+												"{@b Leverage.} Darr's secret orders, testimony from one officer, and control of the armory are three leverage points. Any two are enough to collapse his position without a fight.",
+												"{@b Morale.} Guards stand down when Darr is defeated, arrested, or publicly abandoned by Emmer.",
+												"{@b Reward state.} A clean resolution earns soldiers or supplies for the finale; destroying the hold wins the immediate conflict but costs that future support."
 											]
 										}
 									]
@@ -6802,6 +6876,16 @@
 											"entries": [
 												"Alliance provides elite troops; neutrality prevents reinforcements reaching Tyren; hostility creates one extra complication in Chapter 17."
 											]
+										},
+										{
+											"type": "entries",
+											"name": "Table-Ready Resolution",
+											"entries": [
+												"{@b At the table.} The fort is not a mass-combat dungeon. If negotiations fail completely, use one command confrontation: Haren Vell represented by a {@creature Knight|XMM}, 2 {@creature Veteran|XMM|Veterans}, and 4 {@creature Guard|XMM|Guards}. Other soldiers react to the outcome rather than joining the same initiative.",
+												"{@b Decision points.} The party can prove Tyren's command relationship, destroy or seize the signal device, expose the sealed planar vessel's purpose, or negotiate neutrality. Two strong evidence points are enough for Haren to consider neutrality; three plus a viable security plan can win alliance.",
+												"{@b Morale.} If Haren orders a stand-down, the fort obeys. If Haren falls during a clearly political confrontation, the Veterans call for terms rather than feed the whole garrison into combat.",
+												"{@b Reward state.} Alliance removes an outer Varen complication; neutrality prevents Iron Banner reinforcements; hostility adds one defined endgame complication."
+											]
 										}
 									]
 								},
@@ -6844,7 +6928,7 @@
 					"name": "Chapter 16: The Zennar Outpost",
 					"id": "016",
 					"entries": [
-						"{@b Recommended level:} 15–16",
+						"{@b Recommended level:} 14",
 						{
 							"type": "entries",
 							"name": "Chapter Overview",
@@ -6890,6 +6974,21 @@
 									"name": "Encounter Guidance",
 									"entries": [
 										"Treat this as political danger as much as combat. Use {@creature Veteran|XMM}, {@creature Knight|XMM}, {@creature Mage|XMM}, {@creature Spy|XMM}, {@creature Assassin|XMM}, and other current humanoid stat blocks according to role. Preserve the diplomatic trap and evidence that exposes Cardon."
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Table-Ready Session Package",
+									"entries": [
+										"{@b Milestone.} The party enters Zennar at level 14. Surviving the betrayal, preserving enough proof, and making it back to Bellweather advances the party to level 15. From this point forward, the campaign is in its endgame.",
+										"{@b Finite opposition.} Assassination team: {@creature Varek Holt|NCFA}, 2 {@creature Warrior Veteran|XMM|Warrior Veterans}, and 4 {@creature Scout|XMM|Scouts}. Main-gate security reserve: 1 {@creature Mage|XMM} and 4 {@creature Guard|XMM|Guards}. These are the only combat groups required for the chapter.",
+										"{@b Suspicion 0–3.} Start at 0. At 1, the party is watched. At 2, civilians are quietly moved away from their corridor and guards begin restricting movement. At 3, the assassination/arrest attempt begins. Opening Cardon's packet or catching the forged routing order reveals the trap immediately and lets the party act before Suspicion reaches 3.",
+										"{@b Rest.} A Short or Long Rest inside Zennar while Suspicion is 2 or higher triggers the assassination attempt before the rest completes. At Suspicion 0–1, the rest can complete, but Suspicion rises by 1 as the outpost has time to coordinate.",
+										"{@b Evidence ladder.} Four independent proof sources exist: Cardon's sealed packet, the Zennar command order, testimony from an outpost official or surviving attacker, and corroboration from regional allies who can verify the routing or political context. Any two are enough to force a legitimate public hearing in Bellweather.",
+										"{@b Escape.} If the party does not fight its way out, use 3 successes before 2 failures, usually DC 15, with Stealth, Deception, Athletics, Acrobatics, forged orders, or useful magic. On failure, the main-gate reserve intercepts them; it does not summon an endless garrison.",
+										"{@b Morale.} The assassination team withdraws or surrenders if Varek falls and half the team is down. The gate reserve protects the outpost rather than pursuing indefinitely beyond its defensible perimeter.",
+										"{@b Fail-forward.} Losing the packet does not erase Perrin's betrayal. A surviving attacker, duplicated order, or regional witness preserves a route to the same political truth at higher cost.",
+										"{@b Pacing valve.} If time is short, let opening the packet expose the trap immediately and move to the escape. If time remains, play the suspicion stages and let the players discover the betrayal from behavior before the attack."
 									]
 								},
 								"{@b Keyed-area encounters.} When a scene and a keyed location describe the same encounter, use the roster and objective in the scene. Creatures listed only in the keyed reference apply when the characters explore that location outside the scene sequence.",
@@ -6948,7 +7047,7 @@
 											"type": "entries",
 											"name": "The Assassination Attempt",
 											"entries": [
-												"If the party remains overnight without exposing the plot, three {@b Veterans} and one {@creature Mage|XMM}, supported by four {@creature Guard|XMM|Guards}, attempt a quiet arrest-and-kill operation. They gain only the advantages they have actually earned through stealth and positioning. Roll attacks and saving throws normally; sleeping characters use the normal 2024 rules.",
+												"If the party remains overnight without exposing the plot, {@creature Varek Holt|NCFA}, 2 {@creature Warrior Veteran|XMM|Warrior Veterans}, and 4 {@creature Scout|XMM|Scouts} attempt a quiet arrest-and-kill operation. They gain only the advantages they have actually earned through stealth and positioning. Roll attacks and saving throws normally; sleeping characters use the normal 2024 rules. A separate main-gate reserve of 1 {@creature Mage|XMM} and 4 {@creature Guard|XMM|Guards} responds only if the party tries to force the primary exit after the alarm.",
 												"The attackers withdraw if the operation becomes loud or clearly fails. Most of the garrison believes the disturbance is an external attack, creating confusion the characters can exploit."
 											]
 										},
@@ -7231,7 +7330,7 @@
 					"name": "Chapter 17: Varen Keep and the Radiant Well",
 					"id": "017",
 					"entries": [
-						"{@b Recommended level:} 16",
+						"{@b Recommended level:} 15, advancing to 16 before entering Varen Keep",
 						{
 							"type": "entries",
 							"name": "Maps",
@@ -7345,6 +7444,16 @@
 										"Use the {@creature Adult Bronze Dragon|XMM} as Soren's base stat block. Tyren is represented narratively as the possessing intelligence and mechanically with a limited fiery-aura/possession overlay described in this chapter. For a second phase, use a {@creature Efreeti|XMM} stat block reskinned as Tyren temporarily manifesting in flame if the group needs a level-16 climax. Avoid the Ancient Bronze Dragon stat block for a four-character level-16 party unless the group is unusually optimized."
 									]
 								},
+								{
+									"type": "entries",
+									"name": "Endgame Advancement",
+									"entries": [
+										"{@b Controlled Bellweather.} The level-15 party returns from Zennar to a city where Perrin has used genuine institutions, emergency procedure, money, and public messaging to brand them dangerous. The city is not uniformly loyal to him and is not under mass mind control.",
+										"{@b Break the political hold.} Secure any 2 of 3 footholds: place authenticated evidence into an independent public record, split the guard/administrative chain so Perrin cannot lawfully order the party's arrest, and win a public institution or major civic witness willing to stand behind the accusation.",
+										"{@b Perrin's responsibility.} Perrin chose this path. Tyren may exploit fear and opportunity, but Perrin's institutional betrayal is not excused as possession.",
+										"{@b Advance to level 16} when Perrin's formal ability to control Bellweather is broken and the coalition has a viable route to Varen Keep. Allow one Long Rest in a genuinely secured allied location before the Varen assault. The keep itself is the level-16 finale."
+									]
+								},
 								"{@b Keyed-area encounters.} When a scene and a keyed location describe the same encounter, use the roster and objective in the scene. Creatures listed only in the keyed reference apply when the characters explore that location outside the scene sequence.",
 								{
 									"type": "entries",
@@ -7361,6 +7470,21 @@
 											]
 										},
 										"Alert changes pressure; it never removes routes to the climax, invalidates earlier alliances, or turns Varen Keep into a room-by-room attrition dungeon."
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Table-Ready Finale Package",
+									"entries": [
+										"{@b Controlled-Bellweather enforcement.} If Perrin orders a direct arrest, use one finite squad: 1 {@creature Knight|XMM}, 4 {@creature Guard|XMM|Guards}, and 2 {@creature Scout|XMM|Scouts}. They can stand down when shown authenticated orders, when their commander withdraws support, or when Perrin's authority visibly collapses.",
+										"{@b Varen rests.} No Long Rest is available after the assault begins. One Short Rest is possible after the party secures a control-node area; during the hour Alert increases by 1 and surviving defenders consolidate, but no new creatures are created.",
+										"{@b Control nodes.} Signal chamber: if active during Soren's fight, 2 Veterans and 4 Guards arrive at the end of round 2; disabling it removes that wave. Ritual chamber: while active, Soren has +2 AC from Tyren's ward; disabling it removes the bonus and enables separation checks. Reserve-host chamber: if uncleared, three prepared captives remain valid transference targets; clearing it removes them.",
+										"{@b Soren separation.} Once the ritual chamber is disabled, a character adjacent to a control focus can use an action for DC 17 Arcana, Religion, Persuasion, or a clearly justified equivalent. Three total successes begin separation. A failed check does not reset progress. If Soren reaches 0 hit points first, he falls unconscious and Tyren immediately begins transference.",
+										"{@b Well surge at Initiative 20.} While Tyren controls Soren or attempts transference, choose or roll one: (1) radiant flare—DC 17 Dexterity save, 3d8 Radiant damage on a failure, half on success; (2) gravity pulse—DC 17 Strength save or pulled up to 20 feet toward the active conduit; (3) compulsion pulse—DC 17 Wisdom save or Tyren forces one immediate movement or simple action. A failed save never gives Tyren multi-round control of a player character.",
+										"{@b Transference challenge.} Keep the existing 4-success-before-3-complications structure, default DC 17. Each character can contribute once per round with Arcana, Religion, Constitution, protective magic, recovered lore, or another concrete method. On a complication, use one brief one-turn compulsion, one Well surge, or environmental damage.",
+										"{@b Three complications.} If the party reaches 3 complications before 4 successes, Tyren manifests outside a host using {@creature Tyren, Manifested|NCFA}. This is a fail-forward second phase, not a replacement for the dragon encounter. Defeating or containing the manifestation gives the party one final uncontested action to seal, alter, or redirect the Well.",
+										"{@b Alliance payoff.} Each major regional ally removes one outer complication before the Soren fight: a patrol, blocked route, artillery position, or reinforcement threat. Apply the benefit visibly so the players can see that Chapter 15 mattered.",
+										"{@b Pacing valve.} Run 3–5 set pieces before Soren, not a room-by-room clear. If time is short, two node scenes plus Soren and transference are sufficient. If time remains, add one keyed-area complication or false-command-room scene."
 									]
 								}
 							]
@@ -7454,6 +7578,44 @@
 													]
 												},
 												"The final epilogue should show the consequences in Bellweather rather than declare one choice objectively correct."
+											]
+										}
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Scene 0: Controlled Bellweather",
+									"entries": [
+										"The party returns from Zennar with Perrin's public narrative already in place: they are described as unstable, compromised, or criminal, while Bellweather appears unnaturally orderly and prosperous because Perrin's machine is still functioning.",
+										{
+											"type": "entries",
+											"name": "What Happens",
+											"entries": [
+												"Perrin has not mind-controlled the city. He has used emergency authority, contracts, records, guard orders, friendly merchants, and prepared public statements to make resistance look unlawful.",
+												"The party needs any 2 of 3 footholds before moving openly: authenticated evidence in an independent record, a split in the guard/administrative chain, and a public institution or major civic witness willing to stand behind the accusation.",
+												"Evidence from Zennar is enough to begin. Regional allies, Marren records, Koven testimony, or Cardon paper trails can provide corroboration depending on what the players preserved."
+											]
+										},
+										{
+											"type": "entries",
+											"name": "Encounter",
+											"entries": [
+												"If Perrin orders an arrest before his authority breaks, use 1 {@creature Knight|XMM}, 4 {@creature Guard|XMM|Guards}, and 2 {@creature Scout|XMM|Scouts}. The squad is executing apparently lawful orders and can stand down; it is not a death squad."
+											]
+										},
+										{
+											"type": "entries",
+											"name": "Perrin's End State",
+											"entries": [
+												"With two footholds secured, Perrin loses the ability to use Bellweather's institutions as a weapon. He may bargain, flee, submit to arrest, or choose violence based on the consequences the campaign has produced.",
+												"Do not require Perrin to survive or die for the Varen finale to happen. His political collapse opens the route; Tyren and the Radiant Well remain the supernatural endgame."
+											]
+										},
+										{
+											"type": "entries",
+											"name": "Milestone",
+											"entries": [
+												"When Perrin's formal control is broken and the route to Varen is secured, advance the party to level 16 and allow one Long Rest in a genuinely safe allied location before the assault."
 											]
 										}
 									]
