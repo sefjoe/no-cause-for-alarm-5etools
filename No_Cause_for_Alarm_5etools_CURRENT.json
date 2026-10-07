@@ -6,17 +6,17 @@
 				"json": "NCFA",
 				"abbreviation": "NCFA",
 				"full": "No Cause for Alarm: Ruins of Bellweather",
-				"version": "4.17",
+				"version": "4.18",
 				"authors": [
 					"No Cause for Alarm Campaign"
 				],
-				"dateLastModified": 1791171427
+				"dateLastModified": 1791345900
 			}
 		],
 		"edition": "one",
 		"dateAdded": 1789528955,
-		"dateLastModified": 1791171427,
-		"_dateLastModifiedHash": "ce79e38c78"
+		"dateLastModified": 1791345900,
+		"_dateLastModifiedHash": "6ac5c4ec18"
 	},
 	"adventure": [
 		{
@@ -2315,7 +2315,7 @@
 					"name": "Chapter 6: Koven House",
 					"id": "006",
 					"entries": [
-						"{@b Recommended level:} 5–6",
+						"{@b Recommended level:} 4",
 						{
 							"type": "entries",
 							"name": "Maps",
@@ -2420,7 +2420,7 @@
 								{
 									"type": "inset",
 									"entries": [
-										"### ##### Treasure Override Keep the chapter’s immediately spendable or saleable value near {@b 1,500 gp total}. Divide that value between unclaimed tribute, coin, gems, legitimate salvage, and any civic recovery payment; do not count identifiable stolen property twice. The party also keeps {@b one +1 weapon}, {@b one +1 shield}, 2 useful spell scrolls of 3rd level or lower, and 2 consumables. Remove the pile of multiple +1 weapons, +2 shield, high-level scrolls, and oversized gem haul."
+										"### ##### Treasure Override Keep the chapter’s immediately spendable or saleable value near {@b 1,500 gp total}. Divide that value between unclaimed tribute, coin, gems, legitimate salvage, and civic recovery payment; do not count identifiable stolen property twice. Award {@b one uncommon permanent item} suited to a current equipment gap (normally a +1 weapon or +1 shield), {@b 2 spell scrolls of 3rd level or lower}, and {@b 2 consumables}. Add a second uncommon permanent item only if the party is behind the campaign curve."
 									]
 								},
 								{
@@ -2428,6 +2428,21 @@
 									"name": "Encounter Guidance",
 									"entries": [
 										"Use {@creature Scout|XMM}, {@creature Spy|XMM}, {@creature Bandit Captain|XMM}, {@creature Thug|XMM}, and at most one {@creature Master Thief|XMM}-style high-tier opponent. Replace the repeated automatic backstabs with hidden movement, readied ambushes, traps, and retreat routes. The mansion should feel like fighting a prepared thieves' guild, not enduring unavoidable damage."
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Table-Ready Session Package",
+									"entries": [
+										"{@b Milestone.} The party enters Koven House at level 4. Resolving the Koven network advances the party to level 5.",
+										"{@b Finite opposition.} Outside: 4 {@creature Thug|XMM|Thugs} and 2 {@creature Scout|XMM|Scouts}. Interior roamers: 2 {@creature Spy|XMM|Spies} and 2 {@creature Thug|XMM|Thugs}. Leadership: {@creature Vara Koven|NCFA}, {@creature Dorn|NCFA}, and 3 {@creature Thug|XMM|Thugs}. Perris is not part of the criminal roster. No additional criminals appear from off-map.",
+										"{@b Alarm 0 — unaware.} Lookouts follow normal routines and the interior groups remain separated. Quiet entry or captured lookouts lets the party choose its first interior engagement.",
+										"{@b Alarm 1 — warned.} If a lookout reaches the mansion, the 2 Spies take concealed positions and the 2 interior Thugs reinforce the stair or command-room approach. Traps are armed, but no new creatures are added.",
+										"{@b Alarm 2 — records at risk.} If open fighting continues inside or the party withdraws after the alarm, Vara orders records destroyed and prepares the rear-office escape. The clerk, prisoner testimony, and one duplicate ledger survive automatically, so the chapter cannot lose its essential evidence.",
+										"{@b Short rest.} Rooms 5 or 6 can support a Short Rest once secured. During the hour, surviving criminals reposition according to the current alarm state and Vara begins her escape preparations; they do not gain reinforcements.",
+										"{@b Useful DCs.} Spot or understand a prepared hazard DC 14 Investigation; disable one DC 14 Dexterity with thieves' tools; force a barred interior door DC 15 Athletics; read a criminal's fear or willingness to surrender DC 13 Insight.",
+										"{@b Morale.} Ordinary criminals surrender or flee when Vara is captured, Dorn falls, or half of their current group is defeated. Vara bargains if escape is blocked and flees at half hit points if a route remains.",
+										"{@b Pacing valve.} If time is short, skip the interior-roamer fight and have those survivors fall back to leadership. If time is running long, Perris or a freed worker points directly to the cellar route or command room."
 									]
 								},
 								"{@b Keyed-area encounters.} When a scene and a keyed location describe the same encounter, use the roster and objective in the scene. Creatures listed only in the keyed reference apply when the characters explore that location outside the scene sequence."
@@ -2674,7 +2689,7 @@
 									"type": "entries",
 									"name": "Rewards",
 									"entries": [
-										"{@b Treasure and rewards.} Keep total immediately spendable or saleable value near {@b 1,500 gp}. About half can be coin, gems, and unclaimed tribute; the rest can be a civic recovery payment, restitution, or legitimate salvage. Identifiable stolen goods are returned to victims and earn favors rather than extra cash. Also award one +1 weapon, one +1 shield, 2 scrolls of 3rd level or lower, and 2 consumables."
+										"{@b Treasure and rewards.} Keep total immediately spendable or saleable value near {@b 1,500 gp}. Identifiable stolen goods are returned to victims and earn favors rather than duplicate cash. Also award 2 spell scrolls of 3rd level or lower, 2 consumables, and one uncommon permanent item suited to a current equipment gap; add a second uncommon only if the party is behind the campaign curve."
 									]
 								}
 							]
@@ -2687,9 +2702,9 @@
 								{
 									"type": "list",
 									"items": [
-										"{@b Spendable wealth.} About 1,500 gp in portable criminal hoard. Bulky identifiable stolen goods are intended for restitution rather than liquidation.",
+										"{@b Spendable wealth.} About 1,500 gp in portable criminal hoard, recovery payment, and legitimate salvage. Identifiable stolen goods are intended for restitution rather than liquidation.",
 										"{@b Consumables.} 2 consumables and 2 spell scrolls of 3rd level or lower.",
-										"{@b Permanent magic.} 1 uncommon permanent item; add a second uncommon item only if the party missed an earlier permanent reward and is behind the campaign curve.",
+										"{@b Permanent magic.} 1 uncommon permanent item suited to the party; add a second only if the party missed an earlier permanent reward and is behind the campaign curve.",
 										"{@b Story reward.} Evidence, witnesses, restitution, and improved standing with merchants or workers harmed by the operation."
 									]
 								}
@@ -2702,7 +2717,7 @@
 					"name": "Chapter 7: Reconquest of Savin Keep",
 					"id": "007",
 					"entries": [
-						"{@b Recommended level:} 6–7",
+						"{@b Recommended level:} 5",
 						{
 							"type": "entries",
 							"name": "Maps",
@@ -2817,6 +2832,21 @@
 										"Keep the undead premise. Use {@creature Skeleton|XMM|Skeletons}, {@creature Zombie|XMM|Zombies}, {@creature Specter|XMM|Specters}, and one {@creature Wight|XMM} as patrol leadership. Keep {@creature Ochre Jelly|XMM} where appropriate. Replace the mass counterattack with a tactical force such as a {@creature Hobgoblin Captain|XMM}, 4 {@creature Hobgoblin Warrior|XMM|Hobgoblins}, 2 {@creature Bugbear Warrior|XMM|Bugbears}, and 2 {@b Worgs}, adjusting counts to the party's current strength."
 									]
 								},
+								{
+									"type": "entries",
+									"name": "Table-Ready Session Package",
+									"entries": [
+										"{@b Milestone.} The party enters Savin Keep at level 5 and normally remains level 5 afterward; completing the Savin Keep + Cardon Weavehouse arc advances the party to level 6.",
+										"{@b Finite defenders.} Gate: 6 {@creature Skeleton|XMM|Skeletons} and 2 {@creature Zombie|XMM|Zombies}. Command Stone: 1 {@creature Wight|XMM} and 4 Skeletons. Counterattack: 1 {@creature Hobgoblin Captain|XMM}, 4 {@creature Hobgoblin Warrior|XMM|Hobgoblin Warriors}, and 2 {@creature Worg|XMM|Worgs}. The kitchen {@creature Ochre Jelly|XMM} is optional exploration pressure, not part of the military roster.",
+										"{@b Undead state.} The gate guardians remain passive toward characters who use the correct challenge-and-response. Destroying or bypassing them does not summon replacements. Breaking the Command Stone ends the old defensive binding and prevents remaining undead from coordinating.",
+										"{@b Counterattack trigger.} The Tyren-aligned force lands when the party reaches the watchtower interior or visibly breaks the keep's binding, whichever happens first. It enters from the dock and tries to seize the gate and burn records.",
+										"{@b Short rest.} Before the counterattack trigger, a secured room can support a Short Rest. After the trigger, a Short Rest gives the strike team time to occupy the dock and gate approaches; the rest can still complete if the party is secure, but the enemy gains that position.",
+										"{@b Hold clock.} If the party chooses to defend the keep, run 5 rounds. Bellweather reinforcements reach the island at the end of round 5. The attackers retreat if the captain falls or at least half the strike team is defeated.",
+										"{@b Records fail-forward.} The sealed Tyren report is in a fire-resistant document case and survives automatically. The attackers can destroy supporting correspondence, maps, or secondary context, but never the chapter's only Tyren clue.",
+										"{@b Useful DCs.} Interpret the password fragments DC 13 History or Investigation; spot the jelly's warning signs DC 13 Perception; force a jammed interior door DC 14 Athletics; stabilize a damaged record case DC 13 Arcana or appropriate tools.",
+										"{@b Pacing valve.} If time is short, passwords bypass the gate fight and the optional kitchen encounter disappears. If time remains, let the kitchen or a surviving undead patrol complicate exploration before the Command Stone."
+									]
+								},
 								"{@b Keyed-area encounters.} When a scene and a keyed location describe the same encounter, use the roster and objective in the scene. Creatures listed only in the keyed reference apply when the characters explore that location outside the scene sequence."
 							]
 						},
@@ -2889,7 +2919,7 @@
 											"type": "entries",
 											"name": "8. Entrance Hall — Counterattack",
 											"entries": [
-												"When the party reaches the watchtower interior, a Tyren-aligned strike team lands on the island to prevent reclamation. Use a compact force such as one {@creature Veteran|XMM} commander, two {@creature Bugbear Warrior|XMM|Bugbears}, and four {@creature Guard|XMM|Guards} or equivalent creatures. Their objective is to seize the gate and burn the surviving records, not to fight to the last creature. If the commander falls or half the force is defeated, the survivors withdraw toward their boats.",
+												"When the party reaches the watchtower interior or visibly breaks the keep's binding, a Tyren-aligned strike team lands on the island to prevent reclamation. Use exactly 1 {@creature Hobgoblin Captain|XMM}, 4 {@creature Hobgoblin Warrior|XMM|Hobgoblin Warriors}, and 2 {@creature Worg|XMM|Worgs}. Their objective is to seize the gate and burn secondary records, not fight to the last creature. If the captain falls or half the force is defeated, the survivors withdraw toward their boats.",
 												"The undead guardians oppose the strike team as readily as they oppose the characters. Clever parties can exploit that conflict."
 											]
 										},
@@ -3146,7 +3176,7 @@
 					"name": "Chapter 8: Cardon Weavehouse",
 					"id": "008",
 					"entries": [
-						"{@b Recommended level:} 7–8",
+						"{@b Recommended level:} 5",
 						{
 							"type": "entries",
 							"name": "Maps",
@@ -3258,7 +3288,22 @@
 									"type": "entries",
 									"name": "Encounter Guidance",
 									"entries": [
-										"Favor current urban predators and occupiers: {@creature Ettercap|XMM} + {@b Giant Spiders}, {@b Wererats}, {@creature Bugbear Warrior|XMM|Bugbears}, {@b Veterans}, or another group that makes sense for the current district. Preserve the family's hidden-wealth story rather than any specific creature count."
+										"Use the finite population in the Table-Ready Session Package. The armed occupation is a social structure with dependents and coerced workers, not a respawning dungeon. The only optional creature hazard is one {@creature Ochre Jelly|XMM} in the collapsed wing."
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Table-Ready Session Package",
+									"entries": [
+										"{@b Milestone.} The party enters the Weavehouse at level 5. Resolving the Savin Keep + Cardon Weavehouse arc advances the party to level 6.",
+										"{@b Population.} Armed: {@creature Korrin Vale|NCFA}, 4 {@creature Thug|XMM|Thugs}, 2 {@creature Scout|XMM|Scouts}, and 1 {@creature Cult Fanatic|XMM} guarding Tyren's correspondence. Noncombatants: about 10 dependents plus 2 coerced workers. They hide, flee, or surrender if given a safe route.",
+										"{@b Alarm drum.} If the drum sounds, Korrin and the 4 Thugs consolidate at the Main Hall while the 2 Scouts take cover overlooking the courtyard. The Cult Fanatic begins destroying correspondence at the end of round 2. No reinforcements arrive from outside the property.",
+										"{@b Evidence fail-forward.} If the shrine letters burn, the Records Vault contains a duplicate tribute schedule and witness statements establishing the same essential fact: Tyren rewards obedience, threatens independence, and coordinates multiple groups.",
+										"{@b Collapsed-wing hazard.} Crossing the unstable section requires DC 14 Acrobatics or a careful alternative. On a failed rushed crossing, the character falls through weak flooring, takes 2d6 bludgeoning damage, and lands Prone. One {@creature Ochre Jelly|XMM} can be used here only if an extra combat beat is useful.",
+										"{@b Short rest.} The garden/cistern can support a Short Rest after it is secured. During the hour, an alerted occupation consolidates as described above and the shrine leader starts destroying papers; no extra enemies appear.",
+										"{@b Social DCs.} Korrin hears a concrete safe-passage offer without a check if the party clearly controls the situation; otherwise DC 14 Persuasion gets him to negotiate. DC 13 Insight reveals Mara's main concern is time and safe relocation rather than ownership. The final property settlement is decided by evidence and advocacy, not one Persuasion roll.",
+										"{@b Morale.} Korrin surrenders if isolated and below half hit points. Thugs stand down if Korrin surrenders. Scouts flee if both routes to Korrin and the shrine are cut off. The Cult Fanatic flees once the papers are lost or secured.",
+										"{@b Pacing valve.} If time is short, successful talks with Mara reveal the Records Vault and let the party bypass one armed position. If time remains, use the collapsed-wing hazard or the shrine confrontation as an additional beat."
 									]
 								},
 								"{@b Keyed-area encounters.} When a scene and a keyed location describe the same encounter, use the roster and objective in the scene. Creatures listed only in the keyed reference apply when the characters explore that location outside the scene sequence.",
@@ -3545,7 +3590,7 @@
 									"type": "entries",
 									"name": "Rewards",
 									"entries": [
-										"{@b Treasure and rewards.} The Council, affected tenants, and commercial interests generate about {@b 2,000 gp} of total party value: roughly {@b 1,200 gp} in payment, restitution, or lawful recovery awards and {@b 800 gp} in immediately portable coin, jewelry, or uncontested valuables. Major property assets remain in legal process. Also award one uncommon item (default {@b Sending Stones}) found in the old office."
+										"{@b Treasure and rewards.} Resolve the chapter at about {@b 2,000 gp} of total party economic value: roughly {@b 1,200 gp} in payment, restitution, or lawful recovery awards and {@b 800 gp} in immediately portable coin, jewelry, or uncontested valuables. Major property assets remain in legal process. Also award {@b 2 consumables} and one uncommon permanent item, default {@b Sending Stones}."
 									]
 								}
 							]
@@ -3558,10 +3603,10 @@
 								{
 									"type": "list",
 									"items": [
-										"{@b Spendable wealth.} 500–750 gp in immediately portable valuables; the larger fortune is tied to ownership and property claims.",
-										"{@b Consumables.} 1–2 useful consumables.",
-										"{@b Permanent magic.} At most 1 uncommon permanent item unless the party is substantially behind the campaign curve.",
-										"{@b Story reward.} Legal leverage over Perrin Cardon and the possibility of negotiated public-use concessions."
+										"{@b Spendable wealth.} About 2,000 gp of total party economic value: roughly 1,200 gp in payment/restitution and 800 gp in uncontested portable valuables.",
+										"{@b Consumables.} 2 useful consumables.",
+										"{@b Permanent magic.} 1 uncommon permanent item, default Sending Stones, unless another item better fills an existing party gap.",
+										"{@b Story reward.} Legal leverage over Perrin Cardon, testimony from residents and workers, and a precedent for how Bellweather handles reclaimed private property."
 									]
 								}
 							]
@@ -3573,7 +3618,7 @@
 					"name": "Chapter 9: Marren Library",
 					"id": "009",
 					"entries": [
-						"{@b Recommended level:} 8–9",
+						"{@b Recommended level:} 6",
 						{
 							"type": "entries",
 							"name": "Maps",
@@ -3635,6 +3680,21 @@
 									"name": "Encounter Guidance",
 									"entries": [
 										"Use constructs, undead scholars, and aberrant scavengers where the source calls for generic guardians: {@creature Animated Armor|XMM}, {@b Flying Sword}, {@creature Specter|XMM}, {@creature Ghoul|XMM}, {@creature Mimic|XMM}, {@b Gibbering Mouther}, or {@b Nothic}. Keep intelligent encounters conversational when possible."
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Table-Ready Session Package",
+									"entries": [
+										"{@b Milestone.} The party enters the Marren/Mansions arc at level 6. Resolving Marren Library and the associated Bellweather property-case arc advances the party to level 7.",
+										"{@b Finite opposition.} 2 {@creature Gargoyle|XMM|Gargoyles} at the monument, Tessa Marr plus 3 other {@creature Scout|XMM|Scouts}, and 1 {@creature Specter|XMM} guarding the restricted collection. One {@creature Mimic|XMM} in the supply room is an optional pacing encounter, not a required fight.",
+										"{@b Fire clock.} Once the stacks fire begins, run 4 rounds. The party needs 3 total successful fire-control actions before the end of round 4. An appropriate spell can count as one or more successes when it plainly solves part of the problem; otherwise use DC 13 with a relevant ability or tool. Each failed attempt costs time but does not erase earlier successes.",
+										"{@b Fire failure.} If the party reaches the end of round 4 without 3 successes, one secondary collection is lost and the party loses up to 500 gp of manuscript value. The Restricted Stacks and the essential Tyren/Radiant Well revelations survive.",
+										"{@b Scavenger behavior.} Tessa's crew wants specified research, not a massacre. They stop fighting if Tessa is reduced below half hit points, if 2 Scouts fall, or if the party offers a safe exit without the commissioned papers. They help with the fire if convinced their own escape depends on it.",
+										"{@b Guardian behavior.} The Gargoyles defend only the monument area. The Specter begins with conversation and attacks only if the Restricted Stacks are threatened, deliberately damaged, or forced open after its warning.",
+										"{@b Short rest.} A secured group-study room can support a Short Rest after the scavenger situation is settled. If the fire has already started, it continues during the hour and automatically reaches its failure state unless the party solves it first.",
+										"{@b Useful DCs.} Fire control DC 13; suppress the office ward DC 15 Arcana; resist the ward DC 14 Wisdom; identify which archive copy is original DC 14 Investigation; gain the Specter's trust with respectful handling and a concrete preservation plan DC 14 Persuasion or Religion.",
+										"{@b Pacing valve.} If time is short, the Gargoyles remain dormant and the optional Mimic is absent. If time remains, activate one of those encounters after the essential archive work is complete."
 									]
 								},
 								"{@b Keyed-area encounters.} When a scene and a keyed location describe the same encounter, use the roster and objective in the scene. Creatures listed only in the keyed reference apply when the characters explore that location outside the scene sequence.",
@@ -3988,10 +4048,10 @@
 								{
 									"type": "list",
 									"items": [
-										"{@b Spendable wealth.} 300–500 gp in recoverable valuables, rare books, and research grants.",
-										"{@b Consumables.} 2 spell scrolls and 1 utility consumable.",
-										"{@b Permanent magic.} 1 rare utility or knowledge-focused item; use a strong uncommon item instead if the party is already ahead on rare gear.",
-										"{@b Story reward.} Research access and discoveries concerning Tyren, Bellweather, or the Radiant Well."
+										"{@b Economic value.} About 2,400 gp total: 1,400 gp in Council/scholarly payment and up to 1,000 gp in manuscripts, inks, and rare texts if sold. Keeping the manuscripts converts much of that value into scholarly and political leverage.",
+										"{@b Consumables.} 2–4 useful spell scrolls appropriate to the party's level.",
+										"{@b Permanent magic.} 1 utility-focused uncommon item, or a rare utility item only if the party is behind the campaign's permanent-item curve.",
+										"{@b Story reward.} Control over how the recovered archive is copied, published, and distributed, plus durable evidence about Tyren and the Radiant Well."
 									]
 								}
 							]
