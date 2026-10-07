@@ -6,17 +6,17 @@
 				"json": "NCFASOC",
 				"abbreviation": "NCFA-SOC",
 				"full": "No Cause for Alarm: The Spirit of the City",
-				"version": "2.7",
+				"version": "2.8",
 				"authors": [
 					"No Cause for Alarm Campaign"
 				],
-				"dateLastModified": 1791292200
+				"dateLastModified": 1791333600
 			}
 		],
 		"edition": "one",
 		"dateAdded": 1791271800,
-		"dateLastModified": 1791292200,
-		"_dateLastModifiedHash": "f478bcdfc6"
+		"dateLastModified": 1791333600,
+		"_dateLastModifiedHash": "11f16cee8d"
 	},
 	"adventure": [
 		{
@@ -2859,7 +2859,8 @@
 								"Ten minutes of deliberate observation reveals the shared system automatically.",
 								"After one minute, a {@dc 13} Perception, Insight, or Investigation check reveals it immediately and shows that one crew waits for the other to acknowledge each movement.",
 								"If combat begins, the rear-most Scout becomes the runner and Dashes toward the junction on its {@b first turn}.",
-								"{@b Encounter.} 3 Scouts + 2 Guards."
+								"{@b Encounter.} 3 Scouts + 2 Guards.",
+								"{@b If the surface crews are bypassed.} They remain at their posts and do not automatically reinforce the interior. If an alarm is raised later, 1 Scout and 1 Guard move toward the Well Chamber while the others secure the exterior and escape routes. If the party exits quietly, the surface crews can be bypassed again."
 							]
 						},
 						{
@@ -2877,7 +2878,7 @@
 							"name": "3. Bow Gallery",
 							"entries": [
 								"Only Scouts who escaped the surface fight occupy the gallery. If none escaped, it is empty except for signs of retreat.",
-								"Retreating Scouts use cover for one or two volleys, then flee by the side route instead of joining the command-room defenders.",
+								"Retreating Scouts use cover for one or two volleys, then flee the site through the side route. They do not join the command-room defenders.",
 								"{@b Maintenance pit.} Examining the floor reveals the cracked edge automatically. Moving quickly allows a {@dc 13} Perception check. Stepping on the failing edge requires a {@dc 13} Dexterity save; failure causes a 10-foot fall, 1d6 bludgeoning damage, and Prone.",
 								"{@b Water lever.} Creatures in the channel make a {@dc 14} Strength save or fall Prone and are pushed 15 feet. The party can use the lever."
 							]
@@ -2958,6 +2959,16 @@
 									]
 								},
 								"The evidence here contains no Tyren name, dragon symbol, or Perrin signature."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Resting Inside Kellan’s Well",
+							"entries": [
+								"The party can attempt a Short Rest inside the site, but the world keeps moving during that hour.",
+								"If the lower level is not yet alerted, missed patrol changes and absent surface crews eventually draw attention. By the end of the rest, the Warden has the command room prepared, the satchel ready to move, and the remaining defenders in assigned positions.",
+								"If the site is already alerted, the Covenant does not wait in place. During the rest, the Warden orders sensitive records moved or destroyed, sends the satchel toward the escape route, and begins withdrawing personnel who are not needed to hold the command room.",
+								"A Short Rest is therefore possible, but it trades recovery for enemy preparation and loss of evidence."
 							]
 						},
 						{
