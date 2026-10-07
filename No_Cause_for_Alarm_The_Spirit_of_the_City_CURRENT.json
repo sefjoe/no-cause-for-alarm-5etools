@@ -3509,8 +3509,9 @@
 							"type": "entries",
 							"name": "Treasure",
 							"entries": [
-								"The house contains approximately {@b 1,500 gp} in portable criminal wealth, much of it identifiable as stolen property.",
-								"Use one memorable permanent uncommon item, two useful spell scrolls of 3rd level or lower, and two consumables. Returning identifiable property improves the party’s standing with victims and merchants."
+								"Portable criminal wealth totals {@b 1,500 gp}: 900 gp is identifiable stolen property and 600 gp is untraceable Covenant reserve.",
+								"The command cache contains 1 {@item Shield +1|XDMG}, 2 {@item Potion of Greater Healing|XDMG|Potions of Greater Healing}, and 1 {@item Dust of Disappearance|XDMG}.",
+								"Returning the 900 gp in identifiable property improves the party's standing with victims and merchants; the 600 gp reserve is legitimate recovered criminal proceeds unless the Council claims it under local law."
 							]
 						},
 						{
@@ -4224,7 +4225,7 @@
 							"name": "5. Hidden Cardon Reserve",
 							"entries": [
 								"A family reserve of portable wealth survived behind a sealed wall.",
-								"Use a meaningful but controlled amount: {@b 2,000–3,000 gp equivalent} in coin, trade bars, gems, and negotiable records, plus one family heirloom magic item appropriate to the tier.",
+								"The reserve contains exactly {@b 2,400 gp equivalent} in coin, trade bars, gems, and negotiable records. It is subject to the ownership decision and is not automatic party loot.",
 								"Legally, most of it belongs to Perrin under the recognized deed unless the party or Council successfully challenges that claim.",
 								"Recovering it materially changes Perrin’s circumstances.",
 								"This is the point where the Cardon fortune stops being a nostalgic ambition and becomes real economic power."
@@ -4472,6 +4473,7 @@
 							"name": "3. Master Librarian’s Chamber",
 							"entries": [
 								"A damaged ward protects a locked desk. A {@dc 15} Intelligence (Arcana) check or {@spell Dispel Magic} suppresses it. On a failed Arcana check, the character makes a {@dc 14} Wisdom save; on a failure the character is Frightened until the end of its next turn. The desk and clue remain recoverable.",
+								"{@b Warded corridor defenders.} 2 Animated Armors and 2 Flying Swords animate when the party passes the suppressed ward toward the sealed research stacks. They stop fighting if the ward is lawfully deactivated with the librarian's recovered key phrase or if the constructs are defeated.",
 								"Use a DC 15 Intelligence (Arcana) check or {@i Dispel Magic} to suppress the ward. Failure triggers a short fear effect or environmental pulse; the clue itself is still recovered.",
 								"Inside are several damaged records that finally make the supernatural problem explicit.",
 								{
@@ -5981,7 +5983,7 @@
 										"altered aquatic predators gather near discharge points."
 									]
 								},
-								"Use {@creature Water Weird|XMM}, {@creature Giant Crocodile|XMM}, elementals, or other level-appropriate aquatic threats only where they make sense."
+								"If the party crosses the contaminated intake channel by water, use exactly 2 {@creature Water Weird|XMM|Water Weirds}. Air travel, a different landing, or an equally sound route can bypass them without replacement combat."
 							]
 						},
 						{
@@ -6420,7 +6422,7 @@
 								}
 							]
 						},
-						"{@b Recommended level:} 9–14 {@b Expected milestones:} 10–14 across the arc {@b Likely table time:} choice-driven; revised structure pending",
+						"{@b Recommended level:} 9–14 {@b Expected milestones:} 10–14 across the arc {@b Likely table time:} about 5–8 sessions depending on player choices",
 						{
 							"type": "entries",
 							"name": "Modern Running Sheet",
@@ -6501,8 +6503,13 @@
 									"type": "entries",
 									"name": "Regional Rewards",
 									"entries": [
-										"The arc's main rewards are allies, routes, testimony, ritual knowledge, and destruction of Tyren's external infrastructure.",
-										"Across the whole regional arc, award no more than {@b 2,000 gp} in direct coin/valuables, 4 useful consumables, and one permanent magic item unless actual play has left the party materially under-equipped."
+										"Use the listed reward for each regional module. There is no automatic permanent magic-item payout for this arc.",
+										"Kerren: 1 Potion of Greater Healing plus route maps/safe passage.",
+										"Waylen: guides, mounts, trade relationship, and one automatic hostile-road bypass.",
+										"Rellan: the ritual charm that grants one automatic Chorus Chamber success.",
+										"Emmer: 500 gp in trade credit/materials plus 1 Potion of Superior Healing.",
+										"Tyren's Regional Countermove: recovered operating funds worth 500 gp plus 1 Potion of Superior Healing if the party secures the hostile team's supplies.",
+										"Unused regional locations grant nothing automatically; rewards come from what the party actually does."
 									]
 								}
 							]
@@ -7299,7 +7306,8 @@
 								"The party returns from Zennar at {@b level 15}. Bellweather is safer, cleaner, busier, and more efficient—and visibly less voluntary.",
 								"Crime is sharply reduced. Work crews move on schedule. Public projects advance. Residents repeat the same reassuring phrases and sometimes obey minor instructions before realizing they were given.",
 								"Brakkus and Bishop Brann remain fully themselves. Jord and the PCs can feel Tyren's pressure but remain subject only to the established one-action Command ceiling.",
-								"This is not a street-by-street reclamation chapter. The party needs to accomplish {@b any two} of the four approaches below, or an equivalent player-created plan, to materially break or bypass the city network and open a credible route to Varen Keep."
+								"This is not a street-by-street reclamation chapter. The party needs to accomplish {@b any two} of the four approaches below, or an equivalent player-created plan, to materially break or bypass the city network and open a credible route to Varen Keep.",
+								"If Tyren directly presses an anchored PC during the controlled-city phase, use a {@dc 16} Wisdom save and the established one-turn Command ceiling. A Ring of Mind Shielding grants immunity."
 							]
 						},
 						{
@@ -7625,7 +7633,7 @@
 											"type": "entries",
 											"name": "Seize the Anchored",
 											"entries": [
-												"Tyren targets one anchored PC or Jord he can perceive. The target makes the appropriate Wisdom save.",
+												"The target makes a {@dc 18} Wisdom save.",
 												"On a failure, Tyren imposes one Command-like imperative on the target’s next turn, following the campaign’s hard ceiling:",
 												{
 													"type": "list",
