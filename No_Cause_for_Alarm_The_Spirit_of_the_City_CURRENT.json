@@ -325,6 +325,8 @@
 						"3. Warning Signs",
 						"4. The Commandant’s Choice",
 						"5. Assassination or Arrest Attempt",
+						"If the Party Submits to Detention",
+						"Resting and Time",
 						"6. Evidence",
 						"Return to Bellweather",
 						"Default Council Positions on Return",
@@ -6897,50 +6899,38 @@
 								{
 									"type": "quote",
 									"entries": [
-										"Run Zennar as a political trap and survival chapter, not a fortress-clearing dungeon.  {@b Quiet kill team:} 1 {@b Assassin}, 2 {@b Veterans}, 1 {@creature Mage|XMM}, and 4 {@b Guards}. Use the Assassin only if the party reaches level 15 well equipped and rested; otherwise replace it with another Veteran.  Attackers withdraw if the operation becomes public, loud, or clearly unsuccessful. Most of the outpost is not aware of the murder order.  The strongest victory is evidence plus escape, not killing the entire garrison."
+										"{@b Finite outpost roster relevant to the plot:} 1 Knight commandant, 1 Spy covert handler, 1 Assassin, 2 Veterans, 1 Mage, and 8 Guards. Other soldiers remain background personnel unless the party deliberately starts a battle with the whole outpost.",
+										"{@b Default strike force:} Assassin + 2 Veterans + Mage + 4 Guards.",
+										"{@b Reserve/non-hostile personnel:} commandant + Spy + 4 Guards. Their allegiance depends on what the party proves and how the order is handled.",
+										"{@b Victory target:} evidence plus freedom to return to Bellweather. Clearing the outpost is not required."
 									]
 								},
 								{
 									"type": "entries",
 									"name": "Rewards and Treasure",
 									"entries": [
-										"Evidence is the main reward. If the party resolves the outpost diplomatically, use 1,000 gp-equivalent restitution, supplies, or a civic/diplomatic favor rather than a dungeon hoard."
+										"If the commandant rejects Perrin's order or later accepts that the party was wrongfully targeted, the outpost provides {@b 1,000 gp total} in restitution/supplies and 2 {@item Potion of Superior Healing|XDMG|Potions of Superior Healing}.",
+										"The hidden order, commandant copy, witnesses, and courier record are the campaign-critical rewards."
 									]
 								},
 								{
 									"type": "entries",
-									"name": "Stat Block Setup",
+									"name": "Encounter Builder Presets",
 									"entries": [
 										{
 											"type": "table",
 											"colLabels": [
-												"Role",
-												"5etools lookup / setup"
+												"Scene",
+												"Creatures"
 											],
 											"rows": [
 												[
-													"Kill-team leader",
-													"{@b Assassin} or {@creature Veteran|XMM}"
+													"Default arrest/assassination strike",
+													"1 Assassin + 2 Veterans + 1 Mage + 4 Guards"
 												],
 												[
-													"Professional soldier",
-													"{@creature Veteran|XMM}"
-												],
-												[
-													"Commandant",
-													"{@creature Knight|XMM}"
-												],
-												[
-													"Covert handler",
-													"{@creature Spy|XMM}"
-												],
-												[
-													"Arcane support",
-													"{@creature Mage|XMM}"
-												],
-												[
-													"Garrison",
-													"{@creature Guard|XMM}"
+													"Commandant party, only if negotiations collapse",
+													"1 Knight + 1 Spy + 4 Guards"
 												]
 											]
 										}
@@ -6952,7 +6942,7 @@
 							"type": "entries",
 							"name": "Why Perrin Sends Them",
 							"entries": [
-								"By level 15 the party has:",
+								"By level 14 the party has:",
 								{
 									"type": "list",
 									"items": [
@@ -6994,8 +6984,9 @@
 							"type": "entries",
 							"name": "1. The Road to Zennar",
 							"entries": [
-								"Give the party one quiet opportunity to inspect the packet before arrival.",
-								"Opening and resealing it should be possible with appropriate magic, tools, or care. If they refuse to tamper with diplomatic papers, later clues still expose the betrayal."
+								"Give the party one quiet opportunity to inspect the sealed packet before arrival.",
+								"Opening and resealing it with appropriate magic succeeds automatically if the method logically leaves no trace. Careful mundane opening uses a {@dc 15} Dexterity check with thieves' tools, forgery kit, or another appropriate tool. Failure still reveals the hidden order but leaves obvious evidence of tampering.",
+								"If the party refuses to tamper with official papers, later warning signs expose the trap. Reading the order early is an advantage, not a gate."
 							]
 						},
 						{
@@ -7022,7 +7013,8 @@
 										"guards who appear confused about whether the party is guest or prisoner."
 									]
 								},
-								"Successful Insight or Investigation reveals the danger earlier. Failure never erases it."
+								"Successful Insight or Investigation reveals the danger earlier. Failure never erases it.",
+								"After the party notices any two warning signs, a {@dc 15} Insight or Investigation check confirms that the outpost is preparing containment rather than hospitality. Failure delays certainty until the commandant meeting; it does not preserve the surprise indefinitely."
 							]
 						},
 						{
@@ -7044,25 +7036,38 @@
 										"escape."
 									]
 								},
-								"A strong social solution should be as valid as combat."
+								"A strong social solution should be as valid as combat.",
+								"If the party presents two credible contradictions or two forms of Tyren/Perrin evidence, the commandant pauses enforcement automatically long enough to investigate. Use a {@dc 15} Persuasion check only when the evidence is ambiguous and the party is asking the commandant to take a personal or legal risk beyond what the facts already justify."
 							]
 						},
 						{
 							"type": "entries",
 							"name": "5. Assassination or Arrest Attempt",
 							"entries": [
-								"If the betrayal reaches violence, use a compact strike force.",
-								"Suggested hard encounter for four level-15 PCs:",
-								{
-									"type": "list",
-									"items": [
-										"3 {@b Veterans};",
-										"1 {@creature Mage|XMM};",
-										"4 {@b Guards} as support and pressure."
-									]
-								},
-								"If the party is extremely optimized and fully rested, upgrade one Veteran to a {@creature Knight|XMM} or equivalent. Keep most of the outpost outside initiative rather than treating the entire garrison as one encounter.",
-								"Attackers withdraw or surrender when the operation becomes publicly indefensible."
+								"If the betrayal reaches violence, use the fixed strike force: 1 Assassin, 2 Veterans, 1 Mage, and 4 Guards.",
+								"{@b Starting positions.} The Veterans and 2 Guards control the nearest exit; the Mage begins behind cover; 2 Guards hold the secondary corridor; the Assassin begins concealed only if the party failed to identify the trap before the meeting.",
+								"The strike force's objective depends on Perrin's state: Cracked seeks disarmament/detention first; Defiant accepts lethal force when resistance becomes serious; Hostile begins with lethal intent.",
+								"Attackers withdraw or surrender when the commandant publicly rescinds the order, the Mage or Assassin is defeated and the operation becomes untenable, or evidence makes the action publicly indefensible.",
+								"Do not add the remaining outpost garrison to initiative unless the party deliberately attacks uninvolved soldiers."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "If the Party Submits to Detention",
+							"entries": [
+								"Detention is an active social/escape sequence, not a campaign-ending cutscene.",
+								"The party is placed in two adjacent secured rooms. Obvious weapons are stored in a locked armory room across the corridor; worn armor, clothing, holy symbols, and non-obvious personal items remain unless the party gave the outpost a specific reason to search more aggressively.",
+								"Exactly 4 Guards rotate on the detention corridor. The commandant reviews the order within an hour, creating time for persuasion, message-sending, tool or magic use, or escape.",
+								"If the party proves the order compromised before escaping, the commandant releases them. If they escape first, the same documentary evidence can later clear the legal ambiguity."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Resting and Time",
+							"entries": [
+								"Before the betrayal is exposed, the party can rest as diplomatic guests, but the outpost continues processing Perrin's order.",
+								"A Short Rest after warning signs gives the covert handler time to position the fixed strike force and move the party's assigned quarters into containment posture.",
+								"Once the commandant has suspended or rescinded the order, or the party has escaped the outpost, normal resting becomes possible. No new strike team appears."
 							]
 						},
 						{
@@ -7094,7 +7099,8 @@
 								"People praise Perrin for stabilizing the city while the party was away.",
 								"And something is wrong.",
 								"Groups of citizens repeat the same phrases. Workers change plans simultaneously. Clerks approve requests they had rejected minutes earlier. People who later come out of the effect cannot explain why a decision felt so obviously correct.",
-								"Bellweather is becoming Tyren’s successful prototype."
+								"Bellweather is becoming Tyren’s successful prototype.",
+								"If the commandant sided with the party, a sealed copy of the outpost record travels separately toward Bellweather so Perrin cannot erase the entire incident by intercepting the PCs."
 							]
 						},
 						{
@@ -7155,7 +7161,7 @@
 							"name": "Milestone",
 							"entries": [
 								"Advance to {@b level 15} when the Zennar betrayal is survived and credible evidence of Perrin's order is preserved.",
-								"Level 16 comes after confronting controlled Bellweather and opening the route to Varen Keep."
+								"Level 16 comes after the party materially breaks or bypasses controlled Bellweather's network and opens a viable route to Varen Keep."
 							]
 						}
 					]
