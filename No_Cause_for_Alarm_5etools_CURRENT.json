@@ -6,17 +6,17 @@
 				"json": "NCFA",
 				"abbreviation": "NCFA",
 				"full": "No Cause for Alarm: Ruins of Bellweather",
-				"version": "4.21",
+				"version": "4.22",
 				"authors": [
 					"No Cause for Alarm Campaign"
 				],
-				"dateLastModified": 1791346800
+				"dateLastModified": 1791347700
 			}
 		],
 		"edition": "one",
 		"dateAdded": 1789528955,
-		"dateLastModified": 1791346800,
-		"_dateLastModifiedHash": "6ac5c87021"
+		"dateLastModified": 1791347700,
+		"_dateLastModifiedHash": "6ac5cbd422"
 	},
 	"adventure": [
 		{
@@ -2437,12 +2437,33 @@
 										"{@b Milestone.} The party enters Koven House at level 4. Resolving the Koven network advances the party to level 5.",
 										"{@b Finite opposition.} Outside: 4 {@creature Thug|XMM|Thugs} and 2 {@creature Scout|XMM|Scouts}. Interior roamers: 2 {@creature Spy|XMM|Spies} and 2 {@creature Thug|XMM|Thugs}. Leadership: {@creature Vara Koven|NCFA}, {@creature Dorn|NCFA}, and 3 {@creature Thug|XMM|Thugs}. Perris is not part of the criminal roster. No additional criminals appear from off-map.",
 										"{@b Alarm 0 — unaware.} Lookouts follow normal routines and the interior groups remain separated. Quiet entry or captured lookouts lets the party choose its first interior engagement.",
-										"{@b Alarm 1 — warned.} If a lookout reaches the mansion, the 2 Spies take concealed positions and the 2 interior Thugs reinforce the stair or command-room approach. Traps are armed, but no new creatures are added.",
+										"{@b Alarm 1 — warned.} If a lookout reaches the mansion, the 2 Spies take concealed positions and the 2 interior Thugs barricade or guard side routes. They do not all pile into the leadership fight on round 1.",
 										"{@b Alarm 2 — records at risk.} If open fighting continues inside or the party withdraws after the alarm, Vara orders records destroyed and prepares the rear-office escape. The clerk, prisoner testimony, and one duplicate ledger survive automatically, so the chapter cannot lose its essential evidence.",
 										"{@b Short rest.} Rooms 5 or 6 can support a Short Rest once secured. During the hour, surviving criminals reposition according to the current alarm state and Vara begins her escape preparations; they do not gain reinforcements.",
 										"{@b Useful DCs.} Spot or understand a prepared hazard DC 14 Investigation; disable one DC 14 Dexterity with thieves' tools; force a barred interior door DC 15 Athletics; read a criminal's fear or willingness to surrender DC 13 Insight.",
 										"{@b Morale.} Ordinary criminals surrender or flee when Vara is captured, Dorn falls, or half of their current group is defeated. Vara bargains if escape is blocked and flees at half hit points if a route remains.",
-										"{@b Pacing valve.} If time is short, skip the interior-roamer fight and have those survivors fall back to leadership. If time is running long, Perris or a freed worker points directly to the cellar route or command room."
+										"{@b Pacing valve.} The chapter works best with no more than two full combats. If the outer-yard fight happens, use the interior roamers as pressure and delayed reinforcements rather than a separate stand-up fight. If the yard is bypassed, the roamers can provide the chapter's first interior combat.",
+										{
+											"type": "entries",
+											"name": "Leadership Fight Deployment",
+											"entries": [
+												"Start with {@creature Vara Koven|NCFA}, {@creature Dorn|NCFA}, and 3 {@creature Thug|XMM|Thugs}. Vara uses the room, cover, and the rear-office route instead of standing in melee.",
+												"If Alarm is 1 or higher and the interior roamers are still active, at the end of round 1 one {@creature Spy|XMM} and one {@creature Thug|XMM} enter from a side route. At the end of round 2 the second pair can arrive. These are the same four roamers already listed in the finite roster, not new enemies.",
+												"A Spy that reaches a good angle attacks from concealment and then relocates; a Thug blocks pursuit or shoves a character toward a prepared hazard if the fiction supports it. They retreat or surrender under the chapter's normal morale rule.",
+												"This staggered arrival is the default calibration for this party: it protects the criminals' action economy without exposing four level-4 characters to nine enemy turns on round 1."
+											]
+										},
+										{
+											"type": "entries",
+											"name": "Expected Session Shape",
+											"entries": [
+												"Network lead and approach: about 20–30 minutes.",
+												"Outer yard, if it becomes combat: about 40–60 minutes.",
+												"Perris, workers, traps, and route choice: about 30–45 minutes.",
+												"Leadership and prisoner resolution: about 60–75 minutes.",
+												"Public fallout can be handled in the final 15–20 minutes or at the start of the next session."
+											]
+										}
 									]
 								},
 								"{@b Keyed-area encounters.} When a scene and a keyed location describe the same encounter, use the roster and objective in the scene. Creatures listed only in the keyed reference apply when the characters explore that location outside the scene sequence."
@@ -2829,7 +2850,7 @@
 									"type": "entries",
 									"name": "Encounter Guidance",
 									"entries": [
-										"Keep the undead premise. Use {@creature Skeleton|XMM|Skeletons}, {@creature Zombie|XMM|Zombies}, {@creature Specter|XMM|Specters}, and one {@creature Wight|XMM} as patrol leadership. Keep {@creature Ochre Jelly|XMM} where appropriate. Replace the mass counterattack with a tactical force such as a {@creature Hobgoblin Captain|XMM}, 4 {@creature Hobgoblin Warrior|XMM|Hobgoblins}, 2 {@creature Bugbear Warrior|XMM|Bugbears}, and 2 {@b Worgs}, adjusting counts to the party's current strength."
+										"Keep the undead premise and use the exact finite rosters in the Table-Ready Session Package: 6 {@creature Skeleton|XMM|Skeletons} and 2 {@creature Zombie|XMM|Zombies} at the gate, 1 {@creature Wight|XMM} and 4 Skeletons at the Command Stone, and the listed Hobgoblin/Worg counterattack. The {@creature Ochre Jelly|XMM} remains an optional exploration encounter. Do not add Bugbears or additional waves unless a later campaign change explicitly adds them."
 									]
 								},
 								{
@@ -2844,7 +2865,28 @@
 										"{@b Hold clock.} If the party chooses to defend the keep, run 5 rounds. Bellweather reinforcements reach the island at the end of round 5. The attackers retreat if the captain falls or at least half the strike team is defeated.",
 										"{@b Records fail-forward.} The sealed Tyren report is in a fire-resistant document case and survives automatically. The attackers can destroy supporting correspondence, maps, or secondary context, but never the chapter's only Tyren clue.",
 										"{@b Useful DCs.} Interpret the password fragments DC 13 History or Investigation; spot the jelly's warning signs DC 13 Perception; force a jammed interior door DC 14 Athletics; stabilize a damaged record case DC 13 Arcana or appropriate tools.",
-										"{@b Pacing valve.} If time is short, passwords bypass the gate fight and the optional kitchen encounter disappears. If time remains, let the kitchen or a surviving undead patrol complicate exploration before the Command Stone."
+										"{@b Pacing valve.} If time is short, passwords bypass the gate fight and the optional kitchen encounter disappears. If time remains, let the kitchen or a surviving undead patrol complicate exploration before the Command Stone.",
+										{
+											"type": "entries",
+											"name": "Counterattack Tactics",
+											"entries": [
+												"The strike team arrives as one finite force: 1 {@creature Hobgoblin Captain|XMM}, 4 {@creature Hobgoblin Warrior|XMM|Hobgoblin Warriors}, and 2 {@creature Worg|XMM|Worgs}.",
+												"The Captain and 2 Warriors pressure the gate or dock. The other 2 Warriors carry oil and move toward the surviving records. The Worgs use speed to pin down characters who try to cover both objectives.",
+												"A Warrior adjacent to the secondary records can spend an action to spread oil and a later action to ignite it. One character adjacent to the fire can spend an action with water, blankets, magic, or another reasonable method to stop that ignition. The sealed Tyren report remains protected by the chapter's fail-forward rule.",
+												"If the party immediately overwhelms one group, the survivors converge on the remaining objective rather than standing in place to be killed. If the Captain falls or half the strike team is defeated, surviving attackers retreat toward the boats."
+											]
+										},
+										{
+											"type": "entries",
+											"name": "Expected Session Shape",
+											"entries": [
+												"Crossing and password discovery: about 20–30 minutes.",
+												"Gate/courtyard: 0 minutes if bypassed cleanly, otherwise about 30–45 minutes.",
+												"Barracks, shrine, and Command Stone: about 45–60 minutes.",
+												"Five-round counterattack: about 60–75 minutes.",
+												"Records and ownership aftermath: about 15–25 minutes."
+											]
+										}
 									]
 								},
 								"{@b Keyed-area encounters.} When a scene and a keyed location describe the same encounter, use the roster and objective in the scene. Creatures listed only in the keyed reference apply when the characters explore that location outside the scene sequence."
@@ -2877,7 +2919,7 @@
 											"type": "entries",
 											"name": "2. Gate and Courtyard",
 											"entries": [
-												"The wooden gate is barely functional. Inside, the courtyard is patrolled by a small group of {@creature Skeleton|XMM|Skeletons} and {@creature Zombie|XMM|Zombies} bound to the keep's final defense. Use one encounter appropriate to the party's level; the guardians ignore anyone who gives the correct password. Once combat begins, they fight until destroyed or the party withdraws beyond the gate."
+												"The wooden gate is barely functional. Inside, the courtyard is patrolled by exactly 6 {@creature Skeleton|XMM|Skeletons} and 2 {@creature Zombie|XMM|Zombies} bound to the keep's final defense. The guardians ignore anyone who gives the correct password. Once combat begins, they fight until destroyed or the party withdraws beyond the gate."
 											]
 										},
 										{
@@ -3132,7 +3174,7 @@
 											"type": "entries",
 											"name": "Consequences",
 											"entries": [
-												"Advance to level 7 if using milestones."
+												"Do not level here. The party remains level 5; resolving the Savin Keep + Cardon Weavehouse arc advances the party to level 6."
 											]
 										}
 									]
@@ -3303,7 +3345,29 @@
 										"{@b Short rest.} The garden/cistern can support a Short Rest after it is secured. During the hour, an alerted occupation consolidates as described above and the shrine leader starts destroying papers; no extra enemies appear.",
 										"{@b Social DCs.} Korrin hears a concrete safe-passage offer without a check if the party clearly controls the situation; otherwise DC 14 Persuasion gets him to negotiate. DC 13 Insight reveals Mara's main concern is time and safe relocation rather than ownership. The final property settlement is decided by evidence and advocacy, not one Persuasion roll.",
 										"{@b Morale.} Korrin surrenders if isolated and below half hit points. Thugs stand down if Korrin surrenders. Scouts flee if both routes to Korrin and the shrine are cut off. The Cult Fanatic flees once the papers are lost or secured.",
-										"{@b Pacing valve.} If time is short, successful talks with Mara reveal the Records Vault and let the party bypass one armed position. If time remains, use the collapsed-wing hazard or the shrine confrontation as an additional beat."
+										"{@b Pacing valve.} If time is short, successful talks with Mara reveal the Records Vault and let the party bypass one armed position. If time remains, use the collapsed-wing hazard or the shrine confrontation as an additional beat.",
+										{
+											"type": "entries",
+											"name": "Starting Positions",
+											"entries": [
+												"Outer gates/courtyard: 2 {@creature Thug|XMM|Thugs}.",
+												"Watchpost: 2 {@creature Scout|XMM|Scouts}.",
+												"Main Hall: {@creature Korrin Vale|NCFA} and 2 Thugs.",
+												"Shrine: 1 {@creature Cult Fanatic|XMM}.",
+												"These are the entire armed population listed for the chapter. If the alarm drum sounds, they move from these positions into the consolidation pattern already described; do not add unnamed patrols or off-duty fighters."
+											]
+										},
+										{
+											"type": "entries",
+											"name": "Expected Session Shape",
+											"entries": [
+												"Perrin's claim and approach: about 20–30 minutes.",
+												"Contact with Mara and the residents: about 30–45 minutes.",
+												"Infiltration, negotiation, or armed confrontation: about 45–75 minutes.",
+												"Records Vault and shrine evidence: about 30–45 minutes.",
+												"Settlement and Perrin consequence: about 30 minutes."
+											]
+										}
 									]
 								},
 								"{@b Keyed-area encounters.} When a scene and a keyed location describe the same encounter, use the roster and objective in the scene. Creatures listed only in the keyed reference apply when the characters explore that location outside the scene sequence.",
@@ -3330,17 +3394,18 @@
 										"If the party recovers disputed property, Perrin first attempts a legal claim through the Council. The characters can accept compensation, challenge the claim with records, negotiate public use, or demand an independent hearing. The Council is institutionally inclined to protect documented ownership, but it is not predetermined to side with Perrin. Reputation, evidence, and witnesses matter.",
 										{
 											"type": "entries",
-											"name": "Occupying Warband",
+											"name": "Korrin's Occupation",
 											"entries": [
-												"A Tyren-aligned mixed warband currently controls the Weavehouse. Most members are gnolls, but species is not the faction's moral identity. The complex also contains dependents, injured people, coerced workers, and younger noncombatants. Those people flee, hide, or surrender if given a safe route.",
-												"The warband uses an alarm drum. Once raised, patrols consolidate around the courtyard, gates, and chief's hall rather than spawning endless reinforcements."
+												"A Tyren-aligned mixed armed group under {@creature Korrin Vale|NCFA} controls the Weavehouse and charges the civilian residents for food and protection. The armed group is exactly Korrin, 4 {@creature Thug|XMM|Thugs}, 2 {@creature Scout|XMM|Scouts}, and 1 {@creature Cult Fanatic|XMM}. Species is not the faction's moral identity.",
+												"The complex also contains about 10 dependents and 2 coerced workers. They flee, hide, or surrender if given a safe route and never expand the combat roster.",
+												"The group uses an alarm drum. Once raised, the existing armed members consolidate around the courtyard, Main Hall, and shrine rather than spawning reinforcements."
 											]
 										},
 										{
 											"type": "entries",
 											"name": "1. Outer Gates and Courtyard",
 											"entries": [
-												"The old Cardon crest is still visible beneath the warband's angular red mark. During the day, one patrol watches the courtyard; at night, more off-duty members gather here around fires. The party can infiltrate over a wall, bluff at a gate, enter through collapsed structures, or trigger a direct fight."
+												"The old Cardon crest is still visible beneath the occupation's angular red mark. Two {@creature Thug|XMM|Thugs} watch the courtyard. The party can infiltrate over a wall, bluff at a gate, enter through collapsed structures, or trigger a direct fight. If the alarm is raised, these Thugs fall back toward the Main Hall rather than waiting to die in the open."
 											]
 										},
 										{
@@ -3354,7 +3419,7 @@
 											"type": "entries",
 											"name": "3. Watchpost",
 											"entries": [
-												"A distracted three-person patrol watches one approach. Their duty roster contains Tyren's seal and references tribute demanded from multiple independent factions—useful evidence that the Boss is coordinating more than one group."
+												"Two {@creature Scout|XMM|Scouts} watch one approach from cover. Their duty roster contains Tyren's seal and references tribute demanded from multiple independent factions—useful evidence that the Boss is coordinating more than one group. If warned, they relocate to overlook the courtyard as described in the alarm state."
 											]
 										},
 										{
@@ -3368,7 +3433,7 @@
 											"type": "entries",
 											"name": "6. Main Hall",
 											"entries": [
-												"The warband leader uses this former reception hall as a command post. Use a gnoll leader if one fits the party's level; otherwise use a {@creature Gladiator|XMM} or {@creature Veteran|XMM} with gnoll appearance and a small escort. The leader's goal is to preserve control of the site and escape with Tyren's correspondence if defeat becomes likely."
+												"{@creature Korrin Vale|NCFA} uses this former reception hall as a command post with 2 {@creature Thug|XMM|Thugs}. Korrin's goal is to preserve control of the site and protect the people who depend on his group; once defeat is clear, he prefers terms to a pointless last stand."
 											]
 										},
 										{
@@ -3397,7 +3462,7 @@
 											"type": "entries",
 											"name": "12. Shrine and Correspondence",
 											"entries": [
-												"A spiritual leader represented by a {@creature Priest|XMM} or {@creature Cult Fanatic|XMM} keeps Tyren's letters and tribute demands. The correspondence makes clear that the warband is being rewarded for obedience and threatened for independence. This is another automatic clue to the Boss's methods."
+												"One {@creature Cult Fanatic|XMM} keeps Tyren's letters and tribute demands. The correspondence makes clear that Korrin's group is being rewarded for obedience and threatened for independence. If the alarm sounds, the fanatic begins destroying the letters at the end of round 2 as described in the Table-Ready Session Package."
 											]
 										},
 										{
@@ -3679,7 +3744,7 @@
 									"type": "entries",
 									"name": "Encounter Guidance",
 									"entries": [
-										"Use constructs, undead scholars, and aberrant scavengers where the source calls for generic guardians: {@creature Animated Armor|XMM}, {@b Flying Sword}, {@creature Specter|XMM}, {@creature Ghoul|XMM}, {@creature Mimic|XMM}, {@b Gibbering Mouther}, or {@b Nothic}. Keep intelligent encounters conversational when possible."
+										"Use the exact finite opposition in the Table-Ready Session Package. The chapter's difficulty comes from simultaneous preservation objectives and social choices, not from turning the library into a monster gauntlet. Gargoyles, Tessa's four-person crew, the Specter, and the optional Mimic are the full encounter menu."
 									]
 								},
 								{
@@ -3688,13 +3753,34 @@
 									"entries": [
 										"{@b Milestone.} The party enters the Marren/Mansions arc at level 6. Resolving Marren Library and the associated Bellweather property-case arc advances the party to level 7.",
 										"{@b Finite opposition.} 2 {@creature Gargoyle|XMM|Gargoyles} at the monument, Tessa Marr plus 3 other {@creature Scout|XMM|Scouts}, and 1 {@creature Specter|XMM} guarding the restricted collection. One {@creature Mimic|XMM} in the supply room is an optional pacing encounter, not a required fight.",
-										"{@b Fire clock.} Once the stacks fire begins, run 4 rounds. The party needs 3 total successful fire-control actions before the end of round 4. An appropriate spell can count as one or more successes when it plainly solves part of the problem; otherwise use DC 13 with a relevant ability or tool. Each failed attempt costs time but does not erase earlier successes.",
-										"{@b Fire failure.} If the party reaches the end of round 4 without 3 successes, one secondary collection is lost and the party loses up to 500 gp of manuscript value. The Restricted Stacks and the essential Tyren/Radiant Well revelations survive.",
+										"{@b Fire clock.} Once the stacks fire becomes active, run 4 rounds. The party needs 5 total successful fire-control actions before the end of round 4. An appropriate area spell or especially strong fictional solution can count as 2 successes; otherwise use DC 13 with a relevant ability or tool. Failed attempts cost the action and can trigger the fire-failure consequences, but do not erase earlier successes.",
+										"{@b Fire failure.} Track total failed fire-control attempts. At 2 failures, one secondary collection is lost. If the party reaches the end of round 4 without 5 successes, a second secondary collection and up to 500 gp of manuscript value are lost. The Restricted Stacks and essential Tyren/Radiant Well revelations survive.",
 										"{@b Scavenger behavior.} Tessa's crew wants specified research, not a massacre. They stop fighting if Tessa is reduced below half hit points, if 2 Scouts fall, or if the party offers a safe exit without the commissioned papers. They help with the fire if convinced their own escape depends on it.",
 										"{@b Guardian behavior.} The Gargoyles defend only the monument area. The Specter begins with conversation and attacks only if the Restricted Stacks are threatened, deliberately damaged, or forced open after its warning.",
 										"{@b Short rest.} A secured group-study room can support a Short Rest after the scavenger situation is settled. If the fire has already started, it continues during the hour and automatically reaches its failure state unless the party solves it first.",
 										"{@b Useful DCs.} Fire control DC 13; suppress the office ward DC 15 Arcana; resist the ward DC 14 Wisdom; identify which archive copy is original DC 14 Investigation; gain the Specter's trust with respectful handling and a concrete preservation plan DC 14 Persuasion or Religion.",
-										"{@b Pacing valve.} If time is short, the Gargoyles remain dormant and the optional Mimic is absent. If time remains, activate one of those encounters after the essential archive work is complete."
+										"{@b Pacing valve.} If time is short, the Gargoyles remain dormant and the optional Mimic is absent. If time remains, activate one of those encounters after the essential archive work is complete.",
+										{
+											"type": "entries",
+											"name": "Fire and Scavenger Playtest",
+											"entries": [
+												"If the party negotiates successfully with Tessa, her crew helps evacuate books but does not automatically solve the blaze; the party still runs the 5-success fire clock.",
+												"If negotiation fails, Tessa and 3 {@creature Scout|XMM|Scouts} use tables and shelving as cover and try to leave with their commissioned books. They do not stand in a firing line. The party now has to decide how many actions to spend on the fire versus stopping the crew.",
+												"Tessa's crew stops fighting if Tessa drops below half hit points, 2 Scouts go down, or the party offers safe exit without the commissioned research. Once a truce is reached, surviving scavengers can spend their turns moving books to safety, but their actions do not count toward the party's 5 fire-control successes.",
+												"The goal is pressure, not lethality. Against this party, four Scouts alone are not a meaningful combat threat; the fire is what makes their presence matter."
+											]
+										},
+										{
+											"type": "entries",
+											"name": "Expected Session Shape",
+											"entries": [
+												"Arrival and initial survey: about 20–30 minutes.",
+												"Reading room and the fire/scavenger crisis: about 60–75 minutes.",
+												"Master Librarian chamber and Restricted Stacks: about 45–60 minutes.",
+												"Property archives and publication choice: about 30 minutes.",
+												"The Bellweather property case can take the final 20–40 minutes or open the next session."
+											]
+										}
 									]
 								},
 								"{@b Keyed-area encounters.} When a scene and a keyed location describe the same encounter, use the roster and objective in the scene. Creatures listed only in the keyed reference apply when the characters explore that location outside the scene sequence.",
@@ -3834,7 +3920,7 @@
 											"name": "What Happens",
 											"entries": [
 												"A smoke plume from one wing means some records are already in danger. Characters can enter through the garden court, main hall, or a broken upper window.",
-												"Every hour spent without stabilizing the fire destroys one minor collection; this does not remove essential clues."
+												"If the party spends a full hour elsewhere after reaching the library without investigating the smoke and heat, one minor collection is lost before Scene 3 begins. Once the active blaze is confronted, use the four-round Fire Clock instead of tracking additional hours."
 											]
 										},
 										{
@@ -3897,7 +3983,7 @@
 											"type": "entries",
 											"name": "What Happens",
 											"entries": [
-												"Characters can fight the fire, stop the scavengers, or split up. Three successful actions using water, magic, blankets, or DC 13 ability checks contain the fire.",
+												"Five successful fire-control actions using water, magic, blankets, tools, or DC 13 ability checks contain the fire before the end of round 4. Especially effective area magic or a strong fictional solution can count as 2 successes.",
 												"The scavengers surrender if cornered; they were hired to recover specific research, not burn the building."
 											]
 										},
@@ -4019,7 +4105,7 @@
 											"type": "entries",
 											"name": "Consequences",
 											"entries": [
-												"Advance to level 9 if using milestones. The next phase focuses on wealth and property returning to the city, beginning with the Mansions."
+												"Do not level from the library alone. Resolve the associated Bellweather property-case beat, then advance the party to level 7 and move toward Paden Square."
 											]
 										}
 									]
