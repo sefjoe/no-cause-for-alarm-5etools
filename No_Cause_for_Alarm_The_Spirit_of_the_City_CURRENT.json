@@ -6,17 +6,17 @@
 				"json": "NCFASOC",
 				"abbreviation": "NCFA-SOC",
 				"full": "No Cause for Alarm: The Spirit of the City",
-				"version": "2.8",
+				"version": "2.9",
 				"authors": [
 					"No Cause for Alarm Campaign"
 				],
-				"dateLastModified": 1791333600
+				"dateLastModified": 1791337200
 			}
 		],
 		"edition": "one",
 		"dateAdded": 1791271800,
-		"dateLastModified": 1791333600,
-		"_dateLastModifiedHash": "11f16cee8d"
+		"dateLastModified": 1791337200,
+		"_dateLastModifiedHash": "02e4aca81e"
 	},
 	"adventure": [
 		{
@@ -104,7 +104,9 @@
 						"5. Barracks",
 						"6. Command Room",
 						"7. Stores and Escape Route",
+						"Resting Inside Kellan’s Well",
 						"Tactical Response",
+						"Securing Kellan’s Well",
 						"Return to Bellweather",
 						"Pepper: Mission 1 Complete",
 						"No Cause for Alarm Beat",
@@ -3009,6 +3011,16 @@
 										]
 									]
 								}
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Securing Kellan’s Well",
+							"entries": [
+								"If the party breaks the local command structure and returns with enough evidence to identify the operation, the Council moves to secure the site rather than expecting the adventurers to garrison it.",
+								"Wern dispatches a small guard detail to hold the main entrance within hours. Lessa and Kav mark unstable tunnels, note which access points can be blocked, and identify routes that still require periodic patrols.",
+								"If most hostile personnel fled or the party left the surface crews intact, securing the well takes longer and may require a later sweep by Council forces. This changes how quickly the route becomes safe, but it does not require the party to repeat the chapter.",
+								"Once secured, Kellan’s Well stops functioning as a reliable criminal supply corridor into Bellweather. The visible result is increased patrol traffic, temporary barricades, and survey markings around the site."
 							]
 						},
 						{
