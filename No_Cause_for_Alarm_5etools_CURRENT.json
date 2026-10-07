@@ -6,17 +6,17 @@
 				"json": "NCFA",
 				"abbreviation": "NCFA",
 				"full": "No Cause for Alarm: Ruins of Bellweather",
-				"version": "4.18",
+				"version": "4.19",
 				"authors": [
 					"No Cause for Alarm Campaign"
 				],
-				"dateLastModified": 1791345900
+				"dateLastModified": 1791346200
 			}
 		],
 		"edition": "one",
 		"dateAdded": 1789528955,
-		"dateLastModified": 1791345900,
-		"_dateLastModifiedHash": "6ac5c4ec18"
+		"dateLastModified": 1791346200,
+		"_dateLastModifiedHash": "6ac5c61819"
 	},
 	"adventure": [
 		{
@@ -133,7 +133,7 @@
 					]
 				},
 				{
-					"name": "Chapter 10: The Mansions",
+					"name": "Interlude: The Mansions (Optional Reference)",
 					"headers": [
 						"Chapter Overview",
 						"Running the Chapter",
@@ -4026,9 +4026,20 @@
 								},
 								{
 									"type": "entries",
-									"name": "Transition to Chapter 10",
+									"name": "Bellweather Return: One Property Case",
 									"entries": [
-										"With valuable districts reopening, old families and investors begin pressing claims in the Mansion District."
+										"After the library is secure, resolve one Mansion-district property dispute as part of the return to Bellweather rather than scheduling a separate mandatory adventure. This beat should take about 20–45 minutes unless the players choose to pursue it further.",
+										"{@b Choose one case.} Use whichever best fits current consequences: an occupied inherited house where current residents need relocation; a forged private claim contradicted by the recovered archive; or a family vault whose codicil transferred part of the estate to a public hospice.",
+										"{@b Resolution.} Evidence from Marren Library is enough to prevent the case from hinging on one roll. The party can advocate, negotiate compensation, expose fraud, or push the Council toward a precedent. Combat occurs only if the players deliberately enter a dangerous property and the existing case material calls for it.",
+										"{@b Perrin consequence.} Perrin cites the resulting precedent publicly and selectively. He is elevated to chair the Reclamation and Emergency Works Committee because he now has money, administrative credibility, and a record of supporting reclamation. This remains a legitimate appointment, not a secret coup.",
+										"{@b Milestone.} Once Marren Library and this Bellweather property-case beat are resolved, advance the party to level 7."
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Transition to Paden Square",
+									"entries": [
+										"The recovered archive and the property precedent sharpen Bellweather's understanding of who is profiting from reclamation. Intelligence from merchants and intercepted correspondence points next to Paden Square, where Tyren's network is buying material through supposedly neutral trade channels."
 									]
 								},
 								{
@@ -4060,59 +4071,29 @@
 				},
 				{
 					"type": "section",
-					"name": "Chapter 10: The Mansions",
+					"name": "Interlude: The Mansions (Optional Reference)",
 					"id": "010",
 					"entries": [
-						"{@b Recommended level:} 8–9",
+						"{@b Recommended level:} 6–7 (optional)",
 						{
 							"type": "entries",
 							"name": "Chapter Overview",
 							"entries": [
-								"{@b Chapter purpose.} Resolve three property cases that establish how Bellweather treats inherited claims, current occupants, and public-use promises.",
-								"With major streets reopening, several families and investors ask the party to enter the old Mansion District and resolve competing claims.",
-								"Perrin uses the resulting legal climate to strengthen private ownership and his own political influence.",
-								"{@b Leads onward.} Reports from occupied territory describe a thriving illicit market in Paden Square where rival factions trade under a shared truce."
+								"{@b Purpose.} This section is a menu of property cases for use during Bellweather return scenes. It is no longer a mandatory standalone adventure.",
+								"Run one case after Marren Library as part of the level-6-to-7 arc. Keep the remaining cases available only if the players choose to investigate property disputes or Perrin's committee work further.",
+								"{@b Campaign function.} The cases establish precedents Perrin later cites, show that reclamation creates winners and losers, and give the party meaningful influence over Bellweather without adding another required multi-session dungeon."
 							]
 						},
 						{
 							"type": "entries",
 							"name": "Running the Chapter",
 							"entries": [
-								"{@b Primary objectives.} Recover heirlooms, expose false claims, protect residents, decide what is public/private salvage.",
-								"{@b Player agency.} Accept private commissions, demand public terms, mediate rival heirs, or prioritize public safety.",
-								"{@b Fail forward.} Documents needed to adjudicate a featured claim are always recoverable with investigation.",
-								"{@b Rest and pressure.} Safe long rests are available back at Ledger House. Inside the active adventure site, resting gives opposing factions time to reposition unless the characters secure a defensible refuge.",
-								{
-									"type": "inset",
-									"name": "Table-Ready Use",
-									"entries": [
-										"Treat the Mansion District as a flexible set of 1–2 session commissions from old families, investors, displaced descendants, and opportunists. Each commission should expose a different argument about ownership. Use the source map as a reusable neighborhood rather than clearing every building."
-									]
-								},
-								{
-									"type": "entries",
-									"name": "Encounter Guidance",
-									"entries": [
-										"Use the current party tier and the organized-town encounter guidance. Private employers may accompany the party, creating protection and social complications. Keep family claims and hidden vaults central."
-									]
-								},
-								"{@b Keyed-area encounters.} When a scene and a keyed location describe the same encounter, use the roster and objective in the scene. Creatures listed only in the keyed reference apply when the characters explore that location outside the scene sequence.",
-								{
-									"type": "entries",
-									"name": "Perrin's Rise: Committee Authority",
-									"entries": [
-										"After the Mansion precedents are set, Perrin is elevated to chair Bellweather's {@b Reclamation and Emergency Works Committee} or its local equivalent. The office gives him legitimate access to contracts, requisitions, seals, property hearings, and administrative staff.",
-										"The appointment is public and defensible: Perrin has money, experience, and a record of supporting reclamation. This is the institutional bridge that makes his later abuse of procedure plausible."
-									]
-								},
-								{
-									"type": "entries",
-									"name": "Optional Jarrock Thread: Rena's Challenge",
-									"entries": [
-										"Use Rena Dask once during the Mansion property cases if Jarrock has engaged with her earlier. She asks him to explain the principle behind his decisions: inherited title, current occupation, labor invested, public need, or some combination.",
-										"Rena should challenge inconsistency, not demand a predetermined political answer. After this scene, let the subplot recede unless Jarrock actively keeps the relationship alive."
-									]
-								}
+								"{@b Use at the table.} Pick one featured case that matches current play. Start with the claimant, current occupants, and the disputed evidence already visible; do not require the party to clear an entire district.",
+								"{@b Time budget.} Default to 20–45 minutes. Only expand into exploration or combat if the players actively pursue the dangerous property.",
+								"{@b Evidence rule.} The decisive document or witness is recoverable automatically through reasonable investigation. Checks reveal it faster, expose additional fraud, or improve leverage; they never gate the case.",
+								"{@b Perrin.} Perrin argues for predictable ownership rules and uses whatever precedent the party creates. He can be reasonable while still accumulating procedural power.",
+								"{@b No milestone.} This interlude does not award a separate level. The Marren/property arc advances the party to level 7.",
+								"{@b Pacing valve.} If the session is already full, resolve the case with a hearing and one meaningful choice. If the players become invested, use the existing mansion maps, guardians, and hazards as optional follow-up material."
 							]
 						},
 						{
@@ -4332,7 +4313,7 @@
 									"type": "entries",
 									"name": "Transition to Chapter 11",
 									"entries": [
-										"Reports from occupied territory describe a thriving illicit market in Paden Square where rival factions trade under a shared truce."
+										"Whether the party resolves one case or several, Paden Square remains the next mandatory adventure. The Mansion cases stay available as Bellweather side material."
 									]
 								},
 								{
@@ -4367,7 +4348,7 @@
 					"name": "Chapter 11: Paden Square",
 					"id": "011",
 					"entries": [
-						"{@b Recommended level:} 9–10",
+						"{@b Recommended level:} 7",
 						{
 							"type": "entries",
 							"name": "Maps",
@@ -4482,6 +4463,22 @@
 									"name": "Encounter Guidance",
 									"entries": [
 										"Present the plaza as a functioning hostile market rather than a room-by-room extermination. Social infiltration, bargaining, disguise, and violence should all work."
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Table-Ready Session Package",
+									"entries": [
+										"{@b Milestone.} The party enters Paden Square at level 7 and remains level 7 afterward; completing the Paden Square + Storen Gate arc advances the party to level 8.",
+										"{@b Required objectives.} Complete any 2 of 3: identify Tyren's courier, learn what the network is purchasing, and secure the command correspondence or auctioned material. Completing all 3 improves the Storen Gate briefing but is not required.",
+										"{@b Finite security.} Market security consists of 1 {@creature Veteran|XMM}, 4 {@creature Thug|XMM|Thugs}, and 2 {@creature Scout|XMM|Scouts}. Tyren's courier uses a {@creature Spy|XMM} stat block and tries to escape rather than fight. Civilians flee if violence begins. No additional combatants appear from the crowd.",
+										"{@b Suspicion 0–3.} Start at 0. A conspicuous failed deception, obvious theft attempt, or visible snooping increases Suspicion by 1. At 1, a Scout shadows the party. At 2, Balden personally questions them and the courier becomes cautious. At 3, security orders them out and the courier leaves with the correspondence; this creates an escape/chase scene rather than an automatic mass combat.",
+										"{@b Cover.} A plausible story plus appropriate behavior requires no roll. When a lie is actually tested, use DC 14 Deception. A real sponsor, captured invitation, or useful merchant contact grants advantage.",
+										"{@b Auction.} Run three lots. The target material appears in lot 3. During each lot the party gets one meaningful action to observe, bid, lift a document, contact the courier, or manipulate security. The courier departs immediately after lot 3 if Suspicion is 2 or higher.",
+										"{@b Securing the correspondence.} DC 15 Sleight of Hand steals it unnoticed; DC 15 Deception or Persuasion can create a handoff or private meeting when fiction supports it; defeating or cornering the courier also works. Failure raises Suspicion rather than erasing the clue.",
+										"{@b Short rest.} Paden Square is not a safe place to spend an hour once the auction is underway. If the party leaves to Short Rest, the auction resolves and the courier departs, but the broker or a tail can still point them toward an escape route or Storen Gate contact.",
+										"{@b Escape procedure.} If needed, require 3 successes before 2 failures using Athletics, Acrobatics, Stealth, Deception, or a clearly useful spell, normally DC 14. On success the party exits cleanly. On failure, surviving security catches them at the last exit for one final confrontation or forces them to abandon one nonessential piece of evidence.",
+										"{@b Pacing valve.} If time is short, Garin identifies the courier after one good conversation and move directly to lot 3. If time remains, play all three lots and let Suspicion build naturally."
 									]
 								},
 								"{@b Keyed-area encounters.} When a scene and a keyed location describe the same encounter, use the roster and objective in the scene. Creatures listed only in the keyed reference apply when the characters explore that location outside the scene sequence."
@@ -4713,7 +4710,7 @@
 					"name": "Chapter 12: Storen Gate",
 					"id": "012",
 					"entries": [
-						"{@b Recommended level:} 10–11",
+						"{@b Recommended level:} 7",
 						{
 							"type": "entries",
 							"name": "Maps",
@@ -4820,6 +4817,23 @@
 									"name": "Encounter Guidance",
 									"entries": [
 										"Treat this as a military objective. Success is measured by controlling the alarm, gate mechanism, command post, and reinforcement timing rather than by defeating every defender."
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Table-Ready Session Package",
+									"entries": [
+										"{@b Milestone.} The party enters Storen Gate at level 7. Securing the gate completes the Paden + Storen arc and advances the party to level 8.",
+										"{@b Four objectives.} Silence the alarm, open the gate, seize or turn the command post, and hold the mechanism until Bellweather troops establish control. The party can approach these in any order that makes sense.",
+										"{@b Finite defenders.} Wall: 4 {@creature Scout|XMM|Scouts} and 2 {@creature Guard|XMM|Guards}. Gate mechanism: 1 {@creature Veteran|XMM} and 4 Guards. Command post: 1 {@creature Hobgoblin Captain|XMM} and 3 {@creature Hobgoblin Warrior|XMM|Hobgoblin Warriors}. Alarm reinforcement: 1 Veteran and 4 Guards drawn from the same garrison reserve. No further waves appear.",
+										"{@b Alarm.} If the bell rings, the reserve reaches the gate mechanism at the end of round 2. Silencing the bell before then cancels the reserve. A failed stealth or deception attempt can start questioning without automatically ringing the alarm.",
+										"{@b Gate mechanism.} Removing the locking bar requires DC 15 Athletics or two uninterrupted actions with suitable tools. Once the bar is removed, opening the gate takes one action. Bellweather troops enter at the start of the next round and secure ordinary rank-and-file fighting off-map.",
+										"{@b Command morale.} The captain tries to destroy orders and retreat if the gate opens before the command post is secured. The Hobgoblins surrender or withdraw when the captain falls and Bellweather troops control the gate.",
+										"{@b Hold sequence.} After the gate opens, run at most 4 rounds of pressure: round 1 missile fire from surviving sentries; round 2 fire or sabotage at the mechanism; round 3 a retreating squad attempts to rebar the gate; round 4 the command element makes its final push or withdraws. Use surviving listed defenders rather than spawning new enemies.",
+										"{@b Useful DCs.} Forge or bluff a routine inspection DC 14 Deception; jam the bell DC 13 Sleight of Hand or appropriate tools; remove the gate bar DC 15 Athletics; stop fire at the mechanism DC 14 Survival, Arcana, or an appropriate spell; identify the commander's escape route DC 14 Investigation.",
+										"{@b Short rest.} Before the gate is open, a Short Rest gives defenders time to consolidate, burn secondary orders, and place the reserve at the gate. After Bellweather troops enter and the command post is secure, a Short Rest is safe.",
+										"{@b Fail-forward.} If the alarm sounds or the commander escapes, the gate can still be taken. The cost is an extra reserve fight, lost secondary intelligence, or the commander becoming a later complication—not mission failure.",
+										"{@b Pacing valve.} If time is short, Bellweather scouts provide a route directly to either the alarm tower or gate mechanism. If time remains, run the full four-objective assault."
 									]
 								},
 								"{@b Keyed-area encounters.} When a scene and a keyed location describe the same encounter, use the roster and objective in the scene. Creatures listed only in the keyed reference apply when the characters explore that location outside the scene sequence.",
@@ -5078,7 +5092,7 @@
 					"name": "Chapter 13: Valen Cemetery",
 					"id": "013",
 					"entries": [
-						"{@b Recommended level:} 11–12",
+						"{@b Recommended level:} 8",
 						{
 							"type": "entries",
 							"name": "Maps",
@@ -5187,6 +5201,21 @@
 										"Build the escalation from {@b Skeleton/Zombie} to {@b Ghoul/Ghast}, {@creature Wight|XMM}, {@creature Wraith|XMM}, {@creature Specter|XMM}, and finally the vampire or vampire-spellcaster equivalent appropriate to the party's level. Undead should arrive in distinct scenes rather than one giant attrition swarm."
 									]
 								},
+								{
+									"type": "entries",
+									"name": "Table-Ready Session Package",
+									"entries": [
+										"{@b Milestone.} Valen Cemetery is an independent Bellweather problem for the level-8 party. It does not advance the party by itself; resolving Valen and then Maren Isle advances the party to level 9.",
+										"{@b Finite opposition.} Poor Graves: 6 {@creature Zombie|XMM|Zombies}. Marble Tower: 2 {@creature Wight|XMM|Wights}. Hessa's crypt: {@creature Hessa Vale|NCFA}, 1 Wight, and 4 {@creature Skeleton|XMM|Skeletons}. No vampire or hidden Tyren lieutenant exists in this chapter.",
+										"{@b Civilians.} Three cemetery workers and two mourners are sheltering in the chapel vestry. They are frightened but mobile. Reaching them reveals the location of the first necromantic focus and gives the party a safe place to direct rescued people.",
+										"{@b Two control focuses.} Each focus can be destroyed normally or disabled with 2 successful DC 15 Arcana, Religion, or suitable-tool actions. Divine magic or a strong fictional solution can count as an automatic success. A failed attempt causes 2d6 necrotic damage to the acting character but does not reset progress.",
+										"{@b Finale effects.} If both focuses are disabled, Hessa receives no undead reinforcements. If one remains, 2 Skeletons rise at the end of round 3. If both remain, 2 Skeletons rise at the ends of rounds 2 and 4. These are the only finale reinforcements.",
+										"{@b Hessa's state.} Hessa bargains once reduced below half hit points, once both focuses are disabled, or once her Wight falls and she has no clear escape. She offers her own research and names no Tyren connection because she has none.",
+										"{@b Short rest.} A restored chapel can support a Short Rest. During that hour Hessa withdraws to the crypt, seals one obvious approach, and prepares her existing defenders. She does not create unlimited new undead or kill named civilians off-screen.",
+										"{@b Useful DCs.} Track removed bodies DC 13 Investigation or Survival; identify a control sigil DC 14 Arcana or Religion; disable a focus DC 15; force a sealed crypt door DC 15 Athletics; calm trapped civilians under active danger DC 13 Persuasion.",
+										"{@b Pacing valve.} If time is short, the civilians point directly to the tower and one focus has already failed. If time remains, use the ignored-threat complication from the chapter before the crypt."
+									]
+								},
 								"{@b Keyed-area encounters.} When a scene and a keyed location describe the same encounter, use the roster and objective in the scene. Creatures listed only in the keyed reference apply when the characters explore that location outside the scene sequence.",
 								{
 									"type": "entries",
@@ -5292,14 +5321,14 @@
 											"type": "entries",
 											"name": "Zone I — Inner Mausoleum",
 											"entries": [
-												"The real controller retreats here: use a {@creature Vampire|XMM}, {@creature Vampire Spawn|XMM} spellcaster, or another undead leader appropriate to the party's level. The creature's goal is survival and continued control, not a static slugfest. It uses secret passages, dominated servants, and surviving necromantic focuses to shape the fight."
+												"Hessa uses the deepest crypt as her final workshop and fallback position. She has one concealed escape route and uses surviving control focuses to shape the fight, but the finale uses the exact Hessa roster in the Table-Ready Session Package rather than an additional vampire controller."
 											]
 										},
 										{
 											"type": "entries",
 											"name": "Zone J — Resting Chamber",
 											"entries": [
-												"The true resting chamber contains evidence connecting the undead crisis to Tyren's broader network, but the vampire is not necessarily Tyren's servant by ideology; it may simply be exploiting the same instability. This keeps the world from collapsing into one conspiracy."
+												"The true workshop contains Hessa's own research, grave-robbing records, and evidence of who she exploited. Nothing here retroactively connects her operation to Tyren or Yaren; Valen Cemetery remains an independent danger created by Bellweather's instability."
 											]
 										},
 										{
@@ -5513,7 +5542,7 @@
 					"name": "Chapter 14: Maren Isle",
 					"id": "014",
 					"entries": [
-						"{@b Recommended level:} 12–13",
+						"{@b Recommended level:} 8",
 						{
 							"type": "entries",
 							"name": "Maps",
@@ -5627,6 +5656,22 @@
 									"name": "Encounter Guidance",
 									"entries": [
 										"Use spellcaster stat blocks such as {@creature Mage|XMM}, {@creature Archmage|XMM} (only when level-appropriate), {@creature Cult Fanatic|XMM}, and magical guardians such as {@creature Gargoyle|XMM}, {@creature Helmed Horror|XMM}, {@creature Invisible Stalker|XMM}, or elementals. Keep the pyramid/island exploration structure."
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Table-Ready Session Package",
+									"entries": [
+										"{@b Milestone.} The party enters Maren Isle at level 8. Resolving the independent Bellweather problem + Maren Isle arc advances the party to level 9.",
+										"{@b Expedition sequence.} Run five beats: establish the river problem; choose a landing; cross the lower maze and free prisoners; confront Yaren's laboratory team; shut down the three pressure nodes. The party can reorder or bypass interior routes, but the control-room shutdown is the only required final objective.",
+										"{@b Finite defenders.} Dock: 2 {@creature Animated Armor|XMM} and 2 {@creature Water Weird|XMM|Water Weirds}. Lower maze: 2 {@creature Gargoyle|XMM|Gargoyles} and 1 {@creature Helmed Horror|XMM} guarding the prisoner/control route. Laboratory: {@creature Yaren|NCFA}, 2 {@creature Veteran|XMM|Veterans}, and 1 {@creature Invisible Stalker|XMM}. No additional defenders appear.",
+										"{@b Alert 0–2.} Start at 0. Obvious combat at the dock or a failed attempt to manipulate the teleporter network raises Alert by 1. At Alert 1, the lower-maze defenders take prepared positions. At Alert 2, Yaren moves his notes to the control room and begins with defensive magic active. Alert changes preparation, not creature count.",
+										"{@b Prisoners.} Six captives from different regional communities are alive in the lower level. Freeing them provides testimony, identifies a safe control-room approach, and seeds later regional contacts. They do not become combat followers unless a specific player plan makes that sensible.",
+										"{@b Yaren's state.} Yaren wants his notes and his life. He bargains or surrenders if reduced below half hit points, if both Veterans fall, or if the party reaches the controls with his escape cut off. At Alert 2 he attempts to flee with the notes rather than fight to the death.",
+										"{@b Pressure-node challenge.} The control room has 3 visible nodes. Disable all 3. Each node takes one successful DC 15 Arcana, Investigation, thieves' tools, smith's tools, or clearly appropriate action. A failure deals 2d6 force damage to the acting character and raises pressure. After the second total failure, an escalating whine gives everyone one full round to move before a 4d6 force pulse hits the chamber; the challenge continues afterward rather than ending in an arbitrary explosion.",
+										"{@b Short rest.} Once the prisoner level is secured, it can support a Short Rest. During the hour, Alert rises by 1 to a maximum of 2 and Yaren repositions according to that state. No new creatures arrive.",
+										"{@b Useful DCs.} Poisoned water DC 15 Constitution save as written; locate a safer landing DC 13 Survival or Investigation; manipulate a teleporter safely DC 15 Arcana; disable a pressure node DC 15; understand Yaren's transference notes DC 14 Arcana.",
+										"{@b Pacing valve.} If time is short, the freed prisoners supply the safe route and bypass one maze defender group. If time remains, use the full lower-maze route and teleporter complication."
 									]
 								},
 								"{@b Keyed-area encounters.} When a scene and a keyed location describe the same encounter, use the roster and objective in the scene. Creatures listed only in the keyed reference apply when the characters explore that location outside the scene sequence.",
