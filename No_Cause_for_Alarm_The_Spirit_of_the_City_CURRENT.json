@@ -306,7 +306,10 @@
 						"Rellan Enclave",
 						"Emmer Hold",
 						"Regional Milestones",
+						"When to Confront Perrin",
 						"Confronting Perrin",
+						"Tyren’s Regional Countermove",
+						"Regional Rest, Travel, and World Movement",
 						"Completing the Regional Arc"
 					]
 				},
@@ -6457,49 +6460,46 @@
 								{
 									"type": "quote",
 									"entries": [
-										"This chapter is a menu, not a checklist. The party needs enough regional success to reach levels 14 and 15; it does not need to complete every named place.  {@b Kerren Settlement:} social/investigation first; use current {@creature Thri-kreen|MPMM} only if violence occurs.  {@b Waylen Camp:} primarily social/travel; use {@creature Scout|XMM} and {@creature Veteran|XMM} only if a hostile third party attacks.  {@b Rellan Enclave:} social/lore first; use {@b Lizardfolk} and {@creature Giant Lizard|XMM} only if negotiations collapse.  {@b Emmer Hold:} controlled militant cell; use {@creature Veteran|XMM}, {@creature Guard|XMM}, {@creature Scout|XMM}, and current kobold combat stat blocks in small squads.  Optional regional hostile groups may use {@creature Knight|XMM}, {@creature Veteran|XMM}, {@creature Gladiator|XMM}, {@creature Mage|XMM}, or other published roles. Settlement populations never enter combat as one group."
+										"{@b This is a choice-driven arc, not a checklist.} The party can visit regional locations in any order and can leave some unused.",
+										"{@b Level scaling for regional combat.} When a location has an optional hostile force, use the exact row for the party's current level band rather than inventing a new roster.",
+										"{@b Long rests.} Allied settlements are safe once trust is earned. During active pursuits, raids, or relay operations, time continues to move.",
+										"{@b Core proof is redundant.} No single settlement, courier, elder, or resonator is required to prove Tyren's expansion."
 									]
 								},
 								{
 									"type": "entries",
-									"name": "Rewards and Treasure",
-									"entries": [
-										"Regional rewards should emphasize alliances, routes, intelligence, ritual components, services, and one or two tier-appropriate permanent items across the entire arc—not a magic-item payout at every settlement."
-									]
-								},
-								{
-									"type": "entries",
-									"name": "Stat Block Setup",
+									"name": "Regional Combat Scaling",
 									"entries": [
 										{
 											"type": "table",
 											"colLabels": [
-												"Location",
-												"Useful lookups"
+												"Party level",
+												"Default regional hostile team"
 											],
 											"rows": [
 												[
-													"Kerren",
-													"current {@creature Thri-kreen|MPMM} stat blocks"
+													"9–10",
+													"1 Veteran + 4 Scouts"
 												],
 												[
-													"Waylen",
-													"{@creature Scout|XMM}, {@creature Veteran|XMM} as needed"
+													"11–12",
+													"1 Gladiator + 2 Veterans + 4 Scouts"
 												],
 												[
-													"Rellan",
-													"{@b Lizardfolk}, {@creature Giant Lizard|XMM}"
-												],
-												[
-													"Emmer",
-													"current kobold combatants, {@creature Veteran|XMM}, {@creature Guard|XMM}, {@creature Scout|XMM}"
-												],
-												[
-													"Regional elite",
-													"{@creature Knight|XMM}, {@creature Gladiator|XMM}, {@creature Mage|XMM}"
+													"13–14",
+													"1 Gladiator + 2 Veterans + 1 Mage + 4 Scouts"
 												]
 											]
-										}
+										},
+										"Use a location-specific roster when listed. Settlement populations never enter initiative as one group."
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Regional Rewards",
+									"entries": [
+										"The arc's main rewards are allies, routes, testimony, ritual knowledge, and destruction of Tyren's external infrastructure.",
+										"Across the whole regional arc, award no more than {@b 2,000 gp} in direct coin/valuables, 4 useful consumables, and one permanent magic item unless actual play has left the party materially under-equipped."
 									]
 								}
 							]
@@ -6508,50 +6508,40 @@
 							"type": "entries",
 							"name": "Regional Rule",
 							"entries": [
-								"Every named regional place remains part of the campaign world.",
-								"The party does {@b not} need to complete all of them.",
-								"Use at least two before the level-14 milestone and enough additional regional progress to justify level 15 before Zennar.",
-								"The four named locations below each serve a distinct function."
+								"Every named regional place remains part of the campaign world, but the party does not need to complete all of them.",
+								"Milestones come from changing Tyren's position: proving the spread, breaking routes, gaining allies, confronting Perrin, surviving the response, and completing endgame preparation.",
+								"A location solved earlier can still matter later if the party uses that alliance or evidence in a new way. Do not force unused locations just to award a level.",
+								"The four named locations below each serve a distinct function and are ready to run as one-session regional modules."
 							]
 						},
 						{
 							"type": "entries",
 							"name": "Kerren Settlement",
 							"entries": [
-								"Kerren is a thri-kreen settlement built among earthen mounds and underground chambers.",
-								"It is not a dungeon and its residents are not automatically hostile.",
+								"Kerren is a thri-kreen settlement built among earthen mounds and underground chambers. It is a community, not a dungeon.",
 								{
 									"type": "entries",
 									"name": "Why It Matters",
 									"entries": [
-										"Kerren sits along a courier route that has recently changed behavior.",
-										"Couriers once traveled in small independent groups. Now different companies stop at exactly the same places, depart at the same times, and sometimes change direction simultaneously without exchanging messages.",
-										"Kerren residents have noticed because outsiders repeatedly cross their territory."
+										"Kerren sits on a courier route whose travelers now stop, turn, and depart in synchronized patterns without visible messages."
 									]
 								},
 								{
 									"type": "entries",
-									"name": "Adventure",
+									"name": "Table-Ready Kerren Module",
 									"entries": [
-										"The party can earn cooperation through respectful contact, trade, translation magic, patient observation, or assistance with an unrelated local problem.",
-										"If trusted, Kerren provides:",
-										{
-											"type": "list",
-											"items": [
-												"maps of courier movements;",
-												"testimony that synchronized behavior extends beyond Bellweather;",
-												"a captured courier who remembers receiving an “obvious” instruction without hearing a voice;",
-												"evidence that the routes ultimately connect to Bellweather commerce."
-											]
-										},
-										"Violence closes this information source but does not end the campaign."
+										"{@b Route roster:} 1 Veteran and 4 Scouts operate the outside courier/recovery route. Kerren residents are not part of this hostile roster.",
+										"Respectful contact, useful trade, translation magic, or help with a local practical problem earns a meeting without a check. If the party demands immediate access or arrives during tension, a {@dc 15} Persuasion or Insight check can accelerate cooperation; failure costs time rather than permanently closing Kerren.",
+										"{@b Observation.} Three courier pairs pass the route during a 90-minute cycle. Watching the full cycle automatically reveals identical stops and timing. A {@dc 15} Investigation or Survival check identifies the pattern after 20 minutes.",
+										"{@b Interception.} If the party stops a courier pair, use 2 Scouts. If the pair fails to report, the Veteran and remaining 2 Scouts arrive about 20 minutes later to recover them. They withdraw if the Veteran falls or the prisoners/documents are clearly lost.",
+										"A captured courier remembers an instruction becoming 'obvious' without hearing a voice. Route marks ultimately connect back to Bellweather commerce."
 									]
 								},
 								{
 									"type": "entries",
 									"name": "Reward",
 									"entries": [
-										"Regional intelligence, safe passage, supplies, and one useful consumable or crafted item."
+										"Kerren provides route maps, safe passage, supplies, and 1 {@item Potion of Greater Healing|XDMG}. The alliance can remove one travel complication later."
 									]
 								}
 							]
@@ -6565,31 +6555,24 @@
 									"type": "entries",
 									"name": "Why It Matters",
 									"entries": [
-										"The camp has watched troop and merchant movements for months.",
-										"Its guides can identify which groups changed from ordinary disciplined movement into something stranger: entire columns stopping, turning, or changing camp with no visible messenger."
+										"Waylen has watched entire merchant and troop columns stop, turn, and change camp without visible messengers. Its guides can show that the synchronized routes point back toward Bellweather."
 									]
 								},
 								{
 									"type": "entries",
-									"name": "Adventure",
+									"name": "Table-Ready Waylen Module",
 									"entries": [
-										"The party can gain trust by sharing useful information, providing medical aid, protecting a caravan, or negotiating fairly for route access.",
-										"Waylen guides can lead the party around one hostile road entirely, reducing later combat.",
-										"They also provide a crucial strategic conclusion:",
-										{
-											"type": "quote",
-											"entries": [
-												"The synchronized movement is spreading {@b outward from Bellweather}, not inward toward it."
-											]
-										},
-										"That is the first clear sign that Bellweather is the source of the expansion rather than merely another target."
+										"The camp asks for one concrete favor before committing guides: escort a supply caravan through a road where ordinary raiders have been attacking. The raiders are unrelated to Tyren.",
+										"{@b Raider roster:} 1 Veteran + 4 Scouts. They try to take animals/cargo and disengage once half the group is defeated or the caravan reaches the marked safe bend.",
+										"{@b Caravan objective:} use 3 wagon/animal groups. At initiative count 20, one unprotected group moves or scatters 15 feet toward danger. A character adjacent to it can use an action to stabilize or guide it automatically.",
+										"After the escort, Waylen guides share months of observations. Comparing the route notes makes the Bellweather-origin pattern automatic; no investigation roll is required once the records are placed together."
 									]
 								},
 								{
 									"type": "entries",
 									"name": "Reward",
 									"entries": [
-										"Guides, mounts, route intelligence, and a standing trade relationship."
+										"Waylen provides guides, mounts, a standing trade relationship, and a route that lets the party bypass one later hostile-road encounter entirely."
 									]
 								}
 							]
@@ -6598,37 +6581,37 @@
 							"type": "entries",
 							"name": "Rellan Enclave",
 							"entries": [
-								"Rellan is a lizardfolk enclave built around flooded ruins and old stonework.",
-								"It is a community, not a monster lair.",
+								"Rellan is a lizardfolk enclave built around flooded ruins and old stonework. It is a community, not a monster lair.",
 								{
 									"type": "entries",
 									"name": "Why It Matters",
 									"entries": [
-										"Rellan oral tradition preserves memories that Bellweather’s written archives lost.",
-										"Their oldest stories describe a {@b green-glass dragon whose voice moved through other mouths} and a small group of people who could stand before it without bowing.",
-										"The story does not use the word Unturned, but the parallel is obvious."
+										"Rellan oral tradition remembers a green-glass dragon whose voice moved through other mouths and a few people who could stand before it without bowing."
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Table-Ready Rellan Module",
+									"entries": [
+										"The enclave does not demand violence as a price for lore. The party can earn access by respectful diplomacy or by helping reopen a flooded ancestral shrine.",
+										"{@b Flooded shrine roster:} 1 {@creature Giant Crocodile|XMM} and 2 {@creature Giant Constrictor Snake|XMM|Giant Constrictor Snakes}. They are wild animals, not Tyren servants.",
+										"{@b Shrine objective:} three stone drains are jammed. Clearing a drain takes an action and a {@dc 15} Athletics check, appropriate tools, or two uninterrupted actions of manual clearing. Once all three are open, the water falls and the animals can retreat rather than fight to the death.",
+										"If the party refuses the shrine job, a patient diplomatic approach can still earn the lore after a day of discussion or trade. The lore is not gated behind combat."
 									]
 								},
 								{
 									"type": "entries",
 									"name": "The Missing Ritual Detail",
 									"entries": [
-										"If the party earns access to the enclave’s old ritual tradition, they learn one fact absent from Marren’s surviving books:",
-										{
-											"type": "quote",
-											"entries": [
-												"The Cage was designed so the Well could pull Tyren’s mind {@b inward}. Reversing the current would push his mind {@b outward}."
-											]
-										},
-										"This is the conceptual key to Tyren’s final plan.",
-										"Rellan elders warn that anyone promising to “awaken the spirit beneath the city” is not opening a source of civic power. They are reversing a prison."
+										"Rellan tradition supplies the missing principle: the old ritual pulled dispersed thought back toward Tyren's permanent identity before sealing body, soul, and name together.",
+										"That is the conceptual key to understanding why reversing the Radiant Well is dangerous."
 									]
 								},
 								{
 									"type": "entries",
 									"name": "Reward",
 									"entries": [
-										"Regional lore, safe passage, and one ritual component or charm useful in disrupting a Radiant Well node during Chapter 17."
+										"Rellan provides safe passage and a prepared ritual charm. During Chapter 17, using it at the Chorus Chamber automatically counts as one successful node action."
 									]
 								}
 							]
@@ -6637,58 +6620,71 @@
 							"type": "entries",
 							"name": "Emmer Hold",
 							"entries": [
-								"Emmer Hold is a fortified kobold-majority mining and engineering community.",
-								"Most residents want trade and survival, not war.",
-								"A militant faction inside the hold has recently begun behaving with the same synchronized certainty seen at Paden Square.",
+								"Emmer Hold is a fortified kobold-majority mining and engineering community. Most residents want trade and survival, not war. A militant faction has become unnaturally synchronized.",
 								{
 									"type": "entries",
 									"name": "Why It Matters",
 									"entries": [
-										"This is Tyren’s first significant attempt to create a stable controlled group {@b outside Bellweather}.",
-										"The militants received weapons and promises through normal intermediaries. Then their decision-making changed."
+										"This is Tyren's clearest attempt to maintain a controlled group outside Bellweather."
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Militant Roster by Party Level",
+									"entries": [
+										{
+											"type": "table",
+											"colLabels": [
+												"Party level",
+												"Militant force"
+											],
+											"rows": [
+												[
+													"9–10",
+													"1 Gladiator + 2 Veterans + 4 Guards"
+												],
+												[
+													"11–12",
+													"1 Gladiator + 2 Veterans + 2 Scouts + 4 Guards"
+												],
+												[
+													"13–14",
+													"1 Gladiator + 2 Veterans + 1 Mage + 2 Scouts + 4 Guards"
+												]
+											]
+										},
+										"Four additional kobold engineers are present around the command area but are frightened noncombatants unless the party attacks them."
 									]
 								},
 								{
 									"type": "entries",
 									"name": "The Psychic Relay",
 									"entries": [
-										"The militant command room contains a fist-sized {@b emerald resonator} cut from a mineral formation connected to old Varen excavation material.",
-										"It is not a magic item intended for player use.",
-										"It functions as a psychic relay: a place where Tyren’s projected influence becomes easier to sustain.",
-										"Destroying or warding it causes several controlled militants to become confused, frightened, or immediately willing to stop fighting."
+										"The emerald resonator is held by three control rods.",
+										"A character adjacent to a rod can disable it with an action and a {@dc 15} Arcana check, appropriate engineering/thieves' tools, or physical destruction (AC 16, 15 HP, immune to poison and psychic).",
+										"When the third rod is disabled, the resonator shuts down. Controlled militants lose the unnatural coordination and surviving members individually choose whether to surrender, flee, or keep fighting.",
+										"At initiative count 20 while the relay is active, one militant who can see another can move up to half its Speed without provoking Opportunity Attacks as Tyren synchronizes the group."
 									]
 								},
 								{
 									"type": "entries",
 									"name": "Adventure Approaches",
 									"entries": [
-										"The party can:",
-										{
-											"type": "list",
-											"items": [
-												"expose the militant leadership to the rest of the hold;",
-												"infiltrate the command chamber;",
-												"destroy the resonator;",
-												"negotiate with residents who know their relatives are acting unlike themselves;",
-												"fight the controlled command group while protecting civilians."
-											]
-										},
-										"Run the hold as a living settlement with a militant faction rather than as an extermination dungeon."
+										"The party can expose the militant leadership, infiltrate the command chamber, destroy the resonator, negotiate with worried families, or fight while protecting noncombatants. Reaching the relay is the real objective; exterminating the hold is never required."
 									]
 								},
 								{
 									"type": "entries",
 									"name": "Evidence",
 									"entries": [
-										"The relay stores no written confession, but its shipping container came through one of the same commercial intermediary networks that appeared in Koven House records.",
-										"Combined with old Cardon-linked financing, this is another piece of the Perrin puzzle."
+										"The relay's shipping container came through the same commercial intermediary network seen at Koven House. Combined with the outward-spread pattern, this materially strengthens the case against Perrin's network even though the container carries no confession."
 									]
 								},
 								{
 									"type": "entries",
 									"name": "Reward",
 									"entries": [
-										"If the hold is freed rather than conquered, Bellweather gains skilled engineers and a safer trade route."
+										"If the hold is freed rather than conquered, Bellweather gains skilled engineers, a safer trade route, {@b 500 gp} in trade credit/materials, and 1 {@item Potion of Superior Healing|XDMG}."
 									]
 								}
 							]
@@ -6700,32 +6696,42 @@
 								{
 									"type": "table",
 									"colLabels": [
-										"Milestone",
-										"New Level"
+										"Story change",
+										"New level"
 									],
 									"rows": [
 										[
-											"First major regional successes",
+											"First major regional success proves synchronized control is spreading outward from Bellweather",
 											"10"
 										],
 										[
-											"Materially disrupt a regional control route and secure a meaningful ally/route",
+											"Party materially breaks an external route/relay and secures a meaningful ally or safe route",
 											"11"
 										],
 										[
-											"Perrin confrontation reaches a major turning point",
+											"Party confronts Perrin with the accumulated case and his bargain becomes explicit",
 											"12"
 										],
 										[
-											"Perrin/Tyren conflict escalates beyond ordinary Bellweather politics",
+											"Party survives/stops Tyren's regional countermove after the confrontation",
 											"13"
 										],
 										[
-											"Regional/endgame preparation is complete",
+											"Party converts regional gains into a viable endgame plan against Bellweather's central network",
 											"14"
 										]
 									]
-								}
+								},
+								"These are story changes, not location checkboxes. An especially strong player-created success can satisfy the same milestone."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "When to Confront Perrin",
+							"entries": [
+								"The party has enough to confront Perrin once it has reached level 11 and can establish both: Tyren's influence is spreading beyond Bellweather, and the external network still traces back through Bellweather routes or financing.",
+								"The confrontation can happen in Bellweather, at Ledger House, before the Council, or somewhere the party chooses. Do not force a special confrontation room.",
+								"No single Persuasion roll determines Perrin's state. Judge Cracked, Defiant, or Hostile from the evidence presented, prior relationship, and choices. Use a {@dc 16} social check only when a specific uncertain argument genuinely turns on delivery rather than facts."
 							]
 						},
 						{
@@ -6807,33 +6813,36 @@
 						},
 						{
 							"type": "entries",
+							"name": "Tyren’s Regional Countermove",
+							"entries": [
+								"After Perrin is confronted and the party reaches level 12, Tyren attempts to preserve the outward network by striking one regional ally or route the party already cares about. Choose the location whose loss would matter most based on actual play.",
+								"{@b Countermove roster:} 1 Gladiator, 2 Veterans, 1 Mage, and 4 Scouts. Their objective is to install or recover an emerald resonator, destroy route records, or seize a key witness—not to fight to the last person.",
+								"{@b Resonator objective:} use the same three-control-rod mechanics as Emmer Hold (DC 15 or AC 16/15 HP per rod). If the party prevents installation, destroys the device, or evacuates the threatened people/evidence, the countermove fails.",
+								"If the party already eliminated every plausible regional node, convert the countermove into an attempted seizure of one allied caravan or delegation traveling toward Bellweather rather than inventing a new faction.",
+								"Stopping the countermove advances the party to {@b level 13}."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Regional Rest, Travel, and World Movement",
+							"entries": [
+								"Once trusted, Kerren, Waylen, Rellan, and a freed Emmer can each support a safe Long Rest.",
+								"If the party pauses for a Short or Long Rest during an active chase, raid, relay shutdown, or countermove, the opposing objective advances normally: couriers travel, raiders move cargo, militants fortify the relay, or witnesses relocate.",
+								"Do not create random punishment encounters merely because the party rests. Apply consequences tied to the active situation."
+							]
+						},
+						{
+							"type": "entries",
 							"name": "Completing the Regional Arc",
 							"entries": [
-								"After the Perrin confrontation, let the party choose how to weaken Tyren before returning to the central political conflict.",
-								"A third regional success, destruction of the Emmer relay, a major alliance, or another equivalent player-driven achievement is enough to establish that Tyren’s outward network has been damaged.",
-								"Unused named locations remain in the world and can be visited later.",
+								"After Tyren's countermove, the party chooses how to turn earlier regional successes into endgame preparation. One additional meaningful operation is enough: destroy a remaining relay, secure the Rellan ritual, formalize a Kerren or Waylen route, free Emmer, or execute an equivalent player-created plan.",
+								"If all of those were already achieved before the confrontation, the party can instead coordinate two existing allies to sever a major route into Bellweather. Do not force unused locations solely for leveling.",
 								{
 									"type": "entries",
 									"name": "Milestone",
 									"entries": [
-										"The party should leave the regional arc at {@b level 14}. The next level comes from surviving the Zennar betrayal.",
-										{
-											"type": "entries",
-											"name": "DM Truth: Perrin Decides the Party Is a Threat",
-											"entries": [
-												"After the confrontation, Perrin understands that the party knows too much.",
-												"If he is Cracked, he delays and searches for a solution that preserves Bellweather without giving up everything.",
-												"If Defiant or Hostile, he moves faster.",
-												"In every case, Tyren pushes one conclusion:",
-												{
-													"type": "quote",
-													"entries": [
-														"The party will break the city unless Perrin removes them from the board."
-													]
-												},
-												"That leads to Zennar."
-											]
-										}
+										"Advance the party to {@b level 14} when its regional allies, routes, and evidence form a credible plan to act against Bellweather's central network.",
+										"Unused locations remain in the world and may still matter later."
 									]
 								}
 							]
