@@ -15,10 +15,10 @@ Public image assets under `img/` remain the canonical map/art source used by the
 
 ## Spirit of the City
 
-Current alternate/continuation campaign: **No Cause for Alarm: The Spirit of the City — Version 2.9**.
+Current alternate/continuation campaign: **No Cause for Alarm: The Spirit of the City — Version 3.0**.
 
 - Live 5etools update file: `No_Cause_for_Alarm_The_Spirit_of_the_City_CURRENT.json`
-- Frozen current snapshot: `No_Cause_for_Alarm_The_Spirit_of_the_City_v2.9.json`
+- Frozen current snapshot: `No_Cause_for_Alarm_The_Spirit_of_the_City_v3.0.json`
 - Authoritative editable source: `No_Cause_for_Alarm_The_Spirit_of_the_City_CURRENT.json`
 - Party baseline: **4 characters, levels 3–16**
 - Chapters 1–4 are the established opening adventure; Chapters 5–17 use the Spirit of the City storyline.
