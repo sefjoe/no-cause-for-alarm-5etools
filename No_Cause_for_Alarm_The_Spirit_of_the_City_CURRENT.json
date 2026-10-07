@@ -6,17 +6,17 @@
 				"json": "NCFASOC",
 				"abbreviation": "NCFA-SOC",
 				"full": "No Cause for Alarm: The Spirit of the City",
-				"version": "2.9",
+				"version": "3.0",
 				"authors": [
 					"No Cause for Alarm Campaign"
 				],
-				"dateLastModified": 1791337200
+				"dateLastModified": 1791342000
 			}
 		],
 		"edition": "one",
 		"dateAdded": 1791271800,
-		"dateLastModified": 1791337200,
-		"_dateLastModifiedHash": "02e4aca81e"
+		"dateLastModified": 1791342000,
+		"_dateLastModifiedHash": "d43a31594b"
 	},
 	"adventure": [
 		{
