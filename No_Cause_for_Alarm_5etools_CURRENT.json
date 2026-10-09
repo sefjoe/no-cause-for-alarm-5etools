@@ -6,17 +6,17 @@
 				"json": "NCFA",
 				"abbreviation": "NCFA",
 				"full": "No Cause for Alarm: Ruins of Bellweather",
-				"version": "4.24",
+				"version": "4.25",
 				"authors": [
 					"No Cause for Alarm Campaign"
 				],
-				"dateLastModified": 1791351300
+				"dateLastModified": 1791591600
 			}
 		],
 		"edition": "one",
 		"dateAdded": 1789528955,
-		"dateLastModified": 1791351300,
-		"_dateLastModifiedHash": "6ac5d9c424"
+		"dateLastModified": 1791591600,
+		"_dateLastModifiedHash": "6ac96af025"
 	},
 	"adventure": [
 		{
@@ -1979,7 +1979,7 @@
 								"{@b Bow Gallery.} Use 4 Scouts with cover and movement options.",
 								"{@b Noren Vale.} Use a Bandit Captain-style stat block for Noren with AC 15 and 65 hit points, retaining the stat block’s normal attack routine.",
 								"{@b Enforcers.} Noren is supported by 2 Thugs with 32 hit points each.",
-								"{@b Optional reinforcement.} If the characters reach Noren with most resources intact after decisively handling the earlier encounters, add 1 Scout as a rear-line threat. Otherwise, Noren and the two Thugs are the full encounter.",
+								"{@b Reserve Scout.} One reserve Scout exists near the command area. Deploy that Scout only if neither the Checkpoint nor the Bow Gallery became a full combat and the party has not taken a Short Rest.",
 								"{@b Smoke Bomb (1/Day).} Noren creates a small area of heavy obscurement until the start of his next turn. On the turn he uses the smoke bomb, he can also Disengage as a bonus action. This is his prepared withdrawal tool.",
 								"{@b Damage caution.} For 4th-level characters, increase durability, positioning, objectives, and action economy before increasing burst damage or save DCs."
 							]
@@ -2027,7 +2027,36 @@
 										"Kellan’s Well is Council business, so Pepper may leave Ledger House for the mission despite house arrest. It counts as the first, unpaid mission of her five-mission Council sentence."
 									]
 								},
-								"{@b Primary objectives.} Control access to the well, recover evidence, prevent escape or reinforcement.",
+								{
+									"type": "entries",
+									"name": "Table-Ready Session Package",
+									"entries": [
+										"{@b Milestone.} The party begins Kellan's Well at level 4 after a Long Rest. Do not level at the end of this chapter; Koven House is the next level-4 adventure and resolving that network advances the party to level 5.",
+										"{@b Finite armed population.} Checkpoint: 3 {@creature Scout|XMM|Scouts} and 2 {@creature Guard|XMM|Guards}. Bow Gallery: 4 Scouts. Command: Noren Vale and 2 {@creature Thug|XMM|Thugs}. One additional reserve Scout exists near the command area but is deployed only under the explicit Fresh-Party trigger below. The Barracks contains no additional unnamed combatants.",
+										"{@b Clean bypasses count.} Good reconnaissance, negotiation, stealth, or use of alternate routes can bypass either the Checkpoint or Bow Gallery. Do not invent a replacement fight to preserve an encounter budget. Bypassed or surviving defenders can only reappear later if their actual movement and the alarm state logically put them there.",
+										"{@b Alarm 0 — unaware.} The checkpoint follows routine procedure, the Bow Gallery is not fully entrenched, and Noren has not started evacuating the command cache.",
+										"{@b Alarm 1 — warned.} A checkpoint runner reaches the stairs or another defender successfully signals deeper into the well. The Bow Gallery takes prepared cover, Noren gathers portable records, and defenders begin thinking about withdrawal routes.",
+										"{@b Alarm 2 — evacuation.} Open fighting reaches the inner complex, the party disengages for a prolonged period, or the party begins a Short Rest before Noren is resolved. Surviving defenders withdraw toward the hidden exit rather than waiting in their rooms. Noren removes portable records, leaves redundant evidence behind, and prepares to run.",
+										"{@b Short Rest.} A secured Junction or Barracks can support a Short Rest, but the world keeps moving. If Noren is unresolved, the alarm immediately becomes 2. Unless the party has already found and blocked the hidden exit, Noren and surviving defenders are about 10 minutes ahead of the party through that route when the rest ends. If the exit is blocked, they consolidate around the command/escape route instead. Core evidence remains through Rask, the supply ledger, and surviving duplicate orders.",
+										"{@b Fresh-Party trigger.} Add the single reserve Scout to Noren's encounter only if neither the Checkpoint nor the Bow Gallery became a full combat and the party has not taken a Short Rest. Otherwise the reserve Scout evacuates with noncombatant support personnel and does not join the fight.",
+										"{@b Morale.} Checkpoint defenders withdraw once the alarm is raised and at least 2 of their group are down. Bow Gallery Scouts withdraw once 2 are down or the party reaches their firing position. Noren uses his Smoke Bomb and tries to escape once below half hit points if a route remains. The Thugs surrender or flee if Noren escapes, falls, or clearly abandons them.",
+										"{@b Evidence fail-forward.} The party cannot lose the campaign lead because one cache burns or Noren escapes. Rask, the supply ledger, shared pay tokens, chalk schedules, and surviving orders independently establish coordination and point toward Koven House.",
+										"{@b Pacing valve.} The target is roughly 3.5–4 hours. If the opening fight runs long, make the Bow Gallery primarily a movement/cover problem and let its Scouts withdraw after one or two effective volleys. If the party is moving quickly, play the Gallery fully and use one optional environmental hazard only if it changes positioning or reveals information."
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Expected Session Shape",
+									"entries": [
+										"Ledger House departure and approach: about 15–25 minutes.",
+										"Checkpoint: 0 minutes if bypassed cleanly, otherwise about 30–45 minutes.",
+										"Bow Gallery and Junction: about 30–45 minutes.",
+										"Barracks, Rask, and evidence: about 25–40 minutes.",
+										"Noren / command cache / pursuit decision: about 45–60 minutes.",
+										"Return and Council reaction: about 15–20 minutes."
+									]
+								},
+								"{@b Primary objectives.} Control access to the well, recover evidence before it can be evacuated, and prevent Noren or key records from escaping if the party chooses to pursue them.",
 								"{@b Player agency.} Negotiate with captives or lower-ranking members, scout tunnels, or attack openly.",
 								"{@b Fail forward.} If stealth fails, enemies become prepared; the route and core evidence remain accessible.",
 								"{@b Rest and pressure.} Safe long rests are available back at Ledger House. Inside the active adventure site, resting gives opposing factions time to reposition unless the characters secure a defensible refuge.",
@@ -2068,7 +2097,9 @@
 											"type": "entries",
 											"name": "4. Barracks",
 											"entries": [
-												"Off-duty fighters from all three groups rest here. Their personal effects include Iron Covenant markings, mercenary gear, Koven-linked ration chits, shared pay tokens, and correspondence that crosses faction lines. Captured or persuaded occupants know that Noren Vale coordinates the local coalition on behalf of someone higher up."
+												"This is the sleeping and storage area used by the same finite armed population deployed at the Checkpoint, Bow Gallery, and command area. It does not contain another unnamed patrol by default. If surviving or bypassed defenders have logically withdrawn here, use only those existing creatures.",
+												"Personal effects include Iron Covenant markings, mercenary gear, Koven-linked ration chits, shared pay tokens, and correspondence that crosses faction lines.",
+												"Rask is held nearby after refusing an order to attack civilians. Captured or persuaded occupants know that Noren Vale coordinates the local coalition on behalf of someone higher up."
 											]
 										},
 										{
@@ -2076,9 +2107,10 @@
 											"name": "5. Command Room",
 											"entries": [
 												"{@b Noren Vale} coordinates the Iron Covenant fighters, mercenaries, and Koven-connected criminals at Kellan’s Well. He is pragmatic and loyal to the larger network because it provides weapons, money, supplies, and protection.",
-												"{@b Encounter.} Noren uses a Bandit Captain-style stat block with AC 15 and 65 HP. He is supported by 2 Thugs with 32 HP each. Add 1 Scout only if the characters arrive with most resources intact.",
+												"{@b Encounter.} Noren uses a Bandit Captain-style stat block with AC 15 and 65 HP. He is supported by 2 Thugs with 32 HP each. Add the single reserve Scout only if the Fresh-Party trigger in the Table-Ready Session Package is met.",
 												"{@b Smoke Bomb (1/Day).} Noren creates a small area of heavy obscurement until the start of his next turn and can Disengage as a bonus action on the turn he uses it.",
-												"{@b Prepared escape.} If Noren withdraws, use his smoke bomb, a locking route, or allies screening his retreat rather than ordinary movement through engaged characters."
+												"{@b Prepared escape.} If Noren withdraws, use his smoke bomb, a locking route, or allies screening his retreat rather than ordinary movement through engaged characters.",
+												"{@b Morale.} Noren uses the smoke bomb and attempts to leave once below half hit points if his escape route is open. If Noren escapes, falls, or abandons the fight, the Thugs do not fight to the death."
 											]
 										},
 										{
@@ -2094,7 +2126,9 @@
 											"type": "entries",
 											"name": "Tactical Response",
 											"entries": [
-												"If the alarm is raised, the defenders try to hold a junction while Noren evacuates the documents. They do not create an unavoidable pincer or infinite reinforcement loop. The party can break contact, negotiate, or pursue."
+												"If the alarm is raised, defenders use junctions and cover to delay pursuit while Noren gathers or destroys records. They do not create an unavoidable pincer or infinite reinforcement loop.",
+												"If the party breaks contact or takes a Short Rest, surviving defenders use that time to withdraw through the hidden exit. They run rather than wait for the party to finish resting. If the party has blocked that exit, they consolidate at the last viable escape route.",
+												"The party can pursue, negotiate, cut off the exit, or accept that Noren escaped and use the surviving evidence to continue the campaign."
 											]
 										},
 										{
@@ -2117,7 +2151,7 @@
 											"type": "entries",
 											"name": "What Happens",
 											"entries": [
-												"One scout tries to flee down the stairs on round 2 unless stopped."
+												"One Scout is the alarm runner. On round 1, that Scout uses its movement and, if needed, the Dash action to reach the stairs rather than attacking. If it reaches the stairs by the end of its turn, Alarm becomes 1 and deeper defenders are warned. Stopping, restraining, dropping, deceiving, or otherwise preventing the runner from reaching the stairs keeps the alarm at 0."
 											]
 										},
 										{
@@ -2152,7 +2186,8 @@
 											"type": "entries",
 											"name": "What Happens",
 											"entries": [
-												"The party can advance under cover, climb a maintenance ledge, or use the water channel. A far-side lever releases stored water; creatures in the channel make DC 14 Strength saves or fall prone and move 15 feet."
+												"The party can advance under cover, climb a maintenance ledge, use the water channel, or bypass the firing lane through another route they have actually found. A far-side lever releases stored water; creatures in the channel make DC 14 Strength saves or fall Prone and move 15 feet.",
+												"The Scouts use cover and movement rather than trading shots in place. Once 2 Scouts are down or a character reaches their firing position, surviving Scouts withdraw toward the inner routes if an escape path remains."
 											]
 										},
 										{
@@ -2225,8 +2260,9 @@
 											"name": "Encounter",
 											"entries": [
 												"Noren uses a Bandit Captain-style stat block with AC 15 and 65 HP and retains its normal attack routine.",
-												"He is supported by 2 Thugs with 32 HP each. Add 1 Scout only if the characters arrive with most resources intact.",
-												"{@b Smoke Bomb (1/Day).} Noren creates a small area of heavy obscurement until the start of his next turn. On the turn he uses it, he can Disengage as a bonus action."
+												"He is supported by 2 Thugs with 32 HP each. Add the single reserve Scout only if neither the Checkpoint nor Bow Gallery became a full combat and the party has not taken a Short Rest.",
+												"{@b Smoke Bomb (1/Day).} Noren creates a small area of heavy obscurement until the start of his next turn. On the turn he uses it, he can Disengage as a bonus action.",
+												"{@b Withdrawal.} Once below half hit points, Noren uses the smoke bomb and runs if a route remains. The Thugs screen that withdrawal but surrender or flee if Noren is gone."
 											]
 										},
 										{
@@ -2284,7 +2320,8 @@
 									"type": "entries",
 									"name": "Rewards",
 									"entries": [
-										"{@b Treasure and rewards.} Reopening the route and recovering the command evidence earns {@b 600 gp} from civic and merchant interests. Place another {@b 400–500 gp} in mixed coin, valuables, and hostile-faction stores, for about {@b 1,000–1,100 gp} of total monetary value. Also award 2 useful consumables and the documents bearing the Boss’s seal."
+										"{@b Treasure and rewards.} Kellan's Well provides {@b 300–450 gp total} in combined civic pay, salvage, gems, and hostile-faction valuables. Also award one Potion of Greater Healing, one Potion of Heroism, one Potion of Water Breathing, and the Decanter of Endless Water recovered from the old wellworks.",
+										"The recovered command evidence, Koven House lead, and secured underground route are story rewards rather than additional saleable treasure. Pepper receives no pay from the Council portion because Kellan's Well is the first unpaid mission of her five-mission sentence."
 									]
 								}
 							]
@@ -2297,13 +2334,13 @@
 								{
 									"type": "list",
 									"items": [
-										"{@b Spendable wealth.} 300–450 gp in salvage, gems, and civic pay.",
+										"{@b Spendable wealth.} 300–450 gp in combined civic pay, salvage, gems, and hostile-faction valuables.",
 										"{@b Potion of Greater Healing.} One.",
 										"{@b Potion of Heroism.} One.",
-										"{@b Potion of Water Breathing.} One; this is the chapter’s exploration-focused consumable.",
+										"{@b Potion of Water Breathing.} One; this is the chapter's exploration-focused consumable.",
 										"{@b Decanter of Endless Water.} One uncommon permanent item recovered from the wellworks.",
-										"{@b Story reward.} Improved water access or infrastructure and goodwill from workers who benefit from the reclamation.",
-										"{@b Pepper’s pay.} Kellan’s Well is unpaid for Pepper because it is the first mission of her five-mission sentence."
+										"{@b Story reward.} The command evidence establishes the coalition, points to Koven House, and secures an emergency route through the old waterworks.",
+										"{@b Pepper's pay.} Kellan's Well is unpaid for Pepper because it is the first mission of her five-mission sentence."
 									]
 								}
 							]
