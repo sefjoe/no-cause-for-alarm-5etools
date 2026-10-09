@@ -6,17 +6,17 @@
 				"json": "NCFA",
 				"abbreviation": "NCFA",
 				"full": "No Cause for Alarm: Ruins of Bellweather",
-				"version": "4.25",
+				"version": "4.26",
 				"authors": [
 					"No Cause for Alarm Campaign"
 				],
-				"dateLastModified": 1791591600
+				"dateLastModified": 1791592200
 			}
 		],
 		"edition": "one",
 		"dateAdded": 1789528955,
-		"dateLastModified": 1791591600,
-		"_dateLastModifiedHash": "6ac96af025"
+		"dateLastModified": 1791592200,
+		"_dateLastModifiedHash": "6ac96d1826"
 	},
 	"adventure": [
 		{
@@ -2041,19 +2041,31 @@
 										"{@b Fresh-Party trigger.} Add the single reserve Scout to Noren's encounter only if neither the Checkpoint nor the Bow Gallery became a full combat and the party has not taken a Short Rest. Otherwise the reserve Scout evacuates with noncombatant support personnel and does not join the fight.",
 										"{@b Morale.} Checkpoint defenders withdraw once the alarm is raised and at least 2 of their group are down. Bow Gallery Scouts withdraw once 2 are down or the party reaches their firing position. Noren uses his Smoke Bomb and tries to escape once below half hit points if a route remains. The Thugs surrender or flee if Noren escapes, falls, or clearly abandons them.",
 										"{@b Evidence fail-forward.} The party cannot lose the campaign lead because one cache burns or Noren escapes. Rask, the supply ledger, shared pay tokens, chalk schedules, and surviving orders independently establish coordination and point toward Koven House.",
-										"{@b Pacing valve.} The target is roughly 3.5–4 hours. If the opening fight runs long, make the Bow Gallery primarily a movement/cover problem and let its Scouts withdraw after one or two effective volleys. If the party is moving quickly, play the Gallery fully and use one optional environmental hazard only if it changes positioning or reveals information."
+										"{@b Pacing valve.} Do not force the whole chapter into one sitting. Run about 3.5 hours of good play, then stop at the next natural break. If an early combat runs long, let the session end after the next discovery instead of compressing later scenes. The Bow Gallery can remain a full tactical encounter when the players choose to engage it."
 									]
 								},
 								{
 									"type": "entries",
 									"name": "Expected Session Shape",
 									"entries": [
+										"Use these as scene-length estimates, not a promise that the entire chapter fits in one session.",
 										"Ledger House departure and approach: about 15–25 minutes.",
 										"Checkpoint: 0 minutes if bypassed cleanly, otherwise about 30–45 minutes.",
 										"Bow Gallery and Junction: about 30–45 minutes.",
 										"Barracks, Rask, and evidence: about 25–40 minutes.",
 										"Noren / command cache / pursuit decision: about 45–60 minutes.",
-										"Return and Council reaction: about 15–20 minutes."
+										"Return and Council reaction: about 15–20 minutes.",
+										"If the table reaches roughly 3.5 hours before the chapter is complete, finish the current scene and use one of the Natural Session Breaks rather than rushing the remaining material."
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Natural Session Breaks",
+									"entries": [
+										"{@b After the Checkpoint or Bow Gallery.} The party has entered the Well and has already seen that normally separate groups are operating under shared procedures. End on the realization that the cooperation is deliberate, then resume with deeper exploration.",
+										"{@b After Rask and the Barracks.} This is the strongest midpoint. The party has a witness, physical evidence of cross-faction coordination, and a clear local commander to pursue. Resume with Noren, the command cache, and the escape routes.",
+										"{@b After Noren.} If Noren is captured, defeated, or escapes, end after the immediate pursuit decision and evidence recovery. Resume with any remaining route search and the return to Bellweather.",
+										"{@b Session-end rule.} Do not add filler to reach a preferred stopping point and do not rush a scene to reach the chapter ending. Once the session is near its normal end, use the next clean break the players naturally create."
 									]
 								},
 								"{@b Primary objectives.} Control access to the well, recover evidence before it can be evacuated, and prevent Noren or key records from escaping if the party chooses to pursue them.",
