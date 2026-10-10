@@ -6,17 +6,17 @@
 				"json": "NCFA",
 				"abbreviation": "NCFA",
 				"full": "No Cause for Alarm: Ruins of Bellweather",
-				"version": "4.26",
+				"version": "4.27",
 				"authors": [
 					"No Cause for Alarm Campaign"
 				],
-				"dateLastModified": 1791592200
+				"dateLastModified": 1791593400
 			}
 		],
 		"edition": "one",
 		"dateAdded": 1789528955,
-		"dateLastModified": 1791592200,
-		"_dateLastModifiedHash": "6ac96d1826"
+		"dateLastModified": 1791593400,
+		"_dateLastModifiedHash": "6ac971c498"
 	},
 	"adventure": [
 		{
@@ -1972,47 +1972,35 @@
 						},
 						{
 							"type": "entries",
-							"name": "Encounter Guidance",
-							"entries": [
-								"{@b Encounter shape.} Keep Kellan’s Well primarily an investigation and exploration chapter. The coordinated crews and Noren Vale form the tactical spine; rats, centipedes, oozes, and the carrion crawler work best as environmental complications or optional hazards when they reveal information or change positioning.",
-								"{@b Checkpoint.} Use 3 Scouts and 2 Guards. Their goal is to raise the alarm and fall back rather than fight to the death.",
-								"{@b Bow Gallery.} Use 4 Scouts with cover and movement options.",
-								"{@b Noren Vale.} Use a Bandit Captain-style stat block for Noren with AC 15 and 65 hit points, retaining the stat block’s normal attack routine.",
-								"{@b Enforcers.} Noren is supported by 2 Thugs with 32 hit points each.",
-								"{@b Reserve Scout.} One reserve Scout exists near the command area. Deploy that Scout only if neither the Checkpoint nor the Bow Gallery became a full combat and the party has not taken a Short Rest.",
-								"{@b Smoke Bomb (1/Day).} Noren creates a small area of heavy obscurement until the start of his next turn. On the turn he uses the smoke bomb, he can also Disengage as a bonus action. This is his prepared withdrawal tool.",
-								"{@b Damage caution.} For 4th-level characters, increase durability, positioning, objectives, and action economy before increasing burst damage or save DCs."
-							]
-						},
-						{
-							"type": "entries",
 							"name": "Chapter Overview",
 							"entries": [
-								"{@b Chapter purpose.} Secure Kellan’s Well, discover why rival groups are cooperating, and expose the supply network supporting that cooperation.",
-								"{@b Recommended level.} 4.",
-								"{@b Hook.} The Council has observed armed crews that should be rivals using the same patrol routes and signals around Kellan’s Well. The characters have already accepted the assignment before this chapter begins.",
-								"{@b Lead-in.} Begin the morning after Blackstone Temple, after the characters have rested at Ledger House. The job does not depend on the Iron Covenant ledger or any other recovered Blackstone object.",
-								"{@b Leads onward.} Evidence inside the well identifies Koven House as a supply and payment center for the coalition, making it the next logical target."
+								"{@b Chapter purpose.} Remove the Iron Covenant from Kellan's Well so Bellweather can reclaim the site.",
+								"{@b Hook.} The Council has already assigned the job. The Iron Covenant occupies the old waterworks and refuses to leave.",
+								"{@b Lead-in.} Begin the morning after Blackstone Temple, after the characters have completed a Long Rest and advanced to level 4.",
+								"{@b Player-facing truth.} This is exactly what it appears to be: clear an Iron Covenant position from strategically useful city infrastructure.",
+								"{@b End state.} Kellan's Well is secured when Noren Vale and the remaining Iron Covenant defenders are captured, killed, surrendered, or driven out."
 							]
 						},
 						{
 							"type": "entries",
-							"name": "What Is Really Happening",
+							"name": "DM-Only: What the Party Does Not Know",
 							"entries": [
-								"Kellan’s Well is not occupied by a single faction. It is a local command post where three normally separate groups are being made to cooperate against Bellweather.",
-								"{@b Tyren’s strategy.} Tyren is building a coalition rather than conquering every hostile group directly. Bellweather’s reclamation has become a common threat, so Tyren uses money, weapons, supplies, safe markets, protection, and shared intelligence to persuade rival groups to stop wasting strength on one another and treat Bellweather as the priority.",
-								{
-									"type": "list",
-									"items": [
-										"{@b Iron Covenant.} The disciplined ideological faction already encountered at Blackstone Temple. Its members bring organization, commitment, and experience holding strategic sites.",
-										"{@b Mercenary warband.} Independent fighters who cooperate for pay, protection, and reliable supplies rather than ideology. Rask belongs to this group. His imprisonment for refusing to attack civilians shows that the coalition is demanding more than ordinary paid guard work.",
-										"{@b Koven-connected criminal and scavenger crew.} Smugglers, thieves, salvagers, and street muscle tied economically to Koven House. They provide local knowledge, movement of goods, and the practical criminal network that keeps the coalition supplied."
-									]
-								},
-								"{@b Command structure.} Noren Vale coordinates the three groups at Kellan’s Well. Masked couriers carry orders between local commanders and the larger network. Koven House functions as a supply and payment center. Above that structure is the figure the factions know as the Boss; DM-side, Tyren is the intelligence building the coalition.",
-								"{@b Why the well matters.} The old waterworks and catacombs beneath Kellan’s Well create a useful underground route through the ruins. Holding the site lets the coalition move people, messages, and supplies while watching Bellweather’s advance.",
-								"{@b What the Council knows.} The Council does not begin the chapter knowing the identity of the three groups or Tyren’s structure. It knows only that armed crews that should be separate are using the same patrol routes and signals.",
-								"{@b What the characters can prove.} Mixed equipment, shared chalk schedules, cross-faction ration chits and pay tokens, Rask’s testimony, Noren’s command structure, and the message cache all reveal that the cooperation is deliberate. The strongest surviving documents order rival groups not to fight one another while Bellweather remains the priority and identify Koven House as a supply and payment center."
+								"The Council has already negotiated the surrender of Bellweather's independence to a Crown. Clearing Kellan's Well is the last major security/reclamation condition holding up the transfer.",
+								"The party did not cause the Council to sell Bellweather. The Council had already made that decision. The party is simply completing the legitimate job it was given, and its success removes the final obstacle to closing the deal.",
+								"Do not plant takeover paperwork or future-plot clues inside Kellan's Well. The royal takeover is revealed only after the party returns.",
+								"While the party is away, the Council finalizes the transfer, enriches themselves through the deal, and leaves Bellweather. Koven House becomes the Crown's local headquarters. The Bishop remains in the city. Ledger House remains independent."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Encounter Guidance",
+							"entries": [
+								"{@b Maximum two full combats.} The intended stand-up fights are the opening defense and Noren's command position. Everything between them is exploration, movement, and a tactical obstacle unless the players deliberately turn it into another fight.",
+								"{@b Opening defense.} Use 3 {@creature Scout|XMM|Scouts} and 2 {@creature Guard|XMM|Guards}. One Scout immediately tries to warn the defenders below.",
+								"{@b Bow Gallery.} Four Iron Covenant Scouts use the firing lane as a delaying position. Treat it as an obstacle by default: they fire from cover, use the water-control lever, and withdraw once the party solves the position.",
+								"{@b Noren Vale.} Use a Bandit Captain-style stat block for Noren with AC 15 and 65 hit points, retaining the normal attack routine. He is supported by 2 {@creature Thug|XMM|Thugs} with 32 hit points each.",
+								"{@b Smoke Bomb (1/Day).} Noren creates a small area of heavy obscurement until the start of his next turn. On the turn he uses it, he can also Disengage as a bonus action.",
+								"{@b Damage caution.} This party hits hard. Do not solve that by increasing enemy burst damage. Use cover, movement, withdrawal, and the environment."
 							]
 						},
 						{
@@ -2023,56 +2011,53 @@
 									"type": "entries",
 									"name": "Starting the Chapter",
 									"entries": [
-										"The chapter begins at Ledger House on the morning after Blackstone Temple. The Kellan’s Well assignment is already accepted; begin with preparations and the departure for the well.",
-										"Kellan’s Well is Council business, so Pepper may leave Ledger House for the mission despite house arrest. It counts as the first, unpaid mission of her five-mission Council sentence."
+										"The chapter begins at Ledger House on the morning after Blackstone Temple. The assignment is already accepted, so start with preparations and departure rather than another Council briefing.",
+										"Kellan's Well is Council business, so Pepper may leave Ledger House despite house arrest. Completing the mission counts as the first, unpaid mission of her five-mission Council sentence."
 									]
 								},
 								{
 									"type": "entries",
 									"name": "Table-Ready Session Package",
 									"entries": [
-										"{@b Milestone.} The party begins Kellan's Well at level 4 after a Long Rest. Do not level at the end of this chapter; Koven House is the next level-4 adventure and resolving that network advances the party to level 5.",
-										"{@b Finite armed population.} Checkpoint: 3 {@creature Scout|XMM|Scouts} and 2 {@creature Guard|XMM|Guards}. Bow Gallery: 4 Scouts. Command: Noren Vale and 2 {@creature Thug|XMM|Thugs}. One additional reserve Scout exists near the command area but is deployed only under the explicit Fresh-Party trigger below. The Barracks contains no additional unnamed combatants.",
-										"{@b Clean bypasses count.} Good reconnaissance, negotiation, stealth, or use of alternate routes can bypass either the Checkpoint or Bow Gallery. Do not invent a replacement fight to preserve an encounter budget. Bypassed or surviving defenders can only reappear later if their actual movement and the alarm state logically put them there.",
-										"{@b Alarm 0 — unaware.} The checkpoint follows routine procedure, the Bow Gallery is not fully entrenched, and Noren has not started evacuating the command cache.",
-										"{@b Alarm 1 — warned.} A checkpoint runner reaches the stairs or another defender successfully signals deeper into the well. The Bow Gallery takes prepared cover, Noren gathers portable records, and defenders begin thinking about withdrawal routes.",
-										"{@b Alarm 2 — evacuation.} Open fighting reaches the inner complex, the party disengages for a prolonged period, or the party begins a Short Rest before Noren is resolved. Surviving defenders withdraw toward the hidden exit rather than waiting in their rooms. Noren removes portable records, leaves redundant evidence behind, and prepares to run.",
-										"{@b Short Rest.} A secured Junction or Barracks can support a Short Rest, but the world keeps moving. If Noren is unresolved, the alarm immediately becomes 2. Unless the party has already found and blocked the hidden exit, Noren and surviving defenders are about 10 minutes ahead of the party through that route when the rest ends. If the exit is blocked, they consolidate around the command/escape route instead. Core evidence remains through Rask, the supply ledger, and surviving duplicate orders.",
-										"{@b Fresh-Party trigger.} Add the single reserve Scout to Noren's encounter only if neither the Checkpoint nor the Bow Gallery became a full combat and the party has not taken a Short Rest. Otherwise the reserve Scout evacuates with noncombatant support personnel and does not join the fight.",
-										"{@b Morale.} Checkpoint defenders withdraw once the alarm is raised and at least 2 of their group are down. Bow Gallery Scouts withdraw once 2 are down or the party reaches their firing position. Noren uses his Smoke Bomb and tries to escape once below half hit points if a route remains. The Thugs surrender or flee if Noren escapes, falls, or clearly abandons them.",
-										"{@b Evidence fail-forward.} The party cannot lose the campaign lead because one cache burns or Noren escapes. Rask, the supply ledger, shared pay tokens, chalk schedules, and surviving orders independently establish coordination and point toward Koven House.",
-										"{@b Pacing valve.} Do not force the whole chapter into one sitting. Run about 3.5 hours of good play, then stop at the next natural break. If an early combat runs long, let the session end after the next discovery instead of compressing later scenes. The Bow Gallery can remain a full tactical encounter when the players choose to engage it."
+										"{@b Milestone.} The party begins at level 4 after a Long Rest. Do not automatically level them at the end of Kellan's Well; the next milestone belongs to the royal-takeover arc.",
+										"{@b Finite armed population.} Opening defense: 3 Scouts + 2 Guards. Bow Gallery: 4 Scouts acting as a delaying position, not a required stand-up fight. Command position: Noren Vale + 2 Thugs. There are no additional unnamed barracks troops, reserves, or reinforcement waves.",
+										"{@b Alarm 0 — unaware.} Noren has not been warned and the Bow Gallery is on routine watch.",
+										"{@b Alarm 1 — warned.} A runner reaches the stairs or another defender successfully signals. The Bow Gallery takes prepared cover and Noren opens his escape route.",
+										"{@b Alarm 2 — withdrawal.} The party reaches the inner complex, disengages for a prolonged period, or begins a Short Rest before Noren is resolved. Surviving Iron Covenant members abandon nonessential rooms and prepare to leave the site.",
+										"{@b Short Rest.} A secured room can support a Short Rest, but the world keeps moving. If Noren is unresolved, he and surviving defenders withdraw through the hidden exit during the rest unless the party has already blocked it. If they escape, the party still succeeds in clearing the Well; they simply lose the chance to capture Noren.",
+										"{@b Clean bypasses count.} If the players bypass a position through stealth, negotiation, magic, or clever routing, let the bypass stand. Do not invent another encounter to replace it.",
+										"{@b Morale.} Opening defenders fall back once the alarm is raised and 2 of them are down. Bow Gallery Scouts leave once the party reaches their position or makes the firing lane ineffective. Noren uses his Smoke Bomb and runs once below half hit points if the hidden exit remains open. If trapped and clearly beaten, he surrenders rather than dying for the position.",
+										"{@b Success.} The only required result is that the Iron Covenant no longer controls Kellan's Well.",
+										"{@b Pacing.} Do not force the whole chapter into one sitting. Run about 3.5 hours of good play, then stop at the next natural break."
 									]
 								},
 								{
 									"type": "entries",
 									"name": "Expected Session Shape",
 									"entries": [
-										"Use these as scene-length estimates, not a promise that the entire chapter fits in one session.",
 										"Ledger House departure and approach: about 15–25 minutes.",
-										"Checkpoint: 0 minutes if bypassed cleanly, otherwise about 30–45 minutes.",
-										"Bow Gallery and Junction: about 30–45 minutes.",
-										"Barracks, Rask, and evidence: about 25–40 minutes.",
-										"Noren / command cache / pursuit decision: about 45–60 minutes.",
-										"Return and Council reaction: about 15–20 minutes.",
-										"If the table reaches roughly 3.5 hours before the chapter is complete, finish the current scene and use one of the Natural Session Breaks rather than rushing the remaining material."
+										"Opening defense: about 30–45 minutes if it becomes a fight.",
+										"Bow Gallery and waterworks exploration: about 20–35 minutes.",
+										"Barracks/stores/hidden-route exploration: about 20–30 minutes.",
+										"Noren and the command position: about 45–60 minutes.",
+										"Site secured and immediate wrap-up: about 10–15 minutes.",
+										"These are scene estimates, not a requirement to finish the whole chapter in one session."
 									]
 								},
 								{
 									"type": "entries",
 									"name": "Natural Session Breaks",
 									"entries": [
-										"{@b After the Checkpoint or Bow Gallery.} The party has entered the Well and has already seen that normally separate groups are operating under shared procedures. End on the realization that the cooperation is deliberate, then resume with deeper exploration.",
-										"{@b After Rask and the Barracks.} This is the strongest midpoint. The party has a witness, physical evidence of cross-faction coordination, and a clear local commander to pursue. Resume with Noren, the command cache, and the escape routes.",
-										"{@b After Noren.} If Noren is captured, defeated, or escapes, end after the immediate pursuit decision and evidence recovery. Resume with any remaining route search and the return to Bellweather.",
-										"{@b Session-end rule.} Do not add filler to reach a preferred stopping point and do not rush a scene to reach the chapter ending. Once the session is near its normal end, use the next clean break the players naturally create."
+										"{@b After the opening defense or Bow Gallery.} The party has established a foothold inside the Well and can resume with the deeper waterworks.",
+										"{@b Before Noren.} Once the party has explored the inner rooms and knows where the Covenant command position is, stop there if the session is near its normal end.",
+										"{@b After Noren.} Once the Covenant has surrendered or withdrawn and the Well is secure, end the old-Bellweather adventure there. The royal takeover reveal belongs to the following session.",
+										"{@b Session-end rule.} Do not add filler to reach a preferred stopping point and do not rush a scene just to reach Noren."
 									]
 								},
-								"{@b Primary objectives.} Control access to the well, recover evidence before it can be evacuated, and prevent Noren or key records from escaping if the party chooses to pursue them.",
-								"{@b Player agency.} Negotiate with captives or lower-ranking members, scout tunnels, or attack openly.",
-								"{@b Fail forward.} If stealth fails, enemies become prepared; the route and core evidence remain accessible.",
-								"{@b Rest and pressure.} Safe long rests are available back at Ledger House. Inside the active adventure site, resting gives opposing factions time to reposition unless the characters secure a defensible refuge.",
-								"{@b Keyed-area encounters.} When a scene and a keyed location describe the same encounter, use the roster and objective in the scene. Creatures listed only in the keyed reference apply when the characters explore that location outside the scene sequence."
+								"{@b Primary objective.} Clear the Iron Covenant from Kellan's Well.",
+								"{@b Player agency.} Scout, negotiate, sneak, attack openly, cut off the hidden exit, or simply force the Covenant to abandon the position.",
+								"{@b Fail forward.} A failed stealth attempt changes preparedness, not access to the adventure. Noren escaping is an outcome, not a failure.",
+								"{@b Rest and pressure.} Resting inside the active site gives the Covenant time to withdraw. The defenders do not freeze in place while the characters recover."
 							]
 						},
 						{
@@ -2083,87 +2068,93 @@
 									"type": "entries",
 									"name": "Location and Background Details",
 									"entries": [
-										"Kellan's Well sits in a ruined district where several armed groups have recently begun using the same signals and patrol routes. The Council wants to know whether the cooperation is temporary, criminal, or connected to the Boss.",
+										"Kellan's Well is an old waterworks complex in a ruined district of Bellweather. The Iron Covenant occupies it because it is defensible, controls useful infrastructure, and gives them a secure route through the district.",
 										{
 											"type": "entries",
 											"name": "1. Well Chamber",
 											"entries": [
-												"The shaft opens into a stone checkpoint chamber staffed by a deliberately mixed patrol drawn from the Iron Covenant, the mercenary warband, and the Koven-connected criminal/scavenger crew. Their armor, weapons, and old insignia do not match, but their signals and fallback procedures do. Use the scene encounter roster for the actual fight; the patrol attempts to raise the alarm and fall back rather than fight to the death."
+												"The visible well house covers stairs into the old waterworks. An Iron Covenant checkpoint guards the descent.",
+												"Use the opening-defense roster. The defenders' first goal is to warn Noren below; their second is to slow the party long enough for the inner position to prepare."
 											]
 										},
 										{
 											"type": "entries",
 											"name": "2. Bow Gallery",
 											"entries": [
-												"A side chamber overlooks the approach. Archers use cover and withdraw after one or two volleys if pressured. A shallow floor depression is an old maintenance pit, not a species-sensitive trap; its cracked edge and loose stones make it detectable before anyone falls."
+												"Broken masonry overlooks a flooded passage. Four Iron Covenant Scouts use the position to delay anyone coming from the Well Chamber.",
+												"A far-side lever releases stored water through the channel. A creature caught in the channel makes a DC 14 Strength saving throw or falls Prone and is moved 15 feet.",
+												"Run this as a tactical obstacle by default. The Scouts shoot from cover, use the lever if useful, and withdraw once the party reaches them, bypasses the lane, or makes the position ineffective."
 											]
 										},
 										{
 											"type": "entries",
 											"name": "3. Junction",
 											"entries": [
-												"This room connects multiple routes and contains chalk marks showing a shared command system. Characters who stop to examine them automatically learn that different groups are using the same schedule and symbols."
+												"The junction connects the Bow Gallery, barracks, stores, and the inner command route. Old water-control markings and maintenance notes are still visible.",
+												"A character who spends a few minutes studying the old markings can identify the safest dry route to the command area without a check."
 											]
 										},
 										{
 											"type": "entries",
-											"name": "4. Barracks",
+											"name": "4. Barracks and Stores",
 											"entries": [
-												"This is the sleeping and storage area used by the same finite armed population deployed at the Checkpoint, Bow Gallery, and command area. It does not contain another unnamed patrol by default. If surviving or bypassed defenders have logically withdrawn here, use only those existing creatures.",
-												"Personal effects include Iron Covenant markings, mercenary gear, Koven-linked ration chits, shared pay tokens, and correspondence that crosses faction lines.",
-												"Rask is held nearby after refusing an order to attack civilians. Captured or persuaded occupants know that Noren Vale coordinates the local coalition on behalf of someone higher up."
+												"This area contains bunks, Iron Covenant equipment, food, spare weapons, and supplies for maintaining the position. It does not contain another unnamed encounter.",
+												"If surviving defenders logically withdrew here, use only those existing creatures. Otherwise the rooms are empty when the party reaches them.",
+												"Searching the stores reveals only ordinary occupation supplies and personal effects."
 											]
 										},
 										{
 											"type": "entries",
 											"name": "5. Command Room",
 											"entries": [
-												"{@b Noren Vale} coordinates the Iron Covenant fighters, mercenaries, and Koven-connected criminals at Kellan’s Well. He is pragmatic and loyal to the larger network because it provides weapons, money, supplies, and protection.",
-												"{@b Encounter.} Noren uses a Bandit Captain-style stat block with AC 15 and 65 HP. He is supported by 2 Thugs with 32 HP each. Add the single reserve Scout only if the Fresh-Party trigger in the Table-Ready Session Package is met.",
+												"{@b Noren Vale.} Noren is the Iron Covenant commander at Kellan's Well: a mid-forties half-elf with a rangy build, short graying hair, one old facial scar, gloves, practical weapons, and a battered coat over piecemeal armor.",
+												"{@b Encounter.} Noren uses a Bandit Captain-style stat block with AC 15 and 65 HP. He is supported by 2 Thugs with 32 HP each.",
 												"{@b Smoke Bomb (1/Day).} Noren creates a small area of heavy obscurement until the start of his next turn and can Disengage as a bonus action on the turn he uses it.",
-												"{@b Prepared escape.} If Noren withdraws, use his smoke bomb, a locking route, or allies screening his retreat rather than ordinary movement through engaged characters.",
-												"{@b Morale.} Noren uses the smoke bomb and attempts to leave once below half hit points if his escape route is open. If Noren escapes, falls, or abandons the fight, the Thugs do not fight to the death."
+												"{@b Withdrawal.} Once below half hit points, Noren uses the Smoke Bomb and heads for the hidden exit if it remains open. The Thugs screen the retreat but surrender or flee if Noren escapes or falls.",
+												"{@b If trapped.} Noren surrenders when clearly beaten."
 											]
 										},
 										{
 											"type": "entries",
-											"name": "6–8. Escape Routes and Stores",
+											"name": "6–8. Hidden Exit and Old Waterworks",
 											"entries": [
-												"The remaining chambers contain coalition supplies, a hidden exit, and material waiting to be moved deeper into Old Bellweather. Mixed-origin goods show that separate factions are being supplied through one logistics network.",
+												"The remaining chambers contain maintenance stores, old water-control mechanisms, and a hidden route leading back into the ruined district.",
 												"{@b Finding the hidden exit.} A DC 13 Wisdom (Perception) check notices a faint draft, repeated scuff marks, or irregular stonework. Once the characters know a passage is present, no further roll is required to establish that it exists.",
-												"{@b Opening it.} A DC 12 Intelligence (Investigation) check quickly locates the release mechanism. Failure costs several minutes of searching but does not make the route inaccessible."
+												"{@b Opening it.} A DC 12 Intelligence (Investigation) check quickly locates the release mechanism. Failure costs several minutes but does not make the route inaccessible.",
+												"If the party finds and blocks this exit before confronting Noren, his surrender becomes much more likely."
 											]
 										},
 										{
 											"type": "entries",
 											"name": "Tactical Response",
 											"entries": [
-												"If the alarm is raised, defenders use junctions and cover to delay pursuit while Noren gathers or destroys records. They do not create an unavoidable pincer or infinite reinforcement loop.",
-												"If the party breaks contact or takes a Short Rest, surviving defenders use that time to withdraw through the hidden exit. They run rather than wait for the party to finish resting. If the party has blocked that exit, they consolidate at the last viable escape route.",
-												"The party can pursue, negotiate, cut off the exit, or accept that Noren escaped and use the surviving evidence to continue the campaign."
+												"If the alarm is raised, defenders use cover and the Bow Gallery to buy time rather than trying to kill the party at any cost.",
+												"If the party breaks contact or rests, the Iron Covenant uses that time to leave. They do not create a pincer, spawn reinforcements, or wait patiently for the party to recover.",
+												"Driving the Covenant out without killing them is a complete victory."
 											]
 										},
 										{
 											"type": "entries",
 											"name": "Resolution",
 											"entries": [
-												"The chapter succeeds when the party obtains clear evidence that the Boss is coordinating otherwise separate groups. Capturing Noren, seizing the correspondence, or turning one of the crews all provide that evidence. The catacombs also become a useful emergency route into the ruined city."
+												"The chapter ends when the Iron Covenant no longer controls Kellan's Well.",
+												"The party can secure the site, confirm the old waterworks are usable, and decide what to do with any captured Covenant members.",
+												"Do not reveal the royal takeover here. Let the characters finish this job believing they have completed the Council assignment they accepted."
 											]
 										}
 									]
 								},
 								{
 									"type": "entries",
-									"name": "Scene 1: Well Chamber",
+									"name": "Scene 1: Opening Defense",
 									"entries": [
-										"The visible well house covers stairs into old waterworks.",
-										"{@b The coalition patrol.} This checkpoint mixes members of the Iron Covenant, the mercenary warband, and the Koven-connected criminal/scavenger crew in the same patrol. Their mismatched origins should be obvious before their shared discipline is.",
-										"{@b The mixed crews.} Their different origins are visible immediately: mismatched armor, different weapons, and insignia from several groups partly removed or covered. Their shared patrol discipline, signals, schedules, and fallback behavior make it equally clear that someone has organized them.",
+										"The party reaches Kellan's Well and encounters the Covenant checkpoint.",
 										{
 											"type": "entries",
 											"name": "What Happens",
 											"entries": [
-												"One Scout is the alarm runner. On round 1, that Scout uses its movement and, if needed, the Dash action to reach the stairs rather than attacking. If it reaches the stairs by the end of its turn, Alarm becomes 1 and deeper defenders are warned. Stopping, restraining, dropping, deceiving, or otherwise preventing the runner from reaching the stairs keeps the alarm at 0."
+												"One Scout is the alarm runner. On round 1, that Scout uses movement and, if needed, the Dash action to reach the stairs rather than attacking. If it reaches the stairs by the end of its turn, Alarm becomes 1.",
+												"Stopping, restraining, dropping, deceiving, or otherwise preventing that Scout from reaching the stairs keeps the deeper position unaware."
 											]
 										},
 										{
@@ -2175,16 +2166,9 @@
 										},
 										{
 											"type": "entries",
-											"name": "Clues and Discoveries",
-											"entries": [
-												"Crates carry the same crossed-line mark. A chalk schedule identifies crews by color instead of faction."
-											]
-										},
-										{
-											"type": "entries",
 											"name": "Consequences",
 											"entries": [
-												"If a runner escapes, deeper defenders are prepared; otherwise the party can surprise the next area."
+												"If the runner succeeds, the Bow Gallery takes prepared positions and Noren opens the hidden escape route."
 											]
 										}
 									]
@@ -2193,147 +2177,113 @@
 									"type": "entries",
 									"name": "Scene 2: Bow Gallery",
 									"entries": [
-										"Archers control a flooded passage from behind broken masonry.",
+										"Four Iron Covenant Scouts control the flooded passage from behind broken masonry.",
 										{
 											"type": "entries",
 											"name": "What Happens",
 											"entries": [
-												"The party can advance under cover, climb a maintenance ledge, use the water channel, or bypass the firing lane through another route they have actually found. A far-side lever releases stored water; creatures in the channel make DC 14 Strength saves or fall Prone and move 15 feet.",
-												"The Scouts use cover and movement rather than trading shots in place. Once 2 Scouts are down or a character reaches their firing position, surviving Scouts withdraw toward the inner routes if an escape path remains."
+												"The party can advance under cover, climb a maintenance ledge, use the water channel, use magic, or find another route.",
+												"The Scouts use the water lever and ranged fire to delay the party. Once the party reaches their position or neutralizes the lane, the Scouts withdraw out of the complex rather than turning this into another stand-up fight.",
+												"If the players deliberately trap or pursue them, resolve that normally; otherwise no separate full combat is required."
+											]
+										},
+										{
+											"type": "entries",
+											"name": "Consequences",
+											"entries": [
+												"Solving the Gallery gets the party into the inner waterworks. No clue or prisoner is required."
+											]
+										}
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Scene 3: Inner Waterworks",
+									"entries": [
+										"The party explores the Junction, barracks, stores, and old mechanisms on the way to Noren.",
+										{
+											"type": "entries",
+											"name": "What Happens",
+											"entries": [
+												"Let the players search, inspect the infrastructure, find the hidden exit, or approach the command position from whichever route they create.",
+												"There is no mandatory investigation puzzle. Useful observations are simply given when the characters take reasonable actions."
+											]
+										},
+										{
+											"type": "entries",
+											"name": "Consequences",
+											"entries": [
+												"Finding and blocking the hidden exit removes Noren's best escape route."
+											]
+										}
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Scene 4: Noren Vale",
+									"entries": [
+										"Noren holds the final Covenant position with two enforcers.",
+										{
+											"type": "entries",
+											"name": "What Happens",
+											"entries": [
+												"Noren tries to hold long enough to judge whether the position can be saved. Once it clearly cannot, he withdraws.",
+												"If the party offers terms before or during the fight, Noren can negotiate an orderly evacuation rather than fight to the death."
 											]
 										},
 										{
 											"type": "entries",
 											"name": "Encounter",
 											"entries": [
-												"4 {@creature Scout|XMM|Scouts}."
+												"Noren Vale: Bandit Captain-style, AC 15, 65 HP.",
+												"2 {@creature Thug|XMM|Thugs}, 32 HP each.",
+												"Noren's Smoke Bomb and retreat rules apply."
 											]
 										},
 										{
 											"type": "entries",
 											"name": "Consequences",
 											"entries": [
-												"Bypassing rather than killing the archers preserves potential prisoners."
+												"Capture, surrender, escape, or defeat all lead to the same strategic result once the Iron Covenant abandons the Well."
 											]
 										}
 									]
 								},
 								{
 									"type": "entries",
-									"name": "Scene 3: Barracks and Prisoner",
+									"name": "Scene 5: Secure the Well",
 									"entries": [
-										"Mixed equipment from several factions is stored together, along with a prisoner who refused new orders.",
-										"{@b Rask.} The prisoner is a large orc mercenary from the warband working at Kellan’s Well. He has a broken nose, one chipped tusk, old scars, very short or shaved hair, rough travel clothes, and wrists rubbed raw by restraints. He looks dangerous but exhausted rather than monstrous.",
+										"The party confirms that the Iron Covenant has left the site and that Bellweather can reclaim the waterworks.",
 										{
 											"type": "entries",
 											"name": "What Happens",
 											"entries": [
-												"Rask was jailed after refusing an order to attack civilians. Freeing him provides an independent witness who can explain that the mercenaries, Iron Covenant, and Koven-linked crews are all receiving coordinated orders."
-											]
-										},
-										{
-											"type": "entries",
-											"name": "NPC Behavior",
-											"entries": [
-												"Rask is suspicious but practical. He says different bands receive instructions from the same masked courier."
-											]
-										},
-										{
-											"type": "entries",
-											"name": "Clues and Discoveries",
-											"entries": [
-												"A supply ledger lists Koven House and Paden Square as delivery points."
-											]
-										},
-										{
-											"type": "entries",
-											"name": "Consequences",
-											"entries": [
-												"Fair treatment earns Rask’s testimony later."
+												"End the adventure on the successful clearance, prisoner decisions, or immediate exploration of the secured site.",
+												"Do not run the royal takeover reveal as part of this chapter unless the party returns to Bellweather during the same session and there is enough table time to let that reveal breathe."
 											]
 										}
 									]
 								},
 								{
 									"type": "entries",
-									"name": "Scene 4: Command Junction",
+									"name": "Transition to the Royal Takeover",
 									"entries": [
-										"The local commander attempts to burn the message cache when alarmed.",
-										"{@b Noren Vale.} The local commander is a mid-forties half-elf with a rangy build, short graying hair, one old facial scar, gloves, practical weapons, and a battered coat over piecemeal armor. He looks like someone who has spent years keeping rough people organized.",
-										{
-											"type": "entries",
-											"name": "What Happens",
-											"entries": [
-												"At the end of round 1, Noren ignites the papers unless a character reaches the desk or uses an action to extinguish them."
-											]
-										},
-										{
-											"type": "entries",
-											"name": "Encounter",
-											"entries": [
-												"Noren uses a Bandit Captain-style stat block with AC 15 and 65 HP and retains its normal attack routine.",
-												"He is supported by 2 Thugs with 32 HP each. Add the single reserve Scout only if neither the Checkpoint nor Bow Gallery became a full combat and the party has not taken a Short Rest.",
-												"{@b Smoke Bomb (1/Day).} Noren creates a small area of heavy obscurement until the start of his next turn. On the turn he uses it, he can Disengage as a bonus action.",
-												"{@b Withdrawal.} Once below half hit points, Noren uses the smoke bomb and runs if a route remains. The Thugs screen that withdrawal but surrender or flee if Noren is gone."
-											]
-										},
-										{
-											"type": "entries",
-											"name": "Clues and Discoveries",
-											"entries": [
-												"Surviving pages order rival groups not to fight each other while Bellweather remains the priority. A map marks Koven House as a supply and payment center."
-											]
-										},
-										{
-											"type": "entries",
-											"name": "Consequences",
-											"entries": [
-												"If the cache burns, Rask and the supply ledger still point to Koven House; the campaign does not stall."
-											]
-										}
-									]
-								},
-								{
-									"type": "entries",
-									"name": "Scene 5: Return and Reaction",
-									"entries": [
-										"The evidence proves that Bellweather is not facing unrelated gangs. The Iron Covenant, mercenaries, and Koven-connected criminals are being supplied, paid, and directed as parts of the same coalition.",
-										{
-											"type": "entries",
-											"name": "What Happens",
-											"entries": [
-												"Wern treats the problem as military coordination. Bishop Brann worries about civilians in occupied areas. Perrin recommends cutting the supply network first."
-											]
-										},
-										{
-											"type": "entries",
-											"name": "NPC Behavior",
-											"entries": [
-												"Brakkus remarks that someone who can make enemies cooperate is more dangerous than any one gang."
-											]
-										},
-										{
-											"type": "entries",
-											"name": "Consequences",
-											"entries": [
-												"Koven House becomes the next logical target."
-											]
-										}
-									]
-								},
-								{
-									"type": "entries",
-									"name": "Transition to Chapter 6",
-									"entries": [
-										"Merchants and workers affected by protection rackets confirm that Koven House is the network’s payment and storage center."
+										"When the party returns to Bellweather, the next session reveals that the Council finalized the transfer of the free city to the Crown while the party was away.",
+										"Koven House is now the Crown's local headquarters. The Bishop stayed. Brakkus and Ledger House remain independent. Royal authorities claim Pepper's remaining four service obligations transferred with Bellweather.",
+										"Treat that reveal as its own roleplay session rather than an epilogue to Kellan's Well. The session should end with Tulcornix Avemvir, Kaleb's adopted Aarakocra brother, bringing urgent news that Kaleb's wife needs to be rescued."
 									]
 								},
 								{
 									"type": "entries",
 									"name": "Rewards",
 									"entries": [
-										"{@b Treasure and rewards.} Kellan's Well provides {@b 300–450 gp total} in combined civic pay, salvage, gems, and hostile-faction valuables. Also award one Potion of Greater Healing, one Potion of Heroism, one Potion of Water Breathing, and the Decanter of Endless Water recovered from the old wellworks.",
-										"The recovered command evidence, Koven House lead, and secured underground route are story rewards rather than additional saleable treasure. Pepper receives no pay from the Council portion because Kellan's Well is the first unpaid mission of her five-mission sentence."
+										"{@b Spendable wealth.} 300–450 gp in Iron Covenant coin, salvage, and valuables recovered from the site.",
+										"{@b Potion of Greater Healing.} One.",
+										"{@b Potion of Heroism.} One.",
+										"{@b Potion of Water Breathing.} One.",
+										"{@b Decanter of Endless Water.} One uncommon permanent item recovered from the old waterworks.",
+										"{@b Story reward.} Bellweather regains Kellan's Well and access to the old waterworks.",
+										"{@b Pepper's penance.} The mission counts as Pepper's first unpaid Council mission. The later royal takeover does not erase that completed service."
 									]
 								}
 							]
@@ -2346,13 +2296,13 @@
 								{
 									"type": "list",
 									"items": [
-										"{@b Spendable wealth.} 300–450 gp in combined civic pay, salvage, gems, and hostile-faction valuables.",
+										"{@b Spendable wealth.} 300–450 gp in Iron Covenant coin, salvage, and valuables.",
 										"{@b Potion of Greater Healing.} One.",
 										"{@b Potion of Heroism.} One.",
-										"{@b Potion of Water Breathing.} One; this is the chapter's exploration-focused consumable.",
+										"{@b Potion of Water Breathing.} One.",
 										"{@b Decanter of Endless Water.} One uncommon permanent item recovered from the wellworks.",
-										"{@b Story reward.} The command evidence establishes the coalition, points to Koven House, and secures an emergency route through the old waterworks.",
-										"{@b Pepper's pay.} Kellan's Well is unpaid for Pepper because it is the first mission of her five-mission sentence."
+										"{@b Story reward.} Kellan's Well is cleared and available for Bellweather to reclaim.",
+										"{@b Pepper's penance.} Kellan's Well counts as the first unpaid mission of her five-mission Council sentence."
 									]
 								}
 							]
@@ -2364,6 +2314,14 @@
 					"name": "Chapter 6: Koven House",
 					"id": "006",
 					"entries": [
+						{
+							"type": "inset",
+							"name": "Royal Pivot Override — Do Not Run This Chapter As Written",
+							"entries": [
+								"The campaign pivot after Kellan's Well supersedes the supply-network version of Koven House below. Koven House is now the Crown's local headquarters in Bellweather.",
+								"Retain the old material only as design reference until the royal-takeover chapter is written."
+							]
+						},
 						"{@b Recommended level:} 4",
 						{
 							"type": "entries",
