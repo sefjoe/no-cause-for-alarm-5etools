@@ -6,17 +6,17 @@
 				"json": "NCFA",
 				"abbreviation": "NCFA",
 				"full": "No Cause for Alarm: Ruins of Bellweather",
-				"version": "4.28",
+				"version": "4.29",
 				"authors": [
 					"No Cause for Alarm Campaign"
 				],
-				"dateLastModified": 1791595500
+				"dateLastModified": 1791600500
 			}
 		],
 		"edition": "one",
 		"dateAdded": 1789528955,
-		"dateLastModified": 1791595500,
-		"_dateLastModifiedHash": "f4498c71ad"
+		"dateLastModified": 1791600500,
+		"_dateLastModifiedHash": "d83a7a19be"
 	},
 	"adventure": [
 		{
@@ -1978,7 +1978,7 @@
 								"{@b Hook.} The Council has already assigned the job. The Iron Covenant occupies the old waterworks and refuses to leave.",
 								"{@b Lead-in.} Begin the morning after Blackstone Temple, after the characters have completed a Long Rest and advanced to level 4.",
 								"{@b Player-facing truth.} This is exactly what it appears to be: clear an Iron Covenant position from strategically useful city infrastructure.",
-								"{@b End state.} Kellan's Well is secured when Noren Vale and the remaining Iron Covenant defenders are captured, killed, surrendered, or driven out."
+								"{@b End state.} Kellan's Well is secured when the Iron Covenant no longer controls the site and the main sluice is functioning again."
 							]
 						},
 						{
@@ -1997,10 +1997,25 @@
 							"entries": [
 								"{@b Maximum two full combats.} The intended stand-up fights are the opening defense and Noren's command position. Everything between them is exploration, movement, and a tactical obstacle unless the players deliberately turn it into another fight.",
 								"{@b Opening defense.} Use 3 {@creature Scout|XMM|Scouts} and 2 {@creature Guard|XMM|Guards}. One Scout immediately tries to warn the defenders below.",
-								"{@b Bow Gallery.} Four Iron Covenant Scouts use the firing lane as a delaying position. Treat it as an obstacle by default: they fire from cover, use the water-control lever, and withdraw once the party solves the position.",
-								"{@b Noren Vale.} Use {@creature Noren Vale|NCFA}. He is supported by 2 {@creature Thug|XMM|Thugs} with 32 hit points each.",
-								"{@b Noren's withdrawal trigger.} Noren does not wait for a hit-point threshold. At the start of his turn, if either Thug has fallen, he has taken 20 or more damage since the end of his last turn, or the party has cut off his ability to hold the room, he decides the position is lost. If the hidden exit is open, he uses Smoke Bomb and withdraws. If escape is clearly impossible, he offers surrender.",
+								"{@b Bow Gallery.} Four Iron Covenant Scouts use the firing lane as a delaying position. Treat it as an obstacle by default: they fire from Half Cover, use the water-control lever, and withdraw once the party solves the position.",
+								"{@b Noren Vale.} Use {@creature Noren Vale|NCFA}. He is supported by 2 {@creature Tough|XMM|Toughs}.",
+								"{@b Noren's withdrawal.} Do not track a damage threshold. Noren withdraws when it is clear the Iron Covenant can no longer hold the room. If the hidden exit is open, he uses Smoke Bomb and leaves. If escape is clearly impossible, he offers surrender.",
 								"{@b Damage caution.} This party hits hard. Do not solve that by increasing enemy burst damage. Use cover, movement, withdrawal, and the environment."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "At-the-Table Quick Reference",
+							"entries": [
+								"{@b Scouts (opening and Bow Gallery).} AC 13; HP 16 each; Passive Perception 15. Multiattack: two attacks. Shortsword +4, 5 piercing; Longbow +4, 6 piercing, range 150/600 ft.",
+								"{@b Guards (opening).} AC 16; HP 11 each; Passive Perception 12. Spear +3, 4 piercing, reach 5 ft. or range 20/60 ft.",
+								"{@b Toughs (Noren's enforcers).} AC 12; HP 32 each; Passive Perception 10. Pack Tactics. Mace +4, 5 bludgeoning; Heavy Crossbow +3, 6 piercing, range 100/400 ft.",
+								"{@b Noren Vale.} AC 15; HP 65; Passive Perception 12. Multiattack: two attacks. Scimitar +5, 6 slashing; Light Crossbow +5, 7 piercing, range 80/320 ft. Parry: +2 AC against one triggering melee hit. Smoke Bomb (1/Day): 10-foot-radius Heavily Obscured area until the start of his next turn; he can Disengage as part of the same Bonus Action.",
+								"{@b Bow Gallery.} Scouts have Half Cover (+2 AC and Dexterity saves). Firing ledge is 10 feet above the passage. The flooded firing lane is 50 feet long and 10 feet wide; wading in it is Difficult Terrain. The maintenance ledge is 3 feet wide and dry. The water lever is beside the Scout position. Surge: DC 14 Strength save or fall Prone and move 15 feet.",
+								"{@b Main sluice.} No check to identify the sabotage. Pull a locking spike: DC 14 Strength (Athletics), with Advantage from a crowbar or comparable leverage. Each spike/chain section: AC 19, 10 HP; immune to Poison and Psychic damage. Opening surge: DC 14 Strength save only for a creature that chooses to remain in the marked channel.",
+								"{@b Hidden exit.} Notice signs of it: DC 13 Wisdom (Perception). Locate the release quickly after its existence is known: DC 12 Intelligence (Investigation).",
+								"{@b Delayed pursuit.} If Noren gets more than 1 minute into the ruins, a character with a plausible way to track him can attempt DC 13 Wisdom (Survival). Success picks up his trail; failure loses him in the district. Immediate pursuit uses normal movement and initiative, not a separate chase subsystem.",
+								"{@b Social DCs.} Do not roll when the leverage makes the result obvious. If Noren's response to proposed terms is genuinely uncertain, use DC 13 Charisma (Persuasion or Intimidation) as the default."
 							]
 						},
 						{
@@ -2017,17 +2032,45 @@
 								},
 								{
 									"type": "entries",
+									"name": "Why the Iron Covenant Is Here",
+									"entries": [
+										"The Covenant took Kellan's Well for three straightforward reasons: it denies Bellweather a working piece of infrastructure, gives the Covenant a defensible foothold in the ruined district, and preserves a protected route through the old waterworks.",
+										"There is no additional secret objective. If the players ask a defender why they are here, this is the answer."
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Captured Iron Covenant Members",
+									"entries": [
+										"Ordinary defenders know Noren Vale commands the site, the main sluice was deliberately disabled so Bellweather could not simply reclaim the waterworks, and there is an escape passage somewhere beyond the command area.",
+										"A defender who worked in the inner rooms can point out the general location of the hidden exit but does not automatically know its release mechanism.",
+										"They were told to hold the Well while it remained defensible and withdraw rather than die for it.",
+										"They know nothing about the Crown's takeover or the Council's sale of Bellweather."
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Noren: Negotiation and Surrender",
+									"entries": [
+										"{@b What he wants.} Noren's priority is getting his surviving people out alive. If he still has a viable escape route and a functioning force, he asks for an orderly withdrawal.",
+										"{@b Weapons.} While he still has leverage, Noren asks to leave with personal weapons. If his position is broken or his escape route is blocked, he will surrender weapons rather than continue a losing fight.",
+										"{@b What he will not do.} He will not die merely to deny Bellweather the Well, and he will not invent information he does not have.",
+										"{@b When he surrenders.} If the exit is blocked and the party clearly controls the room, he offers surrender without requiring a check. If the balance is uncertain and the party proposes terms, use roleplay first; only call for the DC 13 social check in the Quick Reference if the outcome is genuinely uncertain."
+									]
+								},
+								{
+									"type": "entries",
 									"name": "Table-Ready Session Package",
 									"entries": [
 										"{@b Milestone.} The party begins at level 4 after a Long Rest. Do not automatically level them at the end of Kellan's Well; the next milestone belongs to the royal-takeover arc.",
-										"{@b Finite armed population.} Opening defense: 3 Scouts + 2 Guards. Bow Gallery: 4 Scouts acting as a delaying position, not a required stand-up fight. Command position: Noren Vale + 2 Thugs. There are no additional unnamed barracks troops, reserves, or reinforcement waves.",
+										"{@b Finite armed population.} Opening defense: 3 Scouts + 2 Guards. Bow Gallery: 4 Scouts acting as a delaying position, not a required stand-up fight. Command position: Noren Vale + 2 Toughs. There are no additional unnamed barracks troops, reserves, or reinforcement waves.",
 										"{@b Alarm 0 — unaware.} Noren has not been warned and the Bow Gallery is on routine watch.",
 										"{@b Alarm 1 — warned.} A runner reaches the stairs or another defender successfully signals. The Bow Gallery takes prepared cover and Noren opens his escape route.",
 										"{@b Alarm 2 — withdrawal.} The party reaches the inner complex, disengages for a prolonged period, or begins a Short Rest before Noren is resolved. Surviving Iron Covenant members abandon nonessential rooms and prepare to leave the site.",
 										"{@b Short Rest.} A secured room can support a Short Rest, but the world keeps moving. If Noren is unresolved, he and surviving defenders withdraw through the hidden exit during the rest unless the party has already blocked it. If they escape, the party still succeeds in clearing the Well; they simply lose the chance to capture Noren.",
 										"{@b Clean bypasses count.} If the players bypass a position through stealth, negotiation, magic, or clever routing, let the bypass stand. Do not invent another encounter to replace it.",
-										"{@b Morale.} Opening defenders fall back once the alarm is raised and 2 of them are down. Bow Gallery Scouts leave once the party reaches their position or makes the firing lane ineffective. Noren decides to withdraw when the fight visibly turns against him: either Thug falls, he takes 20 or more damage between his turns, or the party cuts off his ability to hold the room. If the hidden exit remains open he uses Smoke Bomb and runs; if escape is clearly impossible, he surrenders.",
-										"{@b Success.} The Iron Covenant must no longer control Kellan's Well, and the main sluice must be restored or left in a condition Bellweather can immediately restore.",
+										"{@b Morale.} Opening defenders fall back once the alarm is raised and 2 of them are down. Bow Gallery Scouts leave once the party reaches their position or makes the firing lane ineffective. Noren withdraws when it is clear the room can no longer be held; use the situation, not an HP formula. If the hidden exit remains open he uses Smoke Bomb and runs; if escape is clearly impossible, he surrenders.",
+										"{@b Success.} The Iron Covenant no longer controls Kellan's Well and the main sluice is functioning again.",
 										"{@b Pacing.} Do not force the whole chapter into one sitting. Run about 3.5 hours of good play, then stop at the next natural break."
 									]
 								},
@@ -2035,13 +2078,13 @@
 									"type": "entries",
 									"name": "Expected Session Shape",
 									"entries": [
-										"Ledger House departure and approach: about 15–25 minutes.",
+										"Ledger House departure and approach: about 10–20 minutes.",
 										"Opening defense: about 30–45 minutes if it becomes a fight.",
-										"Bow Gallery and waterworks exploration: about 20–35 minutes.",
-										"Barracks/stores/hidden-route exploration: about 20–30 minutes.",
-										"Noren and the command position: about 45–60 minutes.",
-										"Site secured and immediate wrap-up: about 10–15 minutes.",
-										"These are scene estimates, not a requirement to finish the whole chapter in one session."
+										"Bow Gallery: about 10–25 minutes unless the players deliberately turn it into a full ranged fight.",
+										"Main sluice and inner exploration: about 15–30 minutes.",
+										"Noren and the command position: about 30–60 minutes if it becomes a fight.",
+										"Site secured, prisoner decisions, and cleanup: about 15–30 minutes.",
+										"These are scene estimates, not a requirement to fill a 3.5-hour session. Clever play can shorten the adventure substantially."
 									]
 								},
 								{
@@ -2054,7 +2097,7 @@
 										"{@b Session-end rule.} Do not add filler to reach a preferred stopping point and do not rush a scene just to reach Noren."
 									]
 								},
-								"{@b Primary objective.} Clear the Iron Covenant from Kellan's Well.",
+								"{@b Primary objective.} Clear the Iron Covenant from Kellan's Well and restore the main sluice.",
 								"{@b Player agency.} Scout, negotiate, sneak, attack openly, cut off the hidden exit, or simply force the Covenant to abandon the position.",
 								"{@b Fail forward.} A failed stealth attempt changes preparedness, not access to the adventure. Noren escaping is an outcome, not a failure.",
 								"{@b Rest and pressure.} Resting inside the active site gives the Covenant time to withdraw. The defenders do not freeze in place while the characters recover."
@@ -2068,7 +2111,7 @@
 									"type": "entries",
 									"name": "Location and Background Details",
 									"entries": [
-										"Kellan's Well is an old waterworks complex in a ruined district of Bellweather. The Iron Covenant occupies it because it is defensible, controls useful infrastructure, and gives them a secure route through the district.",
+										"Kellan's Well is an old waterworks complex in a ruined district of Bellweather. The Iron Covenant occupies it to deny Bellweather working infrastructure, hold a defensible foothold in the district, and preserve a protected route through the ruins.",
 										{
 											"type": "entries",
 											"name": "1. Well Chamber",
@@ -2081,9 +2124,11 @@
 											"type": "entries",
 											"name": "2. Bow Gallery",
 											"entries": [
-												"Broken masonry overlooks a flooded passage. Four Iron Covenant Scouts use the position to delay anyone coming from the Well Chamber.",
-												"A far-side lever releases stored water through the channel. A creature caught in the channel makes a DC 14 Strength saving throw or falls Prone and is moved 15 feet.",
-												"Run this as a tactical obstacle by default. The Scouts shoot from cover, use the lever if useful, and withdraw once the party reaches them, bypasses the lane, or makes the position ineffective."
+												"Broken masonry overlooks a flooded passage. Four Iron Covenant Scouts use a firing ledge 10 feet above the floor. The ledge is protected by broken stone that provides Half Cover (+2 AC and Dexterity saving throws).",
+												"The main firing lane is 50 feet long and 10 feet wide. Knee-to-thigh-deep water makes the channel Difficult Terrain. A dry maintenance ledge, about 3 feet wide, runs along one wall.",
+												"A far-side lever beside the Scout position releases stored water through the channel. A creature that remains in the channel when the surge arrives makes a DC 14 Strength saving throw or falls Prone and is moved 15 feet.",
+												"Climbing the 10-foot ledge normally uses the standard climbing rules and needs no check if the character has time and a usable route. If a character attempts a hurried climb under fire on the slick masonry, use DC 10 Strength (Athletics).",
+												"Run this as a tactical obstacle by default. The Scouts shoot from Half Cover, use the lever if useful, and withdraw once the party reaches them, bypasses the lane, or makes the position ineffective."
 											]
 										},
 										{
@@ -2108,10 +2153,11 @@
 											"name": "5. Command Room",
 											"entries": [
 												"{@b Noren Vale.} Noren is the Iron Covenant commander at Kellan's Well: a mid-forties half-elf with a rangy build, short graying hair, one old facial scar, gloves, practical weapons, and a battered coat over piecemeal armor.",
-												"{@b Encounter.} Use {@creature Noren Vale|NCFA}. He is supported by 2 {@creature Thug|XMM|Thugs} with 32 HP each.",
-												"{@b Withdrawal.} Noren does not wait until he is badly wounded. At the start of his turn, if either Thug has fallen, he has taken 20 or more damage since the end of his last turn, or the party has cut off his ability to hold the room, he judges the position lost.",
-												"{@b Escape.} If the hidden exit is open, Noren uses Smoke Bomb and moves toward it. The Thugs screen the retreat but surrender or flee if Noren escapes or falls.",
-												"{@b If trapped.} If escape is clearly impossible, Noren offers surrender."
+												"{@b Encounter.} Use {@creature Noren Vale|NCFA}. He is supported by 2 {@creature Tough|XMM|Toughs}.",
+												"{@b Withdrawal.} Noren stays only while he believes the room can still be held. Once the party has clearly broken the defense—an enforcer drops and the PCs have position, multiple PCs reach Noren, the exit is threatened, or comparable circumstances—he judges the Well lost.",
+												"{@b Escape.} If the hidden exit is open, Noren uses Smoke Bomb and moves toward it. The Toughs screen the retreat but surrender or flee if Noren escapes or falls.",
+												"{@b If trapped.} If escape is clearly impossible, Noren offers surrender.",
+												"{@b Negotiation.} Noren will trade the Well for the lives of his surviving people. See Noren: Negotiation and Surrender."
 											]
 										},
 										{
@@ -2122,6 +2168,9 @@
 												"The Covenant has disabled the sluice with two iron locking spikes and a chained counterweight. Use the Jammed Sluice rules in Scene 3.",
 												"{@b Finding the hidden exit.} A DC 13 Wisdom (Perception) check notices a faint draft, repeated scuff marks, or irregular stonework. Once the characters know a passage is present, no further roll is required to establish that it exists.",
 												"{@b Opening it.} A DC 12 Intelligence (Investigation) check quickly locates the release mechanism. Failure costs several minutes but does not make the route inaccessible.",
+												"{@b Where it goes.} The passage runs roughly 180 feet through a narrow maintenance tunnel and emerges in the shell of a collapsed pump house about 250 feet from the Well in the ruined district. The tunnel does not branch.",
+												"{@b Immediate pursuit.} If the party follows as Noren withdraws, stay in initiative and use normal movement. The tunnel is narrow enough that creatures move single file but otherwise does not require checks.",
+												"{@b Delayed pursuit.} If the party waits more than 1 minute after Noren reaches the ruins, he can break line of sight among the collapsed buildings. A character with a plausible way to track him can attempt DC 13 Wisdom (Survival); success picks up the trail, while failure loses him.",
 												"If the party finds and blocks this exit before confronting Noren, his surrender becomes much more likely."
 											]
 										},
@@ -2138,7 +2187,7 @@
 											"type": "entries",
 											"name": "Resolution",
 											"entries": [
-												"The chapter ends when the Iron Covenant no longer controls Kellan's Well and the main sluice has been restored or made ready for Bellweather to restore immediately.",
+												"The chapter ends when the Iron Covenant no longer controls Kellan's Well and the main sluice is functioning again.",
 												"The party can secure the site, confirm the old waterworks are usable, and decide what to do with any captured Covenant members.",
 												"Do not reveal the royal takeover here. Let the characters finish this job believing they have completed the Council assignment they accepted."
 											]
@@ -2178,14 +2227,24 @@
 									"type": "entries",
 									"name": "Scene 2: Bow Gallery",
 									"entries": [
-										"Four Iron Covenant Scouts control the flooded passage from behind broken masonry.",
+										"Four Iron Covenant Scouts control a 50-foot flooded passage from a firing ledge 10 feet above the floor. Broken masonry gives them Half Cover.",
 										{
 											"type": "entries",
 											"name": "What Happens",
 											"entries": [
-												"The party can advance under cover, climb a maintenance ledge, use the water channel, use magic, or find another route.",
+												"The flooded channel is 10 feet wide and is Difficult Terrain. A dry 3-foot maintenance ledge runs along one wall.",
+												"The party can advance under cover, climb to the firing ledge, use the water channel, use magic, or find another route.",
 												"The Scouts use the water lever and ranged fire to delay the party. Once the party reaches their position or neutralizes the lane, the Scouts withdraw out of the complex rather than turning this into another stand-up fight.",
 												"If the players deliberately trap or pursue them, resolve that normally; otherwise no separate full combat is required."
+											]
+										},
+										{
+											"type": "entries",
+											"name": "Numbers",
+											"entries": [
+												"4 {@creature Scout|XMM|Scouts}: AC 13, HP 16 each, Passive Perception 15; Longbow +4, 6 piercing; Half Cover raises AC to 15 against attacks that pass through the masonry.",
+												"Water lever surge: DC 14 Strength save or fall Prone and move 15 feet.",
+												"Hurried climb under fire, only if a check is warranted: DC 10 Strength (Athletics)."
 											]
 										},
 										{
@@ -2212,6 +2271,7 @@
 												"{@b Tools.} A character proficient with Tinker's Tools, Smith's Tools, or Thieves' Tools can spend about 5 minutes removing a spike or opening the counterweight restraint without a check if the appropriate tools are available.",
 												"{@b Break it.} The chain and each exposed spike can simply be attacked: AC 19, 10 hit points, immunity to Poison and Psychic damage. Reasonable damaging magic works normally.",
 												"{@b Other solutions.} If a spell, class feature, or player idea would reasonably remove the obstruction or substitute for the mechanism, let it work. This is a physical problem, not a required sequence of checks.",
+												"{@b What restoration does.} Reopening the sluice restores controlled flow through the old district channels. Within hours, Bellweather crews can begin refilling public cisterns and draining flooded service passages. The effect is visible and audible: water starts moving through channels that have been stagnant since the Covenant took the site.",
 												"{@b Water surge.} When the sluice first opens, the characters hear the pressure build before the water releases. Anyone who chooses to remain in the marked channel makes a DC 14 Strength saving throw or falls Prone and is moved 15 feet. Give them a chance to step clear before calling for the save.",
 												"{@b Decanter.} The {@item Decanter of Endless Water|DMG} is stored in a sealed maintenance niche beside the controls, part of the old waterworks equipment rather than a random cache."
 											]
@@ -2228,8 +2288,9 @@
 											"type": "entries",
 											"name": "Consequences",
 											"entries": [
-												"If Noren escapes or the party takes a Short Rest and the defenders evacuate, restoring the sluice still gives the characters a concrete job to finish before the Well is fully operational.",
-												"Once the Covenant is gone and the sluice works, Bellweather can immediately put the site back into service."
+												"If Noren escapes or the party takes a Short Rest and the defenders evacuate, restoring the sluice still gives the characters a concrete job to finish before the Well is operational.",
+												"When the mechanism works, water begins moving through the old channels again. Bellweather can immediately send crews to refill cisterns and drain flooded service passages.",
+												"Once the Covenant is gone and the sluice works, Bellweather can put the site back into service."
 											]
 										}
 									]
@@ -2244,24 +2305,25 @@
 											"name": "What Happens",
 											"entries": [
 												"Noren begins by trying to hold the room, but he is experienced enough to recognize a collapsing defense.",
-												"At the start of his turn, if either Thug has fallen, Noren has taken 20 or more damage since the end of his last turn, or the party has cut off his ability to hold the room, he decides to withdraw.",
+												"Do not track a damage threshold. When the party has clearly broken his ability to hold the room, Noren decides to withdraw.",
 												"If the hidden exit is open, he uses Smoke Bomb and runs. If escape is clearly impossible, he offers surrender.",
-												"If the party offers acceptable terms before the fight turns, Noren can negotiate an orderly evacuation instead of fighting."
+												"If the party offers workable terms before the fight turns, Noren can negotiate an orderly evacuation instead of fighting."
 											]
 										},
 										{
 											"type": "entries",
 											"name": "Encounter",
 											"entries": [
-												"{@creature Noren Vale|NCFA}.",
-												"2 {@creature Thug|XMM|Thugs}, 32 HP each."
+												"{@creature Noren Vale|NCFA}: AC 15, HP 65, Passive Perception 12; two attacks, Scimitar +5 for 6 slashing or Light Crossbow +5 for 7 piercing; Parry +2 AC; Smoke Bomb (1/Day).",
+												"2 {@creature Tough|XMM|Toughs}: AC 12, HP 32 each, Passive Perception 10; Pack Tactics; Mace +4 for 5 bludgeoning or Heavy Crossbow +3 for 6 piercing."
 											]
 										},
 										{
 											"type": "entries",
 											"name": "Consequences",
 											"entries": [
-												"Capture, surrender, escape, or defeat all lead to the same strategic result once the Iron Covenant abandons the Well."
+												"Capture, surrender, escape, or defeat all lead to the same strategic result once the Iron Covenant abandons the Well.",
+												"If Noren surrenders, he and surviving defenders can be turned over to Bellweather authorities. If he escapes, do not invent a replacement boss fight; his escape is simply a surviving consequence of the party's choices."
 											]
 										}
 									]
@@ -2275,7 +2337,8 @@
 											"type": "entries",
 											"name": "What Happens",
 											"entries": [
-												"Once the Covenant is gone and the sluice works, Bellweather can reclaim Kellan's Well immediately.",
+												"Once the Covenant is gone and the sluice works, Bellweather can reclaim Kellan's Well immediately. Water moving through the old channels gives the characters a visible sign that the job is complete.",
+												"If prisoners surrendered, decide whether the party escorts them back or leaves them secured for Bellweather personnel; either choice can be handled without another encounter.",
 												"End the adventure on the successful restoration, prisoner decisions, or immediate exploration of the secured site.",
 												"Do not run the royal takeover reveal as part of this chapter unless the party returns to Bellweather during the same session and there is enough table time to let that reveal breathe."
 											]
@@ -2300,7 +2363,7 @@
 										"{@b Potion of Heroism.} One.",
 										"{@b Potion of Water Breathing.} One.",
 										"{@b Decanter of Endless Water.} One uncommon permanent item recovered from the old waterworks.",
-										"{@b Story reward.} Bellweather regains Kellan's Well and access to the old waterworks.",
+										"{@b Story reward.} Bellweather regains Kellan's Well, controlled water flow through the old district, and access to the old waterworks.",
 										"{@b Pepper's penance.} The mission counts as Pepper's first unpaid Council mission. The later royal takeover does not erase that completed service."
 									]
 								}
@@ -2319,7 +2382,7 @@
 										"{@b Potion of Heroism.} One.",
 										"{@b Potion of Water Breathing.} One.",
 										"{@b Decanter of Endless Water.} One uncommon permanent item recovered from the wellworks.",
-										"{@b Story reward.} Kellan's Well is cleared and available for Bellweather to reclaim.",
+										"{@b Story reward.} Kellan's Well is cleared, the main sluice is restored, and Bellweather can put the waterworks back into service.",
 										"{@b Pepper's penance.} Kellan's Well counts as the first unpaid mission of her five-mission Council sentence."
 									]
 								}
@@ -13172,7 +13235,7 @@
 			"fluff": {
 				"entries": [
 					"Noren Vale is a mid-forties half-elf with a rangy build, short graying hair, one old facial scar, gloves, practical weapons, and a battered coat over piecemeal armor. He commands the Iron Covenant position at Kellan's Well.",
-					"Noren is not suicidal. He treats the Well as a position to hold while it remains defensible and abandons it once the fight clearly turns against him."
+					"Noren is not suicidal. He holds the Well while it remains defensible, tries to withdraw once the position is clearly lost, and surrenders if escape is impossible."
 				]
 			}
 		}
