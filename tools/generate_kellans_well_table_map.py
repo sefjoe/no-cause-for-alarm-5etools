@@ -11,6 +11,7 @@ try:
 except OSError: font=ImageFont.load_default(); small=font
 def xy(a,b,c,d): return (int(a*S),int(b*S),int(c*S),int(d*S))
 def make(dm):
+ random.seed(20261010)
  im=Image.new("RGB",(W,H),(190,188,170))
  d=ImageDraw.Draw(im)
  d.rectangle(xy(0,0,20,24),fill="#626d69")
