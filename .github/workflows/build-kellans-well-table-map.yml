@@ -1,0 +1,31 @@
+name: Build Kellan's Well Table Map
+on:
+  push:
+    paths:
+      - 'tools/generate_kellans_well_table_map.py'
+      - '.github/workflows/build-kellans-well-table-map.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install pillow
+      - run: python tools/generate_kellans_well_table_map.py
+      - name: Commit new raster maps
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add img/player/kellans_well_table_ready.webp img/dm/kellans_well_table_ready.webp
+          if ! git diff --cached --quiet; then
+            git commit -m "Build Kellan's Well raster table maps"
+            git push
+          fi
