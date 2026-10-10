@@ -10,12 +10,12 @@
         "authors": [
           "No Cause for Alarm Campaign"
         ],
-        "dateLastModified": 1791666540
+        "dateLastModified": 1791673200
       }
     ],
     "edition": "one",
     "dateAdded": 1789528955,
-    "dateLastModified": 1791666540,
+    "dateLastModified": 1791673200,
     "_dateLastModifiedHash": "kellans-v430-ready"
   },
   "adventure": [
@@ -1898,10 +1898,10 @@
                       "type": "image",
                       "href": {
                         "type": "external",
-                        "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/kellans_well_table_ready.webp"
+                        "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/kellans_well_reusable_20x24.png"
                       },
                       "imageType": "map",
-                      "title": "Kellan's Well - Table-Ready DM Map (20 x 24 squares)",
+                      "title": "Kellan's Well — Reusable Pump Bay (DM Key)",
                       "grid": {
                         "type": "none"
                       },
@@ -1927,18 +1927,16 @@
                             ]
                           ]
                         }
-                      ],
-                      "width": 4000,
-                      "height": 4800
+                      ]
                     },
                     {
                       "type": "image",
                       "href": {
                         "type": "external",
-                        "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/kellans_well_table_ready.webp"
+                        "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/kellans_well_reusable_20x24.png"
                       },
                       "imageType": "mapPlayer",
-                      "title": "Kellan's Well - Table-Ready Player Map (20 x 24 squares)",
+                      "title": "Kellan's Well — Reusable Pump Bay (Players)",
                       "grid": {
                         "type": "none"
                       },
@@ -1964,27 +1962,25 @@
                             ]
                           ]
                         }
-                      ],
-                      "width": 4000,
-                      "height": 4800
+                      ]
                     }
                   ]
                 },
-                "{@link Player Battle Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/kellans_well_table_ready.webp}",
-                "{@link Keyed DM Battle Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/kellans_well_table_ready.webp}",
-                "{@b Physical map rule.} One 20 x 24-square, 5-ft grid. Printed at 1 inch per square it fits a 22 x 26-inch mat. Same pump-bay terrain reused across the separate, similar-built bays; move miniatures, not terrain. The numbered DM map symbols are controls, not adventure-room numbers."
+                "{@link Reusable Pump Bay — Player Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/kellans_well_reusable_20x24.png}",
+                "{@link Reusable Pump Bay — DM Keyed Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/kellans_well_reusable_20x24.png}",
+                "Both image links load directly from this GitHub repository in 5etools. Same 20 x 24 square tactical geometry, with different markings; the print-ready 4000 x 4800 player/DM artwork and print sheets remain available in the separate table pack."
               ]
             },
             {
               "type": "entries",
               "name": "Chapter Overview",
               "entries": [
-                "{@b Chapter purpose.} Remove the Iron Covenant from Kellan's Well so Bellweather can reclaim the site.",
-                "{@b Hook.} The Council has already assigned the job. The Iron Covenant occupies the old waterworks and refuses to leave.",
-                "{@b Lead-in.} Begin the morning after Blackstone Temple, after the characters have completed a Long Rest and advanced to level 4.",
-                "{@b Player-facing truth.} This is exactly what it appears to be: clear an Iron Covenant position from strategically useful city infrastructure.",
-                "{@b End state.} Kellan's Well is secured when the Iron Covenant no longer controls the site and the main sluice is functioning again.",
-                "{@b One-map presentation.} As in Josric's repeated library, the party explores real distinct waterworks bays of similar design; the same physical map represents each. Short connecting corridors are narrated. The rooms are not magically the same room; track what the party altered if it returns."
+                "{@b Objective.} Clear the Iron Covenant from Kellan's Well and restore its main sluice.",
+                "{@b Starting point.} Ledger House, morning after Blackstone Temple; four level-4 characters after a Long Rest. No repeat Council briefing.",
+                "{@b Physical constraint.} One reusable 20 x 24 square waterworks chamber is reset for each distinct pump bay. It is not one 100 x 120 foot dungeon containing every encounter at once.",
+                "{@b Encounter shape.} Quick checkpoint fight, Bow Gallery tactical obstacle, sabotaged sluice, Noren's command position, site secured.",
+                "{@b Victory.} Covenant no longer holds the Well, and main sluice works. Capture, surrender, retreat, or defeat count as appropriate.",
+                "{@b Story continuity.} Pepper earns her first unpaid service; the royal takeover is revealed after the party returns, in the following session."
               ]
             },
             {
@@ -2001,37 +1997,50 @@
               "type": "entries",
               "name": "Encounter Guidance",
               "entries": [
-                "{@b Intended combats.} First: checkpoint. Final: Noren's command. Bow Gallery is an optional full fight but primarily a positional puzzle. Maximum two expected stand-up fights.",
-                "{@b Checkpoint.} 3 {@creature Scout|XMM|Scouts} plus 2 {@creature Guard|XMM|Guards}. One Scout starts Q19; it must physically reach the alarm pull E6 and use it; count its movement around machinery and stairs/ladder. Do not trigger alarm automatically.",
-                "{@b Bow Gallery.} 4 Scouts at F5/I5/L5/O5, 10 feet above lower floor. Half Cover from the parapet. Lever P5 causes a single DC 14 Strength-save surge; negating the position causes Scout retreat.",
-                "{@b Command.} Noren Vale AC 15 HP 85 + 1 {@creature Warrior Veteran|XMM} AC 17 HP 65 + 2 {@creature Tough|XMM|Toughs} AC 12 HP 32. No more enemies, no reinforcement waves. The change adds meaningful opposition without increasing burst damage indiscriminately.",
-                "{@b Morale.} Noren holds while the position is defensible. If seriously outflanked or broken, he uses Smoke Bomb and moves normally to hatch P4; if blocked/trapped, surrender. A successful negotiation, bypass, pursuit or capture stands.",
-                "{@b Difficulty.} 2024 budgets for four level-4 PCs: Low 1,000 / Moderate 1,500 / High 2,000 XP. First fight listed 350; Gallery 400 if fully fought; command listed approximately 1,350, not recalculated for Noren's HP bonus. The party's actual level-4 HP/AC/spells are unverified."
+                "{@b Four level-4 PCs, full rest.} 2024 encounter reference: Low 1,000 XP; Moderate 1,500 XP; High 2,000 XP. These are planning baselines; no character-by-character stats were available for a tailored simulation.",
+                "{@b Finite opposition.} Checkpoint: 3 {@creature Scout|XMM|Scouts} + 2 {@creature Guard|XMM|Guards}; gallery: 4 Scouts; command: {@creature Noren Vale|NCFA}, 1 {@creature Warrior Veteran|XMM}, 2 {@creature Tough|XMM|Toughs}. No unnamed troops, reserves, reinforcements, or replacement fights.",
+                "{@b Checkpoint XP.} 350 XP. Designed to be short, with pressure from an alarm runner rather than attrition.",
+                "{@b Gallery XP.} 400 XP if everyone fights; normally it is a tactical obstacle rather than a mandatory full combat.",
+                "{@b Command XP.} Approximately 1,350 XP using the listed CRs: Noren CR 2 (450), Veteran CR 3 (700), Toughs CR 1/2 (100 each). Noren's increased HP makes this only an approximate CR-based budget.",
+                "{@b The battlefield supplies difficulty.} Half Cover from parapet; 10-foot-high gallery; water in a 60-foot by 10-foot lane; 5-foot-wide dry catwalk; pump housings block movement and sight. Do not inflate burst damage.",
+                "{@b Tactical payoff.} Blocking the hatch, intercepting the alarm, accessing stairs/ladder, exploiting machinery, or negotiating can decisively simplify a fight. The DM should let those victories stand.",
+                "{@b Noren's morale.} He wants to save surviving personnel. He retreats when the position cannot be held; if the hatch is blocked and surrender is logical, he offers it without a roll."
               ]
             },
             {
               "type": "entries",
               "name": "At-the-Table Quick Reference",
               "entries": [
-                "{@b Scouts (opening and Bow Gallery).} AC 13; HP 16 each; Passive Perception 15. Multiattack: two attacks. Shortsword +4, 5 piercing; Longbow +4, 6 piercing, range 150/600 ft.",
-                "{@b Guards (opening).} AC 16; HP 11 each; Passive Perception 12. Spear +3, 4 piercing, reach 5 ft. or range 20/60 ft.",
-                "{@b Toughs (Noren's enforcers).} AC 12; HP 32 each; Passive Perception 10. Pack Tactics. Mace +4, 5 bludgeoning; Heavy Crossbow +3, 6 piercing, range 100/400 ft.",
-                "{@b Warrior Veteran.} AC 17, HP 65, Initiative +3, Multiattack (two Greatsword +5, 10 slashing or two Heavy Crossbow +3, 12 piercing, 100/400 ft). Reaction Parry: +2 AC against a triggering melee hit.",
-                "{@b Noren Vale.} AC 15, HP 85, Passive Perception 12. Multiattack: two Scimitar +5, 6 slashing or Light Crossbow +5, 7 piercing. Parry +2 AC (reaction). Smoke Bomb (1/day, Bonus Action): 10-ft-radius Heavily Obscured area until his next turn and Disengage as part of same Bonus Action; ordinary movement afterward.",
-                "{@b Bow Gallery.} Scouts have Half Cover (+2 AC and Dexterity saves). Firing ledge is 10 feet above the passage. The flooded firing lane is 60 feet long and 10 feet wide; wading in it is Difficult Terrain. The maintenance ledge is 3 feet wide and dry. The water lever is beside the Scout position. Surge: DC 14 Strength save or fall Prone and move 15 feet.",
-                "{@b Main sluice.} No check to identify the sabotage. Pull a locking spike: DC 14 Strength (Athletics), with Advantage from a crowbar or comparable leverage. Each spike/chain section: AC 19, 10 HP; immune to Poison and Psychic damage. Opening surge: DC 14 Strength save only for a creature that chooses to remain in the marked channel.",
-                "{@b Hidden exit.} Notice signs of it: DC 13 Wisdom (Perception). Locate the release quickly after its existence is known: DC 12 Intelligence (Investigation).",
-                "{@b Delayed pursuit.} If Noren gets more than 1 minute into the ruins, a character with a plausible way to track him can attempt DC 13 Wisdom (Survival). Success picks up his trail; failure loses him in the district. Immediate pursuit uses normal movement and initiative, not a separate chase subsystem.",
-                "{@b Social DCs.} Do not roll when the leverage makes the result obvious. If Noren's response to proposed terms is genuinely uncertain, use DC 13 Charisma (Persuasion or Intimidation) as the default.",
-                "{@b DM terrain key.} 1 Lever P5; 2 Counterweight P12; 3 Sluice J8; 4 Alarm E6; 5 Escape hatch P4; 6 East ladder Q8-10; 7 West stairs D-F7-10.",
-                "{@b Three starting positions.} Checkpoint: party I-L22, Guards H20/N20, Scouts F17/M13 and runner Q19. Gallery: party I-L22, Scouts F5/I5/L5/O5. Command: party I-L22, Noren M4, Veteran H4, Toughs G11/Q11.",
-                "{@b Physical battle map.} 20 columns A-T by 24 rows; 1 square = 5 ft. Flooded channel about 60 x 10 ft, Difficult Terrain; dry catwalk; northern 10-ft-high gallery; Half Cover behind parapet (+2 AC and Dex saves); west steps and east ladder permit flanking. Solid pump housings block movement."
+                "{@b Physical footprint.} One 20 x 24 square floor at 1 inch per 5 feet, inside the existing 22 x 26 inch mat. The same walls, raised platform, catwalk, channel, steps, ladder, and pumps are reused in checkpoint, gallery and command bays.",
+                "{@b Coordinates.} Columns A–T west to east; rows 1–24 north to south. PCs enter near I–L22. Checkpoint: Guards H20/N20, Scouts F17/M13, runner Q19. Gallery: Scouts F5/I5/L5/O5. Command: Noren M4, Veteran H4, Toughs G11/Q11.",
+                "{@b Map keys.} 1 lever P5; 2 counterweight P12; 3 sluice J8; 4 alarm E6; 5 hidden command hatch P4; 6 east ladder Q8–10; 7 west steps D–F7–10. These interactables exist in the relevant bay; unused controls may be inert in others.",
+                "{@b Scouts.} AC 13, HP 16, Passive Perception 15; two attacks: Longbow +4, 6 piercing (150/600), or Shortsword +4, 5 piercing.",
+                "{@b Guards.} AC 16, HP 11; Spear +3, 4 piercing; range 20/60 when thrown.",
+                "{@b Toughs.} AC 12, HP 32, Pack Tactics; Mace +4, 5 bludgeoning; Heavy Crossbow +3, 6 piercing.",
+                "{@b Warrior Veteran.} AC 17, HP 65; Multiattack 2; Greatsword +5, 10 (2d6+3) slashing; Heavy Crossbow +3, 12 (2d10+1) piercing; reaction Parry +2 AC vs one melee hit.",
+                "{@b Noren Vale.} AC 15, HP 85; two Scimitar +5 attacks (6 slashing each) or two Light Crossbow +5 (7 piercing each); Parry +2 AC vs one melee hit; Bonus Action Smoke Bomb 1/Day (10-foot-radius Heavily Obscured area until his next turn, plus Disengage), not free Dash.",
+                "{@b Gallery elevations and cover.} Raised platform is 10 feet higher. Parapet grants Half Cover (+2 AC and Dexterity saves) if crossed by attack line. West steps require no check. East ladder normally uses regular climbing. Hurried climb under fire on slick surfaces: DC 10 Athletics only if warranted.",
+                "{@b Flooded channel.} Straight 60-foot flooded section, 10 feet wide, Difficult Terrain. Adjacent 5-foot dry catwalk single file. Lever at P5: Action to release one surge; creatures in channel DC 14 Strength save or Prone and pushed 15 feet; no additional damage.",
+                "{@b Sluice sabotage.} Two locking spikes plus chained counterweight. Athletics DC 14 per spike (crowbar grants Advantage); suitable tools 5 minutes per obstruction without a check; each part AC 19 / 10 HP immune to Poison and Psychic. Once freed, wheel turns; no check to identify sabotage.",
+                "{@b Command hatch and pursuit.} Signs: DC 13 Perception; release: DC 12 Investigation (failure costs minutes). Hatch at P4; narrow unbranched tunnel 180 feet, exit 250 feet from the Well. Immediate pursuit uses initiative/movement. After a delay >1 minute: Survival DC 13 if plausible; failure loses the trail.",
+                "{@b Negotiation.} Noren will trade the Well for his people's lives. No check if leverage decides it; DC 13 Persuasion or Intimidation only if terms are genuinely uncertain."
               ]
             },
             {
               "type": "entries",
               "name": "Running the Chapter",
               "entries": [
+                {
+                  "type": "entries",
+                  "name": "Reusable Physical Table Setup (Josric Standard)",
+                  "entries": [
+                    "Build the same pump-bay module once on the existing Melee Mats 22 x 26 grid: 20 columns (A–T) x 24 rows; perimeter stone walls; raised northern gallery; west steps/east ladder; central 60-foot water channel; dry eastern catwalk; two pump housings; bridge and controls. Leave 1-inch margin around.",
+                    "The checkpoint, gallery, sluice and command location are DIFFERENT industrial bays with repeated modular architecture, connected by ordinary off-map waterworks passages. Transition is narrated; move minis and change at most one or two props rather than rebuilding walls. No teleporting or magical identical-room contrivance.",
+                    "When the party returns to a previous bay, restore its actual previous state (fallen guards, moved objects, opened controls, broken obstacles); do not reset game facts because the physical terrain was reused.",
+                    "Use the approved full-size printed maps from the table pack for physical setup. The raster images embedded here supply the same tactical geography for reference in 5etools. All tactical squares and numbered controls are defined in the Quick Reference.",
+                    "The hatch at P4 is a disguised floor trapdoor in command; in earlier bays, that same point is ordinary floor. The 180-foot escape tunnel and off-map junctions are handled narratively or in continuing initiative, never requiring another battle mat."
+                  ]
+                },
                 {
                   "type": "entries",
                   "name": "Starting the Chapter",
@@ -2083,16 +2092,14 @@
                   "type": "entries",
                   "name": "Table-Ready Session Package",
                   "entries": [
-                    "{@b Milestone.} The party begins at level 4 after a Long Rest. Do not automatically level them at the end of Kellan's Well; the next milestone belongs to the royal-takeover arc.",
-                    "{@b Finite armed population.} Opening defense: 3 Scouts + 2 Guards. Bow Gallery: 4 Scouts acting as a delaying position, not a required stand-up fight. Command position: Noren Vale (85 HP) + 1 Warrior Veteran + 2 Toughs. There are no additional unnamed barracks troops, reserves, or reinforcement waves.",
-                    "{@b Alarm 0 — unaware.} Noren has not been warned and the Bow Gallery is on routine watch.",
-                    "{@b Alarm 1 — warned (runner must reach and operate E6).} A runner reaches the stairs or another defender successfully signals. The Bow Gallery takes prepared cover and Noren prepares and opens his escape route but does not abandon a still-defensible command post.",
-                    "{@b Alarm 2 — withdrawal.} The party reaches the inner complex, disengages for a prolonged period, or begins a Short Rest before Noren is resolved. Surviving Iron Covenant members abandon nonessential rooms and prepare to leave the site.",
-                    "{@b Short Rest.} A secured room can support a Short Rest, but the world keeps moving. If Noren is unresolved, he and surviving defenders withdraw through the hidden exit during the rest unless the party has already blocked it. If they escape, the party still succeeds in clearing the Well; they simply lose the chance to capture Noren.",
-                    "{@b Clean bypasses count.} If the players bypass a position through stealth, negotiation, magic, or clever routing, let the bypass stand. Do not invent another encounter to replace it.",
-                    "{@b Morale.} Opening defenders fall back once the alarm is raised and 2 of them are down. Bow Gallery Scouts leave once the party reaches their position or makes the firing lane ineffective. Noren withdraws when it is clear the room can no longer be held; use the situation, not an HP formula. If the hidden exit remains open he uses Smoke Bomb and runs; if escape is clearly impossible, he surrenders.",
-                    "{@b Success.} The Iron Covenant no longer controls Kellan's Well and the main sluice is functioning again.",
-                    "{@b Pacing.} Do not force the whole chapter into one sitting. Run about 3.5 hours of good play, then stop at the next natural break."
+                    "{@b Starting resources.} Party level 4 and Long Rest completed; no automatic level at the end.",
+                    "{@b Finite force.} Checkpoint 3 Scouts + 2 Guards; gallery 4 Scouts; command Noren 85 HP + 1 Warrior Veteran + 2 Toughs. No extra soldiers.",
+                    "{@b Alarm 0.} No signal; Bow Gallery is on routine watch; command hatch stays closed. PCs can exploit surprise.",
+                    "{@b Alarm 1.} Runner reaches E6 alarm pull or a signal actually gets through. Gallery prepares behind parapet; Noren opens hatch and prepares withdrawal.",
+                    "{@b Alarm 2.} PCs Short Rest or break contact before command resolved. Surviving Covenant withdraw through an available hatch; if blocked they bargain. A peaceful departure still counts as clearing the Well.",
+                    "{@b Morale.} Checkpoint withdraws once two defenders are down and alarm raised; Gallery withdraws once flanked or lane neutralized; Noren flees or surrenders depending on exit. No enemy needs to die for the story to continue.",
+                    "{@b Session length.} Play approximately 3.5 hours, then stop at a natural scene boundary. Clever bypasses may shorten it. Do not pad to force combat.",
+                    "{@b Victory.} Covenant no longer holds the Well and the main sluice works. The Crown reveal is a separate next-session scene."
                   ]
                 },
                 {
@@ -2132,12 +2139,14 @@
                   "type": "entries",
                   "name": "Location and Background Details",
                   "entries": [
+                    "{@b One-map geography.} The waterworks includes several physically separate but standardized pump bays. The single 20 x 24 square tactical map represents ONE bay at a time. Narrate connecting corridors between scenes; the repeated layout is an engineering standard, not a magical illusion. Maintain state if the characters revisit a bay.",
                     "{@b Map staging.} The old waterworks consists of *separate but standardized* pump bays that share the same architecture. The one tactical map is reused for each bay as in Josric's recurring library. The numbered areas below are story locations, NOT the numbers printed as controls on the new DM map. Narrate corridors between bays; do not allow arrows through a wall into a physically separate bay. If a party backtracks, use that bay's saved state.",
                     "Kellan's Well is an old waterworks complex in a ruined district of Bellweather. The Iron Covenant occupies it to deny Bellweather working infrastructure, hold a defensible foothold in the district, and preserve a protected route through the ruins.",
                     {
                       "type": "entries",
                       "name": "1. Well Chamber",
                       "entries": [
+                        "Use the reusable pump bay as the entrance checkpoint. PCs start I–L22; guards H20/N20; stationary Scouts F17/M13; runner Q19. Alarm lever is E6. South door marks the arrival route; north exit leads off-map to the next bay.",
                         "The visible well house covers stairs into the old waterworks. An Iron Covenant checkpoint guards the descent.",
                         "Use the opening-defense roster. The defenders' first goal is to warn Noren below; their second is to slow the party long enough for the inner position to prepare."
                       ]
@@ -2146,6 +2155,7 @@
                       "type": "entries",
                       "name": "2. Bow Gallery",
                       "entries": [
+                        "This is ANOTHER industrial bay using the same physical terrain layout. Scouts start F5, I5, L5, O5 on the raised northern platform. PCs enter again near I–L22; west steps and east ladder both reach the platform. The mapped 60-foot flooded channel and dry catwalk replace the old unspecified firing-lane geometry.",
                         "Broken masonry overlooks a flooded passage. Four Iron Covenant Scouts use a firing ledge 10 feet above the floor. The ledge is protected by broken stone that provides Half Cover (+2 AC and Dexterity saving throws).",
                         "The main firing lane is 50 feet long and 10 feet wide. Knee-to-thigh-deep water makes the channel Difficult Terrain. A dry maintenance ledge, about 3 feet wide, runs along one wall.",
                         "A far-side lever beside the Scout position releases stored water through the channel. A creature that remains in the channel when the surge arrives makes a DC 14 Strength saving throw or falls Prone and is moved 15 feet.",
@@ -2157,6 +2167,7 @@
                       "type": "entries",
                       "name": "3. Junction",
                       "entries": [
+                        "The connecting junction lies OFF THE BATTLEFIELD between the reusable bays. The map's two door openings mark only the represented bay's entry and exit; the world is not a sequence of magically identical rooms.",
                         "The junction connects the Bow Gallery, barracks, stores, main sluice controls, and the inner command route. Old water-control markings and maintenance notes are still visible.",
                         "A character who spends a few minutes studying the markings can identify the route to the main sluice and the command area without a check."
                       ]
@@ -2174,8 +2185,9 @@
                       "type": "entries",
                       "name": "5. Command Room",
                       "entries": [
+                        "Stage the reusable pump bay for command: Noren M4 (85 HP), Warrior Veteran H4, Toughs G11 and Q11; PCs I–L22. Hidden floor hatch P4 is present and operable only in this bay. The Veteran holds the gallery approach; Toughs screen routes around the machinery.",
                         "{@b Noren Vale.} Noren is the Iron Covenant commander at Kellan's Well: a mid-forties half-elf with a rangy build, short graying hair, one old facial scar, gloves, practical weapons, and a battered coat over piecemeal armor.",
-                        "{@b Encounter.} Use {@creature Noren Vale|NCFA}. He is supported by 2 {@creature Tough|XMM|Toughs}.",
+                        "{@b Encounter.} Use {@creature Noren Vale|NCFA}. He is supported by 1 {@creature Warrior Veteran|XMM} and 2 {@creature Tough|XMM|Toughs}.",
                         "{@b Withdrawal.} Noren stays only while he believes the room can still be held. Once the party has clearly broken the defense—an enforcer drops and the PCs have position, multiple PCs reach Noren, the exit is threatened, or comparable circumstances—he judges the Well lost.",
                         "{@b Escape.} If the hidden exit is open, Noren uses Smoke Bomb and moves toward it. The Toughs screen the retreat but surrender or flee if Noren escapes or falls.",
                         "{@b If trapped.} If escape is clearly impossible, Noren offers surrender.",
@@ -2186,6 +2198,7 @@
                       "type": "entries",
                       "name": "6–8. Hidden Exit and Old Waterworks",
                       "entries": [
+                        "This section uses narrated off-map passages and the sluice controls staged within the reusable bay. Do not build a second map merely to show corridors or the escape tunnel.",
                         "The remaining chambers contain maintenance stores, the main sluice mechanism, and a hidden route leading back into the ruined district.",
                         "The Covenant has disabled the sluice with two iron locking spikes and a chained counterweight. Use the Jammed Sluice rules in Scene 3.",
                         "{@b Finding the hidden exit.} A DC 13 Wisdom (Perception) check notices a faint draft, repeated scuff marks, or irregular stonework. Once the characters know a passage is present, no further roll is required to establish that it exists.",
@@ -2220,6 +2233,7 @@
                   "type": "entries",
                   "name": "Scene 1: Opening Defense",
                   "entries": [
+                    "Physical staging: PCs I–L22; Guards H20/N20; Scouts F17/M13; Runner Q19. Runner must physically move to E6; measure its Dash movement on the 5-foot grid. It does not magically signal merely for surviving its first turn.",
                     "{@b Setup.} Party I-L22; Guards H20/N20; Scouts F17/M13; Scout alarm runner Q19. Alarm pull is E6 on the raised northern gallery. Count the runner's actual movement through terrain; it cannot ring the alarm merely by reaching the stairs, and need not succeed in a fixed round.",
                     "The party reaches Kellan's Well and encounters the Covenant checkpoint.",
                     {
@@ -2227,7 +2241,7 @@
                       "name": "What Happens",
                       "entries": [
                         "One Scout is the alarm runner. On round 1, that Scout uses movement and, if needed, the Dash action toward the E6 alarm pull rather than attacking. Only once it physically reaches and activates E6 does Alarm become 1.",
-                        "Stopping, restraining, dropping, deceiving, or otherwise preventing that Scout from reaching the stairs keeps the deeper position unaware."
+                        "Stopping, restraining, dropping, deceiving, or otherwise preventing that Scout from reaching E6 alarm pull keeps the deeper position unaware."
                       ]
                     },
                     {
@@ -2250,6 +2264,7 @@
                   "type": "entries",
                   "name": "Scene 2: Bow Gallery",
                   "entries": [
+                    "Physical staging on the same reset pump bay: PCs I–L22; Scouts F5/I5/L5/O5 on the 10-foot raised gallery. Half Cover is directional through the parapet. West steps D–F7–10; east ladder Q8–10; channel I–K9–20; catwalk L9–19.",
                     "{@b Setup.} Separate physical bay, same tabletop layout. Party I-L22; Scouts F5/I5/L5/O5. Gallery 10 ft above floor with parapet Half Cover; lever P5; 60-ft water channel, dry side catwalk, western steps/eastern ladder.",
                     "Four Iron Covenant Scouts control a 60-foot flooded passage from a firing ledge 10 feet above the floor. Broken masonry gives them Half Cover.",
                     {
@@ -2284,6 +2299,7 @@
                   "type": "entries",
                   "name": "Scene 3: Inner Waterworks",
                   "entries": [
+                    "Stage the reusable pump-bay map without enemies unless surviving defenders logically remain. Two iron spikes jam sluice J8; the chained counterweight is P12. Give the party the open mechanisms and let them solve it using the published options.",
                     "{@b Setup.} Separate standardized maintenance bay, same map. Sluice wheel J8 (DM key 3), chained counterweight P12 (DM key 2). It is possible to restore the sluice before or after confronting Noren.",
                     "The party reaches the main control works between the outer defenses and Noren's command position.",
                     {
@@ -2324,6 +2340,7 @@
                   "type": "entries",
                   "name": "Scene 4: Noren Vale",
                   "entries": [
+                    "Physical staging: PCs I–L22; Noren M4 (85 HP), Warrior Veteran H4 (65 HP), Toughs G11/Q11 (32 HP each). Hatch P4 is Noren's exit. It starts closed if no alarm reached him; he opens it if warned. No extra defenders or ambush waves.",
                     "{@b Setup.} Separate standardized command bay: party I-L22, Noren M4, {@creature Warrior Veteran|XMM} H4, Toughs G11/Q11, hidden exit P4. No unnamed extra soldiers.",
                     "Noren holds the final Covenant position with two enforcers.",
                     {
@@ -2340,10 +2357,10 @@
                       "type": "entries",
                       "name": "Encounter",
                       "entries": [
-                        "{@creature Noren Vale|NCFA}: AC 15, HP 85, Multiattack two attacks, Scimitar +5 for 6 slashing or Light Crossbow +5 for 7 piercing, Parry +2 AC reaction, Smoke Bomb 1/day with Bonus Action Disengage.",
-                        "{@creature Warrior Veteran|XMM}: AC 17, HP 65, Multiattack two Greatsword attacks +5 for 10 slashing or two Heavy Crossbow attacks +3 for 12 piercing, Parry reaction +2 AC.",
-                        "2 {@creature Tough|XMM|Toughs}: AC 12, HP 32 each, Pack Tactics, Mace +4 for 5 bludgeoning or Heavy Crossbow +3 for 6 piercing.",
-                        "{@b Roster math.} Approx 1,350 XP (Noren 450 + Veteran 700 + Toughs 200), before recalculating Noren's increased HP. This is intentionally a harder command position, not a guaranteed high-threat fight."
+                        "{@creature Noren Vale|NCFA}: AC 15, HP 85; Scimitar +5 twice (6 each) or Light Crossbow +5 twice (7 each); Parry +2 AC; Smoke Bomb 1/Day; withdrawal driven by position and morale.",
+                        "1 {@creature Warrior Veteran|XMM}: AC 17, HP 65; Greatsword +5, 10 damage x2, Heavy Crossbow +3, 12 damage x2; reaction Parry.",
+                        "2 {@creature Tough|XMM|Toughs}: AC 12, HP 32; Pack Tactics; Mace +4, 5 damage or Heavy Crossbow +3, 6 damage.",
+                        "{@b XP.} 1,350 listed XP, approximate because Noren has custom HP. Enemy combined HP 214."
                       ]
                     },
                     {
@@ -13167,7 +13184,7 @@
       ],
       "hp": {
         "average": 85,
-        "formula": "85"
+        "formula": "13d8 + 26"
       },
       "speed": {
         "walk": 30
@@ -13263,7 +13280,8 @@
       "fluff": {
         "entries": [
           "Noren Vale is a mid-forties half-elf with a rangy build, short graying hair, one old facial scar, gloves, practical weapons, and a battered coat over piecemeal armor. He commands the Iron Covenant position at Kellan's Well.",
-          "Noren is not suicidal. He holds the Well while it remains defensible, tries to withdraw once the position is clearly lost, and surrenders if escape is impossible."
+          "Noren is not suicidal. He holds the Well while it remains defensible, tries to withdraw once the position is clearly lost, and surrenders if escape is impossible.",
+          "Kellan's Well v4.30 table-ready override: 85 HP; no additional actions or burst damage. Command group is a Warrior Veteran and two Toughs; he preserves a retreat route if possible."
         ]
       }
     }
