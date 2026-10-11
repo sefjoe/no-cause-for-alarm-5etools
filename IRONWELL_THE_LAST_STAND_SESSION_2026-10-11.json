@@ -1,0 +1,795 @@
+{
+  "$schema": "https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew-fast/homebrew.json",
+  "_meta": {
+    "sources": [
+      {
+        "json": "IRONWELL26",
+        "abbreviation": "IRONWELL",
+        "full": "IRONWELL: The Last Stand",
+        "version": "1.0",
+        "authors": [
+          "No Cause for Alarm Campaign"
+        ],
+        "dateLastModified": 1791740000
+      }
+    ],
+    "edition": "one",
+    "dateAdded": 1791740000,
+    "dateLastModified": 1791740000
+  },
+  "adventure": [
+    {
+      "name": "IRONWELL: The Last Stand",
+      "id": "IRONWELL-LASTSTAND-20261011",
+      "source": "IRONWELL26",
+      "contents": [
+        {
+          "name": "The Assault on Kellan's Well",
+          "headers": [
+            "Maps",
+            "Chapter Overview",
+            "DM-Only: What the Party Does Not Know",
+            "Encounter Guidance",
+            "At-the-Table Quick Reference",
+            "Running the Chapter",
+            "Adventure",
+            "Rewards"
+          ]
+        }
+      ]
+    }
+  ],
+  "adventureData": [
+    {
+      "id": "IRONWELL-LASTSTAND-20261011",
+      "source": "IRONWELL26",
+      "data": [
+        {
+          "type": "section",
+          "name": "The Assault on Kellan's Well",
+          "id": "005",
+          "entries": [
+            "{@b Recommended level:} 4.",
+            {
+              "type": "entries",
+              "name": "Maps",
+              "entries": [
+                {
+                  "type": "gallery",
+                  "images": [
+                    {
+                      "type": "image",
+                      "href": {
+                        "type": "external",
+                        "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/kellans_well_20ft_canal_22x26.png"
+                      },
+                      "title": "IRONWELL SESSION MAP — DM (20-foot canal K-N, raised gallery G-Q)",
+                      "imageType": "map",
+                      "width": 704,
+                      "height": 832,
+                      "id": "ironwell-20261011-dm-20ft",
+                      "grid": {
+                        "type": "none"
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "href": {
+                        "type": "external",
+                        "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/kellans_well_20ft_canal_22x26.png"
+                      },
+                      "title": "IRONWELL SESSION MAP — Players (20-foot canal K-N, raised gallery G-Q)",
+                      "imageType": "mapPlayer",
+                      "width": 704,
+                      "height": 832,
+                      "id": "ironwell-20261011-player-20ft",
+                      "grid": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "{@link OPEN DM MAP — K–N canal 20 feet|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/kellans_well_20ft_canal_22x26.png}",
+                "{@link OPEN PLAYER MAP — K–N canal 20 feet|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/kellans_well_20ft_canal_22x26.png}",
+                "SESSION WARNING: This map is a schematic of a 22 × 26 REAL PHYSICAL MAT, not the old illustrated waterworks dungeon. Four-square K–N canal, box gallery G–Q rows 2–10, west entry G–J25. Use your already-owned terrain. If the grid/map viewer doesn't show the image, open the direct DM map link immediately above."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Chapter Overview",
+              "entries": [
+                "{@b Objective.} Clear the Iron Covenant from Kellan's Well and restore its main sluice.",
+                "{@b Starting point.} Ledger House, morning after Blackstone Temple; four level-4 characters after a Long Rest. No repeat Council briefing.",
+                "{@b Physical layout.} Existing 22 x 26 grid and existing gridded box top at G–Q2–10 represent a 10-foot-high gallery. Twenty-foot-wide canal is K–N rows 11–26, running from the south edge to the gallery. Only existing wall pieces, two owned cabinets/shelves and a dry-erase marker needed.",
+                "{@b Three combat stakes.} Checkpoint: prevent a Harengon Scout from reaching ground alarm F14. Gallery: four fanatically loyal Scouts fight to the death holding the raised position; reaching Noren is the hardest combat challenge. Command: only Noren and his Warrior Veteran, with an escape gate the party can seal earlier.",
+                "{@b Victory.} Covenant no longer controls Well AND main sluice works. The party need not kill Noren; surrender, capture, retreat, or negotiation can resolve command.",
+                "{@b Discoverable permanent reward.} The Decanter of Endless Water is guaranteed to be found if the party inspects/repairs the H12 sluice: obvious latched niche beside the controls, words SPLASH / FOUNTAIN / GEYSER engraved on neck with effects unexplained. See Scene 3 for exact discovery read-aloud.",
+                "{@b Story continuity.} Pepper earns first unpaid service. No clues about the Crown in the Well; the takeover is revealed after the party returns, in the following session."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "DM-Only: What the Party Does Not Know",
+              "entries": [
+                "The Council has already negotiated the surrender of Bellweather's independence to a Crown. Clearing Kellan's Well is the last major security/reclamation condition holding up the transfer.",
+                "The party did not cause the Council to sell Bellweather. The Council had already made that decision. The party is simply completing the legitimate job it was given, and its success removes the final obstacle to closing the deal.",
+                "Do not plant takeover paperwork or future-plot clues inside Kellan's Well. The royal takeover is revealed only after the party returns.",
+                "While the party is away, the Council finalizes the transfer, enriches themselves through the deal, and leaves Bellweather. Koven House becomes the Crown's local headquarters. The Bishop remains in the city. Ledger House remains independent."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Encounter Guidance",
+              "entries": [
+                "{@b Four level-4 PCs, full rest.} 2024 encounter reference: Low 1,000 XP; Moderate 1,500 XP; High 2,000 XP. These are planning baselines, not a verified simulation with the current character sheets.",
+                "{@b Finite opposition.} Checkpoint: 2 {@creature Guard|XMM|Guards}, 2 {@creature Scout|XMM|Scouts}, 1 {@creature Harengon Alarm Runner|IRONWELL26}; Bow Gallery: 4 {@creature Scout|XMM|Scouts}; Command: {@creature Noren Vale|IRONWELL26} + 1 {@creature Warrior Veteran|XMM}. NO Toughs, guards, waves or offscreen reinforcements.",
+                "{@b Checkpoint XP.} Approximately 350 XP if Harengon Alarm Runner is counted as CR 1/2 alongside 2 Scouts and 2 Guards; his HP and hop matter more than damage. The objective is stopping the signal, not killing everyone.",
+                "{@b Bow Gallery XP.} Four Scouts nominally 400 XP; unusually dangerous because they fight to the death behind placed Half Cover and can deliver up to eight attacks per round. This is intended as the hardest fight. Don't give them automatic cover when lines don't cross parapet.",
+                "{@b Command XP.} Approximately 1,150 XP listed (Noren CR 2 450, Veteran CR 3 700); 150 combined HP, up to 4 attacks per round. Noren's custom 85 HP means this CR-based budget is approximate. Two enemies, no extra Toughs.",
+                "{@b Canal and jump.} Four-square 20-foot canal K–N11–26; optional DC 15 Athletics house rule extends a running jump beyond Strength score when movement is sufficient. On failure, landing is at the character's NORMAL jumping distance, not across the canal; water Difficult Terrain, DC 10 Acrobatics to avoid Prone on landing in difficult terrain. The whole dry west bank and dry east bank are viable approaches; no bridge.",
+                "{@b Scout commitment.} Four Bow Gallery Scouts believe Noren intends to hold the Well; they are loyal defenders, NOT intentionally sacrificed as cover for an escape. They defend intelligently and fight to the death. If PCs bypass them, survivors pursue as physically possible; do not teleport them into command or add new foes.",
+                "{@b Control escape through investigation.} T12 lever is conspicuous as an old mechanical control but is NOT explicitly marked as a commander's escape shutoff. 'BRANCH 8 — ISOLATE', a diagram of the north return passage, and a maintenance log about a steel gate below upper access together provide clues. Players may deduce/ask about the gate without a forced roll. One Action at T12 can close it; it then takes a DC 18 Athletics Action or destruction (AC 17 HP 20) from inside to defeat. Don't cancel successful planning.",
+                "{@b Role of every fight.} Checkpoint guards H24/J24 physically shield courier I23 while Scouts E18/I17 shoot from WEST bank. Gallery Scouts H9/K9/O9/Q9 defend the parapet until down, covering left and right bank approaches but moving if lines are broken. Noren H15 is protected by adjacent Veteran H16; only two command enemies. Fight to reach Noren is the center, not a new boss escalation. Rest does not freeze world, but do not give Noren knowledge he couldn't have."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "At-the-Table Quick Reference",
+              "entries": [
+                "{@b Physical setup.} Melee Mats 22 x 26 grid A–V1–26; owned gridded storage-box top G–Q2–10, 4 inches physically but 10 feet high in fiction; existing STAHLHAMMERS parapet along front of box and two owned cabinets at D–F15–17 / S–U16–18. Four-square (20-foot) canal K–N rows 11–26 drawn on mat. Dry banks A–J and O–V. No crafting, new equipment, bridge or catwalk.",
+                "{@b Player entry.} Default PCs G–J25 on the WEST dry bank; the water occupies K–N, NOT G–J. Characters can scout, split or approach either bank if they earn a different entry. Narrated passages connect distinct standardized waterworks bays; physical mat is reused.",
+                "{@b Platform and cover.} Gallery box top G–Q2–10, 10 feet above floor in-game. Climb west F10→G10 or east R10→Q10 (ordinary supported climb: 2 feet movement per foot if no Climb Speed; no automatic check). Hazardous hurried slick climb under fire can call for DC 10 Athletics. Only actual parapet wall segments provide Half Cover (+2 AC/Dex saves) to attacks passing through them; box lip itself is not extra cover. Other lines are open if unobstructed.",
+                "{@b Keyed map.} 1 Q8 one-use water surge lever; 2 P12 chained counterweight; 3 H12 main sluice control and two spikes; 4 F14 checkpoint ground alarm; 5 P4 command hatch atop box; 6 F10 west platform access; 7 R10 east access; 8 T12 sluice-bay emergency isolation lever. A ring/spare base marks a feature if needed.",
+                "{@b Jump house rule.} With 10 feet of running start and enough movement for the 20-foot jump, a character can clear the four-square canal with DC 15 Strength (Athletics) if normal jumping distance is shorter. Naturally sufficient jump distance (Strength score ≥20 or other ability) needs no check. On failed EXTENDED jump, character travels their ordinary Strength-based long-jump distance as far as remaining movement allows, then falls into the corresponding canal square; if not far enough to reach water they land short on near bank. Don't place them at the far bank. Waist-deep water is Difficult Terrain, no automatic damage. Landing in Difficult Terrain requires DC 10 Dexterity (Acrobatics) or Prone (2024 jumping rule). Track remaining movement. Traversing the canal, flanking on dry banks, climbing and magic remain alternatives.",
+                "{@b Checkpoint starting figures.} PCs G–J25; Guards H24/J24 form the forward shield line between the party and Harengon courier I23 (AC 13, HP 22, initiative +4, Rabbit Hop 10 ft Bonus Action 2/Day without Opportunity Attacks). Two standard Scouts E18/I17 both remain on WEST dry bank for overlapping Longbow cover, not stranded across water. Alarm F14 on same bank. Runner must get there and spend an Action to activate; with only 30-foot movement and a 10-foot hop, it is 5 feet short of F14 and generally needs Dash in round 1, leaving the alarm for a later Action. Clever PC interception counts. Guards engage/block approaches; Scouts fire rather than attempting a melee chase.",
+                "{@b Bow Gallery starting figures.} 4 Scouts H9/K9/O9/Q9 on BOX TOP immediately behind the southern parapet (AC 13 HP 16 each; AC 15 only against attacks intersecting a placed wall). H9 and K9 cover WEST bank/climb F10; O9 and Q9 cover EAST bank/climb R10. On alarm they start with bows covering these lanes; if unwarned they are on routine watch and may be surprised under normal 2024 initiative rules. Each Scout Multiattack: 2 Longbow +4 (6 piercing) or Shortsword +4 (5). Defend until incapacitated; no surrender/retreat, even if bypassed. Shift positions tactically when flanked; the starting squares are NOT mandatory firing points.",
+                "{@b Firing geometry.} From H9/K9 the archers can fire south along the west dry bank; from O9/Q9 south along the east dry bank, subject to actual corners and figures on the physical grid. The box's height does not make a shot automatic: trace 3D/in-game line of sight from a raised 10-foot surface. Parapet grants Half Cover only through its actual footprint, not to every attack. Enemies must MOVE to regain sight if the party takes cover behind the owned cabinets. An archer that reaches Q8 can spend an Action to trigger a single surge in water: DC 14 Strength save, or Prone and pushed 15 feet away from gallery, no damage. Visible lever AC 15 HP 5.",
+                "{@b Sluice.} Exposed H12 spikes: two DC 14 Athletics to pull (crowbar Advantage), suitable proficient tools 5 minutes each, or AC 19 HP 10 each immune Poison/Psychic. P12 chain counterweight requires the same options. Once all three cleared, main control works; no additional roll to identify obvious jam. No physical wheel model.",
+                "{@b Isolation gate, DM knowledge.} T12 on east dry bank has old lever labeled 'BRANCH 8 — ISOLATE.' A maintenance diagram shows Branch 8 feeding a north service passage under the command area; note in repair log: 'Gate below upper access: close during pressure flush, release from maintenance only.' Connecting these facts, examining map/notes, or questioning a maintenance-savvy captive reveals that T12 seals the escape route under hatch P4. Do NOT announce 'this stops Noren escaping' or label it 'emergency exit' for players. No required skill roll if PCs reason it out; DC 12 Investigation speeds understanding for characters inspecting it. Action at T12 closes/opens. Sealed gate in tunnel cannot be opened from command; from inside tunnel Action DC 18 Athletics to force or AC 17 HP 20 (immune Poison/Psychic) to break. This isolation is separate from fixing sluice.",
+                "{@b Command starting figures.} PCs G–J25, Noren H15 (AC 15 HP 85) on WEST ground, Warrior Veteran H16 (AC 17 HP 65) directly IN FRONT of him. They are adjacent, and the Veteran's actual melee threat screens movement past him. He has no special reaction that redirects attacks from Noren: Parry adds +2 to the VETERAN's own AC against one triggering melee hit. An intervening creature can grant ordinary Half Cover against applicable ranged attacks; do not invent bodyguard powers. Noren must reach F10 or R10, climb box, move to P4 and open hatch with an Action if shut. Alarm preparation can leave P4 open; it does not undo remote isolated gate T12.",
+                "{@b Enemy quick stats.} Guard AC 16 HP 11 Spear +3 / 4 damage. Scout AC 13 HP 16, Passive Perception 15, 2 Longbow +4 / 6 each or 2 Shortsword +4 / 5 each. Harengon courier AC 13 HP 22, initiative +4, Rabbit Hop (2/Day) Bonus Action 10 ft avoiding Opportunity Attacks; Scout weapon attacks. Warrior Veteran AC 17 HP 65, 2 Greatsword +5 / 10 or Crossbow +3 / 12, Reaction Parry +2 own AC. Noren AC 15 HP 85, 2 Scimitar +5 / 6 or Crossbow +5 / 7, Reaction Parry +2 own AC, Smoke Bomb 1/Day Bonus Action (10-foot-radius Heavy Obscurement until next turn plus Disengage). No Toughs.",
+                "{@b Alarm and information.} The checkpoint F14 gong is fixed to a metal signaling pipe, carrying its distinctly repeated three-strike warning to gallery and command WHEN ACTUALLY SOUNDED. Noren can then ready the hatch while intending to HOLD. Separate bays are connected by 80-foot dogleg service passages and heavy doors; ordinary distant combat and slain Scouts do NOT automatically inform command. Loud magic, an actual escaping courier, opened doors or a pursuer's shout may transmit information only when plausible. A routine hourly gallery-status knock on the pipe is expected; if absent, Noren becomes suspicious and may investigate himself WITH his one Veteran. This is not instant awareness or free reinforcements.",
+                "{@b Rest / continuity.} Full Short Rest is one hour; if warning reaches Noren during rest he may prepare or evacuate because the world continues. If zero warning reaches him, a missing hourly status signal can trigger suspicion, investigation or changed readiness—not automatic omniscient retreat. Scouts fight to death if engaged; bypassed Scouts who pursue are the same four creatures at normal movement. Respect real passage distances and physically distinct bay states.",
+                "{@b Loot locations.} Recoverable total 375 gp: checkpoint courier pouch 25 gp; barracks payroll chest 150 gp and salvage valuables worth 75 gp; command desk iron strongbox 125 gp. Potion of Greater Healing in barracks medical satchel; Potion of Water Breathing in maintenance emergency locker near T12; Potion of Heroism in command desk readiness kit. Decanter of Endless Water: obvious brass-latched maintenance recess directly beside/behind H12 main control on WEST dry bank, noticed by anyone inspecting or repairing sluice; opens freely, no check. Vessel engraved SPLASH / FOUNTAIN / GEYSER, with NO description of the effects. See Scene 3 'FIND THE DECANTER' read-aloud; Identify/Short Rest reveal full powers. No new treasure. Use real-world object access/searches, not obligatory skill rolls.",
+                "{@b Outcome.} Party wins if Covenant leaves/loses control and main sluice restored. Captured Noren can negotiate; if defeated and escape gate sealed, surrender reasonable without check. Royal takeover remains a next-session reveal; Pepper has completed her first unpaid Council job."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Running the Chapter",
+              "entries": [
+                {
+                  "type": "entries",
+                  "name": "Reusable Physical Table Setup (Josric Standard)",
+                  "entries": [
+                    "NO CRAFTING: owned 22 x 26 Melee Mats grid, gridded storage-box top G–Q2–10, STAHLHAMMERS parapet, two existing cabinets D–F15–17/S–U16–18, dry-erase canal K–N11–26. Dry banks A–J and O–V; no bridge, catwalk or constructed ladder/stairs.",
+                    "West gallery climb F10, east climb R10; ordinary 10-foot climb with normal movement. Put condition rings/spare bases at relevant numbered controls only. Place two Guards H24/J24, Harengon courier I23, and Scouts E18/I17 for checkpoint. All occupy WEST dry bank.",
+                    "Move ONLY miniatures/markers for Bow Gallery: four Scouts H9/K9/O9/Q9 near the parapet on the box top. H9/K9 watch WEST approach; O9/Q9 watch EAST. Parapet cover requires actual blocked line; move archers to regain line if necessary.",
+                    "Sluice bay: H12 two spikes, P12 counterweight, T12 Branch 8 isolation lever. Optional investigative clues show T12 connects to a gate under P4. Command: Noren H15 and adjacent Veteran H16 on WEST ground; P4 hatch on box top.",
+                    "These are separate standardized waterworks bays in-world, connected by substantial dogleg passages, not one giant room. Reuse one physical build, note states if players double back. Setup under 15 minutes."
+                  ]
+                },
+                {
+                  "type": "entries",
+                  "name": "Starting the Chapter",
+                  "entries": [
+                    "The chapter begins at Ledger House on the morning after Blackstone Temple. The assignment is already accepted, so start with preparations and departure rather than another Council briefing.",
+                    "Kellan's Well is Council business, so Pepper may leave Ledger House despite house arrest. Completing the mission counts as the first, unpaid mission of her five-mission Council sentence."
+                  ]
+                },
+                {
+                  "type": "entries",
+                  "name": "Single Physical Setup - Repeated Pump Bays",
+                  "entries": [
+                    "{@b One physical build.} Mat A–V1–26, existing gridded box top G–Q2–10, four-square canal K–N11–26, existing walls at southern platform parapet and cabinets at D–F15–17/S–U16–18. Both dry banks remain open and usable.",
+                    "{@b Distinct real locations.} Checkpoint, gallery, sluice and command are separate bays connected by heavy-doored, dogleg 80-foot service passages. Narrate passage transit; reuse same board but save persistent bay state on a note if PCs return.",
+                    "{@b Starting positions.} Party G–J25. Checkpoint Guards H24/J24, Scout E18/I17, Harengon I23 toward alarm F14. Gallery four Scouts H9/K9/O9/Q9 atop gallery facing west and east approaches. Sluice H12/P12/T12 controls. Command Noren H15 with adjacent Veteran H16; hatch P4 on raised platform.",
+                    "{@b Movement and cover.} Normal 10-foot climb at F10 or R10. The 20-foot canal permits agreed DC 15 extended jumping with a 10-foot run and adequate movement; failure lands at ordinary jumping distance (water is Difficult Terrain) with DC 10 Acrobatics to avoid Prone. Dry flanks remain usable. Cover comes from physically placed parapet/cabinets, not automatically from elevation.",
+                    "{@b Escape.} Noren has to move from H15 to either gallery climb, up to box top, and toward P4. The players can seal passage under P4 earlier by closing Branch 8 gate from T12 in sluice bay, or directly block the hatch. He cannot teleport or treat a shut gate as open.",
+                    "{@b Alarm.} F14 is a gong on pipework that sends a clear signal to other bays; unwarned normal combat behind thick doors is not automatically heard. Missing routine hourly check-in can prompt Noren to investigate himself/with existing Veteran. No extra creatures are added."
+                  ]
+                },
+                {
+                  "type": "entries",
+                  "name": "Why the Iron Covenant Is Here",
+                  "entries": [
+                    "The Covenant took Kellan's Well for three straightforward reasons: it denies Bellweather a working piece of infrastructure, gives the Covenant a defensible foothold in the ruined district, and preserves a protected route through the old waterworks.",
+                    "There is no additional secret objective. If the players ask a defender why they are here, this is the answer."
+                  ]
+                },
+                {
+                  "type": "entries",
+                  "name": "Captured Iron Covenant Members",
+                  "entries": [
+                    "Checkpoint Guards and Scouts know an alarm at F14 carries through the metal pipework to the interior; the Harengon courier was assigned to sound it if the position is attacked.",
+                    "Ordinary Covenant defenders know Noren commands the site, the main sluice is disabled, and the Bow Gallery defenders are loyal. They believe Noren will hold the Well and aren't knowingly dying to cover an evacuation.",
+                    "A defender who worked maintenance can interpret the Branch 8 schematic and say there is a steel isolation gate beneath an upper service access. A regular Scout may have seen the marked lever but not know what passage it actually closes.",
+                    "Bow Gallery Scouts fight to the death; surviving Scouts bypassed by the party may physically pursue. They don't generate duplicate reinforcements.",
+                    "None knows the Crown's acquisition of Bellweather or the Council's deal."
+                  ]
+                },
+                {
+                  "type": "entries",
+                  "name": "Noren: Negotiation and Surrender",
+                  "entries": [
+                    "{@b Motivation.} Noren and his troops genuinely believe Kellan's Well can be held. The gallery defenders are not consciously disposable; he respects their loyalty. Losing them matters. He only chooses flight once he sees his position collapsing.",
+                    "{@b His final force.} Noren and one Warrior Veteran only. NO Toughs. The Veteran protects his commander; Noren may ask for withdrawal terms even while angry about killed Scouts.",
+                    "{@b Exit and leverage.} The hatch P4 can be discovered physically, or its tunnel isolated beforehand using T12 from the sluice bay. A closed gate stays closed unless reopened from maintenance controls or physically forced in the tunnel. If cornered, Noren can bargain for safe passage or surrender weapons.",
+                    "{@b Surrender.} No arbitrary HP threshold: if he cannot win, escape, or preserve his Veteran, he offers surrender rather than die pointlessly. If obvious, no roll; DC13 Persuasion/Intimidation only for uncertain contested terms."
+                  ]
+                },
+                {
+                  "type": "entries",
+                  "name": "Table-Ready Session Package",
+                  "entries": [
+                    "{@b Starting resources.} Four level-4 adventurers after Long Rest. Do not award automatic level on completing Well.",
+                    "{@b Creature roster.} Checkpoint 2 Guards H24/J24, 2 Scouts E18/I17, Harengon I23; Gallery 4 Scouts H9/K9/O9/Q9 (fight to death); Command Noren H15 + Veteran H16 (adjacent). No Toughs, reserves or extra enemies.",
+                    "{@b Alarm 0.} Runner fails to physically operate F14: gallery on normal watch and Noren unaware by default. Don't automatically alert command on a silent, successful gallery clearance.",
+                    "{@b Alarm 1.} F14 gong actually activated: its iron pipe signal travels to Gallery/Command. Gallery takes defensive positions; Noren prepares hatch but continues to hold until position collapses. Other physically justified warnings may also count.",
+                    "{@b Missing report.} Every hour the gallery is expected to tap a status pattern on the signaling pipe. After a missed scheduled report Noren becomes suspicious, not omniscient; he may investigate accompanied by his Veteran or adjust command posture. No brand-new troop appears.",
+                    "{@b Bow Gallery.} Scouts fight to death when engaged, do not surrender or retreat. They can be bypassed/outwitted; if alive they pursue across real movement routes rather than teleporting into Command. Tight cover near box front is earned only through actual parapet.",
+                    "{@b Escape.} In sluice bay players can piece together Branch 8's purpose and seal a gate under command hatch P4 via T12. Noren on WEST ground H15 must move/climb before reaching hatch; adjacent Veteran H16 protects him in melee without invented redirection powers. Prepared party strategies matter.",
+                    "{@b Rest and world.} A Short Rest takes one hour. Only warnings that plausibly reach Noren alter his knowledge; absent warning, missing scheduled status can still prompt a search after appropriate time. If he learns the gallery is lost, he weighs defending versus saving himself and his Veteran. Never freeze opponents but never grant omniscience.",
+                    "{@b Session victory.} Clear Covenant occupation AND restore sluice. Noren can escape, surrender, be captured or be defeated. Crown reveal stays in next session."
+                  ]
+                },
+                {
+                  "type": "entries",
+                  "name": "Expected Session Shape",
+                  "entries": [
+                    "Ledger House departure and approach: roughly 10–20 minutes.",
+                    "Opening checkpoint with Harengon alarm runner: roughly 25–40 minutes if combat occurs.",
+                    "Bow Gallery last stand: roughly 35–60 minutes if party fights all four Scouts; bypasses can shorten this.",
+                    "Inner sluice and optional emergency isolation gate: roughly 15–30 minutes.",
+                    "Noren + Veteran confrontation: roughly 20–45 minutes if combat occurs, shorter on surrender or clever preparation.",
+                    "Site secured, prisoner choices and cleanup: roughly 10–20 minutes.",
+                    "These are scene estimates only. The session can run shorter after clever negotiation or bypass, longer if players fight and search carefully. Do not pad."
+                  ]
+                },
+                {
+                  "type": "entries",
+                  "name": "Natural Session Breaks",
+                  "entries": [
+                    "{@b After the opening defense or Bow Gallery.} The party has established a foothold inside the Well and can resume with the deeper waterworks.",
+                    "{@b Before Noren.} Once the party has explored the inner rooms and knows where the Covenant command position is, stop there if the session is near its normal end.",
+                    "{@b After Noren.} Once the Covenant has surrendered or withdrawn and the Well is secure, end the old-Bellweather adventure there. The royal takeover reveal belongs to the following session.",
+                    "{@b Session-end rule.} Do not add filler to reach a preferred stopping point and do not rush a scene just to reach Noren."
+                  ]
+                },
+                "{@b Primary objective.} Clear the Iron Covenant from Kellan's Well and restore the main sluice.",
+                "{@b Player agency.} Scout, negotiate, sneak, attack openly, cut off the hidden exit, or simply force the Covenant to abandon the position.",
+                "{@b Fail forward.} A failed stealth attempt changes preparedness, not access to the adventure. Noren escaping is an outcome, not a failure.",
+                "{@b Rest and pressure.} Resting inside the active site gives the Covenant time to withdraw. The defenders do not freeze in place while the characters recover."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Adventure",
+              "entries": [
+                {
+                  "type": "entries",
+                  "name": "Location and Background Details",
+                  "entries": [
+                    "{@b One physical map, real distinct locations.} The 22 x 26 mat uses existing box top G–Q2–10, water K–N11–26, two owned cabinets and existing parapet walls. Checkpoint, Bow Gallery, sluice and command are different standard waterworks bays, not a single magical room.",
+                    "{@b Map staging.} The old waterworks consists of *separate but standardized* pump bays that share the same architecture. The one tactical map is reused for each bay as in Josric's recurring library. The numbered areas below are story locations, NOT the numbers printed as controls on the new DM map. Narrate corridors between bays; do not allow arrows through a wall into a physically separate bay. If a party backtracks, use that bay's saved state.",
+                    "Kellan's Well is an old waterworks complex in a ruined district of Bellweather. The Iron Covenant occupies it to deny Bellweather working infrastructure, hold a defensible foothold in the district, and preserve a protected route through the ruins.",
+                    {
+                      "type": "entries",
+                      "name": "1. Well Chamber",
+                      "entries": [
+                        "Checkpoint is a separate industrial bay using the same mat. PCs G–J25 on WEST dry bank; Harengon courier I23 heading to F14 alarm. Guards H24/J24 form its forward protective screen, Scouts E18/I17 support from the WEST bank. No creature is stranded across the canal by accident.",
+                        "The well house covers stairs into the old waterworks. The two Guards will engage characters trying to intercept the courier; archers fire down the bank. They will not magically occupy the courier's destination or block its own path.",
+                        "The alarm is a mechanically linked three-strike gong at F14 and can be heard in both Gallery and Command through the metal piping only if actually sounded. The courier must move there and use its Action to sound it."
+                      ]
+                    },
+                    {
+                      "type": "entries",
+                      "name": "2. Bow Gallery",
+                      "entries": [
+                        "Another distinct pump bay, same physical map. Four Scouts start H9/K9/O9/Q9 on box top G–Q2–10, 10 feet above floor in-game. H9/K9 cover the WEST-bank firing lane and climb F10; O9/Q9 cover EAST bank and climb R10. Default PCs G–J25.",
+                        "The parapet is three real STAHLHAMMERS wall runs along gallery front. Cover +2 AC/Dex saves only against attack lines passing through an actual segment, not from all angles or because of elevation. An obstructing cabinet provides normal cover as dictated by real line of sight. The physical box lip is not automatically extra cover.",
+                        "20-foot-wide (four-square K–N) water channel 80 feet long, waist deep and Difficult Terrain; ends against raised platform. Both broad dry banks remain open. Players can jump with a 10-foot run (house-rule DC 15 Athletics if 20 feet exceeds ordinary distance), wade, use spells, climb or exploit flanks.",
+                        "If a DC 15 extended jump fails, character travels their ordinary jumping distance and lands in water (if they reached canal); landing in Difficult Terrain DC 10 Acrobatics or Prone. There is no free jump to the far bank on a failure.",
+                        "Q8 controls one surge. A creature in the canal when activated makes DC 14 Strength save or goes Prone and is pushed 15 feet away from gallery; no damage. Lever AC 15 HP 5 if visible/reachable.",
+                        "The Scouts are fanatically loyal but not deliberately sacrificed. They believe Noren will hold, and defend to the death. They adapt their firing positions to sightlines, use swords if engaged, and try to prevent entry to the platform. If players outwit them or bypass the gallery, survivors may pursue using honest movement."
+                      ]
+                    },
+                    {
+                      "type": "entries",
+                      "name": "3. Junction",
+                      "entries": [
+                        "The connecting junction lies OFF THE BATTLEFIELD between the reusable bays. The map's two door openings mark only the represented bay's entry and exit; the world is not a sequence of magically identical rooms.",
+                        "The junction connects the Bow Gallery, barracks, stores, main sluice controls, and the inner command route. Old water-control markings and maintenance notes are still visible.",
+                        "A character who spends a few minutes studying the markings can identify the route to the main sluice and the command area without a check."
+                      ]
+                    },
+                    {
+                      "type": "entries",
+                      "name": "4. Barracks and Stores",
+                      "entries": [
+                        "Empty unless known surviving defenders came here. Bunks, rations, repairs and personal effects indicate ordinary life for the occupying Covenant; no extra enemy roster.",
+                        "Unlocked payroll chest among the bunks contains 150 gp in mixed coins; recovered metal fittings and small valuables on a shelf are worth 75 gp total. These are available to searchers and still part of the site if Noren flees.",
+                        "A medic's satchel hanging beside the bunks holds one Potion of Greater Healing. A character searching medical stores finds it without an arbitrary DC."
+                      ]
+                    },
+                    {
+                      "type": "entries",
+                      "name": "5. Command Room",
+                      "entries": [
+                        "Command bay uses the same layout. PCs default G–J25 on WEST bank; Noren H15 (AC 15 HP 85) on ground, Veteran H16 (AC 17 HP 65) adjacent and slightly south of him to meet approaching attackers. NO Toughs. This places the commander and protector together as an actual fighting pair, not two independent ranged enemies.",
+                        "{@b Noren Vale.} Mid-forties half-elf with rangy build, graying hair, old facial scar, gloves and battered coat. His troops truly expected him to hold. If he knows his Scouts died, he is angry; do not attribute knowledge he doesn't have.",
+                        "{@b Melee screen.} The Veteran controls space IN FRONT of Noren, threatening characters who charge past him. He doesn't have a reaction to take attacks meant for Noren; his Parry only protects his own AC. If an intervening creature is actually between an archer and Noren, use normal Half Cover rules. Noren makes ranged attacks or maneuvers from behind his ally as appropriate.",
+                        "{@b Roster.} {@creature Noren Vale|IRONWELL26} and 1 {@creature Warrior Veteran|XMM}. Noren: two attacks and Smoke Bomb/Disengage; Veteran: two attacks and Parry. No added enforcers or guards.",
+                        "{@b Escaping.} Noren must move from H15 to climb F10 (or R10), ascend 10 feet and cross box top to P4; if closed, unlatched with an Action. If warned, he may have prepared hatch open. That never unseals Branch 8 gate below it if the party closed T12.",
+                        "{@b Negotiation.} Noren can surrender or bargain when beaten or blocked. The Veteran follows lawful surrender orders rather than forcing a needless last-HP battle; the party can also capture or kill them.",
+                        "{@b Rewards.} Command desk holds an iron strongbox containing 125 gp and a readiness kit with one Potion of Heroism; these remain discoverable even if Noren flees. If a PC asks to search the command area, reveal these after reasonable searching (no mandatory roll).",
+                        "{@b Memory of the battle.} Bypassed Scouts from Gallery can pursue through actual connecting corridors, but don't teleport into this separate bay or create new forces."
+                      ]
+                    },
+                    {
+                      "type": "entries",
+                      "name": "6–8. Hidden Exit and Old Waterworks",
+                      "entries": [
+                        "This section uses narrated off-map passages and the sluice controls staged within the reusable bay. Do not build a second map merely to show corridors or the escape tunnel.",
+                        "The remaining chambers contain maintenance stores, the main sluice mechanism, and a hidden route leading back into the ruined district.",
+                        "The Covenant has disabled the sluice with two iron locking spikes and a chained counterweight. Use the Jammed Sluice rules in Scene 3.",
+                        "{@b Finding the hidden exit.} A DC 13 Wisdom (Perception) check notices a faint draft, repeated scuff marks, or irregular stonework. Once the characters know a passage is present, no further roll is required to establish that it exists.",
+                        "{@b Hatch.} Adjacent creature ON box top uses an Action to open P4 if closed. DC13 Perception for traces, DC12 Investigation to locate disguised release quickly; failed check costs minutes, not permanent lockout. The old isolation control at T12 in a different sluice bay can seal the emergency tunnel gate below P4.",
+                        "{@b Where it goes.} The passage runs roughly 180 feet through a narrow maintenance tunnel and emerges in the shell of a collapsed pump house about 250 feet from the Well in the ruined district. The tunnel does not branch.",
+                        "{@b Immediate pursuit.} If the party follows as Noren withdraws, stay in initiative and use normal movement. The tunnel is narrow enough that creatures move single file but otherwise does not require checks.",
+                        "{@b Delayed pursuit.} If the party waits more than 1 minute after Noren reaches the ruins, he can break line of sight among the collapsed buildings. A character with a plausible way to track him can attempt DC 13 Wisdom (Survival); success picks up the trail, while failure loses him.",
+                        "If the party finds and blocks this exit before confronting Noren, his surrender becomes much more likely.",
+                        "{@b Isolation-gate mechanism.} In the sluice bay T12 lever reads 'BRANCH 8 — ISOLATE' beside an etched pipe schematic. A maintenance notebook (found with H12 tools) says 'Gate below upper access: close during pressure flush, release from maintenance only.' A north-running pipe labelled 8 suggests the route below command. Intelligent investigation can connect the gate to Noren's hidden passage; do not spell out the tactical answer in the player-facing description. Once T12 is pulled (Action), passage is physically closed below P4. Action at T12 opens again; trapped creature can force Action DC 18 Athletics or destroy AC 17 HP 20 (immune Poison/Psychic)."
+                      ]
+                    },
+                    {
+                      "type": "entries",
+                      "name": "Tactical Response",
+                      "entries": [
+                        "Checkpoint F14 gong transmits distinctive three strikes through connected alarm pipework, warning Bow Gallery and Command if it ACTUALLY sounds. Ordinary fights in separate, thick-doored bays about 80 feet apart through dogleg corridors do not automatically carry clearly enough to alert Noren. Exception: a genuinely audible loud spell, a shouted runner or a door standing open, adjudicated from actual fictional circumstances.",
+                        "Gallery Scouts will fight to the death, even if overrun. Other defenders can surrender, run or react as their positions warrant. Noren believes the Well defensible until information/conditions change; do not make him plan to abandon the Scouts in advance.",
+                        "An hourly routine status pattern is expected from the Bow Gallery's signaling pipe; if absent, Noren becomes suspicious and can investigate with his Veteran. This takes real movement through actual corridors, not immediate omniscient knowledge.",
+                        "If the party rests for an hour, the defenders don't freeze, but Noren's exact response depends on what he actually learned. If the alarm was sounded or command was clearly warned, he may prepare departure; if not, missed signals lead to investigation rather than automatic evacuation.",
+                        "Driving Covenant out without killing Noren is a valid victory; only existing finite roster creatures can act."
+                      ]
+                    },
+                    {
+                      "type": "entries",
+                      "name": "Resolution",
+                      "entries": [
+                        "The chapter ends when the Iron Covenant no longer controls Kellan's Well and the main sluice is functioning again.",
+                        "The party can secure the site, confirm the old waterworks are usable, and decide what to do with any captured Covenant members.",
+                        "Do not reveal the royal takeover here. Let the characters finish this job believing they have completed the Council assignment they accepted."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "entries",
+                  "name": "Scene 1: Opening Defense",
+                  "entries": [
+                    "Default PCs G–J25 WEST bank. Harengon Alarm Runner I23 (22 HP, initiative +4, 10-foot Rabbit Hop) runs toward F14; Guards H24/J24 stand between runner and party. Ordinary Scouts E18/I17 cover the WEST bank with bows, rather than being cut off across the water.",
+                    "{@b Objective.} Prevent I23 Harengon from sounding the F14 three-strike gong; Guards occupy forward lanes to shield it, Scouts take shots at interceptors. Runner is fast, not unstoppable. Alarm requires Action after reaching F14.",
+                    "The party reaches Kellan's Well and encounters the Covenant checkpoint.",
+                    {
+                      "type": "entries",
+                      "name": "What Happens",
+                      "entries": [
+                        "Courier I23 is 45 feet from F14 by unobstructed grid movement. It can move 30 feet and Rabbit Hop 10 feet as a Bonus Action without provoking Opportunity Attacks, but remains short of F14 without another 5 feet of movement; using Dash reaches the alarm but consumes its Action. Its first realistic alarm pull is on a later turn unless player actions change the geometry or it has external assistance.",
+                        "Guards H24 and J24 stand directly in front of the courier at the start. They may engage Arumen or anyone charging the runner; they do not get extra reactions or block their own courier by fiat.",
+                        "Scouts E18 and I17 fire from dry WEST bank with actual line of sight. They can use the Help action if useful, but cannot attack magically through cabinets or teammates. The party can disable, deceive, block, restrain or outmaneuver the courier; no fixed outcome."
+                      ]
+                    },
+                    {
+                      "type": "entries",
+                      "name": "Encounter",
+                      "entries": [
+                        "2 {@creature Guard|XMM|Guards}, 2 {@creature Scout|XMM|Scouts}, 1 {@creature Harengon Alarm Runner|IRONWELL26}. No extra waves."
+                      ]
+                    },
+                    {
+                      "type": "entries",
+                      "name": "Consequences",
+                      "entries": [
+                        "If courier reaches F14 and uses its Action, alarm 1: gallery fully alert; Noren has time to prepare P4 hatch but still intends to hold.",
+                        "Stopping courier leaves interior on routine watch; creative bypass can still change the situation."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "entries",
+                  "name": "Scene 2: Bow Gallery",
+                  "entries": [
+                    "Four loyal Scouts H9/K9/O9/Q9 start on gallery box-top behind three actual parapet wall sections, covering WEST bank/F10 and EAST bank/R10. Canal K–N11–26; PCs G–J25 by default. They fight to the death, but cannot fire through total cover.",
+                    "{@b Stakes.} The party's hardest combat is getting past four loyal archers holding the raised gallery to protect Noren. The Scouts believe Noren intends to hold, not flee. Do not run their old morale retreat.",
+                    "Gallery defenders use up to eight ranged attacks per round from elevated 10-foot platform, but only actual parapet cover applies. H9/K9 are the WEST fire pair; O9/Q9 are the EAST pair. When players use a cabinet or flank, Scouts must reposition for line of sight instead of shooting through obstacles.",
+                    {
+                      "type": "entries",
+                      "name": "What Happens",
+                      "entries": [
+                        "Warned Gallery: H9 and K9 cover WEST bank approach/climb F10; O9 and Q9 cover EAST bank/climb R10. Unwarned Gallery: same stationed sentries on routine duty; apply 2024 initiative/surprise only when characters genuinely achieve surprise.",
+                        "Players can rush the bank, shoot, use cabinets as cover, climb F10/R10, or attempt to cross the four-square canal with the DC 15 extended jump house rule and adequate movement. Failed jump lands at natural jumping distance in water; DC 10 Acrobatics to avoid Prone on landing in Difficult Terrain.",
+                        "Scouts keep firing while lines exist and switch to Shortswords or reposition when attackers reach them. Their loyalty means no morale withdrawal or surrender; if bypassed they may physically pursue.",
+                        "Q8 surge lever can be operated once (Action), creatures actually in canal DC 14 Strength save or fall Prone and move 15 feet away from raised gallery, no damage; lever AC 15 HP 5. No effect on dry-bank targets."
+                      ]
+                    },
+                    {
+                      "type": "entries",
+                      "name": "Numbers",
+                      "entries": [
+                        "4 {@creature Scout|XMM|Scouts}: AC13 HP16, Passive Perception15; each Multiattack 2 Longbow +4 for 6 piercing or Shortsword +4 for 5 piercing. When actual parapet lies on attack line, Half Cover makes AC15.",
+                        "Canal 20 feet, jump house-rule DC15 Athletics with running start when exceeding Strength score; failed jump lands in water (Difficult Terrain).",
+                        "One-use surge at Q8: Action DC14 Strength save or Prone and pushed 15 feet while in water. Lever AC15 HP5, no special damage."
+                      ]
+                    },
+                    {
+                      "type": "entries",
+                      "name": "Consequences",
+                      "entries": [
+                        "Players may defeat or bypass the loyal last stand. This is the tactical high point of Kellan's Well. Survivors who are bypassed retain agency and can pursue, but no additional roster is spawned."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "entries",
+                  "name": "Scene 3: Inner Waterworks",
+                  "entries": [
+                    "Same physical terrain representing sluice maintenance bay. Spikes jam H12 control on WEST dry bank; chain holds P12 counterweight on EAST dry bank. T12 is independent emergency isolation handle that seals command hatch's escape tunnel gate.",
+                    "{@b Discovery.} At T12 a clearly operable, older lever is marked only 'BRANCH 8 — ISOLATE.' H12 maintenance notebook mentions a seal below an upper service access; a nearby schematic draws Branch 8 running beneath the north command wing. Players may connect these clues, ask maintenance-savvy prisoners, or investigate to learn it closes a gate below hidden command hatch P4. Do not tell players its purpose as a prefabricated solution. No mandatory DC to deduce it.",
+                    "The party reaches the main control works between the outer defenses and Noren's command position.",
+                    {
+                      "type": "entries",
+                      "name": "The Jammed Sluice",
+                      "entries": [
+                        "The Iron Covenant deliberately disabled the main sluice before settling into the Well. Two iron spikes have been hammered through the exposed gear teeth and the counterweight has been chained to a floor ring. The sabotage is obvious to anyone who examines the mechanism; no check is required to understand what is stopping it.",
+                        "{@b Objective.} Remove both locking spikes and free the counterweight. Once both are dealt with, the old control wheel can be turned and the waterworks function normally.",
+                        "{@b Force.} A character can wrench out a spike with a successful DC 14 Strength (Athletics) check. A crowbar or similarly useful leverage gives Advantage. A failed check costs time but does not damage the mechanism.",
+                        "{@b Tools.} A character proficient with Tinker's Tools, Smith's Tools, or Thieves' Tools can spend about 5 minutes removing a spike or opening the counterweight restraint without a check if the appropriate tools are available.",
+                        "{@b Break it.} The chain and each exposed spike can simply be attacked: AC 19, 10 hit points, immunity to Poison and Psychic damage. Reasonable damaging magic works normally.",
+                        "{@b Other solutions.} If a spell, class feature, or player idea would reasonably remove the obstruction or substitute for the mechanism, let it work. This is a physical problem, not a required sequence of checks.",
+                        "{@b What restoration does.} Reopening the sluice restores controlled flow through the old district channels. Within hours, Bellweather crews can begin refilling public cisterns and draining flooded service passages. The effect is visible and audible: water starts moving through channels that have been stagnant since the Covenant took the site.",
+                        "{@b Water surge.} When the sluice first opens, the characters hear the pressure build before the water releases. Anyone who chooses to remain in the marked channel makes a DC 14 Strength saving throw or falls Prone and is moved 15 feet. Give them a chance to step clear before calling for the save.",
+                        "{@b FIND THE DECANTER — H12.} Inner Waterworks / sluice maintenance bay, WEST dry bank, immediately behind and beside the H12 main control wheel (NOT T12). A waist-high, plainly visible brass-latched iron maintenance recess is inset in the stone beside the jammed sluice mechanism. Anyone who comes to inspect, unjam, or operate H12 notices its cover and can open the latch without a check, key, tool, or additional puzzle. Inside sits ONE stoppered blue-glazed ceramic {@item Decanter of Endless Water|DMG}. Around its neck are engraved, in Common and in this order: SPLASH · FOUNTAIN · GEYSER. There is NO inscription explaining the amount, range, or effect of any command. Do not explain the effects when describing it. Players may experiment; proper magical identification by Identify or a Short Rest teaches the full item properties. The item needs no attunement. Reading or casually saying a word by itself does not trigger the item: the wielder holds the decanter, removes the stopper, and uses a Magic action to speak one command. Keep all three command words as actual RAW item commands, not invented extra uses.",
+                        "{@b Read aloud on opening the H12 maintenance recess.} \"Behind the old control wheel is a small iron panel with a brass latch. Inside rests a stoppered blue ceramic vessel, surprisingly clean amid the rust and sediment. Three words circle its neck, engraved in neat letters: SPLASH. FOUNTAIN. GEYSER.\" Stop there. Don't explain the output quantities or the Geyser's combat effect unless a character learns them through identification or use.",
+                        "{@b Optional escape isolation.} Branch 8 lever T12 is separate from restoring main flow. Pull it as an Action to close remote steel gate in the maintenance passage immediately below command hatch P4; it can be re-opened here as an Action. H12 notebook and pipe diagram provide real clues, not a demanded die roll. If closed, a fleeing Noren must confront the physical barrier (Action DC 18 Athletics or AC 17 HP 20), giving party preparation its full benefit. No gear construction needed."
+                      ]
+                    },
+                    {
+                      "type": "entries",
+                      "name": "What Happens",
+                      "entries": [
+                        "The party can restore the sluice before confronting Noren, leave it disabled while they deal with him, or return to it after the Covenant withdraws.",
+                        "Restoring the sluice is part of reclaiming Kellan's Well, but it does not require the Iron Covenant to remain present."
+                      ]
+                    },
+                    {
+                      "type": "entries",
+                      "name": "Consequences",
+                      "entries": [
+                        "If Noren escapes or the party takes a Short Rest and the defenders evacuate, restoring the sluice still gives the characters a concrete job to finish before the Well is operational.",
+                        "When the mechanism works, water begins moving through the old channels again. Bellweather can immediately send crews to refill cisterns and drain flooded service passages.",
+                        "Once the Covenant is gone and the sluice works, Bellweather can put the site back into service."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "entries",
+                  "name": "Scene 4: Noren Vale",
+                  "entries": [
+                    "Party G–J25 WEST dry bank. Noren H15 AC 15/85 HP with adjacent Veteran H16 AC 17/65 HP IN FRONT on the same bank. No Toughs. This is their normal prepared defensive formation, not two combatants 40 feet apart. Hatch P4 on box top, Branch 8 gate below possibly sealed.",
+                    "{@b Goal.} The hardest battle was reaching the commander; Noren and Veteran are a coordinated last two defenders. The Veteran screens Noren, with normal melee threat and line-of-sight cover only, not invented interception abilities.",
+                    "Noren's only ally is the {@creature Warrior Veteran|XMM}. His loyal gallery Scouts have already made reaching this point costly.",
+                    {
+                      "type": "entries",
+                      "name": "What Happens",
+                      "entries": [
+                        "Noren begins H15 ground floor and Veteran H16 one square south, next to him. They hold WEST-bank ground, coordinate fire/melee, and don't instantly run. If PCs are prepared and block the escape, acknowledge it in Noren's tactical decisions.",
+                        "Veteran tries to occupy space between party and Noren, targets closest threatening character, and uses his Parry only when the Veteran himself is hit. It is not a protection reaction for Noren. Noren may fire past him, use Smoke Bomb and reposition; interposed creature grants ordinary Half Cover only when line of sight warrants it.",
+                        "If position collapses and Noren chooses retreat, he must move H15→F10 (or east route), climb platform 10 feet using movement, reach P4 and spend an Action to open hatch if shut. If previously warned he may have opened hatch; if players closed Branch 8 from T12, an unbreakable automatic escape is NOT allowed.",
+                        "Noren can try to break forced gate from within tunnel with DC 18 Athletics as an Action, or attack AC 17 HP 20 to destroy; if trapped and clearly beaten, he offers surrender. Veteran obeys Noren's surrender order. No replacement reinforcements.",
+                        "If Noren hasn't heard alarm or physically credible warning and gallery died silently, do not give him advance knowledge of those deaths. Missing scheduled status may eventually cause a justified investigation."
+                      ]
+                    },
+                    {
+                      "type": "entries",
+                      "name": "Encounter",
+                      "entries": [
+                        "{@creature Noren Vale|IRONWELL26}: AC15 HP85; two Scimitar +5 for 6 each or Light Crossbow +5 for 7 each; Reaction Parry +2 AC; Bonus Smoke Bomb 1/Day grants obscured sphere and Disengage.",
+                        "1 {@creature Warrior Veteran|XMM}: AC17 HP65; two Greatsword +5 for 10 each, or Heavy Crossbow +3 for 12 each; Reaction Parry +2 AC.",
+                        "{@b XP estimate.} 1,150 listed XP, approximate with custom Noren HP; 150 combined HP and maximum four attacks per round. NO Toughs."
+                      ]
+                    },
+                    {
+                      "type": "entries",
+                      "name": "Consequences",
+                      "entries": [
+                        "Capture, surrender, escape or defeat all permit clearing the Well, followed by restoring sluice. The blocked gate and Noren's longer route must have real effect.",
+                        "Players who earned leverage over Noren through scouting, isolating the escape or bypassing defense should see that directly in his options; do not negate it with new troops or sudden secret escape."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "entries",
+                  "name": "Scene 5: Secure the Well",
+                  "entries": [
+                    "The party confirms that the Iron Covenant has left the site and finishes restoring the main sluice if it has not already done so.",
+                    {
+                      "type": "entries",
+                      "name": "What Happens",
+                      "entries": [
+                        "Once the Covenant is gone and the sluice works, Bellweather can reclaim Kellan's Well immediately. Water moving through the old channels gives the characters a visible sign that the job is complete.",
+                        "If prisoners surrendered, decide whether the party escorts them back or leaves them secured for Bellweather personnel; either choice can be handled without another encounter.",
+                        "End the adventure on the successful restoration, prisoner decisions, or immediate exploration of the secured site.",
+                        "Do not run the royal takeover reveal as part of this chapter unless the party returns to Bellweather during the same session and there is enough table time to let that reveal breathe."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "entries",
+                  "name": "Transition to the Royal Takeover",
+                  "entries": [
+                    "When the party returns to Bellweather, the next session reveals that the Council finalized the transfer of the free city to the Crown while the party was away.",
+                    "Koven House is now the Crown's local headquarters. The Bishop stayed. Brakkus and Ledger House remain independent. Royal authorities claim Pepper's remaining four service obligations transferred with Bellweather.",
+                    "Treat that reveal as its own roleplay session rather than an epilogue to Kellan's Well. The session should end with Tulcornix Avemvir, Kaleb's adopted Aarakocra brother, bringing urgent news that Kaleb's wife needs to be rescued."
+                  ]
+                },
+                {
+                  "type": "entries",
+                  "name": "Rewards",
+                  "entries": [
+                    "{@b Exact recoverable wealth.} 375 gp total: 25 gp in Harengon courier's personal pouch; 150 gp in barracks payroll chest; 75 gp in salvage valuables on barracks shelf; 125 gp in command strongbox. If courier escapes with pouch, only 350 gp remains in site.",
+                    "{@b Potion of Greater Healing.} One, barracks medic's satchel.",
+                    "{@b Potion of Heroism.} One, command desk readiness kit.",
+                    "{@b Potion of Water Breathing.} One, maintenance emergency-rescue locker near T12.",
+                    "{@b Decanter of Endless Water.} Exactly ONE permanent water-themed magic item. Players find it in the brass-latched maintenance recess behind/beside the main sluice wheel at H12 in the Inner Waterworks bay (WEST dry bank). Any PC inspecting the sabotaged sluice notices the panel; opening requires no roll. Words SPLASH, FOUNTAIN, GEYSER are engraved around the neck WITHOUT explanatory labels; see Scene 3 for read-aloud and DM-only rules. No attunement.",
+                    "{@b Story reward.} Bellweather regains waterworks after Covenant vacates and main sluice is restored.",
+                    "{@b Pepper.} Counts as her first unpaid service of five; future Crown transfer doesn't erase it."
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Rewards",
+              "entries": [
+                "All rewards are party totals. The fully searched site has exactly 375 gp in recoverable money/valuables plus the three potions and one Decanter of Endless Water; locations below give the DM exact answers.",
+                {
+                  "type": "list",
+                  "items": [
+                    "{@b Checkpoint: 25 gp.} Courier's secured coin pouch (on Harengon; if it flees, the party must recover it from that courier, not magically find a duplicate).",
+                    "{@b Barracks: 225 gp.} Payroll chest among bunks contains 150 gp. Shelf holds repair salvage/valuables worth 75 gp. Potion of Greater Healing in medic's satchel near bunks.",
+                    "{@b Maintenance bay: Potion of Water Breathing + Decanter of Endless Water.} Potion in the emergency-rescue locker near T12. The one permanent magic item is the Decanter in a brass-latched niche behind/beside the H12 main sluice control on the WEST dry bank. The niche is obvious during inspection/repair; no check to find/open. The vessel bears only the engraved words SPLASH, FOUNTAIN, GEYSER (not what they do). See Scene 3 read-aloud.",
+                    "{@b Command bay: 125 gp and Potion of Heroism.} Iron strongbox on Noren's desk contains 125 gp; readiness kit on desk holds Potion of Heroism. Both remain in room if Noren withdraws.",
+                    "{@b Story reward.} Iron Covenant no longer controls Kellan's Well and sluice is restored, providing Bellweather waterworks access.",
+                    "{@b Pepper's penance.} First unpaid mission of five complete; royal takeover remains for following session."
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "monster": [
+    {
+      "name": "Noren Vale",
+      "source": "IRONWELL26",
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "M"
+      ],
+      "type": {
+        "type": "humanoid",
+        "tags": [
+          "half-elf"
+        ]
+      },
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        15
+      ],
+      "hp": {
+        "average": 85,
+        "formula": "13d8 + 26"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 15,
+      "dex": 16,
+      "con": 14,
+      "int": 14,
+      "wis": 11,
+      "cha": 14,
+      "save": {
+        "str": "+4",
+        "dex": "+5",
+        "wis": "+2"
+      },
+      "skill": {
+        "athletics": "+4",
+        "deception": "+4",
+        "perception": "+2"
+      },
+      "passive": 12,
+      "languages": [
+        "Common",
+        "Elvish"
+      ],
+      "cr": "2",
+      "gear": [
+        "scimitar|xphb",
+        "light crossbow|xphb",
+        "studded leather armor|xphb"
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "Noren makes two attacks, using Scimitar or Light Crossbow in any combination."
+          ]
+        },
+        {
+          "name": "Scimitar",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}6 ({@damage 1d6 + 3}) Slashing damage."
+          ]
+        },
+        {
+          "name": "Light Crossbow",
+          "entries": [
+            "{@atkr r} {@hit 5}, range 80/320 ft. {@h}7 ({@damage 1d8 + 3}) Piercing damage."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Smoke Bomb (1/Day)",
+          "entries": [
+            "Noren throws a prepared smoke bomb at a point he can see within 20 feet. A 10-foot-radius sphere centered on that point is Heavily Obscured until the start of Noren's next turn. Noren can take the Disengage action as part of this Bonus Action."
+          ]
+        }
+      ],
+      "reaction": [
+        {
+          "name": "Parry",
+          "entries": [
+            "{@actTrigger} Noren is hit by a melee attack roll while holding a weapon. {@actResponse} Noren adds 2 to his AC against that attack, possibly causing it to miss."
+          ]
+        }
+      ],
+      "environment": [
+        "urban",
+        "underdark"
+      ],
+      "treasure": [
+        "armaments"
+      ],
+      "actionTags": [
+        "Multiattack",
+        "Parry"
+      ],
+      "languageTags": [
+        "C",
+        "E"
+      ],
+      "damageTags": [
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "RNG"
+      ],
+      "fluff": {
+        "entries": [
+          "Noren Vale is a mid-forties half-elf with a rangy build, short graying hair, one old facial scar, gloves, practical weapons, and a battered coat over piecemeal armor. He commands the Iron Covenant position at Kellan's Well.",
+          "Noren is not suicidal. He holds the Well while it remains defensible, tries to withdraw once the position is clearly lost, and surrenders if escape is impossible.",
+          "IRONWELL session roster: Noren H15 on west bank with ONE Veteran H16 directly in front of him; there are NO Toughs."
+        ]
+      }
+    },
+    {
+      "name": "Harengon Alarm Runner",
+      "source": "IRONWELL26",
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "M"
+      ],
+      "type": {
+        "type": "humanoid",
+        "tags": [
+          "harengon"
+        ]
+      },
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 22,
+        "formula": "4d8 + 4"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 11,
+      "dex": 14,
+      "con": 12,
+      "int": 10,
+      "wis": 13,
+      "cha": 10,
+      "skill": {
+        "perception": "+5",
+        "stealth": "+4",
+        "survival": "+3"
+      },
+      "passive": 15,
+      "languages": [
+        "Common",
+        "Sylvan"
+      ],
+      "cr": "1/2",
+      "trait": [
+        {
+          "name": "Hare-Trigger",
+          "entries": [
+            "The runner adds its proficiency bonus (+2) to Initiative checks (Initiative +4 total including Dexterity)."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The runner makes two attacks, using Longbow or Shortsword in any combination."
+          ]
+        },
+        {
+          "name": "Longbow",
+          "entries": [
+            "{@atkr r} {@hit 4}, range 150/600 ft. {@h}6 ({@damage 1d8 + 2}) Piercing damage."
+          ]
+        },
+        {
+          "name": "Shortsword",
+          "entries": [
+            "{@atkr m} {@hit 4}, reach 5 ft. {@h}5 ({@damage 1d6 + 2}) Piercing damage."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Rabbit Hop (2/Day)",
+          "entries": [
+            "While the runner's speed is greater than 0, it can jump 10 feet as a Bonus Action without provoking Opportunity Attacks. This hop does not require a running start and cannot cross the 20-foot canal on its own."
+          ]
+        }
+      ],
+      "environment": [
+        "urban",
+        "underdark"
+      ],
+      "fluff": {
+        "entries": [
+          "A lean Harengon scout wearing a short Iron Covenant tabard and courier's leather satchel. Its orders are to reach the ground-level alarm pull at F14, not to kill the PCs.",
+          "The courier is harder to stop than a normal Scout (22 HP), adds +2 to initiative through Hare-Trigger, and can use Rabbit Hop twice. The alarm still costs one Action once reached."
+        ]
+      }
+    }
+  ]
+}
