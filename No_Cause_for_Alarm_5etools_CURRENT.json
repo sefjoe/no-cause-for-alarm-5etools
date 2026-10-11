@@ -6,17 +6,17 @@
         "json": "NCFA",
         "abbreviation": "NCFA",
         "full": "No Cause for Alarm: Ruins of Bellweather",
-        "version": "4.33",
+        "version": "4.34",
         "authors": [
           "No Cause for Alarm Campaign"
         ],
-        "dateLastModified": 1791676801
+        "dateLastModified": 1791734400
       }
     ],
     "edition": "one",
     "dateAdded": 1789528955,
-    "dateLastModified": 1791676801,
-    "_dateLastModifiedHash": "kellans-v430-ready"
+    "dateLastModified": 1791734400,
+    "_dateLastModifiedHash": "kellans-v434-decanter-inscription"
   },
   "adventure": [
     {
@@ -1940,6 +1940,7 @@
                 "{@b Physical layout.} Existing 22 x 26 grid and existing gridded box top at G–Q2–10 represent a 10-foot-high gallery. Twenty-foot-wide canal is K–N rows 11–26, running from the south edge to the gallery. Only existing wall pieces, two owned cabinets/shelves and a dry-erase marker needed.",
                 "{@b Three combat stakes.} Checkpoint: prevent a Harengon Scout from reaching ground alarm F14. Gallery: four fanatically loyal Scouts fight to the death holding the raised position; reaching Noren is the hardest combat challenge. Command: only Noren and his Warrior Veteran, with an escape gate the party can seal earlier.",
                 "{@b Victory.} Covenant no longer controls Well AND main sluice works. The party need not kill Noren; surrender, capture, retreat, or negotiation can resolve command.",
+                "{@b Discoverable permanent reward.} The Decanter of Endless Water is guaranteed to be found if the party inspects/repairs the H12 sluice: obvious latched niche beside the controls, words SPLASH / FOUNTAIN / GEYSER engraved on neck with effects unexplained. See Scene 3 for exact discovery read-aloud.",
                 "{@b Story continuity.} Pepper earns first unpaid service. No clues about the Crown in the Well; the takeover is revealed after the party returns, in the following session."
               ]
             },
@@ -1986,7 +1987,7 @@
                 "{@b Enemy quick stats.} Guard AC 16 HP 11 Spear +3 / 4 damage. Scout AC 13 HP 16, Passive Perception 15, 2 Longbow +4 / 6 each or 2 Shortsword +4 / 5 each. Harengon courier AC 13 HP 22, initiative +4, Rabbit Hop (2/Day) Bonus Action 10 ft avoiding Opportunity Attacks; Scout weapon attacks. Warrior Veteran AC 17 HP 65, 2 Greatsword +5 / 10 or Crossbow +3 / 12, Reaction Parry +2 own AC. Noren AC 15 HP 85, 2 Scimitar +5 / 6 or Crossbow +5 / 7, Reaction Parry +2 own AC, Smoke Bomb 1/Day Bonus Action (10-foot-radius Heavy Obscurement until next turn plus Disengage). No Toughs.",
                 "{@b Alarm and information.} The checkpoint F14 gong is fixed to a metal signaling pipe, carrying its distinctly repeated three-strike warning to gallery and command WHEN ACTUALLY SOUNDED. Noren can then ready the hatch while intending to HOLD. Separate bays are connected by 80-foot dogleg service passages and heavy doors; ordinary distant combat and slain Scouts do NOT automatically inform command. Loud magic, an actual escaping courier, opened doors or a pursuer's shout may transmit information only when plausible. A routine hourly gallery-status knock on the pipe is expected; if absent, Noren becomes suspicious and may investigate himself WITH his one Veteran. This is not instant awareness or free reinforcements.",
                 "{@b Rest / continuity.} Full Short Rest is one hour; if warning reaches Noren during rest he may prepare or evacuate because the world continues. If zero warning reaches him, a missing hourly status signal can trigger suspicion, investigation or changed readiness—not automatic omniscient retreat. Scouts fight to death if engaged; bypassed Scouts who pursue are the same four creatures at normal movement. Respect real passage distances and physically distinct bay states.",
-                "{@b Loot locations.} Recoverable total 375 gp: checkpoint courier pouch 25 gp; barracks payroll chest 150 gp and salvage valuables worth 75 gp; command desk iron strongbox 125 gp. Potion of Greater Healing in barracks medical satchel; Potion of Water Breathing in maintenance emergency locker near T12; Potion of Heroism in command desk readiness kit. Decanter of Endless Water remains in sealed maintenance niche near H12. No new treasure. Use real-world object access/searches, not obligatory skill rolls.",
+                "{@b Loot locations.} Recoverable total 375 gp: checkpoint courier pouch 25 gp; barracks payroll chest 150 gp and salvage valuables worth 75 gp; command desk iron strongbox 125 gp. Potion of Greater Healing in barracks medical satchel; Potion of Water Breathing in maintenance emergency locker near T12; Potion of Heroism in command desk readiness kit. Decanter of Endless Water: obvious brass-latched maintenance recess directly beside/behind H12 main control on WEST dry bank, noticed by anyone inspecting or repairing sluice; opens freely, no check. Vessel engraved SPLASH / FOUNTAIN / GEYSER, with NO description of the effects. See Scene 3 'FIND THE DECANTER' read-aloud; Identify/Short Rest reveal full powers. No new treasure. Use real-world object access/searches, not obligatory skill rolls.",
                 "{@b Outcome.} Party wins if Covenant leaves/loses control and main sluice restored. Captured Noren can negotiate; if defeated and escape gate sealed, surrender reasonable without check. Royal takeover remains a next-session reveal; Pepper has completed her first unpaid Council job."
               ]
             },
@@ -2287,7 +2288,8 @@
                         "{@b Other solutions.} If a spell, class feature, or player idea would reasonably remove the obstruction or substitute for the mechanism, let it work. This is a physical problem, not a required sequence of checks.",
                         "{@b What restoration does.} Reopening the sluice restores controlled flow through the old district channels. Within hours, Bellweather crews can begin refilling public cisterns and draining flooded service passages. The effect is visible and audible: water starts moving through channels that have been stagnant since the Covenant took the site.",
                         "{@b Water surge.} When the sluice first opens, the characters hear the pressure build before the water releases. Anyone who chooses to remain in the marked channel makes a DC 14 Strength saving throw or falls Prone and is moved 15 feet. Give them a chance to step clear before calling for the save.",
-                        "{@b Decanter.} The {@item Decanter of Endless Water|DMG} is stored in a sealed maintenance niche beside the controls, part of the old waterworks equipment rather than a random cache.",
+                        "{@b FIND THE DECANTER — H12.} Inner Waterworks / sluice maintenance bay, WEST dry bank, immediately behind and beside the H12 main control wheel (NOT T12). A waist-high, plainly visible brass-latched iron maintenance recess is inset in the stone beside the jammed sluice mechanism. Anyone who comes to inspect, unjam, or operate H12 notices its cover and can open the latch without a check, key, tool, or additional puzzle. Inside sits ONE stoppered blue-glazed ceramic {@item Decanter of Endless Water|DMG}. Around its neck are engraved, in Common and in this order: SPLASH · FOUNTAIN · GEYSER. There is NO inscription explaining the amount, range, or effect of any command. Do not explain the effects when describing it. Players may experiment; proper magical identification by Identify or a Short Rest teaches the full item properties. The item needs no attunement. Reading or casually saying a word by itself does not trigger the item: the wielder holds the decanter, removes the stopper, and uses a Magic action to speak one command. Keep all three command words as actual RAW item commands, not invented extra uses.",
+                        "{@b Read aloud on opening the H12 maintenance recess.} \"Behind the old control wheel is a small iron panel with a brass latch. Inside rests a stoppered blue ceramic vessel, surprisingly clean amid the rust and sediment. Three words circle its neck, engraved in neat letters: SPLASH. FOUNTAIN. GEYSER.\" Stop there. Don't explain the output quantities or the Geyser's combat effect unless a character learns them through identification or use.",
                         "{@b Optional escape isolation.} Branch 8 lever T12 is separate from restoring main flow. Pull it as an Action to close remote steel gate in the maintenance passage immediately below command hatch P4; it can be re-opened here as an Action. H12 notebook and pipe diagram provide real clues, not a demanded die roll. If closed, a fleeing Noren must confront the physical barrier (Action DC 18 Athletics or AC 17 HP 20), giving party preparation its full benefit. No gear construction needed."
                       ]
                     },
@@ -2381,7 +2383,7 @@
                     "{@b Potion of Greater Healing.} One, barracks medic's satchel.",
                     "{@b Potion of Heroism.} One, command desk readiness kit.",
                     "{@b Potion of Water Breathing.} One, maintenance emergency-rescue locker near T12.",
-                    "{@b Decanter of Endless Water.} One, already established in niche beside H12 sluice controls.",
+                    "{@b Decanter of Endless Water.} Exactly ONE permanent water-themed magic item. Players find it in the brass-latched maintenance recess behind/beside the main sluice wheel at H12 in the Inner Waterworks bay (WEST dry bank). Any PC inspecting the sabotaged sluice notices the panel; opening requires no roll. Words SPLASH, FOUNTAIN, GEYSER are engraved around the neck WITHOUT explanatory labels; see Scene 3 for read-aloud and DM-only rules. No attunement.",
                     "{@b Story reward.} Bellweather regains waterworks after Covenant vacates and main sluice is restored.",
                     "{@b Pepper.} Counts as her first unpaid service of five; future Crown transfer doesn't erase it."
                   ]
@@ -2398,7 +2400,7 @@
                   "items": [
                     "{@b Checkpoint: 25 gp.} Courier's secured coin pouch (on Harengon; if it flees, the party must recover it from that courier, not magically find a duplicate).",
                     "{@b Barracks: 225 gp.} Payroll chest among bunks contains 150 gp. Shelf holds repair salvage/valuables worth 75 gp. Potion of Greater Healing in medic's satchel near bunks.",
-                    "{@b Maintenance bay: Potion of Water Breathing.} Clearly marked emergency-rescue locker near T12. Decanter of Endless Water in sealed niche by main sluice H12.",
+                    "{@b Maintenance bay: Potion of Water Breathing + Decanter of Endless Water.} Potion in the emergency-rescue locker near T12. The one permanent magic item is the Decanter in a brass-latched niche behind/beside the H12 main sluice control on the WEST dry bank. The niche is obvious during inspection/repair; no check to find/open. The vessel bears only the engraved words SPLASH, FOUNTAIN, GEYSER (not what they do). See Scene 3 read-aloud.",
                     "{@b Command bay: 125 gp and Potion of Heroism.} Iron strongbox on Noren's desk contains 125 gp; readiness kit on desk holds Potion of Heroism. Both remain in room if Noren withdraws.",
                     "{@b Story reward.} Iron Covenant no longer controls Kellan's Well and sluice is restored, providing Bellweather waterworks access.",
                     "{@b Pepper's penance.} First unpaid mission of five complete; royal takeover remains for following session."
