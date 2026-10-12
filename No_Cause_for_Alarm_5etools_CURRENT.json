@@ -6,17 +6,17 @@
         "json": "NCFA",
         "abbreviation": "NCFA",
         "full": "No Cause for Alarm: Ruins of Bellweather",
-        "version": "4.36",
+        "version": "4.37",
         "authors": [
           "No Cause for Alarm Campaign"
         ],
-        "dateLastModified": 1791773880
+        "dateLastModified": 1791778200
       }
     ],
     "edition": "one",
     "dateAdded": 1789528955,
-    "dateLastModified": 1791773880,
-    "_dateLastModifiedHash": "ncfa-v436-original-grayson-design-archive-crown-pivot"
+    "dateLastModified": 1791778200,
+    "_dateLastModifiedHash": "ncfa-v437-pepper-low-profile-royal-transition-session"
   },
   "adventure": [
     {
@@ -99,7 +99,8 @@
             "Chapter Overview",
             "At the Table: Immediate Changes",
             "Open Locations and People",
-            "Pepper's Service and Other Personal Consequences",
+            "Session Anchors: Brakkus, Jord, Bishop Brann, and Tulcornix",
+            "Pepper: Existing Sentence, Low Administrative Priority",
             "Kaleb's Family and Tulcornix Avemvir",
             "Running a Three-Hour Social Session",
             "Rewards and Advancement"
@@ -387,7 +388,8 @@
               "entries": [
                 "Blackstone is complete; Kellan's Well has been played with the party at level 4. Noren disclosed the royal takeover during the Well mission, and Bellweather's new government is the basis of Chapter 6.",
                 "The former Council transferred Bellweather to the Crown. Koven House is Crown HQ; Bishop Brann stayed; Brakkus's Ledger House remains independent. Prepare a roleplay-led return with no compulsory combat.",
-                "Pepper is a cleric, not a rogue. Her first mandated Council job was unpaid; four paid obligations remain subject to what the Crown can actually enforce. She loots enemies for compensation and withholds healing from Jarrock, who reported her role in Kaleb's death.",
+                "Pepper is a cleric, not a rogue. She completed one unpaid Council job and owes four paid missions under the former Council's unresolved judgment. Brakkus no longer supervises her house arrest, and the newly arrived Crown is occupied with citywide records; Jord may advise keeping a low profile. Do not force Crown service or an arrest subplot. Jarrock and Pepper's personal conflict continues.",
+                "Next return session: Brakkus sits all the PCs down to ask about themselves; Jord and Bishop Brann each have their own perspective on the Crown's changes; Tulcornix Avemvir must arrive late with news that Kaleb's wife is indentured and needs help. No mandatory fight or resistance quest.",
                 "Do not use obsolete Council commission and Perrin-as-First-Councilor predictions in the unplayed Chapters 7–17 as facts. See Appendix I for confirmed and unresolved continuity."
               ]
             },
@@ -2507,7 +2509,8 @@
                 "{@b What is settled.} The Council negotiated the sale before the party departed and finalized it while the party was away. Koven House now serves the Crown. Bishop Brann stayed. Brakkus and Ledger House remain independent.",
                 "{@b No required battle.} Violence is possible if player choices and the other characters' decisions warrant it; there is no placed combat encounter or mandatory initiative.",
                 "{@b Tone.} The royals' authority is comically excessive, while the people enforcing, resisting, exploiting, or surviving it take their own circumstances seriously.",
-                "{@b Ending.} The party's choices—not the chapter's scene order—determine whether they investigate the Crown, help a family, bargain with officials, meet old friends, or turn to something else."
+                "{@b Ending.} The party's choices—not the chapter's scene order—determine whether they investigate the Crown, help a family, bargain with officials, meet old friends, or turn to something else.",
+                "{@b Four people, one personal focus.} Brakkus, Jord and Bishop Brann have distinct reasons to remain active after the takeover. Brakkus's conversation involves the whole party. Tulcornix's arrival is guaranteed. Pepper's unresolved service is background pressure, not the plot of the evening."
               ]
             },
             {
@@ -2532,20 +2535,70 @@
             },
             {
               "type": "entries",
-              "name": "Pepper's Service and Other Personal Consequences",
+              "name": "Session Anchors: Brakkus, Jord, Bishop Brann, and Tulcornix",
               "entries": [
-                "Pepper has completed the first unpaid mission of her five-mission sentence by doing the Kellan's Well job. The four future missions were described as paid. Royal officials can claim those obligations carried over; the claim is not a settled ruling until the characters choose to engage and a credible authority acts.",
-                "Pepper's looting is currently directed at enemies, not citizens. She is a cleric who refuses to heal Jarrock because he reported her role in Kaleb's death; both players are enjoying the conflict. Do not prescribe forgiveness or force one to apologize.",
-                "Jarrock's voluntary drunkenness had functional costs. Brakkus offered time and an opportunity to reconsider. In the changed city, let the character's next decisions matter without manufacturing another compulsory moral lesson."
+                "{@b Guaranteed appearances, open choices.} Brakkus, Jord, Bishop Brann, and Tulcornix Avemvir must each appear or meaningfully interact with the characters during this session. Their words and timing can respond to the players; do not railroad the party through a prescribed room order. Tulcornix's in-person arrival and news are the final major planned development, not a lead that may be skipped.",
+                {
+                  "type": "entries",
+                  "name": "Brakkus: Dinner and the People Behind the Adventures",
+                  "entries": [
+                    "Brakkus sits the group down at Ledger House, with food and a genuine opportunity to talk. He realizes he knows what the party has done in Bellweather but not much about where they came from or what they want. This is the session's principal planned conversation, not a recruiting speech or an interrogation.",
+                    "Suggested opening, in Brakkus's voice: 'I know what you've done around this city. I know a little about how you fight. But I don't know much about who you were before you walked through my door. So tell me about yourselves.'",
+                    "Possible follow-ups, chosen naturally rather than administered in order: Where were you before Bellweather? Who or what brought you here? Is anybody elsewhere looking for you? What would you do if you could leave tomorrow? What is important to you beyond the next job?",
+                    "Give Jarrock, Aaron, Arunem and Pepper space to volunteer or withhold their own histories, ask each other questions, and ask Brakkus about his past. He is a retired paladin and proprietor of Ledger House, not an omniscient investigator. Do not demand a backstory reveal from a reluctant player.",
+                    "Brakkus will not become the party's commander, a substitute Council, or the default leader of an uprising; he cares first about the people under his roof."
+                  ]
+                },
+                {
+                  "type": "entries",
+                  "name": "Jord: A Merchant Facing a New Administration",
+                  "entries": [
+                    "Jord is the road-worn gnome merchant already established in the Slums aftermath, whose missing strongbox helped bring the group into that district. He has current business to attend to; he is not another person summoned just to give Pepper advice.",
+                    "Jord sees that the Crown is busy processing old contracts, trading privileges, new taxes and ownership records. How those changes affect his livelihood is independent of Pepper and may open a merchant-focused conversation or future contacts.",
+                    "If Pepper's status comes up, Jord offers practical advice rather than legal certainty: 'They've got a whole city of paperwork to sort through. Four jobs owed to a Council that's gone? I wouldn't go reminding them.' He does not claim the sentence has been canceled."
+                  ]
+                },
+                {
+                  "type": "entries",
+                  "name": "Bishop Brann: The People Who Remain",
+                  "entries": [
+                    "Brann remains in the city because his congregation, the poor, and the people who rely on his temple did not leave when the Council did. He can talk about how the Crown affects ordinary residents, funerals, records, access to healing and charity, rather than focusing only on Pepper.",
+                    "Brann remembers the Council's original judgment. He does not declare a pardon, fabricate lost records or offer to conceal evidence. He need not volunteer Pepper's name to royal officials who have not asked him for it.",
+                    "He and Jord need not agree with one another; Brann's concern for residents and Jord's practical concerns are distinct. Neither has to tell the party to oppose the Crown."
+                  ]
+                },
+                {
+                  "type": "entries",
+                  "name": "Tulcornix Avemvir: Guaranteed Late-Session Arrival",
+                  "entries": [
+                    "Tulcornix Avemvir is Kaleb's adopted brother, an aarakocra. His appearance during this session is non-negotiable. He brings the news that Kaleb's wife has been placed in indentured service under the Crown and needs to be rescued.",
+                    "Aim for his arrival after the group has had time to experience the changed city and Brakkus's conversation. If the players go somewhere unexpected, adjust the plausible delivery route—he seeks out the people linked to Kaleb or follows information about their location—but do not erase his arrival to honor an arbitrary schedule.",
+                    "He has a reason to seek help and a relationship to the murdered Kaleb. Let that shape his demeanor. He must not require Pepper to repent or force the group to accept a mission. The party may help, refuse, investigate, divide, or propose something else.",
+                    "Let the request and the ensuing conversation breathe. The arrival is guaranteed; the outcome is entirely player-driven."
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Pepper: Existing Sentence, Low Administrative Priority",
+              "entries": [
+                "{@b Confirmed sentence.} Pepper, a cleric, completed the first unpaid mission at Kellan's Well; the former Council ordered four further missions, to be paid normally, for her role in Kaleb's murder. This judgment is still unresolved. Do not turn it into a pardon, an acquittal, or a new service contract with the Crown.",
+                "{@b Practical effect of the changeover.} The Crown has an entire city's ownership records, government offices, revenue, trading rights and old contracts to review. Pepper's old Council-service file is not high on its list. Royal officers have not proactively taken up her case and there is no standing warrant or scheduled arrest scene created solely for this interlude.",
+                "{@b Brakkus's position.} Brakkus's supervision of Pepper's house arrest was performed for the former Council. That government has departed. With no new lawful directions that he has accepted, Brakkus will not continue to detain her on its behalf, will not volunteer her name to the Crown, and will not chase her into obedience. This is his own boundary, not a declaration that Pepper is legally pardoned.",
+                "{@b Practical suggestion.} Jord, as a merchant accustomed to bureaucratic delays, can suggest that Pepper stay under the Crown's radar. If she or someone else raises the topic with Bishop Brann, he can acknowledge that the old sentence has not been formally resolved, but he is not volunteering it to royal authorities.",
+                "{@b Player freedom.} Pepper and the other characters are free to take jobs, oppose the Crown, keep a low profile, or seek a formal legal resolution. Do not steer the party into working for the Crown to satisfy the old Council's five-mission sentence. If Pepper's status becomes relevant later, it must follow credible discovery or a choice at the table, not a hidden timer, an automatic patrol check, or a forced quest.",
+                "{@b Personal consequences remain.} Kaleb's murder, Jarrock reporting Pepper, her refusal to heal Jarrock, and Kaleb's surviving family remain part of the world. None are erased by paperwork becoming low priority. Pepper's resentment-driven looting has been of enemy property only; don't invent attacks on civilians or coerce an apology.",
+                "{@b Keep this brief.} Establish the practical advice if the topic arises; let the discussion move on. This is continuity maintenance, not the session's plot."
               ]
             },
             {
               "type": "entries",
               "name": "Kaleb's Family and Tulcornix Avemvir",
               "entries": [
-                "Kaleb's wife is now an indentured servant of the Crown. His adopted brother Tulcornix Avemvir is an aarakocra who can seek the party out and say she needs help.",
+                "Kaleb's wife is now an indentured servant of the Crown. His adopted brother Tulcornix Avemvir is an aarakocra who {@b must arrive during this session} and report that she needs help. Plan his appearance as the final major story beat, after the other people and the city have had space; his arrival is not optional.",
                 "The encounter is a consequence of people making choices, not a designed guilt trap. Tulcornix wants assistance for a person he cares about, whether or not Pepper expresses remorse.",
-                "If the party independently learns what happened first, do not hide the information just to preserve Tulcornix as a final reveal. He may arrive later, bring a different detail, or respond to actions the characters already took.",
+                "Tulcornix's actual arrival cannot be skipped, even if the party leaves Ledger House or pursues a different activity. Adjust his credible route to the party instead of teleporting him or forcing them into a location. If the party independently learns what happened beforehand, he still arrives with his personal request and perspective; do not conceal known facts to preserve a theatrical revelation.",
                 "A prior outline connected Kaleb's widow and daughter to a healing request. Do not require that exact request unless it still fits the circumstances and current story."
               ]
             },
@@ -2554,6 +2607,8 @@
               "name": "Running a Three-Hour Social Session",
               "entries": [
                 "Prepare NPC motives, current stakes, and consequences rather than a mandatory sequence. Give each player an opening to state a goal, and follow the actions the table actually chooses.",
+                "{@b Session priority.} The principal personal scene is Brakkus asking the whole party who they are. Jord and Bishop Brann must have roles tied to their own lives and the change of government. Pepper's unresolved sentence receives a brief, practical note, not an investigation or legal hearing. Tulcornix arrives as the guaranteed final major development.",
+                "{@b Opposition is an option, not a contract.} The party is free to oppose, tolerate, exploit or ignore the Crown. Do not have Brakkus, Jord or Brann recruit the group as a mandatory resistance cell. Respect decisions even when they spoil planned pacing.",
                 "Keep several kinds of pressure available: moral disagreement, paperwork, labor disputes, divided loyalties, an ordinary favor, a celebration, a credible threat. None has to happen.",
                 "An antagonistic official can say no, call for guards, negotiate, or walk away as circumstances warrant. Do not roll initiative merely because the session needs an action scene.",
                 "Before closing, establish what the party now knows, whom they helped or alienated, and which leads they want to pursue next. The world continues between sessions."
@@ -10730,8 +10785,9 @@
               "entries": [
                 "Bellweather was a free city; the former Council sold its independence to a monarchy while the party was occupied. The royal rulers are comically evil in premise, but their subjects and officials treat the government as real and consequential.",
                 "Koven House is the Crown's local headquarters. Bishop Brann remains; Brakkus and Ledger House are independent. The former Council has left government in the city, so old chapters' references to the Council commissioning jobs after the takeover are no longer automatically true.",
-                "The return from Kellan's Well should be a roleplay-led session, with no planned combat. Fights can occur from player actions or a credible response from other people, not as a mandatory scene.",
-                "Kaleb's wife has become an indentured servant of the Crown. His adopted brother Tulcornix Avemvir, an aarakocra, can bring news that she needs help. Preserve the personal consequences of Pepper killing Kaleb without forcing Pepper to feel a particular emotion or choose a particular solution.",
+                "The return from Kellan's Well is a roleplay-led session without planned combat. Brakkus must sit the whole party down and ask about their backgrounds and goals; Jord and Bishop Brann participate as people with their own concerns; Tulcornix's arrival is a mandatory late-session beat. Fights only follow credible player choices and NPC responses.",
+                "Kaleb's wife has become an indentured servant of the Crown. His adopted brother Tulcornix Avemvir, an aarakocra, must personally arrive this session with the news that she needs rescuing. His arrival is guaranteed but Pepper's feelings and the party's decisions are not predetermined.",
+                "{@b Locked Pepper handling.} Pepper's four remaining paid service obligations imposed by the old Council are unresolved, NOT dismissed or automatically transferred into Crown missions. Brakkus stops supervising her former-Council house arrest and does not volunteer her case to the Crown; Jord can suggest staying under the radar. The Crown's administrative workload means nobody is currently prioritizing the case. No automatic arrest timer, offscreen warrant, forced service, or compulsory legal-hearing subplot. Future attention requires a credible in-world cause or player action.",
                 "Brakkus, Crown officers, merchants, tradespeople, former officials, and ordinary residents each pursue their own interests. The city reacts to the change but is not a single uniform opposition faction.",
                 "The players expressed interest in eventually playing to level 20, but no campaign extension, milestones, or finale level has been approved. The current 3–16 outline remains a planning framework only."
               ]
