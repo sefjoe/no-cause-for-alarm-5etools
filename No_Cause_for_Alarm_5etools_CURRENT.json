@@ -6,17 +6,17 @@
         "json": "NCFA",
         "abbreviation": "NCFA",
         "full": "No Cause for Alarm: Ruins of Bellweather",
-        "version": "4.34",
+        "version": "4.35",
         "authors": [
           "No Cause for Alarm Campaign"
         ],
-        "dateLastModified": 1791734400
+        "dateLastModified": 1791774000
       }
     ],
     "edition": "one",
     "dateAdded": 1789528955,
-    "dateLastModified": 1791734400,
-    "_dateLastModifiedHash": "kellans-v434-decanter-inscription"
+    "dateLastModified": 1791774000,
+    "_dateLastModifiedHash": "ncfa-v435-crown-session-continuity-letter"
   },
   "adventure": [
     {
@@ -35,6 +35,7 @@
           "name": "Campaign Guide",
           "headers": [
             "Running the Adventure",
+            "Campaign State — Read Before Preparing the Next Session",
             "Reclamation Frontier",
             "Character Threads",
             "Story Overview"
@@ -88,17 +89,20 @@
             "Chapter Overview",
             "Running the Chapter",
             "Adventure",
-            "Rewards"
+            "Rewards",
+            "Session Record — As Played"
           ]
         },
         {
-          "name": "Chapter 6: Koven House",
+          "name": "Chapter 6: Bellweather Under the Crown",
           "headers": [
-            "Maps",
             "Chapter Overview",
-            "Running the Chapter",
-            "Adventure",
-            "Rewards"
+            "At the Table: Immediate Changes",
+            "Open Locations and People",
+            "Pepper's Service and Other Personal Consequences",
+            "Kaleb's Family and Tulcornix Avemvir",
+            "Running a Three-Hour Social Session",
+            "Rewards and Advancement"
           ]
         },
         {
@@ -297,6 +301,29 @@
         {
           "name": "DM Map Index",
           "headers": []
+        },
+        {
+          "name": "Appendix H: Design Notes for Grayson",
+          "headers": [
+            "The Original Idea",
+            "Why I Changed the Campaign",
+            "What I Was Trying to Build",
+            "What Changed Once People Played",
+            "Kellan's Well: The Things I Couldn't Script",
+            "The Choices I Hope You Notice",
+            "Why I Keep Building It",
+            "For You"
+          ]
+        },
+        {
+          "name": "Appendix I: Current Canon and Session Record",
+          "headers": [
+            "Authority and Use",
+            "Established: Blackstone and the Council",
+            "Established: Kellan's Well, October 11",
+            "Prepared: The Changed City",
+            "Unresolved Future Design"
+          ]
         }
       ]
     }
@@ -320,6 +347,16 @@
             },
             "{@i No Cause for Alarm: Ruins of Bellweather} is a Dungeons & Dragons adventure for four characters, beginning at 3rd level and ending at 16th level. The adventure takes place in Bellweather, a hard-won settlement built against the ruins of a much larger fallen city.",
             "Bellweather grows as the characters reclaim streets, buildings, trade routes, and strongholds. Each success makes the city safer and more prosperous, but recovery also creates new struggles over property, influence, labor, and public trust. Two threats rise with the city: {@b Perrin Cardon}, a human man whose family claims and political ambitions expand with every reclaimed district, and {@b Tyren}, a possessing intelligence that coordinates hostile forces from the shadows.",
+            {
+              "type": "entries",
+              "name": "Campaign State — Read Before Preparing the Next Session",
+              "entries": [
+                "Blackstone is complete; Kellan's Well has been played with the party at level 4. Noren disclosed the royal takeover during the Well mission, and Bellweather's new government is the basis of Chapter 6.",
+                "The former Council transferred Bellweather to the Crown. Koven House is Crown HQ; Bishop Brann stayed; Brakkus's Ledger House remains independent. Prepare a roleplay-led return with no compulsory combat.",
+                "Pepper is a cleric, not a rogue. Her first mandated Council job was unpaid; four paid obligations remain subject to what the Crown can actually enforce. She loots enemies for compensation and withholds healing from Jarrock, who reported her role in Kaleb's death.",
+                "Do not use obsolete Council commission and Perrin-as-First-Councilor predictions in the unplayed Chapters 7–17 as facts. See Appendix I for confirmed and unresolved continuity."
+              ]
+            },
             {
               "type": "entries",
               "name": "Running the Adventure",
@@ -1941,7 +1978,7 @@
                 "{@b Three combat stakes.} Checkpoint: prevent a Harengon Scout from reaching ground alarm F14. Gallery: four fanatically loyal Scouts fight to the death holding the raised position; reaching Noren is the hardest combat challenge. Command: only Noren and his Warrior Veteran, with an escape gate the party can seal earlier.",
                 "{@b Victory.} Covenant no longer controls Well AND main sluice works. The party need not kill Noren; surrender, capture, retreat, or negotiation can resolve command.",
                 "{@b Discoverable permanent reward.} The Decanter of Endless Water is guaranteed to be found if the party inspects/repairs the H12 sluice: obvious latched niche beside the controls, words SPLASH / FOUNTAIN / GEYSER engraved on neck with effects unexplained. See Scene 3 for exact discovery read-aloud.",
-                "{@b Story continuity.} Pepper earns first unpaid service. No clues about the Crown in the Well; the takeover is revealed after the party returns, in the following session."
+                "{@b Story continuity.} Pepper earns first unpaid service. The rank-and-file have no Crown briefing, but Noren told the party about the takeover while bargaining for his safety; Bellweather will confirm it on their return."
               ]
             },
             {
@@ -1950,7 +1987,7 @@
               "entries": [
                 "The Council has already negotiated the surrender of Bellweather's independence to a Crown. Clearing Kellan's Well is the last major security/reclamation condition holding up the transfer.",
                 "The party did not cause the Council to sell Bellweather. The Council had already made that decision. The party is simply completing the legitimate job it was given, and its success removes the final obstacle to closing the deal.",
-                "Do not plant takeover paperwork or future-plot clues inside Kellan's Well. The royal takeover is revealed only after the party returns.",
+                "Do not invent royal paperwork or a new conspiracy trail in the Well. Noren, as a connected criminal and leader of the Iron Covenant, intentionally told the party about the Crown to cast doubt on their Council job. The city's changed status is confirmed on return.",
                 "While the party is away, the Council finalizes the transfer, enriches themselves through the deal, and leaves Bellweather. Koven House becomes the Crown's local headquarters. The Bishop remains in the city. Ledger House remains independent."
               ]
             },
@@ -1988,7 +2025,7 @@
                 "{@b Alarm and information.} The checkpoint F14 gong is fixed to a metal signaling pipe, carrying its distinctly repeated three-strike warning to gallery and command WHEN ACTUALLY SOUNDED. Noren can then ready the hatch while intending to HOLD. Separate bays are connected by 80-foot dogleg service passages and heavy doors; ordinary distant combat and slain Scouts do NOT automatically inform command. Loud magic, an actual escaping courier, opened doors or a pursuer's shout may transmit information only when plausible. A routine hourly gallery-status knock on the pipe is expected; if absent, Noren becomes suspicious and may investigate himself WITH his one Veteran. This is not instant awareness or free reinforcements.",
                 "{@b Rest / continuity.} Full Short Rest is one hour; if warning reaches Noren during rest he may prepare or evacuate because the world continues. If zero warning reaches him, a missing hourly status signal can trigger suspicion, investigation or changed readiness—not automatic omniscient retreat. Scouts fight to death if engaged; bypassed Scouts who pursue are the same four creatures at normal movement. Respect real passage distances and physically distinct bay states.",
                 "{@b Loot locations.} Recoverable total 375 gp: checkpoint courier pouch 25 gp; barracks payroll chest 150 gp and salvage valuables worth 75 gp; command desk iron strongbox 125 gp. Potion of Greater Healing in barracks medical satchel; Potion of Water Breathing in maintenance emergency locker near T12; Potion of Heroism in command desk readiness kit. Decanter of Endless Water: obvious brass-latched maintenance recess directly beside/behind H12 main control on WEST dry bank, noticed by anyone inspecting or repairing sluice; opens freely, no check. Vessel engraved SPLASH / FOUNTAIN / GEYSER, with NO description of the effects. See Scene 3 'FIND THE DECANTER' read-aloud; Identify/Short Rest reveal full powers. No new treasure. Use real-world object access/searches, not obligatory skill rolls.",
-                "{@b Outcome.} Party wins if Covenant leaves/loses control and main sluice restored. Captured Noren can negotiate; if defeated and escape gate sealed, surrender reasonable without check. Royal takeover remains a next-session reveal; Pepper has completed her first unpaid Council job."
+                "{@b Outcome.} Party wins if Covenant leaves/loses control and main sluice restored. Captured Noren can negotiate; if defeated and escape gate sealed, surrender reasonable without check. Noren already warned the party about the royal takeover; the next session confirms it in Bellweather. Pepper has completed her first unpaid Council job."
               ]
             },
             {
@@ -2042,7 +2079,7 @@
                     "Ordinary Covenant defenders know Noren commands the site, the main sluice is disabled, and the Bow Gallery defenders are loyal. They believe Noren will hold the Well and aren't knowingly dying to cover an evacuation.",
                     "A defender who worked maintenance can interpret the Branch 8 schematic and say there is a steel isolation gate beneath an upper service access. A regular Scout may have seen the marked lever but not know what passage it actually closes.",
                     "Bow Gallery Scouts fight to the death; surviving Scouts bypassed by the party may physically pursue. They don't generate duplicate reinforcements.",
-                    "None knows the Crown's acquisition of Bellweather or the Council's deal."
+                    "Ordinary defenders have not been briefed on the Council's royal deal. Noren, a well-connected criminal and the Covenant's commander, knows about it and chose to reveal it."
                   ]
                 },
                 {
@@ -2067,7 +2104,7 @@
                     "{@b Bow Gallery.} Scouts fight to death when engaged, do not surrender or retreat. They can be bypassed/outwitted; if alive they pursue across real movement routes rather than teleporting into Command. Tight cover near box front is earned only through actual parapet.",
                     "{@b Escape.} In sluice bay players can piece together Branch 8's purpose and seal a gate under command hatch P4 via T12. Noren on WEST ground H15 must move/climb before reaching hatch; adjacent Veteran H16 protects him in melee without invented redirection powers. Prepared party strategies matter.",
                     "{@b Rest and world.} A Short Rest takes one hour. Only warnings that plausibly reach Noren alter his knowledge; absent warning, missing scheduled status can still prompt a search after appropriate time. If he learns the gallery is lost, he weighs defending versus saving himself and his Veteran. Never freeze opponents but never grant omniscience.",
-                    "{@b Session victory.} Clear Covenant occupation AND restore sluice. Noren can escape, surrender, be captured or be defeated. Crown reveal stays in next session."
+                    "{@b Session victory.} Clear Covenant occupation AND restore sluice. Noren can escape, surrender, be captured or be defeated. Noren's warning has already been spoken; the city's new government becomes visible next session."
                   ]
                 },
                 {
@@ -2089,7 +2126,7 @@
                   "entries": [
                     "{@b After the opening defense or Bow Gallery.} The party has established a foothold inside the Well and can resume with the deeper waterworks.",
                     "{@b Before Noren.} Once the party has explored the inner rooms and knows where the Covenant command position is, stop there if the session is near its normal end.",
-                    "{@b After Noren.} Once the Covenant has surrendered or withdrawn and the Well is secure, end the old-Bellweather adventure there. The royal takeover reveal belongs to the following session.",
+                    "{@b After Noren.} Once the Covenant has surrendered or withdrawn and the Well is secure, end the old-Bellweather adventure there. The physical confirmation of the royal takeover belongs to the following session; Noren has already told the party.",
                     "{@b Session-end rule.} Do not add filler to reach a preferred stopping point and do not rush a scene just to reach Noren."
                   ]
                 },
@@ -2196,7 +2233,7 @@
                       "entries": [
                         "The chapter ends when the Iron Covenant no longer controls Kellan's Well and the main sluice is functioning again.",
                         "The party can secure the site, confirm the old waterworks are usable, and decide what to do with any captured Covenant members.",
-                        "Do not reveal the royal takeover here. Let the characters finish this job believing they have completed the Council assignment they accepted."
+                        "Noren intentionally revealed the royal takeover while trying to save himself. Let the characters respond; do not add paperwork or a second forced reveal."
                       ]
                     }
                   ]
@@ -2361,7 +2398,7 @@
                         "Once the Covenant is gone and the sluice works, Bellweather can reclaim Kellan's Well immediately. Water moving through the old channels gives the characters a visible sign that the job is complete.",
                         "If prisoners surrendered, decide whether the party escorts them back or leaves them secured for Bellweather personnel; either choice can be handled without another encounter.",
                         "End the adventure on the successful restoration, prisoner decisions, or immediate exploration of the secured site.",
-                        "Do not run the royal takeover reveal as part of this chapter unless the party returns to Bellweather during the same session and there is enough table time to let that reveal breathe."
+                        "Noren's warning already reached the characters. Save the consequences of returning to the now-royal city for the following roleplay session unless they actually return sooner."
                       ]
                     }
                   ]
@@ -2370,7 +2407,7 @@
                   "type": "entries",
                   "name": "Transition to the Royal Takeover",
                   "entries": [
-                    "When the party returns to Bellweather, the next session reveals that the Council finalized the transfer of the free city to the Crown while the party was away.",
+                    "When the party returns to Bellweather, they see confirmation of Noren's warning: the Council finalized transfer of the free city to the Crown while the party was away.",
                     "Koven House is now the Crown's local headquarters. The Bishop stayed. Brakkus and Ledger House remain independent. Royal authorities claim Pepper's remaining four service obligations transferred with Bellweather.",
                     "Treat that reveal as its own roleplay session rather than an epilogue to Kellan's Well. The session should end with Tulcornix Avemvir, Kaleb's adopted Aarakocra brother, bringing urgent news that Kaleb's wife needs to be rescued."
                   ]
@@ -2403,440 +2440,98 @@
                     "{@b Maintenance bay: Potion of Water Breathing + Decanter of Endless Water.} Potion in the emergency-rescue locker near T12. The one permanent magic item is the Decanter in a brass-latched niche behind/beside the H12 main sluice control on the WEST dry bank. The niche is obvious during inspection/repair; no check to find/open. The vessel bears only the engraved words SPLASH, FOUNTAIN, GEYSER (not what they do). See Scene 3 read-aloud.",
                     "{@b Command bay: 125 gp and Potion of Heroism.} Iron strongbox on Noren's desk contains 125 gp; readiness kit on desk holds Potion of Heroism. Both remain in room if Noren withdraws.",
                     "{@b Story reward.} Iron Covenant no longer controls Kellan's Well and sluice is restored, providing Bellweather waterworks access.",
-                    "{@b Pepper's penance.} First unpaid mission of five complete; royal takeover remains for following session."
+                    "{@b Pepper's penance.} First unpaid mission of five complete; the physical city takeover is confirmed in the following session."
                   ]
                 }
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Session Record — As Played",
+              "entries": [
+                "The level-4 party used {@spell Tasha's Hideous Laughter|XPHB} on the alarm runner rather than allowing it to flee. They used {@spell Fog Cloud|XPHB} to block the Bow Gallery Rangers' sight as they moved across the room.",
+                "Aaron's surface-thought spell on a Ranger exposed the disparity between speech and private concern, giving the party information about where Noren could be found. Arunem then broke through the ceiling to flank Noren and the Warrior Veteran.",
+                "Noren, a connected criminal leader of the Iron Covenant, knowingly disclosed the royal takeover while trying to save himself. This was a planned choice made before the session.",
+                "Pepper looted enemy property in place of receiving Council pay; Jarrock's intoxication and Pepper's resentment of Jarrock are active party-roleplay consequences. Further state and inventory tracking belongs to the actual player records.",
+                "The Decanter of Endless Water was found. Do not assume the entire chapter's 375 gp and all consumables were taken unless players confirmed it."
               ]
             }
           ]
         },
         {
           "type": "section",
-          "name": "Chapter 6: Koven House",
           "id": "006",
+          "name": "Chapter 6: Bellweather Under the Crown",
           "entries": [
-            {
-              "type": "inset",
-              "name": "Royal Pivot Override — Do Not Run This Chapter As Written",
-              "entries": [
-                "The campaign pivot after Kellan's Well supersedes the supply-network version of Koven House below. Koven House is now the Crown's local headquarters in Bellweather.",
-                "Retain the old material only as design reference until the royal-takeover chapter is written."
-              ]
-            },
-            "{@b Recommended level:} 4",
-            {
-              "type": "entries",
-              "name": "Maps",
-              "entries": [
-                {
-                  "type": "gallery",
-                  "images": [
-                    {
-                      "type": "image",
-                      "href": {
-                        "type": "external",
-                        "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/koven_house.webp"
-                      },
-                      "imageType": "map",
-                      "title": "Koven House — DM Map",
-                      "grid": {
-                        "type": "none"
-                      },
-                      "mapRegions": [
-                        {
-                          "area": "ncfa-koven_house",
-                          "points": [
-                            [
-                              0,
-                              0
-                            ],
-                            [
-                              1,
-                              0
-                            ],
-                            [
-                              1,
-                              1
-                            ],
-                            [
-                              0,
-                              1
-                            ]
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "image",
-                      "href": {
-                        "type": "external",
-                        "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/koven_house.webp"
-                      },
-                      "imageType": "mapPlayer",
-                      "title": "Koven House — Player Map",
-                      "grid": {
-                        "type": "none"
-                      },
-                      "mapRegions": [
-                        {
-                          "area": "ncfa-koven_house",
-                          "points": [
-                            [
-                              0,
-                              0
-                            ],
-                            [
-                              1,
-                              0
-                            ],
-                            [
-                              1,
-                              1
-                            ],
-                            [
-                              0,
-                              1
-                            ]
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                "{@link Player Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/koven_house.webp}",
-                "{@link DM Keyed Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/koven_house.webp}"
-              ]
-            },
+            "{@b Recommended level:} 4. The return from Kellan's Well is a roleplay-led session. No encounter is scheduled; no automatic level advancement is attached to the old Koven House criminal-network plan.",
             {
               "type": "entries",
               "name": "Chapter Overview",
               "entries": [
-                "{@b Chapter purpose.} Dismantle the Koven House criminal network and recover evidence connecting stolen reclamation goods to buyers in the city.",
-                "Stolen reclamation goods and protection rackets lead the characters to Koven House, headquarters of a criminal network profiting from Bellweather’s expansion.",
-                "Breaking the network reduces street crime but creates a political problem: some of the people implicated are useful to Bellweather’s recovery.",
-                "{@b Leads onward.} Bellweather authorizes an expedition to Savin Keep to secure the harbor approach and investigate the “old watch.”"
+                "{@b Premise.} The adventurers left a free Bellweather and return to a city transferred to the Crown. Noren warned them at the Well; now the city itself verifies his warning.",
+                "{@b Goal.} Give the party time to react to how the city has changed. Reveal consequences and competing opinions through people, public notices, employment, ordinary routines, and player-selected destinations—not a fixed string of official speeches.",
+                "{@b What is settled.} The Council negotiated the sale before the party departed and finalized it while the party was away. Koven House now serves the Crown. Bishop Brann stayed. Brakkus and Ledger House remain independent.",
+                "{@b No required battle.} Violence is possible if player choices and the other characters' decisions warrant it; there is no placed combat encounter or mandatory initiative.",
+                "{@b Tone.} The royals' authority is comically excessive, while the people enforcing, resisting, exploiting, or surviving it take their own circumstances seriously.",
+                "{@b Ending.} The party's choices—not the chapter's scene order—determine whether they investigate the Crown, help a family, bargain with officials, meet old friends, or turn to something else."
               ]
             },
             {
               "type": "entries",
-              "name": "Running the Chapter",
+              "name": "At the Table: Immediate Changes",
               "entries": [
-                "{@b Primary objectives.} Reach the command room, seize ledgers, free prisoners, force surrender, or break the network.",
-                "{@b Player agency.} Stake out the house, infiltrate, recruit an informant, enter through service routes, or assault.",
-                "{@b Fail forward.} A triggered trap costs position, time, or resources; essential evidence survives somewhere in the house.",
-                "{@b Rest and pressure.} Safe long rests are available back at Ledger House. Inside the active adventure site, resting gives opposing factions time to reposition unless the characters secure a defensible refuge.",
-                {
-                  "type": "inset",
-                  "entries": [
-                    "### ##### Treasure Override Keep the chapter’s immediately spendable or saleable value near {@b 1,500 gp total}. Divide that value between unclaimed tribute, coin, gems, legitimate salvage, and civic recovery payment; do not count identifiable stolen property twice. Award {@b one uncommon permanent item} suited to a current equipment gap (normally a +1 weapon or +1 shield), {@b 2 spell scrolls of 3rd level or lower}, and {@b 2 consumables}. Add a second uncommon permanent item only if the party is behind the campaign curve."
-                  ]
-                },
-                {
-                  "type": "entries",
-                  "name": "Encounter Guidance",
-                  "entries": [
-                    "Use {@creature Scout|XMM}, {@creature Spy|XMM}, {@creature Bandit Captain|XMM}, {@creature Thug|XMM}, and at most one {@creature Master Thief|XMM}-style high-tier opponent. Replace the repeated automatic backstabs with hidden movement, readied ambushes, traps, and retreat routes. The mansion should feel like fighting a prepared thieves' guild, not enduring unavoidable damage."
-                  ]
-                },
-                {
-                  "type": "entries",
-                  "name": "Table-Ready Session Package",
-                  "entries": [
-                    "{@b Milestone.} The party enters Koven House at level 4. Resolving the Koven network advances the party to level 5.",
-                    "{@b Finite opposition.} Outside: 4 {@creature Thug|XMM|Thugs} and 2 {@creature Scout|XMM|Scouts}. Interior roamers: 2 {@creature Spy|XMM|Spies} and 2 {@creature Thug|XMM|Thugs}. Leadership: {@creature Vara Koven|NCFA}, {@creature Dorn|NCFA}, and 3 {@creature Thug|XMM|Thugs}. Perris is not part of the criminal roster. No additional criminals appear from off-map.",
-                    "{@b Alarm 0 — unaware.} Lookouts follow normal routines and the interior groups remain separated. Quiet entry or captured lookouts lets the party choose its first interior engagement.",
-                    "{@b Alarm 1 — warned.} If a lookout reaches the mansion, the 2 Spies take concealed positions and the 2 interior Thugs barricade or guard side routes. They do not all pile into the leadership fight on round 1.",
-                    "{@b Alarm 2 — records at risk.} If open fighting continues inside or the party withdraws after the alarm, Vara orders records destroyed and prepares the rear-office escape. The clerk, prisoner testimony, and one duplicate ledger survive automatically, so the chapter cannot lose its essential evidence.",
-                    "{@b Short rest.} Rooms 5 or 6 can support a Short Rest once secured. During the hour, surviving criminals reposition according to the current alarm state and Vara begins her escape preparations; they do not gain reinforcements.",
-                    "{@b Useful DCs.} Spot or understand a prepared hazard DC 14 Investigation; disable one DC 14 Dexterity with thieves' tools; force a barred interior door DC 15 Athletics; read a criminal's fear or willingness to surrender DC 13 Insight.",
-                    "{@b Morale.} Ordinary criminals surrender or flee when Vara is captured, Dorn falls, or half of their current group is defeated. Vara bargains if escape is blocked and flees at half hit points if a route remains.",
-                    "{@b Pacing valve.} The chapter works best with no more than two full combats. If the outer-yard fight happens, use the interior roamers as pressure and delayed reinforcements rather than a separate stand-up fight. If the yard is bypassed, the roamers can provide the chapter's first interior combat.",
-                    {
-                      "type": "entries",
-                      "name": "Leadership Fight Deployment",
-                      "entries": [
-                        "Start with {@creature Vara Koven|NCFA}, {@creature Dorn|NCFA}, and 3 {@creature Thug|XMM|Thugs}. Vara uses the room, cover, and the rear-office route instead of standing in melee.",
-                        "If Alarm is 1 or higher and the interior roamers are still active, at the end of round 1 one {@creature Spy|XMM} and one {@creature Thug|XMM} enter from a side route. At the end of round 2 the second pair can arrive. These are the same four roamers already listed in the finite roster, not new enemies.",
-                        "A Spy that reaches a good angle attacks from concealment and then relocates; a Thug blocks pursuit or shoves a character toward a prepared hazard if the fiction supports it. They retreat or surrender under the chapter's normal morale rule.",
-                        "This staggered arrival is the default calibration for this party: it protects the criminals' action economy without exposing four level-4 characters to nine enemy turns on round 1."
-                      ]
-                    },
-                    {
-                      "type": "entries",
-                      "name": "Expected Session Shape",
-                      "entries": [
-                        "Network lead and approach: about 20–30 minutes.",
-                        "Outer yard, if it becomes combat: about 40–60 minutes.",
-                        "Perris, workers, traps, and route choice: about 30–45 minutes.",
-                        "Leadership and prisoner resolution: about 60–75 minutes.",
-                        "Public fallout can be handled in the final 15–20 minutes or at the start of the next session."
-                      ]
-                    }
-                  ]
-                },
-                "{@b Keyed-area encounters.} When a scene and a keyed location describe the same encounter, use the roster and objective in the scene. Creatures listed only in the keyed reference apply when the characters explore that location outside the scene sequence."
+                "Choose concrete details appropriate to the time that has passed: new banners on familiar buildings; clerks copying records; workers paid to change signs; merchants revising prices; ordinary residents wondering whether old promises still hold. Do not present every change as a fight or a clue.",
+                "A royal proclamation can display absurd entitlement while remaining legally consequential. Write any specific tax, decree, punishment, or royal title to match decisions made at the table; no unapproved invented statute is canon yet.",
+                "The takeover began before the party arrived back in town. Background jobs, family obligations and unrelated disputes continue. Not every citizen agrees the change is bad, and not every Crown employee is malicious."
               ]
             },
             {
               "type": "entries",
-              "name": "Adventure",
+              "name": "Open Locations and People",
               "entries": [
-                {
-                  "type": "entries",
-                  "name": "Location and Background Details",
-                  "entries": [
-                    "Koven House becomes relevant once organized theft and extortion begin spilling into reclaimed streets. The Council can post the job, but victims, merchants, or neighborhood residents can also point the party toward the house.",
-                    {
-                      "type": "entries",
-                      "name": "Area Description",
-                      "entries": [
-                        "The mansion and the surrounding yard are in excellent condition. The litter and dilapidation so common elsewhere in Bellweather is not present here. The outer yard (area 1) and the central courtyard (area 6) are open to the sky. All other areas are roofed."
-                      ]
-                    },
-                    {
-                      "type": "entries",
-                      "name": "Encounter 1: Outer Yard",
-                      "entries": [
-                        "The outer yard is deserted. Nothing happens here."
-                      ]
-                    },
-                    {
-                      "type": "entries",
-                      "name": "Encounter 2: Auxiliary Buildings",
-                      "entries": [
-                        "Areas 2, 3, and 4 were once a groundskeeper's cottage, kennel, and hound master's quarters. The old kennel is now occupied by {@b Perris}, a quickling who wants privacy and has no loyalty to the criminal cell. Perris warns respectful characters that the mansion is trapped and can identify one concealed service entrance. A small gift or simply agreeing to leave Perris alone is enough; no bribe is required. If threatened, Perris flees rather than fighting."
-                      ]
-                    },
-                    {
-                      "type": "entries",
-                      "name": "Encounter 3: The Mansion",
-                      "entries": [
-                        "The mansion is divided between {@b ambush routes} (rooms 7, 8, 9, 10, 13, 15, 16, 17, 18, 20, 21, and 24) and {@b hazard rooms} (11, 12, 14, 19, 22, and 23). Rooms 5 and 6 are useful breathing spaces. These labels describe how the criminal cell prepared the house; they do not mean an ambush or trap automatically triggers on entry. Ambushers use secret routes, cover, the Hide action, and coordinated retreats. Hazards use the {@b Interactive Trap Replacements} above and always provide a tell, a countermeasure, and normal 2024 resolution.",
-                        "The first time the characters enter a trapped room, use the {@b Interactive Trap Replacements} above. Do not use the automatic-hit traps, percentage detection, reset-on-return assumptions, or instant or opaque poison effects. Criminals know the safe routes and can deliberately lure intruders toward hazards, but a trap should always have a visible tell, a way to mitigate it, and consequences short of arbitrary character removal."
-                      ]
-                    },
-                    {
-                      "type": "entries",
-                      "name": "Treasure",
-                      "entries": [
-                        "Use the {@b Treasure Override} for this chapter. The house still contains stolen furnishings, art, coin, documents, and contraband, but most of it belongs to identifiable victims or is too bulky to function as adventuring treasure. Recovering and returning stolen property can improve Civic Trust or Merchant Standing. Keep at most one memorable permanent magic item from the source hoard; convert the rest to consumables, evidence, or valuables held for restitution."
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "entries",
-                  "name": "Scene 1: Finding the Network",
-                  "entries": [
-                    "Koven House functions as a criminal headquarters, warehouse, and prison.",
-                    {
-                      "type": "entries",
-                      "name": "What Happens",
-                      "entries": [
-                        "Victims identify wagon schedules and known lookouts. A former runner can sketch the yard in exchange for immunity from minor theft charges."
-                      ]
-                    },
-                    {
-                      "type": "entries",
-                      "name": "Clues and Discoveries",
-                      "entries": [
-                        "Stolen reclamation supplies have been routed through the property for months."
-                      ]
-                    },
-                    {
-                      "type": "entries",
-                      "name": "Consequences",
-                      "entries": [
-                        "Preparation can reveal the cellar entrance before combat."
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "entries",
-                  "name": "Scene 2: Outer Yard",
-                  "entries": [
-                    "Lookouts supervise wagons and hired muscle.",
-                    {
-                      "type": "entries",
-                      "name": "What Happens",
-                      "entries": [
-                        "Capturing the yard quietly grants advantage on the party’s first stealth or deception check inside the mansion."
-                      ]
-                    },
-                    {
-                      "type": "entries",
-                      "name": "Encounter",
-                      "entries": [
-                        "4 {@creature Thug|XMM|Thugs}, 2 {@creature Scout|XMM|Scouts}. The scouts run for the mansion if fighting begins."
-                      ]
-                    },
-                    {
-                      "type": "entries",
-                      "name": "Consequences",
-                      "entries": [
-                        "If the alarm is raised, the leaders start destroying records."
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "entries",
-                  "name": "Scene 3: Workshops and Coerced Workers",
-                  "entries": [
-                    "Auxiliary buildings contain stolen goods and laborers forced to repair equipment.",
-                    {
-                      "type": "entries",
-                      "name": "What Happens",
-                      "entries": [
-                        "Freeing workers reveals a hidden cellar entrance. A weighted shelf trap can be spotted with DC 14 Intelligence (Investigation) and disabled with DC 14 Dexterity using thieves’ tools."
-                      ]
-                    },
-                    {
-                      "type": "entries",
-                      "name": "Clues and Discoveries",
-                      "entries": [
-                        "Workers know prisoners are kept below the mansion."
-                      ]
-                    },
-                    {
-                      "type": "entries",
-                      "name": "Consequences",
-                      "entries": [
-                        "Saving workers provides witnesses for later prosecutions."
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "entries",
-                  "name": "Scene 4: Mansion Leadership",
-                  "entries": [
-                    "Vara Koven directs the network from the upper floor while Dorn holds the main stair.",
-                    "{@b NPC description — Vara Koven and Dorn.} Vara is a tall tiefling woman in early middle age, slim and sharply dressed for a criminal hiding place, with swept-back horns, controlled movements, immaculate gloves, and the practiced smile of someone who prefers deals to bloodshed. Dorn is a heavyset human man in his forties, scarred, plainly armed, and watches the stair rather than the conversation; his expression suggests he would rather settle the matter with steel.",
-                    {
-                      "type": "entries",
-                      "name": "What Happens",
-                      "entries": [
-                        "Vara bargains if escape seems unlikely. Dorn prefers combat."
-                      ]
-                    },
-                    {
-                      "type": "entries",
-                      "name": "NPC Behavior",
-                      "entries": [
-                        "{@creature Vara Koven|NCFA} uses the Bandit Captain stat block. {@creature Dorn|NCFA} uses the Warrior Veteran stat block."
-                      ]
-                    },
-                    {
-                      "type": "entries",
-                      "name": "Encounter",
-                      "entries": [
-                        "Vara, Dorn, 3 {@creature Thug|XMM|Thugs}. Vara attempts to flee through the rear office at half hit points."
-                      ]
-                    },
-                    {
-                      "type": "entries",
-                      "name": "Clues and Discoveries",
-                      "entries": [
-                        "Ledgers name legitimate merchants who knowingly bought stolen goods. Payments from an unknown patron funded guards to keep Bellweather out of deeper districts. A note warns, “Island remains sealed. Do not disturb the old watch until ordered,” referring to Savin Keep."
-                      ]
-                    },
-                    {
-                      "type": "entries",
-                      "name": "Consequences",
-                      "entries": [
-                        "Capturing Vara alive makes later testimony easier but is not required."
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "entries",
-                  "name": "Scene 5: Cellar Prison",
-                  "entries": [
-                    "Two merchants, a city guard, and a clerk who refused to falsify shipping documents are held below.",
-                    {
-                      "type": "entries",
-                      "name": "What Happens",
-                      "entries": [
-                        "The clerk can authenticate the ledgers."
-                      ]
-                    },
-                    {
-                      "type": "entries",
-                      "name": "NPC Behavior",
-                      "entries": [
-                        "The clerk is frightened of retaliation but testifies if the party promises protection."
-                      ]
-                    },
-                    {
-                      "type": "entries",
-                      "name": "Consequences",
-                      "entries": [
-                        "The witnesses prevent implicated merchants from dismissing the evidence as fabricated."
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "entries",
-                  "name": "Scene 6: Public Fallout",
-                  "entries": [
-                    "Back in Bellweather, arrests and arguments follow.",
-                    {
-                      "type": "entries",
-                      "name": "What Happens",
-                      "entries": [
-                        "Some merchants cooperate and pay restitution. Others argue that the city cannot afford to destroy businesses over wartime compromises. Perrin publicly supports prosecution of clear criminals, increasing his credibility."
-                      ]
-                    },
-                    {
-                      "type": "entries",
-                      "name": "NPC Behavior",
-                      "entries": [
-                        "Perrin should still appear principled here. His later betrayal works better if his earlier positions sometimes make sense."
-                      ]
-                    },
-                    {
-                      "type": "entries",
-                      "name": "Consequences",
-                      "entries": [
-                        "The references to Savin Keep make the island fortress the next strategic objective."
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "entries",
-                  "name": "Transition to Chapter 7",
-                  "entries": [
-                    "Bellweather authorizes an expedition to Savin Keep to secure the harbor approach and investigate the “old watch.”"
-                  ]
-                },
-                {
-                  "type": "entries",
-                  "name": "Rewards",
-                  "entries": [
-                    "{@b Treasure and rewards.} Keep total immediately spendable or saleable value near {@b 1,500 gp}. Identifiable stolen goods are returned to victims and earn favors rather than duplicate cash. Also award 2 spell scrolls of 3rd level or lower, 2 consumables, and one uncommon permanent item suited to a current equipment gap; add a second uncommon only if the party is behind the campaign curve."
-                  ]
-                }
+                "{@b Ledger House.} Brakkus may be angry or concerned about the transfer, but he is not a quest dispenser or a mouthpiece for every NPC. Ledger House remains independent and the players can talk, rest, argue, or ignore politics.",
+                "{@b Koven House.} Now a Crown headquarters rather than the criminal hideout described in the obsolete draft. Visitors may seek appointments, information, redress, favors, or documents. No forced infiltration and no mandatory arrest.",
+                "{@b Markets, taverns, workers' streets.} Show people adapting. Some prosper, some lose jobs or rights, some are mostly interested in groceries, family, pay, or a missing shipment. Let the party decide which conversations matter.",
+                "{@b Former Council staff.} Those left behind may disagree about the deal, worry about their futures, or know procedures the party can question. Do not imply the old Council still commissions official missions.",
+                "{@b Bishop Brann.} He remained in Bellweather. His views follow his religious and civic duties; they are not automatically the same as Brakkus's or the Crown's."
               ]
             },
             {
               "type": "entries",
-              "name": "Rewards",
+              "name": "Pepper's Service and Other Personal Consequences",
               "entries": [
-                "These rewards are party totals for the campaign's four-character party.",
-                {
-                  "type": "list",
-                  "items": [
-                    "{@b Spendable wealth.} About 1,500 gp in portable criminal hoard, recovery payment, and legitimate salvage. Identifiable stolen goods are intended for restitution rather than liquidation.",
-                    "{@b Consumables.} 2 consumables and 2 spell scrolls of 3rd level or lower.",
-                    "{@b Permanent magic.} 1 uncommon permanent item suited to the party; add a second only if the party missed an earlier permanent reward and is behind the campaign curve.",
-                    "{@b Story reward.} Evidence, witnesses, restitution, and improved standing with merchants or workers harmed by the operation."
-                  ]
-                }
+                "Pepper has completed the first unpaid mission of her five-mission sentence by doing the Kellan's Well job. The four future missions were described as paid. Royal officials can claim those obligations carried over; the claim is not a settled ruling until the characters choose to engage and a credible authority acts.",
+                "Pepper's looting is currently directed at enemies, not citizens. She is a cleric who refuses to heal Jarrock because he reported her role in Kaleb's death; both players are enjoying the conflict. Do not prescribe forgiveness or force one to apologize.",
+                "Jarrock's voluntary drunkenness had functional costs. Brakkus offered time and an opportunity to reconsider. In the changed city, let the character's next decisions matter without manufacturing another compulsory moral lesson."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Kaleb's Family and Tulcornix Avemvir",
+              "entries": [
+                "Kaleb's wife is now an indentured servant of the Crown. His adopted brother Tulcornix Avemvir is an aarakocra who can seek the party out and say she needs help.",
+                "The encounter is a consequence of people making choices, not a designed guilt trap. Tulcornix wants assistance for a person he cares about, whether or not Pepper expresses remorse.",
+                "If the party independently learns what happened first, do not hide the information just to preserve Tulcornix as a final reveal. He may arrive later, bring a different detail, or respond to actions the characters already took.",
+                "A prior outline connected Kaleb's widow and daughter to a healing request. Do not require that exact request unless it still fits the circumstances and current story."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Running a Three-Hour Social Session",
+              "entries": [
+                "Prepare NPC motives, current stakes, and consequences rather than a mandatory sequence. Give each player an opening to state a goal, and follow the actions the table actually chooses.",
+                "Keep several kinds of pressure available: moral disagreement, paperwork, labor disputes, divided loyalties, an ordinary favor, a celebration, a credible threat. None has to happen.",
+                "An antagonistic official can say no, call for guards, negotiate, or walk away as circumstances warrant. Do not roll initiative merely because the session needs an action scene.",
+                "Before closing, establish what the party now knows, whom they helped or alienated, and which leads they want to pursue next. The world continues between sessions."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Rewards and Advancement",
+              "entries": [
+                "No automatic combat reward or encounter treasure is attached to this chapter. Specific assistance, favors, contacts, or money should reflect what characters actually accomplish.",
+                "This is the first post-Kellan's Well chapter; do not apply the superseded Koven criminal-network treasure package or award levels for scenes that did not happen. Level progression for the Crown-era story is deliberately open.",
+                "The following chapters contain established geographical/adventure assets but pre-Crown political scaffolding. Use Appendix I for what is current."
               ]
             }
           ]
@@ -2846,6 +2541,15 @@
           "name": "Chapter 7: Reconquest of Savin Keep",
           "id": "007",
           "entries": [
+            {
+              "type": "inset",
+              "name": "Crown-Era Adaptation Notice — Unplayed Material",
+              "entries": [
+                "This chapter retains usable locations, DM maps, NPCs, clues, encounter elements, and reward ideas from the pre-Crown reclamation outline. It has NOT yet been reconciled with the Council's completed sale of Bellweather to the Crown.",
+                "Any proposed Council contract, Council payment, Council authority, Perrin promotion to Council leadership, fixed plot sequence, or automatic level advancement written below is provisional, not current campaign canon. Choose a credible sponsor and political state when the party reaches this site; do not invent a restored Council or a predetermined royal overthrow.",
+                "Appendix I governs established facts. Preserve independent motives and genuine alternatives; do not treat the former outline as a script."
+              ]
+            },
             "{@b Recommended level:} 5",
             {
               "type": "entries",
@@ -3326,6 +3030,15 @@
           "name": "Chapter 8: Cardon Weavehouse",
           "id": "008",
           "entries": [
+            {
+              "type": "inset",
+              "name": "Crown-Era Adaptation Notice — Unplayed Material",
+              "entries": [
+                "This chapter retains usable locations, DM maps, NPCs, clues, encounter elements, and reward ideas from the pre-Crown reclamation outline. It has NOT yet been reconciled with the Council's completed sale of Bellweather to the Crown.",
+                "Any proposed Council contract, Council payment, Council authority, Perrin promotion to Council leadership, fixed plot sequence, or automatic level advancement written below is provisional, not current campaign canon. Choose a credible sponsor and political state when the party reaches this site; do not invent a restored Council or a predetermined royal overthrow.",
+                "Appendix I governs established facts. Preserve independent motives and genuine alternatives; do not treat the former outline as a script."
+              ]
+            },
             "{@b Recommended level:} 5",
             {
               "type": "entries",
@@ -3791,6 +3504,15 @@
           "name": "Chapter 9: Marren Library",
           "id": "009",
           "entries": [
+            {
+              "type": "inset",
+              "name": "Crown-Era Adaptation Notice — Unplayed Material",
+              "entries": [
+                "This chapter retains usable locations, DM maps, NPCs, clues, encounter elements, and reward ideas from the pre-Crown reclamation outline. It has NOT yet been reconciled with the Council's completed sale of Bellweather to the Crown.",
+                "Any proposed Council contract, Council payment, Council authority, Perrin promotion to Council leadership, fixed plot sequence, or automatic level advancement written below is provisional, not current campaign canon. Choose a credible sponsor and political state when the party reaches this site; do not invent a restored Council or a predetermined royal overthrow.",
+                "Appendix I governs established facts. Preserve independent motives and genuine alternatives; do not treat the former outline as a script."
+              ]
+            },
             "{@b Recommended level:} 6",
             {
               "type": "entries",
@@ -4268,6 +3990,15 @@
           "name": "Interlude: The Mansions (Optional Reference)",
           "id": "010",
           "entries": [
+            {
+              "type": "inset",
+              "name": "Crown-Era Adaptation Notice — Unplayed Material",
+              "entries": [
+                "This chapter retains usable locations, DM maps, NPCs, clues, encounter elements, and reward ideas from the pre-Crown reclamation outline. It has NOT yet been reconciled with the Council's completed sale of Bellweather to the Crown.",
+                "Any proposed Council contract, Council payment, Council authority, Perrin promotion to Council leadership, fixed plot sequence, or automatic level advancement written below is provisional, not current campaign canon. Choose a credible sponsor and political state when the party reaches this site; do not invent a restored Council or a predetermined royal overthrow.",
+                "Appendix I governs established facts. Preserve independent motives and genuine alternatives; do not treat the former outline as a script."
+              ]
+            },
             "{@b Recommended level:} 6–7 (optional)",
             {
               "type": "entries",
@@ -4542,6 +4273,15 @@
           "name": "Chapter 11: Paden Square",
           "id": "011",
           "entries": [
+            {
+              "type": "inset",
+              "name": "Crown-Era Adaptation Notice — Unplayed Material",
+              "entries": [
+                "This chapter retains usable locations, DM maps, NPCs, clues, encounter elements, and reward ideas from the pre-Crown reclamation outline. It has NOT yet been reconciled with the Council's completed sale of Bellweather to the Crown.",
+                "Any proposed Council contract, Council payment, Council authority, Perrin promotion to Council leadership, fixed plot sequence, or automatic level advancement written below is provisional, not current campaign canon. Choose a credible sponsor and political state when the party reaches this site; do not invent a restored Council or a predetermined royal overthrow.",
+                "Appendix I governs established facts. Preserve independent motives and genuine alternatives; do not treat the former outline as a script."
+              ]
+            },
             "{@b Recommended level:} 7",
             {
               "type": "entries",
@@ -4935,6 +4675,15 @@
           "name": "Chapter 12: Storen Gate",
           "id": "012",
           "entries": [
+            {
+              "type": "inset",
+              "name": "Crown-Era Adaptation Notice — Unplayed Material",
+              "entries": [
+                "This chapter retains usable locations, DM maps, NPCs, clues, encounter elements, and reward ideas from the pre-Crown reclamation outline. It has NOT yet been reconciled with the Council's completed sale of Bellweather to the Crown.",
+                "Any proposed Council contract, Council payment, Council authority, Perrin promotion to Council leadership, fixed plot sequence, or automatic level advancement written below is provisional, not current campaign canon. Choose a credible sponsor and political state when the party reaches this site; do not invent a restored Council or a predetermined royal overthrow.",
+                "Appendix I governs established facts. Preserve independent motives and genuine alternatives; do not treat the former outline as a script."
+              ]
+            },
             "{@b Recommended level:} 7",
             {
               "type": "entries",
@@ -5358,6 +5107,15 @@
           "name": "Chapter 13: Valen Cemetery",
           "id": "013",
           "entries": [
+            {
+              "type": "inset",
+              "name": "Crown-Era Adaptation Notice — Unplayed Material",
+              "entries": [
+                "This chapter retains usable locations, DM maps, NPCs, clues, encounter elements, and reward ideas from the pre-Crown reclamation outline. It has NOT yet been reconciled with the Council's completed sale of Bellweather to the Crown.",
+                "Any proposed Council contract, Council payment, Council authority, Perrin promotion to Council leadership, fixed plot sequence, or automatic level advancement written below is provisional, not current campaign canon. Choose a credible sponsor and political state when the party reaches this site; do not invent a restored Council or a predetermined royal overthrow.",
+                "Appendix I governs established facts. Preserve independent motives and genuine alternatives; do not treat the former outline as a script."
+              ]
+            },
             "{@b Recommended level:} 8",
             {
               "type": "entries",
@@ -5854,6 +5612,15 @@
           "name": "Chapter 14: Maren Isle",
           "id": "014",
           "entries": [
+            {
+              "type": "inset",
+              "name": "Crown-Era Adaptation Notice — Unplayed Material",
+              "entries": [
+                "This chapter retains usable locations, DM maps, NPCs, clues, encounter elements, and reward ideas from the pre-Crown reclamation outline. It has NOT yet been reconciled with the Council's completed sale of Bellweather to the Crown.",
+                "Any proposed Council contract, Council payment, Council authority, Perrin promotion to Council leadership, fixed plot sequence, or automatic level advancement written below is provisional, not current campaign canon. Choose a credible sponsor and political state when the party reaches this site; do not invent a restored Council or a predetermined royal overthrow.",
+                "Appendix I governs established facts. Preserve independent motives and genuine alternatives; do not treat the former outline as a script."
+              ]
+            },
             "{@b Recommended level:} 8",
             {
               "type": "entries",
@@ -6314,6 +6081,15 @@
           "name": "Chapter 15: The Lands Beyond Bellweather",
           "id": "015",
           "entries": [
+            {
+              "type": "inset",
+              "name": "Crown-Era Adaptation Notice — Unplayed Material",
+              "entries": [
+                "This chapter retains usable locations, DM maps, NPCs, clues, encounter elements, and reward ideas from the pre-Crown reclamation outline. It has NOT yet been reconciled with the Council's completed sale of Bellweather to the Crown.",
+                "Any proposed Council contract, Council payment, Council authority, Perrin promotion to Council leadership, fixed plot sequence, or automatic level advancement written below is provisional, not current campaign canon. Choose a credible sponsor and political state when the party reaches this site; do not invent a restored Council or a predetermined royal overthrow.",
+                "Appendix I governs established facts. Preserve independent motives and genuine alternatives; do not treat the former outline as a script."
+              ]
+            },
             {
               "type": "entries",
               "name": "Maps",
@@ -7284,6 +7060,15 @@
           "name": "Chapter 16: The Zennar Outpost",
           "id": "016",
           "entries": [
+            {
+              "type": "inset",
+              "name": "Crown-Era Adaptation Notice — Unplayed Material",
+              "entries": [
+                "This chapter retains usable locations, DM maps, NPCs, clues, encounter elements, and reward ideas from the pre-Crown reclamation outline. It has NOT yet been reconciled with the Council's completed sale of Bellweather to the Crown.",
+                "Any proposed Council contract, Council payment, Council authority, Perrin promotion to Council leadership, fixed plot sequence, or automatic level advancement written below is provisional, not current campaign canon. Choose a credible sponsor and political state when the party reaches this site; do not invent a restored Council or a predetermined royal overthrow.",
+                "Appendix I governs established facts. Preserve independent motives and genuine alternatives; do not treat the former outline as a script."
+              ]
+            },
             "{@b Recommended level:} 14",
             {
               "type": "entries",
@@ -7724,6 +7509,15 @@
           "name": "Chapter 17: Varen Keep and the Radiant Well",
           "id": "017",
           "entries": [
+            {
+              "type": "inset",
+              "name": "Crown-Era Adaptation Notice — Unplayed Material",
+              "entries": [
+                "This chapter retains usable locations, DM maps, NPCs, clues, encounter elements, and reward ideas from the pre-Crown reclamation outline. It has NOT yet been reconciled with the Council's completed sale of Bellweather to the Crown.",
+                "Any proposed Council contract, Council payment, Council authority, Perrin promotion to Council leadership, fixed plot sequence, or automatic level advancement written below is provisional, not current campaign canon. Choose a credible sponsor and political state when the party reaches this site; do not invent a restored Council or a predetermined royal overthrow.",
+                "Appendix I governs established facts. Preserve independent motives and genuine alternatives; do not treat the former outline as a script."
+              ]
+            },
             "{@b Recommended level:} 15, advancing to 16 before entering Varen Keep",
             {
               "type": "entries",
@@ -8298,6 +8092,7 @@
               "type": "entries",
               "name": "Progress Track",
               "entries": [
+                "Rows after the Crown-arrival interlude are design targets, NOT already-approved level-ups or government facts. The next social session does not automatically grant a level.",
                 {
                   "type": "table",
                   "colLabels": [
@@ -8310,92 +8105,99 @@
                   "rows": [
                     [
                       "Storm / Slums",
+                      "3",
+                      "Perrin served on the former Council",
+                      "separate threats appeared",
+                      "slums and crews developed independently"
+                    ],
+                    [
+                      "Blackstone Temple",
                       "4",
-                      "minor councilor, useful but peripheral",
-                      "no reveal",
-                      "first safe corridor expands"
+                      "Perrin supported Pepper's penance",
+                      "Iron Covenant records passed to the Council",
+                      "captives rescued, temple restored"
                     ],
                     [
-                      "Blackstone + Kellan",
-                      "5",
-                      "publicly supports order and reclamation",
-                      "evidence of coordination and “Boss”",
-                      "nearby districts stabilize"
+                      "Kellan's Well (played)",
+                      "4 (latest confirmed)",
+                      "former Council deal already made",
+                      "Noren disclosed Crown takeover",
+                      "Iron Covenant operation challenged; waterworks objective pursued"
                     ],
                     [
-                      "Koven House",
-                      "6",
-                      "gains credibility by backing the crackdown",
-                      "criminal networks show shared intelligence",
-                      "theft drops, investment rises"
+                      "Crown arrival / Koven House HQ",
+                      "TBD (roleplay)",
+                      "his position under the Crown is unresolved",
+                      "no forced Tyren reveal",
+                      "Bellweather becomes royal-controlled"
                     ],
                     [
                       "Savin Keep",
-                      "7",
-                      "benefits from improved trade and visibility",
+                      "PROVISIONAL: 7",
+                      "Old outline; re-evaluate under Crown: benefits from improved trade and visibility",
                       "historical Tyren + radiant-water clue",
                       "harbor opens"
                     ],
                     [
                       "Weavehouse",
-                      "8",
-                      "recovers wealth, hires protection, and begins visible patronage",
+                      "PROVISIONAL: 8",
+                      "Old outline; re-evaluate under Crown: recovers wealth, hires protection, and begins visible patronage",
                       "Tyren uses reward/threat",
                       "inequality becomes visible"
                     ],
                     [
                       "Library + Mansions",
-                      "9",
-                      "builds a clerk/merchant network and becomes chair of Reclamation and Emergency Works",
+                      "PROVISIONAL: 9",
+                      "Old outline; re-evaluate under Crown: builds a clerk/merchant network and becomes chair of Reclamation and Emergency Works",
                       "possession + Well history becomes clear",
                       "ownership precedent is set"
                     ],
                     [
                       "Paden Square",
-                      "10",
-                      "dominant Council voice; increasingly shapes notices and procedure",
+                      "PROVISIONAL: 10",
+                      "Old outline; re-evaluate under Crown: dominant Council voice; increasingly shapes notices and procedure",
                       "agents operate commercial network",
                       "major market reopens"
                     ],
                     [
                       "Storen Gate",
-                      "11",
-                      "gains emergency contracting and broader administrative authority",
+                      "PROVISIONAL: 11",
+                      "Old outline; re-evaluate under Crown: gains emergency contracting and broader administrative authority",
                       "Varen Keep linkage confirmed",
                       "land route opens"
                     ],
                     [
                       "Valen Cemetery",
-                      "12",
-                      "can exploit public fear but is not its cause; positions himself for formal leadership",
+                      "PROVISIONAL: 12",
+                      "Old outline; re-evaluate under Crown: can exploit public fear but is not its cause; positions himself for formal leadership",
                       "world shown to contain independent threats",
                       "civic cemetery restored"
                     ],
                     [
                       "Maren Isle",
-                      "13",
-                      "benefits from river reopening; coalition support grows",
+                      "PROVISIONAL: 13",
+                      "Old outline; re-evaluate under Crown: benefits from river reopening; coalition support grows",
                       "independent Well research confirms mechanism",
                       "river recovers"
                     ],
                     [
                       "Regional Arc",
-                      "14–15",
-                      "becomes First Councilor/head of Council unless already lawfully removed",
+                      "PROVISIONAL: 14–15",
+                      "Old outline; re-evaluate under Crown: becomes First Councilor/head of Council unless already lawfully removed",
                       "coalition mechanics exposed",
                       "Bellweather becomes regional power"
                     ],
                     [
                       "Zennar Outpost",
-                      "16",
-                      "betrays the party and weaponizes the institutions he now formally leads",
+                      "PROVISIONAL: 16",
+                      "Old outline; re-evaluate under Crown: betrays the party and weaponizes the institutions he now formally leads",
                       "final confrontation route opens",
                       "political crisis"
                     ],
                     [
                       "Varen Keep",
-                      "finale",
-                      "resolved",
+                      "PROVISIONAL: finale",
+                      "Old outline; re-evaluate under Crown: resolved",
                       "Tyren defeated/contained",
                       "future governance decided"
                     ]
@@ -8424,6 +8226,7 @@
               "type": "entries",
               "name": "Perrin Cardon Escalation",
               "entries": [
+                "{@b Pre-Crown outline only.} The Council has sold Bellweather to the monarchy, so this entire later office-by-office rise is provisional. Perrin's actual status, opportunities, and betrayals must be established through play under the new political reality; his prior enthusiasm about Pepper's penance remains canon.",
                 {
                   "type": "list",
                   "style": "list-decimal",
@@ -10181,6 +9984,149 @@
                 "{@link Valen Cemetery — DM Key|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/valen_cemetery.webp}",
                 "{@link Varen Keep — DM Key|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/varen_keep.webp}",
                 "{@link Waylen Camp — DM Key|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/waylen_camp.webp}"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "id": "027",
+          "name": "Appendix H: Design Notes for Grayson",
+          "entries": [
+            "Grayson,",
+            "I wanted to put down how I built No Cause for Alarm, because the version you are playing now isn't where it started. I want you to be able to look at it later and see both what I planned and what I changed after the characters made it their own.",
+            {
+              "type": "entries",
+              "name": "The Original Idea",
+              "entries": [
+                "No Cause for Alarm did not start with Bellweather reclaiming a ruined city. It started with a magical prison and a janitor. The earliest idea was the Silent or Quiet Vault: a strange place with a custodian who seemed unimportant until you started asking why he was there.",
+                "The character who eventually became Milton Foal was first called Osric. I kept changing his name and his role while I figured out what the adventure was actually about. I was interested in people who do ordinary jobs inside extraordinary places, and the possibility that someone everybody overlooks may understand the place better than anyone else.",
+                "I built pieces around that idea, including the prison, its keeper, and people who needed rescuing. Some ideas I liked and kept. Others I abandoned. An idea can be fun and still not be the adventure I want to run."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Why I Changed the Campaign",
+              "entries": [
+                "I considered using an existing published adventure because I wanted enough places, problems, and characters for a campaign that could keep going. I explored Ruins of Adventure, borrowed some of its shape, and tried fitting my people and ideas into it.",
+                "Then the Josric Pickle adventure reminded me why I enjoyed building my own material in the first place. I liked having the freedom to make a ridiculous premise feel real, build a problem with more than one answer, and change the plan when a better idea appeared. I went back to my own campaign.",
+                "Brakkus Ledgerhelm came with me from an earlier character I had built. I knew who he was before I knew everything about Bellweather. He mattered because I wanted Ledger House to feel like a real place run by a real person, not a menu where adventurers collect quests. Brakkus has his own history, his own reasons to help, and things he simply will not do for the party."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "What I Was Trying to Build",
+              "entries": [
+                "I didn't want a world where every person waited for the party to enter the room before living their life. People go to work, lose money, argue, have children, make mistakes, and make plans while the adventurers are somewhere else.",
+                "I also didn't want every problem to lead back to the same villain. Sometimes a criminal is just a criminal. Sometimes two people want the same property. Sometimes an official is trying to do a job and is still wrong. Bellweather should feel bigger than the story being told about it.",
+                "I wanted a real difference between creating a problem and deciding how it must be solved. I can build the place, understand what the people there want, and decide what happens if nobody interferes. I cannot honestly predict every clever thing players will try, and I don't want to."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "What Changed Once People Played",
+              "entries": [
+                "The party's decisions changed the campaign faster than my outlines did. Pepper killed Kaleb. Jarrock told the truth about it. The Council punished Pepper, and I had to decide how a city with laws, jobs and frightened people would actually react.",
+                "I didn't need to make Pepper feel guilty or tell Jarrock how to feel about reporting her. Pepper chose to loot enemy property during an unpaid mission, and she started refusing to heal Jarrock for ratting her out. Jarrock's answer was, 'I was just keeping it real.' Both players laughed. That argument belongs to the characters, and the characters get to decide what happens next.",
+                "I changed the larger political story too. Bellweather had been a free city; I decided that its Council had sold it to a royal family while the adventurers were doing legitimate work for them. Noren was connected enough to know, and I decided before the session that he would reveal it if doing so could save him. That meant the party could hear the warning first, then come home and see whether he was telling the truth."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Kellan's Well: The Things I Couldn't Script",
+              "entries": [
+                "I designed defenders with jobs to do and a place to defend. Then the party worked around those defenses in ways that mattered. They used Tasha's Hideous Laughter to stop the runner from raising the alarm. They used Fog Cloud so the Rangers in the Bow Gallery couldn't see them crossing. Aaron read a Ranger's surface thoughts and learned something useful because what the Ranger said did not match what he thought.",
+                "Then Arunem broke through the ceiling to get around Noren and his Veteran. I didn't put a sign on the ceiling telling anybody to do that. It was a problem the players solved with the things they could see and the abilities they had.",
+                "That's the kind of moment I hope keeps happening. If a player makes me say, 'That works,' because they came up with something I didn't expect, I haven't lost control of the adventure. The adventure is doing its job."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "The Choices I Hope You Notice",
+              "entries": [
+                "I watched you decide that Jarrock was going to drink before work. Brakkus gave him time to rethink it, and you kept the decision. The disadvantage and trouble that followed were part of taking that choice seriously.",
+                "I also watched Jarrock stand by telling the truth about Pepper, even when Pepper was angry about it. Doing the right thing doesn't guarantee that another person will thank you. And choosing something fun doesn't erase what it does to the rest of your day. I didn't write either situation as a lesson. Those are consequences that came naturally from what the characters chose.",
+                "What mattered to me was that you got to decide. I can explain the world and have it respond, but I don't get to make your choices for you. That includes the choices I might not make myself."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Why I Keep Building It",
+              "entries": [
+                "After Kellan's Well, people at the table started talking about playing all the way to level 20. I said that could take years. The answer was that it would mean something fun to do on Sundays.",
+                "I didn't build No Cause for Alarm because I had a great final scene that everybody needed to reach. I built it because I like giving people somewhere to go, something worth caring about, and enough freedom to surprise me.",
+                "I don't know exactly where Jarrock, Pepper, or Bellweather will end up. That's not a missing piece I need to fix. It's one of the reasons I want to run the next session."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "For You",
+              "entries": [
+                "If you ever read through all these notes or run an adventure of your own, don't mistake the parts I wrote down for the only things that could have happened. Change the places. Change the enemies. Change the people. Keep what works and throw out what doesn't.",
+                "I want you to see how much can change when somebody asks a question, takes a risk, or tries something nobody expected. I made the world and I prepared the problems. The story that happened at the table belongs to the people who played it.",
+                "Love, Dad"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "id": "028",
+          "name": "Appendix I: Current Canon and Session Record",
+          "entries": [
+            {
+              "type": "entries",
+              "name": "Authority and Use",
+              "entries": [
+                "This appendix is the authoritative record of what has happened at the table through Kellan's Well, plus explicitly approved future premises. If an unplayed chapter contradicts a recorded fact here, this record wins. The older chapter may still be used for its map, encounter, location, or clue structure, but its obsolete political assumptions are not facts about the current world.",
+                "ESTABLISHED means played or explicitly decided. PREPARED means a future premise is approved but has not yet happened. PROVISIONAL means remaining design scaffolding, not fate. Do not present provisional material as something the characters have already caused or discovered.",
+                "{@b World independence.} People have jobs, families, feuds, ambitions and ordinary problems that continue whether the adventurers visit or not. Some events have no connection to Tyren, Perrin, the royal family, or the party. Do not make every clue secretly part of a single conspiracy.",
+                "{@b Player agency.} Move a clue when plausible, never move a consequence backward in time to force a conclusion. The party can outmaneuver opponents, abandon a location, negotiate, seek a different patron, or decide who deserves help."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Established: Blackstone and the Council",
+              "entries": [
+                "At Blackstone Temple, the party freed seven captives, confronted and killed Tal Rusk and remaining guards, recovered the reliquary, and returned it to Bishop Brann. The coded ledger, spyglass, and compass passed into Council custody. The party advanced to level 4 after Blackstone.",
+                "The Council confronted Pepper about Kaleb's death. The result was five compulsory missions: Kellan's Well unpaid, the remaining four paid; refusal carries the threat of jail. The rest of the party was not automatically sentenced.",
+                "The Council's independence transfer had already been arranged before the party departed for Kellan's Well; the party neither negotiated it nor caused it."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Established: Kellan's Well, October 11",
+              "entries": [
+                "The party approached the alarm runner as a tactical problem and used {@spell Tasha's Hideous Laughter|XPHB} to incapacitate the runner before it raised the alarm.",
+                "The party used {@spell Fog Cloud|XPHB} in the Bow Gallery to obstruct the Rangers' vision while crossing the defended room.",
+                "Aaron used surface-thought reading on a Ranger. The defender's spoken responses hid his purpose, while his thoughts revealed information about Noren's position and his determination to keep the party delayed. Distinguish spoken words and surface thoughts, not telepathic omniscience.",
+                "Arunem broke through the ceiling to outflank Noren and his Warrior Veteran instead of following the expected approach. Respect plausible use of the environment.",
+                "Noren was established as the connected criminal in charge of the Iron Covenant. To save himself, he told the party about the royal takeover. This was an intentional pre-session decision, not an accidental premature reveal; the next chapter confirms his warning.",
+                "Pepper, a cleric, searched enemy chests, barrels, and bodies for salvage because her Council mission was unpaid; at one point she chose a chest over helping in the fight. She loots enemies, not uninvolved civilians.",
+                "Jarrock chose to drink before work and continued after Brakkus gave him a chance to reconsider. He experienced the functional penalties of intoxication. Pepper refuses to heal Jarrock because he reported her involvement in Kaleb's death; Jarrock answers, 'I was just keeping it real.' The players have treated this conflict humorously; do not impose a mandatory reconciliation.",
+                "The party recovered the Decanter of Endless Water. Keep any unconfirmed claimed coin totals, expenditure, and consumable uses in player inventory rather than declaring that every listed treasure was collected.",
+                "The party's end-of-Well level is not recorded as increased beyond level 4. Do not automatically award level 5 by treating an unplayed older Koven House chapter as completed."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Prepared: The Changed City",
+              "entries": [
+                "Bellweather was a free city; the former Council sold its independence to a monarchy while the party was occupied. The royal rulers are comically evil in premise, but their subjects and officials treat the government as real and consequential.",
+                "Koven House is the Crown's local headquarters. Bishop Brann remains; Brakkus and Ledger House are independent. The former Council has left government in the city, so old chapters' references to the Council commissioning jobs after the takeover are no longer automatically true.",
+                "The return from Kellan's Well should be a roleplay-led session, with no planned combat. Fights can occur from player actions or a credible response from other people, not as a mandatory scene.",
+                "Kaleb's wife has become an indentured servant of the Crown. His adopted brother Tulcornix Avemvir, an aarakocra, can bring news that she needs help. Preserve the personal consequences of Pepper killing Kaleb without forcing Pepper to feel a particular emotion or choose a particular solution.",
+                "Brakkus, Crown officers, merchants, tradespeople, former officials, and ordinary residents each pursue their own interests. The city reacts to the change but is not a single uniform opposition faction.",
+                "The players expressed interest in eventually playing to level 20, but no campaign extension, milestones, or finale level has been approved. The current 3–16 outline remains a planning framework only."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Unresolved Future Design",
+              "entries": [
+                "Chapters 7–17 retain usable locations, maps, opposition, rewards, and connective ideas from the earlier reclamation plan; their governing authority, automatic Council contracts, Perrin's eventual office, and exact level progression require revision for the royal regime and player choices.",
+                "Do not assume the Crown is already overthrown, that the Council returns, that Perrin becomes First Councilor, or that Jarrock is fated to kill any particular king or queen. Those are possible future developments, not settled facts.",
+                "Do not retcon the independent Tyren and Perrin threads into the royal takeover or force every unrelated danger to be Crown-directed. Future adaptations must preserve the world as bigger than the protagonists."
               ]
             }
           ]
