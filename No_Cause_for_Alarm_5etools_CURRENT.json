@@ -6,17 +6,17 @@
         "json": "NCFA",
         "abbreviation": "NCFA",
         "full": "No Cause for Alarm: Ruins of Bellweather",
-        "version": "4.37",
+        "version": "4.38",
         "authors": [
           "No Cause for Alarm Campaign"
         ],
-        "dateLastModified": 1791778200
+        "dateLastModified": 1792076400
       }
     ],
     "edition": "one",
     "dateAdded": 1789528955,
-    "dateLastModified": 1791778200,
-    "_dateLastModifiedHash": "ncfa-v437-pepper-low-profile-royal-transition-session"
+    "dateLastModified": 1792076400,
+    "_dateLastModifiedHash": "ncfa-v438-bellwether-merchants-and-stock"
   },
   "adventure": [
     {
@@ -358,6 +358,16 @@
             "Established: Kellan's Well, October 11",
             "Prepared: The Changed City",
             "Unresolved Future Design"
+          ]
+        },
+        {
+          "name": "Appendix J: Bellwether Shops and Inventories",
+          "headers": [
+            "The Tiny Mage — Tiera Dame",
+            "The Spare Button — Edda Pell",
+            "The Two Hammers — Joren Viton and Maten",
+            "Jord's Odds & Ends — Jord",
+            "Party Gear Snapshot (Advisory, Not Stock-Tailoring Rules)"
           ]
         }
       ]
@@ -10799,6 +10809,1008 @@
                 "Chapters 7–17 retain usable locations, maps, opposition, rewards, and connective ideas from the earlier reclamation plan; their governing authority, automatic Council contracts, Perrin's eventual office, and exact level progression require revision for the royal regime and player choices.",
                 "Do not assume the Crown is already overthrown, that the Council returns, that Perrin becomes First Councilor, or that Jarrock is fated to kill any particular king or queen. Those are possible future developments, not settled facts.",
                 "Do not retcon the independent Tyren and Perrin threads into the royal takeover or force every unrelated danger to be Crown-directed. Future adaptations must preserve the world as bigger than the protagonists."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "id": "NCFA-APP-J-SHOPS",
+          "name": "Appendix J: Bellwether Shops and Inventories",
+          "entries": [
+            "DM inventory reference for Bellwether. These inventories begin after the party's Kellan's Well expedition and are independent of the PCs' level, needs, and available gold. Prices use the normal-price column of the D&D Shop Catalog V2.0.2 (Refresh) where applicable; invented curiosities have DM-set prices. GP = gold, SP = silver, CP = copper. Quantities are physical stock at this snapshot, not permanent supply guarantees.",
+            "Sale procedure: quote the displayed price, decrease stock on sale, keep sold items sold until a believable resupply occurs. Goods not listed here can be ordered or searched for in the city if appropriate; this inventory is the merchant's opening stock, not a prohibition on the existence of other merchandise in the world. 'One crate/box/set' means one indivisible lot unless the merchant agrees to split it.",
+            "Magic pricing reference from the catalog: Common 100 gp, Uncommon 400 gp, Rare 4,000 gp, Very Rare 40,000 gp, Legendary 200,000 gp. The catalog prices spell scrolls by level separately (cantrip 50 gp; level 1 100 gp; level 2 250 gp; level 3 500 gp; level 4 2,500 gp; level 5 5,000 gp). Individual consumables below use their listed prices. Rarity prices are campaign shop prices, not guarantees of availability.",
+            "Merchant independence: their merchandise need not reference the Crown, Perrin, Tyren, or the party's current goals. NPCs have commercial and personal lives. Do not turn every strange object into a clue.",
+            {
+              "type": "entries",
+              "name": "The Tiny Mage — Tiera Dame",
+              "entries": [
+                "General store in the Slums. Despite its name, it sells everyday merchandise rather than magic. Tiera Dame is a 48-year-old halfling woman, small even by halfling standards, with curly auburn hair, dark-brown eyes, a green vest under her practical apron, and keys and small pouches at her belt. She is friendly, quick-speaking, observant, slightly gossipy, and suspicious of people who watch the shelves more than the price tags. She sorts stock while speaking. Her attention to local comings and goings makes her a useful neighbor, not a professional informant. Pepper met her during Session 1, when she warned about thieves in the Slums.",
+                "Portrayal cue: \"Want fifty feet of rope? Had somebody buy three hundred feet last week. Never did find out why. Anyway, one gold.\"",
+                {
+                  "type": "entries",
+                  "name": "The Tiny Mage: Regular Stock",
+                  "entries": [
+                    {
+                      "type": "table",
+                      "caption": "The Tiny Mage: Regular Stock",
+                      "colLabels": [
+                        "Merchandise",
+                        "Available",
+                        "Price each / lot"
+                      ],
+                      "rows": [
+                        [
+                          "Backpack",
+                          "5",
+                          "2 gp"
+                        ],
+                        [
+                          "Bedroll",
+                          "6",
+                          "1 gp"
+                        ],
+                        [
+                          "Blanket",
+                          "12",
+                          "5 sp"
+                        ],
+                        [
+                          "Hemp rope, 50 ft",
+                          "7",
+                          "1 gp"
+                        ],
+                        [
+                          "Silk rope, 50 ft",
+                          "2",
+                          "10 gp"
+                        ],
+                        [
+                          "Rations, 1 day",
+                          "20",
+                          "5 sp"
+                        ],
+                        [
+                          "Waterskin",
+                          "8",
+                          "2 sp"
+                        ],
+                        [
+                          "Torch",
+                          "30",
+                          "1 cp"
+                        ],
+                        [
+                          "Tinderbox",
+                          "6",
+                          "5 sp"
+                        ],
+                        [
+                          "Hooded lantern",
+                          "3",
+                          "5 gp"
+                        ],
+                        [
+                          "Oil, flask",
+                          "14",
+                          "1 sp"
+                        ],
+                        [
+                          "Two-person tent",
+                          "3",
+                          "2 gp"
+                        ],
+                        [
+                          "Crowbar",
+                          "3",
+                          "2 gp"
+                        ],
+                        [
+                          "Grappling hook",
+                          "2",
+                          "2 gp"
+                        ],
+                        [
+                          "Healer's kit",
+                          "2",
+                          "5 gp"
+                        ],
+                        [
+                          "Piton",
+                          "30",
+                          "5 cp"
+                        ],
+                        [
+                          "Lock",
+                          "2",
+                          "10 gp"
+                        ],
+                        [
+                          "Shovel",
+                          "3",
+                          "2 gp"
+                        ],
+                        [
+                          "Pouch",
+                          "12",
+                          "5 sp"
+                        ],
+                        [
+                          "Chalk, 1 piece",
+                          "20",
+                          "1 cp"
+                        ],
+                        [
+                          "Sack",
+                          "15",
+                          "1 cp"
+                        ],
+                        [
+                          "Candle",
+                          "25",
+                          "1 cp"
+                        ],
+                        [
+                          "Soap",
+                          "10",
+                          "2 cp"
+                        ],
+                        [
+                          "Mess kit",
+                          "6",
+                          "2 sp"
+                        ],
+                        [
+                          "Parchment, 1 sheet",
+                          "30",
+                          "1 sp"
+                        ],
+                        [
+                          "Ink, 1 oz",
+                          "2",
+                          "10 gp"
+                        ]
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "entries",
+                  "name": "The Tiny Mage: Odd Warehouse Lot",
+                  "entries": [
+                    {
+                      "type": "table",
+                      "caption": "The Tiny Mage: Odd Warehouse Lot",
+                      "colLabels": [
+                        "Merchandise",
+                        "Available",
+                        "Price each / lot"
+                      ],
+                      "rows": [
+                        [
+                          "Taxidermied goose in a removable judge's wig",
+                          "1",
+                          "8 gp"
+                        ],
+                        [
+                          "Six-foot wooden spoon",
+                          "1",
+                          "2 gp"
+                        ],
+                        [
+                          "Crate of 73 assorted LEFT boots, no right boots",
+                          "1",
+                          "4 gp / crate"
+                        ],
+                        [
+                          "Box of 400 one-inch carved wooden ducks",
+                          "1",
+                          "6 gp / box"
+                        ],
+                        [
+                          "Coffin without its lid",
+                          "1",
+                          "5 gp"
+                        ],
+                        [
+                          "Brass ship's bell missing its clapper",
+                          "1",
+                          "3 gp"
+                        ],
+                        [
+                          "Wedding cake topper depicting two ogres",
+                          "1",
+                          "8 sp"
+                        ],
+                        [
+                          "Uneven wooden stilts",
+                          "1",
+                          "6 sp / pair"
+                        ],
+                        [
+                          "Decorative ceramic frogs",
+                          "37",
+                          "2 sp"
+                        ],
+                        [
+                          "Portrait of an unidentified man labeled 'Gerald'",
+                          "1",
+                          "4 gp"
+                        ],
+                        [
+                          "Sign reading 'CONGRATULATIONS, GREG!'",
+                          "1",
+                          "3 sp"
+                        ],
+                        [
+                          "Matching green velvet hats",
+                          "12",
+                          "5 sp"
+                        ],
+                        [
+                          "Enormous brass key, unknown matching lock",
+                          "1",
+                          "2 gp"
+                        ],
+                        [
+                          "Decorative door without frame",
+                          "1",
+                          "4 gp"
+                        ],
+                        [
+                          "Six pounds of blue feathers",
+                          "1",
+                          "1 gp / sack"
+                        ],
+                        [
+                          "Stuffed mounted fish",
+                          "1",
+                          "7 gp"
+                        ]
+                      ]
+                    }
+                  ]
+                },
+                "Odd-lot policy: Tiera bought a warehouse lot cheaply. She does not know why these objects were manufactured and has no special reason to think they are enchanted, cursed, prophetic, or related to the main plot. Most are mundane. If the players find clever practical uses for them, adjudicate normally. Some items can sell permanently out and be replaced later by wholly different junk.",
+                "If asked why she owns these: \"Bought a warehouse lot. Got a good price.\""
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "The Spare Button — Edda Pell",
+              "entries": [
+                "Arcane merchant and genuine magic shop occupying a former sewing store. Edda Pell is a 54-year-old half-orc woman with short graying hair, round spectacles, rolled-up sleeves, and an apron with more pockets than should be necessary. She is practical, sharply observant, and dry-witted; sells remarkable enchantments as if they were household hardware. She did not replace the old sewing-shop sign because a new sign costs money. The wooden tray of ordinary buttons by the till remains for sale at 3 cp each.",
+                "Portrayal cue: \"It flaps. Even indoors. Apparently somebody thought that was worth enchanting.\" (describing a Cloak of Billowing.) She bargains when given a sensible reason, describes what she knows accurately, and treats nobles and dockworkers alike.",
+                {
+                  "type": "entries",
+                  "name": "The Spare Button: Arcane Materials and Services",
+                  "entries": [
+                    {
+                      "type": "table",
+                      "caption": "The Spare Button: Arcane Materials and Services",
+                      "colLabels": [
+                        "Merchandise",
+                        "Available",
+                        "Price each / lot"
+                      ],
+                      "rows": [
+                        [
+                          "Ordinary buttons",
+                          "60",
+                          "3 cp"
+                        ],
+                        [
+                          "Component pouch",
+                          "3",
+                          "25 gp"
+                        ],
+                        [
+                          "Arcane focus: crystal",
+                          "2",
+                          "10 gp"
+                        ],
+                        [
+                          "Arcane focus: ordinary wand",
+                          "3",
+                          "10 gp"
+                        ],
+                        [
+                          "Arcane focus: orb",
+                          "1",
+                          "20 gp"
+                        ],
+                        [
+                          "Spellbook (blank)",
+                          "2",
+                          "50 gp"
+                        ],
+                        [
+                          "Ink, 1 oz",
+                          "4",
+                          "10 gp"
+                        ],
+                        [
+                          "Parchment, 1 sheet",
+                          "25",
+                          "1 sp"
+                        ],
+                        [
+                          "Magic appraisal / Identify casting",
+                          "Service",
+                          "100 gp"
+                        ],
+                        [
+                          "Alchemist's supplies",
+                          "1",
+                          "50 gp"
+                        ]
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "entries",
+                  "name": "The Spare Button: Spell Scrolls and Potions",
+                  "entries": [
+                    {
+                      "type": "table",
+                      "caption": "The Spare Button: Spell Scrolls and Potions",
+                      "colLabels": [
+                        "Merchandise",
+                        "Available",
+                        "Price each / lot"
+                      ],
+                      "rows": [
+                        [
+                          "Spell scroll: Mending (cantrip)",
+                          "1",
+                          "50 gp"
+                        ],
+                        [
+                          "Spell scroll: Detect Magic (1st)",
+                          "2",
+                          "100 gp"
+                        ],
+                        [
+                          "Spell scroll: Magic Missile (1st)",
+                          "1",
+                          "100 gp"
+                        ],
+                        [
+                          "Spell scroll: Feather Fall (1st)",
+                          "1",
+                          "100 gp"
+                        ],
+                        [
+                          "Spell scroll: Invisibility (2nd)",
+                          "1",
+                          "250 gp"
+                        ],
+                        [
+                          "Spell scroll: Misty Step (2nd)",
+                          "1",
+                          "250 gp"
+                        ],
+                        [
+                          "Spell scroll: Dispel Magic (3rd)",
+                          "1",
+                          "500 gp"
+                        ],
+                        [
+                          "Potion of Healing",
+                          "4",
+                          "50 gp"
+                        ],
+                        [
+                          "Potion of Climbing",
+                          "1",
+                          "100 gp"
+                        ],
+                        [
+                          "Potion of Greater Healing",
+                          "1",
+                          "400 gp"
+                        ]
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "entries",
+                  "name": "The Spare Button: Permanent Magic",
+                  "entries": [
+                    {
+                      "type": "table",
+                      "caption": "The Spare Button: Permanent Magic",
+                      "colLabels": [
+                        "Merchandise",
+                        "Available",
+                        "Price each / lot"
+                      ],
+                      "rows": [
+                        [
+                          "Bag of Holding (Uncommon)",
+                          "1",
+                          "400 gp"
+                        ],
+                        [
+                          "Immovable Rod (Uncommon)",
+                          "1",
+                          "400 gp"
+                        ],
+                        [
+                          "Boots of Elvenkind (Uncommon)",
+                          "1",
+                          "400 gp"
+                        ],
+                        [
+                          "Hat of Disguise (Uncommon)",
+                          "1",
+                          "400 gp"
+                        ],
+                        [
+                          "Wand of Secrets (Uncommon)",
+                          "1",
+                          "400 gp"
+                        ],
+                        [
+                          "Alchemy Jug (Uncommon)",
+                          "1",
+                          "400 gp"
+                        ],
+                        [
+                          "Cloak of Billowing (Common)",
+                          "1",
+                          "100 gp"
+                        ],
+                        [
+                          "Ring of Spell Storing (Rare)",
+                          "1",
+                          "4,000 gp"
+                        ]
+                      ]
+                    }
+                  ]
+                },
+                "Buying magic is ordinary commerce here, not automatically a quest. The costly Ring of Spell Storing is a legitimate for-sale item even if the party cannot afford it. Magic stock is limited and replaced by real acquisitions, not convenience-driven refreshes."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "The Two Hammers — Joren Viton and Maten",
+              "entries": [
+                "One shared weaponsmith/armorer business, not two separate shops. Joren Viton (human man, 43) is broad-shouldered with a neatly trimmed dark beard beginning to gray and tidy work clothes. Outgoing, commercial, honest, fast-moving, and enthusiastic about ready-stock equipment. He manages sales, prices, ordinary weapons/armor, and special orders. Maten (dwarf man, 112) is a muscular, gray-bearded master smith with thick eyebrows, scarred hands, and a permanently soot-stained apron. Quiet and exacting, he examines a weapon's balance and a client's grip before offering custom work. He is Bellwether's best armorer/weaponsmith. They respect one another: Joren keeps the operation profitable; Maten keeps its reputation.",
+                "Joren portrayal cue: \"If you need it today, I have exactly what you need.\" Maten portrayal cue: \"Want a sword made for you? Fine. Show me how you hold one.\"",
+                {
+                  "type": "entries",
+                  "name": "The Two Hammers: Ordinary Weapons and Ammunition",
+                  "entries": [
+                    {
+                      "type": "table",
+                      "caption": "The Two Hammers: Ordinary Weapons and Ammunition",
+                      "colLabels": [
+                        "Merchandise",
+                        "Available",
+                        "Price each / lot"
+                      ],
+                      "rows": [
+                        [
+                          "Dagger",
+                          "10",
+                          "2 gp"
+                        ],
+                        [
+                          "Shortsword",
+                          "5",
+                          "10 gp"
+                        ],
+                        [
+                          "Longsword",
+                          "4",
+                          "15 gp"
+                        ],
+                        [
+                          "Rapier",
+                          "2",
+                          "25 gp"
+                        ],
+                        [
+                          "Greatsword",
+                          "2",
+                          "50 gp"
+                        ],
+                        [
+                          "Greataxe",
+                          "2",
+                          "30 gp"
+                        ],
+                        [
+                          "Mace",
+                          "4",
+                          "5 gp"
+                        ],
+                        [
+                          "Warhammer",
+                          "3",
+                          "15 gp"
+                        ],
+                        [
+                          "Battleaxe",
+                          "3",
+                          "10 gp"
+                        ],
+                        [
+                          "Spear",
+                          "7",
+                          "1 gp"
+                        ],
+                        [
+                          "Handaxe",
+                          "4",
+                          "5 gp"
+                        ],
+                        [
+                          "Scimitar",
+                          "2",
+                          "25 gp"
+                        ],
+                        [
+                          "Shortbow",
+                          "2",
+                          "25 gp"
+                        ],
+                        [
+                          "Longbow",
+                          "2",
+                          "50 gp"
+                        ],
+                        [
+                          "Arrows, 20",
+                          "5",
+                          "1 gp / bundle"
+                        ],
+                        [
+                          "Crossbow bolts, 20",
+                          "4",
+                          "1 gp / bundle"
+                        ]
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "entries",
+                  "name": "The Two Hammers: Ordinary Armor",
+                  "entries": [
+                    {
+                      "type": "table",
+                      "caption": "The Two Hammers: Ordinary Armor",
+                      "colLabels": [
+                        "Merchandise",
+                        "Available",
+                        "Price each / lot"
+                      ],
+                      "rows": [
+                        [
+                          "Shield",
+                          "8",
+                          "10 gp"
+                        ],
+                        [
+                          "Studded Leather",
+                          "3",
+                          "45 gp"
+                        ],
+                        [
+                          "Chain Shirt",
+                          "4",
+                          "50 gp"
+                        ],
+                        [
+                          "Scale Mail (nonmagical)",
+                          "3",
+                          "50 gp"
+                        ],
+                        [
+                          "Chain Mail",
+                          "3",
+                          "75 gp"
+                        ],
+                        [
+                          "Breastplate",
+                          "1",
+                          "400 gp"
+                        ],
+                        [
+                          "Splint Armor",
+                          "1",
+                          "200 gp"
+                        ],
+                        [
+                          "Half Plate",
+                          "1",
+                          "750 gp"
+                        ]
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "entries",
+                  "name": "The Two Hammers: Enchanted Gear",
+                  "entries": [
+                    {
+                      "type": "table",
+                      "caption": "The Two Hammers: Enchanted Gear",
+                      "colLabels": [
+                        "Merchandise",
+                        "Available",
+                        "Price each / lot"
+                      ],
+                      "rows": [
+                        [
+                          "+1 Longsword (Uncommon)",
+                          "1",
+                          "400 gp"
+                        ],
+                        [
+                          "+1 Greataxe (Uncommon)",
+                          "1",
+                          "400 gp"
+                        ],
+                        [
+                          "+1 Scimitar (Uncommon)",
+                          "1",
+                          "400 gp"
+                        ],
+                        [
+                          "+1 Shield (Uncommon)",
+                          "1",
+                          "400 gp"
+                        ],
+                        [
+                          "Javelin of Lightning (Uncommon)",
+                          "1",
+                          "400 gp"
+                        ],
+                        [
+                          "Mithral Scale Mail (Uncommon)",
+                          "1",
+                          "400 gp"
+                        ],
+                        [
+                          "Armor of Gleaming: Chain Mail (Common)",
+                          "1",
+                          "100 gp"
+                        ]
+                      ]
+                    }
+                  ]
+                },
+                "Ordinary Scale Mail is always listed separately from the Mithral Scale Mail. The nonmagical suit provides AC 14 + DEX modifier (maximum +2) and imposes Stealth disadvantage under the game's standard armor rules. Mithral Scale Mail is magical, removes its normal Stealth disadvantage, and otherwise uses the armor's normal AC.",
+                "Commissions: custom or specially fitted ordinary gear is approximately +50% of the catalog's normal price and takes 1–3 weeks, according to complexity and workload; Maten can refit armor for different body plans. His superior workmanship does NOT automatically produce +1 attack, damage, or AC. Enchanted inventory above is acquired merchandise; neither smith must be an enchanter. Magical commissions are not automatically available."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Jord's Odds & Ends — Jord",
+              "entries": [
+                "Jord is an 86-year-old gnome traveling merchant with sandy, untidy hair, large expressive eyebrows, spectacles sliding down his nose, a patched good-quality coat with too many pockets, broad work-worn shoulders, and the dust of the road about him. Cheerful, quick-talking, resourceful, and a shrewd bargainer; he rummages while he speaks. His wagon carries practical goods, trade-ins, curiosities, and the occasional extraordinary acquisition. The party recovered his stolen strongbox and missing horse; he already rewarded them and promised a discount on future purchases.",
+                "Portrayal cue: \"I had two, sold one outside the city, and the other might still be—ah! There it is!\"",
+                {
+                  "type": "entries",
+                  "name": "Jord: Traveling Adventuring Supplies",
+                  "entries": [
+                    {
+                      "type": "table",
+                      "caption": "Jord: Traveling Adventuring Supplies",
+                      "colLabels": [
+                        "Merchandise",
+                        "Available",
+                        "Price each / lot"
+                      ],
+                      "rows": [
+                        [
+                          "Backpack",
+                          "3",
+                          "2 gp"
+                        ],
+                        [
+                          "Bedroll",
+                          "4",
+                          "1 gp"
+                        ],
+                        [
+                          "Hemp rope, 50 ft",
+                          "3",
+                          "1 gp"
+                        ],
+                        [
+                          "Silk rope, 50 ft",
+                          "1",
+                          "10 gp"
+                        ],
+                        [
+                          "Grappling Hook",
+                          "2",
+                          "2 gp"
+                        ],
+                        [
+                          "Crowbar",
+                          "2",
+                          "2 gp"
+                        ],
+                        [
+                          "Healer's kit",
+                          "3",
+                          "5 gp"
+                        ],
+                        [
+                          "Hooded lantern",
+                          "2",
+                          "5 gp"
+                        ],
+                        [
+                          "Oil, flask",
+                          "8",
+                          "1 sp"
+                        ],
+                        [
+                          "Rations, 1 day",
+                          "12",
+                          "5 sp"
+                        ],
+                        [
+                          "Manacles",
+                          "2",
+                          "2 gp"
+                        ],
+                        [
+                          "Hunting Trap",
+                          "1",
+                          "5 gp"
+                        ],
+                        [
+                          "Arrows, 20",
+                          "3",
+                          "1 gp / bundle"
+                        ]
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "entries",
+                  "name": "Jord: Secondhand Weapons and Armor (functional)",
+                  "entries": [
+                    {
+                      "type": "table",
+                      "caption": "Jord: Secondhand Weapons and Armor (functional)",
+                      "colLabels": [
+                        "Merchandise",
+                        "Available",
+                        "Price each / lot"
+                      ],
+                      "rows": [
+                        [
+                          "Dagger",
+                          "4",
+                          "2 gp"
+                        ],
+                        [
+                          "Shortsword",
+                          "2",
+                          "10 gp"
+                        ],
+                        [
+                          "Handaxe",
+                          "2",
+                          "5 gp"
+                        ],
+                        [
+                          "Light Crossbow",
+                          "1",
+                          "25 gp"
+                        ],
+                        [
+                          "Shield",
+                          "2",
+                          "10 gp"
+                        ],
+                        [
+                          "Leather Armor",
+                          "1",
+                          "10 gp"
+                        ],
+                        [
+                          "Chain Shirt",
+                          "1",
+                          "50 gp"
+                        ]
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "entries",
+                  "name": "Jord: Magic in the Wagon — Opening Snapshot",
+                  "entries": [
+                    {
+                      "type": "table",
+                      "caption": "Jord: Magic in the Wagon — Opening Snapshot",
+                      "colLabels": [
+                        "Merchandise",
+                        "Available",
+                        "Price each / lot"
+                      ],
+                      "rows": [
+                        [
+                          "Potion of Healing",
+                          "2",
+                          "50 gp"
+                        ],
+                        [
+                          "Potion of Climbing",
+                          "1",
+                          "100 gp"
+                        ],
+                        [
+                          "Spell scroll: Feather Fall (1st)",
+                          "1",
+                          "100 gp"
+                        ],
+                        [
+                          "Clockwork Amulet (Common)",
+                          "1",
+                          "100 gp"
+                        ],
+                        [
+                          "Rope of Climbing (Uncommon)",
+                          "1",
+                          "400 gp"
+                        ],
+                        [
+                          "Bag of Tricks, Gray (Uncommon)",
+                          "1",
+                          "400 gp"
+                        ],
+                        [
+                          "Daern's Instant Fortress (Rare)",
+                          "1",
+                          "4,000 gp"
+                        ]
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "entries",
+                  "name": "Jord: Oddities and Trade-ins",
+                  "entries": [
+                    {
+                      "type": "table",
+                      "caption": "Jord: Oddities and Trade-ins",
+                      "colLabels": [
+                        "Merchandise",
+                        "Available",
+                        "Price each / lot"
+                      ],
+                      "rows": [
+                        [
+                          "Collapsible ten-foot pole, mundane",
+                          "1",
+                          "4 gp"
+                        ],
+                        [
+                          "Brass telescope with cracked lens",
+                          "1",
+                          "8 gp"
+                        ],
+                        [
+                          "Set of loaded dice",
+                          "1",
+                          "3 gp"
+                        ],
+                        [
+                          "Incomplete silver-plated dinner service",
+                          "1",
+                          "12 gp"
+                        ],
+                        [
+                          "Hand-drawn regional roads map",
+                          "1",
+                          "5 gp"
+                        ],
+                        [
+                          "Barrel of sixty pounds of salt",
+                          "1",
+                          "5 gp"
+                        ],
+                        [
+                          "Tiny mechanical songbird, needs repair",
+                          "1",
+                          "15 gp"
+                        ],
+                        [
+                          "Convincing fake mustaches",
+                          "4",
+                          "5 sp"
+                        ],
+                        [
+                          "Locked wooden box, contents unknown to Jord",
+                          "1",
+                          "10 gp"
+                        ],
+                        [
+                          "Pair of boots with mismatched heel heights",
+                          "1",
+                          "2 gp"
+                        ]
+                      ]
+                    }
+                  ]
+                },
+                "Discount continuity: Jord DID promise a party discount after the strongbox-and-horse incident. A permanent percentage has not yet been agreed; 20% was proposed but never canonized. The table above shows regular asking prices. At checkout, honor the promised discount and record the chosen rate rather than silently imposing a new permanent percentage.",
+                "Random acquisition policy: Jord's magical stock is genuinely random and is NEVER capped by the party's current level or funds. He can carry rare, very rare, or legendary items. High-powered acquisitions are saleable at real prices, not automatically restricted to quests. Stock is persistent; items depart when sold, traded, lost, or legitimately moved on. He normally has 2–5 magical entries after a meaningful resupply; reroll only new acquisitions, never his entire existing inventory. The Rare Daern's Instant Fortress in this opening snapshot illustrates that rule.",
+                {
+                  "type": "entries",
+                  "name": "Jord's Magical Acquisitions — Rarity Roll (d100)",
+                  "entries": [
+                    {
+                      "type": "table",
+                      "caption": "Jord's Magical Acquisitions — Rarity Roll (d100)",
+                      "colLabels": [
+                        "d100",
+                        "Rarity",
+                        "Chance",
+                        "Catalog baseline"
+                      ],
+                      "rows": [
+                        [
+                          "01–30",
+                          "Common",
+                          "30%",
+                          "100 gp"
+                        ],
+                        [
+                          "31–70",
+                          "Uncommon",
+                          "40%",
+                          "400 gp"
+                        ],
+                        [
+                          "71–90",
+                          "Rare",
+                          "20%",
+                          "4,000 gp"
+                        ],
+                        [
+                          "91–98",
+                          "Very Rare",
+                          "8%",
+                          "40,000 gp"
+                        ],
+                        [
+                          "99–100",
+                          "Legendary",
+                          "2%",
+                          "200,000 gp"
+                        ]
+                      ]
+                    }
+                  ]
+                },
+                "On each NEW magical acquisition, roll d100 for rarity, then choose or randomly determine an existing magic item of that rarity whose provenance and physical size fit the transaction. Consumables can use their specific catalog prices instead. The table is a stock-generation aid, not permission to replace old stock at every party visit. A result being very rare or legendary does not make it a plot hook. Players may be unable to afford the item until much later."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Party Gear Snapshot (Advisory, Not Stock-Tailoring Rules)",
+              "entries": [
+                "Arunem: regular Scale Mail, greataxe, four handaxes, Potion of Healing, Oil of Slipperiness, scroll of Lesser Restoration. Pepper: Chain Shirt, shield, mace, two shortswords, Decanter of Endless Water, Potion of Climbing, and additional salvaged weapons, Holy Water and Kaleb's notebook. Jarrock: Studded Leather, two scimitars, dart, Poisoner's Kit, Thieves' Tools, potion of Healing, and ordinary adventuring supplies. Aaron's current equipment is unknown. These are references only; the shops do not stock to party demand.",
+                "Rules reminder: a Chain Shirt is AC 13 + DEX (max +2) without Stealth disadvantage, Scale Mail is AC 14 + DEX (max +2) with Stealth disadvantage, and Studded Leather is AC 12 + full DEX. An ordinary suit of Scale Mail does not upgrade Arunem, who already has one. Do not mistake magic armor's listed rarity price for a full set of custom work.",
+                "Revisiting inventory: after a party visit, edit individual quantities in this appendix or record sales in session notes. This is a reference snapshot, not a synchronized transaction system."
               ]
             }
           ]
