@@ -6,17 +6,17 @@
         "json": "NCFA",
         "abbreviation": "NCFA",
         "full": "No Cause for Alarm: Ruins of Bellweather",
-        "version": "4.38",
+        "version": "4.39",
         "authors": [
           "No Cause for Alarm Campaign"
         ],
-        "dateLastModified": 1792076400
+        "dateLastModified": 1792095600
       }
     ],
     "edition": "one",
     "dateAdded": 1789528955,
-    "dateLastModified": 1792076400,
-    "_dateLastModifiedHash": "ncfa-v438-bellwether-merchants-and-stock"
+    "dateLastModified": 1792095600,
+    "_dateLastModifiedHash": "ncfa-v439-noren-well-crown-weavehouse"
   },
   "adventure": [
     {
@@ -96,12 +96,14 @@
         {
           "name": "Chapter 6: Bellweather Under the Crown",
           "headers": [
+            "Start in the Well: Noren and His Veteran",
             "Chapter Overview",
             "At the Table: Immediate Changes",
             "Open Locations and People",
             "Session Anchors: Brakkus, Jord, Bishop Brann, and Tulcornix",
             "Pepper: Existing Sentence, Low Administrative Priority",
             "Kaleb's Family and Tulcornix Avemvir",
+            "If They Go to Cardon Weavehouse Immediately",
             "Running a Three-Hour Social Session",
             "Rewards and Advancement"
           ]
@@ -400,7 +402,8 @@
                 "The former Council transferred Bellweather to the Crown. Koven House is Crown HQ; Bishop Brann stayed; Brakkus's Ledger House remains independent. Prepare a roleplay-led return with no compulsory combat.",
                 "Pepper is a cleric, not a rogue. She completed one unpaid Council job and owes four paid missions under the former Council's unresolved judgment. Brakkus no longer supervises her house arrest, and the newly arrived Crown is occupied with citywide records; Jord may advise keeping a low profile. Do not force Crown service or an arrest subplot. Jarrock and Pepper's personal conflict continues.",
                 "Next return session: Brakkus sits all the PCs down to ask about themselves; Jord and Bishop Brann each have their own perspective on the Crown's changes; Tulcornix Avemvir must arrive late with news that Kaleb's wife is indentured and needs help. No mandatory fight or resistance quest.",
-                "Do not use obsolete Council commission and Perrin-as-First-Councilor predictions in the unplayed Chapters 7–17 as facts. See Appendix I for confirmed and unresolved continuity."
+                "Do not use obsolete Council commission and Perrin-as-First-Councilor predictions in the unplayed Chapters 7–17 as facts. See Appendix I for confirmed and unresolved continuity.",
+                "This week's start: Noren and his veteran are still captive in Kellan's Well; decide whether to kill, release, or give to city watch before returning to Bellweather. Kill or hand over Noren = out of campaign; release = later underground resistance resource. Cardon Weavehouse street-facing annex holds Elowen under Crown indenture; Tulcornix arrives late with wing injured by work hauling near the annex."
               ]
             },
             {
@@ -2512,6 +2515,17 @@
             "{@b Recommended level:} 4. The return from Kellan's Well is a roleplay-led session. No encounter is scheduled; no automatic level advancement is attached to the old Koven House criminal-network plan.",
             {
               "type": "entries",
+              "name": "Start in the Well: Noren and His Veteran",
+              "entries": [
+                "Start this week's session INSIDE Kellan's Well, not with a transition to Bellweather. Noren, the leader of the Iron Covenant, and his Warrior Veteran remain alive and bound. Their fate is not decided. Let the party search, talk, and decide without a scripted outcome.",
+                "Kill Noren: Noren is permanently out of the campaign. Handle the veteran's fate as the players actually decide. Do not immediately introduce a replacement Noren or contrive an escape.",
+                "Turn Noren over to city watch: the city gate watch accepts securely bound prisoners with the party's report that they were captured occupying Kellan's Well. The old municipal watch is undergoing a Crown transition but can still take custody without any royal petition. Noren is permanently removed from the campaign. He is not later freed or returned as an antagonist. The veteran can be turned over as well.",
+                "Release Noren: he withdraws from public view, continues managing the Iron Covenant's criminal network underground, and can become useful to the resistance to royal rule later. He is not instantly a loyal ally and does not announce a rebellion. Any choice made separately for the veteran still matters.",
+                "Noren can bargain and warn them about the Crown, which he already disclosed last session, but he is bound and has no automatic escape. Allow 10–25 minutes for this opening (or more if the players invest in it). They then leave the Well by their own route and choose what to do in Bellweather. No forced travel montage or Council summons."
+              ]
+            },
+            {
+              "type": "entries",
               "name": "Chapter Overview",
               "entries": [
                 "{@b Premise.} The adventurers left a free Bellweather and return to a city transferred to the Crown. Noren warned them at the Well; now the city itself verifies his warning.",
@@ -2529,7 +2543,9 @@
               "entries": [
                 "Choose concrete details appropriate to the time that has passed: new banners on familiar buildings; clerks copying records; workers paid to change signs; merchants revising prices; ordinary residents wondering whether old promises still hold. Do not present every change as a fight or a clue.",
                 "A royal proclamation can display absurd entitlement while remaining legally consequential. Write any specific tax, decree, punishment, or royal title to match decisions made at the table; no unapproved invented statute is canon yet.",
-                "The takeover began before the party arrived back in town. Background jobs, family obligations and unrelated disputes continue. Not every citizen agrees the change is bad, and not every Crown employee is malicious."
+                "The takeover began before the party arrived back in town. Background jobs, family obligations and unrelated disputes continue. Not every citizen agrees the change is bad, and not every Crown employee is malicious.",
+                "Ready city detail: workers remove a FREE CITY OF BELLWEATHER sign and install the Crown's insignia; they squabble over who gets to keep the old brass lettering. At the gates the same watchmen now carry newly stamped Crown papers. A royal clerk insists a proclamation must be hung at a height suited to a monarch looking down from horseback. These are visible facts, not required quests.",
+                "An ordinary merchant complains about replacement trade permits; a laborer appreciates finally being paid for a repair; a former Council clerk worries about losing a livelihood. Citizens can disagree without becoming automatic loyalists or rebels."
               ]
             },
             {
@@ -2540,7 +2556,8 @@
                 "{@b Koven House.} Now a Crown headquarters rather than the criminal hideout described in the obsolete draft. Visitors may seek appointments, information, redress, favors, or documents. No forced infiltration and no mandatory arrest.",
                 "{@b Markets, taverns, workers' streets.} Show people adapting. Some prosper, some lose jobs or rights, some are mostly interested in groceries, family, pay, or a missing shipment. Let the party decide which conversations matter.",
                 "{@b Former Council staff.} Those left behind may disagree about the deal, worry about their futures, or know procedures the party can question. Do not imply the old Council still commissions official missions.",
-                "{@b Bishop Brann.} He remained in Bellweather. His views follow his religious and civic duties; they are not automatically the same as Brakkus's or the Crown's."
+                "{@b Bishop Brann.} He remained in Bellweather. His views follow his religious and civic duties; they are not automatically the same as Brakkus's or the Crown's.",
+                "Cardon Weavehouse: the Crown has commandeered a street-facing textile work annex at the edge of the larger, disputed property. Kaleb's wife, Elowen, is indentured here. This does not mean the Crown controls the entire Weavehouse, Perrin Cardon arranged the servitude, or the old unplayed Chapter 8 armed occupation has already been resolved. The annex can be visited without entering the entire compound."
               ]
             },
             {
@@ -2584,7 +2601,11 @@
                     "Tulcornix Avemvir is Kaleb's adopted brother, an aarakocra. His appearance during this session is non-negotiable. He brings the news that Kaleb's wife has been placed in indentured service under the Crown and needs to be rescued.",
                     "Aim for his arrival after the group has had time to experience the changed city and Brakkus's conversation. If the players go somewhere unexpected, adjust the plausible delivery route—he seeks out the people linked to Kaleb or follows information about their location—but do not erase his arrival to honor an arbitrary schedule.",
                     "He has a reason to seek help and a relationship to the murdered Kaleb. Let that shape his demeanor. He must not require Pepper to repent or force the group to accept a mission. The party may help, refuse, investigate, divide, or propose something else.",
-                    "Let the request and the ensuing conversation breathe. The arrival is guaranteed; the outcome is entirely player-driven."
+                    "Let the request and the ensuing conversation breathe. The arrival is guaranteed; the outcome is entirely player-driven.",
+                    "Tulcornix has a conspicuously splinted and injured wing; he cannot safely fly when he arrives. While doing paid hauling/loading work at the street-facing Cardon Weavehouse annex to be near his sister-in-law, a shifting loom timber struck it. This was a worksite accident, not a secret attempt to silence him. He is able to walk, speak, and seek the party.",
+                    "If a character applies appropriate healing magic, allow Tulcornix's injured wing to mend enough for flight. This doesn't solve his problem: Elowen remains subject to a Crown indenture in a watched worksite.",
+                    "Tulcornix can name Cardon Weavehouse immediately, has personally seen Elowen in the annex, knows which entrance workers use, and can guide the party there. Core information is not gated by a skill check. He does not know the old compound's entire interior.",
+                    "Opening option: \"Kaleb's wife is at the Cardon Weavehouse. They call it a debt. They won't let her leave. I tried to get closer—\" He indicates his splinted wing. \"I need help getting her out.\""
                   ]
                 }
               ]
@@ -2607,6 +2628,9 @@
               "name": "Kaleb's Family and Tulcornix Avemvir",
               "entries": [
                 "Kaleb's wife is now an indentured servant of the Crown. His adopted brother Tulcornix Avemvir is an aarakocra who {@b must arrive during this session} and report that she needs help. Plan his appearance as the final major story beat, after the other people and the city have had space; his arrival is not optional.",
+                "Kaleb's widow is Elowen, an unwilling Crown-indenture textile worker in the street-facing Cardon Weavehouse annex. She is alive, can speak for herself, and is working in the cloth-sorting area. Her contract is not related to Pepper's old Council-service judgment. Elowen's daughter is currently safe with a trusted neighbor in Bellweather; her health and future need for healing remain unplayed, and no demand that Pepper heal her is imposed.",
+                "The public work ledger lists a made-up 'municipal recovery debt' of 150 gp and a royal processing fee of 50 gp, total 200 gp for an outright discharge, but this is the Crown's asserted price, not proof the indenture is just. Evidence, advocacy, a petition, negotiation, rescue or other actions can change the situation. There is no mandatory buyout.",
+                "While the Crown administers a street-facing work annex, Perrin's family claim, the old Weavehouse map, and previous unplayed occupants deeper in the property remain unresolved. Do not make Perrin the author of this indenture or use old Chapter 8 enemies as automatic reinforcements.",
                 "The encounter is a consequence of people making choices, not a designed guilt trap. Tulcornix wants assistance for a person he cares about, whether or not Pepper expresses remorse.",
                 "Tulcornix's actual arrival cannot be skipped, even if the party leaves Ledger House or pursues a different activity. Adjust his credible route to the party instead of teleporting him or forcing them into a location. If the party independently learns what happened beforehand, he still arrives with his personal request and perspective; do not conceal known facts to preserve a theatrical revelation.",
                 "A prior outline connected Kaleb's widow and daughter to a healing request. Do not require that exact request unless it still fits the circumstances and current story."
@@ -2614,8 +2638,21 @@
             },
             {
               "type": "entries",
+              "name": "If They Go to Cardon Weavehouse Immediately",
+              "entries": [
+                "The party can visit the textile work annex without running the entire older Weavehouse adventure. It has a public loading yard and work counter, staff-only door, cloth-sorting room, and ledger desk, with no need for an additional tactical map unless a fight develops.",
+                "Present at the street-facing annex: two uniformed watchmen ({@creature Guard|XMM}), one clerk ({@creature Commoner|XMM}), six ordinary laborers including Elowen. Those are all guards assigned to this annex for the present scene. Do not summon unlisted Chapter 8 occupants as a surprise wave.",
+                "The clerk will allow general questions and public-counter business. The work ledger openly identifies Elowen, her assignment, and the 150 gp + 50 gp claimed debt/processing charges. Workers cannot leave their contracts voluntarily. The watchmen prevent unauthorized departures, but do not attack mere visitors.",
+                "Let plausible plans work: submit or challenge the bond at Koven House, bargain or buy out the debt, speak with Elowen, forge an authorization, create a distraction, quietly extract her, or confront the guards. A reasonable public inquiry needs no roll. For disputed access use DC 13 Charisma (Deception or Persuasion) as appropriate; to open a secured staff latch use DC 15 Dexterity (Thieves' Tools), or DC 15 Strength (Athletics) to force. Obvious clever approaches succeed without checks. The watchmen can withdraw or surrender if overwhelmed, not fight suicidally.",
+                "Koven House's ground-floor public registry accepts paperwork and inquiries without a check; a clerk can identify the Cardon annex and bond office. It does not automatically search for Pepper's obsolete Council sentence. A higher official's involvement follows player actions, not a forced royal meeting.",
+                "Elowen wants her freedom and to return to her daughter. She can speak for herself and is not automatically grateful to Pepper for anything. If the party acts immediately, let the outcome be determined by the method they choose; no forced confrontation and no insistence on ending the session at Tulcornix's arrival."
+              ]
+            },
+            {
+              "type": "entries",
               "name": "Running a Three-Hour Social Session",
               "entries": [
+                "Flexible 3.5-hour target (not forced scene order): Noren decision at the Well 10–25 minutes; journey and first city impressions 15–30; free exploration and shopping 30–65; Brakkus's table conversation 30–65; Jord/Bishop when the party naturally meets them 20–40; Tulcornix and response 15–30. Keep slack for player choice, investigation or an early trip to Cardon; don't manufacture combat to fill time.",
                 "Prepare NPC motives, current stakes, and consequences rather than a mandatory sequence. Give each player an opening to state a goal, and follow the actions the table actually chooses.",
                 "{@b Session priority.} The principal personal scene is Brakkus asking the whole party who they are. Jord and Bishop Brann must have roles tied to their own lives and the change of government. Pepper's unresolved sentence receives a brief, practical note, not an investigation or legal hearing. Tulcornix arrives as the guaranteed final major development.",
                 "{@b Opposition is an option, not a contract.} The party is free to oppose, tolerate, exploit or ignore the Crown. Do not have Brakkus, Jord or Brann recruit the group as a mandatory resistance cell. Respect decisions even when they spoil planned pacing.",
@@ -3135,7 +3172,8 @@
               "entries": [
                 "This chapter retains usable locations, DM maps, NPCs, clues, encounter elements, and reward ideas from the pre-Crown reclamation outline. It has NOT yet been reconciled with the Council's completed sale of Bellweather to the Crown.",
                 "Any proposed Council contract, Council payment, Council authority, Perrin promotion to Council leadership, fixed plot sequence, or automatic level advancement written below is provisional, not current campaign canon. Choose a credible sponsor and political state when the party reaches this site; do not invent a restored Council or a predetermined royal overthrow.",
-                "Appendix I governs established facts. Preserve independent motives and genuine alternatives; do not treat the former outline as a script."
+                "Appendix I governs established facts. Preserve independent motives and genuine alternatives; do not treat the former outline as a script.",
+                "Chapter 6 now prepares a Crown-indentured textile work annex facing the public street at Cardon Weavehouse, holding Elowen. This does not overwrite the old property map, settle Perrin's family claim, or confirm the unplayed Korrin occupation. Annex guard/clerk roster lives in Chapter 6. If players explore beyond the annex, reconcile the older occupation before using Chapter 8 rather than combining contradictory statuses or spawning old enemies as reinforcements."
               ]
             },
             "{@b Recommended level:} 5",
@@ -10799,7 +10837,9 @@
                 "Kaleb's wife has become an indentured servant of the Crown. His adopted brother Tulcornix Avemvir, an aarakocra, must personally arrive this session with the news that she needs rescuing. His arrival is guaranteed but Pepper's feelings and the party's decisions are not predetermined.",
                 "{@b Locked Pepper handling.} Pepper's four remaining paid service obligations imposed by the old Council are unresolved, NOT dismissed or automatically transferred into Crown missions. Brakkus stops supervising her former-Council house arrest and does not volunteer her case to the Crown; Jord can suggest staying under the radar. The Crown's administrative workload means nobody is currently prioritizing the case. No automatic arrest timer, offscreen warrant, forced service, or compulsory legal-hearing subplot. Future attention requires a credible in-world cause or player action.",
                 "Brakkus, Crown officers, merchants, tradespeople, former officials, and ordinary residents each pursue their own interests. The city reacts to the change but is not a single uniform opposition faction.",
-                "The players expressed interest in eventually playing to level 20, but no campaign extension, milestones, or finale level has been approved. The current 3–16 outline remains a planning framework only."
+                "The players expressed interest in eventually playing to level 20, but no campaign extension, milestones, or finale level has been approved. The current 3–16 outline remains a planning framework only.",
+                "PREPARED START: open in Kellan's Well with Noren and his veteran captive, alive and tied. Killing Noren or turning him over to city guard removes him from the campaign permanently; releasing him sends him underground with the Iron Covenant network, potentially useful to resistance later. Then the party chooses its activities in Bellweather.",
+                "PREPARED FAMILY: Kaleb's widow Elowen is indentured in a Crown-administered textile annex at Cardon Weavehouse; Crown asserts 200 gp to discharge its manufactured bond (150 gp charge plus 50 gp fee). Her daughter stays safely with a trusted local neighbor. Tulcornix worked loading cargo near her and suffered a broken wing from a shifting loom beam. His arrival late this session is planned; healing his wing does not free Elowen. The deeper Weavehouse occupation and ownership from old Chapter 8 are still provisional."
               ]
             },
             {
