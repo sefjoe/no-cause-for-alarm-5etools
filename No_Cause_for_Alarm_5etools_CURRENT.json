@@ -6,17 +6,17 @@
         "json": "NCFA",
         "abbreviation": "NCFA",
         "full": "No Cause for Alarm: Ruins of Bellweather",
-        "version": "4.39",
+        "version": "4.40",
         "authors": [
           "No Cause for Alarm Campaign"
         ],
-        "dateLastModified": 1792095600
+        "dateLastModified": 1792166400
       }
     ],
     "edition": "one",
     "dateAdded": 1789528955,
-    "dateLastModified": 1792095600,
-    "_dateLastModifiedHash": "ncfa-v439-noren-well-crown-weavehouse"
+    "dateLastModified": 1792166400,
+    "_dateLastModifiedHash": "ncfa-v440-approved-crown-map"
   },
   "adventure": [
     {
@@ -96,6 +96,7 @@
         {
           "name": "Chapter 6: Bellweather Under the Crown",
           "headers": [
+            "Map: Bellweather Under Crown Administration",
             "Start in the Well: Noren and His Veteran",
             "Chapter Overview",
             "At the Table: Immediate Changes",
@@ -831,6 +832,17 @@
                       "type": "image",
                       "href": {
                         "type": "external",
+                        "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/bellweather_crown_approved_2026-10-15.webp"
+                      },
+                      "imageType": "map",
+                      "title": "Bellweather — Crown Administration (Approved October 15, 2026)",
+                      "width": 1448,
+                      "height": 1086
+                    },
+                    {
+                      "type": "image",
+                      "href": {
+                        "type": "external",
                         "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/ledger_house.webp"
                       },
                       "imageType": "map",
@@ -839,7 +851,8 @@
                       "height": 1024
                     }
                   ]
-                }
+                },
+                "The approved Crown-era overview is the authoritative current geography of Bellweather after reclamation of the South Ward and establishment of Crown control. Use the original map as historical reference only; do not substitute regenerated layouts."
               ]
             },
             "{@b Recommended level:} 3–16 (recurring hub)",
@@ -2512,6 +2525,30 @@
           "id": "006",
           "name": "Chapter 6: Bellweather Under the Crown",
           "entries": [
+            {
+              "type": "entries",
+              "name": "Map: Bellweather Under Crown Administration",
+              "entries": [
+                {
+                  "type": "gallery",
+                  "images": [
+                    {
+                      "type": "image",
+                      "href": {
+                        "type": "external",
+                        "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/bellweather_crown_approved_2026-10-15.webp"
+                      },
+                      "imageType": "map",
+                      "title": "Bellweather — Crown Administration (Approved October 15, 2026)",
+                      "width": 1448,
+                      "height": 1086
+                    }
+                  ]
+                },
+                "{@link Open the approved Bellweather Crown map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/bellweather_crown_approved_2026-10-15.webp}",
+                "Approved campaign map dated October 15, 2026. Shows Crown banners, the expanded walls, the restored South Ward (former Slums), the restored approach around Blackstone Temple, Maren Isle and the established city landmarks. This is the approved current geography; the PNG master remains archived unmodified in the NCFA Library."
+              ]
+            },
             "{@b Recommended level:} 4. The return from Kellan's Well is a roleplay-led session. No encounter is scheduled; no automatic level advancement is attached to the old Koven House criminal-network plan.",
             {
               "type": "entries",
