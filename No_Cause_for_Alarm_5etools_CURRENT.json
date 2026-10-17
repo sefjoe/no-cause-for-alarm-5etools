@@ -6,7 +6,7 @@
         "json": "NCFA",
         "abbreviation": "NCFA",
         "full": "No Cause for Alarm: Ruins of Bellweather",
-        "version": "4.47",
+        "version": "4.48",
         "authors": [
           "No Cause for Alarm Campaign"
         ],
@@ -16,7 +16,7 @@
     "edition": "one",
     "dateAdded": 1789528955,
     "dateLastModified": 1792208700,
-    "_dateLastModifiedHash": "ncfa-v447-koven-map-defense-playtest"
+    "_dateLastModifiedHash": "ncfa-v448-koven-assault-crossref-playtest"
   },
   "adventure": [
     {
@@ -2487,7 +2487,7 @@
                   "name": "Transition to the Royal Takeover",
                   "entries": [
                     "When the party returns to Bellweather, they see confirmation of Noren's warning: the Council finalized transfer of the free city to the Crown while the party was away.",
-                    "Koven House is now the Crown's local headquarters. The Bishop stayed. Brakkus and Ledger House remain independent. Royal authorities claim Pepper's remaining four service obligations transferred with Bellweather.",
+                    "Koven House is now the Crown's local headquarters. Bishop Brann stayed; Brakkus and Ledger House remain independent. Pepper completed her first compulsory unpaid Council mission, but her four remaining paid Council jobs have NOT automatically become Crown assignments. The Crown has not prioritized her file or initiated arrest.",
                     "Treat that reveal as its own roleplay session rather than an epilogue to Kellan's Well. The session should end with Tulcornix Avemvir, Kaleb's adopted Aarakocra brother, bringing urgent news that Kaleb's wife needs to be rescued."
                   ]
                 },
@@ -2582,7 +2582,8 @@
                 "Shopping resale rule: the 2024 PHB sells usable mundane equipment at half its listed cost and trade valuables at full face value; Appendix J now includes fast prices. The 75 gp fixed salvage valuables in the Well's 375 gp total are already valued and must not be counted twice.",
                 "If shopping, government inquiry or an unrelated detour consumes most of the evening, Brakkus/Jord/Brann still pursue their independent Ledger House business without a staged encounter for absent PCs. Keep Tulcornix's confrontation as the final scene, and move any unfinished dinner or money handoff to a later visit instead of bending geography.",
                 "Koven House attack contingency: six total Guard stat blocks (2 entrance, 2 lobby, 2 landing) plus one Warrior Veteran sergeant inside the temporary headquarters, with two civilian clerks. Follow real alarm and travel time; barracks soldiers are NOT immediate reinforcements. The Crown responds to an actual attack as a new offense. If the party's arrest, death, or hiding makes Tulcornix's planned appearance implausible, let that outcome stand rather than teleporting him.",
-                "KOVEN HOUSE PLAYTEST MAP OVERRIDE: The existing DM key has no reliably marked upper landing; guard posts are courtyard area 1 (2 Guards), registry/main room 6 (2 Guards and two Commoner clerks), side duty room 11 (Veteran), records corridor 20/24 (2 Guards). Guards rally at doors rather than trickle into the party's attacks. Winning beats the finite local force; outside response requires physically transmitted alarm and travel."
+                "KOVEN HOUSE PLAYTEST MAP OVERRIDE: The existing DM key has no reliably marked upper landing; guard posts are courtyard area 1 (2 Guards), registry/main room 6 (2 Guards and two Commoner clerks), side duty room 11 (Veteran), records corridor 20/24 (2 Guards). Guards rally at doors rather than trickle into the party's attacks. Winning beats the finite local force; outside response requires physically transmitted alarm and travel.",
+                "SUPERSEDED CROSS-REFERENCES: The old Chapter 5 note that Pepper's four Council missions automatically transferred to the Crown was wrong and is corrected; Chapter 6 controls. Appendix B's former guarantee of Koven House uncommon magic treasure also referred to the unplayed criminal adventure and is superseded. A victory at the new royal headquarters earns only what is physically found and consequences of the attack."
               ]
             },
             "{@b Recommended level:} 4. The return from Kellan's Well is a roleplay-led session. No encounter is scheduled; no automatic level advancement is attached to the old Koven House criminal-network plan.",
@@ -2664,7 +2665,9 @@
                 "{@b Session 4 ending under player-caused upheaval.} Tulcornix still seeks Pepper specifically. If she evades pursuit, he can approach her through credible sightings, including at Ledger House if she returns, and his confrontation ends Session 4. If she is in royal custody or missing, DO NOT teleport Tulcornix into a secure prison or force a guard to grant access simply to hit the planned cliffhanger. Record the conflict, end at an earned stopping point, and use his confrontation when he can realistically reach her. This contingency supersedes the planned guaranteed closing scene only where player actions genuinely make that scene implausible.",
                 "{@b Guard morale and attack distinction.} For a threat or shove, first establish whether force truly begins; don't roll initiative over mere insults. If players use nonlethal melee attacks, apply 2024 rules and record living captives accordingly; lethal spell attacks and dead guards cause materially different public consequences.",
                 "{@b Royal couple's location for this immediate playtest.} Reginald and Narcissa are the Crown's announced rulers but are not physically waiting behind Koven House's newly occupied offices during the party's first Session 4 visit. Their household/court establishment is still in progress during the first hours of control. The local sergeant and clerks cannot magically bring the prince and princess into an encounter. This establishes no permanent absence from Bellweather and no future immunity from player inquiry.",
-                "{@b Combat reality check.} Six Guards have 66 total HP, the Veteran 65 (131 combined before surrender/escape). The first two guards have only 22 HP combined and can be defeated in one party turn. Against the full group, a Light cleric's burst damage, Rogue Sneak Attack, Aaron's ranged/warlock tools and Arunem's melee pressure may take down several defenders before they retaliate. Conversely the Veteran's two attacks can threaten an already injured level-4 character. Check the party's actual remaining slots, Channel Divinity, HP, short-rest recoveries and rage before judging the difficulty: the full garrison is not necessarily six simultaneous opponents. Don't buff the garrison after the PCs exploit its staggered response."
+                "{@b Combat reality check.} Six Guards have 66 total HP, the Veteran 65 (131 combined before surrender/escape). The first two guards have only 22 HP combined and can be defeated in one party turn. Against the full group, a Light cleric's burst damage, Rogue Sneak Attack, Aaron's ranged/warlock tools and Arunem's melee pressure may take down several defenders before they retaliate. Conversely the Veteran's two attacks can threaten an already injured level-4 character. Check the party's actual remaining slots, Channel Divinity, HP, short-rest recoveries and rage before judging the difficulty: the full garrison is not necessarily six simultaneous opponents. Don't buff the garrison after the PCs exploit its staggered response.",
+                "{@b If the party downs the Veteran but fails to hold the building.} A defeated or wounded sergeant can be restrained, questioned, healed, or let go according to the PCs' choices and remaining staff's actions. He is a serving officer without special knowledge of the Council's private bargain beyond what reached his desk. No automatic death saves, teleport escape, or 'named boss' rescue is scripted. If interrogated, he can identify his own orders and who signed the local notice, but he cannot summon Reginald on demand.",
+                "{@b Aftermath if the party wins and searches.} Accessible evidence includes copies of the Stucky proclamation, newly signed guard billets, municipal title transfers, and an index referencing the former Council's rewards in money, outside land, and ducal honors. A search of secured records can confirm the substance of the bargain without a treasure chest or magical secret. A clerk or guardsman escaping through a real exit can carry identifying details to another guard post in minutes, not rounds. If the party kills all defenders, uninterrupted search time remains limited by when offsite reports could plausibly arrive."
               ]
             },
             {
@@ -8948,7 +8951,7 @@
                   ]
                 },
                 "{@b Attunement guardrail.} Before adding another permanent item, check the likely recipient. If that character already has three desirable attunement items, prefer a non-attunement item, consumable, story reward, gold or valuables, or an upgrade that replaces an existing item.",
-                "{@b Level-5 check.} After Kellan's Well, count meaningful permanent items owned by the party. With 0–1, place 2 uncommon rewards across the next two major treasure sites. With 2, add 1 uncommon reward at Koven House. With 3, add 1 uncommon at Koven House or Savin Keep. With 4 or more, no catch-up is needed. Do not award unusable filler merely to hit a number."
+                "{@b LEGACY / SUPERSEDED permanent-item pacing:} The former reclamation outline suggested allocating uncommon items to a future Koven House adventure. That Koven criminal encounter has been replaced by the Crown's offices. No guaranteed Koven treasure parcel, uncommon item, milestone, or new reward is attached to assaulting the current royal headquarters. Use actual recovered treasure from played adventures and plan future rewards where earned; do not treat a successful violent raid as triggering the old automatic catch-up reward."
               ]
             },
             {
