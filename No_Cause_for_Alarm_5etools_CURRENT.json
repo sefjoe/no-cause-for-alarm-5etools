@@ -6,17 +6,18 @@
         "json": "NCFA",
         "abbreviation": "NCFA",
         "full": "No Cause for Alarm: Ruins of Bellweather",
-        "version": "4.48",
+        "version": "4.49",
         "authors": [
           "No Cause for Alarm Campaign"
         ],
-        "dateLastModified": 1792208700
+        "dateLastModified": 1792208700,
+        "_dateLastModifiedHash": "ncfa-v449-session4-approved-ledger-house-map"
       }
     ],
     "edition": "one",
     "dateAdded": 1789528955,
     "dateLastModified": 1792208700,
-    "_dateLastModifiedHash": "ncfa-v448-koven-assault-crossref-playtest"
+    "_dateLastModifiedHash": "ncfa-v449-session4-approved-ledger-house-map"
   },
   "adventure": [
     {
@@ -98,20 +99,20 @@
           "name": "Chapter 6: Bellweather Under the Crown",
           "headers": [
             "Map: Bellweather Under Crown Administration",
+            "Map: Ledger House (Approved DM Map)",
+            "Session 4 DM Run Card — Royal Takeover",
             "Start in the Well: Noren and His Veteran",
             "Chapter Overview",
+            "House Stucky — Crown Authority and Public Announcement",
             "At the Table: Immediate Changes",
             "Open Locations and People",
+            "If They Attack Koven House — Finite Royal Defense",
             "Session Anchors: Brakkus, Jord, Bishop Brann, and Tulcornix",
             "Pepper: Existing Sentence, Low Administrative Priority",
             "Kaleb's Family and Tulcornix Avemvir",
             "If They Reach Cardon Weavehouse Before Tulcornix — or in Session 5",
-            "Running a Three-Hour Social Session",
-            "Rewards and Advancement",
-            "Session 4 DM Run Card — Royal Takeover",
-            "House Stucky — Crown Authority and Public Announcement",
             "Running a 3.5-Hour Social Session",
-            "If They Attack Koven House — Finite Royal Defense"
+            "Rewards and Advancement"
           ]
         },
         {
@@ -2564,6 +2565,30 @@
                 },
                 "{@link Open the approved Bellweather Crown map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/bellweather_crown_approved_2026-10-15.webp}",
                 "Approved campaign map dated October 15, 2026. Shows Crown banners, the expanded walls, the restored South Ward (former Slums), the restored approach around Blackstone Temple, Maren Isle and the established city landmarks. This is the approved current geography; the PNG master remains archived unmodified in the NCFA Library."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Map: Ledger House (Approved DM Map)",
+              "entries": [
+                {
+                  "type": "gallery",
+                  "images": [
+                    {
+                      "type": "image",
+                      "href": {
+                        "type": "external",
+                        "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/ledger_house.webp"
+                      },
+                      "imageType": "map",
+                      "title": "Ledger House",
+                      "width": 1536,
+                      "height": 1024
+                    }
+                  ]
+                },
+                "{@link Open the approved Ledger House map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/ledger_house.webp}",
+                "The existing approved Ledger House map is reused without edits from the Chapter 2 'Maps' gallery. This is the DM reference for Brakkus's inn, Session 4 dinner, Jord's lodging request, Bishop Brann's payment visit, and Tulcornix's intended late arrival. Do not replace it with an improvised or regenerated plan. The actual party location and player choices determine which entrances or rooms are used."
               ]
             },
             {
@@ -10234,6 +10259,7 @@
                 "{@link Kellan's Well — DM Key|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/kellans_well_table_ready.webp}",
                 "{@link Kerren Settlement — DM Key|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/kerren_settlement.webp}",
                 "{@link Koven House — DM Key|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/koven_house.webp}",
+                "{@link Ledger House — Approved DM Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/ledger_house.webp}",
                 "{@link Maren Isle — DM Key|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/maren_isle.webp}",
                 "{@link Marren Library — DM Key|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/marren_library.webp}",
                 "{@link Paden Square — DM Key|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/paden_square.webp}",
