@@ -6,7 +6,7 @@
         "json": "NCFA",
         "abbreviation": "NCFA",
         "full": "No Cause for Alarm: Ruins of Bellweather",
-        "version": "4.50",
+        "version": "4.51",
         "authors": [
           "No Cause for Alarm Campaign"
         ],
@@ -17,7 +17,7 @@
     "edition": "one",
     "dateAdded": 1789528955,
     "dateLastModified": 1792208700,
-    "_dateLastModifiedHash": "ncfa-v450-ledger-map-and-mini-pull-list"
+    "_dateLastModifiedHash": "ncfa-v451-brakkus-personal-mini"
   },
   "adventure": [
     {
@@ -100,7 +100,7 @@
           "headers": [
             "Map: Bellweather Under Crown Administration",
             "Map: Ledger House (Approved DM Map)",
-            "Session 4 Miniature Pull List — Numbered Arcknight Binder",
+            "Session 4 Miniature Pull List — Personal Brakkus Mini and Arcknight Binder",
             "Session 4 DM Run Card — Royal Takeover",
             "Start in the Well: Noren and His Veteran",
             "Chapter Overview",
@@ -2594,9 +2594,9 @@
             },
             {
               "type": "entries",
-              "name": "Session 4 Miniature Pull List — Numbered Arcknight Binder",
+              "name": "Session 4 Miniature Pull List — Personal Brakkus Mini and Arcknight Binder",
               "entries": [
-                "Use the user's permanently numbered 161-piece Arcknight binder. These are the exact NUMBERED physical figures identified in the binder's Original Photo Binder Index. Figures are representation/proxies, not necessarily exact character portraits. Only the Koven House defense is conditional; no planned combat in Session 4.",
+                "Use the original personal Brakkus Ledgerhelm miniature from when the DM played him at Hall of Heroes. All other listed figures are from the permanently numbered 161-piece Arcknight binder; their permanent numbers and locations are unchanged. Listed Arcknight figures are visual proxies unless an exact species match is identified. The Koven House guard set is conditional; no combat is planned.",
                 {
                   "type": "entries",
                   "name": "Pull for normal Session 4",
@@ -2606,7 +2606,7 @@
                       "items": [
                         "{@b #025 — Noren Vale (captive).} Red-cloaked swordsman; binder Page 04, Front, Top left. Represents captured half-elf criminal leader, despite figure's generic human appearance.",
                         "{@b #033 — Noren's Warrior Veteran (captive).} Shield-bearing swordsman; binder Page 05, Front, Top left.",
-                        "{@b #069 — Brakkus Ledgerhelm.} Half-orc warrior with axe; binder Page 09, Back, Top left. Species matches; his campaign equipment remains The Appendix longsword, not the pictured axe.",
+                        "{@b Brakkus Ledgerhelm — original personal character mini.} Bring the actual figure the DM used when he played Brakkus at Hall of Heroes. Do NOT pull Arcknight #069 for Brakkus; #069 remains in the binder as an available half-orc warrior proxy for a different character.",
                         "{@b #043 — Jord.} Blue-cloaked gnome; binder Page 06, Front, Bottom left.",
                         "{@b #048 — Bishop Brann.} Dwarf with warhammer; binder Page 06, Back, Bottom right. Species fits the older dwarf bishop; pictured weapon is not a requirement.",
                         "{@b #037 — Tulcornix Avemvir.} Aarakocra; binder Page 05, Back, Top left. Reserve for the ENDING confrontation; his wing is injured in fiction even if the miniature depicts flight."
@@ -2656,7 +2656,7 @@
                 "Koven House attack contingency: six total Guard stat blocks (2 entrance, 2 lobby, 2 landing) plus one Warrior Veteran sergeant inside the temporary headquarters, with two civilian clerks. Follow real alarm and travel time; barracks soldiers are NOT immediate reinforcements. The Crown responds to an actual attack as a new offense. If the party's arrest, death, or hiding makes Tulcornix's planned appearance implausible, let that outcome stand rather than teleporting him.",
                 "KOVEN HOUSE PLAYTEST MAP OVERRIDE: The existing DM key has no reliably marked upper landing; guard posts are courtyard area 1 (2 Guards), registry/main room 6 (2 Guards and two Commoner clerks), side duty room 11 (Veteran), records corridor 20/24 (2 Guards). Guards rally at doors rather than trickle into the party's attacks. Winning beats the finite local force; outside response requires physically transmitted alarm and travel.",
                 "SUPERSEDED CROSS-REFERENCES: The old Chapter 5 note that Pepper's four Council missions automatically transferred to the Crown was wrong and is corrected; Chapter 6 controls. Appendix B's former guarantee of Koven House uncommon magic treasure also referred to the unplayed criminal adventure and is superseded. A victory at the new royal headquarters earns only what is physically found and consequences of the attack.",
-                "MINI PREP: See 'Session 4 Miniature Pull List — Numbered Arcknight Binder': main figures #025 Noren, #033 Veteran captive, #069 Brakkus, #043 Jord, #048 Brann, #037 Tulcornix. Koven House conditional guard squad #026/#030/#031/#032/#034/#038 plus sergeant #044 (optional civilian clerks #017/#039). Matches the physical binder index, preserving their page/side/pocket locations."
+                "MINI PREP: See 'Session 4 Miniature Pull List — Personal Brakkus Mini and Arcknight Binder'. Bring the DM's own original Brakkus character mini, not Arcknight #069. Binder minis: #025 Noren, #033 Veteran captive, #043 Jord, #048 Brann, #037 Tulcornix. Koven House conditional guards #026/#030/#031/#032/#034/#038 plus sergeant #044 (optional civilians #017/#039). The physical Arcknight binder and permanent numbering are unchanged."
               ]
             },
             "{@b Recommended level:} 4. The return from Kellan's Well is a roleplay-led session. No encounter is scheduled; no automatic level advancement is attached to the old Koven House criminal-network plan.",
@@ -11045,7 +11045,8 @@
                 "SESSION 4 OPENING CHECK: Brann's Council payment is owed for the completed Well mission without any sluice repair. The party starts during its short rest with the prisoners bound and no missing fourth Scout or mandatory maintenance action.",
                 "SESSION 4 PLAYTEST CONTINGENCY: Jord and Brann independently visit Ledger House, but may not be witnessed if the party never returns. In that case Brann keeps undelivered 100 gp shares; Jord still finds lodging. Do not force guest appearances into remote locations. Tulcornix seeks Pepper and ends the session when he finds her.",
                 "SESSION 4 PLAYTEST ADDENDUM: If the party attacks Koven House, use Chapter 6's finite defense (six Guards and one Veteran on station) and realistic alarm and travel. The resulting pursuit or custody is based on the NEW offense, not Pepper's unresolved Council contract. If the party's actions physically preclude Tulcornix reaching Pepper before the end of the evening, do not manufacture a prison visit simply to force the cliffhanger.",
-                "KOVEN ASSAULT PLAYTEST: Local garrison mapped to Koven House area 1, central room 6, side room 11, and west interior 20/24 (six Guards + one Veteran total). No upper-floor guard post. Local men rally behind doorways and may withdraw; the party could beat all defenders and obtain actual transfer records. Royals are not physically inside the first-day administrative building. New waves need real messengers, routes and time."
+                "KOVEN ASSAULT PLAYTEST: Local garrison mapped to Koven House area 1, central room 6, side room 11, and west interior 20/24 (six Guards + one Veteran total). No upper-floor guard post. Local men rally behind doorways and may withdraw; the party could beat all defenders and obtain actual transfer records. Royals are not physically inside the first-day administrative building. New waves need real messengers, routes and time.",
+                "SESSION 4 MINI CORRECTION: Use the DM's original Brakkus Ledgerhelm player-character miniature from Hall of Heroes, not Arcknight binder #069. Leave #069 in the binder for other uses. All other selected numbered figures and their binder positions are unchanged."
               ]
             },
             {
