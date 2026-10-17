@@ -6,7 +6,7 @@
         "json": "NCFA",
         "abbreviation": "NCFA",
         "full": "No Cause for Alarm: Ruins of Bellweather",
-        "version": "4.43",
+        "version": "4.44",
         "authors": [
           "No Cause for Alarm Campaign"
         ],
@@ -16,7 +16,7 @@
     "edition": "one",
     "dateAdded": 1789528955,
     "dateLastModified": 1792208700,
-    "_dateLastModifiedHash": "ncfa-v443-playtest-well-continuity"
+    "_dateLastModifiedHash": "ncfa-v444-session4-playtest-gear-resale"
   },
   "adventure": [
     {
@@ -85,6 +85,7 @@
         {
           "name": "Chapter 5: Delving into Kellan's Well",
           "headers": [
+            "ACTUAL PLAY OVERRIDE — October 11 Session, Read First",
             "Maps",
             "Chapter Overview",
             "Running the Chapter",
@@ -369,6 +370,7 @@
         {
           "name": "Appendix J: Bellwether Shops and Inventories",
           "headers": [
+            "Selling Loot and Trading Equipment — Session 4",
             "The Tiny Mage — Tiera Dame",
             "The Spare Button — Edda Pell",
             "The Two Hammers — Joren Viton and Maten",
@@ -2575,7 +2577,8 @@
                 "SESSION 4 ENDING (locked): Tulcornix Avemvir comes looking specifically for Pepper, knows she killed Kaleb, and confronts her with her brother's death and the plea to save Elowen. His arrival and accusation are the LAST scene of the session. Deliver his established line and the essential fact that Elowen is held at Cardon Weavehouse, then END THE SESSION. Do not continue into bargaining with Tulcornix, the worksite, the rescue, or any other scene after his arrival. The player's response and rescue planning begin next session. If the party relocated, use credible information to bring him to Pepper; no impossible tracking.",
                 "3.5-hour flexible target: prisoners 10–25 min, gates/streets 15–25, shops/inquiries 30–75, Brakkus dinner and arrivals of Jord/Brann 40–75, then a brief Tulcornix arrival/confrontation (3–8 min) as the closing beat. Spend the session time on everything BEFORE Tulcornix, not on an Elowen rescue afterward. Follow player choices rather than filling time with another encounter.",
                 "At session end record decisions, goods actually acquired and sold, prisoner disposition, recipient of each 100 gp payment, shops visited, and what the party knows of Tulcornix/Elowen. Do NOT record a decided response to his request unless a player happened to declare it before the fade-out; their decisions are normally for Session 5.",
-                "CONTINUITY CORRECTION: During actual play only three Scouts were in the Bow Gallery, the alarm was not raised, and the prior sluice repair objective was removed. Do not present a fourth Scout, a missing waterworks repair, or withheld payment as an unfinished part of Session 3."
+                "CONTINUITY CORRECTION: During actual play only three Scouts were in the Bow Gallery, the alarm was not raised, and the prior sluice repair objective was removed. Do not present a fourth Scout, a missing waterworks repair, or withheld payment as an unfinished part of Session 3.",
+                "Shopping resale rule: the 2024 PHB sells usable mundane equipment at half its listed cost and trade valuables at full face value; Appendix J now includes fast prices. The 75 gp fixed salvage valuables in the Well's 375 gp total are already valued and must not be counted twice."
               ]
             },
             "{@b Recommended level:} 4. The return from Kellan's Well is a roleplay-led session. No encounter is scheduled; no automatic level advancement is attached to the old Koven House criminal-network plan.",
@@ -2676,7 +2679,8 @@
                     "Brann remains in the city because his congregation, the poor, and the people who rely on his temple did not leave when the Council did. He can talk about how the Crown affects ordinary residents, funerals, records, access to healing and charity, rather than focusing only on Pepper.",
                     "Brann remembers the Council's original judgment. He does not declare a pardon, fabricate lost records or offer to conceal evidence. He need not volunteer Pepper's name to royal officials who have not asked him for it.",
                     "He and Jord need not agree with one another; Brann's concern for residents and Jord's practical concerns are distinct. Neither has to tell the party to oppose the Crown.",
-                    "Brann comes looking for Brakkus, carrying the former Council's already-owed Kellan's Well contract payment. Total 300 gp; Jarrock 100 gp, Aaron 100 gp, Arunem 100 gp, Pepper 0 gp because her first compulsory Council mission was unpaid. If one is absent, Brann keeps that share until delivery. Do not confuse this payment with the prior 300 gp Brann paid the party for returning Blackstone's reliquary, or with the 375 gp recoverable at the Well."
+                    "Brann comes looking for Brakkus, carrying the former Council's already-owed Kellan's Well contract payment. Total 300 gp; Jarrock 100 gp, Aaron 100 gp, Arunem 100 gp, Pepper 0 gp because her first compulsory Council mission was unpaid. If one is absent, Brann keeps that share until delivery. Do not confuse this payment with the prior 300 gp Brann paid the party for returning Blackstone's reliquary, or with the 375 gp recoverable at the Well.",
+                    "If the party asks why Brann has the money after the Council left: the Council entrusted him with 300 gp for the other adventurers' Kellan's Well contract shares before its departure. He was the custodian of the money, not an offscreen witness to the fight; the party's return and report allow him to hand it over. There was never a requirement for the party to restore the sluice."
                   ]
                 },
                 {
@@ -10959,6 +10963,16 @@
             "Sale procedure: quote the displayed price, decrease stock on sale, keep sold items sold until a believable resupply occurs. Goods not listed here can be ordered or searched for in the city if appropriate; this inventory is the merchant's opening stock, not a prohibition on the existence of other merchandise in the world. 'One crate/box/set' means one indivisible lot unless the merchant agrees to split it.",
             "Magic pricing reference from the catalog: Common 100 gp, Uncommon 400 gp, Rare 4,000 gp, Very Rare 40,000 gp, Legendary 200,000 gp. The catalog prices spell scrolls by level separately (cantrip 50 gp; level 1 100 gp; level 2 250 gp; level 3 500 gp; level 4 2,500 gp; level 5 5,000 gp). Individual consumables below use their listed prices. Rarity prices are campaign shop prices, not guarantees of availability.",
             "Merchant independence: their merchandise need not reference the Crown, Perrin, Tyren, or the party's current goals. NPCs have commercial and personal lives. Do not turn every strange object into a clue.",
+            {
+              "type": "entries",
+              "name": "Selling Loot and Trading Equipment — Session 4",
+              "entries": [
+                "{@b 2024 PHB equipment resale.} Usable ordinary equipment sells for HALF its listed purchase cost. Trade goods and valuables (such as gems and art objects) retain their face value. Apply only to items the party actually collected, kept and brings to a willing buyer; undiscovered gear cannot be sold.",
+                "{@b At the table.} Joren Viton of the Two Hammers is the natural buyer for serviceable arms and armor, with Maten inspecting condition when needed. Standard examples at their listed shop prices: a 50 gp greatsword sells for 25 gp, a 50 gp longbow sells for 25 gp, a 50 gp heavy crossbow sells for 25 gp, a 10 gp shortsword sells for 5 gp, and a 50 gp chain shirt sells for 25 gp. These are resale values, not extra encounter treasure. A merchant need not accept unsafe, counterfeit or unusable gear.",
+                "{@b Well ledger distinction.} The site contains 375 gp in fixed money/valuables, including 75 gp of salvage valuables. The valuables portion is already counted at its face value; DO NOT half it again or count it twice. The Well's confiscated weapons are separate physical gear that may have resale value if the party actually kept them. Don't automatically credit the party every weapon from every defeated defender.",
+                "{@b Magic and unusual property.} Magic item purchase costs follow the established campaign shop catalog. Do not infer a guaranteed half-price magic buyback from the ordinary-equipment rule; buyers can quote a price for a specific item. Keep each merchant's stock persistent, honor Jord's party discount when buying from him, and record actual completed sales."
+              ]
+            },
             {
               "type": "entries",
               "name": "What Merchants Say About the Takeover — Session 4",
