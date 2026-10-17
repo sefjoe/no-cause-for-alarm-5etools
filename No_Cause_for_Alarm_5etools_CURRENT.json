@@ -6,7 +6,7 @@
         "json": "NCFA",
         "abbreviation": "NCFA",
         "full": "No Cause for Alarm: Ruins of Bellweather",
-        "version": "4.45",
+        "version": "4.46",
         "authors": [
           "No Cause for Alarm Campaign"
         ],
@@ -16,7 +16,7 @@
     "edition": "one",
     "dateAdded": 1789528955,
     "dateLastModified": 1792208700,
-    "_dateLastModifiedHash": "ncfa-v445-session4-playtest-pacing-ledgerhouse"
+    "_dateLastModifiedHash": "ncfa-v446-koven-house-assault-contingency"
   },
   "adventure": [
     {
@@ -110,7 +110,8 @@
             "Rewards and Advancement",
             "Session 4 DM Run Card — Royal Takeover",
             "House Stucky — Crown Authority and Public Announcement",
-            "Running a 3.5-Hour Social Session"
+            "Running a 3.5-Hour Social Session",
+            "If They Attack Koven House — Finite Royal Defense"
           ]
         },
         {
@@ -2579,7 +2580,8 @@
                 "At session end record decisions, goods actually acquired and sold, prisoner disposition, recipient of each 100 gp payment, shops visited, and what the party knows of Tulcornix/Elowen. Do NOT record a decided response to his request unless a player happened to declare it before the fade-out; their decisions are normally for Session 5.",
                 "CONTINUITY CORRECTION: During actual play only three Scouts were in the Bow Gallery, the alarm was not raised, and the prior sluice repair objective was removed. Do not present a fourth Scout, a missing waterworks repair, or withheld payment as an unfinished part of Session 3.",
                 "Shopping resale rule: the 2024 PHB sells usable mundane equipment at half its listed cost and trade valuables at full face value; Appendix J now includes fast prices. The 75 gp fixed salvage valuables in the Well's 375 gp total are already valued and must not be counted twice.",
-                "If shopping, government inquiry or an unrelated detour consumes most of the evening, Brakkus/Jord/Brann still pursue their independent Ledger House business without a staged encounter for absent PCs. Keep Tulcornix's confrontation as the final scene, and move any unfinished dinner or money handoff to a later visit instead of bending geography."
+                "If shopping, government inquiry or an unrelated detour consumes most of the evening, Brakkus/Jord/Brann still pursue their independent Ledger House business without a staged encounter for absent PCs. Keep Tulcornix's confrontation as the final scene, and move any unfinished dinner or money handoff to a later visit instead of bending geography.",
+                "Koven House attack contingency: six total Guard stat blocks (2 entrance, 2 lobby, 2 landing) plus one Warrior Veteran sergeant inside the temporary headquarters, with two civilian clerks. Follow real alarm and travel time; barracks soldiers are NOT immediate reinforcements. The Crown responds to an actual attack as a new offense. If the party's arrest, death, or hiding makes Tulcornix's planned appearance implausible, let that outcome stand rather than teleporting him."
               ]
             },
             "{@b Recommended level:} 4. The return from Kellan's Well is a roleplay-led session. No encounter is scheduled; no automatic level advancement is attached to the old Koven House criminal-network plan.",
@@ -2639,11 +2641,27 @@
               "name": "Open Locations and People",
               "entries": [
                 "{@b Ledger House.} Brakkus may be angry or concerned about the transfer, but he is not a quest dispenser or a mouthpiece for every NPC. Ledger House remains independent and the players can talk, rest, argue, or ignore politics.",
-                "{@b Koven House.} Now a Crown headquarters rather than the criminal hideout described in the obsolete draft. Visitors may seek appointments, information, redress, favors, or documents. No forced infiltration and no mandatory arrest.",
+                "{@b Koven House.} Now a Crown headquarters rather than the criminal hideout described in the obsolete draft. Visitors may seek appointments, information, redress, favors, or documents. No forced infiltration and no mandatory arrest. An attack contingency with actual local defenders, alerts, and consequences is specified separately under 'If They Attack Koven House — Finite Royal Defense'.",
                 "{@b Markets, taverns, workers' streets.} Show people adapting. Some prosper, some lose jobs or rights, some are mostly interested in groceries, family, pay, or a missing shipment. Let the party decide which conversations matter.",
                 "{@b Former Council staff.} Those left behind may disagree about the deal, worry about their futures, or know procedures the party can question. Do not imply the old Council still commissions official missions.",
                 "{@b Bishop Brann.} He remained in Bellweather. His views follow his religious and civic duties; they are not automatically the same as Brakkus's or the Crown's.",
                 "Cardon Weavehouse: the Crown has commandeered a street-facing textile work annex at the edge of the larger, disputed property. Kaleb's wife, Elowen, is indentured here. This does not mean the Crown controls the entire Weavehouse, Perrin Cardon arranged the servitude, or the old unplayed Chapter 8 armed occupation has already been resolved. The annex can be visited without entering the entire compound."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "If They Attack Koven House — Finite Royal Defense",
+              "entries": [
+                "{@b Trigger and stakes.} This is NOT a scheduled combat; use it only if the PCs assault the guards, threaten an officer in a way that actually provokes force, or attempt an armed breach. The ground-floor registry remains accessible to peaceful visitors. No arbitrary royal audience, preemptive arrest of Pepper for the old Council sentence, or compulsory encounter.",
+                "{@b Local defenders at the newly occupied headquarters, at session start.} Exactly six {@creature Guard|XMM} and one {@creature Warrior Veteran|XMM} serving as an unnamed royal sergeant are available to respond from inside/around the building. 2 Guards at the public entrance, 2 Guards in the lobby/registry approach, 2 Guards covering the administrative stair or upper landing, and the Veteran in a nearby duty room. The public registry also contains two noncombatant {@creature Commoner|XMM} clerks, who flee or take cover. They are not combat reinforcements. Use existing DM Koven House map for cover, doors and line-of-sight; the posts are operational zones, not invented map squares. Reginald and Narcissa are NOT automatically present or summoned by an attack.",
+                "{@b Quick stats.} Guard AC 16, HP 11, Spear +3 to hit, 4 piercing average on hit. Warrior Veteran AC 17, HP 65, two Greatsword attacks +5 to hit for 10 slashing average each; Parry reaction +2 to own AC versus one melee attack. Use the corresponding 2024 monster stat blocks in 5etools for full rules. Never add a special bodyguard reaction.",
+                "{@b Alert and arrivals.} On an obvious assault, a guard calls an alarm immediately if able; shouting does not create an automatic citywide response. If a guard can reach an actual whistle, bell or signal post, resolve physical access to it. The 2 lobby Guards move toward the entrance as soon as they hear the attack (usually 1–2 rounds, depending on the map and doors). The Veteran responds from the duty room after moving through the building (usually by rounds 2–3). The 2 landing Guards cover the administrative access and may reinforce by rounds 3–5 or hold position to secure staff and records. Actual map distance, closed doors, stealth and blocked passages override these illustrative timings. Don't teleport anyone. No guard who is dead, incapacitated or prevented from hearing an alarm gets an automatic response.",
+                "{@b Beyond the seven local defenders.} Other royal soldiers are billeted in the hotel now serving as barracks, and municipal watchmen patrol Bellweather, but neither is a round-by-round reinforcement reserve at Koven House. They can respond only after a message physically reaches them and they travel from their real positions; judge elapsed minutes based on the actual route, not a secret infinite-wave timer. If the confrontation becomes a prolonged siege, choose concrete off-site forces and travel times then, and tell the table what is visible as they approach.",
+                "{@b Defenders' priorities.} Entrance Guards try to contain the assault and raise the alarm; lobby Guards protect clerks and registry; upper guards protect routes to the administrative floors; the Veteran directs containment, evacuation and pursuit. Guards use cover, withdraw, stabilize fallen allies if able, and may surrender when clearly beaten. A suicidal last stand or an invisible extra squad is not required. Clerks don't fight; they can witness identifying details or escape with paperwork.",
+                "{@b Three practical outcomes.} (1) PCs win the initial skirmish and flee: they can escape before a distant response if their routes and actions allow. Record witnesses, injuries, stolen goods and whether guards lived; pursuing officers later act on credible evidence rather than knowing their location automatically. (2) PCs continue upstairs: the existing six Guards and Veteran act according to position; doors, corridors, records and civilians are actual obstacles. Taking the lobby is not equivalent to capturing the entire city government. (3) PCs surrender or are subdued: the Crown takes them into custody under its new government for their PRESENT attack, not automatically for Pepper's unresolved former-Council sentence. Capture can materially change where and how the next scene occurs.",
+                "{@b Political and social consequences.} An attack on the headquarters is an actual provocation: the Crown can identify suspects from witnesses, issue orders to investigate or arrest, increase physical security, and respond in proportion to injuries and deaths. An insult or public complaint alone isn't assault. Shopkeepers and the old city watch aren't instant loyal royal enforcers, but witnesses may report events. Brakkus does not become an unquestioning accomplice or omniscient pursuer; his reaction follows what he actually learns.",
+                "{@b Session 4 ending under player-caused upheaval.} Tulcornix still seeks Pepper specifically. If she evades pursuit, he can approach her through credible sightings, including at Ledger House if she returns, and his confrontation ends Session 4. If she is in royal custody or missing, DO NOT teleport Tulcornix into a secure prison or force a guard to grant access simply to hit the planned cliffhanger. Record the conflict, end at an earned stopping point, and use his confrontation when he can realistically reach her. This contingency supersedes the planned guaranteed closing scene only where player actions genuinely make that scene implausible.",
+                "{@b Guard morale and attack distinction.} For a threat or shove, first establish whether force truly begins; don't roll initiative over mere insults. If players use nonlethal melee attacks, apply 2024 rules and record living captives accordingly; lethal spell attacks and dead guards cause materially different public consequences."
               ]
             },
             {
@@ -10945,7 +10963,8 @@
                 "SESSION 4 PREP (October 16, 2026): Tulcornix knows Pepper murdered Kaleb and deliberately seeks her. His direct line is 'You killed my brother, the stain of his blood will never leave your hands, save his wife and you might cleanse your soul.' Elowen's 150 gp retroactive municipal-services assessment and 50 gp discharge fee can be challenged, paid or subverted. Shops' differing reactions are in Appendix J.",
                 "LOCKED SESSION 4 ENDING (October 16, 2026): Tulcornix's arrival and direct accusation against Pepper are the LAST moments of Session 4. He reveals Elowen's plight at Cardon Weavehouse and the session ends immediately. The party's reaction, any detailed questioning, bond discussion or rescue is Session 5. The Cardon annex reference in Chapter 6 supports Session 5 or an unanticipated EARLIER discovery—not continued play after his arrival.",
                 "SESSION 4 OPENING CHECK: Brann's Council payment is owed for the completed Well mission without any sluice repair. The party starts during its short rest with the prisoners bound and no missing fourth Scout or mandatory maintenance action.",
-                "SESSION 4 PLAYTEST CONTINGENCY: Jord and Brann independently visit Ledger House, but may not be witnessed if the party never returns. In that case Brann keeps undelivered 100 gp shares; Jord still finds lodging. Do not force guest appearances into remote locations. Tulcornix seeks Pepper and ends the session when he finds her."
+                "SESSION 4 PLAYTEST CONTINGENCY: Jord and Brann independently visit Ledger House, but may not be witnessed if the party never returns. In that case Brann keeps undelivered 100 gp shares; Jord still finds lodging. Do not force guest appearances into remote locations. Tulcornix seeks Pepper and ends the session when he finds her.",
+                "SESSION 4 PLAYTEST ADDENDUM: If the party attacks Koven House, use Chapter 6's finite defense (six Guards and one Veteran on station) and realistic alarm and travel. The resulting pursuit or custody is based on the NEW offense, not Pepper's unresolved Council contract. If the party's actions physically preclude Tulcornix reaching Pepper before the end of the evening, do not manufacture a prison visit simply to force the cliffhanger."
               ]
             },
             {
