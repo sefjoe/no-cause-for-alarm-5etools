@@ -6,7 +6,7 @@
         "json": "NCFA",
         "abbreviation": "NCFA",
         "full": "No Cause for Alarm: Ruins of Bellweather",
-        "version": "4.42",
+        "version": "4.43",
         "authors": [
           "No Cause for Alarm Campaign"
         ],
@@ -16,7 +16,7 @@
     "edition": "one",
     "dateAdded": 1789528955,
     "dateLastModified": 1792208700,
-    "_dateLastModifiedHash": "ncfa-v442-session4-tulcornix-hard-stop"
+    "_dateLastModifiedHash": "ncfa-v443-playtest-well-continuity"
   },
   "adventure": [
     {
@@ -403,6 +403,7 @@
               "type": "entries",
               "name": "Campaign State — Read Before Preparing the Next Session",
               "entries": [
+                "Kellan's Well ACTUAL PLAY override: Noren and Veteran are bound and the party rests at scene end. The sluice-repair objective was removed by the DM, and three Bow Gallery Scouts were faced. Council mission payment is not contingent on repairs.",
                 "Blackstone is complete; Kellan's Well has been played with the party at level 4. Noren disclosed the royal takeover during the Well mission, and Bellweather's new government is the basis of Chapter 6.",
                 "The former Council transferred Bellweather to the Crown. Koven House is Crown HQ; Bishop Brann stayed; Brakkus's Ledger House remains independent. Prepare a roleplay-led return with no compulsory combat.",
                 "Pepper is a cleric, not a rogue. She completed one unpaid Council job and owes four paid missions under the former Council's unresolved judgment. Brakkus no longer supervises her house arrest, and the newly arrived Crown is occupied with citywide records; Jord may advise keeping a low profile. Do not force Crown service or an arrest subplot. Jarrock and Pepper's personal conflict continues.",
@@ -1992,6 +1993,15 @@
             "{@b Recommended level:} 4.",
             {
               "type": "entries",
+              "name": "ACTUAL PLAY OVERRIDE — October 11 Session, Read First",
+              "entries": [
+                "THIS CHAPTER IS ALREADY PLAYED. The previous preparation to repair or reactivate the main sluice was explicitly removed from campaign continuity after the session. The party's mission is complete upon clearing the Iron Covenant; they have NO outstanding sluice task, and the current state of waterworks restoration is not a campaign requirement. The mechanical details of the sluice deeper in this chapter are historical unplayed reference, not an unfinished quest.",
+                "Actual table: the alarm was not raised, three Bow Gallery Scouts were present/encountered, Arunem broke through the ceiling to flank Noren and his Warrior Veteran, and the party captured and tied both. The Decanter of Endless Water was found and passed to Pepper. Session 4 resumes WITHIN THE WATERWORKS DURING THE PARTY'S SHORT REST, with both prisoners alive and bound. Their fate is still undecided.",
+                "Do not retroactively add a fourth Scout, a missed sluice objective, a required skill check to restore flow, or an additional Council errand to release the party. Bishop Brann can deliver the already-agreed 300 gp compensation for completion. The old sluice-scene map/mechanics can remain for reference only if the PCs voluntarily revisit them."
+              ]
+            },
+            {
+              "type": "entries",
               "name": "Maps",
               "entries": [
                 {
@@ -2038,11 +2048,11 @@
               "type": "entries",
               "name": "Chapter Overview",
               "entries": [
-                "{@b Objective.} Clear the Iron Covenant from Kellan's Well and restore its main sluice.",
+                "{@b ACTUAL PLAY objective.} Clear the Iron Covenant from Kellan's Well. The sluice-restoration requirement was removed following the October 11 session and is NOT outstanding. This original chapter's sluice scenes are historical optional references.",
                 "{@b Starting point.} Ledger House, morning after Blackstone Temple; four level-4 characters after a Long Rest. No repeat Council briefing.",
                 "{@b Physical layout.} Existing 22 x 26 grid and existing gridded box top at G–Q2–10 represent a 10-foot-high gallery. Twenty-foot-wide canal is K–N rows 11–26, running from the south edge to the gallery. Only existing wall pieces, two owned cabinets/shelves and a dry-erase marker needed.",
                 "{@b Three combat stakes.} Checkpoint: prevent a Harengon Scout from reaching ground alarm F14. Gallery: four fanatically loyal Scouts fight to the death holding the raised position; reaching Noren is the hardest combat challenge. Command: only Noren and his Warrior Veteran, with an escape gate the party can seal earlier.",
-                "{@b Victory.} Covenant no longer controls Well AND main sluice works. The party need not kill Noren; surrender, capture, retreat, or negotiation can resolve command.",
+                "{@b Victory in actual play.} The Covenant's command and occupation are defeated; Noren and his Veteran were captured. The sluice requirement was removed, and there is no further compulsory restoration.",
                 "{@b Discoverable permanent reward.} The Decanter of Endless Water is guaranteed to be found if the party inspects/repairs the H12 sluice: obvious latched niche beside the controls, words SPLASH / FOUNTAIN / GEYSER engraved on neck with effects unexplained. See Scene 3 for exact discovery read-aloud.",
                 "{@b Story continuity.} Pepper earns first unpaid service. The rank-and-file have no Crown briefing, but Noren told the party about the takeover while bargaining for his safety; Bellweather will confirm it on their return."
               ]
@@ -2091,7 +2101,7 @@
                 "{@b Alarm and information.} The checkpoint F14 gong is fixed to a metal signaling pipe, carrying its distinctly repeated three-strike warning to gallery and command WHEN ACTUALLY SOUNDED. Noren can then ready the hatch while intending to HOLD. Separate bays are connected by 80-foot dogleg service passages and heavy doors; ordinary distant combat and slain Scouts do NOT automatically inform command. Loud magic, an actual escaping courier, opened doors or a pursuer's shout may transmit information only when plausible. A routine hourly gallery-status knock on the pipe is expected; if absent, Noren becomes suspicious and may investigate himself WITH his one Veteran. This is not instant awareness or free reinforcements.",
                 "{@b Rest / continuity.} Full Short Rest is one hour; if warning reaches Noren during rest he may prepare or evacuate because the world continues. If zero warning reaches him, a missing hourly status signal can trigger suspicion, investigation or changed readiness—not automatic omniscient retreat. Scouts fight to death if engaged; bypassed Scouts who pursue are the same four creatures at normal movement. Respect real passage distances and physically distinct bay states.",
                 "{@b Loot locations.} Recoverable total 375 gp: checkpoint courier pouch 25 gp; barracks payroll chest 150 gp and salvage valuables worth 75 gp; command desk iron strongbox 125 gp. Potion of Greater Healing in barracks medical satchel; Potion of Water Breathing in maintenance emergency locker near T12; Potion of Heroism in command desk readiness kit. Decanter of Endless Water: obvious brass-latched maintenance recess directly beside/behind H12 main control on WEST dry bank, noticed by anyone inspecting or repairing sluice; opens freely, no check. Vessel engraved SPLASH / FOUNTAIN / GEYSER, with NO description of the effects. See Scene 3 'FIND THE DECANTER' read-aloud; Identify/Short Rest reveal full powers. No new treasure. Use real-world object access/searches, not obligatory skill rolls.",
-                "{@b Outcome.} Party wins if Covenant leaves/loses control and main sluice restored. Captured Noren can negotiate; if defeated and escape gate sealed, surrender reasonable without check. Noren already warned the party about the royal takeover; the next session confirms it in Bellweather. Pepper has completed her first unpaid Council job."
+                "{@b Actual outcome.} The party has defeated the Covenant and bound Noren plus one Veteran. The original sluice task is explicitly removed from play; no remaining work is required. Noren already warned them about the Crown; Session 4 confirms it. Pepper completed her first unpaid mission."
               ]
             },
             {
@@ -2170,7 +2180,7 @@
                     "{@b Bow Gallery.} Scouts fight to death when engaged, do not surrender or retreat. They can be bypassed/outwitted; if alive they pursue across real movement routes rather than teleporting into Command. Tight cover near box front is earned only through actual parapet.",
                     "{@b Escape.} In sluice bay players can piece together Branch 8's purpose and seal a gate under command hatch P4 via T12. Noren on WEST ground H15 must move/climb before reaching hatch; adjacent Veteran H16 protects him in melee without invented redirection powers. Prepared party strategies matter.",
                     "{@b Rest and world.} A Short Rest takes one hour. Only warnings that plausibly reach Noren alter his knowledge; absent warning, missing scheduled status can still prompt a search after appropriate time. If he learns the gallery is lost, he weighs defending versus saving himself and his Veteran. Never freeze opponents but never grant omniscience.",
-                    "{@b Session victory.} Clear Covenant occupation AND restore sluice. Noren can escape, surrender, be captured or be defeated. Noren's warning has already been spoken; the city's new government becomes visible next session."
+                    "{@b Actual session victory.} The Covenant command has fallen and both leaders are bound. No sluice objective remains after the played-session override. Noren's warning has already been spoken; the city's new government becomes visible next session."
                   ]
                 },
                 {
@@ -2196,7 +2206,7 @@
                     "{@b Session-end rule.} Do not add filler to reach a preferred stopping point and do not rush a scene just to reach Noren."
                   ]
                 },
-                "{@b Primary objective.} Clear the Iron Covenant from Kellan's Well and restore the main sluice.",
+                "{@b Primary objective (actual played result).} Clear the Iron Covenant from Kellan's Well; complete. The formerly planned sluice repair was removed from continuity.",
                 "{@b Player agency.} Scout, negotiate, sneak, attack openly, cut off the hidden exit, or simply force the Covenant to abandon the position.",
                 "{@b Fail forward.} A failed stealth attempt changes preparedness, not access to the adventure. Noren escaping is an outcome, not a failure.",
                 "{@b Rest and pressure.} Resting inside the active site gives the Covenant time to withdraw. The defenders do not freeze in place while the characters recover."
@@ -2400,15 +2410,15 @@
                       "type": "entries",
                       "name": "What Happens",
                       "entries": [
-                        "The party can restore the sluice before confronting Noren, leave it disabled while they deal with him, or return to it after the Covenant withdraws.",
-                        "Restoring the sluice is part of reclaiming Kellan's Well, but it does not require the Iron Covenant to remain present."
+                        "ARCHIVED PREPLAY OPTION ONLY: The original design allowed reopening the sluice before or after defeating Noren. This was removed as a required mission objective before Session 4; no return trip is owed.",
+                        "ARCHIVED PREPLAY OBJECTIVE ONLY: Restoring the sluice is no longer a required part of the party's reclaiming mission."
                       ]
                     },
                     {
                       "type": "entries",
                       "name": "Consequences",
                       "entries": [
-                        "If Noren escapes or the party takes a Short Rest and the defenders evacuate, restoring the sluice still gives the characters a concrete job to finish before the Well is operational.",
+                        "ARCHIVED PREPLAY OPTION ONLY: The original module included a separate sluice restoration. It is removed from active Session 4 continuity, and the party has no such unfinished task.",
                         "When the mechanism works, water begins moving through the old channels again. Bellweather can immediately send crews to refill cisterns and drain flooded service passages.",
                         "Once the Covenant is gone and the sluice works, Bellweather can put the site back into service."
                       ]
@@ -2446,7 +2456,7 @@
                       "type": "entries",
                       "name": "Consequences",
                       "entries": [
-                        "Capture, surrender, escape or defeat all permit clearing the Well, followed by restoring sluice. The blocked gate and Noren's longer route must have real effect.",
+                        "Capture, surrender, escape or defeat all permit clearing the Well. In actual play Noren and the Veteran were captured and bound; the further sluice-repair step has been eliminated.",
                         "Players who earned leverage over Noren through scouting, isolating the escape or bypassing defense should see that directly in his options; do not negate it with new troops or sudden secret escape."
                       ]
                     }
@@ -2456,7 +2466,7 @@
                   "type": "entries",
                   "name": "Scene 5: Secure the Well",
                   "entries": [
-                    "The party confirms that the Iron Covenant has left the site and finishes restoring the main sluice if it has not already done so.",
+                    "ACTUAL SESSION END: The party captured Noren and his Veteran and begins Session 4 during a short rest. There is no outstanding sluice repair, by the user's explicit continuity decision.",
                     {
                       "type": "entries",
                       "name": "What Happens",
@@ -2487,7 +2497,7 @@
                     "{@b Potion of Heroism.} One, command desk readiness kit.",
                     "{@b Potion of Water Breathing.} One, maintenance emergency-rescue locker near T12.",
                     "{@b Decanter of Endless Water.} Exactly ONE permanent water-themed magic item. Players find it in the brass-latched maintenance recess behind/beside the main sluice wheel at H12 in the Inner Waterworks bay (WEST dry bank). Any PC inspecting the sabotaged sluice notices the panel; opening requires no roll. Words SPLASH, FOUNTAIN, GEYSER are engraved around the neck WITHOUT explanatory labels; see Scene 3 for read-aloud and DM-only rules. No attunement.",
-                    "{@b Story reward.} Bellweather regains waterworks after Covenant vacates and main sluice is restored.",
+                    "{@b Story result.} The Iron Covenant's occupation of Kellan's Well ends. No claim that the party personally restored the main sluice is part of established play.",
                     "{@b Pepper.} Counts as her first unpaid service of five; future Crown transfer doesn't erase it."
                   ]
                 }
@@ -2505,7 +2515,7 @@
                     "{@b Barracks: 225 gp.} Payroll chest among bunks contains 150 gp. Shelf holds repair salvage/valuables worth 75 gp. Potion of Greater Healing in medic's satchel near bunks.",
                     "{@b Maintenance bay: Potion of Water Breathing + Decanter of Endless Water.} Potion in the emergency-rescue locker near T12. The one permanent magic item is the Decanter in a brass-latched niche behind/beside the H12 main sluice control on the WEST dry bank. The niche is obvious during inspection/repair; no check to find/open. The vessel bears only the engraved words SPLASH, FOUNTAIN, GEYSER (not what they do). See Scene 3 read-aloud.",
                     "{@b Command bay: 125 gp and Potion of Heroism.} Iron strongbox on Noren's desk contains 125 gp; readiness kit on desk holds Potion of Heroism. Both remain in room if Noren withdraws.",
-                    "{@b Story reward.} Iron Covenant no longer controls Kellan's Well and sluice is restored, providing Bellweather waterworks access.",
+                    "{@b Story result.} Iron Covenant no longer controls Kellan's Well. Sluice repair was explicitly removed; do not claim the party restored it.",
                     "{@b Pepper's penance.} First unpaid mission of five complete; the physical city takeover is confirmed in the following session."
                   ]
                 }
@@ -2557,14 +2567,15 @@
               "type": "entries",
               "name": "Session 4 DM Run Card — Royal Takeover",
               "entries": [
-                "Start inside Kellan's Well, just after the fight, with Noren Vale and his Warrior Veteran alive and bound. They have not decided either prisoner's fate. The party was underground only a few hours. The Crown prepared its takeover in advance; new flags, orders, and officers can appear fast, but the rebuilt walls, neighborhoods and streets shown on the approved map existed or were underway before they entered.",
+                "Start inside Kellan's Well, during the party's short rest following the fight, with Noren Vale and his Warrior Veteran alive and bound. The party's Well mission is complete; the original sluice restoration objective was explicitly removed. They have not decided either prisoner's fate. The party was underground only a few hours. The Crown prepared its takeover in advance; new flags, orders, and officers can appear fast, but the rebuilt walls, neighborhoods and streets shown on the approved map existed or were underway before they entered.",
                 "Resolve Noren: killed or handed to the watch means out of the campaign; release means he withdraws underground with the Iron Covenant organization still operating, not instant loyal allies. The Veteran is a separate decision. The current roster was Noren plus ONE Warrior Veteran, no Toughs or reinforcements.",
                 "If searched: Noren's monster gear specifies a scimitar, light crossbow and studded leather armor; his 1/day smoke bomb ability is not automatically recovered as a sellable item. Veteran's listed equipment includes greatsword and crossbow. Do not invent a secret coin pouch. Recoverable Well treasure is 375 gp in fixed locations (25 gp courier, 150 gp barracks, 75 gp salvage valuables, 125 gp command strongbox), three potions and the Decanter of Endless Water. Do not assume they collected every item; player inventory and previous actions determine actual holdings.",
                 "Let shopping double as political investigation. The gate, notices, market, and four established shops have bounded answers in Appendix J. Koven House is Crown headquarters and has a public registry. Don't force a separate exposition scene or a mandatory royal audience.",
                 "Ledger House: Brakkus offers dinner and genuine conversation with the PCs. Jord independently seeks a room because his hotel has been turned into royal guard barracks. Bishop Brann seeks Brakkus with Kellan's Well money entrusted by the departing Council: 300 gp total, 100 gp each to Jarrock, Aaron, Arunem; Pepper 0 gp because her first sentenced mission was unpaid. Record actual receipt. This is separate from the earlier Blackstone reliquary payment and anything looted at the Well.",
                 "SESSION 4 ENDING (locked): Tulcornix Avemvir comes looking specifically for Pepper, knows she killed Kaleb, and confronts her with her brother's death and the plea to save Elowen. His arrival and accusation are the LAST scene of the session. Deliver his established line and the essential fact that Elowen is held at Cardon Weavehouse, then END THE SESSION. Do not continue into bargaining with Tulcornix, the worksite, the rescue, or any other scene after his arrival. The player's response and rescue planning begin next session. If the party relocated, use credible information to bring him to Pepper; no impossible tracking.",
                 "3.5-hour flexible target: prisoners 10–25 min, gates/streets 15–25, shops/inquiries 30–75, Brakkus dinner and arrivals of Jord/Brann 40–75, then a brief Tulcornix arrival/confrontation (3–8 min) as the closing beat. Spend the session time on everything BEFORE Tulcornix, not on an Elowen rescue afterward. Follow player choices rather than filling time with another encounter.",
-                "At session end record decisions, goods actually acquired and sold, prisoner disposition, recipient of each 100 gp payment, shops visited, and what the party knows of Tulcornix/Elowen. Do NOT record a decided response to his request unless a player happened to declare it before the fade-out; their decisions are normally for Session 5."
+                "At session end record decisions, goods actually acquired and sold, prisoner disposition, recipient of each 100 gp payment, shops visited, and what the party knows of Tulcornix/Elowen. Do NOT record a decided response to his request unless a player happened to declare it before the fade-out; their decisions are normally for Session 5.",
+                "CONTINUITY CORRECTION: During actual play only three Scouts were in the Bow Gallery, the alarm was not raised, and the prior sluice repair objective was removed. Do not present a fourth Scout, a missing waterworks repair, or withheld payment as an unfinished part of Session 3."
               ]
             },
             "{@b Recommended level:} 4. The return from Kellan's Well is a roleplay-led session. No encounter is scheduled; no automatic level advancement is attached to the old Koven House criminal-network plan.",
@@ -2572,6 +2583,7 @@
               "type": "entries",
               "name": "Start in the Well: Noren and His Veteran",
               "entries": [
+                "ACTUAL SESSION OPENING: The characters are in the waterworks taking a short rest AFTER capturing/binding Noren and his sole Warrior Veteran. The old sluice objective was removed and is not outstanding. The party is free to discuss the captives, inventory finds, and leave when they choose. Three Bow Gallery Scouts were encountered; no fourth NPC should appear to patch the old planned roster.",
                 "Start this week's session INSIDE Kellan's Well, not with a transition to Bellweather. Noren, the leader of the Iron Covenant, and his Warrior Veteran remain alive and bound. Their fate is not decided. Let the party search, talk, and decide without a scripted outcome.",
                 "Kill Noren: Noren is permanently out of the campaign. Handle the veteran's fate as the players actually decide. Do not immediately introduce a replacement Noren or contrive an escape.",
                 "Turn Noren over to city watch: the city gate watch accepts securely bound prisoners with the party's report that they were captured occupying Kellan's Well. The old municipal watch is undergoing a Crown transition but can still take custody without any royal petition. Noren is permanently removed from the campaign. He is not later freed or returned as an antagonist. The veteran can be turned over as well.",
@@ -10903,7 +10915,8 @@
                 "Pepper, a cleric, searched enemy chests, barrels, and bodies for salvage because her Council mission was unpaid; at one point she chose a chest over helping in the fight. She loots enemies, not uninvolved civilians.",
                 "Jarrock chose to drink before work and continued after Brakkus gave him a chance to reconsider. He experienced the functional penalties of intoxication. Pepper refuses to heal Jarrock because he reported her involvement in Kaleb's death; Jarrock answers, 'I was just keeping it real.' The players have treated this conflict humorously; do not impose a mandatory reconciliation.",
                 "The party recovered the Decanter of Endless Water. Keep any unconfirmed claimed coin totals, expenditure, and consumable uses in player inventory rather than declaring that every listed treasure was collected.",
-                "The party's end-of-Well level is not recorded as increased beyond level 4. Do not automatically award level 5 by treating an unplayed older Koven House chapter as completed."
+                "The party's end-of-Well level is not recorded as increased beyond level 4. Do not automatically award level 5 by treating an unplayed older Koven House chapter as completed.",
+                "CORRECTED ACTUAL TABLE STATE: The party did not restore the main sluice, and the DM explicitly REMOVED sluice restoration from the campaign's pending objectives. The Well mission is complete for purposes of the Council contract, with Noren and one Veteran restrained during the short rest at the start of Session 4. Only three Bow Gallery Scouts were encountered; the alarm remained silent."
               ]
             },
             {
@@ -10922,7 +10935,8 @@
                 "SESSION 4 PREP (October 16, 2026): House Stucky = King Hendrix (competent, dangerous, stays in capital; no planned appearance), son Prince Reginald (Bellweather's ruler) and Reginald's wife Princess Narcissa (co-ruler). Former Council received money, land elsewhere and ducal titles. Royal transition became official while the party was in the Well for just a few hours, with advance preparation explaining the visible changes.",
                 "SESSION 4 PREP (October 16, 2026): Jord comes to Ledger House seeking lodging after royal guards commandeer his hotel. Bishop Brann seeks Brakkus and brings 300 gp owed by the Council for Kellan's Well: 100 gp each Jarrock, Aaron and Arunem, 0 gp Pepper. Distinct from the 300 gp Blackstone reliquary reward and from Well treasure. Brakkus's full history is already recorded.",
                 "SESSION 4 PREP (October 16, 2026): Tulcornix knows Pepper murdered Kaleb and deliberately seeks her. His direct line is 'You killed my brother, the stain of his blood will never leave your hands, save his wife and you might cleanse your soul.' Elowen's 150 gp retroactive municipal-services assessment and 50 gp discharge fee can be challenged, paid or subverted. Shops' differing reactions are in Appendix J.",
-                "LOCKED SESSION 4 ENDING (October 16, 2026): Tulcornix's arrival and direct accusation against Pepper are the LAST moments of Session 4. He reveals Elowen's plight at Cardon Weavehouse and the session ends immediately. The party's reaction, any detailed questioning, bond discussion or rescue is Session 5. The Cardon annex reference in Chapter 6 supports Session 5 or an unanticipated EARLIER discovery—not continued play after his arrival."
+                "LOCKED SESSION 4 ENDING (October 16, 2026): Tulcornix's arrival and direct accusation against Pepper are the LAST moments of Session 4. He reveals Elowen's plight at Cardon Weavehouse and the session ends immediately. The party's reaction, any detailed questioning, bond discussion or rescue is Session 5. The Cardon annex reference in Chapter 6 supports Session 5 or an unanticipated EARLIER discovery—not continued play after his arrival.",
+                "SESSION 4 OPENING CHECK: Brann's Council payment is owed for the completed Well mission without any sluice repair. The party starts during its short rest with the prisoners bound and no missing fourth Scout or mandatory maintenance action."
               ]
             },
             {
