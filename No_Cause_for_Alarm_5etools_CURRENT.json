@@ -6,7 +6,7 @@
         "json": "NCFA",
         "abbreviation": "NCFA",
         "full": "No Cause for Alarm: Ruins of Bellweather",
-        "version": "4.44",
+        "version": "4.45",
         "authors": [
           "No Cause for Alarm Campaign"
         ],
@@ -16,7 +16,7 @@
     "edition": "one",
     "dateAdded": 1789528955,
     "dateLastModified": 1792208700,
-    "_dateLastModifiedHash": "ncfa-v444-session4-playtest-gear-resale"
+    "_dateLastModifiedHash": "ncfa-v445-session4-playtest-pacing-ledgerhouse"
   },
   "adventure": [
     {
@@ -2578,7 +2578,8 @@
                 "3.5-hour flexible target: prisoners 10–25 min, gates/streets 15–25, shops/inquiries 30–75, Brakkus dinner and arrivals of Jord/Brann 40–75, then a brief Tulcornix arrival/confrontation (3–8 min) as the closing beat. Spend the session time on everything BEFORE Tulcornix, not on an Elowen rescue afterward. Follow player choices rather than filling time with another encounter.",
                 "At session end record decisions, goods actually acquired and sold, prisoner disposition, recipient of each 100 gp payment, shops visited, and what the party knows of Tulcornix/Elowen. Do NOT record a decided response to his request unless a player happened to declare it before the fade-out; their decisions are normally for Session 5.",
                 "CONTINUITY CORRECTION: During actual play only three Scouts were in the Bow Gallery, the alarm was not raised, and the prior sluice repair objective was removed. Do not present a fourth Scout, a missing waterworks repair, or withheld payment as an unfinished part of Session 3.",
-                "Shopping resale rule: the 2024 PHB sells usable mundane equipment at half its listed cost and trade valuables at full face value; Appendix J now includes fast prices. The 75 gp fixed salvage valuables in the Well's 375 gp total are already valued and must not be counted twice."
+                "Shopping resale rule: the 2024 PHB sells usable mundane equipment at half its listed cost and trade valuables at full face value; Appendix J now includes fast prices. The 75 gp fixed salvage valuables in the Well's 375 gp total are already valued and must not be counted twice.",
+                "If shopping, government inquiry or an unrelated detour consumes most of the evening, Brakkus/Jord/Brann still pursue their independent Ledger House business without a staged encounter for absent PCs. Keep Tulcornix's confrontation as the final scene, and move any unfinished dinner or money handoff to a later visit instead of bending geography."
               ]
             },
             "{@b Recommended level:} 4. The return from Kellan's Well is a roleplay-led session. No encounter is scheduled; no automatic level advancement is attached to the old Koven House criminal-network plan.",
@@ -2649,7 +2650,7 @@
               "type": "entries",
               "name": "Session Anchors: Brakkus, Jord, Bishop Brann, and Tulcornix",
               "entries": [
-                "{@b Guaranteed appearances and ending.} Brakkus, Jord, Bishop Brann and Tulcornix Avemvir each have reasons to appear or interact during Session 4. Brakkus/Jord/Brann can be encountered in flexible order. Tulcornix's personal arrival and accusation against Pepper are the FINAL scene, followed by the end of the session—not the start of another encounter.",
+                "{@b Where the guests go, regardless of PC route.} Brakkus remains at Ledger House and offers dinner when the party returns; Jord comes to seek lodgings; Bishop Brann comes to speak with Brakkus and deliver the three adventurers' 100 gp shares. These events happen independently even if the PCs spend the whole evening elsewhere. Don't relocate or teleport Jord and Brann just to force their speeches: if the party does not return, their lodging/payment encounter can be discovered on the next visit. Tulcornix, who is actively seeking Pepper, is the only personal confrontation GUARANTEED to find its subject and end Session 4. His pursuit still follows plausible witness information.",
                 {
                   "type": "entries",
                   "name": "Brakkus: Dinner and the People Behind the Adventures",
@@ -2659,7 +2660,8 @@
                     "Possible follow-ups, chosen naturally rather than administered in order: Where were you before Bellweather? Who or what brought you here? Is anybody elsewhere looking for you? What would you do if you could leave tomorrow? What is important to you beyond the next job?",
                     "Give Jarrock, Aaron, Arunem and Pepper space to volunteer or withhold their own histories, ask each other questions, and ask Brakkus about his past. He is a retired paladin and proprietor of Ledger House, not an omniscient investigator. Do not demand a backstory reveal from a reluctant player.",
                     "Brakkus will not become the party's commander, a substitute Council, or the default leader of an uprising; he cares first about the people under his roof.",
-                    "Brakkus's detailed established past already exists in Appendix C and his NPC entry: his mother Elena, father Korgak, Ironfang Clan, mentor Vance Halford, oath to Torm, and sword The Appendix. Answer personal questions from that history; don't invent a new life story or make PC backstory revelations a mandatory sequence."
+                    "Brakkus's detailed established past already exists in Appendix C and his NPC entry: his mother Elena, father Korgak, Ironfang Clan, mentor Vance Halford, oath to Torm, and sword The Appendix. Answer personal questions from that history; don't invent a new life story or make PC backstory revelations a mandatory sequence.",
+                    "If the party never returns to Ledger House this evening, Brakkus does not summon or forcibly detain them. The planned dinner conversation remains available upon their next visit. Treat the advertised 3.5 hours as a target, not a reason to push them into the building."
                   ]
                 },
                 {
@@ -2669,7 +2671,8 @@
                     "Jord is the road-worn gnome merchant already established in the Slums aftermath, whose missing strongbox helped bring the group into that district. He has current business to attend to; he is not another person summoned just to give Pepper advice.",
                     "Jord sees that the Crown is busy processing old contracts, trading privileges, new taxes and ownership records. How those changes affect his livelihood is independent of Pepper and may open a merchant-focused conversation or future contacts.",
                     "If Pepper's status comes up, Jord offers practical advice rather than legal certainty: 'They've got a whole city of paperwork to sort through. Four jobs owed to a Council that's gone? I wouldn't go reminding them.' He does not claim the sentence has been canceled.",
-                    "Jord independently comes to Ledger House looking for a room: the hotel where he was staying has been commandeered for royal guard barracks. His immediate stake is having somewhere to sleep and handle his trading goods, not another assignment for the party. If he tells the PCs this while selling goods earlier, the later arrival is a continuation of the same event. Preserve his previously promised discount."
+                    "Jord independently comes to Ledger House looking for a room: the hotel where he was staying has been commandeered for royal guard barracks. His immediate stake is having somewhere to sleep and handle his trading goods, not another assignment for the party. If he tells the PCs this while selling goods earlier, the later arrival is a continuation of the same event. Preserve his previously promised discount.",
+                    "Jord reaches Ledger House seeking a room whether the party witnesses it or not. If the group never returns, Brakkus can tell them about his arrival later; do not contrive Jord following them from shop to shop."
                   ]
                 },
                 {
@@ -2680,7 +2683,8 @@
                     "Brann remembers the Council's original judgment. He does not declare a pardon, fabricate lost records or offer to conceal evidence. He need not volunteer Pepper's name to royal officials who have not asked him for it.",
                     "He and Jord need not agree with one another; Brann's concern for residents and Jord's practical concerns are distinct. Neither has to tell the party to oppose the Crown.",
                     "Brann comes looking for Brakkus, carrying the former Council's already-owed Kellan's Well contract payment. Total 300 gp; Jarrock 100 gp, Aaron 100 gp, Arunem 100 gp, Pepper 0 gp because her first compulsory Council mission was unpaid. If one is absent, Brann keeps that share until delivery. Do not confuse this payment with the prior 300 gp Brann paid the party for returning Blackstone's reliquary, or with the 375 gp recoverable at the Well.",
-                    "If the party asks why Brann has the money after the Council left: the Council entrusted him with 300 gp for the other adventurers' Kellan's Well contract shares before its departure. He was the custodian of the money, not an offscreen witness to the fight; the party's return and report allow him to hand it over. There was never a requirement for the party to restore the sluice."
+                    "If the party asks why Brann has the money after the Council left: the Council entrusted him with 300 gp for the other adventurers' Kellan's Well contract shares before its departure. He was the custodian of the money, not an offscreen witness to the fight; the party's return and report allow him to hand it over. There was never a requirement for the party to restore the sluice.",
+                    "If the PCs have not reached Ledger House when Brann visits, Brakkus knows the payment is ready and Brann holds their undelivered shares for later collection. Do not assume funds were already received or add them to inventory until a player character actually accepts the money."
                   ]
                 },
                 {
@@ -10940,7 +10944,8 @@
                 "SESSION 4 PREP (October 16, 2026): Jord comes to Ledger House seeking lodging after royal guards commandeer his hotel. Bishop Brann seeks Brakkus and brings 300 gp owed by the Council for Kellan's Well: 100 gp each Jarrock, Aaron and Arunem, 0 gp Pepper. Distinct from the 300 gp Blackstone reliquary reward and from Well treasure. Brakkus's full history is already recorded.",
                 "SESSION 4 PREP (October 16, 2026): Tulcornix knows Pepper murdered Kaleb and deliberately seeks her. His direct line is 'You killed my brother, the stain of his blood will never leave your hands, save his wife and you might cleanse your soul.' Elowen's 150 gp retroactive municipal-services assessment and 50 gp discharge fee can be challenged, paid or subverted. Shops' differing reactions are in Appendix J.",
                 "LOCKED SESSION 4 ENDING (October 16, 2026): Tulcornix's arrival and direct accusation against Pepper are the LAST moments of Session 4. He reveals Elowen's plight at Cardon Weavehouse and the session ends immediately. The party's reaction, any detailed questioning, bond discussion or rescue is Session 5. The Cardon annex reference in Chapter 6 supports Session 5 or an unanticipated EARLIER discovery—not continued play after his arrival.",
-                "SESSION 4 OPENING CHECK: Brann's Council payment is owed for the completed Well mission without any sluice repair. The party starts during its short rest with the prisoners bound and no missing fourth Scout or mandatory maintenance action."
+                "SESSION 4 OPENING CHECK: Brann's Council payment is owed for the completed Well mission without any sluice repair. The party starts during its short rest with the prisoners bound and no missing fourth Scout or mandatory maintenance action.",
+                "SESSION 4 PLAYTEST CONTINGENCY: Jord and Brann independently visit Ledger House, but may not be witnessed if the party never returns. In that case Brann keeps undelivered 100 gp shares; Jord still finds lodging. Do not force guest appearances into remote locations. Tulcornix seeks Pepper and ends the session when he finds her."
               ]
             },
             {
