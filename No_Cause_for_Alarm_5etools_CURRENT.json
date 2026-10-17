@@ -6,17 +6,17 @@
         "json": "NCFA",
         "abbreviation": "NCFA",
         "full": "No Cause for Alarm: Ruins of Bellweather",
-        "version": "4.40",
+        "version": "4.41",
         "authors": [
           "No Cause for Alarm Campaign"
         ],
-        "dateLastModified": 1792166400
+        "dateLastModified": 1792208700
       }
     ],
     "edition": "one",
     "dateAdded": 1789528955,
-    "dateLastModified": 1792166400,
-    "_dateLastModifiedHash": "ncfa-v440-approved-crown-map"
+    "dateLastModified": 1792208700,
+    "_dateLastModifiedHash": "ncfa-v441-session4-royals-merchants-ledgerhouse"
   },
   "adventure": [
     {
@@ -106,7 +106,10 @@
             "Kaleb's Family and Tulcornix Avemvir",
             "If They Go to Cardon Weavehouse Immediately",
             "Running a Three-Hour Social Session",
-            "Rewards and Advancement"
+            "Rewards and Advancement",
+            "Session 4 DM Run Card — Royal Takeover",
+            "House Stucky — Crown Authority and Public Announcement",
+            "Running a 3.5-Hour Social Session"
           ]
         },
         {
@@ -370,7 +373,8 @@
             "The Spare Button — Edda Pell",
             "The Two Hammers — Joren Viton and Maten",
             "Jord's Odds & Ends — Jord",
-            "Party Gear Snapshot (Advisory, Not Stock-Tailoring Rules)"
+            "Party Gear Snapshot (Advisory, Not Stock-Tailoring Rules)",
+            "What Merchants Say About the Takeover — Session 4"
           ]
         }
       ]
@@ -2549,6 +2553,20 @@
                 "Approved campaign map dated October 15, 2026. Shows Crown banners, the expanded walls, the restored South Ward (former Slums), the restored approach around Blackstone Temple, Maren Isle and the established city landmarks. This is the approved current geography; the PNG master remains archived unmodified in the NCFA Library."
               ]
             },
+            {
+              "type": "entries",
+              "name": "Session 4 DM Run Card — Royal Takeover",
+              "entries": [
+                "Start inside Kellan's Well, just after the fight, with Noren Vale and his Warrior Veteran alive and bound. They have not decided either prisoner's fate. The party was underground only a few hours. The Crown prepared its takeover in advance; new flags, orders, and officers can appear fast, but the rebuilt walls, neighborhoods and streets shown on the approved map existed or were underway before they entered.",
+                "Resolve Noren: killed or handed to the watch means out of the campaign; release means he withdraws underground with the Iron Covenant organization still operating, not instant loyal allies. The Veteran is a separate decision. The current roster was Noren plus ONE Warrior Veteran, no Toughs or reinforcements.",
+                "If searched: Noren's monster gear specifies a scimitar, light crossbow and studded leather armor; his 1/day smoke bomb ability is not automatically recovered as a sellable item. Veteran's listed equipment includes greatsword and crossbow. Do not invent a secret coin pouch. Recoverable Well treasure is 375 gp in fixed locations (25 gp courier, 150 gp barracks, 75 gp salvage valuables, 125 gp command strongbox), three potions and the Decanter of Endless Water. Do not assume they collected every item; player inventory and previous actions determine actual holdings.",
+                "Let shopping double as political investigation. The gate, notices, market, and four established shops have bounded answers in Appendix J. Koven House is Crown headquarters and has a public registry. Don't force a separate exposition scene or a mandatory royal audience.",
+                "Ledger House: Brakkus offers dinner and genuine conversation with the PCs. Jord independently seeks a room because his hotel has been turned into royal guard barracks. Bishop Brann seeks Brakkus with Kellan's Well money entrusted by the departing Council: 300 gp total, 100 gp each to Jarrock, Aaron, Arunem; Pepper 0 gp because her first sentenced mission was unpaid. Record actual receipt. This is separate from the earlier Blackstone reliquary payment and anything looted at the Well.",
+                "Late-session anchor: Tulcornix Avemvir seeks Pepper deliberately by name, knows she killed Kaleb, and confronts her directly. He tells her Kaleb's widow Elowen is indentured at Cardon Weavehouse. His wing was injured in a genuine loading accident. Follow a credible trail if the PCs relocate (people can tell him where Pepper was seen), not impossible tracking.",
+                "3.5-hour flexible target: prisoners 10–25 min, gates/streets 15–25, shops/inquiries 20–60, Brakkus and independently arriving visitors 35–65, Tulcornix/consequences 15–30. Preserve slack, allow a return to any earlier scene, and do not invent combat to fill time.",
+                "At session end record decisions, goods actually acquired and sold, prisoner disposition, recipient of each 100 gp payment, shops visited, and party response to Elowen's indenture."
+              ]
+            },
             "{@b Recommended level:} 4. The return from Kellan's Well is a roleplay-led session. No encounter is scheduled; no automatic level advancement is attached to the old Koven House criminal-network plan.",
             {
               "type": "entries",
@@ -2558,7 +2576,8 @@
                 "Kill Noren: Noren is permanently out of the campaign. Handle the veteran's fate as the players actually decide. Do not immediately introduce a replacement Noren or contrive an escape.",
                 "Turn Noren over to city watch: the city gate watch accepts securely bound prisoners with the party's report that they were captured occupying Kellan's Well. The old municipal watch is undergoing a Crown transition but can still take custody without any royal petition. Noren is permanently removed from the campaign. He is not later freed or returned as an antagonist. The veteran can be turned over as well.",
                 "Release Noren: he withdraws from public view, continues managing the Iron Covenant's criminal network underground, and can become useful to the resistance to royal rule later. He is not instantly a loyal ally and does not announce a rebellion. Any choice made separately for the veteran still matters.",
-                "Noren can bargain and warn them about the Crown, which he already disclosed last session, but he is bound and has no automatic escape. Allow 10–25 minutes for this opening (or more if the players invest in it). They then leave the Well by their own route and choose what to do in Bellweather. No forced travel montage or Council summons."
+                "Noren can bargain and warn them about the Crown, which he already disclosed last session, but he is bound and has no automatic escape. Allow 10–25 minutes for this opening (or more if the players invest in it). They then leave the Well by their own route and choose what to do in Bellweather. No forced travel montage or Council summons.",
+                "On searching their possessions, use the established creature gear, any seized weapons, and Chapter 5's fixed treasure; don't double-count valuables or invent new prisoner's treasure. If the watch accepts prisoners, the captured arms are recorded based on what the PCs actually surrender."
               ]
             },
             {
@@ -2576,13 +2595,27 @@
             },
             {
               "type": "entries",
+              "name": "House Stucky — Crown Authority and Public Announcement",
+              "entries": [
+                "King Hendrix Stucky is the reigning monarch in the distant capital, and Prince Reginald's father. Dangerous and competent, he is not planned to appear personally in the campaign. His government has broader affairs than Bellweather; do not write a compulsory king encounter.",
+                "Prince Reginald Stucky, Hendrix's son, governs Bellweather for his father. He is pompous, petty, theatrically entitled and comically evil, but soldiers and administrators can execute real orders effectively.",
+                "Princess Narcissa Stucky is Reginald's WIFE, not his sister. She rules alongside him in Bellweather; vain, privileged, casually cruel, and utterly certain of her entitlement.",
+                "The former Council arranged to transfer Bellweather before the party entered the Well. The Council members obtained money, land in another area and ducal titles in exchange. The Crown prepared troops, clerks, flags and municipal paperwork beforehand. The transfer became publicly effective while the party was underground for only a few hours. The party did not cause the sale; it happened independently of them.",
+                "PUBLIC PROCLAMATION (readable on gate and municipal postings): 'BY ORDER OF THE CROWN. The former Free City of Bellweather is henceforth governed by Their Royal Highnesses Prince Reginald Stucky and Princess Narcissa Stucky, acting in the name of His Majesty King Hendrix Stucky. Municipal offices and records are transferred to the Crown. Petitions concerning public contracts and civic records shall be submitted at the registry in Koven House. Notices shall be displayed at a height befitting royal dignity.' This is a display instruction, not a mandatory quest.",
+                "Ordinary public answers: Reginald and Narcissa govern for King Hendrix; Koven House is royal headquarters; the Council has left. The city changed flags and command structure within hours, not its architecture. Citizens may have heard rumors that the Council got money, estates and titles, but only records/credible officials can confirm precise terms. The guard includes old watchmen operating under new authority and new royal personnel.",
+                "No single public NPC knows all royal plans. Merchants disagree about the takeover. The Crown's administration is imposing new paperwork and a municipal recovery assessment, but ordinary people are still learning which old documents are valid."
+              ]
+            },
+            {
+              "type": "entries",
               "name": "At the Table: Immediate Changes",
               "entries": [
                 "Choose concrete details appropriate to the time that has passed: new banners on familiar buildings; clerks copying records; workers paid to change signs; merchants revising prices; ordinary residents wondering whether old promises still hold. Do not present every change as a fight or a clue.",
                 "A royal proclamation can display absurd entitlement while remaining legally consequential. Write any specific tax, decree, punishment, or royal title to match decisions made at the table; no unapproved invented statute is canon yet.",
                 "The takeover began before the party arrived back in town. Background jobs, family obligations and unrelated disputes continue. Not every citizen agrees the change is bad, and not every Crown employee is malicious.",
                 "Ready city detail: workers remove a FREE CITY OF BELLWEATHER sign and install the Crown's insignia; they squabble over who gets to keep the old brass lettering. At the gates the same watchmen now carry newly stamped Crown papers. A royal clerk insists a proclamation must be hung at a height suited to a monarch looking down from horseback. These are visible facts, not required quests.",
-                "An ordinary merchant complains about replacement trade permits; a laborer appreciates finally being paid for a repair; a former Council clerk worries about losing a livelihood. Citizens can disagree without becoming automatic loyalists or rebels."
+                "An ordinary merchant complains about replacement trade permits; a laborer appreciates finally being paid for a repair; a former Council clerk worries about losing a livelihood. Citizens can disagree without becoming automatic loyalists or rebels.",
+                "Players asking merchants what happened is expected. Appendix J includes direct observations, rumors, attitudes, and plausible answers. Their shopping trip may be the entire first half of the royal-takeover revelation."
               ]
             },
             {
@@ -2610,7 +2643,8 @@
                     "Suggested opening, in Brakkus's voice: 'I know what you've done around this city. I know a little about how you fight. But I don't know much about who you were before you walked through my door. So tell me about yourselves.'",
                     "Possible follow-ups, chosen naturally rather than administered in order: Where were you before Bellweather? Who or what brought you here? Is anybody elsewhere looking for you? What would you do if you could leave tomorrow? What is important to you beyond the next job?",
                     "Give Jarrock, Aaron, Arunem and Pepper space to volunteer or withhold their own histories, ask each other questions, and ask Brakkus about his past. He is a retired paladin and proprietor of Ledger House, not an omniscient investigator. Do not demand a backstory reveal from a reluctant player.",
-                    "Brakkus will not become the party's commander, a substitute Council, or the default leader of an uprising; he cares first about the people under his roof."
+                    "Brakkus will not become the party's commander, a substitute Council, or the default leader of an uprising; he cares first about the people under his roof.",
+                    "Brakkus's detailed established past already exists in Appendix C and his NPC entry: his mother Elena, father Korgak, Ironfang Clan, mentor Vance Halford, oath to Torm, and sword The Appendix. Answer personal questions from that history; don't invent a new life story or make PC backstory revelations a mandatory sequence."
                   ]
                 },
                 {
@@ -2619,7 +2653,8 @@
                   "entries": [
                     "Jord is the road-worn gnome merchant already established in the Slums aftermath, whose missing strongbox helped bring the group into that district. He has current business to attend to; he is not another person summoned just to give Pepper advice.",
                     "Jord sees that the Crown is busy processing old contracts, trading privileges, new taxes and ownership records. How those changes affect his livelihood is independent of Pepper and may open a merchant-focused conversation or future contacts.",
-                    "If Pepper's status comes up, Jord offers practical advice rather than legal certainty: 'They've got a whole city of paperwork to sort through. Four jobs owed to a Council that's gone? I wouldn't go reminding them.' He does not claim the sentence has been canceled."
+                    "If Pepper's status comes up, Jord offers practical advice rather than legal certainty: 'They've got a whole city of paperwork to sort through. Four jobs owed to a Council that's gone? I wouldn't go reminding them.' He does not claim the sentence has been canceled.",
+                    "Jord independently comes to Ledger House looking for a room: the hotel where he was staying has been commandeered for royal guard barracks. His immediate stake is having somewhere to sleep and handle his trading goods, not another assignment for the party. If he tells the PCs this while selling goods earlier, the later arrival is a continuation of the same event. Preserve his previously promised discount."
                   ]
                 },
                 {
@@ -2628,7 +2663,8 @@
                   "entries": [
                     "Brann remains in the city because his congregation, the poor, and the people who rely on his temple did not leave when the Council did. He can talk about how the Crown affects ordinary residents, funerals, records, access to healing and charity, rather than focusing only on Pepper.",
                     "Brann remembers the Council's original judgment. He does not declare a pardon, fabricate lost records or offer to conceal evidence. He need not volunteer Pepper's name to royal officials who have not asked him for it.",
-                    "He and Jord need not agree with one another; Brann's concern for residents and Jord's practical concerns are distinct. Neither has to tell the party to oppose the Crown."
+                    "He and Jord need not agree with one another; Brann's concern for residents and Jord's practical concerns are distinct. Neither has to tell the party to oppose the Crown.",
+                    "Brann comes looking for Brakkus, carrying the former Council's already-owed Kellan's Well contract payment. Total 300 gp; Jarrock 100 gp, Aaron 100 gp, Arunem 100 gp, Pepper 0 gp because her first compulsory Council mission was unpaid. If one is absent, Brann keeps that share until delivery. Do not confuse this payment with the prior 300 gp Brann paid the party for returning Blackstone's reliquary, or with the 375 gp recoverable at the Well."
                   ]
                 },
                 {
@@ -2642,7 +2678,9 @@
                     "Tulcornix has a conspicuously splinted and injured wing; he cannot safely fly when he arrives. While doing paid hauling/loading work at the street-facing Cardon Weavehouse annex to be near his sister-in-law, a shifting loom timber struck it. This was a worksite accident, not a secret attempt to silence him. He is able to walk, speak, and seek the party.",
                     "If a character applies appropriate healing magic, allow Tulcornix's injured wing to mend enough for flight. This doesn't solve his problem: Elowen remains subject to a Crown indenture in a watched worksite.",
                     "Tulcornix can name Cardon Weavehouse immediately, has personally seen Elowen in the annex, knows which entrance workers use, and can guide the party there. Core information is not gated by a skill check. He does not know the old compound's entire interior.",
-                    "Opening option: \"Kaleb's wife is at the Cardon Weavehouse. They call it a debt. They won't let her leave. I tried to get closer—\" He indicates his splinted wing. \"I need help getting her out.\""
+                    "Opening option: \"Kaleb's wife is at the Cardon Weavehouse. They call it a debt. They won't let her leave. I tried to get closer—\" He indicates his splinted wing. \"I need help getting her out.\"",
+                    "Tulcornix deliberately seeks PEPPER, not Brakkus. He already knows that Pepper killed Kaleb, his adopted brother; he has not forgiven her. He knows the adventurers' connection to Ledger House, but if they relocate, he can ask people where Pepper went rather than miraculously appearing at her exact position.",
+                    "His direct confrontation with Pepper: 'You killed my brother, the stain of his blood will never leave your hands, save his wife and you might cleanse your soul.' He then explains that Elowen is being held under Crown indenture at Cardon Weavehouse. If Pepper presses him, he is grieving and angry; he is asking the person responsible for Kaleb's death to do something for Kaleb's surviving family. If refused, he continues looking for help elsewhere."
                   ]
                 }
               ]
@@ -2670,7 +2708,8 @@
                 "While the Crown administers a street-facing work annex, Perrin's family claim, the old Weavehouse map, and previous unplayed occupants deeper in the property remain unresolved. Do not make Perrin the author of this indenture or use old Chapter 8 enemies as automatic reinforcements.",
                 "The encounter is a consequence of people making choices, not a designed guilt trap. Tulcornix wants assistance for a person he cares about, whether or not Pepper expresses remorse.",
                 "Tulcornix's actual arrival cannot be skipped, even if the party leaves Ledger House or pursues a different activity. Adjust his credible route to the party instead of teleporting him or forcing them into a location. If the party independently learns what happened beforehand, he still arrives with his personal request and perspective; do not conceal known facts to preserve a theatrical revelation.",
-                "A prior outline connected Kaleb's widow and daughter to a healing request. Do not require that exact request unless it still fits the circumstances and current story."
+                "A prior outline connected Kaleb's widow and daughter to a healing request. Do not require that exact request unless it still fits the circumstances and current story.",
+                "The Crown's Royal Municipal Recovery Assessment retroactively claims repayment for public services provided under the former free-city government, such as roads, sanitation, the watch and the waterworks. The Crown used municipal records obtained before the transfer to prepare charges. Elowen's household is assessed 150 gp and a 50 gp discharge-processing fee, total 200 gp. She was already working at the textile annex, which was commandeered, allowing officials to impose labor confinement quickly. Others have received notices; enforcement is patchy in the first hours, not every Bellweather household has been arrested. The assessment is legally asserted by the Crown, not demonstrated to be fair."
               ]
             },
             {
@@ -2682,12 +2721,13 @@
                 "The clerk will allow general questions and public-counter business. The work ledger openly identifies Elowen, her assignment, and the 150 gp + 50 gp claimed debt/processing charges. Workers cannot leave their contracts voluntarily. The watchmen prevent unauthorized departures, but do not attack mere visitors.",
                 "Let plausible plans work: submit or challenge the bond at Koven House, bargain or buy out the debt, speak with Elowen, forge an authorization, create a distraction, quietly extract her, or confront the guards. A reasonable public inquiry needs no roll. For disputed access use DC 13 Charisma (Deception or Persuasion) as appropriate; to open a secured staff latch use DC 15 Dexterity (Thieves' Tools), or DC 15 Strength (Athletics) to force. Obvious clever approaches succeed without checks. The watchmen can withdraw or surrender if overwhelmed, not fight suicidally.",
                 "Koven House's ground-floor public registry accepts paperwork and inquiries without a check; a clerk can identify the Cardon annex and bond office. It does not automatically search for Pepper's obsolete Council sentence. A higher official's involvement follows player actions, not a forced royal meeting.",
-                "Elowen wants her freedom and to return to her daughter. She can speak for herself and is not automatically grateful to Pepper for anything. If the party acts immediately, let the outcome be determined by the method they choose; no forced confrontation and no insistence on ending the session at Tulcornix's arrival."
+                "Elowen wants her freedom and to return to her daughter. She can speak for herself and is not automatically grateful to Pepper for anything. If the party acts immediately, let the outcome be determined by the method they choose; no forced confrontation and no insistence on ending the session at Tulcornix's arrival.",
+                "The public counter has a work ledger citing Elowen's 150 gp Municipal Recovery Assessment and 50 gp discharge fee. The clerk explains that Crown staff prepared assessments from transferred Council records and names the Koven House registry for a petition or discharge papers. Public questions and sight of the ledger require no check. Existing two guards, one clerk and six workers remain the COMPLETE immediate annex roster; no surprise Chapter 8 reinforcements."
               ]
             },
             {
               "type": "entries",
-              "name": "Running a Three-Hour Social Session",
+              "name": "Running a 3.5-Hour Social Session",
               "entries": [
                 "Flexible 3.5-hour target (not forced scene order): Noren decision at the Well 10–25 minutes; journey and first city impressions 15–30; free exploration and shopping 30–65; Brakkus's table conversation 30–65; Jord/Bishop when the party naturally meets them 20–40; Tulcornix and response 15–30. Keep slack for player choice, investigation or an early trip to Cardon; don't manufacture combat to fill time.",
                 "Prepare NPC motives, current stakes, and consequences rather than a mandatory sequence. Give each player an opening to state a goal, and follow the actions the table actually chooses.",
@@ -2695,7 +2735,8 @@
                 "{@b Opposition is an option, not a contract.} The party is free to oppose, tolerate, exploit or ignore the Crown. Do not have Brakkus, Jord or Brann recruit the group as a mandatory resistance cell. Respect decisions even when they spoil planned pacing.",
                 "Keep several kinds of pressure available: moral disagreement, paperwork, labor disputes, divided loyalties, an ordinary favor, a celebration, a credible threat. None has to happen.",
                 "An antagonistic official can say no, call for guards, negotiate, or walk away as circumstances warrant. Do not roll initiative merely because the session needs an action scene.",
-                "Before closing, establish what the party now knows, whom they helped or alienated, and which leads they want to pursue next. The world continues between sessions."
+                "Before closing, establish what the party now knows, whom they helped or alienated, and which leads they want to pursue next. The world continues between sessions.",
+                "Expect store customers to ask who governs, where the Council went, who received payment for the sale, whether old judgments still apply and whether guards have changed. Each shopkeeper's distinct knowledge and responses are in Appendix J. Don't require players to attend a separate briefing after shopping."
               ]
             },
             {
@@ -2704,7 +2745,8 @@
               "entries": [
                 "No automatic combat reward or encounter treasure is attached to this chapter. Specific assistance, favors, contacts, or money should reflect what characters actually accomplish.",
                 "This is the first post-Kellan's Well chapter; do not apply the superseded Koven criminal-network treasure package or award levels for scenes that did not happen. Level progression for the Crown-era story is deliberately open.",
-                "The following chapters contain established geographical/adventure assets but pre-Crown political scaffolding. Use Appendix I for what is current."
+                "The following chapters contain established geographical/adventure assets but pre-Crown political scaffolding. Use Appendix I for what is current.",
+                "Outstanding Council contract money for clearing Kellan's Well: 300 gp delivered by Bishop Brann, 100 gp each to Jarrock, Aaron and Arunem, no compensation to Pepper for the first mandatory job. Track actual receipt; don't double-pay. Separate from previous Blackstone reliquary reward and fixed Well loot."
               ]
             }
           ]
@@ -10876,7 +10918,10 @@
                 "Brakkus, Crown officers, merchants, tradespeople, former officials, and ordinary residents each pursue their own interests. The city reacts to the change but is not a single uniform opposition faction.",
                 "The players expressed interest in eventually playing to level 20, but no campaign extension, milestones, or finale level has been approved. The current 3–16 outline remains a planning framework only.",
                 "PREPARED START: open in Kellan's Well with Noren and his veteran captive, alive and tied. Killing Noren or turning him over to city guard removes him from the campaign permanently; releasing him sends him underground with the Iron Covenant network, potentially useful to resistance later. Then the party chooses its activities in Bellweather.",
-                "PREPARED FAMILY: Kaleb's widow Elowen is indentured in a Crown-administered textile annex at Cardon Weavehouse; Crown asserts 200 gp to discharge its manufactured bond (150 gp charge plus 50 gp fee). Her daughter stays safely with a trusted local neighbor. Tulcornix worked loading cargo near her and suffered a broken wing from a shifting loom beam. His arrival late this session is planned; healing his wing does not free Elowen. The deeper Weavehouse occupation and ownership from old Chapter 8 are still provisional."
+                "PREPARED FAMILY: Kaleb's widow Elowen is indentured in a Crown-administered textile annex at Cardon Weavehouse; Crown asserts 200 gp to discharge its manufactured bond (150 gp charge plus 50 gp fee). Her daughter stays safely with a trusted local neighbor. Tulcornix worked loading cargo near her and suffered a broken wing from a shifting loom beam. His arrival late this session is planned; healing his wing does not free Elowen. The deeper Weavehouse occupation and ownership from old Chapter 8 are still provisional.",
+                "SESSION 4 PREP (October 16, 2026): House Stucky = King Hendrix (competent, dangerous, stays in capital; no planned appearance), son Prince Reginald (Bellweather's ruler) and Reginald's wife Princess Narcissa (co-ruler). Former Council received money, land elsewhere and ducal titles. Royal transition became official while the party was in the Well for just a few hours, with advance preparation explaining the visible changes.",
+                "SESSION 4 PREP (October 16, 2026): Jord comes to Ledger House seeking lodging after royal guards commandeer his hotel. Bishop Brann seeks Brakkus and brings 300 gp owed by the Council for Kellan's Well: 100 gp each Jarrock, Aaron and Arunem, 0 gp Pepper. Distinct from the 300 gp Blackstone reliquary reward and from Well treasure. Brakkus's full history is already recorded.",
+                "SESSION 4 PREP (October 16, 2026): Tulcornix knows Pepper murdered Kaleb and deliberately seeks her. His direct line is 'You killed my brother, the stain of his blood will never leave your hands, save his wife and you might cleanse your soul.' Elowen's 150 gp retroactive municipal-services assessment and 50 gp discharge fee can be challenged, paid or subverted. Shops' differing reactions are in Appendix J."
               ]
             },
             {
@@ -10899,6 +10944,19 @@
             "Sale procedure: quote the displayed price, decrease stock on sale, keep sold items sold until a believable resupply occurs. Goods not listed here can be ordered or searched for in the city if appropriate; this inventory is the merchant's opening stock, not a prohibition on the existence of other merchandise in the world. 'One crate/box/set' means one indivisible lot unless the merchant agrees to split it.",
             "Magic pricing reference from the catalog: Common 100 gp, Uncommon 400 gp, Rare 4,000 gp, Very Rare 40,000 gp, Legendary 200,000 gp. The catalog prices spell scrolls by level separately (cantrip 50 gp; level 1 100 gp; level 2 250 gp; level 3 500 gp; level 4 2,500 gp; level 5 5,000 gp). Individual consumables below use their listed prices. Rarity prices are campaign shop prices, not guarantees of availability.",
             "Merchant independence: their merchandise need not reference the Crown, Perrin, Tyren, or the party's current goals. NPCs have commercial and personal lives. Do not turn every strange object into a clue.",
+            {
+              "type": "entries",
+              "name": "What Merchants Say About the Takeover — Session 4",
+              "entries": [
+                "The adventurers spent only a few hours at Kellan's Well; merchants have just received public news of the transfer but may have seen preparations before. Shopping and asking questions are the SAME play activity, not separate scripted scenes. All can identify Reginald and Narcissa as the new royal governors, their father King Hendrix, Crown headquarters at Koven House and the departure of the Council. Only insiders have precise transfer terms. Their inventories, stock counts and existing personalities are unchanged.",
+                "TIERA DAME, THE TINY MAGE: Friendly, quick, observant, knows Pepper from Session 1. Saw work crews, flags and unfamiliar wagons even before the proclamation; she doesn't know the sealed negotiations. 'Prince Reginald and Princess Narcissa, they say. Funny thing, those fellows knew exactly where to hang the banners before anyone told us.' On closures: 'I'm open, aren't I?' Her other gossip need not connect to the Crown.",
+                "EDDA PELL, THE SPARE BUTTON: Dry, exact, practical. A clerk has started demanding shop licensing information, but she doesn't yet know whether the old license is void. 'A man wanted to see my trading license. I told him I've been here twenty-three years. Apparently that wasn't the question.' She sells the same buttons, magic items and scrolls, no invented magic ban.",
+                "JOREN VITON, THE TWO HAMMERS: Outgoing, sees royal guard purchasing as possible legitimate business. 'Soldiers break weapons. Someone has to repair them.' MATEN: Measured, uneasy about who will use his work. 'They've already got swords, Joren.' Joren: 'Swords break.' Neither knows the new army's confidential orders, and neither is automatically resistance.",
+                "JORD, JORD'S ODDS & ENDS: His hotel room has been commandeered to quarter the royal guard. 'Apparently a royal guard needs my room more than I do. Very apologetic, right up to telling me to move.' He plans to rent a room at Ledger House. If asked about Pepper's Council obligation, he recommends keeping under the Crown's administrative radar, not assuming legal forgiveness. His prior promised party discount still exists, though no percentage is canon.",
+                "COMMON QUESTIONS: 'Who rules?' Reginald and his wife Narcissa govern for King Hendrix in the capital. 'Where are they?' Koven House is headquarters, not a guarantee of an immediate royal audience. 'What did the Council get?' Rumors of money, estates and new titles; insiders/records needed for confirmation. 'How did all this happen in a few hours?' Troops, supplies and paperwork were already in place. 'Do our old licenses, punishments or contracts still apply?' The Crown is sorting them through the Koven House registry, with no blanket cancellation. 'Are these the same guards?' Some former watchmen remain; royal soldiers are newly present. Public facts need no check.",
+                "One merchant can be pleased about a new customer, another annoyed about permits, another worried about safety. They have unrelated errands and personal lives; not every statement is a clue or a reliable fact. Don't invent a new mandatory tax decree beyond the prepared Royal Municipal Recovery Assessment."
+              ]
+            },
             {
               "type": "entries",
               "name": "The Tiny Mage — Tiera Dame",
@@ -14963,7 +15021,7 @@
         "entries": [
           "Noren Vale is a mid-forties half-elf with a rangy build, short graying hair, one old facial scar, gloves, practical weapons, and a battered coat over piecemeal armor. He commands the Iron Covenant position at Kellan's Well.",
           "Noren is not suicidal. He holds the Well while it remains defensible, tries to withdraw once the position is clearly lost, and surrenders if escape is impossible.",
-          "Kellan's Well v4.30 table-ready override: 85 HP; no additional actions or burst damage. Command group is a Warrior Veteran and two Toughs; he preserves a retreat route if possible."
+          "Current Kellan's Well roster: Noren Vale and exactly one Warrior Veteran, with no Toughs or extra reinforcements. In Session 4 both begin alive and restrained, and their disposition remains the party's decision."
         ]
       }
     },
