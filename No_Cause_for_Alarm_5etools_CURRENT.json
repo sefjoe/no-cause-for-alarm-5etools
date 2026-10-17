@@ -6,7 +6,7 @@
         "json": "NCFA",
         "abbreviation": "NCFA",
         "full": "No Cause for Alarm: Ruins of Bellweather",
-        "version": "4.49",
+        "version": "4.50",
         "authors": [
           "No Cause for Alarm Campaign"
         ],
@@ -17,7 +17,7 @@
     "edition": "one",
     "dateAdded": 1789528955,
     "dateLastModified": 1792208700,
-    "_dateLastModifiedHash": "ncfa-v449-session4-approved-ledger-house-map"
+    "_dateLastModifiedHash": "ncfa-v450-ledger-map-and-mini-pull-list"
   },
   "adventure": [
     {
@@ -100,6 +100,7 @@
           "headers": [
             "Map: Bellweather Under Crown Administration",
             "Map: Ledger House (Approved DM Map)",
+            "Session 4 Miniature Pull List — Numbered Arcknight Binder",
             "Session 4 DM Run Card — Royal Takeover",
             "Start in the Well: Noren and His Veteran",
             "Chapter Overview",
@@ -2593,6 +2594,52 @@
             },
             {
               "type": "entries",
+              "name": "Session 4 Miniature Pull List — Numbered Arcknight Binder",
+              "entries": [
+                "Use the user's permanently numbered 161-piece Arcknight binder. These are the exact NUMBERED physical figures identified in the binder's Original Photo Binder Index. Figures are representation/proxies, not necessarily exact character portraits. Only the Koven House defense is conditional; no planned combat in Session 4.",
+                {
+                  "type": "entries",
+                  "name": "Pull for normal Session 4",
+                  "entries": [
+                    {
+                      "type": "list",
+                      "items": [
+                        "{@b #025 — Noren Vale (captive).} Red-cloaked swordsman; binder Page 04, Front, Top left. Represents captured half-elf criminal leader, despite figure's generic human appearance.",
+                        "{@b #033 — Noren's Warrior Veteran (captive).} Shield-bearing swordsman; binder Page 05, Front, Top left.",
+                        "{@b #069 — Brakkus Ledgerhelm.} Half-orc warrior with axe; binder Page 09, Back, Top left. Species matches; his campaign equipment remains The Appendix longsword, not the pictured axe.",
+                        "{@b #043 — Jord.} Blue-cloaked gnome; binder Page 06, Front, Bottom left.",
+                        "{@b #048 — Bishop Brann.} Dwarf with warhammer; binder Page 06, Back, Bottom right. Species fits the older dwarf bishop; pictured weapon is not a requirement.",
+                        "{@b #037 — Tulcornix Avemvir.} Aarakocra; binder Page 05, Back, Top left. Reserve for the ENDING confrontation; his wing is injured in fiction even if the miniature depicts flight."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "entries",
+                  "name": "Conditional: Koven House assault",
+                  "entries": [
+                    "ONLY set these on the map if the party chooses to attack. Exactly six {@creature Guard|XMM} and one {@creature Warrior Veteran|XMM}, as defined by the Chapter 6 defense; these minis are stand-ins for royal uniformed soldiers. Their placements remain the mapped stations (area 1, registry 6, records corridor 20/24, duty room 11).",
+                    {
+                      "type": "list",
+                      "items": [
+                        "{@b #026 — Guard 1.} Blue-armored spear fighter; Page 04, Front, Top right.",
+                        "{@b #030 — Guard 2.} Warrior with round shield and axe; Page 04, Back, Top right.",
+                        "{@b #031 — Guard 3.} Red-armored fighter; Page 04, Back, Bottom left.",
+                        "{@b #032 — Guard 4.} Female sword fighter; Page 04, Back, Bottom right.",
+                        "{@b #034 — Guard 5.} Female armored swordswoman; Page 05, Front, Top right.",
+                        "{@b #038 — Guard 6.} Blue-armored paladin; Page 05, Back, Top right.",
+                        "{@b #044 — Royal Veteran sergeant.} Lavender-armored officer; Page 06, Front, Bottom right.",
+                        "{@b Optional clerk #017.} Halfling in explorer clothes; Page 03, Front, Top left.",
+                        "{@b Optional clerk #039.} Female noble in blue; Page 05, Back, Bottom left."
+                      ]
+                    }
+                  ]
+                },
+                "Player characters use their existing player minis; do not take extra figures from this NPC pull list for them unless requested. No new miniature is needed for the shops if their conversations remain theater of the mind. Keep the guards in the binder if the party doesn't fight. The #155/#156 dragon/Balor labeling discrepancy in some historical indexes is unrelated to all numbers pulled here."
+              ]
+            },
+            {
+              "type": "entries",
               "name": "Session 4 DM Run Card — Royal Takeover",
               "entries": [
                 "Start inside Kellan's Well, during the party's short rest following the fight, with Noren Vale and his Warrior Veteran alive and bound. The party's Well mission is complete; the original sluice restoration objective was explicitly removed. They have not decided either prisoner's fate. The party was underground only a few hours. The Crown prepared its takeover in advance; new flags, orders, and officers can appear fast, but the rebuilt walls, neighborhoods and streets shown on the approved map existed or were underway before they entered.",
@@ -2608,7 +2655,8 @@
                 "If shopping, government inquiry or an unrelated detour consumes most of the evening, Brakkus/Jord/Brann still pursue their independent Ledger House business without a staged encounter for absent PCs. Keep Tulcornix's confrontation as the final scene, and move any unfinished dinner or money handoff to a later visit instead of bending geography.",
                 "Koven House attack contingency: six total Guard stat blocks (2 entrance, 2 lobby, 2 landing) plus one Warrior Veteran sergeant inside the temporary headquarters, with two civilian clerks. Follow real alarm and travel time; barracks soldiers are NOT immediate reinforcements. The Crown responds to an actual attack as a new offense. If the party's arrest, death, or hiding makes Tulcornix's planned appearance implausible, let that outcome stand rather than teleporting him.",
                 "KOVEN HOUSE PLAYTEST MAP OVERRIDE: The existing DM key has no reliably marked upper landing; guard posts are courtyard area 1 (2 Guards), registry/main room 6 (2 Guards and two Commoner clerks), side duty room 11 (Veteran), records corridor 20/24 (2 Guards). Guards rally at doors rather than trickle into the party's attacks. Winning beats the finite local force; outside response requires physically transmitted alarm and travel.",
-                "SUPERSEDED CROSS-REFERENCES: The old Chapter 5 note that Pepper's four Council missions automatically transferred to the Crown was wrong and is corrected; Chapter 6 controls. Appendix B's former guarantee of Koven House uncommon magic treasure also referred to the unplayed criminal adventure and is superseded. A victory at the new royal headquarters earns only what is physically found and consequences of the attack."
+                "SUPERSEDED CROSS-REFERENCES: The old Chapter 5 note that Pepper's four Council missions automatically transferred to the Crown was wrong and is corrected; Chapter 6 controls. Appendix B's former guarantee of Koven House uncommon magic treasure also referred to the unplayed criminal adventure and is superseded. A victory at the new royal headquarters earns only what is physically found and consequences of the attack.",
+                "MINI PREP: See 'Session 4 Miniature Pull List — Numbered Arcknight Binder': main figures #025 Noren, #033 Veteran captive, #069 Brakkus, #043 Jord, #048 Brann, #037 Tulcornix. Koven House conditional guard squad #026/#030/#031/#032/#034/#038 plus sergeant #044 (optional civilian clerks #017/#039). Matches the physical binder index, preserving their page/side/pocket locations."
               ]
             },
             "{@b Recommended level:} 4. The return from Kellan's Well is a roleplay-led session. No encounter is scheduled; no automatic level advancement is attached to the old Koven House criminal-network plan.",
