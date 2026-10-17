@@ -6,7 +6,7 @@
         "json": "NCFA",
         "abbreviation": "NCFA",
         "full": "No Cause for Alarm: Ruins of Bellweather",
-        "version": "4.41",
+        "version": "4.42",
         "authors": [
           "No Cause for Alarm Campaign"
         ],
@@ -16,7 +16,7 @@
     "edition": "one",
     "dateAdded": 1789528955,
     "dateLastModified": 1792208700,
-    "_dateLastModifiedHash": "ncfa-v441-session4-royals-merchants-ledgerhouse"
+    "_dateLastModifiedHash": "ncfa-v442-session4-tulcornix-hard-stop"
   },
   "adventure": [
     {
@@ -104,7 +104,7 @@
             "Session Anchors: Brakkus, Jord, Bishop Brann, and Tulcornix",
             "Pepper: Existing Sentence, Low Administrative Priority",
             "Kaleb's Family and Tulcornix Avemvir",
-            "If They Go to Cardon Weavehouse Immediately",
+            "If They Reach Cardon Weavehouse Before Tulcornix — or in Session 5",
             "Running a Three-Hour Social Session",
             "Rewards and Advancement",
             "Session 4 DM Run Card — Royal Takeover",
@@ -2562,9 +2562,9 @@
                 "If searched: Noren's monster gear specifies a scimitar, light crossbow and studded leather armor; his 1/day smoke bomb ability is not automatically recovered as a sellable item. Veteran's listed equipment includes greatsword and crossbow. Do not invent a secret coin pouch. Recoverable Well treasure is 375 gp in fixed locations (25 gp courier, 150 gp barracks, 75 gp salvage valuables, 125 gp command strongbox), three potions and the Decanter of Endless Water. Do not assume they collected every item; player inventory and previous actions determine actual holdings.",
                 "Let shopping double as political investigation. The gate, notices, market, and four established shops have bounded answers in Appendix J. Koven House is Crown headquarters and has a public registry. Don't force a separate exposition scene or a mandatory royal audience.",
                 "Ledger House: Brakkus offers dinner and genuine conversation with the PCs. Jord independently seeks a room because his hotel has been turned into royal guard barracks. Bishop Brann seeks Brakkus with Kellan's Well money entrusted by the departing Council: 300 gp total, 100 gp each to Jarrock, Aaron, Arunem; Pepper 0 gp because her first sentenced mission was unpaid. Record actual receipt. This is separate from the earlier Blackstone reliquary payment and anything looted at the Well.",
-                "Late-session anchor: Tulcornix Avemvir seeks Pepper deliberately by name, knows she killed Kaleb, and confronts her directly. He tells her Kaleb's widow Elowen is indentured at Cardon Weavehouse. His wing was injured in a genuine loading accident. Follow a credible trail if the PCs relocate (people can tell him where Pepper was seen), not impossible tracking.",
-                "3.5-hour flexible target: prisoners 10–25 min, gates/streets 15–25, shops/inquiries 20–60, Brakkus and independently arriving visitors 35–65, Tulcornix/consequences 15–30. Preserve slack, allow a return to any earlier scene, and do not invent combat to fill time.",
-                "At session end record decisions, goods actually acquired and sold, prisoner disposition, recipient of each 100 gp payment, shops visited, and party response to Elowen's indenture."
+                "SESSION 4 ENDING (locked): Tulcornix Avemvir comes looking specifically for Pepper, knows she killed Kaleb, and confronts her with her brother's death and the plea to save Elowen. His arrival and accusation are the LAST scene of the session. Deliver his established line and the essential fact that Elowen is held at Cardon Weavehouse, then END THE SESSION. Do not continue into bargaining with Tulcornix, the worksite, the rescue, or any other scene after his arrival. The player's response and rescue planning begin next session. If the party relocated, use credible information to bring him to Pepper; no impossible tracking.",
+                "3.5-hour flexible target: prisoners 10–25 min, gates/streets 15–25, shops/inquiries 30–75, Brakkus dinner and arrivals of Jord/Brann 40–75, then a brief Tulcornix arrival/confrontation (3–8 min) as the closing beat. Spend the session time on everything BEFORE Tulcornix, not on an Elowen rescue afterward. Follow player choices rather than filling time with another encounter.",
+                "At session end record decisions, goods actually acquired and sold, prisoner disposition, recipient of each 100 gp payment, shops visited, and what the party knows of Tulcornix/Elowen. Do NOT record a decided response to his request unless a player happened to declare it before the fade-out; their decisions are normally for Session 5."
               ]
             },
             "{@b Recommended level:} 4. The return from Kellan's Well is a roleplay-led session. No encounter is scheduled; no automatic level advancement is attached to the old Koven House criminal-network plan.",
@@ -2589,7 +2589,7 @@
                 "{@b What is settled.} The Council negotiated the sale before the party departed and finalized it while the party was away. Koven House now serves the Crown. Bishop Brann stayed. Brakkus and Ledger House remain independent.",
                 "{@b No required battle.} Violence is possible if player choices and the other characters' decisions warrant it; there is no placed combat encounter or mandatory initiative.",
                 "{@b Tone.} The royals' authority is comically excessive, while the people enforcing, resisting, exploiting, or surviving it take their own circumstances seriously.",
-                "{@b Ending.} The party's choices—not the chapter's scene order—determine whether they investigate the Crown, help a family, bargain with officials, meet old friends, or turn to something else.",
+                "{@b Ending.} Tulcornix Avemvir's arrival, direct confrontation with Pepper, and revelation that Elowen is being held at Cardon Weavehouse close Session 4. The session ends there. The party decides how to respond and whether to investigate or rescue her in Session 5. Earlier Session 4 choices about shopping, prisoners, the Crown, and Ledger House remain open.",
                 "{@b Four people, one personal focus.} Brakkus, Jord and Bishop Brann have distinct reasons to remain active after the takeover. Brakkus's conversation involves the whole party. Tulcornix's arrival is guaranteed. Pepper's unresolved service is background pressure, not the plot of the evening."
               ]
             },
@@ -2634,7 +2634,7 @@
               "type": "entries",
               "name": "Session Anchors: Brakkus, Jord, Bishop Brann, and Tulcornix",
               "entries": [
-                "{@b Guaranteed appearances, open choices.} Brakkus, Jord, Bishop Brann, and Tulcornix Avemvir must each appear or meaningfully interact with the characters during this session. Their words and timing can respond to the players; do not railroad the party through a prescribed room order. Tulcornix's in-person arrival and news are the final major planned development, not a lead that may be skipped.",
+                "{@b Guaranteed appearances and ending.} Brakkus, Jord, Bishop Brann and Tulcornix Avemvir each have reasons to appear or interact during Session 4. Brakkus/Jord/Brann can be encountered in flexible order. Tulcornix's personal arrival and accusation against Pepper are the FINAL scene, followed by the end of the session—not the start of another encounter.",
                 {
                   "type": "entries",
                   "name": "Brakkus: Dinner and the People Behind the Adventures",
@@ -2672,15 +2672,15 @@
                   "name": "Tulcornix Avemvir: Guaranteed Late-Session Arrival",
                   "entries": [
                     "Tulcornix Avemvir is Kaleb's adopted brother, an aarakocra. His appearance during this session is non-negotiable. He brings the news that Kaleb's wife has been placed in indentured service under the Crown and needs to be rescued.",
-                    "Aim for his arrival after the group has had time to experience the changed city and Brakkus's conversation. If the players go somewhere unexpected, adjust the plausible delivery route—he seeks out the people linked to Kaleb or follows information about their location—but do not erase his arrival to honor an arbitrary schedule.",
-                    "He has a reason to seek help and a relationship to the murdered Kaleb. Let that shape his demeanor. He must not require Pepper to repent or force the group to accept a mission. The party may help, refuse, investigate, divide, or propose something else.",
-                    "Let the request and the ensuing conversation breathe. The arrival is guaranteed; the outcome is entirely player-driven.",
+                    "Plan Tulcornix's arrival only after the party has experienced the changed city and Brakkus's conversations. He deliberately tracks Pepper through plausible witness information. His confrontation and news of Elowen's indenture are the FINAL MOMENTS of Session 4; stop play immediately after the reveal. His longer conversation, the party's response, and any rescue proceed in Session 5.",
+                    "He deliberately seeks Pepper because he knows she killed Kaleb and wants her to save Kaleb's wife Elowen. He confronts her at the close of Session 4. His feelings and request are his own; the party's choices begin in Session 5.",
+                    "Treat the arrival and accusation as the cliffhanger, not a 15–30 minute conversation. Do not resolve or even begin the worksite rescue after this arrival in Session 4. The subsequent conversation can breathe at the beginning of Session 5.",
                     "Tulcornix has a conspicuously splinted and injured wing; he cannot safely fly when he arrives. While doing paid hauling/loading work at the street-facing Cardon Weavehouse annex to be near his sister-in-law, a shifting loom timber struck it. This was a worksite accident, not a secret attempt to silence him. He is able to walk, speak, and seek the party.",
                     "If a character applies appropriate healing magic, allow Tulcornix's injured wing to mend enough for flight. This doesn't solve his problem: Elowen remains subject to a Crown indenture in a watched worksite.",
                     "Tulcornix can name Cardon Weavehouse immediately, has personally seen Elowen in the annex, knows which entrance workers use, and can guide the party there. Core information is not gated by a skill check. He does not know the old compound's entire interior.",
                     "Opening option: \"Kaleb's wife is at the Cardon Weavehouse. They call it a debt. They won't let her leave. I tried to get closer—\" He indicates his splinted wing. \"I need help getting her out.\"",
                     "Tulcornix deliberately seeks PEPPER, not Brakkus. He already knows that Pepper killed Kaleb, his adopted brother; he has not forgiven her. He knows the adventurers' connection to Ledger House, but if they relocate, he can ask people where Pepper went rather than miraculously appearing at her exact position.",
-                    "His direct confrontation with Pepper: 'You killed my brother, the stain of his blood will never leave your hands, save his wife and you might cleanse your soul.' He then explains that Elowen is being held under Crown indenture at Cardon Weavehouse. If Pepper presses him, he is grieving and angry; he is asking the person responsible for Kaleb's death to do something for Kaleb's surviving family. If refused, he continues looking for help elsewhere."
+                    "Use this exact line as the closing confrontation with Pepper: 'You killed my brother, the stain of his blood will never leave your hands, save his wife and you might cleanse your soul.' The essential news that Elowen is held under Crown indenture at Cardon Weavehouse accompanies this final beat. If Pepper wants to challenge him, resolve the exchange when play resumes in Session 5. If she refuses, he can then look for other help; do not play that outcome during Session 4."
                   ]
                 }
               ]
@@ -2706,22 +2706,22 @@
                 "Kaleb's widow is Elowen, an unwilling Crown-indenture textile worker in the street-facing Cardon Weavehouse annex. She is alive, can speak for herself, and is working in the cloth-sorting area. Her contract is not related to Pepper's old Council-service judgment. Elowen's daughter is currently safe with a trusted neighbor in Bellweather; her health and future need for healing remain unplayed, and no demand that Pepper heal her is imposed.",
                 "The public work ledger lists a made-up 'municipal recovery debt' of 150 gp and a royal processing fee of 50 gp, total 200 gp for an outright discharge, but this is the Crown's asserted price, not proof the indenture is just. Evidence, advocacy, a petition, negotiation, rescue or other actions can change the situation. There is no mandatory buyout.",
                 "While the Crown administers a street-facing work annex, Perrin's family claim, the old Weavehouse map, and previous unplayed occupants deeper in the property remain unresolved. Do not make Perrin the author of this indenture or use old Chapter 8 enemies as automatic reinforcements.",
-                "The encounter is a consequence of people making choices, not a designed guilt trap. Tulcornix wants assistance for a person he cares about, whether or not Pepper expresses remorse.",
-                "Tulcornix's actual arrival cannot be skipped, even if the party leaves Ledger House or pursues a different activity. Adjust his credible route to the party instead of teleporting him or forcing them into a location. If the party independently learns what happened beforehand, he still arrives with his personal request and perspective; do not conceal known facts to preserve a theatrical revelation.",
+                "Tulcornix's arrival closes Session 4 with a request arising from his grief and Elowen's need. What Pepper and the party do with that request is Session 5 content.",
+                "Tulcornix's arrival is the Session 4 closing beat even if the group changes location; track Pepper through credible reports, without teleportation. If the party independently learns of Elowen BEFORE his arrival, he still seeks Pepper personally, and his confrontation is the final scene. Do not continue afterward.",
                 "A prior outline connected Kaleb's widow and daughter to a healing request. Do not require that exact request unless it still fits the circumstances and current story.",
                 "The Crown's Royal Municipal Recovery Assessment retroactively claims repayment for public services provided under the former free-city government, such as roads, sanitation, the watch and the waterworks. The Crown used municipal records obtained before the transfer to prepare charges. Elowen's household is assessed 150 gp and a 50 gp discharge-processing fee, total 200 gp. She was already working at the textile annex, which was commandeered, allowing officials to impose labor confinement quickly. Others have received notices; enforcement is patchy in the first hours, not every Bellweather household has been arrested. The assessment is legally asserted by the Crown, not demonstrated to be fair."
               ]
             },
             {
               "type": "entries",
-              "name": "If They Go to Cardon Weavehouse Immediately",
+              "name": "If They Reach Cardon Weavehouse Before Tulcornix — or in Session 5",
               "entries": [
                 "The party can visit the textile work annex without running the entire older Weavehouse adventure. It has a public loading yard and work counter, staff-only door, cloth-sorting room, and ledger desk, with no need for an additional tactical map unless a fight develops.",
                 "Present at the street-facing annex: two uniformed watchmen ({@creature Guard|XMM}), one clerk ({@creature Commoner|XMM}), six ordinary laborers including Elowen. Those are all guards assigned to this annex for the present scene. Do not summon unlisted Chapter 8 occupants as a surprise wave.",
                 "The clerk will allow general questions and public-counter business. The work ledger openly identifies Elowen, her assignment, and the 150 gp + 50 gp claimed debt/processing charges. Workers cannot leave their contracts voluntarily. The watchmen prevent unauthorized departures, but do not attack mere visitors.",
                 "Let plausible plans work: submit or challenge the bond at Koven House, bargain or buy out the debt, speak with Elowen, forge an authorization, create a distraction, quietly extract her, or confront the guards. A reasonable public inquiry needs no roll. For disputed access use DC 13 Charisma (Deception or Persuasion) as appropriate; to open a secured staff latch use DC 15 Dexterity (Thieves' Tools), or DC 15 Strength (Athletics) to force. Obvious clever approaches succeed without checks. The watchmen can withdraw or surrender if overwhelmed, not fight suicidally.",
                 "Koven House's ground-floor public registry accepts paperwork and inquiries without a check; a clerk can identify the Cardon annex and bond office. It does not automatically search for Pepper's obsolete Council sentence. A higher official's involvement follows player actions, not a forced royal meeting.",
-                "Elowen wants her freedom and to return to her daughter. She can speak for herself and is not automatically grateful to Pepper for anything. If the party acts immediately, let the outcome be determined by the method they choose; no forced confrontation and no insistence on ending the session at Tulcornix's arrival.",
+                "Elowen wants her freedom and return to her daughter. She can speak for herself and is not automatically grateful to Pepper. This site's mechanics exist for Session 5, OR for the unusual case that the PCs discover and voluntarily visit the annex independently BEFORE Tulcornix has appeared in Session 4. Once Tulcornix appears, Session 4 ends; do not run an annex scene after the arrival.",
                 "The public counter has a work ledger citing Elowen's 150 gp Municipal Recovery Assessment and 50 gp discharge fee. The clerk explains that Crown staff prepared assessments from transferred Council records and names the Koven House registry for a petition or discharge papers. Public questions and sight of the ledger require no check. Existing two guards, one clerk and six workers remain the COMPLETE immediate annex roster; no surprise Chapter 8 reinforcements."
               ]
             },
@@ -2729,13 +2729,13 @@
               "type": "entries",
               "name": "Running a 3.5-Hour Social Session",
               "entries": [
-                "Flexible 3.5-hour target (not forced scene order): Noren decision at the Well 10–25 minutes; journey and first city impressions 15–30; free exploration and shopping 30–65; Brakkus's table conversation 30–65; Jord/Bishop when the party naturally meets them 20–40; Tulcornix and response 15–30. Keep slack for player choice, investigation or an early trip to Cardon; don't manufacture combat to fill time.",
+                "Flexible 3.5-hour target: Noren decision at the Well 10–25 minutes; city impressions 15–30; shopping and merchant questioning 30–75; Brakkus and Jord/Brann at Ledger House 40–75; Tulcornix's arrival, accusation and news about Elowen as a SHORT FINAL BEAT (3–8 minutes). Stop at his arrival and reveal. Session 5 begins with any reply, negotiation, investigation, or rescue.",
                 "Prepare NPC motives, current stakes, and consequences rather than a mandatory sequence. Give each player an opening to state a goal, and follow the actions the table actually chooses.",
-                "{@b Session priority.} The principal personal scene is Brakkus asking the whole party who they are. Jord and Bishop Brann must have roles tied to their own lives and the change of government. Pepper's unresolved sentence receives a brief, practical note, not an investigation or legal hearing. Tulcornix arrives as the guaranteed final major development.",
+                "{@b Session priority.} Brakkus asks the party about their lives, Jord seeks lodging and Brann brings the Council money. Pepper's sentence is background. Tulcornix arrives specifically for Pepper as the final scene. No Elowen planning, negotiation or rescue takes place afterward in Session 4.",
                 "{@b Opposition is an option, not a contract.} The party is free to oppose, tolerate, exploit or ignore the Crown. Do not have Brakkus, Jord or Brann recruit the group as a mandatory resistance cell. Respect decisions even when they spoil planned pacing.",
                 "Keep several kinds of pressure available: moral disagreement, paperwork, labor disputes, divided loyalties, an ordinary favor, a celebration, a credible threat. None has to happen.",
                 "An antagonistic official can say no, call for guards, negotiate, or walk away as circumstances warrant. Do not roll initiative merely because the session needs an action scene.",
-                "Before closing, establish what the party now knows, whom they helped or alienated, and which leads they want to pursue next. The world continues between sessions.",
+                "Before Tulcornix arrives, record what the party learned, purchased, whom they helped or alienated, and what happened to both prisoners. Deliver Tulcornix's accusation and Elowen revelation, end the session, and begin the party's response next time.",
                 "Expect store customers to ask who governs, where the Council went, who received payment for the sale, whether old judgments still apply and whether guards have changed. Each shopkeeper's distinct knowledge and responses are in Appendix J. Don't require players to attend a separate briefing after shopping."
               ]
             },
@@ -10921,7 +10921,8 @@
                 "PREPARED FAMILY: Kaleb's widow Elowen is indentured in a Crown-administered textile annex at Cardon Weavehouse; Crown asserts 200 gp to discharge its manufactured bond (150 gp charge plus 50 gp fee). Her daughter stays safely with a trusted local neighbor. Tulcornix worked loading cargo near her and suffered a broken wing from a shifting loom beam. His arrival late this session is planned; healing his wing does not free Elowen. The deeper Weavehouse occupation and ownership from old Chapter 8 are still provisional.",
                 "SESSION 4 PREP (October 16, 2026): House Stucky = King Hendrix (competent, dangerous, stays in capital; no planned appearance), son Prince Reginald (Bellweather's ruler) and Reginald's wife Princess Narcissa (co-ruler). Former Council received money, land elsewhere and ducal titles. Royal transition became official while the party was in the Well for just a few hours, with advance preparation explaining the visible changes.",
                 "SESSION 4 PREP (October 16, 2026): Jord comes to Ledger House seeking lodging after royal guards commandeer his hotel. Bishop Brann seeks Brakkus and brings 300 gp owed by the Council for Kellan's Well: 100 gp each Jarrock, Aaron and Arunem, 0 gp Pepper. Distinct from the 300 gp Blackstone reliquary reward and from Well treasure. Brakkus's full history is already recorded.",
-                "SESSION 4 PREP (October 16, 2026): Tulcornix knows Pepper murdered Kaleb and deliberately seeks her. His direct line is 'You killed my brother, the stain of his blood will never leave your hands, save his wife and you might cleanse your soul.' Elowen's 150 gp retroactive municipal-services assessment and 50 gp discharge fee can be challenged, paid or subverted. Shops' differing reactions are in Appendix J."
+                "SESSION 4 PREP (October 16, 2026): Tulcornix knows Pepper murdered Kaleb and deliberately seeks her. His direct line is 'You killed my brother, the stain of his blood will never leave your hands, save his wife and you might cleanse your soul.' Elowen's 150 gp retroactive municipal-services assessment and 50 gp discharge fee can be challenged, paid or subverted. Shops' differing reactions are in Appendix J.",
+                "LOCKED SESSION 4 ENDING (October 16, 2026): Tulcornix's arrival and direct accusation against Pepper are the LAST moments of Session 4. He reveals Elowen's plight at Cardon Weavehouse and the session ends immediately. The party's reaction, any detailed questioning, bond discussion or rescue is Session 5. The Cardon annex reference in Chapter 6 supports Session 5 or an unanticipated EARLIER discovery—not continued play after his arrival."
               ]
             },
             {
