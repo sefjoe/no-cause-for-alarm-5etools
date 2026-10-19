@@ -317,7 +317,11 @@
           "name": "Appendix H: Design Notes for Grayson",
           "headers": [
             "The First Version: Osric and the Silent Vault",
+            "The Session 1 I Almost Ran",
+            "Milton and Malthivar Were Not Just Prisoner and Jailer",
             "What Milton Was Supposed to Become",
+            "Before Perrin and Tyren, There Was the Harrow Collective",
+            "A Few Names That Never Made It to the Table",
             "I Knew the Kind of Campaign I Wanted Before I Knew the Campaign",
             "Looking for an Old Adventure That Already Did What I Wanted",
             "Under Illefarn",
@@ -10334,12 +10338,44 @@
               "name": "The First Version: Osric and the Silent Vault",
               "entries": [
                 "The oldest version of this campaign looked almost nothing like the version you are playing now.",
-                "The earliest character at the center of it was named {@b Osric}. Most of my notes from this part are gone, which is annoying because I would really like to be able to show you exactly what I was thinking. What I do remember clearly is that Osric eventually became {@b Milton Foal}. They were not two different characters. Milton was what Osric turned into as I kept working on the idea.",
-                "The big location was the {@b Silent Vault}. The Vault was supposed to be an old containment facility with increasingly severe magical protections the deeper you went. At some point, the idea became that magic itself would be suppressed in the lower parts.",
-                "You were supposed to go into the Vault to rescue {@b Tomas Reed}. Milton had been trapped there for an absurd amount of time. The later version had him connected to someone named {@b Malthivar}, and Milton had one really stupid-looking but important possession: Malthivar's old staff had somehow been reduced to an ordinary broom.",
-                "I liked that. Not because the broom was secretly going to turn back into the Staff of Ultimate Ass-Kicking or something. It mattered because Milton cared about it.",
+                "The first character at the center of it was named {@b Osric}. I knew he became Milton Foal later, but when I went back through a reconstruction of the original prep, I recovered a detail I had left out of these notes: at one point his full name was {@b Osric Vale}. Osric and Milton were not two characters who were supposed to meet. Milton was what Osric became as I kept working on the campaign.",
+                "The first big location was called the {@b Silent Vault}. Eventually I was calling it the {@b Quiet Vault}. Even the way its magic worked changed while I was designing it. One early idea had stronger protections the deeper you went, including magic being suppressed in the lower parts. By the time I had a complete Session 1 plan, that had changed. The lower Authorization Hall allowed magic, and the upper section suppressed it.",
+                "The party was supposed to go into the Vault looking for {@b Tomas Reed}, a surveyor who had gone into an underground structure exposed by a storm. Milton had been stuck there for an absurd amount of time. Malthivar, not Milton, was the person the Vault had originally been built to contain.",
+                "Milton had one stupid-looking but important possession: Malthivar's old staff had been repurposed into an ordinary broom.",
+                "I liked that. Not because the broom was secretly going to turn back into the Staff of Ultimate Ass-Kicking or something. It mattered because Milton cared about it. It was not secretly storing Malthivar's consciousness. Sometimes a thing matters because of whose it used to be.",
                 "That is something I still like in NCFA now. An object does not need a stat block to matter. Sometimes an old broom is important because it is the last thing somebody has from another life.",
-                "The plan for the Vault eventually involved its containment systems failing or being triggered while the party was rescuing Tomas. You would get Tomas out. You would also free Milton. And freeing Milton was supposed to cause much bigger problems later."
+                "By the end of that planned first session, the Vault would be destroyed. You would get Tomas out, and you would also bring Milton into the world. The idea was that what felt like a simple rescue would have consequences nobody at the table could possibly understand yet."
+              ]
+            },
+            {
+              "type": "section",
+              "name": "The Session 1 I Almost Ran",
+              "entries": [
+                "I had a whole first session worked out for that version. It was not just a vague idea about a mysterious dungeon.",
+                "A huge storm and flood had hit Bellwether. Before anybody went exploring, I wanted the party to spend a little time rescuing people together. Six or so civilians, floodwater moving too fast, a runaway cart. Nothing that was supposed to kill you or turn into a giant skill-check exam. It was a way to make you a team before there was even a dungeon.",
+                "After that, {@b Mayor Jord Trollhorn} was supposed to send you to investigate what he called 'some kind of underground structure.' He did not know it was a magical prison. Tomas Reed's survey crew had exposed the entrance after the mudslide, and Tomas had ended up inside.",
+                "The first major fight was against the {@b Vault Wardens}. These were security constructs, not 'Custodians.' Their eyes would turn red, they would warn you that you were somewhere you were not authorized to be, and then they would attack.",
+                "The fight happened in the lower {@b Authorization Hall}, where spellcasting still worked. I remember that detail because the final version was actually pretty specific: I was not trying to surprise the spellcasters by turning their spells off halfway through the first combat.",
+                "Defeat the last Warden, and the Vault's ancient self-destruct starts. It was supposed to collapse immediately, but the machinery had deteriorated so badly that the place was falling apart in stages. Then, when you moved into the upper section, the magic suppression would kick in. Spellcasters would actually feel their power being pushed down.",
+                "You would meet {@b Milton before Tomas}. Milton was not a villain lurking behind the last door. He was a curious guy who had no idea how you had got inside. He knew where Tomas was hiding and wanted to help you find him. He also wanted you to take him with you.",
+                "Tomas was supposed to recognize how bad the structural damage was because he was a surveyor. Milton would recognize the security protocol because he had lived inside it for so long. Between them, you would understand one thing: run.",
+                "The session ended with everybody escaping through the same tunnel and the Quiet Vault being completely destroyed. The planned reward was twenty-five gold each and a free place to stay at Ledger House.",
+                "That version even had a specific building plan for Ledger House: I was using the Tarsakh Manor layout as its skeleton instead of making up a new floor plan.",
+                "None of this is a secret account of what happened at our table. It is the adventure I had prepared {@i before} the campaign became something else. That distinction matters because it is easy, later, to remember a plan as though it actually happened."
+              ]
+            },
+            {
+              "type": "section",
+              "name": "Milton and Malthivar Were Not Just Prisoner and Jailer",
+              "entries": [
+                "There was more to Milton's time inside the Vault than I put in the first version of this letter.",
+                "Milton had been an employee of {@b Malthivar} before either of them ended up inside. Malthivar was the intended prisoner. Milton was there by accident, which I always thought was a much worse fate.",
+                "For something like fifty years, Malthivar treated Milton as his servant. Then Malthivar accepted that he was not getting out, got bored, and began teaching the one person he had to talk to.",
+                "They ended up with this uncomfortable teacher-and-student relationship that almost became friendship. Almost. Malthivar still thought he was better than Milton, even after centuries together.",
+                "About two hundred years before the campaign, Milton managed to make a spell work in a place that was supposed to stop magic. Malthivar died as a result. I never settled exactly how that happened, and I am not going to pretend I did.",
+                "After that, Milton was alone. He sometimes seemed to have Malthivar with him, but the plan was never that Malthivar's ghost was haunting him. It was what years of confinement and their relationship had done to Milton's head.",
+                "That made the broom better, I thought. It was ordinary and strange and sad. A piece of Malthivar survived, but not in the usual D&D way where it turns out to be a cursed talking artifact.",
+                "A lot of the tragedy in Milton depended on that. He was not created evil. He had been trapped, taught, hurt, and finally set free. The question was what he would do with all that freedom."
               ]
             },
             {
@@ -10348,12 +10384,43 @@
               "entries": [
                 "Milton was not supposed to show up with a sign over his head that said VILLAIN.",
                 "The thing that defined him was {@b freedom}. After being trapped and controlled for so long, freedom had become basically sacred to him.",
+                "I had a more specific version of that idea in the original plan than I remembered. Milton hated the idea that Fate, or whatever you want to call it, gets to decide what somebody can become. He thought a person's options should not be decided by how much money they were born with, who their parents were, where they lived, or what education they were able to get.",
+                "That is a pretty noble thing to believe. I wanted him to be right about a lot of what was wrong with the world.",
                 "At first, that is easy to sympathize with. People should be free. Okay.",
                 "Then it starts moving a little. People need enough power to protect their freedom. Still pretty reasonable.",
                 "Then: If people cannot protect themselves, maybe somebody stronger needs to protect them. Now we are getting into dangerous territory.",
                 "And eventually: If people make choices that threaten their own freedom, maybe somebody else should make those choices for them.",
-                "That was where Milton was headed. I liked the idea that he could become a villain without ever abandoning his original belief. He would still tell you that everything he was doing was about freedom. He would just gradually redefine freedom until it meant Milton deciding what is best for everybody else.",
+                "That was where Milton was headed. I liked the idea that he could become a villain without ever abandoning his original belief. He would still tell you that everything he was doing was about freedom. He would just gradually redefine freedom until it meant Milton deciding what was best for everybody else.",
+                "He was supposed to spend a long time as somebody you liked. A person who fixed things, helped people, and slowly learned that he had astonishing magical power. The original outline aimed for the real reveal somewhere around level thirteen. He would even leave Bellwether after hearing Brakkus talk about the world beyond it.",
+                "The catastrophe at the end was supposed to be enormous. Thousands of people would eventually die, but I did not want to make Milton some guy who had simply decided to murder thousands of people. Most of the destruction came from other people copying, exploiting, or misusing what he had done, and from the consequences spiraling beyond his control. I wanted you to have to ask how much of that was his fault, and how much was yours for helping him along the way.",
+                "And I did not want a single required ending. You might have to kill him. You might stop him another way. You might even find a way to bring back the Milton you once knew. That was supposed to be your decision, not mine.",
                 "That idea did not disappear when Milton stopped being the main villain. There is still a lot of that DNA in NCFA: power, control, the excuses people make when they think they know better than everyone else, and the difference between helping someone and deciding for them."
+              ]
+            },
+            {
+              "type": "section",
+              "name": "Before Perrin and Tyren, There Was the Harrow Collective",
+              "entries": [
+                "Something else almost became the backbone of the entire campaign, and it is missing from the earlier version of these notes: {@b the Harrow Collective}.",
+                "My plan was for you to spend a lot of the campaign thinking they were the main problem. They were a small group, maybe ten or twenty people, that collected dangerous artifacts, investigated magical phenomena, experimented on creatures, and tried to fix regional problems using methods that were getting harder and harder to justify.",
+                "The important part was that they were not supposed to be wrong about everything. Sometimes they really would solve a problem. Sometimes somebody would be better off because of something they did. And sometimes their experiments would be indefensible.",
+                "A man named {@b Calder Vane} was supposed to be the face of it. He was smart, charming, and capable of making an argument that sounded good until you stopped and thought about what he was asking people to pay for it.",
+                "I wanted defeating Calder and the Collective to be an actual victory. Not one of those endings where the DM immediately says, 'Ha! They were never important! You accomplished nothing!' They were a real threat, and beating them mattered.",
+                "The trick was that they were not the final threat. Milton, who might have spent years helping you fix things around town, was the person whose ideas would eventually cause the biggest disaster.",
+                "There was even a version where Calder could meet Milton and have no idea whom he was talking to. I liked that because it made the world feel less like everybody important already knew everybody else important.",
+                "I was trying to set up a campaign where the party could legitimately defeat one villain and still discover that the much more painful problem was somebody they cared about.",
+                "That was a solid idea. It was also part of a completely different campaign from the one we eventually played. I do not want to quietly stuff the Harrow Collective back into modern Bellwether and pretend they were secretly behind everything. They belong in the history of how I built NCFA."
+              ]
+            },
+            {
+              "type": "section",
+              "name": "A Few Names That Never Made It to the Table",
+              "entries": [
+                "The people in that first plan changed too. It was not just Osric becoming Milton.",
+                "At one point I had {@b Inspector Mara Venn}, who was later renamed {@b Everlee Slade}, a tiefling. I had the old mayor, {@b Jord Trollhorn}, asking the party to investigate the structure. The names in the old prep were not all names that had earned a place in the version of Bellwether you know.",
+                "I also had a particular calendar year, 1495 DR, even though I deliberately never picked the exact day and month. I could tell you what year it was but not what Tuesday it was. That is pretty much how my prep works sometimes.",
+                "The names are worth writing down because they show the work. A character can go through two or three names before I figure out who they are. A location can change names and even move its important rooms around.",
+                "Not everything from that draft needed a modern equivalent. I did not want to save every old idea just because I had already typed it."
               ]
             },
             {
@@ -10511,7 +10578,9 @@
                 "I did not throw away his Hall of Heroes history. I treated it like the earlier part of his life.",
                 "He adventured. He got older. He got much more powerful. And eventually, he stopped.",
                 "By NCFA, he is around forty-eight, a retired Oath of Devotion paladin of Torm, and the owner of Ledger House.",
-                "I expanded his history to fit that older version. His mother became Elena, a captive librarian in the Ironfang Clan. His father became Korgak, the warlord. After Elena died, Brakkus rejected his father's legacy and took the name Ledgerhelm in honor of his mother. He eventually trained under High Justiciar Vance Halford. Vance gave him the sword Brakkus named The Appendix.",
+                "I expanded his history to fit that older version. His father was {@b Korgak}, an Ironfang warlord. His mother was {@b Elena}, a captive librarian who taught him to read in secret and told him stories about Torm. The clan treated Brakkus terribly and called him 'Runt.' Elena died from neglect when he was sixteen. Brakkus eventually fled and chose the name Ledgerhelm to honor the mother who taught him that there was more to life than his father's clan.",
+                "Later, a High Justiciar named {@b Vance Halford} became his mentor and helped him find his place as an Oath of Devotion paladin. Brakkus's holy symbol was the worn cover of Elena's ledger, marked with Torm's silver gauntlet. His sword, {@b The Appendix}, was an old archivist-paladin's blade with tiny runes that glowed gold. That is a very Brakkus weapon, and I still like it.",
+                "The detail that mattered most to me was that Brakkus believed honor came from what you chose to do, not what family you had been born into. Looking at the original Milton notes now, I can see why I planned for Brakkus and Milton to be a contrast. Both thought choice mattered. One was learning to help people make their own choices. The other was eventually going to convince himself he had to make those choices for them.",
                 "A lot of that helped me answer the question: How did the adventurer I played become this guy behind the bar?",
                 "But the most important change was his job in the story.",
                 "At Hall, Brakkus was one of the protagonists. In NCFA, he is not.",
@@ -10947,6 +11016,8 @@
                 "That matters to me.",
                 "I do not just want to keep a record of Session 1: this happened. Session 2: this happened. Session 3: this happened.",
                 "I want you to be able to see the campaign changing while we played it.",
+                "I want you to know that his name was Osric Vale for a while, that the Silent Vault became the Quiet Vault, and that I once had an entire different Session 1 built around getting Milton and Tomas out of it.",
+                "I want you to know that Calder Vane and the Harrow Collective were once supposed to be the villains you spent half the campaign fighting, and that even winning against them was not going to end the story.",
                 "I want you to know that Osric existed before Milton.",
                 "I want you to know what the Silent Vault was supposed to be.",
                 "I want you to know that I went digging through old D&D adventures because I was trying to figure out the best way to build the kind of campaign I wanted.",
