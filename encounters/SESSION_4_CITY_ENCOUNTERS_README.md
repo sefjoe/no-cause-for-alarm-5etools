@@ -32,3 +32,29 @@ These are **DM scenario simulations and estimated pacing**, not observed play wi
 **Regression checks:** all seven imports parse, homebrew reference hashes match NCFA monsters, IDs are unique, official reference sources are XMM, party size and level are 4 × 4, the chapter has exactly five optional scenes, approved maps and original NPC sessions remain, and Tulcornix still delivers the final confrontation. The actual 5etools UI import was not tested here; only file-format and reference checks were performed.
 
 **Use at the table:** Describe any one situation if the PCs naturally enter that district. Let them decide what matters. Display the encounter builder file **only** if something genuinely escalates to a fight. After Tulcornix confronts Pepper, **end Session 4**; do not begin Elowen's rescue tonight.
+
+
+## Single physically buildable street map and numbered miniature pull — 2026-10-25
+
+**Map / terrain:** Your ENHANCE 36 × 24-inch, 1-inch grid mat. Five storefront/frontage boxes are drawn on the mat; main street kept empty for tactical movement. Place only 6 STAHLHAMMERS standard walls, 2 door walls, 1 window wall, 4 barrels, and 2 jars. No prebuilt buildings, fountain, cart, wagon, tree, bench or extra furniture is required. The exact coordinate diagram is in the uploaded player/DM street layout on Google Drive.
+
+**[36 × 24 build diagram on Drive](https://drive.google.com/file/d/1HHh3qZNux7C4CsV47OUQCuZ2cgcxJMcX/view?usp=drivesdk)** · **[complete mini pull and mat setup guide](https://drive.google.com/file/d/1qiVZEYuux7n7cNIqckXlj3YA3_Er4gO2/view?usp=drivesdk)**
+
+All mini numbers below are matched to the user's authoritative 161-mini Arcknight binder, with permanent numbers and known appearances. **They are visual proxies, not assertions of species, class or equipment. Reuse between different city scenes only; never show two simultaneous NPCs with one model.**
+
+| Location / scene | Every speaking NPC / representative civilian | Mini #s (proxies as needed) |
+|---|---|---|
+| Kellan's Well | Noren; captive Veteran | #025; #033 |
+| Ledger House | Brakkus; Jord; Brann; Tulcornix (final beat) | **original Brakkus mini**; #043; #048; #037 |
+| Shops | Tiera (Tiny Mage); Edda (Spare Button); Joren; Maten (Two Hammers); Jord (Odds & Ends) | #017; #005; #029; #042; #043 |
+| 1. Sign Makers | Worker A; Worker B; Royal Clerk; Guard | #046; #062; #027; #021 |
+| 2. Evicted Guests | Hotel proprietor; first and second displaced adult; child; 2 Guards | #017; #039; #041; #018; #035/#036 |
+| 3. Permit Dispute | Merchant; clerk; Guard; one shopper if addressed | #040; #027; #021; #019 |
+| 4. King's Generosity | Herald; baker; 2 Guards; two representative residents | #028; #029; #035/#036; #019/#017 |
+| 5. Unpaid Workers | 2 primary laborers; Crown administrator; Guard; optional witness worker | #046/#062; #027; #021; #045 |
+| Independent street toughs (if needed) | Hired Muscle A and B | #045/#046 |
+| Koven House only if attacked | 6 guards; Veteran sergeant; 2 clerks | #026/#030/#031/#032/#034/#038; #044; #017/#039 |
+
+Pages/pockets for the most-used street pull: #017 P03 Front TL; #018 P03 Front TR; #019 P03 Front BL; #021 P03 Back TL; #027 P04 Front BL; #028 P04 Front BR; #029 P04 Back TL; #035 P05 Front BL; #036 P05 Front BR; #039 P05 Back BL; #040 P05 Back BR; #041 P06 Front TL; #042 P06 Front TR; #045 P06 Back TL; #046 P06 Back TR; #062 P08 Back TR. (Page 08 Back Top Right for #062 is confirmed by permanent numbering.) For **all** pages/pockets consult the complete Drive mini pull guide.
+
+Do not pull Prince Reginald, Princess Narcissa, or King Hendrix minis for Session 4: they do not physically appear. Unnamed queues and crowds are described, with one or two visual representatives, not fabricated as fixed individual NPCs. Optional Koven House figures remain in the binder unless the players decide to attack.
