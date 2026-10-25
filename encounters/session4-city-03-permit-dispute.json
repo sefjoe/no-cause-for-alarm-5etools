@@ -1,0 +1,45 @@
+{
+	"fileType": "encounter",
+	"siteVersion": "2.36.1",
+	"sources": [
+		"XMM",
+		"NCFA"
+	],
+	"activePartyId": "custom",
+	"statePartyComps": {
+		"custom": {
+			"state": {
+				"playersSimple": [
+					{
+						"count": 4,
+						"level": 4
+					}
+				]
+			}
+		},
+		"customAdvanced": {
+			"state": {
+				"colsExtraAdvanced": [],
+				"playersAdvanced": [
+					{
+						"name": "",
+						"level": 4,
+						"extras": []
+					}
+				]
+			}
+		}
+	},
+	"customShapeGroups": [],
+	"items": [
+		{
+			"h": "guard_xmm",
+			"c": 1
+		},
+		{
+			"h": "commoner_xmm",
+			"c": 1
+		}
+	],
+	"saveId": "c6fa0000-2026-4520-8a20-000000000003"
+}
