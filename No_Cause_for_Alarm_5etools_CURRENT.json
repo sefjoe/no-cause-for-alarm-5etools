@@ -6,12 +6,12 @@
         "json": "NCFA",
         "abbreviation": "NCFA",
         "full": "No Cause for Alarm: Ruins of Bellweather",
-        "version": "4.51",
+        "version": "4.52",
         "authors": [
           "No Cause for Alarm Campaign"
         ],
-        "dateLastModified": 1792208700,
-        "_dateLastModifiedHash": "ncfa-v449-session4-approved-ledger-house-map"
+        "dateLastModified": 1792949100,
+        "_dateLastModifiedHash": "ncfa-v452-session4-five-city-situations"
       }
     ],
     "edition": "one",
@@ -107,6 +107,7 @@
             "House Stucky — Crown Authority and Public Announcement",
             "At the Table: Immediate Changes",
             "Open Locations and People",
+            "Five Optional City Encounters — Session 4: What Changed in Bellweather",
             "If They Attack Koven House — Finite Royal Defense",
             "Session Anchors: Brakkus, Jord, Bishop Brann, and Tulcornix",
             "Pepper: Existing Sentence, Low Administrative Priority",
@@ -2652,7 +2653,7 @@
                 "Let shopping double as political investigation. The gate, notices, market, and four established shops have bounded answers in Appendix J. Koven House is Crown headquarters and has a public registry. Don't force a separate exposition scene or a mandatory royal audience.",
                 "Ledger House: Brakkus offers dinner and genuine conversation with the PCs. Jord independently seeks a room because his hotel has been turned into royal guard barracks. Bishop Brann seeks Brakkus with Kellan's Well money entrusted by the departing Council: 300 gp total, 100 gp each to Jarrock, Aaron, Arunem; Pepper 0 gp because her first sentenced mission was unpaid. Record actual receipt. This is separate from the earlier Blackstone reliquary payment and anything looted at the Well.",
                 "SESSION 4 ENDING (locked): Tulcornix Avemvir comes looking specifically for Pepper, knows she killed Kaleb, and confronts her with her brother's death and the plea to save Elowen. His arrival and accusation are the LAST scene of the session. Deliver his established line and the essential fact that Elowen is held at Cardon Weavehouse, then END THE SESSION. Do not continue into bargaining with Tulcornix, the worksite, the rescue, or any other scene after his arrival. The player's response and rescue planning begin next session. If the party relocated, use credible information to bring him to Pepper; no impossible tracking.",
-                "3.5-hour flexible target: prisoners 10–25 min, gates/streets 15–25, shops/inquiries 30–75, Brakkus dinner and arrivals of Jord/Brann 40–75, then a brief Tulcornix arrival/confrontation (3–8 min) as the closing beat. Spend the session time on everything BEFORE Tulcornix, not on an Elowen rescue afterward. Follow player choices rather than filling time with another encounter.",
+                "Revised pacing: the old 3.5-hour scene allocations were estimates, not playable content. Five OPTIONAL city situations are detailed in 'Five Optional City Encounters' with 5etools encounter imports in /encounters. Use whichever the party plausibly encounters while exploring. Prisoner decision 5–25 minutes, city transition 5–20, individual city situations 1–3 minutes if skipped or approximately 8–20 if played, shopping variable, Ledger House variable, Tulcornix last 3–8 minutes. A short session remains possible if players move quickly; do not pad time with mandatory scenes.",
                 "At session end record decisions, goods actually acquired and sold, prisoner disposition, recipient of each 100 gp payment, shops visited, and what the party knows of Tulcornix/Elowen. Do NOT record a decided response to his request unless a player happened to declare it before the fade-out; their decisions are normally for Session 5.",
                 "CONTINUITY CORRECTION: During actual play only three Scouts were in the Bow Gallery, the alarm was not raised, and the prior sluice repair objective was removed. Do not present a fourth Scout, a missing waterworks repair, or withheld payment as an unfinished part of Session 3.",
                 "Shopping resale rule: the 2024 PHB sells usable mundane equipment at half its listed cost and trade valuables at full face value; Appendix J now includes fast prices. The 75 gp fixed salvage valuables in the Well's 375 gp total are already valued and must not be counted twice.",
@@ -2712,7 +2713,8 @@
                 "The takeover began before the party arrived back in town. Background jobs, family obligations and unrelated disputes continue. Not every citizen agrees the change is bad, and not every Crown employee is malicious.",
                 "Ready city detail: workers remove a FREE CITY OF BELLWEATHER sign and install the Crown's insignia; they squabble over who gets to keep the old brass lettering. At the gates the same watchmen now carry newly stamped Crown papers. A royal clerk insists a proclamation must be hung at a height suited to a monarch looking down from horseback. These are visible facts, not required quests.",
                 "An ordinary merchant complains about replacement trade permits; a laborer appreciates finally being paid for a repair; a former Council clerk worries about losing a livelihood. Citizens can disagree without becoming automatic loyalists or rebels.",
-                "Players asking merchants what happened is expected. Appendix J includes direct observations, rumors, attitudes, and plausible answers. Their shopping trip may be the entire first half of the royal-takeover revelation."
+                "Players asking merchants what happened is expected. Appendix J includes direct observations, rumors, attitudes, and plausible answers. Their shopping trip may be the entire first half of the royal-takeover revelation.",
+                "The five ready-to-run public situations appear in 'Five Optional City Encounters — Session 4: What Changed in Bellweather.' Use them as genuine local life, not a quest chain, and don't demand all five. Their corresponding optional combat imports are in /encounters."
               ]
             },
             {
@@ -2725,6 +2727,95 @@
                 "{@b Former Council staff.} Those left behind may disagree about the deal, worry about their futures, or know procedures the party can question. Do not imply the old Council still commissions official missions.",
                 "{@b Bishop Brann.} He remained in Bellweather. His views follow his religious and civic duties; they are not automatically the same as Brakkus's or the Crown's.",
                 "Cardon Weavehouse: the Crown has commandeered a street-facing textile work annex at the edge of the larger, disputed property. Kaleb's wife, Elowen, is indentured here. This does not mean the Crown controls the entire Weavehouse, Perrin Cardon arranged the servitude, or the old unplayed Chapter 8 armed occupation has already been resolved. The annex can be visited without entering the entire compound."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Five Optional City Encounters — Session 4: What Changed in Bellweather",
+              "entries": [
+                "Use these as independent things happening in the city, NOT a quest chain or five required stops. Place each only where the party plausibly walks: civic square, hotel frontage, market, South Ward bread queue, and wall-repair line. Each begins with an observable dispute, two or more viewpoints, and practical information the PCs can learn without an Investigation or Persuasion check. PCs may walk by; the situation continues without them. Do not make all five lead to the same villain or secret.",
+                "Time in real play: 1–3 minutes to notice and move on; roughly 8–20 minutes when the party engages (longer only when their actions create new events). They are EXTRA material, not a promise of a full three hours. With 2–3 engaged scenes, shops and Ledger House, a 2–3 hour session is plausible; fast players can still reach Tulcornix earlier. If you can run 5 only by forcing all 5, do not do it. Do not give Tulcornix's news or Elowen's whereabouts away during these scenes.",
+                "All local guards are street patrols or requisition escorts and are not drawn from, nor added to, the fixed six-Guard/one-Veteran defense at Koven House. Civilian NPCs have their own aims. Officials do not call for an arrest over complaints, sarcasm, or refusing to cooperate; guards act when someone actually threatens, assaults, steals or blocks official work. Witnesses and alarms have actual routes and travel times. The encounter-import JSON files in the repository /encounters directory represent ONLY possible combatants, never mandatory fights.",
+                {
+                  "type": "entries",
+                  "name": "1. The Sign Makers — Civic Square",
+                  "entries": [
+                    "{@b Read the scene.} Two municipal workers wrestle a brass-lettered FREE CITY OF BELLWEATHER sign off its mounting. One wants to sell the letters for wages; the other wants to keep a memento of the old city. A royal clerk is directing the installation of the new proclamation, insisting it be displayed high enough to be read by a noble riding on horseback. One armed Guard escorts the clerk. Neither worker is conspiring with anyone.",
+                    "{@b Motives and opening lines.} Worker: 'That's OUR sign. You can't just melt it down.' Other worker: 'Then who's paying our rent?' Clerk, without malice: 'Orders arrived before the proclamation. The display height is specified. I don't write the specifications.' Guard: 'They can argue all day as long as the street stays open.'",
+                    "{@b Learn without a roll.} Paperwork, banners, sign crews and royal insignia were prepared in advance. The public proclamation names Prince Reginald and Princess Narcissa Stucky acting for King Hendrix; Koven House is now the public registry; the former Council has departed. An old watchman serving under a new badge is not necessarily a new royal recruit. Looking at crates or asking the clerk is sufficient. Neither worker knows the Council's exact payment terms.",
+                    "{@b Choices/outcomes.} PCs may buy or preserve the sign, help dismantle it, negotiate which worker keeps the letters, ask for copies of the proclamation, question the clerk or leave. A genuinely persuasive settlement need not be rolled. If a PC deliberately interferes with the mounting, the clerk orders a pause and may appeal to the Guard; refusing to obey is not itself initiative. The clerk can direct a legitimate petition to Koven House.",
+                    "{@b Violence only if triggered.} Import {@code encounters/session4-city-01-sign-makers.json}: ONE {@creature Guard|XMM} and ONE {@creature Commoner|XMM} clerk; two workers are noncombatants and flee or try to protect the letters. Guard AC 16 HP 11; clerk AC 10 HP 4. The Guard challenges, tries to interpose, withdraws to seek help if outmatched. If threatened, the clerk shelters behind the sign; no spontaneous reinforcements.",
+                    "{@b Aftermath.} If ignored, the new sign goes up and the argument is resolved imperfectly by the workers. If the PCs save the sign, it becomes a harmless civic keepsake, not a clue or special relic."
+                  ]
+                },
+                {
+                  "type": "entries",
+                  "name": "2. The Evicted Guests — Outside the Requisitioned Hotel",
+                  "entries": [
+                    "{@b Read the scene.} Luggage and rolled bedding cover the sidewalk outside a hotel now assigned to the royal guard. A traveling family has already paid for rooms, but a uniformed escort will not let them back upstairs. The proprietor is furious about refunds and lost guests. Two Guards hold the entrance; they are not arresting anyone.",
+                    "{@b Motives and opening lines.} Proprietor: 'You want my building, then you pay for the bookings you've thrown onto the street.' Guard: 'The written order is for the rooms, not your refunds.' Displaced guest: 'I don't care whose army it is. I need somewhere to sleep tonight.' The Guard may sympathize without disobeying clear orders.",
+                    "{@b Learn without a roll.} Hotels and some other civilian spaces are being requisitioned for incoming soldiers. This is where Jord lost his old room; he independently intends to seek lodging at Ledger House. The city has an operating guard and incoming royal troops, but an escort on the street is not the full barracks force. These changes cost real people money.",
+                    "{@b Choices/outcomes.} PCs can direct guests to an inn with vacant beds or ask Brakkus whether he has room; pay for lodging; mediate a refund; request the requisition order; or challenge the guards. Honest paperwork won't immediately reverse the Crown's requisition. If PCs offer a workable place to stay, the family takes it and stops needing attention; the proprietor may still pursue compensation independently. Do not auto-move Jord into this scene if he is elsewhere.",
+                    "{@b Violence only if triggered.} Import {@code encounters/session4-city-02-evicted-guests.json}: TWO {@creature Guard|XMM}, AC 16 HP 11 each. In a visibly supervised escalation, use optional {@code encounters/session4-city-02-OPTIONAL-veteran.json}: those same 2 Guards plus ONE {@creature Warrior Veteran|XMM}, AC 17 HP 65; the Veteran must already be physically assigned nearby, never appear merely to tune difficulty. Guests scatter; the proprietor ducks inside. Guards protect the doorway, warn, and regroup or surrender as appropriate.",
+                    "{@b Aftermath.} If nobody intervenes, the family leaves to look for beds, the building remains barracks and Jord still visits Ledger House independently. Aid can earn personal thanks, not an automatic resistance contact."
+                  ]
+                },
+                {
+                  "type": "entries",
+                  "name": "3. The Permit Dispute — Market",
+                  "entries": [
+                    "{@b Read the scene.} A trader with customers waiting holds a still-valid-looking Free City permit. A newly appointed royal clerk refuses to authorize trade under that paperwork, but also admits no replacement permits have been printed yet. A single Guard waits nearby, bored. The trader's goods are ordinary merchandise, not contraband.",
+                    "{@b Motives and opening lines.} Trader: 'I've sold here for twelve years. The ink isn't even dry on the new law.' Clerk: 'I know. My seal is for the new register, which hasn't arrived.' Guard: 'Can you two move the argument away from the doorway?'",
+                    "{@b Learn without a roll.} Old contracts and permits are in administrative limbo; Koven House has become the registry for applications and civic records. Crown administration is capable of procedures while still being unprepared and inconsistent. The merchant's permit itself is plainly real; no check is needed to establish that. The clerk cannot attest to the secret details of the Council sale.",
+                    "{@b Choices/outcomes.} PCs might mediate a provisional market day, escort a petition to Koven House, help the trader relocate a few stalls, find the local officer permitted to sign an interim slip, buy something, or ignore it. If a course is clearly reasonable, let it work without dice. If persuading a resistant clerk to issue a discretionary one-day handwritten exception is genuinely uncertain, use DC 13 Charisma (Persuasion); the exception affects only this stall today and doesn't rewrite city law. Forging a seal risks a later inquiry if discovered.",
+                    "{@b Violence only if triggered.} Import {@code encounters/session4-city-03-permit-dispute.json}: ONE {@creature Guard|XMM} and ONE {@creature Commoner|XMM} clerk. The clerk takes cover or flees. The trader and customers are noncombatants. The Guard uses a warning and physical interposition before drawing steel; a loud argument is NOT an attack.",
+                    "{@b Aftermath.} The trader either operates provisionally or packs up. Later visitors may still see the resulting paperwork backlog; don't convert it into a compulsory side quest."
+                  ]
+                },
+                {
+                  "type": "entries",
+                  "name": "4. The King's Generosity — South Ward Bread Queue",
+                  "entries": [
+                    "{@b Read the scene.} A royal herald stands beneath a banner praising Prince Reginald's generosity while two Guards distribute loaves to a long line of residents. A baker at the edge of the square recognizes the bread: the old municipal office bought it from him yesterday. Several hungry residents are delighted with the food and resent anyone holding up the line.",
+                    "{@b Motives and opening lines.} Herald: 'His Royal Highness sees that no loyal subject goes hungry!' Baker, privately: 'They bought that with city money. I'm glad people are eating, but that's not the prince's charity.' Parent waiting for bread: 'If they're giving it away, let them.'",
+                    "{@b Learn without a roll.} The Crown is gaining public credit for stores already paid for by the former city. Royal propaganda can coexist with a genuinely useful meal for residents; some people like the new administration. The baker's ordinary receipt supports his claim and is available if asked, no Investigation check. No hidden plot ties to this delivery.",
+                    "{@b Choices/outcomes.} PCs may ask the herald how distribution is funded, help hand out food, speak to grateful residents, publicly credit the baker, give money or bread of their own, or confront the propaganda. A public confrontation makes a scene but doesn't automatically become an arrest. If they block hungry civilians from eating, some residents challenge THEM; they have opinions unrelated to the Crown.",
+                    "{@b Violence only if triggered.} Import {@code encounters/session4-city-04-kings-generosity.json}: TWO {@creature Guard|XMM} and ONE {@creature Commoner|XMM} herald. The herald tries to get behind the Guards, who prioritize a safe exit for bystanders. The baker and bread recipients fight only if personally threatened; do not invent a hostile mob.",
+                    "{@b Aftermath.} Distribution continues if no one stops it. Helping earns modest goodwill with those present, not universal popularity; embarrassing the herald generates gossip, not an automatic Crown warrant."
+                  ]
+                },
+                {
+                  "type": "entries",
+                  "name": "5. The Unpaid Workers — Restored Wall Front",
+                  "entries": [
+                    "{@b Read the scene.} Masons repairing a section of the already-restored wall have stopped work. The former Council's payroll foreman is nowhere to be found and wages for work completed before the handover remain unpaid. A Crown payroll administrator arrives with fresh forms and authority to promise payment for NEW work, not yesterday's debt. One Guard stands by to keep the passage open.",
+                    "{@b Motives and opening lines.} Laborer: 'We hauled those stones before your banners came. Who pays us?' Administrator: 'I can put future work on the register. I cannot sign the old treasury's books.' Another laborer: 'Then the wall stays half-finished.'",
+                    "{@b Learn without a roll.} The former Council left unpaid obligations behind; the Crown may be efficient with its new budget while declining old bills. Repair projects predate the brief takeover; the physical restoration did NOT occur in the few hours the party spent underground. The missing foreman could simply have fled with the Council or quit; no secret embezzlement is established.",
+                    "{@b Choices/outcomes.} PCs may broker an agreement for work going forward, carry the wage claim to the Koven House public registry, ask nearby laborers to corroborate the hours, advance the wages themselves, pressure the administrator, or leave. Clear written records can prove the work was done without a roll. A useful practical compromise might be to record the arrears and let work resume voluntarily, not fabricate an instant government payout.",
+                    "{@b Violence only if triggered.} Import {@code encounters/session4-city-05-unpaid-workers.json}: TWO {@creature Angry Laborer|NCFA}, AC 11 HP 9 each, work hammer +3 to hit for 1d6+1 bludgeoning, and ONE {@creature Guard|XMM}, AC 16 HP 11. Neither laborer is hostile by default; the Guard can be protecting workers or maintaining order rather than siding with the Crown. Other workers are spectators and retreat. If PCs use violence, a laborer may shove or grapple before swinging and usually backs down after someone is injured.",
+                    "{@b Aftermath.} The workers can strike, resume under new terms, or leave. The unpaid balance persists if unresolved. Don't invent a recovered payroll chest unless the PCs later pursue a credible records investigation."
+                  ]
+                },
+                {
+                  "type": "entries",
+                  "name": "Optional Brawl NPCs and Escalation — Quick Reference",
+                  "entries": [
+                    "The encounter imports store monster references, not scripted hostility. Download the appropriate file from /encounters or add its monsters manually. Official 2024 quick stats are repeated here for table access, not modified homebrew.",
+                    {
+                      "type": "list",
+                      "items": [
+                        "{@b Guard|XMM:} AC 16, HP 11, Speed 30 ft.; Spear +3 to hit, 1d6+1 (4) Piercing. Warns, helps civilians withdraw, fights as a team; will retreat or surrender when overwhelmed.",
+                        "{@b Warrior Veteran|XMM:} AC 17, HP 65, Speed 30 ft.; Multiattack two Greatsword attacks, each +5 to hit, 2d6+3 (10) Slashing. Reaction Parry: +2 AC against a melee hit. Veteran is OPTIONAL and serious for four level-4 PCs; do not spring him into a scene because the two Guards are easy.",
+                        "{@b Commoner|XMM (clerk, herald, trader, civilian):} AC 10, HP 4, Speed 30 ft.; if forced to defend themself, improvised item +2 to hit, 1d4 Bludgeoning (use this simplified table stat). Flee, hide, negotiate; not professional soldiers.",
+                        "{@b Angry Laborer|NCFA (custom):} AC 11, HP 9, Speed 30 ft.; work hammer +3, 1d6+1 (4) Bludgeoning. Primary response is argument, blocking passage, shove or withdrawal.",
+                        "{@b Hired Muscle|NCFA (custom):} AC 13, HP 22, Speed 30 ft.; weighted club +4, 1d6+2 (5) Bludgeoning; dagger +4, 1d4+2 (4) Piercing, thrown 20/60 ft. Hired toughs are NOT introduced as guards, and are NOT automatically tied to the takeover; use only if the party picks a separate street fight."
+                      ]
+                    },
+                    "Optional separate import {@code encounters/session4-city-OPTIONAL-street-toughs.json} contains TWO Hired Muscle (not assigned to any of the five scenes). Their purpose is a fast unscripted street brawl if the PCs create one. They retreat below half numbers/when outmatched; they don't escalate to lethal combat to pad time.",
+                    "Noncombat solutions: when intent and ability make a result obvious, do not roll. If uncertainty genuinely changes the outcome, use DC 10 easy, DC 13 moderate or DC 15 difficult as appropriate. Do not ask for checks just to see a royal notice, hear testimony, examine a visible invoice, speak to a clerk, or notice an evicted family.",
+                    "If PCs defeat a patrol, witnesses know what they personally saw; a runner physically reaches the nearest watch post before aid can arrive. Distances, noise, doors, and actual time control events. A crowd or riot does not spawn automatically. Preserve the Koven House seven-person fixed local roster separately."
+                  ]
+                }
               ]
             },
             {
@@ -2850,6 +2941,7 @@
               "type": "entries",
               "name": "Running a 3.5-Hour Social Session",
               "entries": [
+                "{@b Pacing audit (October 25):} The previously published 3.5-hour time target was NOT supported by guaranteed scene content. This revised chapter offers five independent city situations with concrete decisions and optional combat. Neither browsing shops nor backstory conversation can be assigned a fixed duration. If the players skip encounters and shop quickly, the chapter may finish well under three hours; end at the natural Tulcornix reveal rather than padding or preventing legitimate choices. A three-hour session is plausible only with meaningful player engagement, and that is not assured.",
                 "Flexible 3.5-hour target: Noren decision at the Well 10–25 minutes; city impressions 15–30; shopping and merchant questioning 30–75; Brakkus and Jord/Brann at Ledger House 40–75; Tulcornix's arrival, accusation and news about Elowen as a SHORT FINAL BEAT (3–8 minutes). Stop at his arrival and reveal. Session 5 begins with any reply, negotiation, investigation, or rescue.",
                 "Prepare NPC motives, current stakes, and consequences rather than a mandatory sequence. Give each player an opening to state a goal, and follow the actions the table actually chooses.",
                 "{@b Session priority.} Brakkus asks the party about their lives, Jord seeks lodging and Brann brings the Council money. Pepper's sentence is background. Tulcornix arrives specifically for Pepper as the final scene. No Elowen planning, negotiation or rescue takes place afterward in Session 4.",
@@ -2857,7 +2949,8 @@
                 "Keep several kinds of pressure available: moral disagreement, paperwork, labor disputes, divided loyalties, an ordinary favor, a celebration, a credible threat. None has to happen.",
                 "An antagonistic official can say no, call for guards, negotiate, or walk away as circumstances warrant. Do not roll initiative merely because the session needs an action scene.",
                 "Before Tulcornix arrives, record what the party learned, purchased, whom they helped or alienated, and what happened to both prisoners. Deliver Tulcornix's accusation and Elowen revelation, end the session, and begin the party's response next time.",
-                "Expect store customers to ask who governs, where the Council went, who received payment for the sale, whether old judgments still apply and whether guards have changed. Each shopkeeper's distinct knowledge and responses are in Appendix J. Don't require players to attend a separate briefing after shopping."
+                "Expect store customers to ask who governs, where the Council went, who received payment for the sale, whether old judgments still apply and whether guards have changed. Each shopkeeper's distinct knowledge and responses are in Appendix J. Don't require players to attend a separate briefing after shopping.",
+                "As the party moves between chosen destinations, introduce at most the scenes actually encountered, with no obligations to finish a checklist. On the main route, two engaged city situations will likely add about 20–40 minutes; all five can take much longer, but may feel repetitive unless the PCs choose sustained involvement. Preserve the late Tulcornix beat, no forced combat, no Elowen rescue after his arrival."
               ]
             },
             {
@@ -15319,6 +15412,109 @@
         "entries": [
           "A lean Harengon scout wearing a short Iron Covenant tabard and courier's leather satchel. Its orders are to reach the ground-level alarm pull at F14, not to kill the PCs.",
           "The courier is harder to stop than a normal Scout (22 HP), adds +2 to initiative through Hare-Trigger, and can use Rabbit Hop twice. The alarm still costs one Action once reached."
+        ]
+      }
+    },
+    {
+      "name": "Angry Laborer",
+      "source": "NCFA",
+      "size": [
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        11
+      ],
+      "hp": {
+        "average": 9,
+        "formula": "2d8"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 12,
+      "dex": 12,
+      "con": 10,
+      "int": 10,
+      "wis": 10,
+      "cha": 10,
+      "passive": 10,
+      "languages": [
+        "Common"
+      ],
+      "cr": "1/8",
+      "action": [
+        {
+          "name": "Work Hammer",
+          "entries": [
+            "{@atkr m} {@hit 3}, reach 5 ft. {@h}4 ({@damage 1d6 + 1}) Bludgeoning damage."
+          ]
+        }
+      ],
+      "fluff": {
+        "entries": [
+          "A working mason or laborer dragged into a conflict on the city streets, not an automatic enemy. Most will shout, protect coworkers or retreat rather than fight adventurers to the death.",
+          "Session 4 quick NPC. Custom stat block, not a published 2024 monster."
+        ]
+      }
+    },
+    {
+      "name": "Hired Muscle",
+      "source": "NCFA",
+      "size": [
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 22,
+        "formula": "4d8 + 4"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 14,
+      "dex": 12,
+      "con": 12,
+      "int": 9,
+      "wis": 10,
+      "cha": 9,
+      "passive": 10,
+      "languages": [
+        "Common"
+      ],
+      "cr": "1/4",
+      "gear": [
+        "studded leather armor|xphb",
+        "club|xphb",
+        "dagger|xphb"
+      ],
+      "action": [
+        {
+          "name": "Weighted Club",
+          "entries": [
+            "{@atkr m} {@hit 4}, reach 5 ft. {@h}5 ({@damage 1d6 + 2}) Bludgeoning damage. The weighted club is this custom NPC's modified/improvised weapon."
+          ]
+        },
+        {
+          "name": "Dagger",
+          "entries": [
+            "{@atkr m,r} {@hit 4}, reach 5 ft. or range 20/60 ft. {@h}4 ({@damage 1d4 + 2}) Piercing damage."
+          ]
+        }
+      ],
+      "fluff": {
+        "entries": [
+          "A hired enforcer or ordinary street tough, not a Crown Guard and not a planted agent of any overarching antagonist. Withdraws when seriously outmatched.",
+          "Session 4 quick NPC. Custom stat block, not a published 2024 monster."
         ]
       }
     }
