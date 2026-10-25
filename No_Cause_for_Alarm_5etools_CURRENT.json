@@ -6,12 +6,12 @@
         "json": "NCFA",
         "abbreviation": "NCFA",
         "full": "No Cause for Alarm: Ruins of Bellweather",
-        "version": "4.52",
+        "version": "4.53",
         "authors": [
           "No Cause for Alarm Campaign"
         ],
-        "dateLastModified": 1792949100,
-        "_dateLastModifiedHash": "ncfa-v452-session4-five-city-situations"
+        "dateLastModified": 1792947000,
+        "_dateLastModifiedHash": "ncfa-v453-session4-self-contained-table-prep"
       }
     ],
     "edition": "one",
@@ -100,7 +100,9 @@
           "headers": [
             "Map: Bellweather Under Crown Administration",
             "Map: Ledger House (Approved DM Map)",
+            "Buildable Single-Street Battle Map — 36 × 24-Inch Table Plan",
             "Session 4 Miniature Pull List — Personal Brakkus Mini and Arcknight Binder",
+            "Session 4 One-Screen Table Run Order / Continuity Check",
             "Session 4 DM Run Card — Royal Takeover",
             "Start in the Well: Noren and His Veteran",
             "Chapter Overview",
@@ -108,12 +110,13 @@
             "At the Table: Immediate Changes",
             "Open Locations and People",
             "Five Optional City Encounters — Session 4: What Changed in Bellweather",
+            "Session 4 Combat: Self-Contained Quick Stats, Placements, and Escalation",
             "If They Attack Koven House — Finite Royal Defense",
             "Session Anchors: Brakkus, Jord, Bishop Brann, and Tulcornix",
             "Pepper: Existing Sentence, Low Administrative Priority",
             "Kaleb's Family and Tulcornix Avemvir",
             "If They Reach Cardon Weavehouse Before Tulcornix — or in Session 5",
-            "Running a 3.5-Hour Social Session",
+            "Running Session 4 — Flexible Pacing, NOT a Guaranteed Three Hours",
             "Rewards and Advancement"
           ]
         },
@@ -2599,6 +2602,35 @@
             },
             {
               "type": "entries",
+              "name": "Buildable Single-Street Battle Map — 36 × 24-Inch Table Plan",
+              "entries": [
+                {
+                  "type": "gallery",
+                  "images": [
+                    {
+                      "type": "image",
+                      "href": {
+                        "type": "external",
+                        "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/bellwether_session4_street_36x24_blueprint.svg"
+                      },
+                      "imageType": "map",
+                      "title": "DM Blueprint — One Reusable 36 × 24 Street (1-inch grid)",
+                      "width": 1548,
+                      "height": 1175
+                    }
+                  ]
+                },
+                "{@link Open the measured 36 × 24 buildable street plan|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/bellwether_session4_street_36x24_blueprint.svg}. This is a DM terrain setup diagram for the ENHANCE mat, NOT a claim that all five city situations or four merchants are geographically adjacent. The previously approved Crown CITY map and Ledger House DM map remain authoritative; this modular street represents different blocks as the party moves.",
+                "{@b Setup: 8–12 minutes estimated.} Orient the ENHANCE dry-erase mat landscape: 36 columns across, 24 rows deep, 1-inch squares equal 5 ft. Do not print a second mat. Draw three shallow north building-front outlines at columns 2–11, 13–23, 25–35, rows 1–5; draw two south building outlines at columns 2–16 and 21–35, rows 21–24. Leave opening gaps in each facade. The northern frontage and southern frontage are replaceable SHOP, HOTEL, FORGE, WORKSITE or REGISTRY labels, as appropriate to this particular street scene.",
+                "{@b Physical pieces ONLY:} 6 standard STAHLHAMMERS stone/wood wall sections, 2 door-walls, 1 window-wall, 4 barrels, 2 jars: total FIFTEEN pieces. Real ~60 mm wall elements span approximately 2.4 squares; labels W1–W6, D1–D2 and V1 in the SVG denote placement ZONES along building frontages, not a promise a terrain segment fits precisely in a one-square grid cell. All other facades are pen outlines. Leave chests, staircase, other walls and furnishings in the bag.",
+                "{@b Drawn details ONLY:} a small public notice board around columns Q–S, row 9; building labels, short hand-drawn counters or luggage rectangles only when relevant. NO physical fountain, tree, cart, wagon, market stall, roof, full building shell or printed scenery is assumed. Central clear street from approximately rows 6–20 lets 4 level-4 PCs and street NPCs move and fight without rearrangement.",
+                "{@b Use across scenes.} Sign Makers: place old sign and clerk at the notice board. Evicted Guests: turn a frontage into the hotel and draw luggage. Permit Dispute: use a storefront or stall outline and a waiting customer. King's Generosity: describe an orderly bread line beside a frontage, without constructing a food cart. Unpaid Workers: label a frontage 'repaired wall / work crew'; physical barrels may represent site clutter. Shopping uses the same fronts; Jord's wagon can remain off-table, with Jord standing at the roadside. For conversations, leave miniature positions loose and only commit squares when actual positioning matters.",
+                "{@b Movement and cover.} Barrels provide potential half cover ONLY if placement and actual sight line warrant it. Drawn facade outlines block line of sight only where they represent real solid walls; make that distinction clear to the table. No extra guards spawn because a building line is drawn. A witness/runaway must traverse real distance before alarm assistance is possible.",
+                "{@b Quick terrain bag checklist:} 6 walls, 2 doors, 1 window, 4 barrels, 2 jars, dry-erase marker, existing character and NPC minis. The approved Ledger House map is a different existing location and should be used for the dinner if tactical positioning matters. This street set replaces ONLY ad-hoc city-street setup."
+              ]
+            },
+            {
+              "type": "entries",
               "name": "Session 4 Miniature Pull List — Personal Brakkus Mini and Arcknight Binder",
               "entries": [
                 "Use the original personal Brakkus Ledgerhelm miniature from when the DM played him at Hall of Heroes. All other listed figures are from the permanently numbered 161-piece Arcknight binder; their permanent numbers and locations are unchanged. Listed Arcknight figures are visual proxies unless an exact species match is identified. The Koven House guard set is conditional; no combat is planned.",
@@ -2640,7 +2672,136 @@
                     }
                   ]
                 },
-                "Player characters use their existing player minis; do not take extra figures from this NPC pull list for them unless requested. No new miniature is needed for the shops if their conversations remain theater of the mind. Keep the guards in the binder if the party doesn't fight. The #155/#156 dragon/Balor labeling discrepancy in some historical indexes is unrelated to all numbers pulled here."
+                {
+                  "type": "entries",
+                  "name": "Street, Shop, and All Five City Scenes — Complete Active-NPC Assignments",
+                  "entries": [
+                    "Numbers are verified against the 161-figure fixed Arcknight binder; every active speaking NPC has a specific miniature or a declared stand-in. Figures are VISUAL PROXIES: e.g. Joren remains a HUMAN even if the selected proxy looks dwarven; Maten remains a DWARF even if the model looks human; Edda remains a HALF-ORC even if her mage proxy appears human. Each mini may be reused between scenes that are NOT simultaneous. An unspecified bread queue can be narrated with 1–2 representative minis; it isn't a fixed roster of 20 combatants.",
+                    {
+                      "type": "entries",
+                      "name": "Shop Counter Figures",
+                      "entries": [
+                        {
+                          "type": "list",
+                          "items": [
+                            "{@b Tiera Dame (Tiny Mage): #017} — P03 Front Top left, halfling explorer; general-goods shopkeeper.",
+                            "{@b Edda Pell (Spare Button): #005} — P01 Back Top left, female staff mage; half-orc apothecary merchant proxy.",
+                            "{@b Joren Viton (Two Hammers): #029} — P04 Back Top left, red-haired dwarf with hammer; VISUAL proxy for the human salesman Joren, NOT his species.",
+                            "{@b Maten (Two Hammers): #042} — P06 Front Top right, blond blue-armored fighter; VISUAL proxy for the dwarf master smith Maten.",
+                            "{@b Jord (Odds & Ends): #043} — P06 Front Bottom left, blue-cloaked gnome; also returns later for his room request."
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "entries",
+                      "name": "Scene 1: Sign Makers — 4 Speaking NPCs",
+                      "entries": [
+                        {
+                          "type": "list",
+                          "items": [
+                            "Worker who wants to preserve sign: #046 (P06 Back Top right; rugged axe-bearing person; artisan proxy).",
+                            "Worker needing wage money: #062 (P08 Back Top right; red dragonborn in civilian shirt; worker proxy).",
+                            "Royal sign-height clerk: #027 (P04 Front Bottom left; black-and-gold cloaked figure; official proxy).",
+                            "Street guard: #021 (P03 Back Top left; blue-armored spear elf; guard proxy)."
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "entries",
+                      "name": "Scene 2: Evicted Guests — 6 Speaking / Featured NPCs",
+                      "entries": [
+                        {
+                          "type": "list",
+                          "items": [
+                            "Hotel proprietor: #017 (P03 Front Top left; use only when not simultaneously using Tiera).",
+                            "Displaced adult A: #039 (P05 Back Bottom left; noblewoman in blue, parent proxy).",
+                            "Displaced adult B: #041 (P06 Front Top left; red-haired noble in green, parent proxy).",
+                            "Child: #018 (P03 Front Top right; short blond gnome adventurer, child-sized proxy).",
+                            "Royal entrance guards: #035 (P05 Front Bottom left; white-cloaked paladin proxy) and #036 (P05 Front Bottom right; elf warrior in red armor proxy).",
+                            "Optional already-assigned Veteran supervisor: #044 (P06 Front Bottom right; lavender armored officer); include only if he was present from the outset and the OPTIONAL veteran encounter actually makes sense. This mini is ALSO the Koven Veteran proxy at another location; if Koven House is involved at the SAME TIME, choose another figure and note the conflict."
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "entries",
+                      "name": "Scene 3: Permit Dispute — 4 Featured NPCs",
+                      "entries": [
+                        {
+                          "type": "list",
+                          "items": [
+                            "Longtime permit merchant: #040 (P05 Back Bottom right; adventurer with blue shawl, shopkeeper proxy).",
+                            "Royal permit clerk: #027 (P04 Front Bottom left; repeat official mini from a separate scene).",
+                            "Street guard: #021 (P03 Back Top left; repeat patrol figure from a separate scene).",
+                            "Optional shopper with a pending order: #019 (P03 Front Bottom left; gnome woman in teal/gold, customer proxy)."
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "entries",
+                      "name": "Scene 4: King's Generosity — 6 Featured NPCs",
+                      "entries": [
+                        {
+                          "type": "list",
+                          "items": [
+                            "Royal herald: #028 (P04 Front Bottom right; serpent-adorned noble courtier proxy).",
+                            "Baker: #029 (P04 Back Top left; reuse Two Hammers model at DIFFERENT time only).",
+                            "Two bread-line guards: #035 (P05 Front Bottom left), #036 (P05 Front Bottom right).",
+                            "Representative family/residents: #019 (P03 Front Bottom left) and #017 (P03 Front Top left). Unnamed additional hungry residents are narrated, not a bound number of physical figures."
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "entries",
+                      "name": "Scene 5: Unpaid Workers — 5 Featured NPCs",
+                      "entries": [
+                        {
+                          "type": "list",
+                          "items": [
+                            "Laborer A: #046 (P06 Back Top right), Laborer B: #062 (P08 Back Top right). Their custom monster stat block is Angry Laborer|NCFA if combat occurs.",
+                            "Royal payroll administrator: #027 (P04 Front Bottom left).",
+                            "One street guard: #021 (P03 Back Top left).",
+                            "Additional witness worker: #045 (P06 Back Top left; female sword-bearing figure, worker proxy)."
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "entries",
+                      "name": "Optional Fights and Rotation",
+                      "entries": [
+                        {
+                          "type": "list",
+                          "items": [
+                            "Separate hired-muscle street brawl: #045 and #046; these are NOT planted enemies in any of the five scenes, and must not be used simultaneously as other speaking NPCs.",
+                            "General street-patrol visual pool: #021, #035 and #036, representing different guards on different blocks; keep these distinct from Koven House's FIXED six-Guard roster.",
+                            "Koven House ONLY IF ATTACKED: Guards #026 (P04 Front Top right), #030 (P04 Back Top right), #031 (P04 Back Bottom left), #032 (P04 Back Bottom right), #034 (P05 Front Top right), #038 (P05 Back Top right); Veteran #044 (P06 Front Bottom right); clerks #017 (P03 Front Top left), #039 (P05 Back Bottom left). Six guards and ONE Veteran TOTAL locally.",
+                            "If a scene continues into a second one without an interval (e.g. the same NPC follows the party), do not use one model to represent two people in that simultaneous scene; move their assigned original mini with them and substitute a spare for the other role if necessary."
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "Player characters use their own established miniatures. Shop and city NPCs can remain theater of the mind, but the full street/merchant miniature roster is now explicitly assigned above. Unnamed crowds remain descriptive rather than requiring a miniature for every background person. Koven House guard group is conditional and remains in the binder unless combat begins."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Session 4 One-Screen Table Run Order / Continuity Check",
+              "entries": [
+                "{@b ARRIVAL STATE:} The PCs are level 4, inside Kellan's Well taking a short rest. Noren Vale and ONE Warrior Veteran are alive, bound. They have not yet chosen their fates. No alarm went up; only three Bow Gallery Scouts confronted them; the waterworks repair objective was removed. Jarrock's intoxication/party dynamics remain at player discretion. Treasure remains what they actually took, not automatically every listed reward.",
+                "{@b FIRST DECISION:} Ask what to do with Noren and the Veteran individually: hand them to transitioning watch, kill, release, keep custody, question or leave. If Noren is killed or turned in, he exits the campaign; if released he remains a free independent Iron Covenant criminal leader and possible later contact, NOT instant ally. Watch at gate can accept prisoners.",
+                "{@b CITY REVEAL:} Crown banners and notices were ready, not magic construction overnight. The former Council sold Bellweather; King Hendrix Stucky rules, with Prince Reginald and his wife Princess Narcissa governing locally. The Council received money, land outside city and dukehood; ordinary people have rumors, not all details. Koven House is public registry and HQ, no compulsory royal audience.",
+                "{@b PLAY SPACE:} Introduce any of the five optional city situations where the party plausibly travels, each with NPCs, knowledge and potential outcomes in the linked section below. Use the same 36×24 street setup across any city scenes; player choices drive pace. Physical confrontation never occurs simply because 3 hours were requested.",
+                "{@b SHOPPING:} Four merchants: Tiny Mage/Tiera = ordinary supplies; Spare Button/Edda = enchanted goods; Two Hammers/Joren + Maten = arms and armor; Jord's Odds & Ends/Jord = assorted wagon stock, with established 20% discount. Chapter's Appendix J holds full stock counts, prices, resale rules, and what each merchant knows or believes about the takeover. The HTML browse catalogs are the ONLY deliberately separate session files.",
+                "{@b LEDGER HOUSE:} Brakkus is a retired paladin and offers dinner; asks PCs who they were before Bellweather. Jord independently comes seeking a room because hotel is barracks. Bishop Brann comes looking for Brakkus with 300 gp old Council pay: Jarrock 100 gp, Aaron 100 gp, Arunem 100 gp, Pepper 0 because first mission unpaid. DO NOT pay if they haven't received it; DO NOT mix with 375 gp in Well or prior 300 gp Blackstone return payment. These NPCs continue their independent plans even if PCs are elsewhere.",
+                "{@b END LAST:} Tulcornix Avemvir seeks PEPPER over killing his adopted brother Kaleb. Wing injured by real worksite accident. Elowen, Kaleb's wife, has been forced into Crown labor at the street-facing Cardon Weavehouse annex (Royal Municipal Recovery debt 150 gp + processing 50 gp). Tulcornix speaks the LOCKED accusation: 'You killed my brother, the stain of his blood will never leave your hands, save his wife and you might cleanse your soul.' Then END the session. Responses and rescue belong to Session 5. No forced appearance in a prison if player violence makes it impossible.",
+                "{@b END-OF-SESSION NOTES:} Record Noren and Veteran outcomes, inventory genuinely collected/sold/bought and merchant stock changes, exact 100 gp shares actually handed over, shops visited, civic people engaged and helped/alienated, awareness of the new Crown and Council deal, and how Tulcornix found Pepper. Nothing is a required quest flag or guaranteed fight."
               ]
             },
             {
@@ -2658,10 +2819,11 @@
                 "CONTINUITY CORRECTION: During actual play only three Scouts were in the Bow Gallery, the alarm was not raised, and the prior sluice repair objective was removed. Do not present a fourth Scout, a missing waterworks repair, or withheld payment as an unfinished part of Session 3.",
                 "Shopping resale rule: the 2024 PHB sells usable mundane equipment at half its listed cost and trade valuables at full face value; Appendix J now includes fast prices. The 75 gp fixed salvage valuables in the Well's 375 gp total are already valued and must not be counted twice.",
                 "If shopping, government inquiry or an unrelated detour consumes most of the evening, Brakkus/Jord/Brann still pursue their independent Ledger House business without a staged encounter for absent PCs. Keep Tulcornix's confrontation as the final scene, and move any unfinished dinner or money handoff to a later visit instead of bending geography.",
-                "Koven House attack contingency: six total Guard stat blocks (2 entrance, 2 lobby, 2 landing) plus one Warrior Veteran sergeant inside the temporary headquarters, with two civilian clerks. Follow real alarm and travel time; barracks soldiers are NOT immediate reinforcements. The Crown responds to an actual attack as a new offense. If the party's arrest, death, or hiding makes Tulcornix's planned appearance implausible, let that outcome stand rather than teleporting him.",
+                "Koven House assault contingency (not a planned fight): exactly six Guards plus one Warrior Veteran in the existing single-floor keyed plan, with two civilian clerks. Courtyard area 1: two Guards; public registry room 6: two Guards and the two clerks; records corridor areas 20/24: two Guards; duty room 11: the Veteran. There is NO reliably marked upper landing on the approved Koven map. Messages, alarms, reinforcement travel, withdrawals and surrender use real movement. Guards from the street scenes are NOT extra Koven garrison. If the party's arrest, death, or hiding makes Tulcornix's arrival impossible, respect their actions.",
                 "KOVEN HOUSE PLAYTEST MAP OVERRIDE: The existing DM key has no reliably marked upper landing; guard posts are courtyard area 1 (2 Guards), registry/main room 6 (2 Guards and two Commoner clerks), side duty room 11 (Veteran), records corridor 20/24 (2 Guards). Guards rally at doors rather than trickle into the party's attacks. Winning beats the finite local force; outside response requires physically transmitted alarm and travel.",
                 "SUPERSEDED CROSS-REFERENCES: The old Chapter 5 note that Pepper's four Council missions automatically transferred to the Crown was wrong and is corrected; Chapter 6 controls. Appendix B's former guarantee of Koven House uncommon magic treasure also referred to the unplayed criminal adventure and is superseded. A victory at the new royal headquarters earns only what is physically found and consequences of the attack.",
-                "MINI PREP: See 'Session 4 Miniature Pull List — Personal Brakkus Mini and Arcknight Binder'. Bring the DM's own original Brakkus character mini, not Arcknight #069. Binder minis: #025 Noren, #033 Veteran captive, #043 Jord, #048 Brann, #037 Tulcornix. Koven House conditional guards #026/#030/#031/#032/#034/#038 plus sergeant #044 (optional civilians #017/#039). The physical Arcknight binder and permanent numbering are unchanged."
+                "MINI PREP: See 'Session 4 Miniature Pull List — Personal Brakkus Mini and Arcknight Binder'. Bring the DM's own original Brakkus character mini, not Arcknight #069. Binder minis: #025 Noren, #033 Veteran captive, #043 Jord, #048 Brann, #037 Tulcornix. Koven House conditional guards #026/#030/#031/#032/#034/#038 plus sergeant #044 (optional civilians #017/#039). The physical Arcknight binder and permanent numbering are unchanged.",
+                "SESSION 4 ALL-IN-ONE CHECK: the approved city map, approved Ledger House DM map, reusable 36×24 street schematic, all speaking NPC mini/proxy assignments and binder pockets, 5 scenes, quick combat stats and rosters, shop stock/merchant answers (Appendix J), prisoner/loot decision, Brakkus/Jord/Brann visits and EXACT 300 gp payment shares, Koven House contingency, Tulcornix final accusation, and session-end tracking are in THIS JSON. Player-facing searchable shop HTML files are separate by request. Optional encounter-builder imports are NOT required to use this chapter."
               ]
             },
             "{@b Recommended level:} 4. The return from Kellan's Well is a roleplay-led session. No encounter is scheduled; no automatic level advancement is attached to the old Koven House criminal-network plan.",
@@ -2820,6 +2982,46 @@
             },
             {
               "type": "entries",
+              "name": "Session 4 Combat: Self-Contained Quick Stats, Placements, and Escalation",
+              "entries": [
+                "This section lets the DM run unexpected street and Koven House fights from THIS adventure JSON, without downloading separate 5etools encounter files. Official XMM creature links and optional importable encounter presets are available for convenience, but these listed AC, HP, movement, attacks, and reactions cover the immediate combats. The NPCs are NEUTRAL until player actions and scene events actually produce violence.",
+                {
+                  "type": "list",
+                  "items": [
+                    "{@b Crown street Guard|XMM:} AC 16; HP 11; Speed 30 ft.; Spear {@hit 3}, 1d6+1 piercing (4 average). Use {@creature Guard|XMM} if full book text is available. Initiative normal Dexterity/DM roll. Standard 5-foot reach. Challenge/warn, protect civilians, coordinate retreat; don't stand to die.",
+                    "{@b Warrior Veteran|XMM:} AC 17; HP 65; Speed 30 ft.; two Greatsword attacks per Multiattack, {@hit 5}, 2d6+3 slashing (10 average) EACH; Parry reaction +2 AC versus a melee hit while holding a weapon. OPTIONAL officer only when already on scene; can be very dangerous for level-4 PCs. Koven House has exactly one.",
+                    "{@b Commoner|XMM (civilian, clerk, herald, family, merchant):} AC 10; HP 4; Speed 30 ft.; improvised object if cornered {@hit 2}, 1d4 bludgeoning. Most hide, flee, surrender or protect children; do not place them in a combatant roster unless it makes sense.",
+                    "{@b Angry Laborer|NCFA (custom homebrew included here):} AC 11; HP 9; Speed 30 ft.; work hammer {@hit 3}, 1d6+1 bludgeoning (4 average). The two primary unpaid workers may shove/grapple, withdraw, or defend coworkers; violence NOT automatic.",
+                    "{@b Hired Muscle|NCFA (custom homebrew included here):} AC 13; HP 22; Speed 30 ft.; weighted club {@hit 4}, 1d6+2 bludgeoning (5 average); dagger {@hit 4}, 1d4+2 piercing (4 average), thrown 20/60 ft. Separate optional street toughs, never surprise reinforcements.",
+                    "{@b Noren Vale|NCFA and his one Veteran captive:} Both are bound at the session start. Use Noren's HOME BREW monster entry and the Warrior Veteran stats above if they are unexpectedly freed and fight. Do not invent a second captive or Iron Covenant reinforcements.",
+                    "{@b Brakkus Ledgerhelm|NCFA:} His full homebrew paladin monster stats are already in this JSON; he is independent, protective of his guests, not a Crown guard or substitute player character. Other social NPCs do not fight by default; generic civilian stats above are the last-resort fallback for ordinary non-combatants."
+                  ]
+                },
+                {
+                  "type": "entries",
+                  "name": "Exact Per-Scene Potential Combatants — NO Mandatory Initiative",
+                  "entries": [
+                    {
+                      "type": "list",
+                      "items": [
+                        "{@b 1 Sign Makers:} 1 Guard, 1 clerk/Commoner; 2 workers are NON-combatants by default. They may interfere with the sign dispute verbally but do not swing hammers unless individually provoked.",
+                        "{@b 2 Evicted Guests:} 2 Guards at hotel entrance; OPTIONAL 1 Veteran only if physically assigned there beforehand. Proprietor/family are noncombatants; no infinite barracks reinforcements. For a drawn-out fight an actual messenger must run and return from an identifiable post.",
+                        "{@b 3 Permit Dispute:} 1 Guard and 1 clerk/Commoner; merchant/customer do not fight by default.",
+                        "{@b 4 King's Generosity:} 2 Guards and 1 herald/Commoner; baker and residents are bystanders with opinions. Don't turn a bread queue into a mob by fiat.",
+                        "{@b 5 Unpaid Workers:} 2 Angry Laborers and 1 Guard are potential combatants, not an automatically united hostile side. Administrator and third witness worker are noncombatants.",
+                        "{@b Optional independent street toughs:} 2 Hired Muscle only if PCs naturally make contact with such a pair. No prearranged mystery brawl.",
+                        "{@b Koven House assault:} EXACTLY 6 Guards + 1 Warrior Veteran, with 2 Commoner clerks; separate from street patrols. Exterior courtyard/approach room 1: 2 Guards; public registry room 6: 2 Guards + 2 clerks; records corridor areas 20/24: 2 Guards; duty room 11: 1 Veteran. Guards fall back and coordinate through actual doorways. No upper-landing post (the supplied map does not reliably contain an identified upper landing).",
+                        "{@b Unplanned violence against a named social NPC:} Follow what the NPC physically has and could realistically do. Don't silently turn Brann, Jord, shopkeepers, visiting nobility, and civilians into extra veteran soldiers. Brakkus's own complete stats are available under his monster entry; for other named noncombatants use the basic Commoner reference only if no stronger established NPC stat fits, and prioritize retreat."
+                      ]
+                    }
+                  ]
+                },
+                "If a witness runs, follow speed 30 ft. (6 squares/turn), distance, cover, doors and real travel. Orders travel at the speed of a living messenger; arrests and investigations require witnesses and an offense. Guards can surrender, be subdued nonlethally under 2024 rules, flee, barricade, or negotiate. If players quickly defeat two guards, LET THEM. This is not permission to add soldiers to pad session time.",
+                "5etools encounter-builder files in /encounters are optional presets; the above compositions and full basic numbers are all present here. If using XMM/NCFA monster links through 5etools, do not mix battle groups accidentally. If unavailable, this quick reference is enough to improvise weapon attacks, health and reactions at the table."
+              ]
+            },
+            {
+              "type": "entries",
               "name": "If They Attack Koven House — Finite Royal Defense",
               "entries": [
                 "{@b Trigger and stakes.} This is NOT a scheduled combat; use it only if the PCs assault the guards, threaten an officer in a way that actually provokes force, or attempt an armed breach. The ground-floor registry remains accessible to peaceful visitors. No arbitrary royal audience, preemptive arrest of Pepper for the old Council sentence, or compulsory encounter.",
@@ -2939,10 +3141,10 @@
             },
             {
               "type": "entries",
-              "name": "Running a 3.5-Hour Social Session",
+              "name": "Running Session 4 — Flexible Pacing, NOT a Guaranteed Three Hours",
               "entries": [
                 "{@b Pacing audit (October 25):} The previously published 3.5-hour time target was NOT supported by guaranteed scene content. This revised chapter offers five independent city situations with concrete decisions and optional combat. Neither browsing shops nor backstory conversation can be assigned a fixed duration. If the players skip encounters and shop quickly, the chapter may finish well under three hours; end at the natural Tulcornix reveal rather than padding or preventing legitimate choices. A three-hour session is plausible only with meaningful player engagement, and that is not assured.",
-                "Flexible 3.5-hour target: Noren decision at the Well 10–25 minutes; city impressions 15–30; shopping and merchant questioning 30–75; Brakkus and Jord/Brann at Ledger House 40–75; Tulcornix's arrival, accusation and news about Elowen as a SHORT FINAL BEAT (3–8 minutes). Stop at his arrival and reveal. Session 5 begins with any reply, negotiation, investigation, or rescue.",
+                "Original timing reference only, NOT a playtime promise: Well 10–25 minutes, city/streets highly variable, shopping 0–75, Ledger House 0–75, final Tulcornix beat 3–8 minutes. If players bypass scenes, the session may end quickly. Do not force a detour or secretly invent a fight to hit a clock target.",
                 "Prepare NPC motives, current stakes, and consequences rather than a mandatory sequence. Give each player an opening to state a goal, and follow the actions the table actually chooses.",
                 "{@b Session priority.} Brakkus asks the party about their lives, Jord seeks lodging and Brann brings the Council money. Pepper's sentence is background. Tulcornix arrives specifically for Pepper as the final scene. No Elowen planning, negotiation or rescue takes place afterward in Session 4.",
                 "{@b Opposition is an option, not a contract.} The party is free to oppose, tolerate, exploit or ignore the Crown. Do not have Brakkus, Jord or Brann recruit the group as a mandatory resistance cell. Respect decisions even when they spoil planned pacing.",
