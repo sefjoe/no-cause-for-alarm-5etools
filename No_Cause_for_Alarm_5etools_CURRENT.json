@@ -6,12 +6,12 @@
         "json": "NCFA",
         "abbreviation": "NCFA",
         "full": "No Cause for Alarm: Ruins of Bellweather",
-        "version": "4.55",
+        "version": "4.56",
         "authors": [
           "No Cause for Alarm Campaign"
         ],
         "dateLastModified": 1792965120,
-        "_dateLastModifiedHash": "ncfa-v455-princess-narcia-name-correction"
+        "_dateLastModifiedHash": "ncfa-v456-session4-roleplay-arunem-pepper-jaroood"
       }
     ],
     "edition": "one",
@@ -136,6 +136,7 @@
           "name": "Chapter 8: Cardon Weavehouse",
           "headers": [
             "Maps",
+            "Table Canon Update — Jaroood, Weavehouse Administrator",
             "Chapter Overview",
             "Running the Chapter",
             "Adventure",
@@ -3111,6 +3112,15 @@
                 "{@b Where the guests go, regardless of PC route.} Brakkus remains at Ledger House and offers dinner when the party returns; Jord comes to seek lodgings; Bishop Brann comes to speak with Brakkus and deliver the three adventurers' 100 gp shares. These events happen independently even if the PCs spend the whole evening elsewhere. Don't relocate or teleport Jord and Brann just to force their speeches: if the party does not return, their lodging/payment encounter can be discovered on the next visit. Tulcornix, who is actively seeking Pepper, is the only personal confrontation GUARANTEED to find its subject and end Session 4. His pursuit still follows plausible witness information.",
                 {
                   "type": "entries",
+                  "name": "Session 4 — Player-Stated Backgrounds (Recorded at the Table)",
+                  "entries": [
+                    "{@b Arunem — player's account:} 'I just appeared here,' and before appearing, Arunem was at home. Record this as Arunem's own statement, NOT proof of teleportation, another world, lost memories, a specific magical mechanism, or who caused it. Do not automatically connect this background to the royal takeover or central plot.",
+                    "{@b Pepper — player's account:} Pepper comes from a town very far away. That town had a supposed 'fair' system run by the rich. Preserve the word 'fair' as the player's characterization (potentially ironic); no town name, form of government, precise geography, or additional history was established. Do not invent a direct connection to Bellweather's Crown unless the player supplies one.",
+                    "{@b Session continuity:} These details arose through actual roleplay and are campaign facts insofar as they are what the characters said about themselves. Other PCs' backgrounds remain whatever their players state; don't force parallel disclosures or retcon their histories."
+                  ]
+                },
+                {
+                  "type": "entries",
                   "name": "Brakkus: Dinner and the People Behind the Adventures",
                   "entries": [
                     "Brakkus sits the group down at Ledger House, with food and a genuine opportunity to talk. He realizes he knows what the party has done in Bellweather but not much about where they came from or what they want. This is the session's principal planned conversation, not a recruiting speech or an interrogation.",
@@ -3195,6 +3205,7 @@
               "name": "If They Reach Cardon Weavehouse Before Tulcornix — or in Session 5",
               "entries": [
                 "The party can visit the textile work annex without running the entire older Weavehouse adventure. It has a public loading yard and work counter, staff-only door, cloth-sorting room, and ledger desk, with no need for an additional tactical map unless a fight develops.",
+                "{@b Named administrator — Jaroood.} Jaroood is the administrator of Cardon Weavehouse (name as established at the table). Preserve that spelling. He is the administrative authority at the Weavehouse, distinct from the unnamed public-counter clerk and the site's two fixed Guards. Do not assume he stands at the annex counter during an unplanned visit; his exact whereabouts, temperament, allegiance, physical description and stat block have not yet been established. Do not invent these as past player discoveries.",
                 "Present at the street-facing annex: two uniformed watchmen ({@creature Guard|XMM}), one clerk ({@creature Commoner|XMM}), six ordinary laborers including Elowen. Those are all guards assigned to this annex for the present scene. Do not summon unlisted Chapter 8 occupants as a surprise wave.",
                 "The clerk will allow general questions and public-counter business. The work ledger openly identifies Elowen, her assignment, and the 150 gp + 50 gp claimed debt/processing charges. Workers cannot leave their contracts voluntarily. The watchmen prevent unauthorized departures, but do not attack mere visitors.",
                 "Let plausible plans work: submit or challenge the bond at Koven House, bargain or buy out the debt, speak with Elowen, forge an authorization, create a distraction, quietly extract her, or confront the guards. A reasonable public inquiry needs no roll. For disputed access use DC 13 Charisma (Deception or Persuasion) as appropriate; to open a secured staff latch use DC 15 Dexterity (Thieves' Tools), or DC 15 Strength (Athletics) to force. Obvious clever approaches succeed without checks. The watchmen can withdraw or surrender if overwhelmed, not fight suicidally.",
@@ -3817,6 +3828,15 @@
                 },
                 "{@link Player Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/cardon_weavehouse.webp}",
                 "{@link DM Keyed Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse.webp}"
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Table Canon Update — Jaroood, Weavehouse Administrator",
+              "entries": [
+                "Jaroood is the named administrator of Cardon Weavehouse. Spelling: Jaroood. This identification is established as current campaign canon at Session 4; avoid substituting an invented prior administrator.",
+                "Do not conflate him with the anonymous clerk working the Crown-controlled public annex in Chapter 6. His precise relationship to older Perrin Cardon property claims and the deeper, unplayed Chapter 8 encounter roster is not yet established. The Crown annex's two Guard plus one clerk roster does not automatically gain Jaroood as a new combatant.",
+                "Appearance, demeanor, personal agenda and combat abilities remain unspecified until actually established in play."
               ]
             },
             {
