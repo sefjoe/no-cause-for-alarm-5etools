@@ -6,12 +6,12 @@
         "json": "NCFA",
         "abbreviation": "NCFA",
         "full": "No Cause for Alarm: Ruins of Bellweather",
-        "version": "4.53",
+        "version": "4.54",
         "authors": [
           "No Cause for Alarm Campaign"
         ],
-        "dateLastModified": 1792947000,
-        "_dateLastModifiedHash": "ncfa-v453-session4-self-contained-table-prep"
+        "dateLastModified": 1792948200,
+        "_dateLastModifiedHash": "ncfa-v454-session4-complete-local-map-index"
       }
     ],
     "edition": "one",
@@ -98,9 +98,11 @@
         {
           "name": "Chapter 6: Bellweather Under the Crown",
           "headers": [
+            "Map: Kellan's Well — Start with Two Captives (Chapter 5 Carryover)",
             "Map: Bellweather Under Crown Administration",
             "Map: Ledger House (Approved DM Map)",
             "Buildable Single-Street Battle Map — 36 × 24-Inch Table Plan",
+            "Map: Koven House — CONDITIONAL Royal Headquarters Assault",
             "Session 4 Miniature Pull List — Personal Brakkus Mini and Arcknight Binder",
             "Session 4 One-Screen Table Run Order / Continuity Check",
             "Session 4 DM Run Card — Royal Takeover",
@@ -2554,6 +2556,46 @@
           "entries": [
             {
               "type": "entries",
+              "name": "Map: Kellan's Well — Start with Two Captives (Chapter 5 Carryover)",
+              "entries": [
+                {
+                  "type": "gallery",
+                  "images": [
+                    {
+                      "type": "image",
+                      "href": {
+                        "type": "external",
+                        "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/kellans_well_20ft_canal_22x26.png"
+                      },
+                      "title": "Kellan's Well — Approved DM Canal and Gallery (Chapter 5)",
+                      "imageType": "map",
+                      "width": 704,
+                      "height": 832,
+                      "grid": {
+                        "type": "none"
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "href": {
+                        "type": "external",
+                        "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/kellans_well_20ft_canal_22x26.png"
+                      },
+                      "title": "Kellan's Well — Player Canal and Gallery",
+                      "imageType": "mapPlayer",
+                      "width": 704,
+                      "height": 832,
+                      "grid": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "{@link Open approved Kellan's Well DM map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/kellans_well_20ft_canal_22x26.png} · {@link Open approved Well player map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/kellans_well_20ft_canal_22x26.png}. Direct copy of existing Chapter 5 approved waterworks map links, not regenerated; preserve established player locations and captured Noren plus one Veteran. The old scene used an earlier 22×26 mat layout; do not rebuild it merely because the new street mat is 36×24. Use theater of the mind for prisoner disposition if the players don't start a fight."
+              ]
+            },
+            {
+              "type": "entries",
               "name": "Map: Bellweather Under Crown Administration",
               "entries": [
                 {
@@ -2627,6 +2669,28 @@
                 "{@b Use across scenes.} Sign Makers: place old sign and clerk at the notice board. Evicted Guests: turn a frontage into the hotel and draw luggage. Permit Dispute: use a storefront or stall outline and a waiting customer. King's Generosity: describe an orderly bread line beside a frontage, without constructing a food cart. Unpaid Workers: label a frontage 'repaired wall / work crew'; physical barrels may represent site clutter. Shopping uses the same fronts; Jord's wagon can remain off-table, with Jord standing at the roadside. For conversations, leave miniature positions loose and only commit squares when actual positioning matters.",
                 "{@b Movement and cover.} Barrels provide potential half cover ONLY if placement and actual sight line warrant it. Drawn facade outlines block line of sight only where they represent real solid walls; make that distinction clear to the table. No extra guards spawn because a building line is drawn. A witness/runaway must traverse real distance before alarm assistance is possible.",
                 "{@b Quick terrain bag checklist:} 6 walls, 2 doors, 1 window, 4 barrels, 2 jars, dry-erase marker, existing character and NPC minis. The approved Ledger House map is a different existing location and should be used for the dinner if tactical positioning matters. This street set replaces ONLY ad-hoc city-street setup."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Map: Koven House — CONDITIONAL Royal Headquarters Assault",
+              "entries": [
+                {
+                  "type": "gallery",
+                  "images": [
+                    {
+                      "type": "image",
+                      "href": {
+                        "type": "external",
+                        "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/koven_house.webp"
+                      },
+                      "title": "Koven House — Original DM Key (Conditional Fight)",
+                      "imageType": "map"
+                    }
+                  ]
+                },
+                "{@link Open the established Koven House DM keyed map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/koven_house.webp}. Reuse without generating a second building. This is not a planned battle. Initial positions: 2 Guards area 1 outer approach/courtyard; 2 Guards and 2 clerks room 6 public registry; 1 Veteran in duty room 11; 2 Guards at west records corridor 20/24. The upper landing mentioned in obsolete summaries is not reliably marked; do not place a phantom patrol upstairs.",
+                "Koven House's registry is open to peaceful public questions; the royal family is not waiting behind an inner door today. An attack is consequential and should follow actual witness/runner routes, guard withdrawal and the finite six-Guard/one-Veteran roster. The new reusable market-street set represents outside city streets, NOT the complete Koven House interior."
               ]
             },
             {
