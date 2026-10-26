@@ -6,12 +6,12 @@
         "json": "NCFA",
         "abbreviation": "NCFA",
         "full": "No Cause for Alarm: Ruins of Bellweather",
-        "version": "4.58",
+        "version": "4.59",
         "authors": [
           "No Cause for Alarm Campaign"
         ],
-        "dateLastModified": 1792977300,
-        "_dateLastModifiedHash": "ncfa-v458-session4-brann-300gp-paid"
+        "dateLastModified": 1792977240,
+        "_dateLastModifiedHash": "ncfa-v459-radiant-well-secret-origin-of-legend"
       }
     ],
     "edition": "one",
@@ -104,6 +104,7 @@
             "Buildable Single-Street Battle Map — 36 × 24-Inch Table Plan",
             "Map: Koven House — CONDITIONAL Royal Headquarters Assault",
             "Session 4 — ACTUAL TABLE EVENTS and Session 5 Launch (Authoritative)",
+            "DM-Only Reveal — The Radiant Well Behind Brakkus's Legend",
             "Session 4 Miniature Pull List — Personal Brakkus Mini and Arcknight Binder",
             "Session 4 One-Screen Table Run Order / Continuity Check",
             "Session 4 DM Run Card — Royal Takeover",
@@ -2706,11 +2707,21 @@
                 "{@b Pepper's Crown detention:} Pepper went voluntarily to Koven House to report the merchant. Royal guards checked her name against an existing list, asserted that the Crown now owned or controlled her outstanding service contract, detained her, and decided she would be sent to the SOUTHERN RUINS for hard labor. This ACTUALLY happened and overrides all earlier prepared statements that the Crown had not taken notice or that her file would remain dormant. Do not invent a separate warrant or new trial when the guards' lookup already explains their attention.",
                 "{@b Brakkus intervenes:} Meanwhile Jarrock and Aaron returned to or were at Ledger House. Brakkus asked why Pepper was missing; he took responsibility for her and set out with Jarrock and Aaron to find her. At Koven House Brakkus personally used his reputation/standing to PERSUADE the royal guards to RELEASE PEPPER INTO HIS CUSTODY. This was negotiated, not a violent jailbreak or a defeat of the fixed Koven House garrison. The guards accepted the arrangement. The exact written terms, deadline and ongoing enforcement obligations have NOT yet been established; those are potential later consequences, not facts to insert retroactively.",
                 "{@b Ledger House / Brann's announcement:} Back at Ledger House, Bishop Brann arrived and told the party that the former Council had sold Bellweather to the Crown and departed. Brann said that he had NOT taken a payout from the sale; do not assume he was paid or offered a particular amount. Brann proposed that the party APPEAR TO WORK FOR THE CROWN while secretly providing information to him/Brakkus and the emerging RESISTANCE. This is now the approved direction, not a mandatory duty or proof of an established large spy apparatus. Brann ACTUALLY PAID the outstanding Kellan's Well wages at Ledger House: Jarrock RECEIVED 100 gp, Aaron RECEIVED 100 gp, Arunem RECEIVED 100 gp, and Pepper RECEIVED 0 gp, for a total 300 gp handed over. This was the separate old Council mission payment, not the royal-sale payout Brann declined, and not the earlier Blackstone reward or Well treasure. Record these actual receipts; do not pay the same shares again.",
-                "{@b Brakkus's Bellweather legend:} When asked why the royals wanted the city, Brakkus told an old LEGEND about a Dune-like form of magic somewhere in Bellweather that could allow control of minds. Brakkus did not know WHAT the power was, WHERE it lay, or whether it was real. The legend's truth, source and relationship to the Crown takeover remain unknown. Do not retroactively confirm that the Crown came for it or link every previous NPC and site to this rumor.",
+                "{@b Brakkus's Bellweather legend:} When asked why the royals wanted the city, Brakkus told an old LEGEND about a Dune-like form of magic somewhere in Bellweather that could allow control of minds. Brakkus did not know WHAT the power was, WHERE it lay, or whether it was real. Unknown TO BRAKKUS AND THE PARTY: whether the magic exists, what it is, where it lies, or what the Crown knows. DM-ONLY ANSWER: the magic is the subterranean Radiant Well (see next section); Crown motive and knowledge remain undecided. Do not retroactively confirm that the Crown came for it or link every previous NPC and site to this rumor.",
                 "{@b Elowen's rescue request:} A visitor called 'Tulvimix' in the DM's session report appeared and persuaded the party to help rescue his sister-in-law Elowen from indentured labor at the Cardon Weavehouse. The previously established visitor was Tulcornix Avemvir, Kaleb's adopted aarakocra brother; treat 'Tulvimix' as a NAME/IDENTITY CONFIRMATION NEEDED, not authorization for an unannounced character rename or a second invented relative. Pepper immediately offered all her money to pay Elowen's debt, showing she attempted a nonviolent financial option.",
                 "{@b Updated indenture price FROM PLAY:} The visitor explained the claimed charges as 150 gp ORIGINAL DEBT, 200 gp ADMINISTRATIVE FEES, and 50 gp PER DAY for 'room and board'. Those figures OVERRIDE the old prep of 150 gp plus 50 gp fee (200 gp one-time total). The debt is growing with each day of confinement. No amount paid, debt discharged, or release achieved has been reported.",
                 "{@b Actual closing / Session 5 active state:} The party did NOT stop immediately on the visitor's accusation. They accepted the Weavehouse rescue mission and began planning. Aaron assigned his familiar to watch the Weavehouse/factory OVERNIGHT for surveillance ahead of an intended rescue; what the familiar sees is NOT yet established. Brakkus emphasized the rescue must be a STEALTH operation, because the group's new covert role requires that the Crown continue believing they work for it; open attacks could expose the emerging resistance. No party-led rescue at the factory has happened yet. Do not lock an infiltration method, route, watch schedule, or combat outcome until the players choose.",
                 "{@b Continuity and agency:} Brakkus now acts as protector and organizer of a nascent resistance, in an evolution emerging during play. Brann wants covert Crown-facing information, not publicly declared rebellion. The player characters can change course; they have agreed to consider/plan the stealth rescue but exact details and consequences are not scripted. Official Crown knowledge of Brakkus's custody deal and Pepper's registered status is real; whether the Crown suspects the party of espionage is UNKNOWN."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "DM-Only Reveal — The Radiant Well Behind Brakkus's Legend",
+              "entries": [
+                "{@b ESTABLISHED DM TRUTH (NOT PLAYER KNOWLEDGE):} The Radiant Well is the real magical phenomenon underlying the old Bellweather story Brakkus related about controlling minds. The Well exists below the surface, physically out of public view, and its relationship to minds and consciousness underlies the legend. This complements the existing Varen Keep / Tyren / Soren plans without changing their previously established details.",
+                "{@b What the PCs currently know:} Only Brakkus's legend, not the name Radiant Well, an entrance, a map location, a working method or proof of its existence. Brakkus himself does not know that the Radiant Well is the answer. None of this is new spoken dialogue; do not give the party the term simply because it is written here.",
+                "{@b Crown connection OPEN:} The Crown's reason for taking Bellweather, whether King Hendrix or Prince Reginald and Princess Narcia even know of the Radiant Well, and whether its power can be deliberately used to exert the type of mind control described in the legend remain to be established through actual events and future design. Do not turn the legend into a confirmed motive or have every person in the city secretly involved.",
+                "{@b Discovery / final geography:} Preserve the previously prepared Radiant Well clues at Marren Library and the endgame at Varen Keep. The Well is subterranean, but this note does NOT place its exact depth, opening, tunnel or present access route beneath a newly named Bellweather street; those details are not locked. Its power is not a portable commodity sitting in a surface shop."
               ]
             },
             {
@@ -8349,7 +8360,8 @@
               "entries": [
                 "{@b Chapter purpose.} Break Tyren’s control, free or defeat Soren without reducing the finale to a static dragon fight, and decide the fate of the Radiant Well.",
                 "With Perrin exposed or politically broken, the party moves against Varen Keep, the center of Tyren’s remaining power.",
-                "Victory is not just killing an enemy. The campaign ends with the characters deciding who controls the Well, what political order replaces Perrin’s influence, and what kind of city Bellweather becomes."
+                "Victory is not just killing an enemy. The campaign ends with the characters deciding who controls the Well, what political order replaces Perrin’s influence, and what kind of city Bellweather becomes.",
+                "{@b DM-only update from Session 4 (2026-10-25):} The Radiant Well is the real subterranean source behind the Bellweather mind-control legend Brakkus spoke of. The party knows only the legend so far. Preserve planned Marren Library clues and later Varen Keep discovery; this fact does not establish the Crown's motivation or grant anyone automatic knowledge of the Well."
               ]
             },
             {
@@ -11509,7 +11521,7 @@
                 "Pepper separated to browse, had an unsuccessful encounter with Edda Pell (The Spare Button; now spoken with an IRISH accent), and went to Koven House to report Edda. Guards found Pepper on a list, asserted the Crown held her Council-service contract, detained her and earmarked her for hard labor in the southern ruins.",
                 "Brakkus, Jarrock and Aaron located Pepper. Brakkus negotiated her release into his OWN CUSTODY by persuading royal guards, not storming Koven House. The agreement's exact paperwork and terms have not been fixed.",
                 "Bishop Brann told the party about the Council selling Bellweather and leaving; he had not taken a Crown-sale payout. He proposed the PCs appear to take Crown work and secretly inform Brakkus/Brann and the resistance. Brann ALSO paid the completed Kellan's Well mission compensation in full: 100 gp received by Jarrock, 100 gp received by Aaron, 100 gp received by Arunem and 0 gp by Pepper, total 300 gp. Do not award these shares again.",
-                "Brakkus told a LEGEND of unknown Bellweather magic capable of controlling minds, with a Dune-like quality. Its existence, location, and any connection to the takeover are unknown. Treat it as rumored history, not solved campaign cosmology.",
+                "Brakkus told a LEGEND of unknown Bellweather magic capable of controlling minds, with a Dune-like quality. The party has no proof or location. DM-ONLY: the actual magical phenomenon is the Radiant Well, below the surface; its Crown connection remains undecided. Do not reveal this DM truth in player-facing narration or assume Brakkus knows.",
                 "A rescuer named 'Tulvimix' in the session report (previously prepped as Tulcornix Avemvir; NAME CONFIRMATION PENDING) convinced the party to try to free his sister-in-law Elowen. Pepper offered her money. Charges stated at the table: 150 gp initial debt + 200 gp administrative fees + 50 gp PER DAY room and board, replacing the older 150+50 prep.",
                 "Aaron's familiar is surveilling the Cardon Weavehouse/factory overnight. The party plans a rescue; Brakkus wants STEALTH to preserve their future cover as Crown-facing resistance informants. Surveillance results and the actual rescue are still unplayed."
               ]
