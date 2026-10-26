@@ -6,12 +6,12 @@
         "json": "NCFA",
         "abbreviation": "NCFA",
         "full": "No Cause for Alarm: Ruins of Bellweather",
-        "version": "4.56",
+        "version": "4.57",
         "authors": [
           "No Cause for Alarm Campaign"
         ],
-        "dateLastModified": 1792965120,
-        "_dateLastModifiedHash": "ncfa-v456-session4-roleplay-arunem-pepper-jaroood"
+        "dateLastModified": 1792977180,
+        "_dateLastModifiedHash": "ncfa-v457-actual-session4-resistance-arc"
       }
     ],
     "edition": "one",
@@ -103,6 +103,7 @@
             "Map: Ledger House (Approved DM Map)",
             "Buildable Single-Street Battle Map — 36 × 24-Inch Table Plan",
             "Map: Koven House — CONDITIONAL Royal Headquarters Assault",
+            "Session 4 — ACTUAL TABLE EVENTS and Session 5 Launch (Authoritative)",
             "Session 4 Miniature Pull List — Personal Brakkus Mini and Arcknight Binder",
             "Session 4 One-Screen Table Run Order / Continuity Check",
             "Session 4 DM Run Card — Royal Takeover",
@@ -115,7 +116,7 @@
             "Session 4 Combat: Self-Contained Quick Stats, Placements, and Escalation",
             "If They Attack Koven House — Finite Royal Defense",
             "Session Anchors: Brakkus, Jord, Bishop Brann, and Tulcornix",
-            "Pepper: Existing Sentence, Low Administrative Priority",
+            "Pepper's Council Sentence — CROWN ENFORCEMENT ACTIVATED IN PLAY",
             "Kaleb's Family and Tulcornix Avemvir",
             "If They Reach Cardon Weavehouse Before Tulcornix — or in Session 5",
             "Running Session 4 — Flexible Pacing, NOT a Guaranteed Three Hours",
@@ -377,7 +378,8 @@
             "Authority and Use",
             "Established: Blackstone and the Council",
             "Established: Kellan's Well, October 11",
-            "Prepared: The Changed City",
+            "Established: Session 4 — Royal Takeover, Pepper's Custody and Resistance",
+            "ARCHIVED PREP — The Changed City (Superseded by Actual Session 4)",
             "Unresolved Future Design"
           ]
         },
@@ -2696,6 +2698,23 @@
             },
             {
               "type": "entries",
+              "name": "Session 4 — ACTUAL TABLE EVENTS and Session 5 Launch (Authoritative)",
+              "entries": [
+                "{@b Status: PLAYED 2026-10-25.} This is the authoritative account of what the PCs actually did. It supersedes incompatible Session 4 run cards, frozen playtests, opening prisoner contingencies, planned Pepper non-enforcement, planned 300 gp handoff and the planned immediate stop on the visitor's arrival. The previously approved street situations and shops remain reusable locations, NOT events the party necessarily experienced. Do not re-run the old Session 4 opening or present Noren as alive.",
+                "{@b Kellan's Well departure:} The party killed both captured NPCs, Iron Covenant leader Noren Vale and his Warrior Veteran. They decapitated the Veteran and Arunem carried the headless body in a bag. Both are dead. The party was stopped by an ordinary city guard who confirmed that the Council no longer existed. At or around that stop, the bag containing the remains was repeatedly slammed against the ground; the exact actor is not established by the DM report. Do not fabricate further confiscation, questioning, prosecution or the corpse's final whereabouts. Noren must not recur alive.",
+                "{@b Pepper at market:} Pepper split from the rest of the group and explored the market alone. The DM ran a modified merchant encounter featuring Edda Pell, proprietor of The Spare Button. Edda's voice/accent is now IRISH at the table. The interaction went badly, but the exact words, injuries, property loss and commercial consequences have not been specified; don't invent them.",
+                "{@b Pepper's Crown detention:} Pepper went voluntarily to Koven House to report the merchant. Royal guards checked her name against an existing list, asserted that the Crown now owned or controlled her outstanding service contract, detained her, and decided she would be sent to the SOUTHERN RUINS for hard labor. This ACTUALLY happened and overrides all earlier prepared statements that the Crown had not taken notice or that her file would remain dormant. Do not invent a separate warrant or new trial when the guards' lookup already explains their attention.",
+                "{@b Brakkus intervenes:} Meanwhile Jarrock and Aaron returned to or were at Ledger House. Brakkus asked why Pepper was missing; he took responsibility for her and set out with Jarrock and Aaron to find her. At Koven House Brakkus personally used his reputation/standing to PERSUADE the royal guards to RELEASE PEPPER INTO HIS CUSTODY. This was negotiated, not a violent jailbreak or a defeat of the fixed Koven House garrison. The guards accepted the arrangement. The exact written terms, deadline and ongoing enforcement obligations have NOT yet been established; those are potential later consequences, not facts to insert retroactively.",
+                "{@b Ledger House / Brann's announcement:} Back at Ledger House, Bishop Brann arrived and told the party that the former Council had sold Bellweather to the Crown and departed. Brann said that he had NOT taken a payout from the sale; do not assume he was paid or offered a particular amount. Brann proposed that the party APPEAR TO WORK FOR THE CROWN while secretly providing information to him/Brakkus and the emerging RESISTANCE. This is now the approved direction, not a mandatory duty or proof of an established large spy apparatus. His separate previously prepared 300 gp Kellan's Well payment was NOT described as delivered in this session report; do not silently add 100 gp each to Jarrock, Aaron and Arunem, or declare the payments canceled. Ask for/record actual player receipt before changing gold.",
+                "{@b Brakkus's Bellweather legend:} When asked why the royals wanted the city, Brakkus told an old LEGEND about a Dune-like form of magic somewhere in Bellweather that could allow control of minds. Brakkus did not know WHAT the power was, WHERE it lay, or whether it was real. The legend's truth, source and relationship to the Crown takeover remain unknown. Do not retroactively confirm that the Crown came for it or link every previous NPC and site to this rumor.",
+                "{@b Elowen's rescue request:} A visitor called 'Tulvimix' in the DM's session report appeared and persuaded the party to help rescue his sister-in-law Elowen from indentured labor at the Cardon Weavehouse. The previously established visitor was Tulcornix Avemvir, Kaleb's adopted aarakocra brother; treat 'Tulvimix' as a NAME/IDENTITY CONFIRMATION NEEDED, not authorization for an unannounced character rename or a second invented relative. Pepper immediately offered all her money to pay Elowen's debt, showing she attempted a nonviolent financial option.",
+                "{@b Updated indenture price FROM PLAY:} The visitor explained the claimed charges as 150 gp ORIGINAL DEBT, 200 gp ADMINISTRATIVE FEES, and 50 gp PER DAY for 'room and board'. Those figures OVERRIDE the old prep of 150 gp plus 50 gp fee (200 gp one-time total). The debt is growing with each day of confinement. No amount paid, debt discharged, or release achieved has been reported.",
+                "{@b Actual closing / Session 5 active state:} The party did NOT stop immediately on the visitor's accusation. They accepted the Weavehouse rescue mission and began planning. Aaron assigned his familiar to watch the Weavehouse/factory OVERNIGHT for surveillance ahead of an intended rescue; what the familiar sees is NOT yet established. Brakkus emphasized the rescue must be a STEALTH operation, because the group's new covert role requires that the Crown continue believing they work for it; open attacks could expose the emerging resistance. No party-led rescue at the factory has happened yet. Do not lock an infiltration method, route, watch schedule, or combat outcome until the players choose.",
+                "{@b Continuity and agency:} Brakkus now acts as protector and organizer of a nascent resistance, in an evolution emerging during play. Brann wants covert Crown-facing information, not publicly declared rebellion. The player characters can change course; they have agreed to consider/plan the stealth rescue but exact details and consequences are not scripted. Official Crown knowledge of Brakkus's custody deal and Pepper's registered status is real; whether the Crown suspects the party of espionage is UNKNOWN."
+              ]
+            },
+            {
+              "type": "entries",
               "name": "Session 4 Miniature Pull List — Personal Brakkus Mini and Arcknight Binder",
               "entries": [
                 "Use the original personal Brakkus Ledgerhelm miniature from when the DM played him at Hall of Heroes. All other listed figures are from the permanently numbered 161-piece Arcknight binder; their permanent numbers and locations are unchanged. Listed Arcknight figures are visual proxies unless an exact species match is identified. The Koven House guard set is conditional; no combat is planned.",
@@ -2859,6 +2878,7 @@
               "type": "entries",
               "name": "Session 4 One-Screen Table Run Order / Continuity Check",
               "entries": [
+                "{@b HISTORICAL:} This was the old PRE-SESSION 4 run order. Do not repeat the two-captive opening, assumed 300 gp handoff, or Tulcornix immediate curtain. See the ACTUAL Session 4 recap near the top of Chapter 6 for the live Session 5 state.",
                 "{@b ARRIVAL STATE:} The PCs are level 4, inside Kellan's Well taking a short rest. Noren Vale and ONE Warrior Veteran are alive, bound. They have not yet chosen their fates. No alarm went up; only three Bow Gallery Scouts confronted them; the waterworks repair objective was removed. Jarrock's intoxication/party dynamics remain at player discretion. Treasure remains what they actually took, not automatically every listed reward.",
                 "{@b FIRST DECISION:} Ask what to do with Noren and the Veteran individually: hand them to transitioning watch, kill, release, keep custody, question or leave. If Noren is killed or turned in, he exits the campaign; if released he remains a free independent Iron Covenant criminal leader and possible later contact, NOT instant ally. Watch at gate can accept prisoners.",
                 "{@b CITY REVEAL:} Crown banners and notices were ready, not magic construction overnight. The former Council sold Bellweather; King Hendrix Stucky rules, with Prince Reginald and his wife Princess Narcia governing locally. The Council received money, land outside city and dukehood; ordinary people have rumors, not all details. Koven House is public registry and HQ, no compulsory royal audience.",
@@ -2873,6 +2893,7 @@
               "type": "entries",
               "name": "Session 4 DM Run Card — Royal Takeover",
               "entries": [
+                "{@b ACTUAL PLAY OVERRIDE: Session 4 has now been played. Do not run this earlier PREP RUN CARD as if pending. The authoritative recap at the top of Chapter 6 describes the actual deaths, Pepper's custody/rescue, Brann's new resistance plan, Bellweather mind-control LEGEND, revised Weavehouse charges, and Aaron's overnight surveillance.}",
                 "Start inside Kellan's Well, during the party's short rest following the fight, with Noren Vale and his Warrior Veteran alive and bound. The party's Well mission is complete; the original sluice restoration objective was explicitly removed. They have not decided either prisoner's fate. The party was underground only a few hours. The Crown prepared its takeover in advance; new flags, orders, and officers can appear fast, but the rebuilt walls, neighborhoods and streets shown on the approved map existed or were underway before they entered.",
                 "Resolve Noren: killed or handed to the watch means out of the campaign; release means he withdraws underground with the Iron Covenant organization still operating, not instant loyal allies. The Veteran is a separate decision. The current roster was Noren plus ONE Warrior Veteran, no Toughs or reinforcements.",
                 "If searched: Noren's monster gear specifies a scimitar, light crossbow and studded leather armor; his 1/day smoke bomb ability is not automatically recovered as a sellable item. Veteran's listed equipment includes greatsword and crossbow. Do not invent a secret coin pouch. Recoverable Well treasure is 375 gp in fixed locations (25 gp courier, 150 gp barracks, 75 gp salvage valuables, 125 gp command strongbox), three potions and the Decanter of Endless Water. Do not assume they collected every item; player inventory and previous actions determine actual holdings.",
@@ -3175,8 +3196,9 @@
             },
             {
               "type": "entries",
-              "name": "Pepper: Existing Sentence, Low Administrative Priority",
+              "name": "Pepper's Council Sentence — CROWN ENFORCEMENT ACTIVATED IN PLAY",
               "entries": [
+                "{@b SUPERSEDING ACTUAL SESSION 4:} The Crown guards found Pepper's name on a list when SHE sought to report Edda Pell, asserted the Crown owned her old service contract, detained her and assigned her to southern ruins hard labor. Brakkus negotiated her release into HIS custody. The old low-priority / no-detention guidance below was prepared before the session and is now HISTORICAL ONLY. Pepper is not pardoned; exact legal terms of custody remain unknown.",
                 "{@b Confirmed sentence.} Pepper, a cleric, completed the first unpaid mission at Kellan's Well; the former Council ordered four further missions, to be paid normally, for her role in Kaleb's murder. This judgment is still unresolved. Do not turn it into a pardon, an acquittal, or a new service contract with the Crown.",
                 "{@b Practical effect of the changeover.} The Crown has an entire city's ownership records, government offices, revenue, trading rights and old contracts to review. Pepper's old Council-service file is not high on its list. Royal officers have not proactively taken up her case and there is no standing warrant or scheduled arrest scene created solely for this interlude.",
                 "{@b Brakkus's position.} Brakkus's supervision of Pepper's house arrest was performed for the former Council. That government has departed. With no new lawful directions that he has accepted, Brakkus will not continue to detain her on its behalf, will not volunteer her name to the Crown, and will not chase her into obedience. This is his own boundary, not a declaration that Pepper is legally pardoned.",
@@ -3190,6 +3212,7 @@
               "type": "entries",
               "name": "Kaleb's Family and Tulcornix Avemvir",
               "entries": [
+                "{@b SESSION 4 RESULT:} The rescue visitor has arrived and succeeded in recruiting the party's help. Their 150 gp debt, 200 gp administrative fees and 50 gp/day board are the figures stated IN PLAY and supersede the 200 gp one-time total below. The party began discussing the operation after his arrival, contrary to the formerly locked immediate fade-to-black. The visitor name 'Tulvimix' from the report vs 'Tulcornix Avemvir' in earlier prep still needs DM confirmation.",
                 "Kaleb's wife is now an indentured servant of the Crown. His adopted brother Tulcornix Avemvir is an aarakocra who {@b must arrive during this session} and report that she needs help. Plan his appearance as the final major story beat, after the other people and the city have had space; his arrival is not optional.",
                 "Kaleb's widow is Elowen, an unwilling Crown-indenture textile worker in the street-facing Cardon Weavehouse annex. She is alive, can speak for herself, and is working in the cloth-sorting area. Her contract is not related to Pepper's old Council-service judgment. Elowen's daughter is currently safe with a trusted neighbor in Bellweather; her health and future need for healing remain unplayed, and no demand that Pepper heal her is imposed.",
                 "The public work ledger lists a made-up 'municipal recovery debt' of 150 gp and a royal processing fee of 50 gp, total 200 gp for an outright discharge, but this is the Crown's asserted price, not proof the indenture is just. Evidence, advocacy, a petition, negotiation, rescue or other actions can change the situation. There is no mandatory buyout.",
@@ -3204,6 +3227,7 @@
               "type": "entries",
               "name": "If They Reach Cardon Weavehouse Before Tulcornix — or in Session 5",
               "entries": [
+                "{@b ACTUAL TABLE OVERRIDE:} Party is planning a STEALTH rescue with Aaron's familiar stationed overnight as an observer. A visitor at Ledger House stated charges of 150 gp principal plus 200 gp administrative fees plus 50 gp PER DAY room and board, rather than the earlier 150+50 draft. The two existing annex Guards, one clerk, six workers including Elowen are the prepared, NOT-YET-CONFIRMED roster; adjust only from actual surveillance and player choices. Jaroood remains the named Weavehouse administrator. The Crown's awareness of the planned rescue is NOT established.",
                 "The party can visit the textile work annex without running the entire older Weavehouse adventure. It has a public loading yard and work counter, staff-only door, cloth-sorting room, and ledger desk, with no need for an additional tactical map unless a fight develops.",
                 "{@b Named administrator — Jaroood.} Jaroood is the administrator of Cardon Weavehouse (name as established at the table). Preserve that spelling. He is the administrative authority at the Weavehouse, distinct from the unnamed public-counter clerk and the site's two fixed Guards. Do not assume he stands at the annex counter during an unplanned visit; his exact whereabouts, temperament, allegiance, physical description and stat block have not yet been established. Do not invent these as past player discoveries.",
                 "Present at the street-facing annex: two uniformed watchmen ({@creature Guard|XMM}), one clerk ({@creature Commoner|XMM}), six ordinary laborers including Elowen. Those are all guards assigned to this annex for the present scene. Do not summon unlisted Chapter 8 occupants as a surprise wave.",
@@ -3740,6 +3764,7 @@
               "type": "inset",
               "name": "Crown-Era Adaptation Notice — Unplayed Material",
               "entries": [
+                "{@b POST-SESSION 4 UPDATE:} Party is preparing a covert approach to rescue Elowen. Aaron's familiar is already watching overnight. Brakkus is organizing covert information-gathering under the cover of accepting Crown work, and he advises stealth. The Weavehouse debt now consists of 150 gp original debt, 200 gp administrative fees and an additional 50 gp PER DAY room/board, as stated during play. Jaroood is administrator. Do not treat the older unplayed Chapter 8 occupants or reward structure as established. The current spy arrangement and legal paperwork are not yet fixed.",
                 "This chapter retains usable locations, DM maps, NPCs, clues, encounter elements, and reward ideas from the pre-Crown reclamation outline. It has NOT yet been reconciled with the Council's completed sale of Bellweather to the Crown.",
                 "Any proposed Council contract, Council payment, Council authority, Perrin promotion to Council leadership, fixed plot sequence, or automatic level advancement written below is provisional, not current campaign canon. Choose a credible sponsor and political state when the party reaches this site; do not invent a restored Council or a predetermined royal overthrow.",
                 "Appendix I governs established facts. Preserve independent motives and genuine alternatives; do not treat the former outline as a script.",
@@ -11444,7 +11469,7 @@
               "type": "entries",
               "name": "Authority and Use",
               "entries": [
-                "This appendix is the authoritative record of what has happened at the table through Kellan's Well, plus explicitly approved future premises. If an unplayed chapter contradicts a recorded fact here, this record wins. The older chapter may still be used for its map, encounter, location, or clue structure, but its obsolete political assumptions are not facts about the current world.",
+                "This appendix is the authoritative record of what has actually happened through the played Session 4 on October 25, 2026, plus expressly labeled prepared future premises. The newer 'Established: Session 4' entry supersedes earlier pre-session playtests or planned beats wherever they conflict. Older chapters can supply map, encounter, or location scaffolding but are not facts about what has happened.",
                 "ESTABLISHED means played or explicitly decided. PREPARED means a future premise is approved but has not yet happened. PROVISIONAL means remaining design scaffolding, not fate. Do not present provisional material as something the characters have already caused or discovered.",
                 "{@b World independence.} People have jobs, families, feuds, ambitions and ordinary problems that continue whether the adventurers visit or not. Some events have no connection to Tyren, Perrin, the royal family, or the party. Do not make every clue secretly part of a single conspiracy.",
                 "{@b Player agency.} Move a clue when plausible, never move a consequence backward in time to force a conclusion. The party can outmaneuver opponents, abandon a location, negotiate, seek a different patron, or decide who deserves help."
@@ -11477,8 +11502,23 @@
             },
             {
               "type": "entries",
-              "name": "Prepared: The Changed City",
+              "name": "Established: Session 4 — Royal Takeover, Pepper's Custody and Resistance",
               "entries": [
+                "{@b Played on 2026-10-25. The actual full account appears in Chapter 6, 'Session 4 — ACTUAL TABLE EVENTS and Session 5 Launch (Authoritative)'.} All previously marked PREPARED assumptions that conflict with actual Session 4 events are now archival and superseded.",
+                "Noren Vale and his one Veteran are DEAD. Arunem bagged the decapitated Veteran corpse; a city guard confirmed the Council was gone and the bag was repeatedly slammed. Attribution of the slamming and final custody of the body were not recorded.",
+                "Pepper separated to browse, had an unsuccessful encounter with Edda Pell (The Spare Button; now spoken with an IRISH accent), and went to Koven House to report Edda. Guards found Pepper on a list, asserted the Crown held her Council-service contract, detained her and earmarked her for hard labor in the southern ruins.",
+                "Brakkus, Jarrock and Aaron located Pepper. Brakkus negotiated her release into his OWN CUSTODY by persuading royal guards, not storming Koven House. The agreement's exact paperwork and terms have not been fixed.",
+                "Bishop Brann told the party about the Council selling Bellweather and leaving; he had not taken a Crown-sale payout. He proposed the PCs appear to take Crown work and secretly inform Brakkus/Brann and the resistance. His separate preplanned Kellan's Well 300 gp handoff was not confirmed as completed in the report.",
+                "Brakkus told a LEGEND of unknown Bellweather magic capable of controlling minds, with a Dune-like quality. Its existence, location, and any connection to the takeover are unknown. Treat it as rumored history, not solved campaign cosmology.",
+                "A rescuer named 'Tulvimix' in the session report (previously prepped as Tulcornix Avemvir; NAME CONFIRMATION PENDING) convinced the party to try to free his sister-in-law Elowen. Pepper offered her money. Charges stated at the table: 150 gp initial debt + 200 gp administrative fees + 50 gp PER DAY room and board, replacing the older 150+50 prep.",
+                "Aaron's familiar is surveilling the Cardon Weavehouse/factory overnight. The party plans a rescue; Brakkus wants STEALTH to preserve their future cover as Crown-facing resistance informants. Surveillance results and the actual rescue are still unplayed."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "ARCHIVED PREP — The Changed City (Superseded by Actual Session 4)",
+              "entries": [
+                "ARCHIVED / NOT CURRENT FOR SESSION 5. These are the PRE-SESSION 4 plans and playtest decisions. The PLAYED Session 4 account above and its Chapter 6 detailed recap override conflicts (Noren's survival, Pepper's legal status, Brann's allegiances, the Weavehouse fee structure and Tulcornix/visitor timing). Keep only historical design context and independent world information that actual play has not contradicted.",
                 "Bellweather was a free city; the former Council sold its independence to a monarchy while the party was occupied. The royal rulers are comically evil in premise, but their subjects and officials treat the government as real and consequential.",
                 "Koven House is the Crown's local headquarters. Bishop Brann remains; Brakkus and Ledger House are independent. The former Council has left government in the city, so old chapters' references to the Council commissioning jobs after the takeover are no longer automatically true.",
                 "The return from Kellan's Well is a roleplay-led session without planned combat. Brakkus must sit the whole party down and ask about their backgrounds and goals; Jord and Bishop Brann participate as people with their own concerns; Tulcornix's arrival is a mandatory late-session beat. Fights only follow credible player choices and NPC responses.",
