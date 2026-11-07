@@ -98,6 +98,7 @@
           "headers": [
             "Maps (geography only)",
             "Authority / Occupation — ESTABLISHED",
+            "Jaroood — Complete NPC Dossier (DM Only, ESTABLISHED)",
             "Working Annex Design — NOT YET OBSERVED"
           ]
         },
@@ -257,7 +258,7 @@
                 "King Hendrix Stucky rules from the capital. His son Prince Reginald Stucky and Reginald's wife Princess Narcia Stucky govern Bellweather. The royals are comically entitled and cruel, but the government has real power and coherent administrators.",
                 "Koven House is the Crown's municipal headquarters and records office. Ledger House remains independent and under Brakkus Ledgerhelm. Bishop Brann stayed in Bellweather.",
                 "Cardon Weavehouse is OWNED BY THE CROWN, despite its old name. Perrin has no current ownership claim. The Crown employs a coercive indentured labor system there.",
-                "Jaroood came to Bellweather with Prince Reginald. He has COMPLETE OPERATIONAL CONTROL of the Crown-owned Weavehouse: personnel, work assignments, discipline, procedures, and debt administration. He considers debt-based slavery justified, uses it to make himself rich, fears royal displeasure and is loyal because Crown favor pays him. He PERSONALLY RECEIVES a 10% commission on each additional debt assessment imposed on each indentured servant, separate from the underlying original debt. His incentive is to increase debt, not to discharge it. Mr. Burns is the tone and voice reference (a younger version, not an assumption of frailty or incompetence). He is a HIGH ELF. His exact age and appearance remain OPEN.",
+                "He is 243 years old, lean, pale-gold-eyed and silver-blond, and wears immaculate burgundy and ivory formal clothes. Voice: a younger Mr. Burns.",
                 "Brakkus is a half-orc retired level-16 Oath of Devotion paladin of Oghma, not of any other god. His mother Elena was a librarian who taught him to read and understand people before judging them.",
                 "Bishop Brann proposed that the PCs outwardly cooperate with the Crown while secretly passing information to him and Brakkus. Opposition is beginning, not an already established spy organization.",
                 "The Radiant Well is a real magical phenomenon below the surface, relevant to the old legend Brakkus told about possible influence over minds. Its nature, access route, and any Crown connection are OPEN, not automatic campaign answers."
@@ -996,9 +997,34 @@
               "name": "Authority / Occupation — ESTABLISHED",
               "entries": [
                 "The former Cardon Weavehouse is Crown-owned; Perrin Cardon left with the Council. No outstanding Cardon claim or ownership contest exists.",
-                "Jaroood arrived with the prince and exercises COMPLETE OPERATIONAL CONTROL over the Crown-owned Weavehouse, including staffing, workers, discipline, operations, assessments and internal decisions. He regards indentured slavery as justified, enriches himself through it, is loyal to the Crown because it rewards him, and fears its displeasure. For EACH indentured worker he receives 10% of ADDITIONAL DEBT ASSESSED beyond the initial original obligation; charges inflate his earnings. He is a HIGH ELF. His age is unchosen. Voice: younger Mr. Burns (nasal, upper-class, condescending, with more vigor). Specific appearance, age and ancestry remain OPEN.",
+                "His age is 243 years. Voice: a younger, vigorous Mr. Burns (nasal, upper-class and condescending). Appearance: 5 ft. 11 in., lean, narrow-faced, pale gold eyes, silver-blond slicked-back hair, and immaculate burgundy coat over an ivory waistcoat. His exact old personal history outside of Crown administration is not established.",
                 "Elowen, Kaleb's widow, is an indentured textile worker. She wants her freedom and may speak for herself. She is not obligated to express gratitude or accept a particular solution.",
                 "The amount the party was told is 150 gp principal + 200 gp administrative charges + 50 gp per day room and board. This asserted price is not an ethical endorsement or a statement that any PC has already paid it."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Jaroood — Complete NPC Dossier (DM Only, ESTABLISHED)",
+              "entries": [
+                "{@b Identification.} Jaroood is a 243-year-old high elf, Medium Humanoid, lawful evil; his formal title is Royal Administrator of Cardon Weavehouse. He accompanied Prince Reginald from outside Bellweather. He is not Perrin Cardon's steward and has no ownership dispute to resolve.",
+                "{@b First description (read or paraphrase).} A slender high elf in a perfectly fitted burgundy coat stands behind a desk. His silver-blond hair is combed straight back from a narrow face; pale-gold eyes pass over you with brisk calculation. A heavy gold signet of the Crown sits on one long finger. He speaks in a refined, slightly nasal voice that makes even an insult sound like a courtesy.",
+                "{@b Voice and gestures.} Perform a younger and more vigorous Mr. Burns: nasal, soft, precise, delighted by profit, and condescending without shouting. He steeples his fingers when pleased, checks the edge of a ledger before replying, glances at a pocket watch when someone wastes time, and uses {@spell Prestidigitation|XPHB} to clean dust from his clothes after inspections. When royal authority is credible, he straightens and becomes swiftly deferential.",
+                "{@b Core belief.} He believes the Crown's indentured slavery is justified and worker hardship is a problem of individual indebtedness. He sincerely considers the provision of shelter, rations and supervision something for which the workers must be charged. His cruelty is casual, not theatrical rage.",
+                "{@b Motivation.} Make as much money as possible for as long as possible and remain protected by the Stucky Crown. His ambition is lasting wealth and security, not to rule Bellweather or replace the royals. He fears only the Crown's displeasure as a durable threat to his position.",
+                "{@b Authority.} Jaroood has COMPLETE OPERATIONAL CONTROL of the Crown-owned Weavehouse. He sets staffing, daily hours, work assignments, disciplinary policy, administrative charges, access to confined workers, and release procedures. Ordinary guards and clerks report to him. He can sign a discharge himself when the account is settled or when he otherwise chooses to authorize it; there is no invented offsite owner who must countersign. Actual royal orders outrank his position.",
+                "{@b Authorized commission.} He receives 10% of each ADDITIONAL debt amount ASSESSED against an indentured worker beyond the initial principal. It is an explicit part of his Crown-approved compensation, not secret embezzlement. The remaining assessed sums belong to Crown accounts. His entitlement is credited when the charge is assessed, not only when the worker pays; administrative pay is settled periodically through Crown accounting. He may propose or authorize new charges under his broad authority, but his books must account for them.",
+                "{@b Elowen example (NO RETCON OF DAY COUNT).} The party heard 150 gp original debt, 200 gp administrative fees and 50 gp per day for room/board. Her claimed outstanding balance after d charged days is 350 + 50d gp, before any actual credits or new assessed charges. Jaroood's commission credited on those additions is 20 + 5d gp. He receives no 10% commission on the original 150 gp. No number of elapsed days or additional fees has yet been established.",
+                "{@b Office routine.} At the beginning of the workday he checks admissions, overdue accounts and charge entries from his clerks. During the morning he inspects output and labor assignments, taking an interest in missed quotas. Through the afternoon he hears petitions and approves charges, transfers and discharges. Near closing he signs the day ledger and has totals prepared for the Crown. He remains in an administrative office within the existing Weavehouse layout; its exact room should be keyed when the map is reconciled. He is not automatically visible at the public counter or outside overnight.",
+                "{@b Private possessions.} He carries a signet ring used on official release papers, a gold pocket watch, and an immaculate personal pocket ledger with commission calculations. The Crown's labor ledger is an official work record held by the clerk, separate from his own convenient private notes. His clothes and these objects are not magic items; no hidden treasure cache is introduced.",
+                "{@b What he knows.} He knows how the annex works, the identities of workers admitted under his control, their accounts, and the authority delegated to him by the Crown. He does not automatically know the party's covert role, Aaron's familiar, Brakkus's private conversations, the Crown's unexplained wider plans or the Radiant Well.",
+                "{@b Workers and guards.} Workers receive directives through foremen or clerks as appropriate, with the two proposed annex Guards enforcing confinement rather than attacking ordinary visitors. He is civil to guests who can pay, useful to powerful people, and dismissive of workers. He relies on Crown authority and procedural control, not personal combat prowess.",
+                "{@b When approached about Elowen.} He looks up her account and quotes the amount honestly recorded at that moment; no surprise mandatory release fee is imposed just to thwart a player solution. He prefers prolonging indebtedness but will consider immediate full payment or terms that earn him profit. Because he controls discharge procedures, he may sign a legitimate release himself. Elowen still speaks for herself.",
+                "{@b Bargaining.} A plea to his conscience will not sway him. An offer that improves his income or protects him from blame may. Straightforward public business needs no roll. A plausible claim of royal authority or forged release warrants scrutiny, with a suggested DC 15 Charisma (Deception) check if a roll is needed; corroborating credible documents or good preparation can make the check easier or unnecessary. Real orders from the prince supersede him.",
+                "{@b How to pressure him.} Revealing his 10% commission alone does NOT threaten him: the Crown authorizes it. Evidence that he falsely reports Crown proceeds, harms an important royal interest, or knowingly disobeys a valid order WOULD endanger his status, but none of those forms of misconduct are pre-established discoveries. Players must earn or create leverage.",
+                "{@b Under violence.} Jaroood is an administrator, not a heroic duelist. He calls on the two existing annex Guards if present, retreats, and uses his high elf {@spell Misty Step|XPHB} to escape an immediate physical threat if possible. Do not invent additional guards or a hidden strike team. He can surrender, bargain or be overcome. Witnesses and paperwork, not an infinite combat roster, determine later Crown consequences.",
+                "{@b On success or failure.} If the party gains Elowen's lawful release, he makes the entry, sends the clerk to update records, and resumes profitable operations. If she is secretly extracted, he first reconciles headcount and records, then pursues credible institutional reporting; he is not omniscient. His concern is protecting himself and his earnings.",
+                "{@b Suggested lines.} 'Slavery? No, no. A structured opportunity to settle one's obligations.' / 'You cannot expect accommodations to pay for themselves.' / 'How gratifying. Another account adjusted upward.' / 'His Highness has ordered it? Naturally, that changes everything.'",
+                "{@b At-the-table stat block.} {@creature Jaroood|NCFA} is based on the 2024 Noble in physical threat level, with high elf magic. His defense is the institution. See his dedicated monster entry; he is not designed as a boss encounter."
               ]
             },
             {
@@ -1912,8 +1938,11 @@
               "name": "Royal Administration",
               "entries": [
                 "King Hendrix Stucky reigns from outside Bellweather. Prince Reginald Stucky governs with his wife Princess Narcia Stucky. Their choices have consequences even if their manners are ridiculous.",
-                "Jaroood is a HIGH ELF and speaks like a younger, more vigorous Mr. Burns. He came with the prince and has complete operational control of the Crown-owned Weavehouse. He believes debt slavery justified; he personally receives a 10% commission on EVERY additional debt assessment on an indentured servant, giving him direct incentive to multiply fees. He fears the Crown and is loyal because it enriches him.",
-                "Perrin Cardon departed with the former Council and has no continuing ownership of the Weavehouse."
+                "Jaroood is a 243-year-old HIGH ELF and speaks",
+                "Perrin Cardon departed with the former Council and has no continuing ownership of the Weavehouse.",
+                "243-year-old high elf, 5 ft. 11 in., slender, pale gold eyes, silver-blond slicked-back hair, burgundy coat, ivory waistcoat and Crown signet. Younger, more vigorous Mr. Burns voice; steeples fingers and uses Prestidigitation to clean lint after inspections.",
+                "He controls personnel, discipline, assignments, assessments, and releases at the Crown-owned Weavehouse. He receives a Crown-authorized 10% commission on debt ADDED beyond original principal for every worker, credited as assessed, not based on actual repayment. Elowen's stated 200 gp fee yields him 20 gp; every 50 gp/day charge yields 5 gp per day. No days assumed.",
+                "High elf magic and combat stats are in {@creature Jaroood|NCFA}. He is an administrator, and his commission is not illicit from the Crown's viewpoint; disclosing it alone cannot blackmail him."
               ]
             },
             {
@@ -3894,6 +3923,108 @@
           "Brakkus is a roughly forty-eight-year-old half-orc, retired adventurer and mercenary, and level 16 Oath of Devotion paladin of Oghma. He owns Ledger House in Bellweather and maintains it as a refuge.",
           "Brakkus is a home-base NPC, not a companion character. His default priorities are protect civilians, stabilize downed allies, contain the threat, then defeat the aggressor.",
           "Challenge Rating. The listed CR is provided for encounter-building purposes; Brakkus is a 16th-level paladin."
+        ]
+      }
+    },
+    {
+      "name": "Jaroood",
+      "source": "NCFA",
+      "size": [
+        "M"
+      ],
+      "type": {
+        "type": "humanoid",
+        "tags": [
+          "elf",
+          "high elf"
+        ]
+      },
+      "alignment": [
+        "L",
+        "E"
+      ],
+      "ac": [
+        {
+          "ac": 15,
+          "from": [
+            "Concealed breastplate under formal attire"
+          ]
+        }
+      ],
+      "hp": {
+        "average": 9,
+        "formula": "2d8"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 10,
+      "dex": 12,
+      "con": 10,
+      "int": 16,
+      "wis": 14,
+      "cha": 16,
+      "skill": {
+        "deception": "+5",
+        "insight": "+4",
+        "investigation": "+5",
+        "perception": "+4",
+        "persuasion": "+5"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 14,
+      "languages": [
+        "Common",
+        "Elvish"
+      ],
+      "cr": "1/8",
+      "pbNote": "+2",
+      "trait": [
+        {
+          "name": "Fey Ancestry",
+          "entries": [
+            "Jaroood has advantage on saving throws to avoid or end the {@condition charmed} condition."
+          ]
+        },
+        {
+          "name": "Trance",
+          "entries": [
+            "Jaroood does not need to sleep; magic cannot put him to sleep, and he can finish a Long Rest with 4 hours of trance."
+          ]
+        },
+        {
+          "name": "High Elf Magic (Intelligence; spell save DC 13)",
+          "entries": [
+            "Jaroood can cast {@spell Prestidigitation|XPHB} at will. He can cast {@spell Detect Magic|XPHB} and {@spell Misty Step|XPHB} once each without a spell slot, regaining each use when he finishes a Long Rest."
+          ]
+        },
+        {
+          "name": "Crown Administrator",
+          "entries": [
+            "Jaroood has operational authority over Cardon Weavehouse's employees, work orders, assessments, and releases. This authority is legal and social, not mind control or a combat ability."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Rapier",
+          "entries": [
+            "{@atk m} {@hit 3} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d8 + 1}) piercing damage."
+          ]
+        }
+      ],
+      "gear": [
+        "breastplate",
+        "rapier"
+      ],
+      "environment": [
+        "urban"
+      ],
+      "fluff": {
+        "entries": [
+          "Jaroood is a wealthy, royal-appointed high elf administrator of the Crown's Cardon Weavehouse, with complete operational authority. He believes forced indenture is justified and receives 10% of new debt assessed against each worker. He is brave in the safety of his office and deferential to the Crown, not an adventuring combatant."
         ]
       }
     }
