@@ -100,13 +100,11 @@
             "Authority / Occupation — ESTABLISHED",
             "Jaroood — Complete NPC Dossier (DM Only, ESTABLISHED)",
             "Working Annex Design — NOT YET OBSERVED",
-            "The Quiet Ledger — Encounter Objective and Rules",
-            "Night Routine and Aaron's Familiar",
-            "Map Key — Reuse the Approved Weavehouse DM and Player Maps",
-            "Entry and the Stealth Reward",
-            "Combat Tactics and Morale — Fight Can Stay in Room 11",
-            "Release, Escape and Crown Consequences",
-            "Cold-DM Test Scenarios — First Pass"
+            "The Quiet Ledger — Revised Enchanted Security (Prepared)",
+            "Construct Schedule, Witnesses and Familiar Recon (Prepared)",
+            "Approved Map Key and Stealth-First Approach (Prepared)",
+            "Fight Tactics and Control Objects (Prepared)",
+            "Elowen's Exit, Royal Investigation and Cold Checks (Prepared)"
           ]
         },
         {
@@ -1028,7 +1026,7 @@
                 "{@b When approached about Elowen.} He looks up her account and quotes the amount honestly recorded at that moment; no surprise mandatory release fee is imposed just to thwart a player solution. He prefers prolonging indebtedness but will consider immediate full payment or terms that earn him profit. Because he controls discharge procedures, he may sign a legitimate release himself. Elowen still speaks for herself.",
                 "{@b Bargaining.} A plea to his conscience will not sway him. An offer that improves his income or protects him from blame may. Straightforward public business needs no roll. A plausible claim of royal authority or forged release warrants scrutiny, with a suggested DC 15 Charisma (Deception) check if a roll is needed; corroborating credible documents or good preparation can make the check easier or unnecessary. Real orders from the prince supersede him.",
                 "{@b How to pressure him.} Revealing his 10% commission alone does NOT threaten him: the Crown authorizes it. Evidence that he falsely reports Crown proceeds, harms an important royal interest, or knowingly disobeys a valid order WOULD endanger his status, but none of those forms of misconduct are pre-established discoveries. Players must earn or create leverage.",
-                "{@b Under violence.} Jaroood is an administrator, not a heroic duelist. He calls on the two existing veteran Crown guards if present, retreats, and uses his high elf {@spell Misty Step|XPHB} to escape an immediate physical threat if possible. Do not invent additional guards or a hidden strike team. He can surrender, bargain or be overcome. Witnesses and paperwork, not an infinite combat roster, determine later Crown consequences.",
+                "{@b Under violence.} Jaroood is an administrator, not a heroic duelist. He calls on the two animated Crown enforcers if present, retreats, and uses his high elf {@spell Misty Step|XPHB} to escape an immediate physical threat if possible. Do not invent additional guards or a hidden strike team. He can surrender, bargain or be overcome. Witnesses and paperwork, not an infinite combat roster, determine later Crown consequences.",
                 "{@b On success or failure.} If the party gains Elowen's lawful release, he makes the entry, sends the clerk to update records, and resumes profitable operations. If she is secretly extracted, he first reconciles headcount and records, then pursues credible institutional reporting; he is not omniscient. His concern is protecting himself and his earnings.",
                 "{@b Suggested lines.} 'Slavery? No, no. A structured opportunity to settle one's obligations.' / 'You cannot expect accommodations to pay for themselves.' / 'How gratifying. Another account adjusted upward.' / 'His Highness has ordered it? Naturally, that changes everything.'",
                 "{@b At-the-table stat block.} {@creature Jaroood|NCFA} is based on the 2024 Noble in physical threat level, with high elf magic. His defense is the institution. See his dedicated monster entry; he is not designed as a boss encounter."
@@ -1039,7 +1037,7 @@
               "name": "Working Annex Design — NOT YET OBSERVED",
               "entries": [
                 "Previous preparation identified a public-facing loading yard and counter, staff entrance, cloth-sorting room and ledger desk. Treat these as proposed working spaces until the Session 5 build reconciles them to the retained map.",
-                "The fixed annex personnel remain EXACTLY two Crown guards, one clerk, and six indentured workers including Elowen, under Jaroood. The two guards are the ones now defined for the night-rescue encounter: competent Crown veterans using the {@creature Warrior Veteran|XMM} 2024 stat block (CR 3 each), not additional hidden guards. The fixed two-guard count is not increased. The clerk and workers are ordinary noncombatants. Aaron's familiar has not automatically observed internal conditions.",
+                "The two security positions are now filled by magical factory constructs, NOT the unplayed Warrior Veteran proposal: {@creature Brass Shear|NCFA} and {@creature Thread Collector|NCFA}. One clerk and six ordinary workers including Elowen remain. Exactly TWO immediate security enforcers; no additional humanoid guards. Aaron's familiar has not yet reported what it sees.",
                 "Develop the clerks, guard orders, workers, schedules, entry controls, records, financial procedures and forged/legitimate release process. Jaroood's COMPLETE operational authority and 10% commission on additional debt assessments are established; do not undermine these by inserting a competing owner or supervisor. Set concrete DCs and encounter information in Session 5 prep.",
                 "A clever peaceful plan can work. Guards should not assault ordinary customers. If the party attacks, response must come from real witnesses and finite resources, not surprise former Chapter 8 enemies.",
                 "The deeper building remains available geography, but all old monsters, wealth caches, ownership records and automatic plot outcomes are removed."
@@ -1047,92 +1045,55 @@
             },
             {
               "type": "entries",
-              "name": "The Quiet Ledger — Encounter Objective and Rules",
+              "name": "The Quiet Ledger — Revised Enchanted Security (Prepared)",
               "entries": [
-                "{@b Status: PREPARED FOR SESSION 5, NOT YET PLAYED.} The site operates whether the party intervenes or not. Reward stealth with control of where conflict occurs and whether strangers can identify the intruders. Do not guarantee a fight or insist Jaroood survive. Aaron may attempt to kill Jaroood; that is a live choice with traceable consequences, not a scripted villain escape.",
-                "{@b Recommended party:} four level-4 PCs (Jarrock, Aaron, Arunem, Pepper). Brakkus and Brann do not join the raid. The PCs have already been discussing covert rescue; Aaron's familiar is watching the site overnight.",
-                "{@b Main opponents:} two existing Crown guards use the 2024 {@creature Warrior Veteran|XMM} stat block, each AC 17, HP 65, greatsword two attacks +5 (10 slashing on a hit), heavy crossbow two attacks +3 (12 piercing on a hit), and Parry +2 AC as a reaction against a melee hit. Both are CR 3 / 700 XP. {@creature Jaroood|NCFA} is AC 15, HP 9, CR 1/8 / 25 XP; he has Misty Step once per Long Rest, cannot teleport through a solid closed door without seeing the destination, and is not plot-armored. Combined XP 1,425: below the 2024 moderate 1,500 XP threshold for four level-4 PCs, above low 1,000; this is a meaningful but not guaranteed-deadly fight.",
-                "{@b Distinct guards.} Warden Halven Rusk: broad human with a bent nose, scarred jaw and polished royal splint, direct and aggressive; blocks access to Jaroood. Warden Sella Varn: compact dwarf, close-cropped hair, chain-linked duty keys, precise and unsentimental; prioritizes protecting records and signaling an alarm. Both are Crown veterans who follow orders for pay, not mindless assassins. Their competence helps explain why Jaroood feels safe with just two.",
-                "{@b Fixed roster.} There are NO other armed occupants on site. One clerk and six ordinary workers including Elowen are elsewhere in the building according to the hour. Do not import retired Chapter 8 occupants, guards from Koven House, reserve squads, old monster stat blocks or silent reinforcements.",
-                "{@b Possible outcomes.} Quietly extract Elowen without a fight; negotiate or purchase a signed discharge; use deception or forgery; take Jaroood hostage; isolate and defeat the two guards; kill Jaroood; withdraw if the situation turns bad. No outcome is forced."
+                "PREPARED, not played: The Weavehouse has exactly TWO animated security enforcers, one clerk, and six indentured workers including Elowen. The proposed humanoid veterans are retired, not supplemental. The two constructs are factory security devices paid for by the Crown. Jaroood enjoys enforcers who never require a salary, food, or leave. No connection to the Radiant Well.",
+                "BRASS SHEAR: a heavy Medium mechanical enforcer made of brass looms and giant tailoring scissors. AC 16; 65 HP; Speed 25 ft.; two Shears attacks +5 for 2d6+3 slashing each. Against a target Restrained by its partner it deals an extra 1d6 slashing on one hit per turn. It blocks routes to Jaroood rather than attacking workers. The device can be sabotaged, losing this bonus damage and reducing Speed to 15 ft.",
+                "THREAD COLLECTOR: a Medium enchanted mannequin carrying spools of bright thread and steel needles. AC 15; 58 HP; Speed 30 ft.; two Needle attacks +5 for 1d8+3 piercing each. Bonus action Binding Reel (Recharge 5–6): DC 13 Dexterity save or Restrained, only one target at a time, within 30 ft. A character can escape with an action and DC 13 Athletics or Acrobatics check, or an ally can cut the 5-HP cord (AC 12). On later turns the Collector can reel the captive 10 ft. toward itself (DC 13 Strength save to resist). A sabotaged spool disables Binding Reel and Reel In.",
+                "JAROOOD: AC 15, 9 HP, Misty Step within line of sight; no secret increase or mandatory escape. Aaron may kill him. The constructs continue following their last protective orders if he is killed.",
+                "Encounter budget: provisional CR 3 for each custom Construct (700 XP each) plus Jaroood CR 1/8 (25 XP) = 1,425 XP. The 2024 Moderate budget for four level-4 PCs is 1,500. Restraint synergy adds danger; confirm against the actual character sheets before declaring balance proven.",
+                "Other paths remain legitimate: negotiation, payment, forged paperwork, social leverage, burglary, taking Jaroood captive, stealthy extraction or simply leaving. Combat is not forced."
               ]
             },
             {
               "type": "entries",
-              "name": "Night Routine and Aaron's Familiar",
+              "name": "Construct Schedule, Witnesses and Familiar Recon (Prepared)",
               "entries": [
-                "{@b Setting the clock.} Textile work and loading occur during the day, not on an invisible perpetual night shift. At 6:00 PM the six workers are checked into locked quarters; at 6:30 PM the one counter clerk closes the public books and departs via the ordinary staff exit; between 7:00 and 8:00 PM Jaroood reconciles commissions in the private accounts room, attended by the same two veteran guards. Thereafter he goes to his adjacent private office/quarters or leaves by whatever known route the party actually observes. These are routine times, not a magical schedule.",
-                "{@b The workers.} Elowen and five other indentured workers sleep in barracks, not in the record room. Workers may talk to visitors during work hours if guards permit, can be persuaded to cooperate, and have their own interest in avoiding reprisals. They are not an offscreen hostile mob and do not have to join the party's mission.",
-                "{@b Familiar observations from outside only.} From an ordinary exterior perch near the loading yard, it can see the clerk leave around 6:30, the two guards rotate between public entrance and interior during closing, the yard quiet after sundown, and a light maintained in the central accounting area for roughly an hour. It can identify possible exterior entrances and obvious doors/windows that are in its actual line of sight, but cannot know the office occupants, lock internals, interior door routes, room labels, or guard statistics.",
-                "{@b Familiar limits.} Confirm the familiar's specific form, senses and communication method at the table. If it changed perch, went inside, flew past windows, or sent telepathic reports, describe only what its capabilities, vantage and timing allow. A stealthy approach by the familiar can reveal additional information after appropriate adjudication.",
-                "{@b Who knows what?} Jaroood and the guards know they are closing accounts. The clerk knows there was a public shift and the overseer stayed late. Workers know the bell sounds when there's trouble, but do not know the PCs' intentions. No enemy starts aware of Aaron's familiar just because the DM is aware."
+                "These two obviously magical security units patrol publicly during the workday, so PCs who watch the site can learn what they look like. Six workers including Elowen are locked into Room 18 after shift. The one clerk leaves about 6:30 PM.",
+                "Between approximately 6:30 and 7 PM both enforcers sit briefly in an exposed winding rack in Room 15 for maintenance before accompanying Jaroood into the Room 11 accounts chamber for his approximately 7–8 PM ledger review. This is a predictable work routine, not a scripted inevitability.",
+                "Aaron's familiar has not reported yet. With actual exterior sightlines it can see mechanical guards, exterior entrances, the departing clerk and the evening accounts light; it cannot know exact abilities, internal routes, room numbers or hidden documents without entering. Adjudicate its form, senses and actual vantage point.",
+                "Neither machine is sentient, able to identify a culprit to future investigators, or equipped with magical video surveillance. The clerk, workers and bystanders are people who can testify to what they genuinely observed."
               ]
             },
             {
               "type": "entries",
-              "name": "Map Key — Reuse the Approved Weavehouse DM and Player Maps",
+              "name": "Approved Map Key and Stealth-First Approach (Prepared)",
               "entries": [
-                "{@b Never redraw the site's outside shape.} The approved maps are in this chapter; they use printed numbered rooms and a ten-foot-square reference. The following re-keying is Crown-era facility function, not a claim that the retired adventure occurred.",
-                "{@b Room 11 — Private accounting chamber / main tactical fight.} The centrally located interior chamber serves as Jaroood's ledger audit room. Use its EXISTING map doorways; do not add a new passage or exterior window. Strong fire-resistant, iron-banded interior doors were installed as part of the Crown's linen-fire precautions. A heavy desk and two accounting tables offer half cover; a records cabinet and bundled cloth rolls create limited cover/difficult terrain where depicted or placed. There is no hidden guard room or trap under the floor.",
-                "{@b Room 15 — Main production hall.} Tall looms and work frames operate by day; after shift they stand still. Workers are absent after the dormitory check. Fight noise heard here is muted if room 11's fire doors are closed, but open doors or a loud magical explosion can carry.",
-                "{@b Room 19 — Cloth sorting / finishing floor.} Ordinary tables and cloth lots. By day Elowen works with the other workers in this part of production and can potentially be spoken to. At night the room is unoccupied unless the party draws someone there.",
-                "{@b Room 18 — Locked worker sleeping room.} The six workers, including Elowen, sleep here after the 6 PM count. The existing map boundaries/doorways control access. A clerk or guard carries a key; do not invent bars, a new shaft or a passage through the wall. Workers can identify one another and respond to a rescue offer.",
-                "{@b Room 20 — Jaroood's small private office.} Records and a discreet coat rack, private correspondence and commission copies, but no secret treasure pile. His royal signet, personal pocket ledger and key ring travel with him unless he deliberately leaves them here. If players search, record exactly where he actually carried objects.",
-                "{@b Elsewhere in numbered rooms.} Leave the remaining old numbered areas as ordinary work rooms, bales, stores, washrooms, staff passages and service spaces consistent with visible architecture. They are not secret enemies, extra prisoners or mandatory puzzle rooms. If the PCs explore a particular numbered room, assign its mundane function based on existing furnishings and note it in the DM record; nothing is locked until established at the table.",
-                "{@b Table layout.} For tactical combat draw the room 11 outline on the 36 x 24 in. one-inch mat at the existing map's proportions, translating 10-foot printed squares to two 5-foot tabletop squares. Include the two mapped room exits, desk, cabinets, records cabinet, cloth roll and any guards' actual positions. Do not place abstract walls or a phantom side passage."
+                "Use the EXISTING numbered Weavehouse map and doors. Room 11 is Jaroood's private accounts chamber with heavy desk, shelves, two mapped iron-banded doors and an ordinary alarm cord; Room 15 is the production hall with the exposed maintenance rack; Room 18 contains locked worker sleeping quarters; Room 19 is the cloth sorting floor where Elowen works by day; Room 20 is Jaroood's private office. Remaining rooms stay mundane work/service spaces until the PCs encounter them.",
+                "Quiet after-hours service entrance: DC 15 Dexterity (Thieves' Tools). Plausible disguise for a guarded daytime delivery: DC 13 Charisma (Deception) when a roll is actually needed. No Stealth check if nobody could detect the character.",
+                "During the accessible maintenance window a PC can reach the Room 15 rack and sabotage ONE construct per attempt, requiring DC 15 Dexterity (Thieves' Tools) or DC 14 Intelligence (Arcana). Collector sabotage disables its Binding Reel and Reel In for the encounter but it still fights with needles. Shear sabotage lowers Speed to 15 and removes extra damage against Restrained targets but it still uses its blades. Investigating the rack reveals these parts on DC 13 Intelligence (Investigation or Arcana) or from a clear clever inspection. Failure makes an audible mechanical sound that a nearby machine can investigate along the actual map, not a citywide automatic alarm.",
+                "Room 11's existing bell cord: DC 13 Dexterity (Thieves' Tools) to disable quietly; in combat a creature adjacent can sever it with an action, or target it at AC 12, 5 HP. Door bars take one action from inside. Locked doors DC 15 Thieves' Tools; force DC 20 Athletics; destroy AC 15, 18 HP. Doors muffle ordinary struggle but cannot contain a thunderous spell or obvious shouting through an open passage.",
+                "Stealth rewards: location choice, sabotage of combat abilities, alarm control, control of witness access and genuinely unaware enemies taking Disadvantage on initiative under the 2024 surprise rule. Do not give a separate surprise round."
               ]
             },
             {
               "type": "entries",
-              "name": "Entry and the Stealth Reward",
+              "name": "Fight Tactics and Control Objects (Prepared)",
               "entries": [
-                "{@b Public daytime route.} A reasonable inquiry at the ordinary public counter succeeds without a roll. The clerk may record names for an official appointment or discharge application; if the party gives their real names, that is a genuine investigative trail. Appeal or payment is possible without any combat.",
-                "{@b Quiet after-hours route.} A side service door near the existing loading access is locked after shift, DC 15 Dexterity (Thieves' Tools) to open quietly. A credible delivery or employee disguise may substitute DC 13 Charisma (Deception) against a person actually present; don't roll an unobserved disguise against nobody. Exterior guards are not simultaneously patrolling if both are with Jaroood inside during the commission review.",
-                "{@b Interior approach.} Quiet movement through the empty textile hall needs no check if nobody can hear or see it. If one of the two guards is moving through a visible hall before 7 PM, use DC 13 Dexterity (Stealth), or resolve against the creature's actual Passive Perception 12 if more appropriate. A failed check creates a specific complication (a guard investigates, sees a shadow, or takes a position), not a magical building-wide alarm.",
-                "{@b Alarm to disable.} The accounts chamber has one brass pull-cord that rings a loud signal bell in the loading yard. PCs can cut or detach it outside combat with access and a sensible tool; if careful tool work is needed use DC 13 Dexterity (Thieves' Tools), with success disabling the bell until repaired. In combat a creature adjacent to the cord can use an action to cut, tear or jam it; AC 12, 5 HP for the exposed cord. Destroying it is not a magical Silence spell and a person can still yell.",
-                "{@b Doors to contain the fight.} The two existing room 11 doors are thick and can be barred from the inside if the party has gained access (one action per door; no check if unobstructed). Opening a locked door without a key: DC 15 Dexterity (Thieves' Tools); forcing the iron-banded door: DC 20 Strength (Athletics); destroying it: AC 15, 18 HP, obvious noise. These door figures are encounter rulings, not official generic door statistics.",
-                "{@b Real reward.} Successful infiltration allows the PCs to pick their entrance and starting positions, cut the bell wire, close/secure fire doors, know the guards' whereabouts, and avoid a public ledger recording their presence. When enemies genuinely start unaware, use the 2024 surprise rule (disadvantage on initiative), NOT an automatic extra surprise round. The party can still choose not to start a fight.",
-                "{@b No impossible lockdown.} The room is well isolated, not magically soundproof. A shouted alarm through an open door, a shattered door, Shatter or similarly loud magic, a running witness or the bell can draw attention. Misty Step requires a visible destination, so Jaroood cannot teleport through a completely solid closed door he cannot see past."
+                "The Thread Collector initially targets a PC who can be pulled toward the Brass Shear. It cannot bind more than one target at a time. Destroying the cord (AC 12, 5 HP), escaping with an action, or destroying the Collector ends the Restrained condition. The Brass Shear closes to make two strong melee attacks and uses its one-per-turn additional slashing damage against restrained opponents. The devices can be separated by positioning, obstacles, spells or clever attacks.",
+                "A construct can be countermanded briefly: a creature actually holding Jaroood's royal signet may use an action and a DC 15 Intelligence (Arcana) check to make ONE construct pause for one round. Jaroood or a valid competing command can reactivate it. This is not an unlimited remote control spell.",
+                "Jaroood can use Misty Step only to a space he can see. At 9 HP, one attack might kill him. Let that happen. The constructs follow standing defense orders and do not surrender out of fear; they cannot magically call in unseen guards.",
+                "Two constructs are the complete immediate security opposition. No new combatants arrive from retired scenario descriptions. Desk, cabinets and bales provide ordinary cover and can obstruct routes. Fighting is confined only if the actual alarm and doors are controlled; silence is not automatic."
               ]
             },
             {
               "type": "entries",
-              "name": "Combat Tactics and Morale — Fight Can Stay in Room 11",
+              "name": "Elowen's Exit, Royal Investigation and Cold Checks (Prepared)",
               "entries": [
-                "{@b Trigger.} Roll initiative only when a PC or NPC starts overt hostilities. A public meeting or quiet infiltration does not automatically spawn an encounter. Jaroood need not be the first person to spot the party.",
-                "{@b If alerted before containment.} Jaroood says 'Wardens, remove these people.' Halven protects him and tries to push attackers away; Sella goes for the bell if the cord is functional, using an action. Jaroood moves behind furniture, uses Misty Step to a destination he can see if threatened, and tries to reach a real exit. If he escapes, follow the real mapped route: there is no teleportation through opaque walls.",
-                "{@b If caught off guard in a locked room.} Both wardens react to a life-threatening attack, defend Jaroood or themselves and fight effectively. Halven presses into melee to protect him; Sella uses greatsword or heavy crossbow tactically according to distance and line of sight. Both have 2024 Warrior Veteran Parry (+2 AC against one melee hit). If the alarm cable was cut, the room stays locally contained unless someone opens or breaks a door or emits conspicuous noise.",
-                "{@b Jaroood at 9 HP.} A single plausible attack may kill him. Never silently add HP, a hidden bodyguard, counterspell, a contingency spell, or extra divine escape because Aaron chose to kill him. If he survives a round, Misty Step is a legitimate NPC option and may only move him to a visible unoccupied space within its rules.",
-                "{@b Guard surrender.} They are trained people, not death cultists. A surviving warden may yield when disarmed, pinned, hopelessly outnumbered, or after the other falls, based on circumstances. A survivor who saw recognizable faces will likely report later unless there is a credible reason not to; magical memory loss or enforced loyalty is not assumed.",
-                "{@b No perfect evidence eraser.} Killing Jaroood or incapacitating guards does not erase worker rosters, outstanding debt, a dead body or any clerk who saw visitors earlier. Stealth contains an immediate encounter; it does not erase all future investigation.",
-                "{@b Other approaches.} Intimidation, capture, forged transfers, surrender, negotiated discharge, and retreat remain live options. The party need not kill anyone to free Elowen. However Aaron can kill Jaroood if he reaches and defeats him."
-              ]
-            },
-            {
-              "type": "entries",
-              "name": "Release, Escape and Crown Consequences",
-              "entries": [
-                "{@b Release mechanism.} Jaroood can sign an official discharge himself. The clerk's ledger lists the claimed account, and a sealed release note plus the worker's entry struck through is the ordinary administrative proof. A forged or coerced note can get Elowen past someone who believes it; audit consequences depend on its quality and later evidence.",
-                "{@b Physical extraction.} A key on a real officer or clerk can release the workers' room; force or magic can also open it. Elowen may leave willingly and need not bring all other workers. The other five can be asked what they want; they are neither obligated to help nor automatic hostile witnesses.",
-                "{@b The Crown investigates a dead administrator.} This is a murder of a royal official, not a harmless incident. Officials will eventually notice his death and Elowen's disappearance. The Crown does NOT automatically know the PCs did it. It can infer links through actual witnesses, reported names, signet or ledger irregularities, distinctive faces or magic, access records, tracks and plausible testimony.",
-                "{@b Contained-and-unidentified outcome.} If the party enters unseen, leaves no identifiable surviving witness, keeps damaging sound inside, and does not leave distinct clues, the Crown knows there was a crime but does not have evidence to name the party. It may investigate without issuing a warrant against them. Continue their covert Crown-facing cover unless later evidence changes that.",
-                "{@b Uncontained / identified outcome.} If the clerk logged their names, workers or guards saw their faces, a soldier escaped into the street, or investigators can connect credible independent evidence, the Crown may identify or publicly accuse them. Consequences follow what was actually observed and should not appear retroactively.",
-                "{@b Known associations are leads, not proof.} Tulcornix sought Pepper about Elowen at Ledger House. Investigators might eventually interview associates, and Elowen's absence is itself a lead. Even without an eyewitness the party is not automatically free of suspicion; suspicion and a public wanted notice are distinct.",
-                "{@b Cleanup is not foolproof.} Destroying the ledger can complicate records but also creates obvious tampering and may harm confined workers. Staging a factory fire risks people and property and is not required for a clean stealth success. Forged documents can be audited. Avoid automatic exoneration from merely hiding bodies.",
-                "{@b If the party retreats or changes plans.} Jaroood continues charging workers, real guards and staff adjust to what they know, Elowen remains confined unless actually released, and the outside world continues operating."
-              ]
-            },
-            {
-              "type": "entries",
-              "name": "Cold-DM Test Scenarios — First Pass",
-              "entries": [
-                "{@b 1. Successful night infiltration.} Familiar observes exterior routine, party enters after clerk departs, disables bell, bars room 11 doors, and attacks. Combat has exactly two veteran guards and Jaroood. If Aaron kills Jaroood, let it stand. With no recognizable witnesses, eventual royal investigation has no automatic PC names. Reward achieved: tactical control and plausible anonymity.",
-                "{@b 2. Direct assault at the public counter.} Clerk and workers see PCs, two veterans move to protect Jaroood, alarm can sound. Even if PCs defeat them, eyewitnesses and recorded arrivals make continued undercover Crown work much harder. Do not introduce imaginary guard waves merely to punish boldness.",
-                "{@b 3. Negotiation / release purchase.} The group can potentially pay, bargain, forge authority or persuade Jaroood to sign a discharge. A successful plan without combat is legitimate. His greed and full authority make this possible.",
-                "{@b 4. Small-team split.} If only Aaron and Pepper enter the accounts room while Jarrock and Arunem stay with the workers, two veteran guards are dangerous; do not lower HP magically. Give accurately known corridors and audible/magical communication paths for the separated PCs to join if events permit.",
-                "{@b 5. Jaroood survives initial hit.} He tries Misty Step within a visible room and heads for an actual open exit. If doors are sealed and he has no line of sight beyond them, he cannot teleport to an unseen exterior. If killed, no replacement villain inherits his role in the same scene.",
-                "{@b 6. Knocked-out guard later reports.} Melee attackers may choose to knock out instead of kill under 2024 rules, but an unconscious guard can wake or be revived and identify them if faces were visible. Disguises, missing identification and other facts determine what he can honestly report.",
-                "{@b Balance check.} Two 2024 Warrior Veterans (700 XP each) and Jaroood (25 XP) = 1,425 XP, between four level-4 Low (1,000) and Moderate (1,500) budgets. Strong focus fire can kill Jaroood immediately; veterans have AC 17/65 HP each and two strong attacks each, so the room fight still has teeth. Exact four-PC damage, spell resources and AC/HP have not been verified from current character sheets; these cold runs are logic/contingency checks, not a character-sheet-grounded mechanical simulation."
+                "Jaroood can sign a legitimate discharge. Elowen's quote remains 150 gp original debt + 200 gp administrative charges + 50 gp per day board. His 10% commission on ADDITIONAL assessed debt still applies. No payment or release has occurred.",
+                "A dead administrator and destroyed costly constructs cause a royal investigation. Neither construct can testify or record assailants, so the Crown needs living witnesses, documents, suspicious damage, tracks or other credible evidence to identify the party. It may suspect someone linked to Elowen, but no guaranteed wanted poster appears merely because Jaroood dies.",
+                "TEST A, prepared infiltration: disable Thread Collector binding, disconnect alarm, close accounting doors; fight is still dangerous but control is reduced and the Crown has no automatic culprit. TEST B, frontal assault: intact restraints pull PCs toward the Shear, and a clerk or workers may see faces. TEST C, split party: two PCs confronting both machines is especially risky; don't adjust HP secretly. TEST D, Aaron kills Jaroood immediately: he remains dead; machines continue their orders without bonus enemies. TEST E, nonviolent discharge: official papers can work. TEST F, later investigation: follow real evidence, not omniscience.",
+                "These are logic checks, not a statistical playtest of the exact current PC sheets. The new mechanics are provisional and should be tested with the party's actual combat capabilities."
               ]
             }
           ]
@@ -4124,6 +4085,174 @@
           "Jaroood is a wealthy, royal-appointed high elf administrator of the Crown's Cardon Weavehouse, with complete operational authority. He believes forced indenture is justified and receives 10% of new debt assessed against each worker. He is brave in the safety of his office and deferential to the Crown, not an adventuring combatant."
         ]
       }
+    },
+    {
+      "name": "Brass Shear",
+      "source": "NCFA",
+      "size": [
+        "M"
+      ],
+      "type": "construct",
+      "alignment": [
+        "U"
+      ],
+      "ac": [
+        16
+      ],
+      "hp": {
+        "average": 65,
+        "formula": "10d8 + 20"
+      },
+      "speed": {
+        "walk": 25
+      },
+      "str": 16,
+      "dex": 10,
+      "con": 14,
+      "int": 3,
+      "wis": 11,
+      "cha": 3,
+      "immune": [
+        "poison"
+      ],
+      "conditionImmune": [
+        "exhaustion",
+        "poisoned"
+      ],
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 10,
+      "languages": [
+        "understands Common but can't speak"
+      ],
+      "cr": "3",
+      "pbNote": "+2",
+      "trait": [
+        {
+          "name": "Crown-Animated Factory Enforcer",
+          "entries": [
+            "A Medium Construct built as a labor enforcer. It cannot testify, magically record faces, or send remote reports."
+          ]
+        },
+        {
+          "name": "Sabotaged Drive Pin",
+          "entries": [
+            "If its drive pin is sabotaged during Room 15 maintenance, Speed becomes 15 ft. and Bonus Cleave ceases until repaired."
+          ]
+        },
+        {
+          "name": "Bonus Cleave",
+          "entries": [
+            "Once per turn a Shears hit against a creature with the {@condition restrained} condition deals an extra 3 ({@damage 1d6}) slashing damage if the drive pin is intact."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The Brass Shear makes two Shears attacks."
+          ]
+        },
+        {
+          "name": "Shears",
+          "entries": [
+            "{@atk m} {@hit 5} to hit, reach 5 ft., one target. {@h} 10 ({@damage 2d6 + 3}) slashing damage."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Thread Collector",
+      "source": "NCFA",
+      "size": [
+        "M"
+      ],
+      "type": "construct",
+      "alignment": [
+        "U"
+      ],
+      "ac": [
+        15
+      ],
+      "hp": {
+        "average": 58,
+        "formula": "9d8 + 18"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 12,
+      "dex": 16,
+      "con": 14,
+      "int": 5,
+      "wis": 12,
+      "cha": 3,
+      "immune": [
+        "poison"
+      ],
+      "conditionImmune": [
+        "exhaustion",
+        "poisoned"
+      ],
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 11,
+      "languages": [
+        "understands Common but can't speak"
+      ],
+      "cr": "3",
+      "pbNote": "+2",
+      "trait": [
+        {
+          "name": "Crown-Animated Factory Enforcer",
+          "entries": [
+            "A factory construct with no ability to testify, record faces or send remote reports."
+          ]
+        },
+        {
+          "name": "Binding Cord",
+          "entries": [
+            "The Collector can maintain only one active Binding Reel cord. The cord has AC 12 and 5 HP, and severing it frees the restrained target. Destroying the Collector also frees the target."
+          ]
+        },
+        {
+          "name": "Sabotaged Spool",
+          "entries": [
+            "If its winding spool was sabotaged at the Room 15 rack, it can't use Binding Reel or Reel In until repaired; Needle attacks remain."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The Thread Collector makes two Needle attacks."
+          ]
+        },
+        {
+          "name": "Needle",
+          "entries": [
+            "{@atk mw,rw} {@hit 5} to hit, reach 5 ft. or range 30/90 ft., one target. {@h} 7 ({@damage 1d8 + 3}) piercing damage."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Binding Reel (Recharge 5–6)",
+          "entries": [
+            "Choose one Large or smaller creature within 30 ft. that the Collector can see if it has no active cord. DC 13 Dexterity save or the target is {@condition restrained} until freed. The target or an adjacent creature can use an action and DC 13 Strength (Athletics) or Dexterity (Acrobatics) check to escape, or sever the cord (AC 12, 5 HP). This action is unavailable if the spool was sabotaged."
+          ]
+        },
+        {
+          "name": "Reel In",
+          "entries": [
+            "The Collector pulls the creature restrained by its cord up to 10 ft. along a clear path toward itself; the target can resist with DC 13 Strength saving throw. This action is unavailable if the spool was sabotaged."
+          ]
+        }
+      ]
     }
   ],
   "item": [
