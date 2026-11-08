@@ -76,7 +76,14 @@
           ]
         },
         {
-          "name": "Chapter 6: Bellweather Under the Crown — Session 4 Record / Session 5 Launch",
+          "name": "Chapter 6: Bellweather Under the Crown — Session 4 Record",
+          "headers": [
+            "Session 4 — PLAYED / Authoritative",
+            "Crown Knowledge — DM Reference"
+          ]
+        },
+        {
+          "name": "Chapter 7: Session 5 — Ledger House and the Rescue of Elowen",
           "headers": [
             "Session 5 — Opening Recap Monologue (TEMPORARY: REMOVE AFTER SESSION)",
             "Session 5 — At Ledger House",
@@ -87,20 +94,6 @@
             "Map: Ledger House (Approved DM Map)",
             "Map: Bellweather Under Crown Administration",
             "Map: Koven House",
-            "Session 4 — PLAYED / Authoritative",
-            "Crown Knowledge — DM Reference"
-          ]
-        },
-        {
-          "name": "Chapter 7: Savin Keep — Future Location",
-          "headers": [
-            "Maps (geography only)",
-            "Location Only — OPEN"
-          ]
-        },
-        {
-          "name": "Chapter 8: Cardon Weavehouse — Session 5 Site",
-          "headers": [
             "Maps — LOCKED Session 5 One-Sheet Physical Build",
             "AT-TABLE FLOW — How to Run the Rescue",
             "RUN SHEET — 2024 Initiative, Monsters and Security",
@@ -113,6 +106,13 @@
             "Room 19 — Confrontation and Elowen",
             "Jaroood's Personal Cash Stash — 500 gp",
             "Release, Escape and Investigation"
+          ]
+        },
+        {
+          "name": "Chapter 8: Savin Keep — Future Location",
+          "headers": [
+            "Maps (geography only)",
+            "Location Only — OPEN"
           ]
         },
         {
@@ -720,7 +720,39 @@
         },
         {
           "type": "section",
-          "name": "Chapter 6: Bellweather Under the Crown — Session 4 Record / Session 5 Launch",
+          "name": "Chapter 6: Bellweather Under the Crown — Session 4 Record",
+          "entries": [
+            {
+              "type": "entries",
+              "name": "Session 4 — PLAYED / Authoritative",
+              "entries": [
+                "After the Well, the party killed Noren and his Veteran. The Veteran was beheaded; Arunem carried the body in a bag. A city guard confirmed the Council was gone. The bag was repeatedly slammed to the ground; the precise actor and final whereabouts of the body are not recorded.",
+                "Pepper went alone to the market and had a bad encounter with Edda Pell, half-orc owner of The Spare Button, now voiced with an Irish accent.",
+                "Pepper voluntarily approached Koven House to report Edda. Royal guards recognized her in their records, asserted the Crown held her service contract and detained her for hard labor at the southern ruins.",
+                "Brakkus found and accompanied Jarrock and Aaron in seeking Pepper. He persuaded the guards to release Pepper into HIS custody. This was a negotiated release; exact custody terms remain unresolved.",
+                "Bishop Brann told the party the Council sold Bellweather and departed; Brann did not take a payment from the Crown's acquisition. He proposed covert intelligence sharing while the group appeared to be cooperative Crown hires.",
+                "Brann paid outstanding Kellan's Well wages: Jarrock RECEIVED 100 gp, Aaron RECEIVED 100 gp, Arunem RECEIVED 100 gp, Pepper RECEIVED nothing. These payments are already complete.",
+                "Brakkus described an old legend of possible mind-affecting magic in Bellweather. Only the legend was shared; the Well's identity and position remain unknown to Brakkus.",
+                "Tulcornix Avemvir, Kaleb's adopted aarakocra brother, sought help freeing his sister-in-law Elowen, Kaleb's widow, from Crown-controlled Weavehouse indenture.",
+                "At the table Elowen's alleged debt was stated as 150 gp principal, 200 gp administrative charges and 50 gp/day for room and board. Pepper offered all her money. No release or payment is confirmed.",
+                "Aaron stationed Drysa to watch the Weavehouse overnight. The party started planning a covert rescue; Brakkus advised stealth."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Crown Knowledge — DM Reference",
+              "entries": [
+                "King Hendrix Stucky reigns; Prince Reginald and Princess Narcia administer Bellweather. The former Council, including Perrin Cardon, has departed.",
+                "Koven House accepts public petitions and administers Crown contracts. Brakkus negotiated Pepper's release into his custody, with the precise conditions still unresolved.",
+                "The Radiant Well is a real magical phenomenon below Bellweather (DM knowledge). Brakkus and the party know only an old legend; its location, workings and the Crown's involvement remain unestablished.",
+                "The Crown has no known connection between Tulcornix and the adventurers."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "name": "Chapter 7: Session 5 — Ledger House and the Rescue of Elowen",
           "entries": [
             {
               "type": "entries",
@@ -882,133 +914,6 @@
             },
             {
               "type": "entries",
-              "name": "Session 4 — PLAYED / Authoritative",
-              "entries": [
-                "After the Well, the party killed Noren and his Veteran. The Veteran was beheaded; Arunem carried the body in a bag. A city guard confirmed the Council was gone. The bag was repeatedly slammed to the ground; the precise actor and final whereabouts of the body are not recorded.",
-                "Pepper went alone to the market and had a bad encounter with Edda Pell, half-orc owner of The Spare Button, now voiced with an Irish accent.",
-                "Pepper voluntarily approached Koven House to report Edda. Royal guards recognized her in their records, asserted the Crown held her service contract and detained her for hard labor at the southern ruins.",
-                "Brakkus found and accompanied Jarrock and Aaron in seeking Pepper. He persuaded the guards to release Pepper into HIS custody. This was a negotiated release; exact custody terms remain unresolved.",
-                "Bishop Brann told the party the Council sold Bellweather and departed; Brann did not take a payment from the Crown's acquisition. He proposed covert intelligence sharing while the group appeared to be cooperative Crown hires.",
-                "Brann paid outstanding Kellan's Well wages: Jarrock RECEIVED 100 gp, Aaron RECEIVED 100 gp, Arunem RECEIVED 100 gp, Pepper RECEIVED nothing. These payments are already complete.",
-                "Brakkus described an old legend of possible mind-affecting magic in Bellweather. Only the legend was shared; the Well's identity and position remain unknown to Brakkus.",
-                "Tulcornix Avemvir, Kaleb's adopted aarakocra brother, sought help freeing his sister-in-law Elowen, Kaleb's widow, from Crown-controlled Weavehouse indenture.",
-                "At the table Elowen's alleged debt was stated as 150 gp principal, 200 gp administrative charges and 50 gp/day for room and board. Pepper offered all her money. No release or payment is confirmed.",
-                "Aaron stationed Drysa to watch the Weavehouse overnight. The party started planning a covert rescue; Brakkus advised stealth."
-              ]
-            },
-            {
-              "type": "entries",
-              "name": "Crown Knowledge — DM Reference",
-              "entries": [
-                "King Hendrix Stucky reigns; Prince Reginald and Princess Narcia administer Bellweather. The former Council, including Perrin Cardon, has departed.",
-                "Koven House accepts public petitions and administers Crown contracts. Brakkus negotiated Pepper's release into his custody, with the precise conditions still unresolved.",
-                "The Radiant Well is a real magical phenomenon below Bellweather (DM knowledge). Brakkus and the party know only an old legend; its location, workings and the Crown's involvement remain unestablished.",
-                "The Crown has no known connection between Tulcornix and the adventurers."
-              ]
-            }
-          ]
-        },
-        {
-          "type": "section",
-          "name": "Chapter 7: Savin Keep — Future Location",
-          "entries": [
-            {
-              "type": "entries",
-              "name": "Maps (geography only)",
-              "entries": [
-                {
-                  "type": "gallery",
-                  "images": [
-                    {
-                      "type": "image",
-                      "href": {
-                        "type": "external",
-                        "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/savin_keep.webp"
-                      },
-                      "imageType": "map",
-                      "title": "Savin Keep — DM Map",
-                      "grid": {
-                        "type": "none"
-                      },
-                      "mapRegions": [
-                        {
-                          "area": "ncfa-savin_keep",
-                          "points": [
-                            [
-                              0,
-                              0
-                            ],
-                            [
-                              1,
-                              0
-                            ],
-                            [
-                              1,
-                              1
-                            ],
-                            [
-                              0,
-                              1
-                            ]
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "image",
-                      "href": {
-                        "type": "external",
-                        "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/savin_keep.webp"
-                      },
-                      "imageType": "mapPlayer",
-                      "title": "Savin Keep — Player Map",
-                      "grid": {
-                        "type": "none"
-                      },
-                      "mapRegions": [
-                        {
-                          "area": "ncfa-savin_keep",
-                          "points": [
-                            [
-                              0,
-                              0
-                            ],
-                            [
-                              1,
-                              0
-                            ],
-                            [
-                              1,
-                              1
-                            ],
-                            [
-                              0,
-                              1
-                            ]
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "entries",
-              "name": "Location Only — OPEN",
-              "entries": [
-                "Savin Keep and its established location and maps remain available. Old reclamation orders, faction assignments, soldiers, treasure and outcomes have been retired.",
-                "Rebuild new events later from the Crown-era world and the party's choices."
-              ]
-            }
-          ]
-        },
-        {
-          "type": "section",
-          "name": "Chapter 8: Cardon Weavehouse — Session 5 Site",
-          "entries": [
-            {
-              "type": "entries",
               "name": "Maps — LOCKED Session 5 One-Sheet Physical Build",
               "entries": [
                 {
@@ -1047,7 +952,7 @@
               "type": "entries",
               "name": "AT-TABLE FLOW — How to Run the Rescue",
               "entries": [
-                "START AT LEDGER HOUSE (Chapter 6): give the Session 5 recap, Drysa's exterior watch report, Detritus's arrival, Jord's gift of the Hat of Disguise, and Brakkus's private invitation to Aaron when natural. These are available scenes, not mandatory gates; let the party choose the time and method of the rescue.",
+                "START AT LEDGER HOUSE (opening sections above): give the Session 5 recap, Drysa's exterior watch report, Detritus's arrival, Jord's gift of the Hat of Disguise, and Brakkus's private invitation to Aaron when natural. These are available scenes, not mandatory gates; let the party choose the time and method of the rescue.",
                 "OBJECTIVE AND CHOICES: Tulcornix wants Elowen alive and free from Crown-controlled Cardon Weavehouse. This rescue is UNPAID: Tulcornix has promised no gold, title, land or other reward. The party is doing it as a favor, not as a contracted job. The 550 gp debt Jaroood claims against Elowen is a separate obstacle, not a reward for the party. The party can pay or obtain an authentic order, impersonate authorized visitors, negotiate, sneak her out, release other workers, or openly fight. Neither combat nor rescuing every worker is compulsory. Jaroood's authority is administrative, not supernatural control.",
                 "DAY/NIGHT: During business hours the south reception (23) receives visitors, the 17 other workers labor in production (15) and the rooms used for sleeping are not occupied as dormitories, Jaroood handles inspections/petitions and Elowen attends him. After evening headcount, those 17 workers are locked into rooms 9/10/17/18 (4/4/5/4); Jaroood and Elowen are in Room 19 with the Gargoyle, Mimic and Earth Elemental. The Captain begins in 11, Warrior at (10,15), and Bugbear patrol starts (10,4), repeating an approximately eight-minute circuit. Their existing duties continue unless the party changes events.",
                 "APPROACH: the south public door D2 enters reception 23; west loading door D1 enters loading 21 and is locked from the outside after hours (Thieves' Tools DC 15). The approved map marks D1 and the four dormitory doors D4-D7 as the locks; do not invent locks on other map openings. Drysa saw only the outside. Resolve concealment from actual lines of sight and sounds, not an automatic group Stealth roll; an ambiguous noise brings one investigator, sustained disturbance brings an investigation/report, and the Room 19 pull-cord alarm rings only in Room 11. Bring guards from their physical posts using map movement and the listed speeds, never as instant reinforcements.",
@@ -1203,7 +1108,7 @@
               "type": "entries",
               "name": "Access, Alarm, Doors and Security Response",
               "entries": [
-                "ENTRANCES: Public entrance through Room 23 at the south edge. The west loading entrance through Room 21 is locked after hours (DC 15 Dexterity [Thieves' Tools]). The Bugbear passes Room 21 on its x9–12 west-corridor patrol. Drysa's exterior report is in Chapter 6.",
+                "ENTRANCES: Public entrance through Room 23 at the south edge. The west loading entrance through Room 21 is locked after hours (DC 15 Dexterity [Thieves' Tools]). The Bugbear passes Room 21 on its x9–12 west-corridor patrol. Drysa's exterior report is in this chapter, in the opening scenes.",
                 "BELL: Room 19 pull cord reaches a brass bell at Room 11 through ceiling/wall eyelets. A reachable segment outside Room 19 can be quietly disconnected with DC 13 Dexterity (Thieves' Tools) or cut as an action (AC 12, 5 HP). The bell alerts only people inside the Weavehouse.",
                 "NOISE: One ambiguous sound → one guard investigates, then 'Must be the wind' if no evidence. Sustained fighting, broken doors or escaping workers → continued investigation and ordinary report to the Captain.",
                 "ALARM / BREAKOUT: Captain coordinates from Room 11, Warrior secures locked quarters, Bugbear recaptures escapees. Guards use grapples, shoves, restraints and nonlethal melee on workers; armed intruders may be attacked lethally.",
@@ -1267,6 +1172,101 @@
                 "Once a worker-room door opens, its occupants run toward accessible exterior doors on their own: Room 9 (4), 10 (4), 17 (5), 18 (4). Elowen is the eighteenth. Guards may catch individuals but are forbidden to kill worker assets.",
                 "An early breakout alerts any guard who discovers it. Jaroood can respond if he receives a warning; guards unaware of a confrontation remain on their assigned duties.",
                 "The Crown investigates discovered murders, property destruction and escapes through staff testimony, physical evidence and accounts. It currently has no knowledge linking the party and Tulcornix. Outstanding debt claims persist after an unauthorized physical escape."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "name": "Chapter 8: Savin Keep — Future Location",
+          "entries": [
+            {
+              "type": "entries",
+              "name": "Maps (geography only)",
+              "entries": [
+                {
+                  "type": "gallery",
+                  "images": [
+                    {
+                      "type": "image",
+                      "href": {
+                        "type": "external",
+                        "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/savin_keep.webp"
+                      },
+                      "imageType": "map",
+                      "title": "Savin Keep — DM Map",
+                      "grid": {
+                        "type": "none"
+                      },
+                      "mapRegions": [
+                        {
+                          "area": "ncfa-savin_keep",
+                          "points": [
+                            [
+                              0,
+                              0
+                            ],
+                            [
+                              1,
+                              0
+                            ],
+                            [
+                              1,
+                              1
+                            ],
+                            [
+                              0,
+                              1
+                            ]
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "image",
+                      "href": {
+                        "type": "external",
+                        "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/savin_keep.webp"
+                      },
+                      "imageType": "mapPlayer",
+                      "title": "Savin Keep — Player Map",
+                      "grid": {
+                        "type": "none"
+                      },
+                      "mapRegions": [
+                        {
+                          "area": "ncfa-savin_keep",
+                          "points": [
+                            [
+                              0,
+                              0
+                            ],
+                            [
+                              1,
+                              0
+                            ],
+                            [
+                              1,
+                              1
+                            ],
+                            [
+                              0,
+                              1
+                            ]
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Location Only — OPEN",
+              "entries": [
+                "Savin Keep and its established location and maps remain available. Old reclamation orders, faction assignments, soldiers, treasure and outcomes have been retired.",
+                "Rebuild new events later from the Crown-era world and the party's choices."
               ]
             }
           ]
@@ -2183,7 +2183,7 @@
               "entries": [
                 "Brann stayed, refused a payout from the city's sale, paid the remaining Well wages, and is helping coordinate an emerging quiet resistance with Brakkus.",
                 "Tulcornix Avemvir is Kaleb's adopted aarakocra brother, who sought Pepper because she killed Kaleb and requested help rescuing his sister-in-law Elowen.",
-                "Elowen is Kaleb's widow and a Crown-confined textile worker. Her stated debt is in Chapter 8, and her future is not predetermined."
+                "Elowen is Kaleb's widow and a Crown-confined textile worker. Her stated debt is in Chapter 7, and her future is not predetermined."
               ]
             },
             {
@@ -2195,7 +2195,7 @@
                 "Jarrock: had reported Pepper's killing of Kaleb; drinks despite objections, and his personal trajectory toward confronting royal abuse must arise through play rather than a scripted destiny.",
                 "Arunem: described appearing in Bellweather after previously being at home; mechanism unexplained.",
                 "Detritus (Elena): male Rock Gnome Wizard 4; has seen a vision of his home's destruction and is trying to PREVENT it. Home, origin/cause/time/detail of vision and wizard subclass/spells OPEN. Introduce him at Ledger House. Possible Marren Library research does not establish a plot connection.",
-                "Drysa: Aaron's pseudodragon familiar. Overnight exterior surveillance opening is ONE Wisdom (Perception) d20+5 with cumulative 15/20/25 tiers, in Chapter 6; no results played yet."
+                "Drysa: Aaron's pseudodragon familiar. Overnight exterior surveillance opening is ONE Wisdom (Perception) d20+5 with cumulative 15/20/25 tiers, in Chapter 7; no results played yet."
               ]
             }
           ]
