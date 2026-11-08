@@ -6,18 +6,18 @@
         "json": "NCFA",
         "abbreviation": "NCFA",
         "full": "No Cause for Alarm: Ruins of Bellweather",
-        "version": "5.3",
+        "version": "5.4",
         "authors": [
           "No Cause for Alarm Campaign"
         ],
-        "dateLastModified": 1794157013,
-        "_dateLastModifiedHash": "ncfa-v5.3-36x24-outdoor-no-markers-20261108"
+        "dateLastModified": 1794159389,
+        "_dateLastModifiedHash": "ncfa-v5.4-locked-weavehouse-one-sheet-session5-20261108"
       }
     ],
     "edition": "one",
     "dateAdded": 1789528955,
-    "dateLastModified": 1794157013,
-    "_dateLastModifiedHash": "ncfa-v5.3-36x24-outdoor-no-markers-20261108"
+    "dateLastModified": 1794159389,
+    "_dateLastModifiedHash": "ncfa-v5.4-locked-weavehouse-one-sheet-session5-20261108"
   },
   "adventure": [
     {
@@ -101,7 +101,7 @@
         {
           "name": "Chapter 8: Cardon Weavehouse — Session 5 Site",
           "headers": [
-            "Maps — 36×24 Mat With West and South Outdoors",
+            "Maps — LOCKED Session 5 One-Sheet Physical Build",
             "RUN SHEET — 2024 Initiative, Monsters and Security",
             "Routes — Approaches, Patrols and Escape",
             "Room Key — 12 Rooms / 34×22 Building on 36×24 Mat",
@@ -1007,7 +1007,7 @@
           "entries": [
             {
               "type": "entries",
-              "name": "Maps — 36×24 Mat With West and South Outdoors",
+              "name": "Maps — LOCKED Session 5 One-Sheet Physical Build",
               "entries": [
                 {
                   "type": "gallery",
@@ -1016,10 +1016,10 @@
                       "type": "image",
                       "href": {
                         "type": "external",
-                        "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_34x22_outdoor.svg"
+                        "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_LOCKED_one_sheet_build.svg"
                       },
                       "imageType": "map",
-                      "title": "Cardon Weavehouse — DM 36×24 Two-Strip Outdoor Plan",
+                      "title": "LOCKED Cardon Weavehouse — Complete 36×24 DM Build Map",
                       "grid": {
                         "type": "none"
                       }
@@ -1031,19 +1031,7 @@
                         "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/cardon_weavehouse_34x22_outdoor_player.svg"
                       },
                       "imageType": "mapPlayer",
-                      "title": "Cardon Weavehouse — Player 36×24 Two-Strip Outdoor Plan",
-                      "grid": {
-                        "type": "none"
-                      }
-                    },
-                    {
-                      "type": "image",
-                      "href": {
-                        "type": "external",
-                        "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_34x22_outdoor_build.svg"
-                      },
-                      "imageType": "map",
-                      "title": "Cardon Weavehouse — Physical Draw/Corner Build Guide",
+                      "title": "Cardon Weavehouse — Player Floor Plan",
                       "grid": {
                         "type": "none"
                       }
@@ -1057,6 +1045,7 @@
               "name": "RUN SHEET — 2024 Initiative, Monsters and Security",
               "entries": [
                 "BUILD GEOMETRY: the 36×24 mat has a 34×22-square Weavehouse occupying x2–36/y0–22 and two-square west and south outdoor strips. ROOM 19: Jaroood, Earth Elemental, Gargoyle, Mimic (281 HP total / 2,725 XP). LABOR GUARDS: Captain Room 11, Warrior in worker corridor, Bugbear west-patrol route. See start squares below.",
+                "PHYSICAL BUILD LOCKED: Use the ONE-SHEET Session 5 map at https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_LOCKED_one_sheet_build.svg. It gives all walls, exact 16 door gaps (D1/D4/D5/D6/D7 locked), alarm bell in Room 11, exposed rope outside Room 19, optional physical corner accents, four written worker counts (4/4/5/4), and the seven Arcknight miniatures with binder locations. The 2×2 Earth Elemental footprint and 10-foot west/south outdoor strips are shown. Dry-erase walls/furniture are sufficient; no extra pieces or tokens are required. Layout coordinates and monster mechanics remain those in the following keyed sections.",
                 {
                   "type": "table",
                   "caption": "Room 19 — Private fight",
@@ -1178,7 +1167,7 @@
                 "19. Jaroood's private suite: (26,12)–(36,22), 10×10, 15-foot ceiling. Jaroood and Elowen; Gargoyle, Mimic and nighttime Earth Elemental. The suite's northern doorway is 3 squares wide, x29–32 at y12.",
                 "CONNECTING PASSAGES: western worker corridor x9–12 is three squares wide; central hall y10–12 is two wide; east service x24–26 is two wide; south service x19–21 is two wide. Other former room numbers were merged into these 12 rooms.",
                 "PHYSICAL BUILD: draw all walls and the 16 indicated doorway gaps. No unverified plastic door counts, worker counters or physical furniture are part of the required setup. Optional corner walls are shown by blue dots on the build overlay. Drawn props: Jaroood's desk (2×1), cot (2×1), two production looms (3×1 each), and one screen line; the Mimic miniature represents the coffer.",
-                "REFERENCES: {@link active no-marker DM map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_34x22_outdoor.svg}; {@link build overlay|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_34x22_outdoor_build.svg}; {@link build instructions and mini coordinates|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/docs/Cardon_Weavehouse_Outdoor_Build.md}."
+                "BUILD REFERENCE (LOCKED): {@link ONE-SHEET map / all setup instructions|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_LOCKED_one_sheet_build.svg}. Secondary references: {@link plain DM room layout|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_34x22_outdoor.svg}; {@link player map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/cardon_weavehouse_34x22_outdoor_player.svg}; {@link coordinate list|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/docs/Cardon_Weavehouse_Outdoor_Build.md}."
               ]
             },
             {
@@ -2191,8 +2180,8 @@
               "type": "list",
               "items": [
                 "{@link Blackstone Temple — DM Key|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/blackstone_temple.webp}",
-                "{@link Cardon Weavehouse — Current Outdoor-Strip DM Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_34x22_outdoor.svg}",
-                "{@link Cardon Weavehouse — Current No-Marker Build Overlay|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_34x22_outdoor_build.svg}",
+                "{@link Cardon Weavehouse — LOCKED One-Sheet DM Build|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_LOCKED_one_sheet_build.svg}",
+                "{@link Cardon Weavehouse — Plain DM Layout|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_34x22_outdoor.svg}",
                 "{@link Cardon Weavehouse — Original 25-Space Legacy Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse.webp}",
                 "{@link Emmer Hold — DM Key|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/emmer_hold.webp}",
                 "{@link Kellan's Well — DM Key|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/kellans_well_table_ready.webp}",
