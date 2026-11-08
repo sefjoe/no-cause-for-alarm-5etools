@@ -54,12 +54,12 @@ Corridors: western x=9–12, **3 squares wide**; central east–west y=10–12, 
 | Jaroood #28 (proxy) | (31,16) | Behind desk in Room 19 |
 | Earth Elemental #151 | (32–34,18–20) | 2×2 space inside Room 19 |
 | Gargoyle #121 | (34,14) | Stonework in Room 19 |
-| Mimic #115 | (27,16) | Disguised coffer in Room 19 |
+| Mimic #115 | (27,16) | Disguised as an elegant upholstered chair in Room 19 |
 | Elowen (not an enemy miniature) | (28,18) | Attending Jaroood; track by speech or a dry-erase initial if needed |
 
 **Workers:** Room 9 has 4, Room 10 has 4, Room 17 has 5, Room 18 has 4. **Write these counts directly on the dry-erase mat inside each dorm**, and erase them as each dorm opens. No numbered markers, special tokens, or 17 worker miniatures are required.
 
-**Furniture:** No purchased furniture is required. The only optional drawn obstacles shown are a **2×1 Jaroood desk**, **two 3×1 loom rectangles**, **one 2×1 cot** and **a short screen line**. The Mimic's own miniature is the coffer. Leave all dormitories unfurnished except for their written worker counts. These few outlines establish cover/obstacles if that matters in play.
+**Furniture:** No purchased furniture is required. The only optional drawn obstacles shown are a **2×1 Jaroood desk**, **two 3×1 loom rectangles**, **one 2×1 cot** and **a short screen line**. The Mimic's miniature occupies (27,16) and represents the upholstered chair; no additional furniture prop is needed. Leave all dormitories unfurnished except for their written worker counts. These few outlines establish cover/obstacles if that matters in play.
 
 **Doors:** The 16 openings are drawn gaps; use owned door pieces at selected openings if handy, but the adventure works without them. Loading access is locked after hours (Thieves' Tools DC 15). All four dormitory locks are separate; Jaroood's master key opens each in one action. The room 19 bell sounds in room 11 only.
 
