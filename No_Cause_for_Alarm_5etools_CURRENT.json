@@ -767,8 +767,8 @@
               "type": "entries",
               "name": "Session 5 — At Ledger House",
               "entries": [
-                "Morning, Ledger House common room. Breakfast is underway; Brakkus is tending the bar. Aaron's pseudodragon Drysa is returning from the overnight watch of Cardon Weavehouse. The party's unresolved plan is to free Elowen.",
-                "During the morning: Drysa's report; Detritus arrives seeking information; Jord arrives with his luggage after the Crown took over his hotel; Brakkus asks Aaron for a private word. Use the common room and front porch for arrivals and the existing back courtyard for Brakkus's conversation.",
+                "Morning at Ledger House: breakfast is underway, Brakkus tends the bar, and Drysa returns from watching the Weavehouse. The party is preparing to rescue Elowen.",
+                "At the inn: Drysa reports, Detritus arrives seeking information, Jord comes looking for lodging after the Crown requisitioned his hotel, and Brakkus invites Aaron for a private talk. Common room and porch for arrivals; rear courtyard for the private conversation.",
                 "The inn's shrine is dedicated to Oghma. The approved old map labels it differently."
               ]
             },
@@ -776,12 +776,12 @@
               "type": "entries",
               "name": "Drysa — Overnight Watch (Perception Results)",
               "entries": [
-                "{@b Roll:} Austin rolls d20 + 5 (Drysa's 2024 Pseudodragon Wisdom [Perception]). Passive Perception 15, Stealth +4, Darkvision 60 ft., Blindsight 10 ft. Read the base result and each achieved tier.",
+                "{@b Drysa:} Austin rolls d20 + 5, Wisdom (Perception). Passive Perception 15; Stealth +4; Darkvision 60 ft.; Blindsight 10 ft. Base report plus each achieved tier.",
                 "{@b Any total:} 'Drysa observed the southern public entrance and the western loading entrance used for deliveries. The building became quieter after business hours. Most production lights went dark, but a light remained in the southern part of the building late into the night. Neither entrance had a guard permanently stationed outside during the periods she watched.'",
                 "{@b Total 15+:} 'A large, heavily built figure carrying a weapon crossed the western loading approach, disappeared into the building, and later returned. It appeared to be patrolling.' From close enough and with enough light, she identifies the figure as a Bugbear.",
                 "{@b Total 20+:} 'It returned to the loading approach roughly every eight minutes. A short interval after it disappeared inside appeared particularly promising for reaching that entrance.'",
                 "{@b Total 25+:} 'Across the patrol cycles she watched, no other guard took its place outside. She observed a short interval when nobody outside had a direct view of the western entrance. That doesn't tell her who might be watching from inside.'",
-                "{@b Boundaries:} The report covers exterior observations only. Interior room locations, occupants, monsters and keys are unknown to Drysa. If she was beyond familiar telepathy range, she returns to Aaron before communicating. Closer scouting can yield new observations and may require her Stealth +4. Investigation is for deductions beyond observations, not a second roll for the eight-minute pattern; suggested DC 13 when sufficient clues exist."
+                "{@b Limits:} The report covers the exterior only. For distant observations, Drysa returns to Aaron before communicating outside familiar range. Closer scouting: Stealth +4 if detection is possible. Additional deductions from actual clues: Intelligence (Investigation), suggested DC 13."
               ]
             },
             {
@@ -789,15 +789,15 @@
               "name": "Detritus — Arrival",
               "entries": [
                 "Detritus (Elena) is a male Rock Gnome Wizard 4. A vision showed that his home is in danger of destruction; he's searching for a way to prevent it. His home's location, exact vision, cause and timing have not been established.",
-                "He arrives through Ledger House's front porch in search of local information. Elena describes him and speaks for him. Marren Library is a nearby source of historical and magical knowledge that Brakkus can mention.",
-                "{@b Brakkus, when introducing the other travelers:} 'These folks have seen a fair bit of Bellweather lately. They may be able to point you in the right direction.' The PCs decide how much to share with him about their current business."
+                "Detritus arrives at Ledger House seeking local information. Marren Library is a potential research destination Brakkus can identify. Elena describes Detritus's appearance and introduction.",
+                "{@b Brakkus:} 'These folks have seen a fair bit of Bellweather lately. They may be able to point you in the right direction.'"
               ]
             },
             {
               "type": "entries",
               "name": "Brakkus and Aaron — Private Conversation",
               "entries": [
-                "Brakkus invites Aaron to the existing rear courtyard when he has a moment. Brakkus knows Aaron is a dhampir. He knows nothing specific about Dimidicus, Aaron's dreams or his mysterious liberator unless Aaron tells him.",
+                "Brakkus invites Aaron to the rear courtyard. He knows Aaron is a dhampir; details about Dimidicus, Aaron's dreams and the mysterious liberator are not known to him unless Aaron shares them.",
                 "{@b Opening:} 'Aaron, can I ask you something? What brought you to Bellweather? How did you find your way to my door?'",
                 "{@b If Aaron mentions the pull toward Bellweather or Ledger House:} 'I serve Oghma. I've wondered whether he had a hand in your finding this place. That's all it is, though: a suspicion. I don't have an answer.'",
                 "{@b If Aaron raises his dhampir nature:} 'I know. It hasn't changed your welcome here.' If asked why: 'My father was a warlord. My mother was a librarian he kept captive. She taught me to read.' Brakkus's mother Elena taught him to seek knowledge and respect people beyond their ancestry.",
@@ -809,9 +809,9 @@
               "name": "Jord — A Room and a Gift",
               "entries": [
                 "Jord, the 86-year-old gnome trader with sandy hair, spectacles and an overstuffed patched coat, arrives at Ledger House carrying his luggage. The Royal Guard has requisitioned his hotel for barracks. He asks Brakkus for a room. He recognizes the adventurers who recovered his stolen horse and strongbox.",
-                "{@b Gift:} Jord offers the party his personal {@item Hat of Disguise|XDMG} as a permanent gift for their help. 'You saved my horse and my strongbox. Reckon you can get better use out of this than I have. Here, take it.' He can explain that it changes the wearer's appearance.",
-                "{@b Mechanics:} The Hat of Disguise is Uncommon, requires attunement during a Short Rest, and lets its attuned wearer cast {@spell Disguise Self|XPHB} at will while wearing it. The spell lasts 1 hour per casting and ends if the hat is removed. One wearer at a time; the players choose who accepts and attunes. The gift becomes party property when accepted in play.",
-                "{@b Shop continuity:} Jord's 20% discount continues. His hat is his personal possession; neither his existing wagon stock nor Edda Pell's separate stocked hat is reduced by this gift."
+                "{@b Gift:} Jord offers his personal {@item Hat of Disguise|XDMG} to the party permanently. 'You saved my horse and my strongbox. Reckon you can get better use out of this than I have. Here, take it.'",
+                "{@b Hat of Disguise:} Uncommon; requires attunement (Short Rest). Attuned wearer casts {@spell Disguise Self|XPHB} at will; each casting lasts 1 hour and ends if the hat is removed. Transfer when accepted in play.",
+                "{@b Trade:} Jord's 20% discount remains in force. The gifted hat was his personal possession and does not change either merchant's shop inventory."
               ]
             },
             {
@@ -891,7 +891,7 @@
                 "Brakkus described an old legend of possible mind-affecting magic in Bellweather. Only the legend was shared; the Well's identity and position remain unknown to Brakkus.",
                 "Tulcornix Avemvir, Kaleb's adopted aarakocra brother, sought help freeing his sister-in-law Elowen, Kaleb's widow, from Crown-controlled Weavehouse indenture.",
                 "At the table Elowen's alleged debt was stated as 150 gp principal, 200 gp administrative charges and 50 gp/day for room and board. Pepper offered all her money. No release or payment is confirmed.",
-                "Aaron stationed his familiar to watch the Weavehouse overnight. The party started planning a covert rescue. Brakkus advised stealth to protect the group's cover. Drysa's report will be resolved at the opening of Session 5."
+                "Aaron stationed Drysa to watch the Weavehouse overnight. The party started planning a covert rescue; Brakkus advised stealth."
               ]
             },
             {
@@ -901,7 +901,7 @@
                 "King Hendrix Stucky reigns; Prince Reginald and Princess Narcia administer Bellweather. The former Council, including Perrin Cardon, has departed.",
                 "Koven House accepts public petitions and administers Crown contracts. Brakkus negotiated Pepper's release into his custody, with the precise conditions still unresolved.",
                 "The Radiant Well is a real magical phenomenon below Bellweather (DM knowledge). Brakkus and the party know only an old legend; its location, workings and the Crown's involvement remain unestablished.",
-                "The Crown has no knowledge that Tulcornix spoke to the adventurers. An investigation of an escape must develop evidence or testimony to identify them."
+                "The Crown has no known connection between Tulcornix and the adventurers."
               ]
             }
           ]
@@ -1090,7 +1090,7 @@
               "type": "entries",
               "name": "RUN SHEET — 2024 Initiative, Monsters and Security",
               "entries": [
-                "ROOM 19: Jaroood, Earth Elemental, Gargoyle, Mimic (281 HP / 2,725 XP). LABOR GUARDS: Captain at Room 11, Warrior outside Rooms 9/10, Bugbear on western/southern patrol. Published 2024 creatures and the custom {@creature Jaroood|NCFA} are detailed in the tables.",
+                "PRIVATE SUITE: Jaroood, Earth Elemental, Gargoyle and Mimic (281 HP total, 2,725 XP). LABOR SECURITY: Captain at Room 11, Warrior at Rooms 9/10, Bugbear on western/southern patrol. Stat blocks below.",
                 {
                   "type": "table",
                   "caption": "Room 19 — Private fight",
@@ -1133,8 +1133,8 @@
                   ]
                 },
                 "SENSES: Jaroood passive Perception 14; Earth Elemental 10 (Tremorsense 60 ft.); Gargoyle 10 (Stealth +4); Mimic 11 (Stealth +5); Captain 10; Warrior 10; Bugbear 10 (Stealth +6). SPEED: Earth Elemental 30 ft./Burrow 30 ft., Gargoyle 30 ft./Fly 60 ft., Mimic 20 ft., all three labor guards 30 ft.",
-                "ROOM 19 START: Jaroood's mechanical bell pull is beside his desk; its exposed rope can be cut from the corridor outside the suite. The bell rings in Room 11. Elowen stays in suite but is not a combatant. Gargoyle begins among stone decorations; Mimic looks like a document coffer; Earth Elemental is physically present after shift (Room 15 by day).",
-                "CIVILIANS (if dice are needed): The clerk, Elowen and ordinary indentured workers use the 2024 {@creature Commoner|XMM} baseline: Init +0 (10), AC 10, HP 4, Speed 30 ft., Passive Perception 10. They run, hide or take cover rather than join the defenders. Under 2024 knock-out rules, a melee attack that would reduce a creature to 0 HP can instead leave it at 1 HP, Unconscious; guards use this option against workers.",
+                "STARTING POSITIONS: Jaroood at the desk and bell pull, Elowen attending him; Gargoyle among the stonework; Mimic as a gilded document coffer; Earth Elemental in Room 19 after the shift.",
+                "CIVILIANS: Clerk, Elowen and ordinary workers use {@creature Commoner|XMM}: initiative +0 (10), AC 10, HP 4, Speed 30 ft., Passive Perception 10. In an escape they seek cover or flee. 2024 nonlethal melee: a target otherwise reduced to 0 HP can be left Unconscious at 1 HP.",
                 "ELEMENTAL TRIGGER: mere Tremorsense movement is NOT hostile action. It attacks upon deliberate Terran order from Jaroood or perceiving actual attacks/effects upon Jaroood or itself. The attacker may be unseen, but the attack must actually be perceived. Mimic reacts to being handled/seeing prey or a genuine fight; does not obey spoken orders. Gargoyle protects Jaroood when ordered or threatened.",
                 "JAROOOD: AC 15, HP 9. He may give a Terran defense command, sound the internal bell, use Misty Step, bargain, flee or surrender.",
                 {
@@ -1174,9 +1174,9 @@
                 "CREATURE TYPE: Hobgoblin Captain, Hobgoblin Warrior and Bugbear Warrior are Fey (Goblinoid) under 2024 rules. Hold Person requires a Humanoid.",
                 "GUARDS: One unexplained noise → one investigator ('Must be the wind' if nothing found). Sustained fighting → investigation and report. Alarm/breakout → Captain directs containment, Warrior secures doors, Bugbear captures escaping workers alive.",
                 "LOCKS & EXIT: West loading/service lock DC 15 Thieves' Tools after hours. Exposed cord outside Room 19: quietly detach DC 13 Thieves' Tools or cut with an action (AC 12, HP 5). Worker doors Rooms 9 (4 people), 10 (4), 17 (5), 18 (4) open with Jaroood master key ONE ACTION EACH; otherwise DC 15 Thieves' Tools. Workers bolt independently toward existing Room 21 western or Room 23 southern access, no escort or pooled Stealth rolls.",
-                "MINI PULL: #151 Earth Elemental (binder p.19 back bottom left); #121 Gargoyle (p.16 front top left); #115 Mimic (p.15 front bottom left); #72 Hobgoblin Captain (p.9 back bottom right); #59 Hobgoblin Warrior (p.8 front bottom left); #70 Bugbear Warrior (p.9 back top right); #28 noble serpent-adorned figure (p.4 front bottom right) is a suggested proxy for Jaroood, not an exact elf match.",
+                "MINIS: Earth Elemental #151 (p.19 back bottom left); Gargoyle #121 (p.16 front top left); Mimic #115 (p.15 front bottom left); Hobgoblin Captain #72 (p.9 back bottom right); Hobgoblin Warrior #59 (p.8 front bottom left); Bugbear Warrior #70 (p.9 back top right); Jaroood proxy #28 (p.4 front bottom right).",
                 "STAT LINKS: {@creature Earth Elemental|XMM}, {@creature Gargoyle|XMM}, {@creature Mimic|XMM}, {@creature Hobgoblin Captain|XMM}, {@creature Hobgoblin Warrior|XMM}, {@creature Bugbear Warrior|XMM}, {@creature Jaroood|NCFA}.",
-                "HAT OF DISGUISE: Jord gives the party one at Ledger House; possession follows acceptance in play. Requires one Short Rest for attunement. Casts {@spell Disguise Self|XPHB} at will, 1-hour duration, ends on removal. A creature scrutinizing the illusion uses the Study action and Intelligence (Investigation) against the wearer's spell save DC; a wearer without a spellcasting ability uses +0 spellcasting modifier and PB."
+                "HAT OF DISGUISE (if accepted and attuned): {@spell Disguise Self|XPHB} at will, one hour, ends on removal. Inspect illusion: Study action, Intelligence (Investigation) vs the wearer's spell save DC."
               ]
             },
             {
@@ -1188,14 +1188,14 @@
                 "BUGBEAR: Room 21 loading threshold → service corridor past Room 8 → passage outside Rooms 9/10 → southern passage outside Rooms 17/18 → return along the same route to Room 21. Approximately 8 minutes including checks.",
                 "WARRIOR: Corridor post outside Rooms 9/10 → hourly inspection at the approaches to Rooms 17/18 → return. CAPTAIN: Room 11 → existing central passage bordering Room 15 → south passage toward west-side access of Room 19 when an actual response is warranted.",
                 "WORKERS: Rooms 9/10 may reach western loading Room 21 or turn south toward Room 23; Rooms 17/18 may reach southern access Room 23 or the west loading route via Room 21. Guards intercept by physical position and movement.",
-                "The printed map's 10-foot scale determines movement in initiative. Patrol time includes pauses and is not combat speed. Large creatures use legal spaces and doorways."
+                "Map scale: 10 feet. During initiative, use measured distances for guards and Large creatures."
               ]
             },
             {
               "type": "entries",
               "name": "The Map — All 25 Numbered Rooms",
               "entries": [
-                "Use the existing Cardon Weavehouse DM map and the following room functions. Routes and doors are summarized in the next section.",
+                "Numbered locations on the approved Weavehouse map:",
                 "1. Timekeeper and attendance desk: Daytime clerk checks work hours and labor slips.",
                 "2. Public receiving/check-in: Petitions and escorted visitors are directed from here.",
                 "3. Wool inspection: Raw fleece is counted and graded.",
@@ -1203,25 +1203,24 @@
                 "5. Thread and dye ingredients: Locked consumable store.",
                 "6. Finished cloth inventory: Counted bales awaiting dispatch.",
                 "7. North store closet: Routine tools and wrapping supplies.",
-                "8. Western service passage: Western service passage and Bugbear patrol waypoint.",
+                "8. Western service passage: Bugbear patrol waypoint.",
                 "9. Worker sleeping room A: Four workers; locked after headcount.",
                 "10. Worker sleeping room B: Four workers; locked after headcount.",
                 "11. Chief overseer's office: Hobgoblin Captain's desk, central roster, spare worker keys, reporting bell.",
-                "12. Clerk files and supplies: Routine records and work orders if the printed room is numbered 12.",
+                "12. Clerk files and supplies: Routine records and work orders.",
                 "13. Dyeing/pressing workroom: Workers during day, generally quiet at night.",
                 "14. Eastern service passage: Circulation to rooms on the east side.",
-                "15. Main production hall: Large floor and loom machinery; Earth Elemental works here during daytime only.",
+                "15. Main production hall: Large work floor and loom machinery; Earth Elemental stationed here during the day.",
                 "16. Cloth finishing and packing: Packed stock, bales and ordinary supplies.",
                 "17. Worker sleeping room C: Five workers; locked after headcount.",
                 "18. Worker sleeping room D: Four workers; locked after headcount.",
-                "19. Jaroood's private accounting and residential suite: Jaroood and Elowen kept together; Gargoyle, Mimic and, after shift, Earth Elemental.",
-                "20. Jaroood's private secure filing room: Personal account records, stationery, sealed releases and correspondence; access through EXISTING passages.",
-                "21. Western receiving/loading point: Service approach and a potential escape route only through actual drawn doors.",
-                "22. Raw-material storage: Cotton and wool bundles, ordinary warehouse storage.",
-                "23. South public approach and reception: Visitor traffic and front-facing circulation, using the actual mapped access.",
+                "19. Jaroood's private office and quarters: Jaroood and Elowen; Gargoyle, Mimic and nighttime Earth Elemental.",
+                "20. Jaroood's private secure filing room: Account records, release paperwork and correspondence.",
+                "21. Western receiving/loading point: Service entrance and western exit.",
+                "22. Raw-material storage: Cotton and wool bundles.",
+                "23. South public approach and reception: Visitor access and front-facing circulation.",
                 "24. Dispatch/staging: Outgoing cloth and bundles.",
-                "25. Eastern storage and housekeeping: Cleaning and service goods, not extra staff or guards.",
-                "Workers are confined in Rooms 9 (4), 10 (4), 17 (5), 18 (4). Elowen stays in Room 19. Jaroood's private financial files are in Room 20."
+                "25. Eastern storage and housekeeping: Cleaning and service supplies."
               ]
             },
             {
@@ -1229,21 +1228,21 @@
               "name": "Workers, Guard Posts and Daily Schedule",
               "entries": [
                 "18 indentured workers in total: Room 9: four; Room 10: four; Room 17: five; Room 18: four; Elowen in Room 19. The dormitories are locked after evening headcount.",
-                "CAPTAIN: {@creature Hobgoblin Captain|XMM} based in Room 11, with records, spare keys and the only bell. Coordinates containment during an alarm, staying at his post unless there is a genuine reason to travel.",
+                "CAPTAIN: {@creature Hobgoblin Captain|XMM}, Room 11, with roster, keys and alarm bell. Coordinates responses to breakouts.",
                 "WARRIOR: {@creature Hobgoblin Warrior|XMM} posted in the corridor outside Rooms 9/10, carrying room keys. Checks the corridor outside Rooms 17/18 once an hour, then returns along the same passages.",
                 "BUGBEAR: {@creature Bugbear Warrior|XMM} checks the Room 21 loading threshold, passes the Room 8 corridor and workers' approach corridors near Rooms 9/10 and 17/18, then returns. An eight-minute circuit includes inspections and pauses. Investigates a lone sound before resuming his circuit.",
                 "CLERK: works near Rooms 2 and 11 during business hours and leaves after closing. Jaroood handles inspections and petitions by day; he and Elowen remain in Room 19 overnight.",
-                "PERSONAL DEFENDERS: the {@creature Earth Elemental|XMM} works in Room 15 by day, returns to Room 19 after closing; {@creature Gargoyle|XMM} resembles stone decoration in Room 19; {@creature Mimic|XMM} resembles a gilded coffer there. The separate activation conditions appear below and in the combat sheet."
+                "PERSONAL DEFENDERS: {@creature Earth Elemental|XMM}, Room 15 by day and 19 after close; {@creature Gargoyle|XMM}, stone decoration in 19; {@creature Mimic|XMM}, gilded coffer in 19."
               ]
             },
             {
               "type": "entries",
               "name": "Access, Alarm, Doors and Security Response",
               "entries": [
-                "ENTRY: Daytime public approach at Room 23; western after-hours loading door at Room 21 (DC 15 Dexterity with Thieves' Tools). Drysa's exterior-only report is in Chapter 6. The Bugbear crosses the visible loading threshold during its circuit.",
+                "ENTRANCES: Public entry at Room 23; Room 21 loading access locked after hours (DC 15 Dexterity [Thieves' Tools]). The Bugbear passes Room 21 on patrol. Drysa's exterior report is in Chapter 6.",
                 "BELL: Room 19 pull cord reaches a brass bell at Room 11 through ceiling/wall eyelets. A reachable segment outside Room 19 can be quietly disconnected with DC 13 Dexterity (Thieves' Tools) or cut as an action (AC 12, 5 HP). The bell alerts only people inside the Weavehouse.",
-                "NOISE: A single unexplained noise prompts ONE guard, usually the Bugbear, to investigate; with no evidence he returns to patrol muttering 'Must be the wind.' Repeated heavy fighting or a discovered breach produces further investigation and ordinary shouted or face-to-face reporting.",
-                "ALARM / BREAKOUT: Captain organizes containment from Room 11; Warrior secures rooms and corridor access; Bugbear recaptures workers. Staff are protecting revenue-producing assets: workers are captured alive using grapples, shoves, restraints or knockout melee. Armed intruders may be fought lethally.",
+                "NOISE: One ambiguous sound → one guard investigates, then 'Must be the wind' if no evidence. Sustained fighting, broken doors or escaping workers → continued investigation and ordinary report to the Captain.",
+                "ALARM / BREAKOUT: Captain coordinates from Room 11, Warrior secures locked quarters, Bugbear recaptures escapees. Guards use grapples, shoves, restraints and nonlethal melee on workers; armed intruders may be attacked lethally.",
                 "KEYS: Master key on Jaroood opens all four worker rooms; Warrior and Captain have keys. Each door costs one action to unlock and open with a key. Picking a lock is DC 15 Dexterity (Thieves' Tools). Workers run independently as soon as their own door opens.",
                 "EARTH ELEMENTAL: 60-ft Tremorsense detects contact with a connected surface, not a creature's identity or intention. It activates on Jaroood's explicit Terran command 'Defend your master' OR when it actually perceives an attack affecting Jaroood or itself in Room 19; it need not see the attacker. Mere footsteps never trigger combat.",
                 "OTHER DEFENDERS: Gargoyle reacts to a clear attack or Terran order. Mimic responds to disturbance, prey or fighting in its area, not verbal orders. Earth Glide does not let the Earth Elemental pass through worked stone walls."
@@ -1255,7 +1254,7 @@
               "entries": [
                 "Cardon Weavehouse belongs to the Crown. Perrin Cardon departed with the former Council. Jaroood has complete operational authority over the workers, production, discipline, fees and release orders.",
                 "Jaroood is a 243-year-old high elf who arrived with Prince Reginald. He profits from the forced labor system through 10% of new debt assessed beyond each worker's original principal. His priority is wealth and his standing with the Crown.",
-                "Elowen is Kaleb's widow and serves Jaroood. She wants freedom. The party heard an asserted debt of 150 gp principal, 200 gp administrative fees and 50 gp per billed day. Jaroood's CURRENT SESSION 5 ledger lists four days for a total of 550 gp; the players have not yet heard this day count. Pepper offered money; no payment or release has taken place."
+                "Elowen, Kaleb's widow, serves Jaroood and wants freedom. The party heard 150 gp principal + 200 gp administrative charges + 50 gp per billed day; Jaroood's current ledger shows four billed days (550 gp total), not yet disclosed to the party. Pepper offered money, with no payment confirmed."
               ]
             },
             {
@@ -1266,7 +1265,7 @@
                 "{@b Voice and gestures.} Perform a younger and more vigorous Mr. Burns: nasal, soft, precise, delighted by profit, and condescending without shouting. He steeples his fingers when pleased, checks the edge of a ledger before replying, glances at a pocket watch when someone wastes time, and uses {@spell Prestidigitation|XPHB} to clean dust from his clothes after inspections. When royal authority is credible, he straightens and becomes swiftly deferential.",
                 "{@b Belief and motivation:} He regards indentured slavery as justified debt collection and workers as sources of profit. He wants wealth, security and continuing royal favor. He fears the Crown's displeasure.",
                 "{@b Authority:} Jaroood controls operations, assessments, custody and discharge signatures at the Crown-owned Weavehouse. He can sign Elowen's release himself; authentic royal orders outrank him.",
-                "{@b Commission and Elowen's invoice:} Starting Session 5, Jaroood's ledger has FOUR billed room-and-board days for Elowen. Her current claimed total is 150 gp original principal + 200 gp administrative fees + (4 × 50 gp) board = {@b 550 gp}. Jaroood's 10% commission on the added fees/board is {@b 40 gp}. Each additional billed day raises the balance by 50 gp and his commission by 5 gp. This four-day count is new SESSION 5 PREP, not a statement already made to the players.",
+                "{@b Elowen's account:} Four billed days: 150 gp principal + 200 gp administrative fees + 200 gp board = {@b 550 gp}. Jaroood's authorized commission on the added charges: {@b 40 gp}. Every additional billed day adds 50 gp to the balance and 5 gp to his commission.",
                 "{@b Routine:} Morning work orders and inspections; afternoon petitions and fees; evening accounting in Room 19, his private residential suite. Elowen serves and sleeps behind a screen in Room 19. Jaroood's private files are in Room 20; the labor ledger is held with the clerical records by Room 11.",
                 "{@b Possessions:} Crown signet ring, gold watch, personal commission ledger and master key for all four sleeping rooms (9, 10, 17, 18).",
                 "{@b Knows:} Names and debt accounts of workers, internal security, authorized Crown procedures. He has no knowledge of Tulcornix having approached the PCs or of their covert plan.",
@@ -1281,8 +1280,8 @@
               "entries": [
                 "{@b Scene:} Jaroood is working at his desk with Elowen attending to papers. The suite's ceiling is 15 feet high. A screened cot stands nearby. The Gargoyle looks like stone decoration, the Mimic like a decorated document chest, and the Earth Elemental is present after hours.",
                 "{@b Elowen:} She seeks cover or an exit when fighting starts. She knows Kaleb is dead; whether she already knows Pepper killed him hasn't been established. She can open with: 'Who are you? What are you doing here?' If she learns the truth about Kaleb, she can express grief or anger even while wanting freedom.",
-                "{@b If it becomes a fight:} Jaroood 9 HP, Earth Elemental 147, Gargoyle 67, Mimic 58. Total 281 HP / 2,725 XP. The three labor guards stay on their own duties until they have reason to respond, with actual movement through the corridors.",
-                "{@b Defenses:} Jaroood can pull the bell or order the defenders in Terran. Earth Elemental activates only on its approved triggers, the Gargoyle on threats/orders, and Mimic on nearby prey/violence. Use the full published attacks and traits in the Run Sheet."
+                "{@b Combatants:} Jaroood 9 HP, Earth Elemental 147, Gargoyle 67, Mimic 58. The labor guards begin at their ordinary posts and respond to any alarm or evidence they receive.",
+                "{@b Defenders:} Jaroood can pull the bell or command his defenders in Terran. The Earth Elemental reacts to a command or an attack it perceives; Gargoyle to threats/orders; Mimic to nearby prey/violence."
               ]
             },
             {
@@ -1290,7 +1289,7 @@
               "name": "Release, Escape and Investigation",
               "entries": [
                 "Once a worker-room door opens, its occupants run toward accessible exterior doors on their own: Room 9 (4), 10 (4), 17 (5), 18 (4). Elowen is the eighteenth. Guards may catch individuals but are forbidden to kill worker assets.",
-                "Opening dormitories early can alert containment guards and, if a warning reaches Jaroood, affect his preparations. Opening them after a private confrontation lets the players exploit guards who haven't yet learned of the attack.",
+                "An early breakout alerts any guard who discovers it. Jaroood can respond if he receives a warning; guards unaware of a confrontation remain on their assigned duties.",
                 "The Crown investigates discovered murders, property destruction and escapes through staff testimony, physical evidence and accounts. It currently has no knowledge linking the party and Tulcornix. Outstanding debt claims persist after an unauthorized physical escape."
               ]
             }
