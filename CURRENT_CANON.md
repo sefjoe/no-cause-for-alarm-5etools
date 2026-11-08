@@ -39,7 +39,7 @@ The Crown's control of old municipal service contracts, debt assessments and for
 
 **Jord:** The party earlier rescued his stolen horse and strongbox; he still honors the promised 20% party discount. His hotel room has been requisitioned for Crown barracks, so he arrives at Ledger House seeking a room. Jord offers **one PERSONAL Hat of Disguise as a gift**, which transfers only if accepted in play. It isn't part of his shop stock and doesn't remove Edda Pell's separately cataloged hat. The item requires a Short Rest to attune to one wearer; the party picks who. Jord doesn't know the rescue plan by default.
 
-The detailed opening narration, tiered familiar read-aloud, dialogue branches and contingency checks are in Chapter 6 of the live JSON. The old illustrated Ledger House shrine label is superseded by Brakkus's established worship of **Oghma**. No spell list or backstory was invented for Detritus.
+Chapter 6 of the live JSON now starts with the **temporary table-read Session 5 recap monologue**, followed by the Ledger House opening, Drysa's tiered roll descriptions, Detritus's introduction, Brakkus and Aaron's dialogue, and Jord's gift. Previous-session history and the location maps remain in the chapter, after the active prep. The Ledger House shrine is dedicated to **Oghma**, despite the older illustration's label. Detritus's unrevealed details remain open.
 
 ## Session 5 Weavehouse encounter (LOCKED PREP, not played)
 
@@ -57,7 +57,7 @@ The existing numbered map now has explicit operating routes in the **current 5et
 
 **Jord's Hat of Disguise is a GIFT, never a loan.** He offers one personal hat when he comes seeking lodging at Ledger House. Ownership transfers only when the party accepts it in play; a character must attune before using it. Neither Jord's wagon catalog nor Edda Pell's separate stocked hat is modified by this offer.
 
-Chapter 8 now contains a **one-page initiative and security sheet**, with the 2024 AC, HP, initiative, attacks and special features of the Earth Elemental, Gargoyle, Mimic, Hobgoblin Captain, Hobgoblin Warrior and Bugbear Warrior, alongside Jaroood's existing AC 15 / 9 HP, minis and binder locations, alarm/key DCs and guard-response procedure. Published 2024 stat blocks prevail for monster rules. This is **locked prep, not played history**.
+Chapter 8 of the live JSON now opens with the approved **2024 initiative and security run sheet** (AC, HP, initiative, attacks, senses, speeds, guard actions, lock DCs, minis and binder locations), followed by mapped routes and all 25 numbered rooms, worker posts, Jaroood's dossier, the Room 19 confrontation and possible escape consequences. Jaroood remains AC 15 / 9 HP. This is **locked preparation, not played history**.
 
 ## Brakkus and the supernatural
 
