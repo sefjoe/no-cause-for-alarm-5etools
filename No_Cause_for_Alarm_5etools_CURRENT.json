@@ -6,18 +6,18 @@
         "json": "NCFA",
         "abbreviation": "NCFA",
         "full": "No Cause for Alarm: Ruins of Bellweather",
-        "version": "5.5",
+        "version": "5.6",
         "authors": [
           "No Cause for Alarm Campaign"
         ],
-        "dateLastModified": 1794168000,
-        "_dateLastModifiedHash": "ncfa-v5.5-34x22-mat-20261108"
+        "dateLastModified": 1794170400,
+        "_dateLastModifiedHash": "ncfa-v5.6-verified-34x22-svg-session5-20261108"
       }
     ],
     "edition": "one",
     "dateAdded": 1789528955,
-    "dateLastModified": 1794168000,
-    "_dateLastModifiedHash": "ncfa-v5.5-34x22-mat-20261108"
+    "dateLastModified": 1794170400,
+    "_dateLastModifiedHash": "ncfa-v5.6-verified-34x22-svg-session5-20261108"
   },
   "adventure": [
     {
@@ -902,29 +902,33 @@
                       "type": "image",
                       "href": {
                         "type": "external",
-                        "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_34x22_LOCKED_one_sheet_build.svg"
+                        "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_34x22_VERIFIED_DM.svg"
                       },
                       "imageType": "map",
-                      "title": "LOCKED Cardon Weavehouse — 34×22 DM Build",
+                      "title": "Cardon Weavehouse 34×22 VERIFIED DM Build (Current)",
                       "grid": {
                         "type": "none"
-                      }
+                      },
+                      "width": 1460,
+                      "height": 1510
                     },
                     {
                       "type": "image",
                       "href": {
                         "type": "external",
-                        "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/cardon_weavehouse_34x22_mat_player.svg"
+                        "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/cardon_weavehouse_34x22_VERIFIED_PLAYER.svg"
                       },
                       "imageType": "mapPlayer",
-                      "title": "Cardon Weavehouse — 34×22 Player Map",
+                      "title": "Cardon Weavehouse 34×22 VERIFIED Player Floor Plan (Current)",
                       "grid": {
                         "type": "none"
-                      }
+                      },
+                      "width": 1370,
+                      "height": 1070
                     }
                   ]
                 },
-                "AT-TABLE MAPS: {@link CURRENT 34×22 DM One-Sheet|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_34x22_LOCKED_one_sheet_build.svg}; {@link CURRENT 34×22 Player Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/cardon_weavehouse_34x22_mat_player.svg}; {@link Room/door/miniature coordinates|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/docs/Cardon_Weavehouse_34x22_Usable_Mat_Build.md}. Entire usable mat is inside the building; exterior approaches are off-mat."
+                "AT-TABLE MAPS: {@link CURRENT 34×22 DM One-Sheet|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_34x22_VERIFIED_DM.svg}; {@link CURRENT 34×22 Player Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/cardon_weavehouse_34x22_VERIFIED_PLAYER.svg}; {@link Room/door/miniature coordinates|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/docs/Cardon_Weavehouse_34x22_Usable_Mat_Build.md}. Entire usable mat is inside the building; exterior approaches are off-mat."
               ]
             },
             {
@@ -946,7 +950,7 @@
               "name": "RUN SHEET — 2024 Initiative, Monsters and Security",
               "entries": [
                 "BUILD GEOMETRY: Entire 34×22 usable mat is the Weavehouse, x0–34/y0–22. West and south exterior approaches are OFF-MAT. ROOM 19: Jaroood, Earth Elemental, Gargoyle, Mimic (281 HP total / 2,725 XP). LABOR GUARDS: Captain Room 11, Warrior west corridor, Bugbear west patrol.",
-                "PHYSICAL BUILD LOCKED: Use CURRENT 34×22 one-sheet map at https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_34x22_LOCKED_one_sheet_build.svg. Twelve rooms, 16 door openings, bell in Room 11, exposed cord outside Room 19, four worker counts (4/4/5/4), seven Arcknight miniature positions. D1 and D4–D7 are the applicable locked doors. The 2×2 Earth Elemental traverses the existing corridors and three-square suite entry. The two outdoor approaches are OFF-MAT.",
+                "PHYSICAL BUILD LOCKED: Use CURRENT 34×22 one-sheet map at https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_34x22_VERIFIED_DM.svg. Twelve rooms, 16 door openings, bell in Room 11, exposed cord outside Room 19, four worker counts (4/4/5/4), seven Arcknight miniature positions. D1 and D4–D7 are the applicable locked doors. The 2×2 Earth Elemental traverses the existing corridors and three-square suite entry. The two outdoor approaches are OFF-MAT.",
                 {
                   "type": "table",
                   "caption": "Room 19 — Private fight",
@@ -1068,7 +1072,7 @@
                 "19. Jaroood's private suite: (24,12)–(34,22), 10×10, 15-foot ceiling. Jaroood and Elowen; Gargoyle, Mimic and nighttime Earth Elemental. Jaroood keeps his private cashbox in a concealed compartment of his existing writing desk (500 gp; see Stash section). The suite's northern doorway is 3 squares wide, x27–30 at y12.",
                 "CONNECTING PASSAGES: western x7–10 is 3 squares wide; central y10–12 is 2 wide; eastern service x22–24 is 2 wide; southern link x17–19 is 2 wide. All room sizes are preserved.",
                 "PHYSICAL BUILD: draw all walls and the 16 indicated doorway gaps. No unverified plastic door counts, worker counters or physical furniture are part of the required setup. Optional corner walls are shown by blue dots on the build overlay. Drawn props: Jaroood's desk (2×1), cot (2×1), two production looms (3×1 each), and one screen line; the Mimic miniature represents the ornate chair at (25,16); no separate chair prop is required.",
-                "BUILD REFERENCE: {@link CURRENT 34×22 DM Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_34x22_LOCKED_one_sheet_build.svg}, {@link Player Floor Plan|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/cardon_weavehouse_34x22_mat_player.svg}, {@link Exact build coordinates|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/docs/Cardon_Weavehouse_34x22_Usable_Mat_Build.md}. Larger-mat exterior-strip maps are legacy and not for this battle mat."
+                "BUILD REFERENCE: {@link CURRENT 34×22 DM Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_34x22_VERIFIED_DM.svg}, {@link Player Floor Plan|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/cardon_weavehouse_34x22_VERIFIED_PLAYER.svg}, {@link Exact build coordinates|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/docs/Cardon_Weavehouse_34x22_Usable_Mat_Build.md}. Larger-mat exterior-strip maps are legacy and not for this battle mat."
               ]
             },
             {
@@ -2188,8 +2192,8 @@
               "type": "list",
               "items": [
                 "{@link Blackstone Temple — DM Key|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/blackstone_temple.webp}",
-                "{@link Cardon Weavehouse — CURRENT 34×22 Usable Mat|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_34x22_LOCKED_one_sheet_build.svg}",
-                "{@link Cardon Weavehouse — CURRENT Player Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/cardon_weavehouse_34x22_mat_player.svg}",
+                "{@link Cardon Weavehouse — CURRENT 34×22 Usable Mat|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_34x22_VERIFIED_DM.svg}",
+                "{@link Cardon Weavehouse — CURRENT Player Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/cardon_weavehouse_34x22_VERIFIED_PLAYER.svg}",
                 "{@link Cardon Weavehouse — LEGACY Outdoor-Strip Layout|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_34x22_outdoor.svg}",
                 "{@link Cardon Weavehouse — Original 25-Space Legacy Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse.webp}",
                 "{@link Emmer Hold — DM Key|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/emmer_hold.webp}",
