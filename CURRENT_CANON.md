@@ -49,6 +49,8 @@ A keyed plan for all numbered areas, guard routines, alarm, witness handling and
 
 **Room 19 has a 15-foot ceiling** so the Gargoyle can use its normal flight without changing the map's walls, doors or passages. These are final approved session-prep clarifications. The Weavehouse is **locked for Session 5**, and further work should focus on the rest of the session unless the DM expressly asks to revise this encounter. No part of the locked prep is treated as already played.
 
+**Session 5 billing and civilian mechanics (audited prep):** Jaroood's starting ledger lists four billed board days for Elowen: 150 gp principal + 200 gp administrative fees + 200 gp board = **550 gp due**, with **40 gp of Jaroood's commission** on the additions. This billed-day count was set for preparation and has not yet been disclosed in play. Subsequent billed days add 50 gp to the claim and 5 gp to his commission. The clerk and indentured workers (including Elowen) use the 2024 Commoner baseline (AC 10, HP 4, Speed 30 ft.) when combat statistics are needed. All other locked Weavehouse mechanics are preserved.
+
 ## Session 5 Weavehouse table routes and combat sheet (LOCKED PREP)
 
 The existing numbered map now has explicit operating routes in the **current 5etools JSON**, Chapter 8. The southern public approach at **Room 23** connects by the existing southern hall to the **west-side doorway of Room 19**. The western loading approach at **Room 21** follows the western service corridor past **Room 8**, the worker-wing corridor outside **Rooms 17/18**, and the southern interior hall to Room 19. These directions are waypoints beside numbered rooms, not permission to cut through locked worker rooms or create extra doors. **Room 20** remains Jaroood's separate secure files.
