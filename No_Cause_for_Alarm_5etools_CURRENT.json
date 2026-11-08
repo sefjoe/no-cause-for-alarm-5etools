@@ -6,18 +6,18 @@
         "json": "NCFA",
         "abbreviation": "NCFA",
         "full": "No Cause for Alarm: Ruins of Bellweather",
-        "version": "5.2",
+        "version": "5.3",
         "authors": [
           "No Cause for Alarm Campaign"
         ],
-        "dateLastModified": 1794152275,
-        "_dateLastModifiedHash": "ncfa-v5.2-fullmat-weavehouse-12rooms-20261108"
+        "dateLastModified": 1794157013,
+        "_dateLastModifiedHash": "ncfa-v5.3-36x24-outdoor-no-markers-20261108"
       }
     ],
     "edition": "one",
     "dateAdded": 1789528955,
-    "dateLastModified": 1794152275,
-    "_dateLastModifiedHash": "ncfa-v5.2-fullmat-weavehouse-12rooms-20261108"
+    "dateLastModified": 1794157013,
+    "_dateLastModifiedHash": "ncfa-v5.3-36x24-outdoor-no-markers-20261108"
   },
   "adventure": [
     {
@@ -101,10 +101,10 @@
         {
           "name": "Chapter 8: Cardon Weavehouse — Session 5 Site",
           "headers": [
-            "Maps — 36×24 Full-Mat Layout",
+            "Maps — 36×24 Mat With West and South Outdoors",
             "RUN SHEET — 2024 Initiative, Monsters and Security",
             "Routes — Approaches, Patrols and Escape",
-            "Room Key — 12 Functional Rooms (Full-Mat Build)",
+            "Room Key — 12 Rooms / 34×22 Building on 36×24 Mat",
             "Workers, Guard Posts and Daily Schedule",
             "Access, Alarm, Doors and Security Response",
             "Authority and Elowen",
@@ -1007,7 +1007,7 @@
           "entries": [
             {
               "type": "entries",
-              "name": "Maps — 36×24 Full-Mat Layout",
+              "name": "Maps — 36×24 Mat With West and South Outdoors",
               "entries": [
                 {
                   "type": "gallery",
@@ -1016,10 +1016,10 @@
                       "type": "image",
                       "href": {
                         "type": "external",
-                        "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_36x24.svg"
+                        "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_34x22_outdoor.svg"
                       },
                       "imageType": "map",
-                      "title": "Cardon Weavehouse — New 36×24 DM Key",
+                      "title": "Cardon Weavehouse — DM 36×24 Two-Strip Outdoor Plan",
                       "grid": {
                         "type": "none"
                       }
@@ -1028,10 +1028,10 @@
                       "type": "image",
                       "href": {
                         "type": "external",
-                        "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/cardon_weavehouse_36x24_player.svg"
+                        "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/cardon_weavehouse_34x22_outdoor_player.svg"
                       },
                       "imageType": "mapPlayer",
-                      "title": "Cardon Weavehouse — Player Layout",
+                      "title": "Cardon Weavehouse — Player 36×24 Two-Strip Outdoor Plan",
                       "grid": {
                         "type": "none"
                       }
@@ -1040,10 +1040,10 @@
                       "type": "image",
                       "href": {
                         "type": "external",
-                        "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_36x24_build.svg"
+                        "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_34x22_outdoor_build.svg"
                       },
                       "imageType": "map",
-                      "title": "Cardon Weavehouse — Physical Terrain Overlay D1–D8 W1–W12",
+                      "title": "Cardon Weavehouse — Physical Draw/Corner Build Guide",
                       "grid": {
                         "type": "none"
                       }
@@ -1056,7 +1056,7 @@
               "type": "entries",
               "name": "RUN SHEET — 2024 Initiative, Monsters and Security",
               "entries": [
-                "FULL-MAT LAYOUT: 36×24 one-inch squares, 5 ft each; 12 functional rooms. ROOM 19: Jaroood, Earth Elemental, Gargoyle, Mimic (281 HP total / 2,725 XP). LABOR SECURITY: Captain Room 11, Warrior at the four dormitory doors, Bugbear on west corridor patrol. Published 2024 creatures and the NCFA Jaroood stats appear below.",
+                "BUILD GEOMETRY: the 36×24 mat has a 34×22-square Weavehouse occupying x2–36/y0–22 and two-square west and south outdoor strips. ROOM 19: Jaroood, Earth Elemental, Gargoyle, Mimic (281 HP total / 2,725 XP). LABOR GUARDS: Captain Room 11, Warrior in worker corridor, Bugbear west-patrol route. See start squares below.",
                 {
                   "type": "table",
                   "caption": "Room 19 — Private fight",
@@ -1098,8 +1098,9 @@
                     ]
                   ]
                 },
+                "START SQUARES (NW coordinate is the square's top-left): Captain #72 (32,2) in Room 11; Warrior #59 (10,15) in west worker corridor; Bugbear #70 (10,4) on west loading patrol; Jaroood proxy #28 (31,16); Gargoyle #121 (34,14); Mimic #115 (27,16), disguised coffer; Earth Elemental #151 occupies 2×2 squares (x32–34,y18–20); Elowen is at (28,18) but needs no dedicated miniature. The first seven miniatures are pulled from the Arcknight binder.",
+                "WORKERS: write 4 in Room 9, 4 in Room 10, 5 in Room 17, and 4 in Room 18 on the dry-erase mat. Erase the count when that room is freed. No numbered markers or worker miniatures are required. Keep the room's people in narration as they flee.",
                 "SENSES: Jaroood passive Perception 14; Earth Elemental 10 (Tremorsense 60 ft.); Gargoyle 10 (Stealth +4); Mimic 11 (Stealth +5); Captain 10; Warrior 10; Bugbear 10 (Stealth +6). SPEED: Earth Elemental 30 ft./Burrow 30 ft., Gargoyle 30 ft./Fly 60 ft., Mimic 20 ft., all three labor guards 30 ft.",
-                "STARTING POSITIONS: Jaroood at desk/bell and Elowen in Room 19 (x25–36, y14–24); Gargoyle as stonework, Mimic as coffer, Earth Elemental on night shift. Room 19's two-square north doorway is x29–31, y14.",
                 "CIVILIANS: Clerk, Elowen and ordinary workers use {@creature Commoner|XMM}: initiative +0 (10), AC 10, HP 4, Speed 30 ft., Passive Perception 10. In an escape they seek cover or flee. 2024 nonlethal melee: a target otherwise reduced to 0 HP can be left Unconscious at 1 HP.",
                 "ELEMENTAL TRIGGER: mere Tremorsense movement is NOT hostile action. It attacks upon deliberate Terran order from Jaroood or perceiving actual attacks/effects upon Jaroood or itself. The attacker may be unseen, but the attack must actually be perceived. Mimic reacts to being handled/seeing prey or a genuine fight; does not obey spoken orders. Gargoyle protects Jaroood when ordered or threatened.",
                 "JAROOOD: AC 15, HP 9. He may give a Terran defense command, sound the internal bell, use Misty Step, bargain, flee or surrender.",
@@ -1149,34 +1150,35 @@
               "type": "entries",
               "name": "Routes — Approaches, Patrols and Escape",
               "entries": [
-                "PUBLIC ENTRY: Exterior south entrance x21–23, y24 → Room 23 (reception x19–25, y19–24) → west reception door x19 near y21 → south service corridor x17–19 → central hallway y12–14 → Room 19 suite door x29–31, y14.",
-                "LOADING ENTRY: Exterior west entrance x0, y3–5 → Room 21 loading (x0–7, y0–7) → east door x7 near y4 → west service corridor x7–10 (3 squares wide) → central hallway y12–14 → Room 19 suite door x29–31, y14.",
-                "BUGBEAR: Room 21 loading threshold → western corridor x7–10, past the four worker-room doors (Rooms 9,10,17,18) → turn and retrace route to Room 21. An approximately eight-minute circuit includes inspection pauses.",
-                "WARRIOR: Posted in the three-square west corridor x7–10 between worker rooms 9/10 and 17/18; makes an hourly check of the worker doors. CAPTAIN: Room 11 → east service corridor x24–26 → central hall y12–14 → north door of Room 19 if a response is warranted.",
-                "WORKERS: Doors of Rooms 9/10 (at x7) and 17/18 (at x10) open into the same west corridor. From there, they can move north into Room 21 and exit west, or move east through central hall y12–14, south corridor x17–19 and reception Room 23 to the south exit.",
-                "GEOMETRY: Northwest corner is (0,0). One square equals 5 feet. Central hall y12–14 and southern corridor x17–19 are two squares wide; west worker corridor x7–10 is three squares wide. All 12 rooms were checked as reachable from both exterior entrances."
+                "WEST EXTERIOR: the mat's outdoor strip is x0–2, y0–24. West building loading entrance at (x2,y3–5) enters Room 21 (x2–9,y0–6), then the interior door (x9,y3–5) reaches the western service corridor x9–12.",
+                "SOUTH EXTERIOR: the outdoor strip is y22–24, x0–36. South public entrance (x22–24,y22) enters reception Room 23 (x21–26,y17–22). Its western doorway (x21,y19–21) reaches the south service link x19–21, which joins the central hall at y10–12.",
+                "PRIVATE SUITE: central hall y10–12 → north suite entrance (x29–32,y12), a THREE-square opening, → Jaroood's Room 19 (x26–36,y12–22). The two-square main hall is wide enough for a rules-sized Large creature occupying 2×2 squares.",
+                "BUGBEAR: starts at (10,4) near the loading-room interior door; patrols down the western corridor x9–12 past the four dormitory doors and returns the same way, checking Room 21's threshold on each eight-minute circuit.",
+                "WARRIOR: starts at (10,15) in the three-square western worker corridor, outside all four dormitory doorways; performs an hourly headcount route, returning to the same corridor post. CAPTAIN: starts at (32,2) in Room 11; exits to eastern service corridor x24–26, then central hall y10–12 toward Room 19 when a response is warranted.",
+                "WORKER ESCAPE: the four dormitory doors open into the three-square-wide x9–12 worker corridor. Escaping workers can head north toward Room 21's western exterior or east along the central hall, south via x19–21 and through Room 23 to the southern exterior. The two outdoor strips support approaching and escaping figures.",
+                "GRID: 1 square = 5 feet. Use measured on-map movement for fights; patrol's eight-minute timing includes stops. No physical door or wall props are mandatory. Optional STAHLHAMMERS wall pieces can accent corners only, leaving the grid lanes clear."
               ]
             },
             {
               "type": "entries",
-              "name": "Room Key — 12 Functional Rooms (Full-Mat Build)",
+              "name": "Room Key — 12 Rooms / 34×22 Building on 36×24 Mat",
               "entries": [
-                "Current 36×24 one-mat layout. The 12 room numbers retain the prior identifiers used by locks, roster, combat and escape mechanics. Each rectangle is given as (northwest x,y) to (southeast x,y), measured in 5-foot squares.",
-                "21. Western loading / raw goods / dispatch: (0,0)–(7,7), 7×7. West exterior entrance and materials handling.",
-                "6. Storage, dye ingredients, tools, housekeeping: (0,7)–(7,12), 7×5.",
-                "15. Main weaving, production, pressing: (10,0)–(24,12), 14×12. Earth Elemental daytime location.",
-                "11. Captain's office, attendance and clerk records: (26,0)–(36,6), 10×6. Backup keys, shift ledger and mechanical alarm bell.",
-                "4. Cloth finishing and packing: (26,6)–(36,12), 10×6.",
-                "9. Worker dormitory A: (0,14)–(7,19), 7×5. Four workers, locked at night.",
-                "10. Worker dormitory B: (0,19)–(7,24), 7×5. Four workers, locked at night.",
-                "17. Worker dormitory C: (10,14)–(17,19), 7×5. Five workers, locked at night.",
-                "18. Worker dormitory D: (10,19)–(17,24), 7×5. Four workers, locked at night.",
-                "20. Jaroood's private financial records and releases: (19,14)–(25,19), 6×5.",
-                "23. Public reception / check-in / petitions: (19,19)–(25,24), 6×5. South exterior entrance.",
-                "19. Jaroood's private office/residence: (25,14)–(36,24), 11×10. Jaroood and Elowen; nighttime Gargoyle, Mimic, Earth Elemental. Ceiling 15 ft; north suite doorway 10 ft wide.",
-                "CORRIDORS: western worker-service x7–10, eastern service x24–26 north of central hall, east–west hall y12–14, southern service x17–19. All full drawn room outlines, physical reinforcement at 8 door segments and 12 straight wall segments.",
-                "CONSOLIDATED OLD ROOMS: 1/12 into 11; 2 into 23; 3/22/24 into 21; 5/7/25 into 6; 13 into 15; 16 into 4; prior Rooms 8 and 14 are corridor functions now rather than separate rooms. All play-critical rooms retain their numbers and contents.",
-                "Build reference: {@link 36×24 terrain overlay|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_36x24_build.svg} and {@link detailed setup key|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/docs/Cardon_Weavehouse_36x24_Build_Guide.md}."
+                "The one-mat building occupies (2,0)–(36,22) in 5-foot squares, leaving 10 feet outdoors along the west (x0–2) and south (y22–24). Draw wall lines and door gaps as shown on the active DM map.",
+                "21. Loading and raw goods: (2,0)–(9,6), 7×6. West exterior entry; daytime receiving and dispatch.",
+                "6. Storage and supplies: (2,6)–(9,10), 7×4.",
+                "15. Weaving and production: (12,0)–(24,10), 12×10. Earth Elemental's daytime position.",
+                "11. Captain's office and records: (26,0)–(36,5), 10×5. Bell, spare keys, ledgers and captain.",
+                "4. Finishing and packing: (26,5)–(36,10), 10×5.",
+                "9. Worker dormitory A: (2,12)–(9,17), 7×5, four workers, locked at night.",
+                "10. Worker dormitory B: (2,17)–(9,22), 7×5, four workers, locked at night.",
+                "17. Worker dormitory C: (12,12)–(19,17), 7×5, five workers, locked at night.",
+                "18. Worker dormitory D: (12,17)–(19,22), 7×5, four workers, locked at night.",
+                "20. Private files: (21,12)–(26,17), 5×5. Jaroood's records and releases.",
+                "23. Public reception: (21,17)–(26,22), 5×5. Public south entrance.",
+                "19. Jaroood's private suite: (26,12)–(36,22), 10×10, 15-foot ceiling. Jaroood and Elowen; Gargoyle, Mimic and nighttime Earth Elemental. The suite's northern doorway is 3 squares wide, x29–32 at y12.",
+                "CONNECTING PASSAGES: western worker corridor x9–12 is three squares wide; central hall y10–12 is two wide; east service x24–26 is two wide; south service x19–21 is two wide. Other former room numbers were merged into these 12 rooms.",
+                "PHYSICAL BUILD: draw all walls and the 16 indicated doorway gaps. No unverified plastic door counts, worker counters or physical furniture are part of the required setup. Optional corner walls are shown by blue dots on the build overlay. Drawn props: Jaroood's desk (2×1), cot (2×1), two production looms (3×1 each), and one screen line; the Mimic miniature represents the coffer.",
+                "REFERENCES: {@link active no-marker DM map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_34x22_outdoor.svg}; {@link build overlay|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_34x22_outdoor_build.svg}; {@link build instructions and mini coordinates|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/docs/Cardon_Weavehouse_Outdoor_Build.md}."
               ]
             },
             {
@@ -1185,8 +1187,8 @@
               "entries": [
                 "18 indentured workers in total: Room 9: four; Room 10: four; Room 17: five; Room 18: four; Elowen in Room 19. The dormitories are locked after evening headcount.",
                 "CAPTAIN: {@creature Hobgoblin Captain|XMM}, Room 11, with roster, keys and alarm bell. Coordinates responses to breakouts.",
-                "WARRIOR: {@creature Hobgoblin Warrior|XMM} posted in the three-square western worker corridor x7–10 outside Rooms 9/10 and 17/18, carrying room keys. Checks all four dormitory doorways once an hour.",
-                "BUGBEAR: {@creature Bugbear Warrior|XMM} checks the Room 21 loading threshold, follows the western corridor x7–10 past the four dormitory doorways, then returns. An eight-minute circuit includes inspections and pauses. Investigates a lone sound before resuming his circuit.",
+                "WARRIOR: {@creature Hobgoblin Warrior|XMM} posted in the three-square western worker corridor x9–12 outside Rooms 9/10 and 17/18, carrying room keys. Checks all four dormitory doorways once an hour.",
+                "BUGBEAR: {@creature Bugbear Warrior|XMM} checks the Room 21 loading threshold, follows the western corridor x9–12 past the four dormitory doorways, then returns. An eight-minute circuit includes inspections and pauses. Investigates a lone sound before resuming his circuit.",
                 "CLERK: works at public reception Room 23 and records Room 11 during business hours and leaves after closing. Jaroood handles inspections and petitions by day; he and Elowen remain in Room 19 overnight.",
                 "PERSONAL DEFENDERS: {@creature Earth Elemental|XMM}, Room 15 by day and 19 after close; {@creature Gargoyle|XMM}, stone decoration in 19; {@creature Mimic|XMM}, gilded coffer in 19."
               ]
@@ -1195,7 +1197,7 @@
               "type": "entries",
               "name": "Access, Alarm, Doors and Security Response",
               "entries": [
-                "ENTRANCES: Public entrance through Room 23 at the south edge. The west loading entrance through Room 21 is locked after hours (DC 15 Dexterity [Thieves' Tools]). The Bugbear passes Room 21 on its x7–10 west-corridor patrol. Drysa's exterior report is in Chapter 6.",
+                "ENTRANCES: Public entrance through Room 23 at the south edge. The west loading entrance through Room 21 is locked after hours (DC 15 Dexterity [Thieves' Tools]). The Bugbear passes Room 21 on its x9–12 west-corridor patrol. Drysa's exterior report is in Chapter 6.",
                 "BELL: Room 19 pull cord reaches a brass bell at Room 11 through ceiling/wall eyelets. A reachable segment outside Room 19 can be quietly disconnected with DC 13 Dexterity (Thieves' Tools) or cut as an action (AC 12, 5 HP). The bell alerts only people inside the Weavehouse.",
                 "NOISE: One ambiguous sound → one guard investigates, then 'Must be the wind' if no evidence. Sustained fighting, broken doors or escaping workers → continued investigation and ordinary report to the Captain.",
                 "ALARM / BREAKOUT: Captain coordinates from Room 11, Warrior secures locked quarters, Bugbear recaptures escapees. Guards use grapples, shoves, restraints and nonlethal melee on workers; armed intruders may be attacked lethally.",
@@ -1234,7 +1236,7 @@
               "type": "entries",
               "name": "Room 19 — Confrontation and Elowen",
               "entries": [
-                "{@b Scene:} Jaroood is working at his desk with Elowen attending to papers. The 11×10-square suite has a 15-foot ceiling and a 2-square-wide north entrance. A screened cot stands nearby. The Gargoyle looks like stone decoration, the Mimic like a decorated document chest, and the Earth Elemental is present after hours.",
+                "{@b Scene:} Jaroood is working at his desk with Elowen attending to papers. The 10×10-square suite has a 15-foot ceiling and a THREE-square-wide north entrance. A screened cot stands nearby. The Gargoyle looks like stone decoration, the Mimic like a decorated document chest, and the Earth Elemental is present after hours.",
                 "{@b Elowen:} She seeks cover or a way out if fighting starts. She knows Kaleb is dead. Whether she knows Pepper killed him is not established. Opening line: 'Who are you? What are you doing here?'",
                 "{@b Combatants:} Jaroood 9 HP, Earth Elemental 147, Gargoyle 67, Mimic 58. The labor guards begin at their ordinary posts and respond to any alarm or evidence they receive.",
                 "{@b Defenders:} Jaroood can pull the bell or command his defenders in Terran. The Earth Elemental reacts to a command or an attack it perceives; Gargoyle to threats/orders; Mimic to nearby prey/violence."
@@ -2189,8 +2191,8 @@
               "type": "list",
               "items": [
                 "{@link Blackstone Temple — DM Key|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/blackstone_temple.webp}",
-                "{@link Cardon Weavehouse — Current 36×24 DM Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_36x24.svg}",
-                "{@link Cardon Weavehouse — Current Physical Build Overlay|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_36x24_build.svg}",
+                "{@link Cardon Weavehouse — Current Outdoor-Strip DM Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_34x22_outdoor.svg}",
+                "{@link Cardon Weavehouse — Current No-Marker Build Overlay|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_34x22_outdoor_build.svg}",
                 "{@link Cardon Weavehouse — Original 25-Space Legacy Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse.webp}",
                 "{@link Emmer Hold — DM Key|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/emmer_hold.webp}",
                 "{@link Kellan's Well — DM Key|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/kellans_well_table_ready.webp}",
