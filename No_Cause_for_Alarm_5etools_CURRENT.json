@@ -78,19 +78,17 @@
         {
           "name": "Chapter 6: Bellweather Under the Crown — Session 4 Record / Session 5 Launch",
           "headers": [
-            "Map: Bellweather Under Crown Administration",
+            "Session 5 — Opening Recap Monologue (TEMPORARY: REMOVE AFTER SESSION)",
+            "Session 5 — At Ledger House",
+            "Drysa — Overnight Watch (Perception Results)",
+            "Detritus — Arrival",
+            "Brakkus and Aaron — Private Conversation",
+            "Jord — A Room and a Gift",
             "Map: Ledger House (Approved DM Map)",
+            "Map: Bellweather Under Crown Administration",
             "Map: Koven House",
             "Session 4 — PLAYED / Authoritative",
-            "Session 5 — Opening Recap Monologue (TEMPORARY: REMOVE AFTER SESSION)",
-            "Session 5 — PREPARED",
-            "Session 5 — Morning at Ledger House (LOCKED PREP, unplayed)",
-            "Drysa Overnight Watch — LOCKED Perception Result Script",
-            "Detritus Arrival — LOCKED Introduction, Vision Still OPEN",
-            "Brakkus and Aaron — LOCKED Private Dialogue",
-            "Jord's Lodging and Hat of Disguise — LOCKED Offer, NOT GIVEN YET",
-            "Opening Branch Checks — LOCKED",
-            "The Crown and Unknowns"
+            "Crown Knowledge — DM Reference"
           ]
         },
         {
@@ -725,89 +723,9 @@
           "entries": [
             {
               "type": "entries",
-              "name": "Map: Bellweather Under Crown Administration",
-              "entries": [
-                {
-                  "type": "gallery",
-                  "images": [
-                    {
-                      "type": "image",
-                      "href": {
-                        "type": "external",
-                        "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/bellweather_crown_approved_2026-10-15.webp"
-                      },
-                      "imageType": "map",
-                      "title": "Bellweather — Crown Administration (Approved October 15, 2026)",
-                      "width": 1448,
-                      "height": 1086
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "entries",
-              "name": "Map: Ledger House (Approved DM Map)",
-              "entries": [
-                {
-                  "type": "gallery",
-                  "images": [
-                    {
-                      "type": "image",
-                      "href": {
-                        "type": "external",
-                        "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/ledger_house.webp"
-                      },
-                      "imageType": "map",
-                      "title": "Ledger House",
-                      "width": 1536,
-                      "height": 1024
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "entries",
-              "name": "Map: Koven House",
-              "entries": [
-                {
-                  "type": "gallery",
-                  "images": [
-                    {
-                      "type": "image",
-                      "href": {
-                        "type": "external",
-                        "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/koven_house.webp"
-                      },
-                      "title": "Koven House — Original DM Key (Conditional Fight)",
-                      "imageType": "map"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "entries",
-              "name": "Session 4 — PLAYED / Authoritative",
-              "entries": [
-                "After the Well, the party killed Noren and his Veteran. The Veteran was beheaded; Arunem carried the body in a bag. A city guard confirmed the Council was gone. The bag was repeatedly slammed to the ground; the precise actor and final whereabouts of the body are not recorded.",
-                "Pepper went alone to the market and had a bad encounter with Edda Pell, half-orc owner of The Spare Button, now voiced with an Irish accent. No specific new debt, injury or shop-ban was established.",
-                "Pepper voluntarily approached Koven House to report Edda. Royal guards recognized her in their records, asserted the Crown held her service contract and detained her for hard labor at the southern ruins.",
-                "Brakkus found and accompanied Jarrock and Aaron in seeking Pepper. He persuaded the guards to release Pepper into HIS custody. It was a negotiated release, not a jail break. Exact terms of the arrangement remain OPEN.",
-                "Bishop Brann told the party the Council sold Bellweather and departed; Brann did not take a payment from the Crown's acquisition. He proposed covert intelligence sharing while the group appeared to be cooperative Crown hires.",
-                "Brann paid outstanding Kellan's Well wages: Jarrock RECEIVED 100 gp, Aaron RECEIVED 100 gp, Arunem RECEIVED 100 gp, Pepper RECEIVED nothing. Do not pay those three shares twice.",
-                "Brakkus described an old legend of possible mind-affecting magic in Bellweather. Brakkus DOES NOT know the true existence or position of the Radiant Well. The party only heard the legend.",
-                "Tulcornix Avemvir, Kaleb's adopted aarakocra brother, sought help freeing his sister-in-law Elowen, Kaleb's widow, from Crown-controlled Weavehouse indenture. A different phonetic name in the session recap does not establish a second person.",
-                "At the table Elowen's alleged debt was stated as 150 gp principal, 200 gp administrative charges and 50 gp/day for room and board. Pepper offered all her money. No release or payment is confirmed.",
-                "Aaron stationed his familiar to watch the Weavehouse overnight. The party started planning a covert rescue. Brakkus advised stealth to protect their cover. The familiar's findings and the party's chosen method are not established."
-              ]
-            },
-            {
-              "type": "entries",
               "name": "Session 5 — Opening Recap Monologue (TEMPORARY: REMOVE AFTER SESSION)",
               "entries": [
-                "{@b DM ONLY — ONE-TIME OPENING:} Read this monologue aloud at the table before the Session 5 Ledger House opening. This entire temporary section can be deleted after Session 5 has been played; do not delete the permanent played-session history or the rest of the Session 5 material.",
+                "{@b Read aloud before the opening scene. Temporary section: remove after Session 5 is played.}",
                 "Our story began during a terrible storm.",
                 "Four strangers found themselves in the city of Bellweather, a free city governed by a council, where they took shelter at an inn called Ledger House.",
                 "There, they met Brakkus Ledgerhelm, a retired paladin of Oghma who had traded his sword for the responsibilities of running an inn.",
@@ -848,84 +766,143 @@
             },
             {
               "type": "entries",
-              "name": "Session 5 — PREPARED",
+              "name": "Session 5 — At Ledger House",
               "entries": [
-                "Begin with the party's unresolved plan to free Elowen and with Aaron's familiar watching the site. Aim for a normal 3–3½-hour game without dictating how many minutes each choice takes.",
-                "Brakkus should have a conversation with Aaron. He knows Aaron is a dhampir and implied Oghma may have guided Aaron to Ledger House. This is Brakkus's belief or question, NOT confirmed divine intervention.",
-                "Brakkus follows his Oghma-informed interest in understanding Aaron rather than judging him by his lineage. Let Aaron's player decide what to share; do not force a grand revelation.",
-                "Let the party choose the approach to the Weavehouse, including a public petition, purchase, forged orders, infiltration, distraction, negotiation or combat. The Crown responds to what its people plausibly learn.",
-                "Brann and Brakkus have reasons to avoid attracting attention, but they are not the PCs' commanders. They continue their own lives."
+                "Morning, Ledger House common room. Breakfast is underway; Brakkus is tending the bar. Aaron's pseudodragon Drysa is returning from the overnight watch of Cardon Weavehouse. The party's unresolved plan is to free Elowen.",
+                "During the morning: Drysa's report; Detritus arrives seeking information; Jord arrives with his luggage after the Crown took over his hotel; Brakkus asks Aaron for a private word. Use the common room and front porch for arrivals and the existing back courtyard for Brakkus's conversation.",
+                "The inn's shrine is dedicated to Oghma. The approved old map labels it differently."
               ]
             },
             {
               "type": "entries",
-              "name": "Session 5 — Morning at Ledger House (LOCKED PREP, unplayed)",
+              "name": "Drysa — Overnight Watch (Perception Results)",
               "entries": [
-                "OPEN at Ledger House's approved ground-floor common room the morning after Aaron's familiar Drysa watched the Weavehouse overnight. Brakkus is tending the bar/breakfast. The party still intends to help Elowen. The four opening beats can overlap: Drysa reports; Elena introduces Detritus; Jord seeks a room and offers a hat; Brakkus privately asks Aaron about how he came to Bellweather. No new crisis or forced order of scenes.",
-                "READ ALOUD: 'Morning has come to Bellweather. Downstairs at Ledger House, breakfast is being served, guests trade news, and Brakkus is tending the bar. Outside, the city carries on under its new rulers. You've had the night to think about Elowen and the Weavehouse, and Drysa has been watching the building. You can now hear what she learned.'",
-                "The approved Ledger House map provides the common room/bar, porch for arrivals and back courtyard for a private conversation. An old shrine label on the physical map conflicts with the current god; its correct dedication is Oghma. Let the party decide timing of research, attunement, shopping, reconnaissance or raid."
+                "{@b Roll:} Austin rolls d20 + 5 (Drysa's 2024 Pseudodragon Wisdom [Perception]). Passive Perception 15, Stealth +4, Darkvision 60 ft., Blindsight 10 ft. Read the base result and each achieved tier.",
+                "{@b Any total:} 'Drysa observed the southern public entrance and the western loading entrance used for deliveries. The building became quieter after business hours. Most production lights went dark, but a light remained in the southern part of the building late into the night. Neither entrance had a guard permanently stationed outside during the periods she watched.'",
+                "{@b Total 15+:} 'A large, heavily built figure carrying a weapon crossed the western loading approach, disappeared into the building, and later returned. It appeared to be patrolling.' From close enough and with enough light, she identifies the figure as a Bugbear.",
+                "{@b Total 20+:} 'It returned to the loading approach roughly every eight minutes. A short interval after it disappeared inside appeared particularly promising for reaching that entrance.'",
+                "{@b Total 25+:} 'Across the patrol cycles she watched, no other guard took its place outside. She observed a short interval when nobody outside had a direct view of the western entrance. That doesn't tell her who might be watching from inside.'",
+                "{@b Boundaries:} The report covers exterior observations only. Interior room locations, occupants, monsters and keys are unknown to Drysa. If she was beyond familiar telepathy range, she returns to Aaron before communicating. Closer scouting can yield new observations and may require her Stealth +4. Investigation is for deductions beyond observations, not a second roll for the eight-minute pattern; suggested DC 13 when sufficient clues exist."
               ]
             },
             {
               "type": "entries",
-              "name": "Drysa Overnight Watch — LOCKED Perception Result Script",
+              "name": "Detritus — Arrival",
               "entries": [
-                "Drysa is Aaron's established pseudodragon familiar. The 2024 Pseudodragon has Wisdom (Perception) +5, Passive Perception 15, Stealth +4, Darkvision 60 ft. and Blindsight 10 ft. Austin rolls ONE d20+5 for the exterior watch; read all tiers achieved, cumulatively. No automatic interior exploration.",
-                "ALL ROLLS: 'Drysa observed a southern public entrance and a western loading entrance used for deliveries. The building became quieter after business hours. Most production lights went dark, but a light stayed on in the southern portion late into the night. Nobody seemed permanently stationed at either exterior entrance.'",
-                "15–19 ADD: 'A large, heavily built armed figure crossed the western loading approach, disappeared back into the building, and later returned. It appears to follow a patrol, rather than stand outside.' Describe its Bugbear identity only if her actual vantage/lighting could reveal it.",
-                "20–24 ADD: 'Drysa noticed the figure returned roughly every eight minutes. The brief interval just after it went back inside appears to be the best time to approach the loading area.'",
-                "25+ ADD: 'During the patrol cycles Drysa could observe, no other guard took the figure's position. From outside she saw a short interval without anyone watching the western door directly. Someone inside an unseen window or room could still be looking out.'",
-                "14 OR BELOW: base description only. Perception determines observed facts. Do not require Investigation just to understand the patrol pattern after observing it; use Intelligence (Investigation), suggested DC 13, only for an additional deduction supported by genuine clues.",
-                "NO RESULT discloses Room 19, Elowen, Jaroood, the monsters, master key, room numbers, or a guaranteed safe interior route. If Drysa was outside telepathic/senses-sharing range, she returns to Aaron to communicate the report; she did not give him unlimited live vision. A risky closer vantage only reveals what she can actually see and may call for Stealth +4."
+                "Detritus (Elena) is a male Rock Gnome Wizard 4. A vision showed that his home is in danger of destruction; he's searching for a way to prevent it. His home's location, exact vision, cause and timing have not been established.",
+                "He arrives through Ledger House's front porch in search of local information. Elena describes him and speaks for him. Marren Library is a nearby source of historical and magical knowledge that Brakkus can mention.",
+                "{@b Brakkus, when introducing the other travelers:} 'These folks have seen a fair bit of Bellweather lately. They may be able to point you in the right direction.' The PCs decide how much to share with him about their current business."
               ]
             },
             {
               "type": "entries",
-              "name": "Detritus Arrival — LOCKED Introduction, Vision Still OPEN",
+              "name": "Brakkus and Aaron — Private Conversation",
               "entries": [
-                "Elena plays Detritus, male Rock Gnome Wizard level 4, seeking a way to prevent his home being destroyed after a vision. The location of home, precise imagery, cause, origin, timeline, and character's wizard subclass/spells are NOT established. There is no automatic tie to the Crown, the Radiant Well or earlier villains.",
-                "Detritus arrives at Ledger House via the existing front porch seeking information in Bellweather. Marren Library is one plausible place he may ask about, but Elena defines what Detritus says and how he presents his journey. Ask Elena to describe his appearance rather than writing it for her.",
-                "Brakkus can answer ordinary local questions and introduce Detritus to the travelers he already knows: 'These folks have been around Bellweather more than most newcomers. They might know where to begin.' This does not disclose the group's covert plans. Detritus may offer help/companionship while searching for answers, and the players decide what to tell him and how to include him. Marren Library remains a possible future research stop, not a known solution to the vision."
+                "Brakkus invites Aaron to the existing rear courtyard when he has a moment. Brakkus knows Aaron is a dhampir. He knows nothing specific about Dimidicus, Aaron's dreams or his mysterious liberator unless Aaron tells him.",
+                "{@b Opening:} 'Aaron, can I ask you something? What brought you to Bellweather? How did you find your way to my door?'",
+                "{@b If Aaron mentions the pull toward Bellweather or Ledger House:} 'I serve Oghma. I've wondered whether he had a hand in your finding this place. That's all it is, though: a suspicion. I don't have an answer.'",
+                "{@b If Aaron raises his dhampir nature:} 'I know. It hasn't changed your welcome here.' If asked why: 'My father was a warlord. My mother was a librarian he kept captive. She taught me to read.' Brakkus's mother Elena taught him to seek knowledge and respect people beyond their ancestry.",
+                "{@b If Aaron discusses his former master:} Brakkus offers to help him find reliable information. He has no identified answer about Aaron's liberator. If Aaron ends the conversation: 'Fair enough. My door's open if you change your mind.'"
               ]
             },
             {
               "type": "entries",
-              "name": "Brakkus and Aaron — LOCKED Private Dialogue",
+              "name": "Jord — A Room and a Gift",
               "entries": [
-                "Brakkus finds a quiet moment and invites Aaron into the EXISTING Ledger House back courtyard, or speaks later if Austin declines. He already knows Aaron is a dhampir. He does NOT automatically know Dimidicus's name, the mysterious liberator, Aaron's dreams or that Oghma intervened.",
-                "OPEN: 'Aaron, can I ask you something? What brought you to Bellweather? How did you find your way to my door?' Let Austin answer before continuing.",
-                "IF AARON DESCRIBES THE PULL OR DREAMS: 'I serve Oghma. I've wondered whether he had a hand in your finding this place. That's all it is, though: a suspicion. I don't have an answer.' Never confirm a divine action.",
-                "IF AARON ASKS ABOUT BEING DHAMPIR: 'I know. It hasn't changed your welcome here.' If he asks why: 'My father was a warlord. My mother was a librarian he kept captive. She taught me to read.' He may share further details if Aaron invites them. If Austin talks about his former master, Brakkus listens and may offer help researching the mystery without claiming prior knowledge.",
-                "IF AARON DOESN'T WANT TO TALK: 'Fair enough. My door's open if you change your mind.' Brakkus returns to ordinary inn business. The encounter is about understanding Aaron, not imposing a revelation or compulsory faith test."
+                "Jord, the 86-year-old gnome trader with sandy hair, spectacles and an overstuffed patched coat, arrives at Ledger House carrying his luggage. The Royal Guard has requisitioned his hotel for barracks. He asks Brakkus for a room. He recognizes the adventurers who recovered his stolen horse and strongbox.",
+                "{@b Gift:} Jord offers the party his personal {@item Hat of Disguise|XDMG} as a permanent gift for their help. 'You saved my horse and my strongbox. Reckon you can get better use out of this than I have. Here, take it.' He can explain that it changes the wearer's appearance.",
+                "{@b Mechanics:} The Hat of Disguise is Uncommon, requires attunement during a Short Rest, and lets its attuned wearer cast {@spell Disguise Self|XPHB} at will while wearing it. The spell lasts 1 hour per casting and ends if the hat is removed. One wearer at a time; the players choose who accepts and attunes. The gift becomes party property when accepted in play.",
+                "{@b Shop continuity:} Jord's 20% discount continues. His hat is his personal possession; neither his existing wagon stock nor Edda Pell's separate stocked hat is reduced by this gift."
               ]
             },
             {
               "type": "entries",
-              "name": "Jord's Lodging and Hat of Disguise — LOCKED Offer, NOT GIVEN YET",
+              "name": "Map: Ledger House (Approved DM Map)",
               "entries": [
-                "Jord, established 86-year-old traveling gnome merchant with untidy sandy hair, spectacles and coat full of pockets, arrives with bags needing a room: the Crown took over his hotel for royal-guard barracks. His shop remains open, with its normal stock and already-promised 20% party discount.",
-                "The party previously recovered his horse and stolen strongbox; he already rewarded them. He is glad to see them at Ledger House, and may greet fellow gnome Detritus without assuming a prior friendship. He knows nothing about Tulcornix approaching the party or the Weavehouse rescue unless told.",
-                "Jord offers ONE personal {@item Hat of Disguise|XDMG} to the group as a GIFT out of goodwill for their past help and irritation at the Crown's commandeering of property. It is a personal possession, not a purchase or new wagon-stock item. Suggested voice line: 'You saved my horse and my strongbox. Reckon you can get better use out of this than I have. Here, take it.' Do not assign it to Aaron automatically.",
-                "If accepted in play, one party member may attune during a one-hour Short Rest. The Uncommon Hat of Disguise lets the attuned wearer cast {@spell Disguise Self|XPHB} at will, an illusion lasting up to an hour and ending on removal. Standard attunement cap three; no instantaneous handoff between PCs. Until accepted, the hat is NOT in party inventory.",
-                "Edda Pell's separately stocked Hat of Disguise at The Spare Button is unaffected. Jord's normal inventory, prices, discount and prior reward stay as they were."
+                {
+                  "type": "gallery",
+                  "images": [
+                    {
+                      "type": "image",
+                      "href": {
+                        "type": "external",
+                        "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/ledger_house.webp"
+                      },
+                      "imageType": "map",
+                      "title": "Ledger House",
+                      "width": 1536,
+                      "height": 1024
+                    }
+                  ]
+                }
               ]
             },
             {
               "type": "entries",
-              "name": "Opening Branch Checks — LOCKED",
+              "name": "Map: Bellweather Under Crown Administration",
               "entries": [
-                "Party leaves before Jord's offer: they do not have the hat, but the raid is still playable. Receiving it doesn't bypass the required Short Rest. Drysa rolls low: basic exterior information still stands and further scouting is an actual new action, not a reroll of the night.",
-                "Detritus doesn't share the vision: he can still meet the party and seek local knowledge. Aaron declines a private talk: Brakkus stops without pressing. Party chooses a different destination: the world continues and the Weavehouse remains in its locked prepared state. Nothing here is retroactively PLAYED."
+                {
+                  "type": "gallery",
+                  "images": [
+                    {
+                      "type": "image",
+                      "href": {
+                        "type": "external",
+                        "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/bellweather_crown_approved_2026-10-15.webp"
+                      },
+                      "imageType": "map",
+                      "title": "Bellweather — Crown Administration (Approved October 15, 2026)",
+                      "width": 1448,
+                      "height": 1086
+                    }
+                  ]
+                }
               ]
             },
             {
               "type": "entries",
-              "name": "The Crown and Unknowns",
+              "name": "Map: Koven House",
               "entries": [
-                "King Hendrix is the reigning monarch. Reginald and his wife Narcia administer Bellweather. Council members including Cardon have departed. No former Councillor retains authority by default.",
-                "Koven House's public office accepts routine questions and petitions. Its existing map does not mandate the old unplayed garrison placement or a battle.",
-                "Brakkus's negotiated custody of Pepper is real, but its detailed enforcement documents, deadlines or other conditions are OPEN.",
-                "The Well's magical reality and subterranean nature are DM-only. The precise entrance, mechanism and Crown's interest are OPEN. No retired villain possesses it by default."
+                {
+                  "type": "gallery",
+                  "images": [
+                    {
+                      "type": "image",
+                      "href": {
+                        "type": "external",
+                        "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/koven_house.webp"
+                      },
+                      "title": "Koven House — Original DM Key (Conditional Fight)",
+                      "imageType": "map"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Session 4 — PLAYED / Authoritative",
+              "entries": [
+                "After the Well, the party killed Noren and his Veteran. The Veteran was beheaded; Arunem carried the body in a bag. A city guard confirmed the Council was gone. The bag was repeatedly slammed to the ground; the precise actor and final whereabouts of the body are not recorded.",
+                "Pepper went alone to the market and had a bad encounter with Edda Pell, half-orc owner of The Spare Button, now voiced with an Irish accent.",
+                "Pepper voluntarily approached Koven House to report Edda. Royal guards recognized her in their records, asserted the Crown held her service contract and detained her for hard labor at the southern ruins.",
+                "Brakkus found and accompanied Jarrock and Aaron in seeking Pepper. He persuaded the guards to release Pepper into HIS custody. This was a negotiated release; exact custody terms remain unresolved.",
+                "Bishop Brann told the party the Council sold Bellweather and departed; Brann did not take a payment from the Crown's acquisition. He proposed covert intelligence sharing while the group appeared to be cooperative Crown hires.",
+                "Brann paid outstanding Kellan's Well wages: Jarrock RECEIVED 100 gp, Aaron RECEIVED 100 gp, Arunem RECEIVED 100 gp, Pepper RECEIVED nothing. These payments are already complete.",
+                "Brakkus described an old legend of possible mind-affecting magic in Bellweather. Only the legend was shared; the Well's identity and position remain unknown to Brakkus.",
+                "Tulcornix Avemvir, Kaleb's adopted aarakocra brother, sought help freeing his sister-in-law Elowen, Kaleb's widow, from Crown-controlled Weavehouse indenture.",
+                "At the table Elowen's alleged debt was stated as 150 gp principal, 200 gp administrative charges and 50 gp/day for room and board. Pepper offered all her money. No release or payment is confirmed.",
+                "Aaron stationed his familiar to watch the Weavehouse overnight. The party started planning a covert rescue. Brakkus advised stealth to protect the group's cover. Drysa's report will be resolved at the opening of Session 5."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Crown Knowledge — DM Reference",
+              "entries": [
+                "King Hendrix Stucky reigns; Prince Reginald and Princess Narcia administer Bellweather. The former Council, including Perrin Cardon, has departed.",
+                "Koven House accepts public petitions and administers Crown contracts. Brakkus negotiated Pepper's release into his custody, with the precise conditions still unresolved.",
+                "The Radiant Well is a real magical phenomenon below Bellweather (DM knowledge). Brakkus and the party know only an old legend; its location, workings and the Crown's involvement remain unestablished.",
+                "The Crown has no knowledge that Tulcornix spoke to the adventurers. An investigation of an escape must develop evidence or testimony to identify them."
               ]
             }
           ]
