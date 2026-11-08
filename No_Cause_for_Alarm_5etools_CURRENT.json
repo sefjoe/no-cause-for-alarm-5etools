@@ -6,18 +6,18 @@
         "json": "NCFA",
         "abbreviation": "NCFA",
         "full": "No Cause for Alarm: Ruins of Bellweather",
-        "version": "5.0",
+        "version": "5.1",
         "authors": [
           "No Cause for Alarm Campaign"
         ],
-        "dateLastModified": 1794009600,
-        "_dateLastModifiedHash": "ncfa-v5-active-canon-reset"
+        "dateLastModified": 1794124203,
+        "_dateLastModifiedHash": "ncfa-v5.1-session5-20261108-table-ready"
       }
     ],
     "edition": "one",
     "dateAdded": 1789528955,
-    "dateLastModified": 1794009600,
-    "_dateLastModifiedHash": "ncfa-v5-active-canon-reset"
+    "dateLastModified": 1794124203,
+    "_dateLastModifiedHash": "ncfa-v5.1-session5-20261108-table-ready"
   },
   "adventure": [
     {
