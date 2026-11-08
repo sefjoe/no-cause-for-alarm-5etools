@@ -110,7 +110,9 @@
             "Approach, Patrols, Doors, Familiar and Alarms — LOCKED Session 5 Prep",
             "Private Confrontation — Room 19 (LOCKED Session 5 Prep)",
             "Mass Liberation, Escape and Evidence — LOCKED Session 5 Prep",
-            "Weavehouse — LOCKED Session 5 DM Quick Reference"
+            "Weavehouse — LOCKED Door and Corridor Routes (No Map Reconstruction)",
+            "Weavehouse — LOCKED Session 5 DM Quick Reference",
+            "Weavehouse — LOCKED One-Page Initiative and Security Sheet (2024 Rules)"
           ]
         },
         {
@@ -1141,9 +1143,9 @@
               "entries": [
                 "WORKFORCE — LOCKED SESSION 5 PREP: 18 indentured workers, including Elowen. Four are in room 9, four in room 10, five in room 17 and four in room 18 (17 ordinary workers), all kept under guard and locked into their assigned rooms after evening count. Elowen is NOT in a shared dormitory; she is compelled to serve and remain close to Jaroood in private room 19, with a cot behind a screen. Her personal service is domestic/clerical work, not evidence of any unestablished abuse. Lock 18 as the prepared session count until the DM expressly revises it. Not a number already observed by the players.",
                 "LABOR SECURITY: exactly three speaking, thinking, witness-capable overseers, not generic veteran/scout extras: {@creature Hobgoblin Captain|XMM} (chief overseer), {@creature Hobgoblin Warrior|XMM} (quarters sentry), {@creature Bugbear Warrior|XMM} (patrolling escape catcher). They keep workers confined, supervise shifts and respond to escape attempts. The one civilian clerk works in reception and with the Captain; no extra guard squad waits off-map.",
-                "CAPTAIN: primarily at Room 11 with shift ledger, backup keys and the ONLY interior alarm bell. On isolated unexplained noises, sends or allows a single guard to investigate; if alarm or escape is verified, coordinates worker containment. He does NOT automatically abandon the workforce to rescue Jaroood.",
-                "WARRIOR: stationed near access to Rooms 9–10 and checks Rooms 17–18 during headcount. Carries practical worker-room keys; at night leaves standing position briefly for hourly inspection. If an escape or alarm is discovered, prioritizes keeping remaining quarters locked and captures workers nonlethally. Does not abandon all prisoners to rush into Jaroood's private fight.",
-                "BUGBEAR: patrols approximately every eight minutes along the existing western/southern corridors, especially near Room 8, Room 21 loading and Rooms 17–18. When a minor noise has no obvious culprit, he investigates alone along a real route, looks briefly and returns with a dismissive 'Must be the wind.' Actual evidence of a breakout or intruders prompts real action and a report. He prefers capturing escaping workers without lethal force. Never invent a shortcut across walls to complete his patrol.",
+                "CAPTAIN — FIXED STATION (LOCKED). Usually at his desk in Room 11 with the wall bell, shift ledger and backup keys. The captain's route to Jaroood is via the EXISTING central service passage toward the side of production Room 15, then the southward passage outside the west side of Room 19. It is an ordinary corridor journey with doorways and no direct pass-through wall or secret link from Room 11 to Room 19. On alarm or breakout he initially coordinates worker containment from Room 11 and does not automatically traverse this route.",
+                "WARRIOR — FIXED POST (LOCKED). Stand in the public service corridor outside the approaches to Rooms 9 and 10, not inside either locked dormitory. Each hour, follow the existing connecting corridor toward the approaches to Rooms 17 and 18 for a headcount, then RETURN BY THE SAME WAY to Rooms 9/10. Hold the actual junction and keep remaining doors locked when a breakout is detected. The warrior has dormitory keys; he does not teleport between western and southern rooms.",
+                "BUGBEAR — FIXED 8-MINUTE NIGHT PATROL (LOCKED). Starting point: western receiving/loading Room 21, outside its existing access. Follow the western service aisle past Room 8, check the access corridor by the locked Rooms 9 and 10, then continue by the western/southern connecting aisle to the approaches outside Rooms 17 and 18. Stop briefly to inspect the occupied worker wing; RETURN BY THE SAME EXISTING CORRIDORS to Room 21 rather than inventing an unshown loop, secret door or shortcut through a dormitory. He passes Room 21 roughly every eight minutes. An isolated unexplained sound leads him to leave the circuit to investigate alone, then return to his last waypoint ('Must be the wind' if nothing found). He captures fleeing workers alive. All route segments are corridors by the rooms, NOT routes through their locked interiors.",
                 "THE CLERK: handles ordinary visitors at rooms 2 and 11 during office hours, then departs after close. He knows names only if actually given or recorded. Do not place him automatically overnight.",
                 "ELOWEN: serves and stays in room 19 with Jaroood in the evening and overnight. Jaroood conducts private accounting and takes his four-hour elf trance there; her sleeping place is screened within the same existing room. During working hours she attends Jaroood when he moves about the administrative rooms. She is not placed elsewhere to force a scripted confrontation.",
                 "PRIVATE SECURITY: by day {@creature Earth Elemental|XMM} works or stands ready in Room 15, moving along real passages to Room 19 after production closes. In Room 19 its 60-foot Tremorsense lets it sense movement but DOES NOT itself activate security action. It fights only on Jaroood's Terran command 'Defend your master' or if an attack on Jaroood or the Elemental in Room 19, provided the Elemental actually perceives the impact, injury, magical effect or resulting commotion using its own senses, even if it cannot see the attacker. The {@creature Gargoyle|XMM} stands motionless as decorative stonework and protects Jaroood in response to actual threats or his Terran command. The {@creature Mimic|XMM} occupies a gilded coffer or cabinet and attacks threats or prey based on its animalistic awareness and learned routine, not understanding Common-language orders. These three are the entirety of his personal monstrous security. This is a separate defense trigger; no hostility based solely on detected footsteps.",
@@ -1156,13 +1158,13 @@
               "name": "Approach, Patrols, Doors, Familiar and Alarms — LOCKED Session 5 Prep",
               "entries": [
                 "Aaron's familiar has had a full night outside. Describe only visible exterior entrances, windows that are actually visible, guard changes, the Bugbear's external movements if it passed a visible opening, and the difference between busy day/quiet night. It does not know numbered rooms, interior monsters or Jaroood's private suite without actual line of sight. Its shape and exact viewing post control findings.",
-                "Use existing mapped west-side service/loading access near area 21 and the southern public approach around area 23 for plausible approach choices only insofar as actual exterior openings are printed. Do not create a new side door. A legitimate public approach by day needs no Stealth check. The after-hours service lock is DC 15 Dexterity (Thieves' Tools) if reachable.",
-                "Approaching room 19 using the mapped southern/interior corridors should allow a route around room 11 and the main industrial floor, if PCs identify and exploit it. Verify actual doors on the DM map at the table; there is no invisible secret corridor. A distracted guard can create an opening, and moving through unseen spaces shouldn't require meaningless group Stealth rolls.",
+                "WESTERN SERVICE ACCESS — FIXED ROUTE. Approach via the established western receiving/loading opening at Room 21, not a new door. The door is locked after hours (DC 15 Dexterity/Thieves' Tools). From that access, stay in the EXTERIOR-WALL WEST SERVICE CORRIDOR past Room 8 and continue toward the service corridor adjoining Rooms 17/18 and the southern interior connecting aisle. This is a corridor movement route, not movement through Rooms 8, 17 or 18 unless the party actually opens those rooms. The Bugbear passes the Room 21 area approximately every eight minutes. In business hours the public southern approach is available without breaking a lock.",
+                "SOUTHERN APPROACH TO ROOM 19 — FIXED ROUTE. From the existing south public entry at the Room 23 approach, follow the actual southern interior corridor to the passage on the WEST SIDE of Room 19. The existing suite doorway off that corridor enters Room 19. No entry through Room 20, no new side door and no requirement to pass through Captain's Room 11 or the active production floor (Room 15). A western infiltrator coming from Room 21 may use the same southern interior corridor after passing the worker-wing junction. Access is by the existing drawn thresholds; doors that are locked require unlocking or bypass by normal rules.",
                 "EARTH ELEMENTAL SENSING AND TRIGGER — APPROVED. Its 60-foot Tremorsense pinpoints movement touching a continuous surface but cannot reveal identities or intentions. It NEVER activates, pursues, sounds an alarm, or reports someone solely because it senses footsteps, including unrecognized footsteps. It has ONE separately defined combat trigger: either Jaroood deliberately commands 'Defend your master' in Primordial (Terran), or an attack on Jaroood or the Elemental in Room 19, provided the Elemental actually perceives the impact, injury, magical effect or resulting commotion using its own senses, even if it cannot see the attacker (including a blow that instantly kills Jaroood, provided the Elemental notices its effects). Once triggered it acts according to the published {@creature Earth Elemental|XMM} stat block and Jaroood's standing orders to protect the suite. If both threats and orders cease, it remains at its post rather than patrolling after unrelated noises. Its sensing is not the same as triggering. Seeing the attacker is not required; perceiving the attack's effects is. If the attack and aftermath are genuinely imperceptible to the Elemental, it does not automatically activate. An attack heard or sensed through the connected floor may count if it creates unmistakable evidence, not if it produces ordinary footsteps alone.",
                 "ALARM — APPROVED. The alarm is a mundane rope-and-pulley BELL-PULL, not electricity, telegraph wire, a spell, or magical transmission. A pull cord beside Jaroood's desk in Room 19 runs through eyelets on the EXISTING corridor's upper wall/ceiling to a brass bell at the Room 11 overseer station. An exposed service-length of the SAME rope can be spotted and reached in the corridor just outside Room 19, with no new passage, room, or wall opening. Quietly unhook/disable without obvious damage: DC 13 Dexterity (Thieves' Tools) if needed; a PC who reaches the exposed rope can simply sever it as an action (AC 12, 5 HP if attacked in combat). The alarm bell sounds ONLY INSIDE THE WEAVEHOUSE; it has no outside bell, magical relay or Crown-wide notification. A live guard at Room 11 learns an alarm was pulled, not who pulled it or why. Guards outside that room may hear the bell if sound can reach them through normal interior passages; no person outside the facility receives the alarm. Other independent noise (shouts, open doors, thunder magic, collapsing walls) can still be heard normally.",
                 "Private rooms have substantial doors, but no magic soundproofing. If players shut them, ordinary conversation/brief fighting may be muffled; a sustained roaring battle, spell that makes a loud bang, someone escaping into a hallway, or the Elemental breaking masonry may attract investigation. Decide audible consequences from actual distance, walls and timing, not a fixed alarm clock.",
                 "An ordinary dormitory lock is DC 15 Dexterity (Thieves' Tools) or a matching guard/master key. Every dormitory must be opened separately, but do not create four separate skill checks if a master key fits them all. Exits shown on the map can be opened from inside by basic manual latches once reached; workers do not need an escort to operate them if they are not physically guarded.",
-                "The Hat of Disguise is only an available tool if Jord actually loans it and a single PC attunes. It conceals only its attuned wearer's appearance, not all five people. The Crown knows nothing about Tulcornix having approached the party.",
+                "The Hat of Disguise is an unconditional GIFT from Jord, not a loan. He offers it when he arrives at Ledger House in Session 5. It belongs to the party only after someone accepts it in play, and its magic works for a single wearer only after the normal required attunement. The hat is not a pre-equipped disguise for every PC. The Crown knows nothing about Tulcornix approaching the party.",
                 "SUSPICIOUS NOISE RESPONSE — APPROVED. On an isolated scrape, a dropped item or muffled thump with NO alarm and NO clear evidence of an intruder, send ONE nearby free guard to investigate by normal mapped travel, usually the Bugbear if he is on patrol. He checks the source area, spends a round or two looking for visible evidence, and, finding none, mutters something like 'Must be the wind' and returns to his previously assigned route. He does not summon everyone, magically know the PCs are there, or remain permanently on high alert after a single inconclusive noise. If he actually sees an unauthorized creature, opened cell, fleeing worker, incapacitated colleague, damaged lock or other convincing evidence, he responds appropriately and may report it. Repeated clearly related noises or obvious sustained combat are not hand-waved away.",
                 "ALARM OR MASS BREAKOUT RESPONSE — APPROVED. On a genuine pulled alarm the Captain at Room 11 takes charge and gives a normal shouted/running order to any guard he can contact; the bell is not an outside alert. The Hobgoblin Warrior immediately secures unbreached worker doors and blocks movement at the nearest actual corridor; the Bugbear moves to capture escapees or chase an observed intruder, whichever prevents the most loss of workers; the Captain manages keys, posts and information and joins an action only when he has real evidence and a real route. The three guards PRIORITIZE keeping indentured workers in Crown custody, because worker debts produce Crown/Jaroood income. They do NOT automatically all abandon prisoners to help Jaroood in Room 19. If the guards discover a breakout without the alarm, use the same responses only after the discovery has been communicated or witnessed.",
                 "NONLETHAL LABOR GUARD ORDERS — APPROVED. All indentured workers are Crown assets. Guards are explicitly FORBIDDEN to use lethal force against escaping workers. Against them, use grapples, Shoves, blocking exits, manacles, nets where available, and nonlethal finishing melee attacks under 2024 rules; no deliberate lethal arrow fire or lethal spell against a worker. If a worker escapes, the guard pursues or secures remaining workers rather than killing an asset to prevent escape. Armed intruders threatening guards are not treated as Crown assets and can be fought lethally. Incidental collateral danger still exists and should be adjudicated normally.",
@@ -1198,10 +1200,27 @@
             },
             {
               "type": "entries",
+              "name": "Weavehouse — LOCKED Door and Corridor Routes (No Map Reconstruction)",
+              "entries": [
+                "OPERATING KEY: The room numbers refer to the approved 422×315 Cardon Weavehouse DM drawing. The routes below name corridor waypoints adjacent to rooms; saying 'past Room N' NEVER means cutting through a locked room. The approved architecture is unchanged: no extra door, shortcut, alternate floor, new exterior opening, or unmarked wall passage. All movement follows actual connecting hallways and existing thresholds on the printed map.",
+                "PUBLIC ARRIVAL / SOCIAL VISIT: SOUTH public entry around Room 23 → southern service/reception corridor → suite-access corridor WEST OF Room 19 → existing doorway to Room 19. This bypasses the captain's Room 11. Staff can stop visitors under the normal office rules; it is not a secret entrance.",
+                "WESTERN STEALTH ENTRY: WEST loading/receiving access by Room 21 (after hours DC 15 Thieves' Tools on lock) → western service aisle past Room 8 → connecting passage past the locked worker wing of Rooms 17/18 → southern inner hall near Room 23 → corridor to the WEST of Room 19 → its existing suite door. The characters may choose to pass or bypass the quarters without opening them. Never force a tour through Room 15 to reach Jaroood.",
+                "CAPTAIN RESPONSE: Room 11 desk/bell → central passage around the edge of the Room 15 production area → southern connecting corridor → west side of Room 19 suite access. This is NOT instantaneous; place miniature at Room 11 and count actual 30-ft movement per round, handling real doors. The Captain stays with worker-security command by default instead of automatically following the bell.",
+                "BUGBEAR ROUTE, EIGHT-MINUTE CYCLE: Room 21 loading check → western corridor along Room 8 → west worker-wing corridor near Rooms 9/10 → southern worker-wing approach near Rooms 17/18 → same corridors in reverse → Room 21. Check locks, pause and listen; the eight minutes include stops, not continuous sprinting. If disturbed, he leaves route to investigate and later rejoins it, so the future cycle can shift. One minor noise alone does not create persistent alarm.",
+                "WARRIOR WALK-THROUGH: Standing position on the connecting corridor outside Rooms 9/10 → same existing western/southern worker corridor to the outside of Rooms 17/18 → return to Rooms 9/10. He does this hourly and is otherwise on post. He carries worker-room keys; no secret cross-corridor between rooms assumed.",
+                "POST-FIGHT RELEASE, SOUTH FIRST: After Room 19, use the SOUTHERN corridor and adjoining worker-wing access to open Rooms 18 and 17 (four and five people), then follow the western worker access corridor toward Rooms 10 and 9 (four each), one action to use the master key on EACH. This is a convenient option, not a required order; players can divide or reverse it. Workers leave immediately when each room is opened, using the south public access around 23 or west loading access by 21 if reachable and not blocked by a guard.",
+                "ESCAPE ROUTES: Workers from Rooms 17/18 use the southern connecting service hall toward the Room 23 public doorway OR the western loading passage toward Room 21. Workers from Rooms 9/10 follow the western service spine toward Room 21 or continue south via the worker passage to the Room 23 approach. Guards must actually intercept them at one of these mapped access passages; no teleportation, instant whole-building lockdown or invisible exit.",
+                "TIMING: Bugbear passes loading approach around once per eight minutes; Warrior walks to southern quarters hourly; Captain begins at Room 11. During a fight use creature speed and the on-map distances, not the eight-minute patrol interval as combat speed. A guard cannot appear in Room 19 on hearing a thump while stationed multiple rooms away.",
+                "FOOTPRINT: All monster starting locations are determined elsewhere in the locked room key. Do not place the Large Earth Elemental in a 5-ft passage if the map cannot physically accommodate its space; it stays inside Room 19 unless it can traverse a real route legally."
+              ]
+            },
+            {
+              "type": "entries",
               "name": "Weavehouse — LOCKED Session 5 DM Quick Reference",
               "entries": [
                 "STATUS: LOCKED SESSION 5 PREP, NOT PLAYED. Retain approved Weavehouse map and numbered room assignments. Population is 18 indentured workers including Elowen. Preserve Jaroood's 9 HP, the three speaking labor guards (Hobgoblin Captain, Hobgoblin Warrior, Bugbear Warrior) and three published personal defenders (Gargoyle, Mimic, Earth Elemental). No hidden guard waves.",
                 "ROOM 19: Jaroood and personal-servant Elowen occupy the private suite with Gargoyle, Mimic, and nighttime Earth Elemental. Ceiling is 15 feet high. This does not alter the walls, doors or approved map.",
+                "ROUTES (LOCKED): SOUTH at Room 23 → southern hall → WEST-of-19 doorway; WEST load Room 21 → outer west corridor past 8 → south worker-wing near 17/18 → south hall → west-of-19 doorway. Bugbear makes an OUT-AND-BACK patrol Room 21 → west aisle beside 8 → quarters access by 9/10 → southern quarters access by 17/18 → same path return to 21, about 8 minutes per pass. Warrior hourly visits 17/18 from the 9/10 post, same passage back; Captain remains at 11. All references mean existing corridors and thresholds, not cut-through rooms or secret passages.",
                 "ALARM: A purely mechanical pull-rope connects Room 19 to a bell in Room 11, INSIDE Weavehouse ONLY. An exposed corridor segment outside Room 19 allows stealth sabotage (DC 13 Thieves' Tools to unhook quietly, or an action to cut). Guards outside the building are not automatically alerted.",
                 "NOISE: One uncertain sound summons ONE guard (usually Bugbear) who says 'Must be the wind' and resumes patrol if no evidence is found. Sustained clear combat makes that one guard keep investigating and report concrete findings by ordinary means. No automatic omniscient alert.",
                 "ELEMENTAL: Tremorsense alone never triggers it. Triggered by Jaroood's command in Primordial (Terran), or an actual attack on Jaroood/Elemental whose effects it perceives even if the attacker is hidden. An entirely unperceived strike does not magically trigger it. Gargoyle reacts to real threats/Terran orders; Mimic to prey and violence in its space.",
@@ -1209,6 +1228,96 @@
                 "RELEASE: Jaroood's master key opens all four room locks (Rooms 9, 10, 17, 18), one action per room. Released workers run independently as their room opens; no escort, no shared Stealth check. The 17 ordinary workers plus Elowen total 18.",
                 "INVESTIGATION: A dead administrator and escaped workers prompt an investigation, not automatic identity recognition. The Crown does NOT know Tulcornix approached the party. Only evidence and genuine witnesses can produce identification.",
                 "SESSION INTEGRATION: The Hat of Disguise is not actually given until Jord does it in play. Detritus joining and the Brakkus/Aaron exchange are separate Session 5 prep. Do not script the party into one approach."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Weavehouse — LOCKED One-Page Initiative and Security Sheet (2024 Rules)",
+              "entries": [
+                "USE PUBLISHED 2024 MONSTERS, NOT 2014 STAT BLOCKS. Begin private confrontation at Room 19: Jaroood + Earth Elemental + Gargoyle + Mimic (four creatures, 281 total HP, 2,725 XP). Worker guards begin at their own posts: Captain Room 11, Warrior quarters corridor outside 9/10, Bugbear on west/south patrol. They are NOT a mandatory seven-creature encounter.",
+                {
+                  "type": "table",
+                  "caption": "Room 19 — Private fight",
+                  "colLabels": [
+                    "Creature / mini",
+                    "Init.",
+                    "AC",
+                    "HP",
+                    "Attacks and immediate rule"
+                  ],
+                  "rows": [
+                    [
+                      "Jaroood • suggested #28",
+                      "Dex +1",
+                      "15",
+                      "9",
+                      "Rapier +3, 1d8+1 (avg 5) piercing. Misty Step and Detect Magic 1/LR each; Prestidigitation at will; spell DC 13. Speaks Common/Elvish/Terran."
+                    ],
+                    [
+                      "Earth Elemental • #151",
+                      "−1 (9)",
+                      "17",
+                      "147",
+                      "2 attacks in any mix: Slam +8, 10-ft reach, 2d8+5 (avg 14) bludgeoning; Rock Launch +8, 60 ft., 1d6+5 (avg 8) bludgeoning and Prone (Large or smaller). Tremorsense 60 ft.; vulnerable to Thunder; Siege Monster (double vs objects/structures); Earth Glide only through unworked earth/stone."
+                    ],
+                    [
+                      "Gargoyle • #121",
+                      "+2 (12)",
+                      "15",
+                      "67",
+                      "Multiattack 2 Claws, +4, 2d4+2 (avg 7) slashing each; Fly 60 ft., Flyby avoids opportunity attacks when flying out of reach. Room 19 ceiling 15 ft."
+                    ],
+                    [
+                      "Mimic • #115",
+                      "+3 (13)",
+                      "12",
+                      "58",
+                      "Pseudopod +5: 1d8+3 bludgeoning +1d8 acid (avg 11), Grapple DC 13 against Large/smaller, escape ability checks with Disadvantage. Bite +5: normal 1d8+3 piercing +1d8 acid (avg 11); against Grappled target, 2d8+3 piercing +1d8 acid (avg 16), attack with Advantage. Bonus action Shape-Shift; immune to Acid and Prone."
+                    ]
+                  ]
+                },
+                "ROOM 19 START: Jaroood can reach the mechanical bell pull beside his desk unless players cut its exposed rope in the hall outside the suite. It rings only in Room 11. Elowen stays in suite but is not a combatant. Gargoyle begins among stone decorations; Mimic looks like a document coffer; Earth Elemental is physically present after shift (Room 15 by day).",
+                "ELEMENTAL TRIGGER: mere Tremorsense movement is NOT hostile action. It attacks upon deliberate Terran order from Jaroood or perceiving actual attacks/effects upon Jaroood or itself. The attacker may be unseen, but the attack must actually be perceived. Mimic reacts to being handled/seeing prey or a genuine fight; does not obey spoken orders. Gargoyle protects Jaroood when ordered or threatened.",
+                "JARO0OD'S CHOICE: If he survives to act, he may shout a Terran order, pull the bell, use Misty Step, surrender, or bargain as circumstances permit. No plot immunity or HP boost. He can die in one hit. No automatic reinforcements in the suite.",
+                {
+                  "type": "table",
+                  "caption": "Labor guards — secondary fight only if genuinely encountered",
+                  "colLabels": [
+                    "Creature / mini",
+                    "Init.",
+                    "AC",
+                    "HP",
+                    "Attacks and capture rules"
+                  ],
+                  "rows": [
+                    [
+                      "Hobgoblin Captain • #72",
+                      "+4 (14)",
+                      "17",
+                      "58",
+                      "2 Greatsword +4, 2d6+2 slashing +1d6 poison (avg 12) EACH, or 2 Longbow +4, 1d8+2 piercing +2d4 poison (avg 11) each. Aura of Authority: self and allies within 10 ft. gain Advantage on attacks and saves while Captain not Incapacitated."
+                    ],
+                    [
+                      "Hobgoblin Warrior • #59",
+                      "+3 (13)",
+                      "18",
+                      "11",
+                      "Longsword +3, 2d10+1 (avg 12) slashing; Longbow +3, 1d8+1 piercing +3d4 poison (avg 12) damage. Pack Tactics: Advantage on attack if ally within 5 ft. of target and not Incapacitated."
+                    ],
+                    [
+                      "Bugbear Warrior • #70",
+                      "+2 (12)",
+                      "14",
+                      "33",
+                      "Grab +4, 10-ft reach, 2d6+2 (avg 9) bludgeoning + Grappled (Medium/smaller, escape DC12); Light Hammer +4, 10-ft reach or 20/60 ft., 3d4+2 (avg 9) bludgeoning, Advantage if target grappled by Bugbear. Abduct: moves grappled creature without extra movement."
+                    ]
+                  ]
+                },
+                "TYPE NOTE: Hobgoblin Captain, Hobgoblin Warrior and Bugbear Warrior have 2024 creature type Fey (Goblinoid), not Humanoid; some spells targeting Humanoids, e.g. Hold Person, do not work on them. All six enemies use 2024 Monster Manual/SRD rules; Jaroood is the separate NCFA custom NPC.",
+                "GUARDS ON NOISE / ALARM: One vague sound → ONE investigator → 'Must be the wind' if no evidence. Sustained actual combat → persistent one-guard investigation and ordinary report. On alarm or first observed breakout Captain coordinates at 11, Warrior secures unopened dormitories, Bugbear pursues ESCAPING WORKERS ALIVE. They are ASSETS. Guards do not use lethal attacks against workers; use non-damaging grapple, shove, restraint and nonlethal melee where appropriate. Armed PCs may be attacked lethally.",
+                "LOCKS & EXIT: West loading/service lock DC 15 Thieves' Tools after hours. Exposed cord outside Room 19: quietly detach DC 13 Thieves' Tools or cut with an action (AC 12, HP 5). Worker doors Rooms 9 (4 people), 10 (4), 17 (5), 18 (4) open with Jaroood master key ONE ACTION EACH; otherwise DC 15 Thieves' Tools. Workers bolt independently toward existing Room 21 western or Room 23 southern access, no escort or pooled Stealth rolls.",
+                "MINI PULL: #151 Earth Elemental (binder p.19 back bottom left); #121 Gargoyle (p.16 front top left); #115 Mimic (p.15 front bottom left); #72 Hobgoblin Captain (p.9 back bottom right); #59 Hobgoblin Warrior (p.8 front bottom left); #70 Bugbear Warrior (p.9 back top right); #28 noble serpent-adorned figure (p.4 front bottom right) is a suggested proxy for Jaroood, not an exact elf match.",
+                "STAT SOURCE: Official 2024 Basic Rules creature stat blocks / D&D Beyond pages: https://www.dndbeyond.com/sources/dnd/br-2024/creature-stat-blocks and Jaroood's full custom NCFA monster entry."
               ]
             }
           ]
