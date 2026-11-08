@@ -102,6 +102,7 @@
           "name": "Chapter 8: Cardon Weavehouse — Session 5 Site",
           "headers": [
             "Maps — LOCKED Session 5 One-Sheet Physical Build",
+            "AT-TABLE FLOW — How to Run the Rescue",
             "RUN SHEET — 2024 Initiative, Monsters and Security",
             "Routes — Approaches, Patrols and Escape",
             "Room Key — 12 Rooms / 34×22 Building on 36×24 Mat",
@@ -776,7 +777,7 @@
               "type": "entries",
               "name": "Drysa — Overnight Watch (Perception Results)",
               "entries": [
-                "{@b Drysa:} Austin rolls d20 + 5, Wisdom (Perception). Passive Perception 15; Stealth +4; Darkvision 60 ft.; Blindsight 10 ft. Base report plus each achieved tier.",
+                "{@b Drysa:} Austen rolls d20 + 5, Wisdom (Perception). Passive Perception 15; Stealth +4; Darkvision 60 ft.; Blindsight 10 ft. Base report plus each achieved tier.",
                 "{@b Any total:} 'Drysa observed the southern public entrance and the western loading entrance used for deliveries. The building became quieter after business hours. Most production lights went dark, but a light remained in the southern part of the building late into the night. Neither entrance had a guard permanently stationed outside during the periods she watched.'",
                 "{@b Total 15+:} 'A large, heavily built figure carrying a weapon crossed the western loading approach, disappeared into the building, and later returned. It appeared to be patrolling.' From close enough and with enough light, she identifies the figure as a Bugbear.",
                 "{@b Total 20+:} 'It returned to the loading approach roughly every eight minutes. A short interval after it disappeared inside appeared particularly promising for reaching that entrance.'",
@@ -1039,6 +1040,20 @@
                   ]
                 },
                 "AT-TABLE DIRECT LINKS (also work if the gallery image does not render): {@link Open LOCKED 36×24 DM One-Sheet Build Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_LOCKED_one_sheet_build.svg}; {@link Open Player Floor Plan|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/cardon_weavehouse_34x22_outdoor_player.svg}."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "AT-TABLE FLOW — How to Run the Rescue",
+              "entries": [
+                "START AT LEDGER HOUSE (Chapter 6): give the Session 5 recap, Drysa's exterior watch report, Detritus's arrival, Jord's gift of the Hat of Disguise, and Brakkus's private invitation to Aaron when natural. These are available scenes, not mandatory gates; let the party choose the time and method of the rescue.",
+                "OBJECTIVE AND CHOICES: Tulcornix wants Elowen alive and free from Crown-controlled Cardon Weavehouse. The party can pay or obtain an authentic order, impersonate authorized visitors, negotiate, sneak her out, release other workers, or openly fight. Neither combat nor rescuing every worker is compulsory. Jaroood's authority is administrative, not supernatural control.",
+                "DAY/NIGHT: During business hours the south reception (23) receives visitors, the 17 other workers labor in production (15) and the rooms used for sleeping are not occupied as dormitories, Jaroood handles inspections/petitions and Elowen attends him. After evening headcount, those 17 workers are locked into rooms 9/10/17/18 (4/4/5/4); Jaroood and Elowen are in Room 19 with the Gargoyle, Mimic and Earth Elemental. The Captain begins in 11, Warrior at (10,15), and Bugbear patrol starts (10,4), repeating an approximately eight-minute circuit. Their existing duties continue unless the party changes events.",
+                "APPROACH: the south public door D2 enters reception 23; west loading door D1 enters loading 21 and is locked from the outside after hours (Thieves' Tools DC 15). The approved map marks D1 and the four dormitory doors D4-D7 as the locks; do not invent locks on other map openings. Drysa saw only the outside. Resolve concealment from actual lines of sight and sounds, not an automatic group Stealth roll; an ambiguous noise brings one investigator, sustained disturbance brings an investigation/report, and the Room 19 pull-cord alarm rings only in Room 11. Bring guards from their physical posts using map movement and the listed speeds, never as instant reinforcements.",
+                "DAYTIME / LEGAL APPROACH: Jaroood can quote Elowen's CURRENT balance (150 gp principal + 200 gp administrative fees + four billed days x 50 gp = 550 gp), rising 50 gp with each additional billed day. He can personally sign her release after full payment or a genuine overriding royal order. Credential deception, when opposed and uncertain, has the existing suggested Charisma (Deception) DC 15, adjusted for circumstances. A disguise changes appearance, not written authority. An unsuccessful negotiation is not by itself an attack; Jaroood may refuse, investigate or summon help depending on the actual exchange.",
+                "COVERT / WORKER BREAKOUT: Elowen wants freedom; when she learns the party is helping, she seeks a safe exit rather than fighting. Jaroood's master key, or the Captain/Warrior's keys, opens each individual dormitory in one action; otherwise Thieves' Tools DC 15 per locked door. Once freed, groups of 4/4/5/4 run by real corridors to west D1 or south D2 without requiring 17 miniatures or a group Stealth roll. Guards seek to recapture workers alive and may use lethal force against armed intruders. Escapees can be intercepted if a guard actually reaches them.",
+                "ROOM 19 VIOLENCE: if confronted here at night, Jaroood has 9 HP, may pull the alarm, order the Gargoyle/Earth Elemental in Terran, use Misty Step, bargain, flee or surrender. The Elemental does NOT attack from footsteps alone: it needs Jaroood's deliberate order or perception of an actual attack on itself or Jaroood; the Gargoyle responds to threat/order, and the Mimic to being disturbed, prey or a real fight (not spoken orders). Killing Jaroood does not automatically erase the independent defenders or make the scattered guards appear. Use the run sheet's AC, HP, initiative and attacks.",
+                "RESOLUTION: a properly signed release discharges Elowen through Jaroood's authority. A physical escape without authorization saves her from immediate captivity but leaves the claimed debt and a possible investigation. Evidence and witnesses, not DM foreknowledge, determine how the Crown responds; it does not already know the adventurers are working for Tulcornix. If the party rests, retreats or splits, patrols, work and guards continue responding to what they actually know. Stop when the party has resolved Elowen's fate, not when every defender has been killed."
               ]
             },
             {
