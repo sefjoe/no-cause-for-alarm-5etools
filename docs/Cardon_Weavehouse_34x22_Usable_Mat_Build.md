@@ -3,8 +3,8 @@
 **Current Session 5 setup.** All 34 columns and all 22 rows are interior building. One square is 5 feet. The former two-square green exterior strips on the 36×24 draft are **off-mat**; do not build them. Room shapes, dimensions, doors and internal circulation are otherwise unchanged. The new origin (0,0) is the northwest corner of the building, so new x coordinates equal old x minus 2. Y is unchanged.
 
 ## Active maps
-- [DM one-sheet and miniature start positions](https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_34x22_LOCKED_one_sheet_build.svg)
-- [Player-facing floor plan](https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/cardon_weavehouse_34x22_mat_player.svg)
+- [DM one-sheet and miniature start positions](https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_34x22_VERIFIED_DM.svg)
+- [Player-facing floor plan](https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/cardon_weavehouse_34x22_VERIFIED_PLAYER.svg)
 
 ## Rooms on the usable mat (NW to SE boundaries, in square-edge coordinates)
 | Room | x0–x1 | y0–y1 | Notes |
