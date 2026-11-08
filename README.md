@@ -1,8 +1,9 @@
 # No Cause for Alarm — 5etools Assets
 
-## Active campaign: Bellweather under the Crown (v5.0)
+## Active campaign: Bellweather under the Crown (v5.1)
 
 - **Live current 5etools JSON:** [No_Cause_for_Alarm_5etools_CURRENT.json](No_Cause_for_Alarm_5etools_CURRENT.json)
+- **5etools homebrew import/update URL:** https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/No_Cause_for_Alarm_5etools_CURRENT.json
 - **Quick canon lock and Session 5 handoff:** [CURRENT_CANON.md](CURRENT_CANON.md)
 - **Maps and image assets:** [img/](img/) (preserved, not regenerated)
 - **Pre-reset backup:** [archive/pre-nov-2026-canon-reset](https://github.com/sefjoe/no-cause-for-alarm-5etools/tree/archive/pre-nov-2026-canon-reset)
