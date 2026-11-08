@@ -769,7 +769,7 @@
               "entries": [
                 "Morning at Ledger House: breakfast is underway, Brakkus tends the bar, and Drysa returns from watching the Weavehouse. The party is preparing to rescue Elowen.",
                 "At the inn: Drysa reports, Detritus arrives seeking information, Jord comes looking for lodging after the Crown requisitioned his hotel, and Brakkus invites Aaron for a private talk. Common room and porch for arrivals; rear courtyard for the private conversation.",
-                "The inn's shrine is dedicated to Oghma. The approved old map labels it differently."
+                "Ledger House shrine: Oghma (the printed map label says Torm)."
               ]
             },
             {
@@ -1279,7 +1279,7 @@
               "name": "Room 19 — Confrontation and Elowen",
               "entries": [
                 "{@b Scene:} Jaroood is working at his desk with Elowen attending to papers. The suite's ceiling is 15 feet high. A screened cot stands nearby. The Gargoyle looks like stone decoration, the Mimic like a decorated document chest, and the Earth Elemental is present after hours.",
-                "{@b Elowen:} She seeks cover or an exit when fighting starts. She knows Kaleb is dead; whether she already knows Pepper killed him hasn't been established. She can open with: 'Who are you? What are you doing here?' If she learns the truth about Kaleb, she can express grief or anger even while wanting freedom.",
+                "{@b Elowen:} She seeks cover or a way out if fighting starts. She knows Kaleb is dead. Whether she knows Pepper killed him is not established. Opening line: 'Who are you? What are you doing here?'",
                 "{@b Combatants:} Jaroood 9 HP, Earth Elemental 147, Gargoyle 67, Mimic 58. The labor guards begin at their ordinary posts and respond to any alarm or evidence they receive.",
                 "{@b Defenders:} Jaroood can pull the bell or command his defenders in Terran. The Earth Elemental reacts to a command or an attack it perceives; Gargoyle to threats/orders; Mimic to nearby prey/violence."
               ]
