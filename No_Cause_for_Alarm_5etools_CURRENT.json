@@ -83,6 +83,12 @@
             "Map: Koven House",
             "Session 4 — PLAYED / Authoritative",
             "Session 5 — PREPARED",
+            "Session 5 — Morning at Ledger House (LOCKED PREP, unplayed)",
+            "Drysa Overnight Watch — LOCKED Perception Result Script",
+            "Detritus Arrival — LOCKED Introduction, Vision Still OPEN",
+            "Brakkus and Aaron — LOCKED Private Dialogue",
+            "Jord's Lodging and Hat of Disguise — LOCKED Offer, NOT GIVEN YET",
+            "Opening Branch Checks — LOCKED",
             "The Crown and Unknowns"
           ]
         },
@@ -803,6 +809,67 @@
                 "Brakkus follows his Oghma-informed interest in understanding Aaron rather than judging him by his lineage. Let Aaron's player decide what to share; do not force a grand revelation.",
                 "Let the party choose the approach to the Weavehouse, including a public petition, purchase, forged orders, infiltration, distraction, negotiation or combat. The Crown responds to what its people plausibly learn.",
                 "Brann and Brakkus have reasons to avoid attracting attention, but they are not the PCs' commanders. They continue their own lives."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Session 5 — Morning at Ledger House (LOCKED PREP, unplayed)",
+              "entries": [
+                "OPEN at Ledger House's approved ground-floor common room the morning after Aaron's familiar Drysa watched the Weavehouse overnight. Brakkus is tending the bar/breakfast. The party still intends to help Elowen. The four opening beats can overlap: Drysa reports; Elena introduces Detritus; Jord seeks a room and offers a hat; Brakkus privately asks Aaron about how he came to Bellweather. No new crisis or forced order of scenes.",
+                "READ ALOUD: 'Morning has come to Bellweather. Downstairs at Ledger House, breakfast is being served, guests trade news, and Brakkus is tending the bar. Outside, the city carries on under its new rulers. You've had the night to think about Elowen and the Weavehouse, and Drysa has been watching the building. You can now hear what she learned.'",
+                "The approved Ledger House map provides the common room/bar, porch for arrivals and back courtyard for a private conversation. An old shrine label on the physical map conflicts with the current god; its correct dedication is Oghma. Let the party decide timing of research, attunement, shopping, reconnaissance or raid."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Drysa Overnight Watch — LOCKED Perception Result Script",
+              "entries": [
+                "Drysa is Aaron's established pseudodragon familiar. The 2024 Pseudodragon has Wisdom (Perception) +5, Passive Perception 15, Stealth +4, Darkvision 60 ft. and Blindsight 10 ft. Austin rolls ONE d20+5 for the exterior watch; read all tiers achieved, cumulatively. No automatic interior exploration.",
+                "ALL ROLLS: 'Drysa observed a southern public entrance and a western loading entrance used for deliveries. The building became quieter after business hours. Most production lights went dark, but a light stayed on in the southern portion late into the night. Nobody seemed permanently stationed at either exterior entrance.'",
+                "15–19 ADD: 'A large, heavily built armed figure crossed the western loading approach, disappeared back into the building, and later returned. It appears to follow a patrol, rather than stand outside.' Describe its Bugbear identity only if her actual vantage/lighting could reveal it.",
+                "20–24 ADD: 'Drysa noticed the figure returned roughly every eight minutes. The brief interval just after it went back inside appears to be the best time to approach the loading area.'",
+                "25+ ADD: 'During the patrol cycles Drysa could observe, no other guard took the figure's position. From outside she saw a short interval without anyone watching the western door directly. Someone inside an unseen window or room could still be looking out.'",
+                "14 OR BELOW: base description only. Perception determines observed facts. Do not require Investigation just to understand the patrol pattern after observing it; use Intelligence (Investigation), suggested DC 13, only for an additional deduction supported by genuine clues.",
+                "NO RESULT discloses Room 19, Elowen, Jaroood, the monsters, master key, room numbers, or a guaranteed safe interior route. If Drysa was outside telepathic/senses-sharing range, she returns to Aaron to communicate the report; she did not give him unlimited live vision. A risky closer vantage only reveals what she can actually see and may call for Stealth +4."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Detritus Arrival — LOCKED Introduction, Vision Still OPEN",
+              "entries": [
+                "Elena plays Detritus, male Rock Gnome Wizard level 4, seeking a way to prevent his home being destroyed after a vision. The location of home, precise imagery, cause, origin, timeline, and character's wizard subclass/spells are NOT established. There is no automatic tie to the Crown, the Radiant Well or earlier villains.",
+                "Detritus arrives at Ledger House via the existing front porch seeking information in Bellweather. Marren Library is one plausible place he may ask about, but Elena defines what Detritus says and how he presents his journey. Ask Elena to describe his appearance rather than writing it for her.",
+                "Brakkus can answer ordinary local questions and introduce Detritus to the travelers he already knows: 'These folks have been around Bellweather more than most newcomers. They might know where to begin.' This does not disclose the group's covert plans. Detritus may offer help/companionship while searching for answers, and the players decide what to tell him and how to include him. Marren Library remains a possible future research stop, not a known solution to the vision."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Brakkus and Aaron — LOCKED Private Dialogue",
+              "entries": [
+                "Brakkus finds a quiet moment and invites Aaron into the EXISTING Ledger House back courtyard, or speaks later if Austin declines. He already knows Aaron is a dhampir. He does NOT automatically know Dimidicus's name, the mysterious liberator, Aaron's dreams or that Oghma intervened.",
+                "OPEN: 'Aaron, can I ask you something? What brought you to Bellweather? How did you find your way to my door?' Let Austin answer before continuing.",
+                "IF AARON DESCRIBES THE PULL OR DREAMS: 'I serve Oghma. I've wondered whether he had a hand in your finding this place. That's all it is, though: a suspicion. I don't have an answer.' Never confirm a divine action.",
+                "IF AARON ASKS ABOUT BEING DHAMPIR: 'I know. It hasn't changed your welcome here.' If he asks why: 'My father was a warlord. My mother was a librarian he kept captive. She taught me to read.' He may share further details if Aaron invites them. If Austin talks about his former master, Brakkus listens and may offer help researching the mystery without claiming prior knowledge.",
+                "IF AARON DOESN'T WANT TO TALK: 'Fair enough. My door's open if you change your mind.' Brakkus returns to ordinary inn business. The encounter is about understanding Aaron, not imposing a revelation or compulsory faith test."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Jord's Lodging and Hat of Disguise — LOCKED Offer, NOT GIVEN YET",
+              "entries": [
+                "Jord, established 86-year-old traveling gnome merchant with untidy sandy hair, spectacles and coat full of pockets, arrives with bags needing a room: the Crown took over his hotel for royal-guard barracks. His shop remains open, with its normal stock and already-promised 20% party discount.",
+                "The party previously recovered his horse and stolen strongbox; he already rewarded them. He is glad to see them at Ledger House, and may greet fellow gnome Detritus without assuming a prior friendship. He knows nothing about Tulcornix approaching the party or the Weavehouse rescue unless told.",
+                "Jord offers ONE personal {@item Hat of Disguise|XDMG} to the group as a GIFT out of goodwill for their past help and irritation at the Crown's commandeering of property. It is a personal possession, not a purchase or new wagon-stock item. Suggested voice line: 'You saved my horse and my strongbox. Reckon you can get better use out of this than I have. Here, take it.' Do not assign it to Aaron automatically.",
+                "If accepted in play, one party member may attune during a one-hour Short Rest. The Uncommon Hat of Disguise lets the attuned wearer cast {@spell Disguise Self|XPHB} at will, an illusion lasting up to an hour and ending on removal. Standard attunement cap three; no instantaneous handoff between PCs. Until accepted, the hat is NOT in party inventory.",
+                "Edda Pell's separately stocked Hat of Disguise at The Spare Button is unaffected. Jord's normal inventory, prices, discount and prior reward stay as they were."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Opening Branch Checks — LOCKED",
+              "entries": [
+                "Party leaves before Jord's offer: they do not have the hat, but the raid is still playable. Receiving it doesn't bypass the required Short Rest. Drysa rolls low: basic exterior information still stands and further scouting is an actual new action, not a reroll of the night.",
+                "Detritus doesn't share the vision: he can still meet the party and seek local knowledge. Aaron declines a private talk: Brakkus stops without pressing. Party chooses a different destination: the world continues and the Weavehouse remains in its locked prepared state. Nothing here is retroactively PLAYED."
               ]
             },
             {
@@ -2036,7 +2103,8 @@
                 "Father: Korgak, Ironfang warlord. Mother: Elena, a captive human librarian who taught Brakkus literacy, knowledge and human dignity. After her death he rejected his father's legacy and took the surname Ledgerhelm.",
                 "Mentor: High Justiciar Vance Halford. Vance gave him the magic sword Brakkus named The Appendix.",
                 "Brakkus's faith was Oghma when played at Hall of Heroes, and remains Oghma in NCFA. He knows Aaron is a dhampir and seeks to understand him.",
-                "He negotiated Pepper's release into custody and is a credible independent civic actor. He is not a required field companion or solution to player obstacles."
+                "He negotiated Pepper's release into custody and is a credible independent civic actor. He is not a required field companion or solution to player obstacles.",
+                "For Session 5, privately ask Aaron what drew him to Bellweather and Ledger House. Brakkus knows he's dhampir but has no confirmed knowledge of his liberator or divine intervention. His possible Oghma role is speculation, not fact."
               ]
             },
             {
@@ -2067,7 +2135,9 @@
                 "Aaron: dhampir; prior domination by Dimidicus is his personal history, not evidence of a royal or Well conspiracy. The implied Oghma involvement is a question.",
                 "Pepper: cleric; old Council penance, current negotiated Crown custody with Brakkus, unresolved relationship to Kaleb's family.",
                 "Jarrock: had reported Pepper's killing of Kaleb; drinks despite objections, and his personal trajectory toward confronting royal abuse must arise through play rather than a scripted destiny.",
-                "Arunem: described appearing in Bellweather after previously being at home; mechanism unexplained."
+                "Arunem: described appearing in Bellweather after previously being at home; mechanism unexplained.",
+                "Detritus (Elena): male Rock Gnome Wizard 4; has seen a vision of his home's destruction and is trying to PREVENT it. Home, origin/cause/time/detail of vision and wizard subclass/spells OPEN. Introduce him at Ledger House. Possible Marren Library research does not establish a plot connection.",
+                "Drysa: Aaron's pseudodragon familiar. Overnight exterior surveillance opening is ONE Wisdom (Perception) d20+5 with cumulative 15/20/25 tiers, in Chapter 6; no results played yet."
               ]
             }
           ]
@@ -3815,7 +3885,8 @@
                     }
                   ]
                 },
-                "On each NEW magical acquisition, roll d100 for rarity, then choose or randomly determine an existing magic item of that rarity whose provenance and physical size fit the transaction. Consumables can use their specific catalog prices instead. The table is a stock-generation aid, not permission to replace old stock at every party visit. A result being very rare or legendary does not make it a plot hook. Players may be unable to afford the item until much later."
+                "On each NEW magical acquisition, roll d100 for rarity, then choose or randomly determine an existing magic item of that rarity whose provenance and physical size fit the transaction. Consumables can use their specific catalog prices instead. The table is a stock-generation aid, not permission to replace old stock at every party visit. A result being very rare or legendary does not make it a plot hook. Players may be unable to afford the item until much later.",
+                "Session 5 STAGED, NOT PLAYED: Jord offers a personal Hat of Disguise to the party as a gift because they previously saved his horse and strongbox, after the Crown commandeered his hotel room. Not a stock sale or restock, and no transfer until accepted in play. Edda's separately listed Hat of Disguise remains available. Preserve existing 20% Jord discount."
               ]
             },
             {
