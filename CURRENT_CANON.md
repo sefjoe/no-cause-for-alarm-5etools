@@ -49,6 +49,16 @@ A keyed plan for all numbered areas, guard routines, alarm, witness handling and
 
 **Room 19 has a 15-foot ceiling** so the Gargoyle can use its normal flight without changing the map's walls, doors or passages. These are final approved session-prep clarifications. The Weavehouse is **locked for Session 5**, and further work should focus on the rest of the session unless the DM expressly asks to revise this encounter. No part of the locked prep is treated as already played.
 
+## Session 5 Weavehouse table routes and combat sheet (LOCKED PREP)
+
+The existing numbered map now has explicit operating routes in the **current 5etools JSON**, Chapter 8. The southern public approach at **Room 23** connects by the existing southern hall to the **west-side doorway of Room 19**. The western loading approach at **Room 21** follows the western service corridor past **Room 8**, the worker-wing corridor outside **Rooms 17/18**, and the southern interior hall to Room 19. These directions are waypoints beside numbered rooms, not permission to cut through locked worker rooms or create extra doors. **Room 20** remains Jaroood's separate secure files.
+
+**Guard routes:** the Bugbear's 8-minute route starts at Room 21, travels along the west service aisle beside Room 8 and worker wing near Rooms 9/10, visits the southern worker-wing approaches near Rooms 17/18, then **reverses along those same corridors** back to Room 21. The Warrior posts outside Rooms 9/10 and makes an hourly walk to the southern quarters and back; the Captain remains at Room 11 and reaches Jaroood only by actual corridors, not a teleporting reinforcement. These are locked routing instructions for play; doors, distances and any obstacles on the approved map govern movement.
+
+**Jord's Hat of Disguise is a GIFT, never a loan.** He offers one personal hat when he comes seeking lodging at Ledger House. Ownership transfers only when the party accepts it in play; a character must attune before using it. Neither Jord's wagon catalog nor Edda Pell's separate stocked hat is modified by this offer.
+
+Chapter 8 now contains a **one-page initiative and security sheet**, with the 2024 AC, HP, initiative, attacks and special features of the Earth Elemental, Gargoyle, Mimic, Hobgoblin Captain, Hobgoblin Warrior and Bugbear Warrior, alongside Jaroood's existing AC 15 / 9 HP, minis and binder locations, alarm/key DCs and guard-response procedure. Published 2024 stat blocks prevail for monster rules. This is **locked prep, not played history**.
+
 ## Brakkus and the supernatural
 
 Brakkus is a retired half-orc **Oath of Devotion paladin of Oghma**. His Hall of Heroes deity remains his NCFA deity. His mother **Elena**, a captive librarian, raised him to learn, read and avoid judging people by their ancestry; his father was the Ironfang warlord **Korgak**. Brakkus later learned from **High Justiciar Vance Halford**, who gave him the longsword **The Appendix**.
