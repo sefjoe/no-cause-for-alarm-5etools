@@ -43,9 +43,9 @@ Chapter 6 of the live JSON now starts with the **temporary table-read Session 5 
 
 ## Session 5 Cardon Weavehouse — full-mat exterior layout (LOCKED PREP, not played)
 
-**Active version 5.3:** Use the full 36×24-inch ENHANCE mat. The Weavehouse occupies **x2–36, y0–22** (a 34×22 building), with 10-foot outdoor strips to the west (x0–2) and south (y22–24). The design retains 12 functional rooms with the important old identifiers; the original 25-space map and the earlier v5.2 all-interior diagram remain historical references.
+**Active version 5.7:** Usable physical area is 34×22 squares. The Weavehouse building is 32×20 (x2–34, y0–20) and the required 10-foot outdoor strips remain ON THE MAT: west x0–2 and south y20–22. All 12 rooms, interior corridor widths, 16 doors and Large Earth Elemental access remain. The previously drafted larger-mat and all-interior diagrams are legacy.
 
-**Current references:** [DM layout](img/dm/cardon_weavehouse_34x22_outdoor.svg), [player layout](img/player/cardon_weavehouse_34x22_outdoor_player.svg), [no-marker build overlay](img/dm/cardon_weavehouse_34x22_outdoor_build.svg), [build guide and exact coordinates](docs/Cardon_Weavehouse_Outdoor_Build.md).
+**Current references:** [DM 34×22 with exterior](img/dm/cardon_weavehouse_34x22_EXTERIOR_RESTORED_DM.svg), [player 34×22 with exterior](img/player/cardon_weavehouse_34x22_EXTERIOR_RESTORED_PLAYER.svg), [exact coordinate build guide](docs/Cardon_Weavehouse_34x22_Exterior_Preserved_Build.md).
 
 **Rooms:** 21 loading 7×6; 6 storage 7×4; 15 production 12×10; 11 Captain office 10×5; 4 finishing 10×5; 9/10/17/18 worker dormitories 7×5 each; 20 private files 5×5; 23 reception 5×5; 19 Jaroood suite 10×10 with 15-foot ceiling and a three-square northern entrance. The western worker corridor is three squares wide, the central hall and other service corridors two squares wide.
 
@@ -106,4 +106,4 @@ Existing maps stay in the repository; Cardon Weavehouse has an explicitly revise
 
 ## Session 5 deployment
 
-The opening recap is the first entry of Chapter 6. The revised 36×24 physical Weavehouse map, room key, patrols, combat run sheet, and encounter mechanics are in Chapter 8. The same 5etools source ID NCFA is maintained for Homebrew Update. The finished map uses 12 functional rooms; the former 25-space image remains in GitHub for historical reference.
+The Session 5 recap, Ledger House opening, and Cardon Weavehouse map, room key, patrols, combat run sheet and encounter mechanics are together in Chapter 7. The 5etools source ID remains NCFA. Historical map variants remain in GitHub but are not the active build.
