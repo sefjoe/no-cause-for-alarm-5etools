@@ -6,18 +6,18 @@
         "json": "NCFA",
         "abbreviation": "NCFA",
         "full": "No Cause for Alarm: Ruins of Bellweather",
-        "version": "5.7",
+        "version": "5.8",
         "authors": [
           "No Cause for Alarm Campaign"
         ],
-        "dateLastModified": 1794176400,
-        "_dateLastModifiedHash": "ncfa-v5.7-34x22-exterior-preserved-20261108"
+        "dateLastModified": 1794184260,
+        "_dateLastModifiedHash": "ncfa-v5.8-session5-played-continuity-20261108"
       }
     ],
     "edition": "one",
     "dateAdded": 1789528955,
-    "dateLastModified": 1794176400,
-    "_dateLastModifiedHash": "ncfa-v5.7-34x22-exterior-preserved-20261108"
+    "dateLastModified": 1794184260,
+    "_dateLastModifiedHash": "ncfa-v5.8-session5-played-continuity-20261108"
   },
   "adventure": [
     {
@@ -770,7 +770,8 @@
                 "{@b ARUNEM:} Arunem cooked a large quantity of steak and bluffed his way into the Weavehouse, claiming he had been instructed to bring the food. His entry succeeded and did not set off an alarm.",
                 "{@b AARON / DETRITUS:} Aaron and Detritus cracked open a window and climbed into the Weavehouse. Detritus was invisible during the infiltration. They made it inside without being noticed by the distracted guard. Any subsequent movement or end of the invisibility remains unresolved.",
                 "{@b CURRENT SECURITY / NPC STATE AT LAST REPORT:} TWO guards have been sent home by Jarrock; the Bugbear is one of them. The guard assigned to the prisoners maintained their post during Pepper's delivery; the other guard was occupied answering the door rather than watching the window. The Hobgoblin Captain is still UNAWARE in Room 11. Jaroood is still UNAWARE in Room 19 with Elowen, the disguised chair Mimic, the Gargoyle, and the Earth Elemental. No one has sounded the internal alarm. Do not reposition the Captain, Jaroood, or defenders or infer a discovered break-in without an in-world event.",
-                "{@b RESUME FROM HERE:} Everyone involved has entered or is confined within the Weavehouse, but their exact later square-by-square positions have not all been supplied. Pepper's hole is small and potentially discoverable. Guards and workers respond to what they actually see and hear; the two dismissed guards stay gone unless subsequent play changes that. Elowen has not been rescued at this checkpoint. No combat outcome or additional dialogue is assumed."
+                "{@b RESUME FROM HERE:} Everyone involved has entered or is confined within the Weavehouse, but their exact later square-by-square positions have not all been supplied. Pepper's hole is small and potentially discoverable. Guards and workers respond to what they actually see and hear; the two dismissed guards stay gone unless subsequent play changes that. Elowen has not been rescued at this checkpoint. No combat outcome or additional dialogue is assumed.",
+                "{@b TABLE EXPERIENCE / DM CONTINUITY:} The DM described this as the most fun they had ever had at a table. The guards' reactions were based on established motives, duties and sightlines, NOT on a desire to force the PCs' success. The disguised dismissal and accidental distraction worked because the in-world NPCs behaved consistently. Preserve this consequence-driven approach for future NCFA sessions."
               ]
             },
             {
