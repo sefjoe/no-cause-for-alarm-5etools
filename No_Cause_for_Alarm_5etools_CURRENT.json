@@ -85,6 +85,7 @@
         {
           "name": "Chapter 7: Session 5 — Ledger House and the Rescue of Elowen",
           "headers": [
+            "SESSION 5 — PLAYED SO FAR / LOCKED CONTINUITY (November 8, 2026)",
             "Session 5 — Opening Recap Monologue (TEMPORARY: REMOVE AFTER SESSION)",
             "Session 5 — At Ledger House",
             "Drysa — Overnight Watch (Perception Results)",
@@ -215,6 +216,7 @@
         {
           "name": "Appendix J: Bellwether Shops and Inventories",
           "headers": [
+            "Session 5 — LOCKED Shop Transfers and Owners",
             "Selling Loot and Trading Equipment — Session 4",
             "The Tiny Mage — Tiera Dame",
             "The Spare Button — Edda Pell",
@@ -755,6 +757,24 @@
           "entries": [
             {
               "type": "entries",
+              "name": "SESSION 5 — PLAYED SO FAR / LOCKED CONTINUITY (November 8, 2026)",
+              "entries": [
+                "{@b STATUS: THIS ACTUALLY HAPPENED AT THE TABLE. Session 5's Weavehouse infiltration is IN PROGRESS, not resolved. Facts below supersede pre-session starting positions and assumed responses. No alarm has been raised to the Captain or Jaroood.} The rescue's outcome is not yet established.",
+                "{@b Ledger House / party formation:} Brakkus recommended the adventurers to Detritus as a capable group with a knack for finding interesting information. That endorsement is why Detritus joined them. His vision about his home's possible destruction is still his own background; no additional connection to the rescue has been established.",
+                "{@b Aaron and Brakkus:} They reached a narrow understanding: Brakkus will not reveal Aaron's nature as a dhampir to others. THAT WAS ALL. Do not extend the promise to protection, special investigative help, a commitment about Aaron's former master, or a confirmed divine explanation. Brakkus still serves Oghma and already knew Aaron was a dhampir.",
+                "{@b SHOP PURCHASES / ACQUISITIONS:} Tiny Mage: uneven wooden stilts → Jarrock; enormous brass key (unknown lock) → Pepper; 'CONGRATULATIONS, GREG!' sign → Pepper; ONE decorative ceramic frog → Arunem. Jord: locked wooden box (contents still unknown) → Pepper; Clockwork Amulet → Detritus. One crowbar was removed from Jord's stock, but its recipient was not specified. The wedding cake topper was removed from the Tiny Mage's stock, but the recipient was not specified. These are actual transfers, not pending offers.",
+                "{@b HAT OF DISGUISE:} Jord's personal Hat of Disguise was acquired by the party and Jarrock has used it for the Weavehouse infiltration. Jarrock convincingly impersonated a member of the King's Guard to deliver Pepper as a supposed new indentured worker, and later appeared as the Hobgoblin Captain to dismiss the angry Bugbear. Do not treat Jord's gift as still pending.",
+                "{@b THE GUARD ARGUMENT:} Aaron used Minor Illusion to make the Bugbear hear the Hobgoblin guard insult him. The Hobgoblin genuinely had no idea why the Bugbear was furious and protested along the lines of 'What's your problem, man? What are you talking about?' The denial made the Bugbear even angrier. Before the confrontation became a fight, Jarrock appeared disguised as the Captain and sent the Bugbear home. The Bugbear was already eager to leave and stormed away in a huff; no social check was required. In the infiltration, Jarrock convinced TWO guards to go home in total; do not silently return them to their original posts.",
+                "{@b PRISONER RUSE / WINDOW BREAK-IN:} Jarrock's disguised King's Guard delivered Pepper to be treated as an indentured prisoner. The guard assigned to the prisoners would not leave that post, so another guard answered the door and dealt with the new prisoner. By coincidence, that second guard was the one who would otherwise have had a view of the window Aaron and invisible Detritus pried open and climbed through. The players did NOT deliberately coordinate this distraction; it succeeded because of the guards' established duties and lines of sight. The window was opened without alerting the Captain or Jaroood.",
+                "{@b PEPPER:} Pepper was locked in one of the worker rooms as part of the ruse. From inside, she used Fire Bolt to burn an ARM-SIZED opening through an exterior wall. A character cannot pass through the small opening as-is. The exact worker-room number has not been reported; do not assign one retrospectively. The breach exists in the game world, but it has not automatically raised the alarm.",
+                "{@b ARUNEM:} Arunem cooked a large quantity of steak and bluffed his way into the Weavehouse, claiming he had been instructed to bring the food. His entry succeeded and did not set off an alarm.",
+                "{@b AARON / DETRITUS:} Aaron and Detritus cracked open a window and climbed into the Weavehouse. Detritus was invisible during the infiltration. They made it inside without being noticed by the distracted guard. Any subsequent movement or end of the invisibility remains unresolved.",
+                "{@b CURRENT SECURITY / NPC STATE AT LAST REPORT:} TWO guards have been sent home by Jarrock; the Bugbear is one of them. The guard assigned to the prisoners maintained their post during Pepper's delivery; the other guard was occupied answering the door rather than watching the window. The Hobgoblin Captain is still UNAWARE in Room 11. Jaroood is still UNAWARE in Room 19 with Elowen, the disguised chair Mimic, the Gargoyle, and the Earth Elemental. No one has sounded the internal alarm. Do not reposition the Captain, Jaroood, or defenders or infer a discovered break-in without an in-world event.",
+                "{@b RESUME FROM HERE:} Everyone involved has entered or is confined within the Weavehouse, but their exact later square-by-square positions have not all been supplied. Pepper's hole is small and potentially discoverable. Guards and workers respond to what they actually see and hear; the two dismissed guards stay gone unless subsequent play changes that. Elowen has not been rescued at this checkpoint. No combat outcome or additional dialogue is assumed."
+              ]
+            },
+            {
+              "type": "entries",
               "name": "Session 5 — Opening Recap Monologue (TEMPORARY: REMOVE AFTER SESSION)",
               "entries": [
                 "{@b Read aloud before the opening scene. Temporary section: remove after Session 5 is played.}",
@@ -821,20 +841,18 @@
               "type": "entries",
               "name": "Detritus — Arrival",
               "entries": [
-                "Detritus (Elena) is a male Rock Gnome Wizard 4. A vision showed that his home is in danger of destruction; he's searching for a way to prevent it. His home's location, exact vision, cause and timing have not been established.",
-                "Detritus arrives at Ledger House seeking local information. Marren Library is a potential research destination Brakkus can identify. Elena describes Detritus's appearance and introduction.",
-                "{@b Brakkus:} 'These folks have seen a fair bit of Bellweather lately. They may be able to point you in the right direction.'"
+                "{@b PLAYED:} Detritus (Elena), a male Rock Gnome Wizard 4, joined the party because Brakkus described the adventurers as capable and as people with a knack for finding interesting information. Brakkus made the recommendation; Detritus chose to accompany them.",
+                "Detritus's vision of his home's danger remains part of his background. His home's location, exact vision, cause, timing, and any direct link to NCFA's main plot are unestablished.",
+                "Detritus is present for the Weavehouse infiltration and entered with Aaron through a window while invisible. See the locked played record above for current events."
               ]
             },
             {
               "type": "entries",
               "name": "Brakkus and Aaron — Private Conversation",
               "entries": [
-                "Brakkus invites Aaron to the rear courtyard. He knows Aaron is a dhampir; details about Dimidicus, Aaron's dreams and the mysterious liberator are not known to him unless Aaron shares them.",
-                "{@b Opening:} 'Aaron, can I ask you something? What brought you to Bellweather? How did you find your way to my door?'",
-                "{@b If Aaron mentions the pull toward Bellweather or Ledger House:} 'I serve Oghma. I've wondered whether he had a hand in your finding this place. That's all it is, though: a suspicion. I don't have an answer.'",
-                "{@b If Aaron raises his dhampir nature:} 'I know. It hasn't changed your welcome here.' If asked why: 'My father was a warlord. My mother was a librarian he kept captive. She taught me to read.' Brakkus's mother Elena taught him to seek knowledge and respect people beyond their ancestry.",
-                "{@b If Aaron discusses his former master:} Brakkus offers to help him find reliable information. He has no identified answer about Aaron's liberator. If Aaron ends the conversation: 'Fair enough. My door's open if you change your mind.'"
+                "{@b PLAYED:} Aaron and Brakkus reached a limited understanding: Brakkus agreed not to reveal to others what kind of creature Aaron is (dhampir). This was the entire agreement. Brakkus already knew Aaron was a dhampir.",
+                "{@b No further commitments established:} No specific promise of protection, assistance, investigation, or intervention on Aaron's behalf was made. Brakkus follows Oghma, but whether Oghma influenced Aaron's arrival is speculative, not a resolved plot fact.",
+                "Brakkus's established background (Elena, Korgak, Oath of Devotion, Ledger House) is unchanged; nothing else from the pre-written possible dialogue is assumed to have been spoken."
               ]
             },
             {
@@ -844,7 +862,8 @@
                 "Jord, the 86-year-old gnome trader with sandy hair, spectacles and an overstuffed patched coat, arrives at Ledger House carrying his luggage. The Royal Guard has requisitioned his hotel for barracks. He asks Brakkus for a room. He recognizes the adventurers who recovered his stolen horse and strongbox.",
                 "{@b Gift:} Jord offers his personal {@item Hat of Disguise|XDMG} to the party permanently. 'You saved my horse and my strongbox. Reckon you can get better use out of this than I have. Here, take it.'",
                 "{@b Hat of Disguise:} Uncommon; requires attunement (Short Rest). Attuned wearer casts {@spell Disguise Self|XPHB} at will; each casting lasts 1 hour and ends if the hat is removed. Transfer when accepted in play.",
-                "{@b Trade:} Jord's 20% discount remains in force. The gifted hat was his personal possession and does not change either merchant's shop inventory."
+                "{@b Trade:} Jord's 20% discount remains in force. The gifted hat was his personal possession and does not change either merchant's shop inventory.",
+                "{@b PLAYED UPDATE:} The party received Jord's personal Hat of Disguise. Jarrock used it to impersonate Crown guards during the Weavehouse infiltration. This gift is no longer staged or pending."
               ]
             },
             {
@@ -935,6 +954,7 @@
               "type": "entries",
               "name": "AT-TABLE FLOW — How to Run the Rescue",
               "entries": [
+                "PLAYED-STATUS OVERRIDE: See the SESSION 5 — PLAYED SO FAR / LOCKED CONTINUITY section at the start of this chapter. The following describes the site's original security procedures and available options, NOT an instruction to reset the two dismissed guards, undetected window entry, prisoner ruse, or Pepper's wall breach.",
                 "START AT LEDGER HOUSE (opening sections above): give the Session 5 recap, Drysa's exterior watch report, Detritus's arrival, Jord's gift of the Hat of Disguise, and Brakkus's private invitation to Aaron when natural. These are available scenes, not mandatory gates; let the party choose the time and method of the rescue.",
                 "OBJECTIVE AND CHOICES: Tulcornix wants Elowen alive and free from Crown-controlled Cardon Weavehouse. This rescue is UNPAID: Tulcornix has promised no gold, title, land or other reward. The party is doing it as a favor, not as a contracted job. The 550 gp debt Jaroood claims against Elowen is a separate obstacle, not a reward for the party. The party can pay or obtain an authentic order, impersonate authorized visitors, negotiate, sneak her out, release other workers, or openly fight. Jaroood controls releases and debts through Crown authority. He does not magically control workers.",
                 "DAY/NIGHT: During business hours the south reception (23) receives visitors, the 17 other workers labor in production (15) and the rooms used for sleeping are not occupied as dormitories, Jaroood handles inspections/petitions and Elowen attends him. After evening headcount, those 17 workers are locked into rooms 9/10/17/18 (4/4/5/4); Jaroood and Elowen are in Room 19 with the Gargoyle, Mimic and Earth Elemental. The Captain begins in 11, Warrior at (9,14), and Bugbear patrol starts (9,3), repeating an approximately eight-minute circuit. Their existing duties continue unless the party changes events.",
@@ -949,6 +969,7 @@
               "type": "entries",
               "name": "RUN SHEET — 2024 Initiative, Monsters and Security",
               "entries": [
+                "CURRENT PLAYED-STATUS OVERRIDE: Two guards have been sent home (including the Bugbear); Captain Jaroood and the Room 19 defenders are unaware. Positions below describe the initial prepared layout. Do NOT return dismissed guards or assume an alarm. See SESSION 5 — PLAYED SO FAR.",
                 "BUILD GEOMETRY: the 34×22 usable mat includes TWO-SQUARE (10-ft) outdoor strips on the WEST x0–2 and SOUTH y20–22, both ON THE MAT. The 32×20-square building is x2–34/y0–20. All 12 rooms, the 3-square-wide suite entry, 2-square corridors, and 2×2 Earth Elemental footprint are preserved. ROOM 19: Jaroood, Elemental, Gargoyle, Mimic (281 total HP, 2,725 XP). The Captain, Warrior and Bugbear are at separate posts.",
                 "CURRENT PHYSICAL BUILD: {@link 34×22 DM One-Sheet WITH EXTERIOR|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_34x22_EXTERIOR_RESTORED_DM.svg}. 12 rooms, 16 door gaps, D1 and D4–D7 locked when applicable, alarm bell in Room 11, exterior-accessible patrol routes, four worker counts (4/4/5/4), seven Arcknight miniatures. The two green outdoor strips are PART OF THE USABLE MAT. Use dry-erase walls; no required extra props. https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/docs/Cardon_Weavehouse_34x22_Exterior_Preserved_Build.md",
                 {
@@ -1079,6 +1100,7 @@
               "type": "entries",
               "name": "Workers, Guard Posts and Daily Schedule",
               "entries": [
+                "NOTE: All listed guard posts and patrols are INITIAL site routines. The PLAYED SO FAR record is authoritative now: two guards dismissed; Captain unaware in office, Jaroood and suite defenders unaware. The existing prisoner-post guard stayed at their post during Pepper's ruse.",
                 "18 indentured workers in total: Room 9: four; Room 10: four; Room 17: five; Room 18: four; Elowen in Room 19. The dormitories are locked after evening headcount.",
                 "CAPTAIN: {@creature Hobgoblin Captain|XMM}, Room 11, with roster, keys and alarm bell. Coordinates responses to breakouts.",
                 "WARRIOR: {@creature Hobgoblin Warrior|XMM} posted in the three-square western worker corridor x8–11 outside Rooms 9/10 and 17/18, carrying room keys. Checks all four dormitory doorways once an hour.",
@@ -2145,7 +2167,7 @@
                 "Mentor: High Justiciar Vance Halford. Vance gave him the magic sword Brakkus named The Appendix.",
                 "Brakkus's faith was Oghma when played at Hall of Heroes, and remains Oghma in NCFA. He knows Aaron is a dhampir and seeks to understand him.",
                 "He negotiated Pepper's release into custody and is a credible independent civic actor. He is not a required field companion or solution to player obstacles.",
-                "For Session 5, privately ask Aaron what drew him to Bellweather and Ledger House. Brakkus knows he's dhampir but has no confirmed knowledge of his liberator or divine intervention. His possible Oghma role is speculation, not fact."
+                "SESSION 5 PLAYED: Brakkus and Aaron agreed only that Brakkus would not disclose Aaron's dhampir nature. Brakkus did not promise further protection, investigation, or divine insight. Oghma's possible involvement remains an unconfirmed suspicion."
               ]
             },
             {
@@ -2173,11 +2195,11 @@
               "type": "entries",
               "name": "Player Character Threads",
               "entries": [
-                "Aaron: dhampir; prior domination by Dimidicus is his personal history, not evidence of a royal or Well conspiracy. The implied Oghma involvement is a question.",
+                "Aaron: dhampir; prior domination by Dimidicus is his personal history, not evidence of a royal or Well conspiracy. The implied Oghma involvement is a question. SESSION 5 PLAYED: Brakkus agreed not to reveal Aaron's dhampir nature; that was the whole agreement.",
                 "Pepper: cleric; old Council penance, current negotiated Crown custody with Brakkus, unresolved relationship to Kaleb's family.",
                 "Jarrock: had reported Pepper's killing of Kaleb; drinks despite objections, and his personal trajectory toward confronting royal abuse must arise through play rather than a scripted destiny.",
                 "Arunem: described appearing in Bellweather after previously being at home; mechanism unexplained.",
-                "Detritus (Elena): male Rock Gnome Wizard 4; has seen a vision of his home's destruction and is trying to PREVENT it. Home, origin/cause/time/detail of vision and wizard subclass/spells OPEN. Introduce him at Ledger House. Possible Marren Library research does not establish a plot connection.",
+                "Detritus (Elena): male Rock Gnome Wizard 4. His vision shows his home in danger of destruction, which he wants to prevent; its exact location, cause, timing and relation to NCFA remain OPEN. SESSION 5 PLAYED: Brakkus said the party was capable and had a knack for finding interesting information; this convinced Detritus to join. He later entered Cardon Weavehouse with Aaron through a window while invisible.",
                 "Drysa: Aaron's pseudodragon familiar. Overnight exterior surveillance opening is ONE Wisdom (Perception) d20+5 with cumulative 15/20/25 tiers, in Chapter 7; no results played yet."
               ]
             }
@@ -2943,6 +2965,16 @@
             "Merchants have independent businesses, lives and motives. Not every inventory entry is a clue.",
             {
               "type": "entries",
+              "name": "Session 5 — LOCKED Shop Transfers and Owners",
+              "entries": [
+                "{@b The Tiny Mage:} Uneven wooden stilts → Jarrock; enormous brass key (matching lock unknown) → Pepper; sign reading 'CONGRATULATIONS, GREG!' → Pepper; ONE decorative ceramic frog → Arunem.",
+                "{@b Jord's Odds & Ends:} Locked wooden box (contents unexamined/unknown) → Pepper; Clockwork Amulet → Detritus. ONE crowbar removed from Jord's stock; its owner has not been reported.",
+                "{@b Removed but recipient not provided:} The Tiny Mage's wedding cake topper depicting two ogres was removed from stock, but no owner is assigned here.",
+                "{@b Gift distinct from shop stock:} Jord's PERSONAL Hat of Disguise was given to the party and used by Jarrock in Session 5. Edda's separately stocked Hat of Disguise is unaffected. Jord's 20% party discount remains."
+              ]
+            },
+            {
+              "type": "entries",
               "name": "Selling Loot and Trading Equipment — Session 4",
               "entries": [
                 "{@b 2024 PHB equipment resale.} Usable ordinary equipment sells for HALF its listed purchase cost. Trade goods and valuables (such as gems and art objects) retain their face value. Apply only to items the party actually collected, kept and brings to a willing buyer; undiscovered gear cannot be sold.",
@@ -3146,6 +3178,11 @@
                           "Brass ship's bell missing its clapper",
                           "1",
                           "3 gp"
+                        ],
+                        [
+                          "Decorative ceramic frogs",
+                          "36",
+                          "2 sp"
                         ],
                         [
                           "Portrait of an unidentified man labeled 'Gerald'",
@@ -3897,13 +3934,14 @@
                   ]
                 },
                 "On each NEW magical acquisition, roll d100 for rarity, then choose or randomly determine an existing magic item of that rarity whose provenance and physical size fit the transaction. Consumables can use their specific catalog prices instead. The table is a stock-generation aid, not permission to replace old stock at every party visit. A result being very rare or legendary does not make it a plot hook. Players may be unable to afford the item until much later.",
-                "Session 5 STAGED, NOT PLAYED: Jord offers a personal Hat of Disguise to the party as a gift because they previously saved his horse and strongbox, after the Crown commandeered his hotel room. Not a stock sale or restock, and no transfer until accepted in play. Edda's separately listed Hat of Disguise remains available. Preserve existing 20% Jord discount."
+                "Session 5 PLAYED: Jord's personal Hat of Disguise was transferred to the party as a gift in thanks for saving his horse and strongbox. Jarrock used it to disguise himself as Crown security in the Cardon Weavehouse infiltration. This was not a stock sale and Edda's separately listed Hat of Disguise remains for sale. Preserve the 20% party discount."
               ]
             },
             {
               "type": "entries",
               "name": "Party Gear Snapshot (Advisory, Not Stock-Tailoring Rules)",
               "entries": [
+                "SESSION 5 ACTUAL OWNER UPDATE: Jarrock — uneven wooden stilts; using the party's gifted Hat of Disguise. Pepper — enormous brass key, 'CONGRATULATIONS, GREG!' sign, and Jord's locked wooden box (contents unknown). Arunem — one decorative ceramic frog. Detritus — Clockwork Amulet. No known recipient for the crowbar or wedding cake topper removed from merchant stock. See session record for in-play locations.",
                 "Arunem: regular Scale Mail, greataxe, four handaxes, Potion of Healing, Oil of Slipperiness, scroll of Lesser Restoration. Pepper: Chain Shirt, shield, mace, two shortswords, Decanter of Endless Water, Potion of Climbing, and additional salvaged weapons, Holy Water and Kaleb's notebook. Jarrock: Studded Leather, two scimitars, dart, Poisoner's Kit, Thieves' Tools, potion of Healing, and ordinary adventuring supplies. Aaron's current equipment is unknown. These are references only; the shops do not stock to party demand.",
                 "Rules reminder: a Chain Shirt is AC 13 + DEX (max +2) without Stealth disadvantage, Scale Mail is AC 14 + DEX (max +2) with Stealth disadvantage, and Studded Leather is AC 12 + full DEX. An ordinary suit of Scale Mail does not upgrade Arunem, who already has one. Do not mistake magic armor's listed rarity price for a full set of custom work.",
                 "Revisiting inventory: after a party visit, edit individual quantities in this appendix or record sales in session notes. This is a reference snapshot, not a synchronized transaction system."
