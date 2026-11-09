@@ -6,18 +6,18 @@
         "json": "NCFA",
         "abbreviation": "NCFA",
         "full": "No Cause for Alarm: Ruins of Bellweather",
-        "version": "5.8",
+        "version": "5.9",
         "authors": [
           "No Cause for Alarm Campaign"
         ],
         "dateLastModified": 1794184260,
-        "_dateLastModifiedHash": "ncfa-v5.8-session5-played-continuity-20261108"
+        "_dateLastModifiedHash": "ncfa-v5.9-next-session-locked-start-weavehouse-20261108"
       }
     ],
     "edition": "one",
     "dateAdded": 1789528955,
     "dateLastModified": 1794184260,
-    "_dateLastModifiedHash": "ncfa-v5.8-session5-played-continuity-20261108"
+    "_dateLastModifiedHash": "ncfa-v5.9-next-session-locked-start-weavehouse-20261108"
   },
   "adventure": [
     {
@@ -85,6 +85,7 @@
         {
           "name": "Chapter 7: Session 5 — Ledger House and the Rescue of Elowen",
           "headers": [
+            "NEXT SESSION — LOCKED START STATE (After November 8 Session)",
             "SESSION 5 — PLAYED SO FAR / LOCKED CONTINUITY (November 8, 2026)",
             "Session 5 — Opening Recap Monologue (TEMPORARY: REMOVE AFTER SESSION)",
             "Session 5 — At Ledger House",
@@ -757,9 +758,23 @@
           "entries": [
             {
               "type": "entries",
+              "name": "NEXT SESSION — LOCKED START STATE (After November 8 Session)",
+              "entries": [
+                "{@b PLAY RESUMES INSIDE CARDON WEAVEHOUSE:} The infiltration remains unresolved. Neither the Captain nor Jaroood knows that intruders are inside. Do not replay the first infiltration or reset dismissed guards.",
+                "{@b PRISONERS / PEPPER:} The indentured workers are STILL LOCKED in their worker rooms, and Pepper is STILL LOCKED in a room after Jarrock delivered her as a supposed indentured prisoner. Her exact room number has not been established in the session report. Pepper burned an ARM-SIZED opening through her room's exterior wall with Fire Bolt. That hole remains; it is not large enough for a character to escape through.",
+                "{@b GUARDS:} There are currently NO GUARDS PATROLLING THE WEAVEHOUSE. Jarrock previously dismissed two guards, including the Bugbear, and they remain gone. Any remaining prisoner-post guard, if present, remains stationary; no patrol route or roaming investigation resumes automatically. The HOBGOBLIN CAPTAIN is ALONE in Room 11, unaware of the infiltration.",
+                "{@b JAROOOD:} Jaroood remains in Room 19 with Elowen and his three personal defenders: Earth Elemental, Gargoyle and chair Mimic. He is UNAWARE of the break-in. NEW DM DECISION: even if the party makes considerable noise elsewhere, Jaroood KEEPS HIS GUARDS WITH HIM. He will not send any of those defenders out to investigate. They remain in his room unless an actual later event changes the situation (for example a direct confrontation). The Mimic remains disguised as the upholstered chair.",
+                "{@b PLAYER KNOWLEDGE:} The PLAYERS HAVE NOT LEARNED ELOWEN'S LOCATION. Although the DM knows she is in Jaroood's Room 19, do not reveal it to the characters as an automatic consequence of being inside or making noise. They must discover it through actual play.",
+                "{@b OTHER PARTY POSITIONS:} Jarrock infiltrated using the gifted Hat of Disguise; Arunem bluffed in with steaks; Aaron and invisible Detritus entered through a pried-open window. Their subsequent exact squares have not been supplied. Do not invent those positions or assume that invisibility has ended.",
+                "{@b NOISE AND RESPONSE:} Noise remains an observable event and may have consequences based on who could actually hear or see it, but it DOES NOT trigger a mobile guard patrol or cause Jaroood to dispatch his personal defenders. The Captain is currently alone in his office; his response to new information depends on what reaches him, not automatic omniscience.",
+                "{@b UNRESOLVED:} Neither Elowen nor the locked workers have been freed; Pepper remains confined. No combat with Jaroood, the Captain, Earth Elemental, Gargoyle or Mimic has been reported. The rescue and any consequences are still open."
+              ]
+            },
+            {
+              "type": "entries",
               "name": "SESSION 5 — PLAYED SO FAR / LOCKED CONTINUITY (November 8, 2026)",
               "entries": [
-                "{@b STATUS: THIS ACTUALLY HAPPENED AT THE TABLE. Session 5's Weavehouse infiltration is IN PROGRESS, not resolved. Facts below supersede pre-session starting positions and assumed responses. No alarm has been raised to the Captain or Jaroood.} The rescue's outcome is not yet established.",
+                "{@b STATUS: THIS ACTUALLY HAPPENED AT THE TABLE. Session 5's Weavehouse infiltration is IN PROGRESS, not resolved.} For the exact start state of NEXT SESSION, read the locked checkpoint ABOVE before the account below. The next-session checkpoint supersedes the site's original patrolling and noise-response routines; no alarm has reached the Captain or Jaroood.",
                 "{@b Ledger House / party formation:} Brakkus recommended the adventurers to Detritus as a capable group with a knack for finding interesting information. That endorsement is why Detritus joined them. His vision about his home's possible destruction is still his own background; no additional connection to the rescue has been established.",
                 "{@b Aaron and Brakkus:} They reached a narrow understanding: Brakkus will not reveal Aaron's nature as a dhampir to others. THAT WAS ALL. Do not extend the promise to protection, special investigative help, a commitment about Aaron's former master, or a confirmed divine explanation. Brakkus still serves Oghma and already knew Aaron was a dhampir.",
                 "{@b SHOP PURCHASES / ACQUISITIONS:} Tiny Mage: uneven wooden stilts → Jarrock; enormous brass key (unknown lock) → Pepper; 'CONGRATULATIONS, GREG!' sign → Pepper; ONE decorative ceramic frog → Arunem. Jord: locked wooden box (contents still unknown) → Pepper; Clockwork Amulet → Detritus. Pepper also received the crowbar removed from Jord's stock and the Tiny Mage's wedding cake topper depicting two ogres. These are actual transfers, not pending offers.",
@@ -955,7 +970,7 @@
               "type": "entries",
               "name": "AT-TABLE FLOW — How to Run the Rescue",
               "entries": [
-                "PLAYED-STATUS OVERRIDE: See the SESSION 5 — PLAYED SO FAR / LOCKED CONTINUITY section at the start of this chapter. The following describes the site's original security procedures and available options, NOT an instruction to reset the two dismissed guards, undetected window entry, prisoner ruse, or Pepper's wall breach.",
+                "NEXT SESSION OVERRIDE: See NEXT SESSION — LOCKED START STATE at the top of this chapter. All prisoners including Pepper remain locked up; there are NO patrols, the Captain sits alone in Room 11, and Jaroood stays in Room 19 with Elowen and his personal defenders. The party does not know Elowen's location. Prepared flow below describes original options and layout, not a reset of the played events.",
                 "START AT LEDGER HOUSE (opening sections above): give the Session 5 recap, Drysa's exterior watch report, Detritus's arrival, Jord's gift of the Hat of Disguise, and Brakkus's private invitation to Aaron when natural. These are available scenes, not mandatory gates; let the party choose the time and method of the rescue.",
                 "OBJECTIVE AND CHOICES: Tulcornix wants Elowen alive and free from Crown-controlled Cardon Weavehouse. This rescue is UNPAID: Tulcornix has promised no gold, title, land or other reward. The party is doing it as a favor, not as a contracted job. The 550 gp debt Jaroood claims against Elowen is a separate obstacle, not a reward for the party. The party can pay or obtain an authentic order, impersonate authorized visitors, negotiate, sneak her out, release other workers, or openly fight. Jaroood controls releases and debts through Crown authority. He does not magically control workers.",
                 "DAY/NIGHT: During business hours the south reception (23) receives visitors, the 17 other workers labor in production (15) and the rooms used for sleeping are not occupied as dormitories, Jaroood handles inspections/petitions and Elowen attends him. After evening headcount, those 17 workers are locked into rooms 9/10/17/18 (4/4/5/4); Jaroood and Elowen are in Room 19 with the Gargoyle, Mimic and Earth Elemental. The Captain begins in 11, Warrior at (9,14), and Bugbear patrol starts (9,3), repeating an approximately eight-minute circuit. Their existing duties continue unless the party changes events.",
@@ -970,7 +985,7 @@
               "type": "entries",
               "name": "RUN SHEET — 2024 Initiative, Monsters and Security",
               "entries": [
-                "CURRENT PLAYED-STATUS OVERRIDE: Two guards have been sent home (including the Bugbear); Captain Jaroood and the Room 19 defenders are unaware. Positions below describe the initial prepared layout. Do NOT return dismissed guards or assume an alarm. See SESSION 5 — PLAYED SO FAR.",
+                "NEXT SESSION OVERRIDE: NO guards are patrolling. The two dismissed guards remain absent. The Hobgoblin Captain is alone and unaware in Room 11. Jaroood and Elowen are in Room 19 with the Earth Elemental, Gargoyle and disguised chair Mimic; they do NOT leave Jaroood to investigate noise elsewhere. The original patrol statistics and start positions below are historical preparation, not the current situation.",
                 "BUILD GEOMETRY: the 34×22 usable mat includes TWO-SQUARE (10-ft) outdoor strips on the WEST x0–2 and SOUTH y20–22, both ON THE MAT. The 32×20-square building is x2–34/y0–20. All 12 rooms, the 3-square-wide suite entry, 2-square corridors, and 2×2 Earth Elemental footprint are preserved. ROOM 19: Jaroood, Elemental, Gargoyle, Mimic (281 total HP, 2,725 XP). The Captain, Warrior and Bugbear are at separate posts.",
                 "CURRENT PHYSICAL BUILD: {@link 34×22 DM One-Sheet WITH EXTERIOR|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_34x22_EXTERIOR_RESTORED_DM.svg}. 12 rooms, 16 door gaps, D1 and D4–D7 locked when applicable, alarm bell in Room 11, exterior-accessible patrol routes, four worker counts (4/4/5/4), seven Arcknight miniatures. The two green outdoor strips are PART OF THE USABLE MAT. Use dry-erase walls; no required extra props. https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/docs/Cardon_Weavehouse_34x22_Exterior_Preserved_Build.md",
                 {
@@ -1055,7 +1070,7 @@
                   ]
                 },
                 "CREATURE TYPE: Hobgoblin Captain, Hobgoblin Warrior and Bugbear Warrior are Fey (Goblinoid) under 2024 rules. Hold Person requires a Humanoid.",
-                "GUARDS: One unexplained noise → one investigator ('Must be the wind' if nothing found). Sustained fighting → investigation and report. Alarm/breakout → Captain directs containment, Warrior secures doors, Bugbear captures escaping workers alive.",
+                "CURRENT GUARD RESPONSE: The original noise → investigator and patrol-response script is NO LONGER ACTIVE. There are no patrolling guards. The Captain is alone in Room 11 and only acts on information he actually receives. Jaroood retains his three defenders in Room 19 even if loud noise is heard elsewhere; he will not dispatch them.",
                 "LOCKS & EXIT: West loading/service lock DC 15 Thieves' Tools after hours. Exposed cord outside Room 19: quietly detach DC 13 Thieves' Tools or cut with an action (AC 12, HP 5). Worker doors Rooms 9 (4 people), 10 (4), 17 (5), 18 (4) open with Jaroood master key ONE ACTION EACH; otherwise DC 15 Thieves' Tools. Workers bolt independently toward existing Room 21 western or Room 23 southern access, no escort or pooled Stealth rolls.",
                 "MINIS: Earth Elemental #151 (p.19 back bottom left); Gargoyle #121 (p.16 front top left); Mimic #115 (p.15 front bottom left); Hobgoblin Captain #72 (p.9 back bottom right); Hobgoblin Warrior #59 (p.8 front bottom left); Bugbear Warrior #70 (p.9 back top right); Jaroood proxy #28 (p.4 front bottom right).",
                 "STAT LINKS: {@creature Earth Elemental|XMM}, {@creature Gargoyle|XMM}, {@creature Mimic|XMM}, {@creature Hobgoblin Captain|XMM}, {@creature Hobgoblin Warrior|XMM}, {@creature Bugbear Warrior|XMM}, {@creature Jaroood|NCFA}.",
@@ -1101,7 +1116,7 @@
               "type": "entries",
               "name": "Workers, Guard Posts and Daily Schedule",
               "entries": [
-                "NOTE: All listed guard posts and patrols are INITIAL site routines. The PLAYED SO FAR record is authoritative now: two guards dismissed; Captain unaware in office, Jaroood and suite defenders unaware. The existing prisoner-post guard stayed at their post during Pepper's ruse.",
+                "CURRENT SESSION STATE SUPERSEDES ROUTINES BELOW: ALL prisoners including Pepper remain locked up. No patrols are operating. Two guards (including the Bugbear) were dismissed and remain gone. The Captain is alone in Room 11. Jaroood retains his three personal defenders in Room 19 regardless of outside noise. The routine descriptions below were the original deployment before the infiltration.",
                 "18 indentured workers in total: Room 9: four; Room 10: four; Room 17: five; Room 18: four; Elowen in Room 19. The dormitories are locked after evening headcount.",
                 "CAPTAIN: {@creature Hobgoblin Captain|XMM}, Room 11, with roster, keys and alarm bell. Coordinates responses to breakouts.",
                 "WARRIOR: {@creature Hobgoblin Warrior|XMM} posted in the three-square western worker corridor x8–11 outside Rooms 9/10 and 17/18, carrying room keys. Checks all four dormitory doorways once an hour.",
@@ -1114,6 +1129,7 @@
               "type": "entries",
               "name": "Access, Alarm, Doors and Security Response",
               "entries": [
+                "NEXT SESSION SECURITY OVERRIDE: NO patrols. The Captain is alone and unaware in Room 11; Jaroood is unaware in Room 19 and keeps his personal defenders with him. Making noise elsewhere does not cause the Elemental, Gargoyle or Mimic to leave Jaroood and does not automatically send a roaming guard. An actual in-world signal, witness or encounter may still produce consequences.",
                 "ENTRANCES: Public entrance through Room 23 at the south edge. The west loading entrance through Room 21 is locked after hours (DC 15 Dexterity [Thieves' Tools]). The Bugbear passes Room 21 on its x8–11 west-corridor patrol. Drysa's exterior report is in this chapter, in the opening scenes.. West and south exterior strips are within the usable 34×22 mat.",
                 "BELL: Room 19 pull cord reaches a brass bell at Room 11 through ceiling/wall eyelets. A reachable segment outside Room 19 can be quietly disconnected with DC 13 Dexterity (Thieves' Tools) or cut as an action (AC 12, 5 HP). The bell alerts only people inside the Weavehouse.",
                 "NOISE: One ambiguous sound → one guard investigates, then 'Must be the wind' if no evidence. Sustained fighting, broken doors or escaping workers → continued investigation and ordinary report to the Captain.",
@@ -1137,6 +1153,7 @@
               "type": "entries",
               "name": "Jaroood — Appearance, Answers and Decisions",
               "entries": [
+                "{@b NEXT SESSION BEHAVIOR — LOCKED:} Jaroood is in his suite (Room 19) with Elowen and the Earth Elemental, Gargoyle and disguised chair Mimic. He has no knowledge of the infiltration and is determined to keep his personal protection beside him. Regardless of how much commotion occurs elsewhere, he does NOT send his guards out to investigate. He can act if directly confronted, but does not abandon his protection to chase noises.",
                 "{@b First description (read or paraphrase).} A slender high elf in a perfectly fitted burgundy coat stands behind a desk. His silver-blond hair is combed straight back from a narrow face; pale-gold eyes pass over you with brisk calculation. A heavy gold signet of the Crown sits on one long finger. He speaks in a refined, slightly nasal voice that makes even an insult sound like a courtesy.",
                 "{@b Voice and gestures.} Perform a younger and more vigorous Mr. Burns: nasal, soft, precise, delighted by profit, and condescending without shouting. He steeples his fingers when pleased, checks the edge of a ledger before replying, glances at a pocket watch when someone wastes time, and uses {@spell Prestidigitation|XPHB} to clean dust from his clothes after inspections. When royal authority is credible, he straightens and becomes swiftly deferential.",
                 "{@b Belief and motivation:} He regards indentured slavery as justified debt collection and workers as sources of profit. He wants wealth, security and continuing royal favor. He fears the Crown's displeasure.",
@@ -1154,6 +1171,7 @@
               "type": "entries",
               "name": "Room 19 — Confrontation and Elowen",
               "entries": [
+                "{@b NEXT SESSION:} Jaroood remains unaware in this room with Elowen and the three defenders, who remain with him even if loud noise comes from elsewhere. Importantly, the PLAYERS DO NOT KNOW Elowen is here. Do not reveal her location until it is established through their actions in play.",
                 "{@b Scene:} Jaroood is working at his desk with Elowen attending to papers. The 9×9-square suite has a 15-foot ceiling and a THREE-square-wide north entrance. A screened cot stands nearby. His real cashbox is hidden inside the desk; the ornate upholstered chair at (26,15) is the Mimic, NOT the cashbox. The Gargoyle looks like stone decoration, the Mimic like an elegant upholstered chair, and the Earth Elemental is present after hours.",
                 "{@b Elowen:} She seeks cover or a way out if fighting starts. She knows Kaleb is dead AND knows that Pepper killed him. If Pepper's identity is made clear, Elowen knows who she is dealing with. She wants to escape, but may confront Pepper about Kaleb when it is safe; the relationship is unresolved. Opening line: 'Who are you? What are you doing here?'",
                 "{@b Combatants:} Jaroood 9 HP, Earth Elemental 147, Gargoyle 67, Mimic 58. The labor guards begin at their ordinary posts and respond to any alarm or evidence they receive.",
@@ -1175,6 +1193,7 @@
               "type": "entries",
               "name": "Release, Escape and Investigation",
               "entries": [
+                "NEXT SESSION: All workers and Pepper remain confined. None of the locked worker groups has been freed. No guard patrol is active. Jaroood does not send out his defenders in response to noise; they stay with him in Room 19.",
                 "Once a worker-room door opens, its occupants run toward accessible exterior doors on their own: Room 9 (4), 10 (4), 17 (5), 18 (4). Elowen is the eighteenth. Guards may catch individuals but are forbidden to kill worker assets.",
                 "An early breakout alerts any guard who discovers it. Jaroood can respond if he receives a warning; guards unaware of a confrontation remain on their assigned duties.",
                 "The Crown investigates discovered murders, property destruction and escapes through staff testimony, physical evidence and accounts. It currently has no knowledge linking the party and Tulcornix. Outstanding debt claims persist after an unauthorized physical escape."
