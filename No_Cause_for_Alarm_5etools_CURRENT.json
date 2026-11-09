@@ -6,18 +6,18 @@
         "json": "NCFA",
         "abbreviation": "NCFA",
         "full": "No Cause for Alarm: Ruins of Bellweather",
-        "version": "5.9",
+        "version": "5.10",
         "authors": [
           "No Cause for Alarm Campaign"
         ],
         "dateLastModified": 1794184260,
-        "_dateLastModifiedHash": "ncfa-v5.9-next-session-locked-start-weavehouse-20261108"
+        "_dateLastModifiedHash": "ncfa-v5.10-savin-keep-approved-clues-20261109"
       }
     ],
     "edition": "one",
     "dateAdded": 1789528955,
     "dateLastModified": 1794184260,
-    "_dateLastModifiedHash": "ncfa-v5.9-next-session-locked-start-weavehouse-20261108"
+    "_dateLastModifiedHash": "ncfa-v5.10-savin-keep-approved-clues-20261109"
   },
   "adventure": [
     {
@@ -113,7 +113,8 @@
           "name": "Chapter 8: Savin Keep — Future Location",
           "headers": [
             "Maps (geography only)",
-            "Location Only — OPEN"
+            "Location Only — OPEN",
+            "Approved Savin Keep Direction — PREPARED, NOT PLAYED"
           ]
         },
         {
@@ -276,7 +277,7 @@
                 "Jaroood is a 243-year-old HIGH ELF who came to Bellweather with Prince Reginald. He has COMPLETE OPERATIONAL CONTROL of the Crown-owned Weavehouse: staff, shifts, discipline, worker assignments, admissions, debt assessments, records and releases. He believes the Crown's debt-based slavery is justified, personally earns 10% of EACH ADDITIONAL DEBT ASSESSMENT beyond a worker's original principal, and remains loyal because the Crown enriches and protects him. He fears only losing Crown favor. His voice is a younger, vigorous Mr. Burns, nasal and condescending without frailty. He stands 5 ft. 11 in., slender, with pale gold eyes, narrow face, slicked-back silver-blond hair, burgundy coat and ivory waistcoat.",
                 "Brakkus is a half-orc retired level-16 Oath of Devotion paladin of Oghma, not of any other god. His mother Elena was a librarian who taught him to read and understand people before judging them.",
                 "Bishop Brann proposed that the PCs outwardly cooperate with the Crown while secretly passing information to him and Brakkus. Opposition is beginning, not an already established spy organization.",
-                "The Radiant Well is a real magical phenomenon below the surface, relevant to the old legend Brakkus told about possible influence over minds. Its nature, access route, and any Crown connection are OPEN, not automatic campaign answers."
+                "The Radiant Well is the real magical source below the surface that lies behind the unusual magic associated with Bellweather. The Crown knows there is some form of mysterious magic associated with Bellweather and wants to control it, but does NOT know the source is the Radiant Well. The player characters have heard rumors but also do not know the Well is the source. Its actual mechanism, accessibility, effects and controllability remain OPEN; no magical surveying program or prior royal identification of the source is established."
               ]
             },
             {
@@ -1296,6 +1297,19 @@
                 "Savin Keep and its established location and maps remain available. Old reclamation orders, faction assignments, soldiers, treasure and outcomes have been retired.",
                 "Rebuild new events later from the Crown-era world and the party's choices."
               ]
+            },
+            {
+              "type": "entries",
+              "name": "Approved Savin Keep Direction — PREPARED, NOT PLAYED",
+              "entries": [
+                "{@b NEXT SESSION TRANSITION (PLANNED, NOT PLAYED):} Finish the Weavehouse, return Elowen to Tulcornix if rescued, allow the party a Long Rest, then have a Crown emissary approach the party. The emissary cites Pepper's outstanding service and offers payment to the rest of the group to reclaim Savin Keep. Follow with travel scenes and end next session at the keep's entrance. This is a proposed structure, not a forced outcome.",
+                "{@b CROWN ASSIGNMENT:} Savin Keep is occupied by monsters dangerous enough that ordinary Crown soldiers have not cleared it; clearing it would allow the Crown to resume taxation and commerce, and would also help real people whose trade and travel have been disrupted. Monster roster, specifics of the occupation, road geography, reward and travel events remain to be designed.",
+                "{@b DUNGEON FORMAT:} Savin Keep should be a traditional dungeon crawl for the level-5 party with meaningful exploration, multiple substantial monster encounters, and discoverable secrets. Reuse the established location and maps where practical. The dungeon layout, monsters, traps, treasure and outcomes are NOT yet locked.",
+                "{@b APPROVED CLUE 1 — HISTORICAL RECORD:} A genuinely old record preserved at Savin Keep recounts local Bellweather rumors of strange magic, potentially including the recurring folklore about influence over people's minds. It is folklore/testimony, not proof of a mechanism or knowledge of the Radiant Well.",
+                "{@b APPROVED CLUE 2 — CROWN DIRECTIVE:} A more recent Crown instruction directs personnel to gather accounts of unexplained magical phenomena, local legends, and unusual artifacts in the Bellweather region. The directive shows the Crown is searching for mysterious magic, not that it has identified the Radiant Well, located its source, measured it, or built magical surveying devices. No advance royal discovery or experiments are canon.",
+                "{@b DISCOVERY AND PLAYER KNOWLEDGE:} The players know rumors of mysterious magic, but do NOT know the Radiant Well is its source. They may discover one, both, or neither of these documents through dungeon exploration. The clues should suggest that the Crown is searching for something that may relate to the rumors, without giving away the answer. Do not make either clue a mandatory prerequisite for completing the Crown's contract.",
+                "{@b CANON BOUNDARY:} The Radiant Well is the underlying source of the magic the Crown wants to control, but the Crown itself does not know this. The nature/mechanism of the Well, the location of any access, and whether it can be controlled remain open. These clue concepts are approved for design; exact document text, placement and dungeon architecture are not yet written."
+              ]
             }
           ]
         },
@@ -2170,7 +2184,7 @@
               "name": "Explicitly OPEN",
               "entries": [
                 "Elowen's actual rescue, Jaroood's specific methods and daily schedule, surveillance findings, exact custody papers for Pepper, the Crown's knowledge of the party's intentions, and details of the developing resistance.",
-                "The Radiant Well's true mechanism, access, relation to future sites and any Crown knowledge or motive.",
+                "The Radiant Well's mechanism, access and full relationship to future sites; how the Crown intends to find or control the mysterious Bellweather magic it seeks; and what, if anything, it has found so far. Neither the Crown nor the PCs know the Radiant Well is the source.",
                 "The party's eventual relationship with the Stucky monarchy and all future chapter events.",
                 "Character destinies and unresolved backstories unless the players establish them."
               ]
