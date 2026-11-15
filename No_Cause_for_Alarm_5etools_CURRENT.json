@@ -6,18 +6,18 @@
         "json": "NCFA",
         "abbreviation": "NCFA",
         "full": "No Cause for Alarm: Ruins of Bellweather",
-        "version": "5.10",
+        "version": "5.11",
         "authors": [
           "No Cause for Alarm Campaign"
         ],
-        "dateLastModified": 1794184260,
-        "_dateLastModifiedHash": "ncfa-v5.10-savin-keep-approved-clues-20261109"
+        "dateLastModified": 1794721361,
+        "_dateLastModifiedHash": "ncfa-v5.11-session-6-road-to-savin-keep"
       }
     ],
     "edition": "one",
     "dateAdded": 1789528955,
-    "dateLastModified": 1794184260,
-    "_dateLastModifiedHash": "ncfa-v5.10-savin-keep-approved-clues-20261109"
+    "dateLastModified": 1794721361,
+    "_dateLastModifiedHash": "ncfa-v5.11-session-6-road-to-savin-keep"
   },
   "adventure": [
     {
@@ -86,6 +86,7 @@
           "name": "Chapter 7: Session 5 — Ledger House and the Rescue of Elowen",
           "headers": [
             "NEXT SESSION — LOCKED START STATE (After November 8 Session)",
+            "Session 6 — Weavehouse One-Sheet (PREPARED)",
             "SESSION 5 — PLAYED SO FAR / LOCKED CONTINUITY (November 8, 2026)",
             "Session 5 — Opening Recap Monologue (TEMPORARY: REMOVE AFTER SESSION)",
             "Session 5 — At Ledger House",
@@ -112,6 +113,12 @@
         {
           "name": "Chapter 8: Savin Keep — Future Location",
           "headers": [
+            "Session 6 — The Road to Savin Keep (PREPARED)",
+            "After the Weavehouse — Reunion and Long Rest",
+            "Koven House — The Crown’s First Commission",
+            "Player Handout — Royal Commission for Savin Keep",
+            "The Wagon Road — Storen Gate to the South Entrance",
+            "Session 6 — Branch and Continuity Check",
             "Maps (geography only)",
             "Location Only — OPEN",
             "Approved Savin Keep Direction — PREPARED, NOT PLAYED"
@@ -775,6 +782,63 @@
             },
             {
               "type": "entries",
+              "name": "Session 6 — Weavehouse One-Sheet (PREPARED)",
+              "entries": [
+                "{@b Checkpoint.} Pepper and the 17 dormitory workers are still locked up. Elowen is in Room 19 and the party does not know it. Pepper’s arm-sized exterior hole is not passable. Confirm PC squares, Pepper’s room and any active disguise/invisibility from the table’s memory before placing tokens. No patrols. Captain alone and unaware in Room 11. Jaroood unaware in Room 19, with all three defenders. They do not investigate noise elsewhere.",
+                "{@b Alarm.} noticed, intact, not sounded. Only Jaroood can pull it. Room 19 cord → bell in Room 11 (internal only). Exposed segment: DC 13 Dexterity (Thieves’ Tools) to detach quietly, or cut as an action (AC 12, 5 HP). Captain can respond to the bell or to evidence he actually receives. The dismissed guards do not return.",
+                "{@b Captives and exits.} Rooms 9/10/17/18 hold 4/4/5/4 workers, with Pepper separately tracked in her as-yet-unconfirmed room. Captain and Jaroood have dorm keys. One action per door with a key, or DC 15 Dexterity (Thieves’ Tools). Freed workers head for D1 (west via Room 21) or D2 (south via Room 23). D1 is locked after hours (DC 15 Dexterity [Thieves’ Tools]).",
+                "{@b Finding Elowen (new prep).} if a dormitory worker is asked, they last saw her carry the evening accounts to Jaroood. They can point out the suite door from the corridor. In Room 20 a current work slip labels her assignment “Evening accounts — administrator’s suite.” Reading the slip takes no check once the files are in hand. Neither lead reveals a defender.",
+                "{@b Records.} Room 11 holds the roster, labor ledger and clerical records. Room 20 holds private files and release forms. Jaroood has a personal commission ledger. The players have discussed destroying records, but haven’t done it. Track what survives and what the staff actually witnessed. No assumed copies. Pepper’s service record at Koven House is separate.",
+                "{@b Room 19.} Jaroood (29,16), Gargoyle (32,13), disguised chair Mimic (26,15), Earth Elemental NW (30,17), 2×2, Elowen (27,17), no mini needed. Captain Room 11 (30,2). Dry-erase 4/4/5/4 in the dorms. Use a furniture mark for the chair until the Mimic is revealed.",
+                "{@b Defenders.} The Elemental reacts to Jaroood’s Terran order or an attack it perceives on him or itself. Footsteps alone don’t trigger it. Gargoyle reacts to a threat or order. Mimic reacts to handling, prey or nearby fighting, not commands. Jaroood falling does not end the other creatures’ turns.",
+                "{@b Desk.} Jaroood’s 500 gp is separate from the rescue. False back DC 13 Intelligence (Investigation), or found by pulling out the drawers and checking the back. His small brass key or DC 15 Dexterity (Thieves’ Tools) opens the iron cashbox.",
+                {
+                  "type": "table",
+                  "caption": "Session 6 Combat Quick Reference",
+                  "colLabels": [
+                    "Creature / mini",
+                    "AC / HP / Init",
+                    "At the table"
+                  ],
+                  "colStyles": [
+                    "col-3",
+                    "col-2",
+                    "col-7"
+                  ],
+                  "rows": [
+                    [
+                      "Jaroood #28",
+                      "15 / 9 / +1",
+                      "+3 rapier, 1d8+1 piercing. Misty Step and Detect Magic 1/LR each. Can pull alarm or order defenders in Terran. PP 14."
+                    ],
+                    [
+                      "Earth Elemental #151",
+                      "17 / 147 / −1",
+                      "Two +8 attacks, in any mix: Slam 10 ft., 2d8+5 bludgeoning, or Rock Launch 60 ft., 1d6+5 bludgeoning and Prone (Large or smaller). Thunder vulnerability. Poison, Exhaustion, Paralyzed, Petrified, Poisoned and Unconscious immunities. Tremorsense 60 ft. Speed/burrow 30 ft."
+                    ],
+                    [
+                      "Gargoyle #121",
+                      "15 / 67 / +2",
+                      "Two +4 Claws, each 2d4+2 slashing. Fly 60 ft., Flyby. Poison, Exhaustion, Petrified and Poisoned immunities. Room 19 ceiling 15 ft."
+                    ],
+                    [
+                      "Chair Mimic #115",
+                      "12 / 58 / +3",
+                      "+5 Pseudopod 1d8+3 bludgeoning +1d8 acid, grapple (Large or smaller). Touch in chair form also grapples creatures Huge or smaller. Escape DC 13 with Disadvantage. Bite +5, 1d8+3 piercing +1d8 acid, or with Advantage and 2d8+3 piercing if grappled by Mimic. Immune to Acid and Prone."
+                    ],
+                    [
+                      "Captain #72",
+                      "17 / 58 / +4",
+                      "Two +4 attacks in any mix: Greatsword 2d6+2 slashing +1d6 poison, or Longbow 150/600 ft., 1d8+2 piercing +2d4 poison. Advantage on attacks and saves for him and allies within 10 ft. while he isn’t Incapacitated. Fey."
+                    ]
+                  ]
+                },
+                "{@link 34×22 DM battle mat|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_34x22_EXTERIOR_RESTORED_DM.svg} · {@link 34×22 player battle mat|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/cardon_weavehouse_34x22_EXTERIOR_RESTORED_PLAYER.svg} · {@link Exact coordinate build guide|https://github.com/sefjoe/no-cause-for-alarm-5etools/blob/main/docs/Cardon_Weavehouse_34x22_Exterior_Preserved_Build.md}.",
+                "After the break-in resolves, the reunion, Long Rest, Crown contract, and road are keyed in Chapter 8."
+              ]
+            },
+            {
+              "type": "entries",
               "name": "SESSION 5 — PLAYED SO FAR / LOCKED CONTINUITY (November 8, 2026)",
               "entries": [
                 "{@b STATUS: THIS ACTUALLY HAPPENED AT THE TABLE. Session 5's Weavehouse infiltration is IN PROGRESS, not resolved.} For the exact start state of NEXT SESSION, read the locked checkpoint ABOVE before the account below. The next-session checkpoint supersedes the site's original patrolling and noise-response routines; no alarm has reached the Captain or Jaroood.",
@@ -1211,6 +1275,69 @@
           "entries": [
             {
               "type": "entries",
+              "name": "Session 6 — The Road to Savin Keep (PREPARED)",
+              "entries": [
+                "Resume inside Cardon Weavehouse at level 4. If rescued, reunite Elowen with Tulcornix. Take the planned Long Rest and advance to level 5 before departure. At Ledger House, a Crown emissary cites Pepper’s service and offers the group a paid monster-clearing contract. Travel to the keep. End outside the south entrance, before opening the doors or rolling initiative.",
+                "{@b Table time.} Weavehouse about 60–90 min, potentially 120+ if the suite fight runs long. Reunion and rest 15–25 min. Writ 15–20 min. Road 30–50 min with room to expand. Short on time: keep the reunion, the offer and the gate. Run the wagon scene in a single choice and fold the scout post into the approach.",
+                "{@b Before play.} pull Arcknight #72 Captain, #28 Jaroood proxy, #121 Gargoyle, #115 Mimic and #151 Earth Elemental. No patrol minis on the mat. Use the established 34×22 exterior-strip layout. Keep the Savin Keep interior map off the player side tonight.",
+                "Current city overview visibly labels the Radiant Well. Use the approved Weavehouse player map if needed tonight, but don’t hand out that overview as part of the Crown commission. Savin’s existing map sets the south entrance only for Session 6."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "After the Weavehouse — Reunion and Long Rest",
+              "entries": [
+                "Meet where the party brings Elowen. Tulcornix waits to hear from the party and doesn’t go to the Weavehouse by default. He takes his cue from Elowen. If she’s free, his first move is to give her space to choose where she goes. “Elowen. Do you want me to take you home?” If they return without her: “Tell me what you saw. Is she still there?” No reward was promised.",
+                "Elowen is Kaleb’s widow and already knows Pepper killed him. If she learns who Pepper is and chooses to speak, give her a direct question: “Tell me what happened to Kaleb. If you can’t tell me now, tell me when you can.” She can leave with Tulcornix without settling it. Don’t assume the other workers came with her or that she knows what happened to the records.",
+                "If some workers ask for help, give Brakkus a concrete response: food and a private place to catch their breath at Ledger House, if the party brings them there. He can ask who has somewhere to go tonight. He does not promise permanent shelter, speak for Elowen, or know more than the party tells him.",
+                "{@b Milestone.} once the Weavehouse sequence is over and the party takes its planned Long Rest, they start the Savin Keep assignment at level 5. No level-up during the Weavehouse confrontation."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Koven House — The Crown’s First Commission",
+              "entries": [
+                "Deputy Commissioner Iona Venn, Koven House (new prep). Human woman, mid-40s, tall, close-cropped iron-gray hair, ink on her left cuff, neat traveling coat with a small Crown pin. Speaks crisply, never raises her voice, and runs a thumbnail down the edge of a folded paper when waiting for an answer.",
+                "{@b Venn’s brief.} reopen a wagon road without losing more personnel. Two Crown scouts sent to assess the keep did not report back. The guard can hold the city approaches and return to verify a clear road, but Venn won’t send another squad inside on what they know. She has reports of large creatures coming out of the keep and no reliable species count. This writ contains no instructions about unusual magic. She’s here on separate business from the Weavehouse. Use only any specific evidence that actually surfaced and reached Koven House; no assumed connection to the party.",
+                "{@b Opening.} “Pepper? Your service ledger shows Kellan’s Well. That was the unpaid one. Savin Keep would count as the first paid assignment. The Crown wants all five of you. Two scouts failed to report, and the tax carts are still on this side of the keep.”",
+                "{@b Terms.} 500 gp total for the five, 100 gp each including Pepper. No advance. Payment at Koven House after a road officer confirms the route is safe for ordinary wagons and the keep is no longer a base for the attacks. No requirement to catalog every room, collect bodies or find unrelated records. Pepper earns credit for one paid service assignment on completion, leaving three. Signing doesn’t change her custody terms with Brakkus. An unsigned writ does not become a completed service assignment.",
+                "{@b If they ask why them.} “The old Council left a record of Kellan’s Well. A city watch squad is trained to hold a gate. It isn’t trained to clear a monster den.” If they decline, Venn leaves the offer open until the next day and looks for other contractors. She doesn’t arrest Pepper or spring a second assignment in this scene. If the party wants different terms, Venn can authorize up to 125 gp per signer on completion with concrete leverage (e.g. taking responsibility for the crew that verifies the road). A successful DC 15 Charisma (Persuasion) can secure that rate if leverage is uncertain. If fewer than five sign, the stated rate is per signer. The mission is one paid service credit for Pepper, not one per signer."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Player Handout — Royal Commission for Savin Keep",
+              "entries": [
+                "ROYAL COMMISSION • SAVIN KEEP",
+                "Under the authority of Prince Reginald Stucky, Koven House commissions the undersigned to end the monster attacks from Savin Keep and restore safe passage for ordinary wagon traffic.",
+                "The Crown offers one hundred gold pieces per named contractor upon verification by its road officer.",
+                "Successful completion shall be entered against one paid term of Pepper’s outstanding service. This commission does not alter any other terms of custody.",
+                "Report completion at Koven House, Bellweather.",
+                "Deputy Commissioner Iona Venn"
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "The Wagon Road — Storen Gate to the South Entrance",
+              "entries": [
+                "{@b Route (new prep outside the approved city map).} 12 road miles from Storen Gate to Savin Keep, about 4 hours on foot at normal pace before stops. Follow the wagon road away from Bellweather. Mile 4: the stalled wagon. Mile 9: the abandoned scout post. Mile 12: the south entrance. After a morning departure, ordinarily arrive early to midafternoon.",
+                "Mile 4 — The wagon. Della Rook, a short halfling teamster in a patched blue coat with a missing front tooth, keeps a thumb in her belt when she’s annoyed. An ordinary rut broke a wheel pin. She’s bringing salt and lamp oil from Bellweather to the villages beyond the keep, and plans to unload at a nearby farm until the road is safe. She’s lost two trips already. “The oil’s spoken for. The salt was meant for the pork they’ve already slaughtered.” She saw a large shape crossing the road near dusk yesterday and heard a mule scream, but couldn’t identify the creature.",
+                "Wagon resolution. Della has a spare pin and a sound wheel. If the party supports the axle with leverage or an appropriate spell, she fits it without a check (10 minutes in-world). Brute lift without leverage: DC 13 Strength (Athletics). On failure, Della and anyone willing unload the wagon and use her jack (25 minutes total). If the party passes, she unloads and fixes it herself later. If helped, she offers a water refill and marks the keep’s south approach on the back of the writ. No money or extra quest.",
+                "Mile 9 — Scout post. A low dry-stone shelter overlooks the wagon road. The bedrolls are gone, but there’s a Crown-marked mess tin and a wax slate under the capstone, left for a relief patrol. Anyone checking the shelter finds the slate: “Large shapes on the road after dusk. South door still stands. We’ll look from there at first light.” The note doesn’t name the creatures or explain what happened to the scouts. A character checking the muddy turnout with DC 13 Wisdom (Survival) can tell two sets of bootprints lead toward the keep. There’s no clear sign they came back. On failure the road and landmark are still obvious. Short on time: put this note at the roadside and skip the roll.",
+                "Optional stretch — The washed-out culvert beyond the post. The road is undercut for eight feet. The stock path gets the party around in 20 minutes with no check. A running jump that comfortably clears the gap reaches the far side. If a character takes the crumbling edge or a marginal landing under pressure, DC 13 Dexterity (Acrobatics). Failure slides them onto the muddy bank, soaks their pack and costs ten minutes to get back to the road. No damage. Run only if the table has time for another road choice.",
+                "Mile 12 — At the door. The road bends out of sight behind the party. “Savin Keep sits low behind its walls. The road has narrowed to two ruts in the grass. At the south entrance, the iron straps are still on the doors, but the wood beneath the latch has been split and pushed outward. From where you stand, you can’t see the other side.” Take marching order and ask who is at the latch. End there, outside. No monster reveal, no entry, no dungeon clue.",
+                "{@b Dungeon boundary.} Neither clue appears on the road or in the party’s writ. Keep the approved old folklore record and separate Crown information-gathering directive inside Savin Keep. Neither identifies the Radiant Well or establishes a royal survey program. Monster roster, interior key and placement of both documents remain Session 7 prep."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Session 6 — Branch and Continuity Check",
+              "entries": [
+                "Cold check: a silent breakout leaves the Captain where he is unless he observes evidence. If Jaroood pulls the cord, the Captain can hear it in Room 11 and respond along the mapped route, even while the dismissed guards remain gone. If the party leaves without Elowen, use Tulcornix’s fallback and don’t award a rescue by narration. If they refuse the writ, keep the road available but don’t move them to the keep. If combat runs long, skip the optional culvert and compress the scout post. Log who escaped, who or what can identify the party, what records survived, and whether the writ was signed."
+              ]
+            },
+            {
+              "type": "entries",
               "name": "Maps (geography only)",
               "entries": [
                 {
@@ -1303,7 +1430,7 @@
               "name": "Approved Savin Keep Direction — PREPARED, NOT PLAYED",
               "entries": [
                 "{@b NEXT SESSION TRANSITION (PLANNED, NOT PLAYED):} Finish the Weavehouse, return Elowen to Tulcornix if rescued, allow the party a Long Rest, then have a Crown emissary approach the party. The emissary cites Pepper's outstanding service and offers payment to the rest of the group to reclaim Savin Keep. Follow with travel scenes and end next session at the keep's entrance. This is a proposed structure, not a forced outcome.",
-                "{@b CROWN ASSIGNMENT:} Savin Keep is occupied by monsters dangerous enough that ordinary Crown soldiers have not cleared it; clearing it would allow the Crown to resume taxation and commerce, and would also help real people whose trade and travel have been disrupted. Monster roster, specifics of the occupation, road geography, reward and travel events remain to be designed.",
+                "{@b CROWN ASSIGNMENT:} Savin Keep is occupied by monsters dangerous enough that ordinary Crown soldiers have not cleared it; clearing it would allow the Crown to resume taxation and commerce, and would also help real people whose trade and travel have been disrupted. The road, scouts, and Crown contract are keyed in the Session 6 preparation. The monster roster and specifics of the keep’s occupation are open.",
                 "{@b DUNGEON FORMAT:} Savin Keep should be a traditional dungeon crawl for the level-5 party with meaningful exploration, multiple substantial monster encounters, and discoverable secrets. Reuse the established location and maps where practical. The dungeon layout, monsters, traps, treasure and outcomes are NOT yet locked.",
                 "{@b APPROVED CLUE 1 — HISTORICAL RECORD:} A genuinely old record preserved at Savin Keep recounts local Bellweather rumors of strange magic, potentially including the recurring folklore about influence over people's minds. It is folklore/testimony, not proof of a mechanism or knowledge of the Radiant Well.",
                 "{@b APPROVED CLUE 2 — CROWN DIRECTIVE:} A more recent Crown instruction directs personnel to gather accounts of unexplained magical phenomena, local legends, and unusual artifacts in the Bellweather region. The directive shows the Crown is searching for mysterious magic, not that it has identified the Radiant Well, located its source, measured it, or built magical surveying devices. No advance royal discovery or experiments are canon.",
