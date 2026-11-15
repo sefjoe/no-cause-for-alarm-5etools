@@ -6,18 +6,18 @@
         "json": "NCFA",
         "abbreviation": "NCFA",
         "full": "No Cause for Alarm: Ruins of Bellweather",
-        "version": "5.11",
+        "version": "5.12",
         "authors": [
           "No Cause for Alarm Campaign"
         ],
-        "dateLastModified": 1794721361,
-        "_dateLastModifiedHash": "ncfa-v5.11-session-6-road-to-savin-keep"
+        "dateLastModified": 1794727219,
+        "_dateLastModifiedHash": "ncfa-v5.12-naming-and-navigation-audit"
       }
     ],
     "edition": "one",
     "dateAdded": 1789528955,
-    "dateLastModified": 1794721361,
-    "_dateLastModifiedHash": "ncfa-v5.11-session-6-road-to-savin-keep"
+    "dateLastModified": 1794727219,
+    "_dateLastModifiedHash": "ncfa-v5.12-naming-and-navigation-audit"
   },
   "adventure": [
     {
@@ -83,25 +83,25 @@
           ]
         },
         {
-          "name": "Chapter 7: Session 5 — Ledger House and the Rescue of Elowen",
+          "name": "Chapter 7: Cardon Weavehouse — Elowen’s Rescue",
           "headers": [
-            "NEXT SESSION — LOCKED START STATE (After November 8 Session)",
-            "Session 6 — Weavehouse One-Sheet (PREPARED)",
-            "SESSION 5 — PLAYED SO FAR / LOCKED CONTINUITY (November 8, 2026)",
-            "Session 5 — Opening Recap Monologue (TEMPORARY: REMOVE AFTER SESSION)",
+            "Session 6 — Locked Weavehouse Checkpoint",
+            "Session 6 — Weavehouse One-Sheet",
+            "Session 5 — Played Record (November 8, 2026)",
+            "Session 5 — Opening Recap (Original Prep)",
             "Session 5 — At Ledger House",
             "Drysa — Overnight Watch (Perception Results)",
             "Detritus — Arrival",
             "Brakkus and Aaron — Private Conversation",
             "Jord — A Room and a Gift",
             "Map: Ledger House (Approved DM Map)",
-            "Map: Bellweather Under Crown Administration",
+            "Map: Bellweather Under Crown Administration (DM Reference)",
             "Maps — 34×22 Battle Mat, Exterior Approaches Preserved",
-            "AT-TABLE FLOW — How to Run the Rescue",
-            "RUN SHEET — 2024 Initiative, Monsters and Security",
-            "Routes — Approaches, Patrols and Escape",
+            "Rescue Flow — Original Session 5 Prep",
+            "Encounter Run Sheet — Initiative, Monsters and Security",
+            "Routes — Approaches, Escape and Original Patrols",
             "Room Key — 12 Rooms / 34×22 Mat Including Exteriors",
-            "Workers, Guard Posts and Daily Schedule",
+            "Workers and Guard Posts — Original Schedule",
             "Access, Alarm, Doors and Security Response",
             "Authority and Elowen",
             "Jaroood — Appearance, Answers and Decisions",
@@ -111,17 +111,17 @@
           ]
         },
         {
-          "name": "Chapter 8: Savin Keep — Future Location",
+          "name": "Chapter 8: The Road to Savin Keep",
           "headers": [
-            "Session 6 — The Road to Savin Keep (PREPARED)",
+            "Session 6 — Run of Show",
             "After the Weavehouse — Reunion and Long Rest",
-            "Koven House — The Crown’s First Commission",
+            "Venn’s Visit to Ledger House — The Crown’s First Commission",
             "Player Handout — Royal Commission for Savin Keep",
             "The Wagon Road — Storen Gate to the South Entrance",
             "Session 6 — Branch and Continuity Check",
-            "Maps (geography only)",
-            "Location Only — OPEN",
-            "Approved Savin Keep Direction — PREPARED, NOT PLAYED"
+            "Savin Keep — Interior Maps (Future Session)",
+            "Savin Keep — Legacy Map and Scenario Notes",
+            "Savin Keep — Approved Dungeon Direction (Future Session)"
           ]
         },
         {
@@ -188,7 +188,7 @@
         {
           "name": "Appendix A: Canon Ledger and Open Decisions",
           "headers": [
-            "Current State",
+            "Campaign Checkpoint — Start of Session 6",
             "Explicitly OPEN"
           ]
         },
@@ -223,7 +223,7 @@
           ]
         },
         {
-          "name": "Appendix J: Bellwether Shops and Inventories",
+          "name": "Appendix J: Bellweather Shops and Inventories",
           "headers": [
             "Session 5 — LOCKED Shop Transfers and Owners",
             "Selling Loot and Trading Equipment — Session 4",
@@ -238,7 +238,7 @@
           "name": "Appendix K: Future Location Register and Prep Standard",
           "headers": [
             "Retained Locations",
-            "Build Before Session 5"
+            "Weavehouse Prep Checklist (Original)"
           ]
         }
       ]
@@ -261,7 +261,7 @@
               },
               "title": "Cover"
             },
-            "{@i No Cause for Alarm: Ruins of Bellweather} is an active D&D campaign. Four level-4 PCs are about to begin Session 5. Read this current canon before preparing; played events and explicit DM corrections override abandoned plans.",
+            "{@i No Cause for Alarm: Ruins of Bellweather} is an active D&D campaign. Session 6 resumes inside Cardon Weavehouse with five level-4 PCs. Read this current canon before preparing; played events and explicit DM corrections override abandoned plans.",
             {
               "type": "entries",
               "name": "Authority and Preparation",
@@ -352,7 +352,7 @@
                         "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/bellweather_crown_approved_2026-10-15.webp"
                       },
                       "imageType": "map",
-                      "title": "Bellweather — Crown Administration (Approved October 15, 2026)",
+                      "title": "Bellweather — Crown Administration (DM Reference, Approved October 15, 2026)",
                       "width": 1448,
                       "height": 1086
                     },
@@ -762,11 +762,11 @@
         },
         {
           "type": "section",
-          "name": "Chapter 7: Session 5 — Ledger House and the Rescue of Elowen",
+          "name": "Chapter 7: Cardon Weavehouse — Elowen’s Rescue",
           "entries": [
             {
               "type": "entries",
-              "name": "NEXT SESSION — LOCKED START STATE (After November 8 Session)",
+              "name": "Session 6 — Locked Weavehouse Checkpoint",
               "entries": [
                 "{@b PLAY RESUMES INSIDE CARDON WEAVEHOUSE:} The infiltration remains unresolved. Neither the Captain nor Jaroood knows that intruders are inside. Do not replay the first infiltration or reset dismissed guards.",
                 "{@b PRISONERS / PEPPER:} The indentured workers are STILL LOCKED in their worker rooms, and Pepper is STILL LOCKED in a room after Jarrock delivered her as a supposed indentured prisoner. Her exact room number has not been established in the session report. Pepper burned an ARM-SIZED opening through her room's exterior wall with Fire Bolt. That hole remains; it is not large enough for a character to escape through.",
@@ -782,7 +782,7 @@
             },
             {
               "type": "entries",
-              "name": "Session 6 — Weavehouse One-Sheet (PREPARED)",
+              "name": "Session 6 — Weavehouse One-Sheet",
               "entries": [
                 "{@b Checkpoint.} Pepper and the 17 dormitory workers are still locked up. Elowen is in Room 19 and the party does not know it. Pepper’s arm-sized exterior hole is not passable. Confirm PC squares, Pepper’s room and any active disguise/invisibility from the table’s memory before placing tokens. No patrols. Captain alone and unaware in Room 11. Jaroood unaware in Room 19, with all three defenders. They do not investigate noise elsewhere.",
                 "{@b Alarm.} noticed, intact, not sounded. Only Jaroood can pull it. Room 19 cord → bell in Room 11 (internal only). Exposed segment: DC 13 Dexterity (Thieves’ Tools) to detach quietly, or cut as an action (AC 12, 5 HP). Captain can respond to the bell or to evidence he actually receives. The dismissed guards do not return.",
@@ -839,9 +839,9 @@
             },
             {
               "type": "entries",
-              "name": "SESSION 5 — PLAYED SO FAR / LOCKED CONTINUITY (November 8, 2026)",
+              "name": "Session 5 — Played Record (November 8, 2026)",
               "entries": [
-                "{@b STATUS: THIS ACTUALLY HAPPENED AT THE TABLE. Session 5's Weavehouse infiltration is IN PROGRESS, not resolved.} For the exact start state of NEXT SESSION, read the locked checkpoint ABOVE before the account below. The next-session checkpoint supersedes the site's original patrolling and noise-response routines; no alarm has reached the Captain or Jaroood.",
+                "{@b STATUS: THIS ACTUALLY HAPPENED AT THE TABLE. Session 5's Weavehouse infiltration is IN PROGRESS, not resolved.} For the start state, read Session 6 — Locked Weavehouse Checkpoint above. That checkpoint supersedes the site's original patrolling and noise-response routines; no alarm has reached the Captain or Jaroood.",
                 "{@b Ledger House / party formation:} Brakkus recommended the adventurers to Detritus as a capable group with a knack for finding interesting information. That endorsement is why Detritus joined them. His vision about his home's possible destruction is still his own background; no additional connection to the rescue has been established.",
                 "{@b Aaron and Brakkus:} They reached a narrow understanding: Brakkus will not reveal Aaron's nature as a dhampir to others. THAT WAS ALL. Do not extend the promise to protection, special investigative help, a commitment about Aaron's former master, or a confirmed divine explanation. Brakkus still serves Oghma and already knew Aaron was a dhampir.",
                 "{@b SHOP PURCHASES / ACQUISITIONS:} Tiny Mage: uneven wooden stilts → Jarrock; enormous brass key (unknown lock) → Pepper; 'CONGRATULATIONS, GREG!' sign → Pepper; ONE decorative ceramic frog → Arunem. Jord: locked wooden box (contents still unknown) → Pepper; Clockwork Amulet → Detritus. Pepper also received the crowbar removed from Jord's stock and the Tiny Mage's wedding cake topper depicting two ogres. These are actual transfers, not pending offers.",
@@ -858,7 +858,7 @@
             },
             {
               "type": "entries",
-              "name": "Session 5 — Opening Recap Monologue (TEMPORARY: REMOVE AFTER SESSION)",
+              "name": "Session 5 — Opening Recap (Original Prep)",
               "entries": [
                 "{@b Read aloud before the opening scene. Temporary section: remove after Session 5 is played.}",
                 "Our story began during a terrible storm.",
@@ -973,7 +973,7 @@
             },
             {
               "type": "entries",
-              "name": "Map: Bellweather Under Crown Administration",
+              "name": "Map: Bellweather Under Crown Administration (DM Reference)",
               "entries": [
                 {
                   "type": "gallery",
@@ -985,7 +985,7 @@
                         "url": "https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/bellweather_crown_approved_2026-10-15.webp"
                       },
                       "imageType": "map",
-                      "title": "Bellweather — Crown Administration (Approved October 15, 2026)",
+                      "title": "Bellweather — Crown Administration (DM Reference, Approved October 15, 2026)",
                       "width": 1448,
                       "height": 1086
                     }
@@ -1035,9 +1035,9 @@
             },
             {
               "type": "entries",
-              "name": "AT-TABLE FLOW — How to Run the Rescue",
+              "name": "Rescue Flow — Original Session 5 Prep",
               "entries": [
-                "NEXT SESSION OVERRIDE: See NEXT SESSION — LOCKED START STATE at the top of this chapter. All prisoners including Pepper remain locked up; there are NO patrols, the Captain sits alone in Room 11, and Jaroood stays in Room 19 with Elowen and his personal defenders. The party does not know Elowen's location. Prepared flow below describes original options and layout, not a reset of the played events.",
+                "SESSION 6 OVERRIDE: See Session 6 — Locked Weavehouse Checkpoint at the top of this chapter. All prisoners including Pepper remain locked up; there are NO patrols, the Captain sits alone in Room 11, and Jaroood stays in Room 19 with Elowen and his personal defenders. The party does not know Elowen's location. Prepared flow below describes original options and layout, not a reset of the played events.",
                 "START AT LEDGER HOUSE (opening sections above): give the Session 5 recap, Drysa's exterior watch report, Detritus's arrival, Jord's gift of the Hat of Disguise, and Brakkus's private invitation to Aaron when natural. These are available scenes, not mandatory gates; let the party choose the time and method of the rescue.",
                 "OBJECTIVE AND CHOICES: Tulcornix wants Elowen alive and free from Crown-controlled Cardon Weavehouse. This rescue is UNPAID: Tulcornix has promised no gold, title, land or other reward. The party is doing it as a favor, not as a contracted job. The 550 gp debt Jaroood claims against Elowen is a separate obstacle, not a reward for the party. The party can pay or obtain an authentic order, impersonate authorized visitors, negotiate, sneak her out, release other workers, or openly fight. Jaroood controls releases and debts through Crown authority. He does not magically control workers.",
                 "DAY/NIGHT: During business hours the south reception (23) receives visitors, the 17 other workers labor in production (15) and the rooms used for sleeping are not occupied as dormitories, Jaroood handles inspections/petitions and Elowen attends him. After evening headcount, those 17 workers are locked into rooms 9/10/17/18 (4/4/5/4); Jaroood and Elowen are in Room 19 with the Gargoyle, Mimic and Earth Elemental. The Captain begins in 11, Warrior at (9,14), and Bugbear patrol starts (9,3), repeating an approximately eight-minute circuit. Their existing duties continue unless the party changes events.",
@@ -1050,9 +1050,9 @@
             },
             {
               "type": "entries",
-              "name": "RUN SHEET — 2024 Initiative, Monsters and Security",
+              "name": "Encounter Run Sheet — Initiative, Monsters and Security",
               "entries": [
-                "NEXT SESSION OVERRIDE: NO guards are patrolling. The two dismissed guards remain absent. The Hobgoblin Captain is alone and unaware in Room 11. Jaroood and Elowen are in Room 19 with the Earth Elemental, Gargoyle and disguised chair Mimic; they do NOT leave Jaroood to investigate noise elsewhere. The original patrol statistics and start positions below are historical preparation, not the current situation.",
+                "SESSION 6 OVERRIDE: NO guards are patrolling. The two dismissed guards remain absent. The Hobgoblin Captain is alone and unaware in Room 11. Jaroood and Elowen are in Room 19 with the Earth Elemental, Gargoyle and disguised chair Mimic; they do NOT leave Jaroood to investigate noise elsewhere. The original patrol statistics and start positions below are historical preparation, not the current situation.",
                 "BUILD GEOMETRY: the 34×22 usable mat includes TWO-SQUARE (10-ft) outdoor strips on the WEST x0–2 and SOUTH y20–22, both ON THE MAT. The 32×20-square building is x2–34/y0–20. All 12 rooms, the 3-square-wide suite entry, 2-square corridors, and 2×2 Earth Elemental footprint are preserved. ROOM 19: Jaroood, Elemental, Gargoyle, Mimic (281 total HP, 2,725 XP). The Captain, Warrior and Bugbear are at separate posts.",
                 "CURRENT PHYSICAL BUILD: {@link 34×22 DM One-Sheet WITH EXTERIOR|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_34x22_EXTERIOR_RESTORED_DM.svg}. 12 rooms, 16 door gaps, D1 and D4–D7 locked when applicable, alarm bell in Room 11, exterior-accessible patrol routes, four worker counts (4/4/5/4), seven Arcknight miniatures. The two green outdoor strips are PART OF THE USABLE MAT. Use dry-erase walls; no required extra props. https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/docs/Cardon_Weavehouse_34x22_Exterior_Preserved_Build.md",
                 {
@@ -1146,7 +1146,7 @@
             },
             {
               "type": "entries",
-              "name": "Routes — Approaches, Patrols and Escape",
+              "name": "Routes — Approaches, Escape and Original Patrols",
               "entries": [
                 "WEST EXTERIOR: the two usable outdoor columns are x0–2, y0–22. Loading exit D1 at x2/y2–4 opens from this strip into Room 21 (x2–8/y0–5), whose inner doorway D10 at x8/y2–4 leads into west corridor x8–11.",
                 "SOUTH EXTERIOR: the two usable outdoor rows are y20–22, x0–34. South public entrance D2 at y20/x21–23 opens into reception Room 23 (x20–25/y15–20). Its west door D14 at x20/y17–19 reaches the southern link x18–20 and central hall y9–11.",
@@ -1181,7 +1181,7 @@
             },
             {
               "type": "entries",
-              "name": "Workers, Guard Posts and Daily Schedule",
+              "name": "Workers and Guard Posts — Original Schedule",
               "entries": [
                 "CURRENT SESSION STATE SUPERSEDES ROUTINES BELOW: ALL prisoners including Pepper remain locked up. No patrols are operating. Two guards (including the Bugbear) were dismissed and remain gone. The Captain is alone in Room 11. Jaroood retains his three personal defenders in Room 19 regardless of outside noise. The routine descriptions below were the original deployment before the infiltration.",
                 "18 indentured workers in total: Room 9: four; Room 10: four; Room 17: five; Room 18: four; Elowen in Room 19. The dormitories are locked after evening headcount.",
@@ -1197,7 +1197,7 @@
               "name": "Access, Alarm, Doors and Security Response",
               "entries": [
                 "{@b LOCKED CURRENT ALARM STATE:} Players have noticed the alarm but have NOT disabled it. It is still operational. Jaroood, in Room 19, is the ONLY remaining individual who can activate it, via the pull cord connected to the bell in Room 11. No other NPC is to be treated as able to trigger it at this checkpoint. The alarm does not ring from ordinary noise on its own.",
-                "NEXT SESSION SECURITY OVERRIDE: NO patrols. The Captain is alone and unaware in Room 11; Jaroood is unaware in Room 19 and keeps his personal defenders with him. Making noise elsewhere does not cause the Elemental, Gargoyle or Mimic to leave Jaroood and does not automatically send a roaming guard. An actual in-world signal, witness or encounter may still produce consequences.",
+                "SESSION 6 SECURITY OVERRIDE: NO patrols. The Captain is alone and unaware in Room 11; Jaroood is unaware in Room 19 and keeps his personal defenders with him. Making noise elsewhere does not cause the Elemental, Gargoyle or Mimic to leave Jaroood and does not automatically send a roaming guard. An actual in-world signal, witness or encounter may still produce consequences.",
                 "ENTRANCES: Public entrance through Room 23 at the south edge. The west loading entrance through Room 21 is locked after hours (DC 15 Dexterity [Thieves' Tools]). The Bugbear passes Room 21 on its x8–11 west-corridor patrol. Drysa's exterior report is in this chapter, in the opening scenes.. West and south exterior strips are within the usable 34×22 mat.",
                 "BELL: Room 19 pull cord reaches a brass bell at Room 11 through ceiling/wall eyelets. A reachable segment outside Room 19 can be quietly disconnected with DC 13 Dexterity (Thieves' Tools) or cut as an action (AC 12, 5 HP). The bell alerts only people inside the Weavehouse.",
                 "NOISE: One ambiguous sound → one guard investigates, then 'Must be the wind' if no evidence. Sustained fighting, broken doors or escaping workers → continued investigation and ordinary report to the Captain.",
@@ -1221,7 +1221,7 @@
               "type": "entries",
               "name": "Jaroood — Appearance, Answers and Decisions",
               "entries": [
-                "{@b NEXT SESSION BEHAVIOR — LOCKED:} Jaroood is in his suite (Room 19) with Elowen and the Earth Elemental, Gargoyle and disguised chair Mimic. He has no knowledge of the infiltration and is determined to keep his personal protection beside him. Regardless of how much commotion occurs elsewhere, he does NOT send his guards out to investigate. He can act if directly confronted, but does not abandon his protection to chase noises.",
+                "{@b SESSION 6 BEHAVIOR — LOCKED:} Jaroood is in his suite (Room 19) with Elowen and the Earth Elemental, Gargoyle and disguised chair Mimic. He has no knowledge of the infiltration and is determined to keep his personal protection beside him. Regardless of how much commotion occurs elsewhere, he does NOT send his guards out to investigate. He can act if directly confronted, but does not abandon his protection to chase noises.",
                 "{@b First description (read or paraphrase).} A slender high elf in a perfectly fitted burgundy coat stands behind a desk. His silver-blond hair is combed straight back from a narrow face; pale-gold eyes pass over you with brisk calculation. A heavy gold signet of the Crown sits on one long finger. He speaks in a refined, slightly nasal voice that makes even an insult sound like a courtesy.",
                 "{@b Voice and gestures.} Perform a younger and more vigorous Mr. Burns: nasal, soft, precise, delighted by profit, and condescending without shouting. He steeples his fingers when pleased, checks the edge of a ledger before replying, glances at a pocket watch when someone wastes time, and uses {@spell Prestidigitation|XPHB} to clean dust from his clothes after inspections. When royal authority is credible, he straightens and becomes swiftly deferential.",
                 "{@b Belief and motivation:} He regards indentured slavery as justified debt collection and workers as sources of profit. He wants wealth, security and continuing royal favor. He fears the Crown's displeasure.",
@@ -1239,7 +1239,7 @@
               "type": "entries",
               "name": "Room 19 — Confrontation and Elowen",
               "entries": [
-                "{@b NEXT SESSION:} Jaroood remains unaware in this room with Elowen and the three defenders, who remain with him even if loud noise comes from elsewhere. Importantly, the PLAYERS DO NOT KNOW Elowen is here. Do not reveal her location until it is established through their actions in play.",
+                "{@b SESSION 6:} Jaroood remains unaware in this room with Elowen and the three defenders, who remain with him even if loud noise comes from elsewhere. Importantly, the PLAYERS DO NOT KNOW Elowen is here. Do not reveal her location until it is established through their actions in play.",
                 "{@b Scene:} Jaroood is working at his desk with Elowen attending to papers. The 9×9-square suite has a 15-foot ceiling and a THREE-square-wide north entrance. A screened cot stands nearby. His real cashbox is hidden inside the desk; the ornate upholstered chair at (26,15) is the Mimic, NOT the cashbox. The Gargoyle looks like stone decoration, the Mimic like an elegant upholstered chair, and the Earth Elemental is present after hours.",
                 "{@b Elowen:} She seeks cover or a way out if fighting starts. She knows Kaleb is dead AND knows that Pepper killed him. If Pepper's identity is made clear, Elowen knows who she is dealing with. She wants to escape, but may confront Pepper about Kaleb when it is safe; the relationship is unresolved. Opening line: 'Who are you? What are you doing here?'",
                 "{@b Combatants:} Jaroood 9 HP, Earth Elemental 147, Gargoyle 67, Mimic 58. The labor guards begin at their ordinary posts and respond to any alarm or evidence they receive.",
@@ -1261,7 +1261,7 @@
               "type": "entries",
               "name": "Release, Escape and Investigation",
               "entries": [
-                "NEXT SESSION: All workers and Pepper remain confined. None of the locked worker groups has been freed. No guard patrol is active. Jaroood does not send out his defenders in response to noise; they stay with him in Room 19.",
+                "SESSION 6: All workers and Pepper remain confined. None of the locked worker groups has been freed. No guard patrol is active. Jaroood does not send out his defenders in response to noise; they stay with him in Room 19.",
                 "Once a worker-room door opens, its occupants run toward accessible exterior doors on their own: Room 9 (4), 10 (4), 17 (5), 18 (4). Elowen is the eighteenth. Guards may catch individuals but are forbidden to kill worker assets.",
                 "An early breakout alerts any guard who discovers it. Jaroood can respond if he receives a warning; guards unaware of a confrontation remain on their assigned duties.",
                 "The Crown investigates discovered murders, property destruction and escapes through staff testimony, physical evidence and accounts. It currently has no knowledge linking the party and Tulcornix. Outstanding debt claims persist after an unauthorized physical escape."
@@ -1271,11 +1271,11 @@
         },
         {
           "type": "section",
-          "name": "Chapter 8: Savin Keep — Future Location",
+          "name": "Chapter 8: The Road to Savin Keep",
           "entries": [
             {
               "type": "entries",
-              "name": "Session 6 — The Road to Savin Keep (PREPARED)",
+              "name": "Session 6 — Run of Show",
               "entries": [
                 "Resume inside Cardon Weavehouse at level 4. If rescued, reunite Elowen with Tulcornix. Take the planned Long Rest and advance to level 5 before departure. At Ledger House, a Crown emissary cites Pepper’s service and offers the group a paid monster-clearing contract. Travel to the keep. End outside the south entrance, before opening the doors or rolling initiative.",
                 "{@b Table time.} Weavehouse about 60–90 min, potentially 120+ if the suite fight runs long. Reunion and rest 15–25 min. Writ 15–20 min. Road 30–50 min with room to expand. Short on time: keep the reunion, the offer and the gate. Run the wagon scene in a single choice and fold the scout post into the approach.",
@@ -1295,9 +1295,9 @@
             },
             {
               "type": "entries",
-              "name": "Koven House — The Crown’s First Commission",
+              "name": "Venn’s Visit to Ledger House — The Crown’s First Commission",
               "entries": [
-                "Deputy Commissioner Iona Venn, Koven House (new prep). Human woman, mid-40s, tall, close-cropped iron-gray hair, ink on her left cuff, neat traveling coat with a small Crown pin. Speaks crisply, never raises her voice, and runs a thumbnail down the edge of a folded paper when waiting for an answer.",
+                "Deputy Commissioner Iona Venn works at Koven House and meets the party at Ledger House. Human woman, mid-40s, tall, close-cropped iron-gray hair, ink on her left cuff, neat traveling coat with a small Crown pin. Speaks crisply, never raises her voice, and runs a thumbnail down the edge of a folded paper when waiting for an answer.",
                 "{@b Venn’s brief.} reopen a wagon road without losing more personnel. Two Crown scouts sent to assess the keep did not report back. The guard can hold the city approaches and return to verify a clear road, but Venn won’t send another squad inside on what they know. She has reports of large creatures coming out of the keep and no reliable species count. This writ contains no instructions about unusual magic. She’s here on separate business from the Weavehouse. Use only any specific evidence that actually surfaced and reached Koven House; no assumed connection to the party.",
                 "{@b Opening.} “Pepper? Your service ledger shows Kellan’s Well. That was the unpaid one. Savin Keep would count as the first paid assignment. The Crown wants all five of you. Two scouts failed to report, and the tax carts are still on this side of the keep.”",
                 "{@b Terms.} 500 gp total for the five, 100 gp each including Pepper. No advance. Payment at Koven House after a road officer confirms the route is safe for ordinary wagons and the keep is no longer a base for the attacks. No requirement to catalog every room, collect bodies or find unrelated records. Pepper earns credit for one paid service assignment on completion, leaving three. Signing doesn’t change her custody terms with Brakkus. An unsigned writ does not become a completed service assignment.",
@@ -1338,7 +1338,7 @@
             },
             {
               "type": "entries",
-              "name": "Maps (geography only)",
+              "name": "Savin Keep — Interior Maps (Future Session)",
               "entries": [
                 {
                   "type": "gallery",
@@ -1419,7 +1419,7 @@
             },
             {
               "type": "entries",
-              "name": "Location Only — OPEN",
+              "name": "Savin Keep — Legacy Map and Scenario Notes",
               "entries": [
                 "Savin Keep and its established location and maps remain available. Old reclamation orders, faction assignments, soldiers, treasure and outcomes have been retired.",
                 "Rebuild new events later from the Crown-era world and the party's choices."
@@ -1427,9 +1427,9 @@
             },
             {
               "type": "entries",
-              "name": "Approved Savin Keep Direction — PREPARED, NOT PLAYED",
+              "name": "Savin Keep — Approved Dungeon Direction (Future Session)",
               "entries": [
-                "{@b NEXT SESSION TRANSITION (PLANNED, NOT PLAYED):} Finish the Weavehouse, return Elowen to Tulcornix if rescued, allow the party a Long Rest, then have a Crown emissary approach the party. The emissary cites Pepper's outstanding service and offers payment to the rest of the group to reclaim Savin Keep. Follow with travel scenes and end next session at the keep's entrance. This is a proposed structure, not a forced outcome.",
+                "{@b SESSION 6 TRANSITION (PLANNED, NOT PLAYED):} Finish the Weavehouse, return Elowen to Tulcornix if rescued, allow the party a Long Rest, then have a Crown emissary approach the party. The emissary cites Pepper's outstanding service and offers payment to the rest of the group to reclaim Savin Keep. Follow with travel scenes and end Session 6 at the keep's entrance. This is a proposed structure, not a forced outcome.",
                 "{@b CROWN ASSIGNMENT:} Savin Keep is occupied by monsters dangerous enough that ordinary Crown soldiers have not cleared it; clearing it would allow the Crown to resume taxation and commerce, and would also help real people whose trade and travel have been disrupted. The road, scouts, and Crown contract are keyed in the Session 6 preparation. The monster roster and specifics of the keep’s occupation are open.",
                 "{@b DUNGEON FORMAT:} Savin Keep should be a traditional dungeon crawl for the level-5 party with meaningful exploration, multiple substantial monster encounters, and discoverable secrets. Reuse the established location and maps where practical. The dungeon layout, monsters, traps, treasure and outcomes are NOT yet locked.",
                 "{@b APPROVED CLUE 1 — HISTORICAL RECORD:} A genuinely old record preserved at Savin Keep recounts local Bellweather rumors of strange magic, potentially including the recurring folklore about influence over people's minds. It is folklore/testimony, not proof of a mechanism or knowledge of the Radiant Well.",
@@ -2298,11 +2298,11 @@
           "entries": [
             {
               "type": "entries",
-              "name": "Current State",
+              "name": "Campaign Checkpoint — Start of Session 6",
               "entries": [
-                "Next is Session 5, four level-4 PCs: Jarrock, Aaron Dunamus, Arunem and Pepper. The primary open activity is Elowen's rescue from the Crown's Weavehouse.",
+                "Session 6 resumes inside Cardon Weavehouse with five level-4 PCs: Jarrock, Aaron Dunamus, Arunem, Pepper and Detritus. Elowen’s rescue is unresolved. See Chapter 7’s Session 6 — Locked Weavehouse Checkpoint for the exact start state.",
                 "Noren and his Veteran are dead. The Council and Cardon are gone. Brann paid the 300 gp owed to Jarrock, Aaron and Arunem. Pepper is under Brakkus's negotiated custody after Crown detention.",
-                "Brakkus follows Oghma and knows Aaron is a dhampir; he plans a conversation. Aaron's familiar is watching the Weavehouse, but has reported no established findings.",
+                "Brakkus follows Oghma and knows Aaron is a dhampir. He agreed not to reveal Aaron’s nature to others.",
                 "The Crown owns the Weavehouse; Jaroood is its greedy administrator. Future chapters keep places, not old plots."
               ]
             },
@@ -2381,7 +2381,7 @@
                 "{@link Cardon Weavehouse — CURRENT 34×22 DM Map WITH Exterior|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_34x22_EXTERIOR_RESTORED_DM.svg}",
                 "{@link Cardon Weavehouse — CURRENT 34×22 Player Map WITH Exterior|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/cardon_weavehouse_34x22_EXTERIOR_RESTORED_PLAYER.svg}",
                 "{@link Cardon Weavehouse — Current Build Coordinates|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/docs/Cardon_Weavehouse_34x22_Exterior_Preserved_Build.md}",
-                "{@link Cardon Weavehouse — CURRENT Player Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/cardon_weavehouse_34x22_VERIFIED_PLAYER.svg}",
+                "{@link Cardon Weavehouse — Legacy Player Map (Verified Layout)|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/player/cardon_weavehouse_34x22_VERIFIED_PLAYER.svg}",
                 "{@link Cardon Weavehouse — LEGACY Outdoor-Strip Layout|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse_34x22_outdoor.svg}",
                 "{@link Cardon Weavehouse — Original 25-Space Legacy Map|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/cardon_weavehouse.webp}",
                 "{@link Emmer Hold — DM Key|https://raw.githubusercontent.com/sefjoe/no-cause-for-alarm-5etools/main/img/dm/emmer_hold.webp}",
@@ -3121,9 +3121,9 @@
         },
         {
           "type": "section",
-          "name": "Appendix J: Bellwether Shops and Inventories",
+          "name": "Appendix J: Bellweather Shops and Inventories",
           "entries": [
-            "DM inventory reference for Bellwether. These inventories begin after the party's Kellan's Well expedition and are independent of the PCs' level, needs, and available gold. Prices use the normal-price column of the D&D Shop Catalog V2.0.2 (Refresh) where applicable; invented curiosities have DM-set prices. GP = gold, SP = silver, CP = copper. Quantities are physical stock at this snapshot, not permanent supply guarantees.",
+            "DM inventory reference for Bellweather. These inventories begin after the party's Kellan's Well expedition and are independent of the PCs' level, needs, and available gold. Prices use the normal-price column of the D&D Shop Catalog V2.0.2 (Refresh) where applicable; invented curiosities have DM-set prices. GP = gold, SP = silver, CP = copper. Quantities are physical stock at this snapshot, not permanent supply guarantees.",
             "Sale procedure: quote the displayed price, decrease stock on sale, keep sold items sold until a believable resupply occurs. Goods not listed here can be ordered or searched for in the city if appropriate; this inventory is the merchant's opening stock, not a prohibition on the existence of other merchandise in the world. 'One crate/box/set' means one indivisible lot unless the merchant agrees to split it.",
             "Magic pricing reference from the catalog: Common 100 gp, Uncommon 400 gp, Rare 4,000 gp, Very Rare 40,000 gp, Legendary 200,000 gp. The catalog prices spell scrolls by level separately (cantrip 50 gp; level 1 100 gp; level 2 250 gp; level 3 500 gp; level 4 2,500 gp; level 5 5,000 gp). Individual consumables below use their listed prices. Rarity prices are campaign shop prices, not guarantees of availability.",
             "Merchants have independent businesses, lives and motives. Not every inventory entry is a clue.",
@@ -3586,7 +3586,7 @@
               "type": "entries",
               "name": "The Two Hammers — Joren Viton and Maten",
               "entries": [
-                "One shared weaponsmith/armorer business, not two separate shops. Joren Viton (human man, 43) is broad-shouldered with a neatly trimmed dark beard beginning to gray and tidy work clothes. Outgoing, commercial, honest, fast-moving, and enthusiastic about ready-stock equipment. He manages sales, prices, ordinary weapons/armor, and special orders. Maten (dwarf man, 112) is a muscular, gray-bearded master smith with thick eyebrows, scarred hands, and a permanently soot-stained apron. Quiet and exacting, he examines a weapon's balance and a client's grip before offering custom work. He is Bellwether's best armorer/weaponsmith. They respect one another: Joren keeps the operation profitable; Maten keeps its reputation.",
+                "One shared weaponsmith/armorer business, not two separate shops. Joren Viton (human man, 43) is broad-shouldered with a neatly trimmed dark beard beginning to gray and tidy work clothes. Outgoing, commercial, honest, fast-moving, and enthusiastic about ready-stock equipment. He manages sales, prices, ordinary weapons/armor, and special orders. Maten (dwarf man, 112) is a muscular, gray-bearded master smith with thick eyebrows, scarred hands, and a permanently soot-stained apron. Quiet and exacting, he examines a weapon's balance and a client's grip before offering custom work. He is Bellweather's best armorer/weaponsmith. They respect one another: Joren keeps the operation profitable; Maten keeps its reputation.",
                 "Joren portrayal cue: \"If you need it today, I have exactly what you need.\" Maten portrayal cue: \"Want a sword made for you? Fine. Show me how you hold one.\"",
                 {
                   "type": "entries",
@@ -4127,7 +4127,7 @@
             },
             {
               "type": "entries",
-              "name": "Build Before Session 5",
+              "name": "Weavehouse Prep Checklist (Original)",
               "entries": [
                 "Complete the Weavehouse map and rooms, worker and guard routines, Jaroood's precise role, bureaucracy and debt process, Elowen's situation, exact DCs, finite encounter rosters, possible rescue paths, Brakkus/Aaron conversation, and what the familiar can plausibly observe.",
                 "Cold-playtest the material, identify information the DM would reach for, and make it instantly accessible without changing the established comprehensive prep method."
