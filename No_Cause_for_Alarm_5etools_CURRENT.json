@@ -6,18 +6,18 @@
         "json": "NCFA",
         "abbreviation": "NCFA",
         "full": "No Cause for Alarm: Ruins of Bellweather",
-        "version": "5.13",
+        "version": "5.14",
         "authors": [
           "No Cause for Alarm Campaign"
         ],
-        "dateLastModified": 1794778077,
-        "_dateLastModifiedHash": "ncfa-v5.13-jaroood-bestiary-search"
+        "dateLastModified": 1794808501,
+        "_dateLastModifiedHash": "ncfa-v5.14-session-6-played-record"
       }
     ],
     "edition": "one",
     "dateAdded": 1789528955,
-    "dateLastModified": 1794778077,
-    "_dateLastModifiedHash": "ncfa-v5.13-jaroood-bestiary-search"
+    "dateLastModified": 1794808501,
+    "_dateLastModifiedHash": "ncfa-v5.14-session-6-played-record"
   },
   "adventure": [
     {
@@ -85,8 +85,9 @@
         {
           "name": "Chapter 7: Cardon Weavehouse — Elowen’s Rescue",
           "headers": [
-            "Session 6 — Locked Weavehouse Checkpoint",
-            "Session 6 — Weavehouse One-Sheet",
+            "Session 6 — Played Record (November 15, 2026)",
+            "Session 6 — Opening Checkpoint (Historical)",
+            "Session 6 — Weavehouse One-Sheet (Original Prep)",
             "Session 5 — Played Record (November 8, 2026)",
             "Session 5 — Opening Recap (Original Prep)",
             "Session 5 — At Ledger House",
@@ -113,12 +114,12 @@
         {
           "name": "Chapter 8: The Road to Savin Keep",
           "headers": [
-            "Session 6 — Run of Show",
-            "After the Weavehouse — Reunion and Long Rest",
+            "Savin Keep Commission — Run of Show (Prepared)",
+            "After the Weavehouse — Long Rest and Milestone",
             "Venn’s Visit to Ledger House — The Crown’s First Commission",
             "Player Handout — Royal Commission for Savin Keep",
             "The Wagon Road — Storen Gate to the South Entrance",
-            "Session 6 — Branch and Continuity Check",
+            "Commission and Road — Branch Check",
             "Savin Keep — Interior Maps (Future Session)",
             "Savin Keep — Legacy Map and Scenario Notes",
             "Savin Keep — Approved Dungeon Direction (Future Session)"
@@ -188,7 +189,7 @@
         {
           "name": "Appendix A: Canon Ledger and Open Decisions",
           "headers": [
-            "Campaign Checkpoint — Start of Session 6",
+            "Campaign Checkpoint — After Session 6",
             "Explicitly OPEN"
           ]
         },
@@ -261,7 +262,7 @@
               },
               "title": "Cover"
             },
-            "{@i No Cause for Alarm: Ruins of Bellweather} is an active D&D campaign. Session 6 resumes inside Cardon Weavehouse with five level-4 PCs. Read this current canon before preparing; played events and explicit DM corrections override abandoned plans.",
+            "{@i No Cause for Alarm: Ruins of Bellweather} is an active D&D campaign. Session 6 resolved the Cardon Weavehouse and closed Elowen’s rescue. Chapter 7 holds the played record. Chapter 8 holds the pending Crown commission and the road to Savin Keep.",
             {
               "type": "entries",
               "name": "Authority and Preparation",
@@ -377,7 +378,8 @@
               "entries": [
                 "Use the approved Crown-era Bellweather map, including the established South Ward, Maren Isle, surrounding geography and existing landmarks. Do not redraw its basic geography.",
                 "Crown authority operates through Koven House. Ledger House is independently run by Brakkus. Shops and citizens have their own lives and may have differing reactions to the takeover.",
-                "A building shown on an old map remains a location; its former proposed owners, occupants and encounter scripts do not."
+                "A building shown on an old map remains a location; its former proposed owners, occupants and encounter scripts do not.",
+                "After Session 6, Cardon Weavehouse was empty, its files burned. Nothing ties the party to the raid. See Chapter 7’s Session 6 played record."
               ]
             }
           ]
@@ -766,8 +768,28 @@
           "entries": [
             {
               "type": "entries",
-              "name": "Session 6 — Locked Weavehouse Checkpoint",
+              "name": "Session 6 — Played Record (November 15, 2026)",
               "entries": [
+                "{@b Weavehouse clearance.} Resolving the Weavehouse took about three hours at the table. The party fought the Captain by himself first. His strong rolls dropped Jarrock. Pepper restored 7 HP, then the chair Mimic took all 7 in one attack and Jarrock went down again. Elowen gave Jarrock a healing potion. The party’s spellcasters used all their spell slots. The DM reduced the Earth Elemental’s and Gargoyle’s HP during the encounter; the revised totals were not reported.",
+                "{@b Records and misdirection.} The Weavehouse was empty by the end of the session. Pepper used Fire Bolt to burn the files. Jarrock and Aaron drew the Iron Covenant symbol on the wall in Jaroood’s office, intending to make the Crown blame the Covenant rather than the party.",
+                "{@b Locked DM ruling.} The party’s stealth succeeded. Nothing ties them to the Weavehouse raid. The Iron Covenant symbol is a deliberate false lead, not evidence linking the party to the raid and not proof that the Covenant actually did it. The Crown’s planned Savin Keep commission is genuine and unrelated to the raid.",
+                {
+                  "type": "entries",
+                  "name": "Elowen and Pepper — At the Table",
+                  "entries": [
+                    "Elowen, looking at Pepper: “What is my husband's murderer doing here?”",
+                    "Detritus: “You killed her husband!?”",
+                    "Pepper: “You welcome for saving you”",
+                    "Elowen did not reply. The party brought her back to Tulcornix. Elowen’s rescue arc is closed."
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Session 6 — Opening Checkpoint (Historical)",
+              "entries": [
+                "Historical snapshot of the state before Session 6. The played record above supersedes it for current continuity.",
                 "{@b PLAY RESUMES INSIDE CARDON WEAVEHOUSE:} The infiltration remains unresolved. Neither the Captain nor Jaroood knows that intruders are inside. Do not replay the first infiltration or reset dismissed guards.",
                 "{@b PRISONERS / PEPPER:} The indentured workers are STILL LOCKED in their worker rooms, and Pepper is STILL LOCKED in a room after Jarrock delivered her as a supposed indentured prisoner. Her exact room number has not been established in the session report. Pepper burned an ARM-SIZED opening through her room's exterior wall with Fire Bolt. That hole remains; it is not large enough for a character to escape through.",
                 "{@b GUARDS:} There are currently NO GUARDS PATROLLING THE WEAVEHOUSE. Jarrock previously dismissed two guards, including the Bugbear, and they remain gone. Any remaining prisoner-post guard, if present, remains stationary; no patrol route or roaming investigation resumes automatically. The HOBGOBLIN CAPTAIN is ALONE in Room 11, unaware of the infiltration.",
@@ -782,8 +804,9 @@
             },
             {
               "type": "entries",
-              "name": "Session 6 — Weavehouse One-Sheet",
+              "name": "Session 6 — Weavehouse One-Sheet (Original Prep)",
               "entries": [
+                "Original encounter reference kept for the maps, encounter data, and play history. The played record above supersedes it for current continuity.",
                 "{@b Checkpoint.} Pepper and the 17 dormitory workers are still locked up. Elowen is in Room 19 and the party does not know it. Pepper’s arm-sized exterior hole is not passable. Confirm PC squares, Pepper’s room and any active disguise/invisibility from the table’s memory before placing tokens. No patrols. Captain alone and unaware in Room 11. Jaroood unaware in Room 19, with all three defenders. They do not investigate noise elsewhere.",
                 "{@b Alarm.} noticed, intact, not sounded. Only Jaroood can pull it. Room 19 cord → bell in Room 11 (internal only). Exposed segment: DC 13 Dexterity (Thieves’ Tools) to detach quietly, or cut as an action (AC 12, 5 HP). Captain can respond to the bell or to evidence he actually receives. The dismissed guards do not return.",
                 "{@b Captives and exits.} Rooms 9/10/17/18 hold 4/4/5/4 workers, with Pepper separately tracked in her as-yet-unconfirmed room. Captain and Jaroood have dorm keys. One action per door with a key, or DC 15 Dexterity (Thieves’ Tools). Freed workers head for D1 (west via Room 21) or D2 (south via Room 23). D1 is locked after hours (DC 15 Dexterity [Thieves’ Tools]).",
@@ -841,7 +864,7 @@
               "type": "entries",
               "name": "Session 5 — Played Record (November 8, 2026)",
               "entries": [
-                "{@b STATUS: THIS ACTUALLY HAPPENED AT THE TABLE. Session 5's Weavehouse infiltration is IN PROGRESS, not resolved.} For the start state, read Session 6 — Locked Weavehouse Checkpoint above. That checkpoint supersedes the site's original patrolling and noise-response routines; no alarm has reached the Captain or Jaroood.",
+                "{@b STATUS: THIS ACTUALLY HAPPENED AT THE TABLE. Session 5's Weavehouse infiltration is IN PROGRESS, not resolved.} The historical Session 6 opening checkpoint above supersedes the site's original patrolling and noise-response routines; no alarm has reached the Captain or Jaroood.",
                 "{@b Ledger House / party formation:} Brakkus recommended the adventurers to Detritus as a capable group with a knack for finding interesting information. That endorsement is why Detritus joined them. His vision about his home's possible destruction is still his own background; no additional connection to the rescue has been established.",
                 "{@b Aaron and Brakkus:} They reached a narrow understanding: Brakkus will not reveal Aaron's nature as a dhampir to others. THAT WAS ALL. Do not extend the promise to protection, special investigative help, a commitment about Aaron's former master, or a confirmed divine explanation. Brakkus still serves Oghma and already knew Aaron was a dhampir.",
                 "{@b SHOP PURCHASES / ACQUISITIONS:} Tiny Mage: uneven wooden stilts → Jarrock; enormous brass key (unknown lock) → Pepper; 'CONGRATULATIONS, GREG!' sign → Pepper; ONE decorative ceramic frog → Arunem. Jord: locked wooden box (contents still unknown) → Pepper; Clockwork Amulet → Detritus. Pepper also received the crowbar removed from Jord's stock and the Tiny Mage's wedding cake topper depicting two ogres. These are actual transfers, not pending offers.",
@@ -1037,7 +1060,7 @@
               "type": "entries",
               "name": "Rescue Flow — Original Session 5 Prep",
               "entries": [
-                "SESSION 6 OVERRIDE: See Session 6 — Locked Weavehouse Checkpoint at the top of this chapter. All prisoners including Pepper remain locked up; there are NO patrols, the Captain sits alone in Room 11, and Jaroood stays in Room 19 with Elowen and his personal defenders. The party does not know Elowen's location. Prepared flow below describes original options and layout, not a reset of the played events.",
+                "SESSION 6 OVERRIDE: See Session 6 — Opening Checkpoint (Historical) above. All prisoners including Pepper remain locked up; there are NO patrols, the Captain sits alone in Room 11, and Jaroood stays in Room 19 with Elowen and his personal defenders. The party does not know Elowen's location. Prepared flow below describes original options and layout, not a reset of the played events.",
                 "START AT LEDGER HOUSE (opening sections above): give the Session 5 recap, Drysa's exterior watch report, Detritus's arrival, Jord's gift of the Hat of Disguise, and Brakkus's private invitation to Aaron when natural. These are available scenes, not mandatory gates; let the party choose the time and method of the rescue.",
                 "OBJECTIVE AND CHOICES: Tulcornix wants Elowen alive and free from Crown-controlled Cardon Weavehouse. This rescue is UNPAID: Tulcornix has promised no gold, title, land or other reward. The party is doing it as a favor, not as a contracted job. The 550 gp debt Jaroood claims against Elowen is a separate obstacle, not a reward for the party. The party can pay or obtain an authentic order, impersonate authorized visitors, negotiate, sneak her out, release other workers, or openly fight. Jaroood controls releases and debts through Crown authority. He does not magically control workers.",
                 "DAY/NIGHT: During business hours the south reception (23) receives visitors, the 17 other workers labor in production (15) and the rooms used for sleeping are not occupied as dormitories, Jaroood handles inspections/petitions and Elowen attends him. After evening headcount, those 17 workers are locked into rooms 9/10/17/18 (4/4/5/4); Jaroood and Elowen are in Room 19 with the Gargoyle, Mimic and Earth Elemental. The Captain begins in 11, Warrior at (9,14), and Bugbear patrol starts (9,3), repeating an approximately eight-minute circuit. Their existing duties continue unless the party changes events.",
@@ -1275,22 +1298,19 @@
           "entries": [
             {
               "type": "entries",
-              "name": "Session 6 — Run of Show",
+              "name": "Savin Keep Commission — Run of Show (Prepared)",
               "entries": [
-                "Resume inside Cardon Weavehouse at level 4. If rescued, reunite Elowen with Tulcornix. Take the planned Long Rest and advance to level 5 before departure. At Ledger House, a Crown emissary cites Pepper’s service and offers the group a paid monster-clearing contract. Travel to the keep. End outside the south entrance, before opening the doors or rolling initiative.",
-                "{@b Table time.} Weavehouse about 60–90 min, potentially 120+ if the suite fight runs long. Reunion and rest 15–25 min. Writ 15–20 min. Road 30–50 min with room to expand. Short on time: keep the reunion, the offer and the gate. Run the wagon scene in a single choice and fold the scout post into the approach.",
-                "{@b Before play.} pull Arcknight #72 Captain, #28 Jaroood proxy, #121 Gargoyle, #115 Mimic and #151 Earth Elemental. No patrol minis on the mat. Use the established 34×22 exterior-strip layout. Keep the Savin Keep interior map off the player side tonight.",
-                "Current city overview visibly labels the Radiant Well. Use the approved Weavehouse player map if needed tonight, but don’t hand out that overview as part of the Crown commission. Savin’s existing map sets the south entrance only for Session 6."
+                "Elowen is back with Tulcornix and the rescue is complete. The Long Rest and level-5 milestone are planned after the rescue. Neither is recorded as played in Session 6. Once the party is ready, the Crown emissary makes a genuine offer at Ledger House. If the party travels to Savin Keep, the planned road sequence ends at the south doors, before opening them or rolling initiative.",
+                "{@b Table time.} Writ 15–20 min. Road 30–50 min with room to expand. Short on time: run the wagon scene in a single choice and fold the scout post into the approach.",
+                "{@b Maps.} The city overview visibly labels the Radiant Well and is for DM reference. The Savin Keep map sets the south entrance for the road sequence. Keep its interior off the player side until they enter."
               ]
             },
             {
               "type": "entries",
-              "name": "After the Weavehouse — Reunion and Long Rest",
+              "name": "After the Weavehouse — Long Rest and Milestone",
               "entries": [
-                "Meet where the party brings Elowen. Tulcornix waits to hear from the party and doesn’t go to the Weavehouse by default. He takes his cue from Elowen. If she’s free, his first move is to give her space to choose where she goes. “Elowen. Do you want me to take you home?” If they return without her: “Tell me what you saw. Is she still there?” No reward was promised.",
-                "Elowen is Kaleb’s widow and already knows Pepper killed him. If she learns who Pepper is and chooses to speak, give her a direct question: “Tell me what happened to Kaleb. If you can’t tell me now, tell me when you can.” She can leave with Tulcornix without settling it. Don’t assume the other workers came with her or that she knows what happened to the records.",
-                "If some workers ask for help, give Brakkus a concrete response: food and a private place to catch their breath at Ledger House, if the party brings them there. He can ask who has somewhere to go tonight. He does not promise permanent shelter, speak for Elowen, or know more than the party tells him.",
-                "{@b Milestone.} once the Weavehouse sequence is over and the party takes its planned Long Rest, they start the Savin Keep assignment at level 5. No level-up during the Weavehouse confrontation."
+                "Elowen’s reunion with Tulcornix happened in Session 6. No further scene with Elowen is planned.",
+                "{@b Milestone.} The established plan is to advance the party to level 5 after their Long Rest, before they set out for Savin Keep. The last confirmed played sequence was at level 4, and all spell slots had been spent in the Weavehouse."
               ]
             },
             {
@@ -1298,7 +1318,7 @@
               "name": "Venn’s Visit to Ledger House — The Crown’s First Commission",
               "entries": [
                 "Deputy Commissioner Iona Venn works at Koven House and meets the party at Ledger House. Human woman, mid-40s, tall, close-cropped iron-gray hair, ink on her left cuff, neat traveling coat with a small Crown pin. Speaks crisply, never raises her voice, and runs a thumbnail down the edge of a folded paper when waiting for an answer.",
-                "{@b Venn’s brief.} reopen a wagon road without losing more personnel. Two Crown scouts sent to assess the keep did not report back. The guard can hold the city approaches and return to verify a clear road, but Venn won’t send another squad inside on what they know. She has reports of large creatures coming out of the keep and no reliable species count. This writ contains no instructions about unusual magic. She’s here on separate business from the Weavehouse. Use only any specific evidence that actually surfaced and reached Koven House; no assumed connection to the party.",
+                "{@b Venn’s brief.} reopen a wagon road without losing more personnel. Two Crown scouts sent to assess the keep did not report back. The guard can hold the city approaches and return to verify a clear road, but Venn won’t send another squad inside on what they know. She has reports of large creatures coming out of the keep and no reliable species count. This writ contains no instructions about unusual magic. The commission is genuine and unrelated to the Weavehouse raid. Nothing ties the party to the raid, and the emissary has no reason to suspect them.",
                 "{@b Opening.} “Pepper? Your service ledger shows Kellan’s Well. That was the unpaid one. Savin Keep would count as the first paid assignment. The Crown wants all five of you. Two scouts failed to report, and the tax carts are still on this side of the keep.”",
                 "{@b Terms.} 500 gp total for the five, 100 gp each including Pepper. No advance. Payment at Koven House after a road officer confirms the route is safe for ordinary wagons and the keep is no longer a base for the attacks. No requirement to catalog every room, collect bodies or find unrelated records. Pepper earns credit for one paid service assignment on completion, leaving three. Signing doesn’t change her custody terms with Brakkus. An unsigned writ does not become a completed service assignment.",
                 "{@b If they ask why them.} “The old Council left a record of Kellan’s Well. A city watch squad is trained to hold a gate. It isn’t trained to clear a monster den.” If they decline, Venn leaves the offer open until the next day and looks for other contractors. She doesn’t arrest Pepper or spring a second assignment in this scene. If the party wants different terms, Venn can authorize up to 125 gp per signer on completion with concrete leverage (e.g. taking responsibility for the crew that verifies the road). A successful DC 15 Charisma (Persuasion) can secure that rate if leverage is uncertain. If fewer than five sign, the stated rate is per signer. The mission is one paid service credit for Pepper, not one per signer."
@@ -1331,9 +1351,9 @@
             },
             {
               "type": "entries",
-              "name": "Session 6 — Branch and Continuity Check",
+              "name": "Commission and Road — Branch Check",
               "entries": [
-                "Cold check: a silent breakout leaves the Captain where he is unless he observes evidence. If Jaroood pulls the cord, the Captain can hear it in Room 11 and respond along the mapped route, even while the dismissed guards remain gone. If the party leaves without Elowen, use Tulcornix’s fallback and don’t award a rescue by narration. If they refuse the writ, keep the road available but don’t move them to the keep. If combat runs long, skip the optional culvert and compress the scout post. Log who escaped, who or what can identify the party, what records survived, and whether the writ was signed."
+                "If they refuse the writ, keep the road available but don’t move them to the keep. If time runs short, skip the optional culvert and compress the scout post. Record whether the writ was signed and how far the party traveled."
               ]
             },
             {
@@ -1429,8 +1449,8 @@
               "type": "entries",
               "name": "Savin Keep — Approved Dungeon Direction (Future Session)",
               "entries": [
-                "{@b SESSION 6 TRANSITION (PLANNED, NOT PLAYED):} Finish the Weavehouse, return Elowen to Tulcornix if rescued, allow the party a Long Rest, then have a Crown emissary approach the party. The emissary cites Pepper's outstanding service and offers payment to the rest of the group to reclaim Savin Keep. Follow with travel scenes and end Session 6 at the keep's entrance. This is a proposed structure, not a forced outcome.",
-                "{@b CROWN ASSIGNMENT:} Savin Keep is occupied by monsters dangerous enough that ordinary Crown soldiers have not cleared it; clearing it would allow the Crown to resume taxation and commerce, and would also help real people whose trade and travel have been disrupted. The road, scouts, and Crown contract are keyed in the Session 6 preparation. The monster roster and specifics of the keep’s occupation are open.",
+                "{@b PLANNED TRANSITION:} The Weavehouse rescue and reunion are played. The Long Rest, genuine Crown commission, and road sequence remain preparation. The road sequence stops at the south entrance.",
+                "{@b CROWN ASSIGNMENT:} Savin Keep is occupied by monsters dangerous enough that ordinary Crown soldiers have not cleared it; clearing it would allow the Crown to resume taxation and commerce, and would also help real people whose trade and travel have been disrupted. The road, scouts, and Crown contract are keyed above. The monster roster and specifics of the keep’s occupation are open.",
                 "{@b DUNGEON FORMAT:} Savin Keep should be a traditional dungeon crawl for the level-5 party with meaningful exploration, multiple substantial monster encounters, and discoverable secrets. Reuse the established location and maps where practical. The dungeon layout, monsters, traps, treasure and outcomes are NOT yet locked.",
                 "{@b APPROVED CLUE 1 — HISTORICAL RECORD:} A genuinely old record preserved at Savin Keep recounts local Bellweather rumors of strange magic, potentially including the recurring folklore about influence over people's minds. It is folklore/testimony, not proof of a mechanism or knowledge of the Radiant Well.",
                 "{@b APPROVED CLUE 2 — CROWN DIRECTIVE:} A more recent Crown instruction directs personnel to gather accounts of unexplained magical phenomena, local legends, and unusual artifacts in the Bellweather region. The directive shows the Crown is searching for mysterious magic, not that it has identified the Radiant Well, located its source, measured it, or built magical surveying devices. No advance royal discovery or experiments are canon.",
@@ -2298,19 +2318,19 @@
           "entries": [
             {
               "type": "entries",
-              "name": "Campaign Checkpoint — Start of Session 6",
+              "name": "Campaign Checkpoint — After Session 6",
               "entries": [
-                "Session 6 resumes inside Cardon Weavehouse with five level-4 PCs: Jarrock, Aaron Dunamus, Arunem, Pepper and Detritus. Elowen’s rescue is unresolved. See Chapter 7’s Session 6 — Locked Weavehouse Checkpoint for the exact start state.",
+                "The party cleared Cardon Weavehouse and brought Elowen back to Tulcornix. Her arc is closed. The building was empty at the end of the session. Pepper burned the files, and Jarrock and Aaron left the Iron Covenant symbol in Jaroood’s office as a false lead. Nothing ties the party to the raid.",
                 "Noren and his Veteran are dead. The Council and Cardon are gone. Brann paid the 300 gp owed to Jarrock, Aaron and Arunem. Pepper is under Brakkus's negotiated custody after Crown detention.",
                 "Brakkus follows Oghma and knows Aaron is a dhampir. He agreed not to reveal Aaron’s nature to others.",
-                "The Crown owns the Weavehouse; Jaroood is its greedy administrator. Future chapters keep places, not old plots."
+                "The Crown still owns Cardon Weavehouse. The current prepared assignment is the Crown's genuine Savin Keep commission. A Long Rest, milestone level-up and commission are not recorded as played in Session 6."
               ]
             },
             {
               "type": "entries",
               "name": "Explicitly OPEN",
               "entries": [
-                "Elowen's actual rescue, Jaroood's specific methods and daily schedule, surveillance findings, exact custody papers for Pepper, the Crown's knowledge of the party's intentions, and details of the developing resistance.",
+                "Exact custody papers for Pepper and details of the developing resistance. The DM confirmed no evidence ties the party to the Weavehouse raid.",
                 "The Radiant Well's mechanism, access and full relationship to future sites; how the Crown intends to find or control the mysterious Bellweather magic it seeks; and what, if anything, it has found so far. Neither the Crown nor the PCs know the Radiant Well is the source.",
                 "The party's eventual relationship with the Stucky monarchy and all future chapter events.",
                 "Character destinies and unresolved backstories unless the players establish them."
@@ -2352,7 +2372,7 @@
               "entries": [
                 "Brann stayed, refused a payout from the city's sale, paid the remaining Well wages, and is helping coordinate an emerging quiet resistance with Brakkus.",
                 "Tulcornix Avemvir is Kaleb's adopted aarakocra brother, who sought Pepper because she killed Kaleb and requested help rescuing his sister-in-law Elowen.",
-                "Elowen is Kaleb's widow and a Crown-confined textile worker. Her stated debt is in Chapter 7, and her future is not predetermined."
+                "Elowen, Kaleb’s widow, was rescued from her confinement at Cardon Weavehouse and returned to Tulcornix in Session 6. Her rescue arc is closed."
               ]
             },
             {
