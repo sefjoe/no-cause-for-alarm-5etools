@@ -1,10 +1,16 @@
 # No Cause for Alarm — Current Canon
-**Status:** Active campaign, as of November 7, 2026  
-**Primary source:** `No_Cause_for_Alarm_5etools_CURRENT.json` (v5.0)  
-**Next:** Session 5, five level-4 PCs  
+**Status:** Active campaign, after Session 6  
+**Primary source:** [Live 5etools adventure JSON](No_Cause_for_Alarm_5etools_CURRENT.json)  
+**Next prepared material:** The Crown commission and road to Savin Keep (Chapter 8)  
 **Prior full file:** branch `archive/pre-nov-2026-canon-reset` (historical reference only)
 
 This document is a quick canon lock, not a replacement for the live JSON's chapter details, maps, shop stock or session records.
+
+## Latest played checkpoint — Session 6
+
+The party cleared Cardon Weavehouse after about three hours at the table. The building was empty at the end. Pepper burned the files with Fire Bolt. Jarrock and Aaron drew the Iron Covenant symbol in Jaroood’s office to direct Crown suspicion away from the party. **Nothing ties the party to the raid.**
+
+Elowen returned to Tulcornix. **Her rescue arc is closed.** The played record, including the table exchange with Pepper and Detritus, is at the top of Chapter 7. The Long Rest, level-5 milestone, and genuine Savin Keep commission are not recorded as played.
 
 ## How to read the campaign
 
@@ -27,7 +33,7 @@ The city's Council sold Bellweather to the Crown while the party was at Kellan's
 
 The Crown's control of old municipal service contracts, debt assessments and forced labor is real. Brann has proposed that the PCs appear to work for the Crown while covertly providing intelligence to him and Brakkus. The resistance is emerging, not a pre-established full conspiracy.
 
-## Session 5 Ledger House opening (LOCKED PREP, not played)
+## Session 5 Ledger House opening — original prep
 
 **Start:** The morning after Drysa's all-night exterior watch. Begin at the approved Ledger House ground-floor common room over breakfast; Brakkus is at work. The player's already-established objective is Elowen's rescue. The four possible overlapping beats are Drysa's report, Detritus's entrance, Brakkus's private talk with Aaron and Jord's arrival. They are not played events and not a forced schedule.
 
@@ -39,13 +45,13 @@ The Crown's control of old municipal service contracts, debt assessments and for
 
 **Jord:** The party earlier rescued his stolen horse and strongbox; he still honors the promised 20% party discount. His hotel room has been requisitioned for Crown barracks, so he arrives at Ledger House seeking a room. Jord offers **one PERSONAL Hat of Disguise as a gift**, which transfers only if accepted in play. It isn't part of his shop stock and doesn't remove Edda Pell's separately cataloged hat. The item requires a Short Rest to attune to one wearer; the party picks who. Jord doesn't know the rescue plan by default.
 
-Chapter 6 of the live JSON now starts with the **temporary table-read Session 5 recap monologue**, followed by the Ledger House opening, Drysa's tiered roll descriptions, Detritus's introduction, Brakkus and Aaron's dialogue, and Jord's gift. Previous-session history and the location maps remain in the chapter, after the active prep. The Ledger House shrine is dedicated to **Oghma**, despite the older illustration's label. Detritus's unrevealed details remain open.
+Chapter 7 preserves the original opening prep and maps alongside the played records for Sessions 5 and 6. The prep is historical and is not the current checkpoint. The Ledger House shrine is dedicated to **Oghma**, despite the older illustration's label. Detritus's unrevealed details remain open.
 
-## Session 5 Cardon Weavehouse — full-mat exterior layout (LOCKED PREP, not played)
+## Cardon Weavehouse — original full-mat encounter prep
 
 **Active version 5.7:** Usable physical area is 34×22 squares. The Weavehouse building is 32×20 (x2–34, y0–20) and the required 10-foot outdoor strips remain ON THE MAT: west x0–2 and south y20–22. All 12 rooms, interior corridor widths, 16 doors and Large Earth Elemental access remain. The previously drafted larger-mat and all-interior diagrams are legacy.
 
-**Current references:** [DM 34×22 with exterior](img/dm/cardon_weavehouse_34x22_EXTERIOR_RESTORED_DM.svg), [player 34×22 with exterior](img/player/cardon_weavehouse_34x22_EXTERIOR_RESTORED_PLAYER.svg), [exact coordinate build guide](docs/Cardon_Weavehouse_34x22_Exterior_Preserved_Build.md).
+**Encounter map references:** [DM 34×22 with exterior](img/dm/cardon_weavehouse_34x22_EXTERIOR_RESTORED_DM.svg), [player 34×22 with exterior](img/player/cardon_weavehouse_34x22_EXTERIOR_RESTORED_PLAYER.svg), [exact coordinate build guide](docs/Cardon_Weavehouse_34x22_Exterior_Preserved_Build.md).
 
 **Rooms:** 21 loading 7×6; 6 storage 7×4; 15 production 12×10; 11 Captain office 10×5; 4 finishing 10×5; 9/10/17/18 worker dormitories 7×5 each; 20 private files 5×5; 23 reception 5×5; 19 Jaroood suite 10×10 with 15-foot ceiling and a three-square northern entrance. The western worker corridor is three squares wide, the central hall and other service corridors two squares wide.
 
@@ -61,7 +67,7 @@ Chapter 6 of the live JSON now starts with the **temporary table-read Session 5 
 
 Brakkus is a retired half-orc **Oath of Devotion paladin of Oghma**. His Hall of Heroes deity remains his NCFA deity. His mother **Elena**, a captive librarian, raised him to learn, read and avoid judging people by their ancestry; his father was the Ironfang warlord **Korgak**. Brakkus later learned from **High Justiciar Vance Halford**, who gave him the longsword **The Appendix**.
 
-Brakkus **knows Aaron is a dhampir** and needs a conversation with him in Session 5. Brakkus implied **Oghma might have brought Aaron to Ledger House**, but divine intervention is *not* established.
+Brakkus **knows Aaron is a dhampir**. In Session 5, he agreed not to reveal Aaron’s nature to others. Brakkus implied **Oghma might have brought Aaron to Ledger House**, but divine intervention is *not* established.
 
 Brakkus told the party a legend concerning possible mind-influencing magic in Bellweather. **DM ONLY:** the real magical phenomenon behind that legend is the **Radiant Well**, which exists **below the surface**. Brakkus and the party do not know its identity or location. The power's exact workings, entry route, and any royal knowledge or involvement are OPEN. The abandoned possessing-villain plot is **not active canon**.
 
@@ -75,14 +81,16 @@ Brakkus told the party a legend concerning possible mind-influencing magic in Be
 
 Brann stated that he refused any Council-sale payout, presented the covert Crown-facing intelligence plan, and paid **100 gp each to Jarrock, Aaron and Arunem; 0 gp to Pepper**, the full outstanding Kellan's Well compensation. Those sums must not be paid again.
 
-**Tulcornix Avemvir**, Kaleb's adopted aarakocra brother, sought help for Kaleb's widow **Elowen**, who is held at Cardon Weavehouse. At the table her claimed charges were **150 gp original debt + 200 gp fees + 50 gp per day room and board**. Pepper offered all her money. No payment or release has been reported.
+**Tulcornix Avemvir**, Kaleb's adopted aarakocra brother, sought help for Kaleb's widow **Elowen**, who was held at Cardon Weavehouse. At the table her claimed charges were **150 gp original debt + 200 gp fees + 50 gp per day room and board**. Pepper offered all her money. Elowen was later rescued in Session 6.
 
-**Session 5 launch:** The party has begun discussing a rescue. Aaron's familiar is **watching the Weavehouse overnight**; its observations have *not* been established. Brakkus recommends stealth to keep the planned covert role credible. Brakkus and Aaron's conversation remains to be played.
+**Session 5:** Detritus joined and the party infiltrated the Weavehouse. Jarrock talked two guards into leaving. Pepper was still locked up at the session break, and Aaron and Detritus had entered through a window. See Chapter 7 for the full played record.
+
+**Session 6:** The Weavehouse was cleared and Elowen returned to Tulcornix. See the checkpoint above and the full played record in Chapter 7.
 
 ## The party and its agency
 
 - **Aaron Dunamus:** Dhampir, with a personal history involving Dimidicus. His background is not automatically linked to the royal takeover or the Well.
-- **Pepper:** Cleric. Her old Council penance is unresolved, as is the Crown's legal response to Brakkus's custody agreement. Her relationship to Kaleb's family remains consequential.
+- **Pepper:** Cleric. Her old Council penance is unresolved, as is the Crown's legal response to Brakkus's custody agreement. Elowen’s rescue arc is closed.
 - **Jarrock:** His history with Pepper and his future beliefs about abusive rulers must develop through play, not an imposed destiny.
 - **Arunem:** Reported that he was at home before he simply appeared in Bellweather. That does not confirm a cause or mechanism.
 
@@ -91,7 +99,7 @@ Brann stated that he refused any Council-sale payout, presented the covert Crown
 All of these are **real location anchors**, with **no old adventure plot carried over**:
 
 1. Savin Keep
-2. Cardon Weavehouse (the active annex now, deeper interior later)
+2. Cardon Weavehouse (rescue played; retained as a location)
 3. Marren Library
 4. The Mansions
 5. Paden Square
@@ -104,6 +112,6 @@ All of these are **real location anchors**, with **no old adventure plot carried
 
 Existing maps stay in the repository; Cardon Weavehouse has an explicitly revised one-mat Session 5 layout. Former monsters, inhabitants, loot assignments, predetermined character arcs, property disputes, Council commissions, opposition chains and finale scripts do not.
 
-## Session 5 deployment
+## Where to pick up
 
-The Session 5 recap, Ledger House opening, and Cardon Weavehouse map, room key, patrols, combat run sheet and encounter mechanics are together in Chapter 7. The 5etools source ID remains NCFA. Historical map variants remain in GitHub but are not the active build.
+The Session 6 played record is at the top of Chapter 7. Its encounter maps and mechanics are retained for reference. The next prepared material is in Chapter 8. The 5etools source ID remains NCFA.
